@@ -1,0 +1,1251 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Jekyll v3.6.0">
+<title>下拉式表单 &middot; BootstrapVue</title>
+<!-- Bootstrap 核心CSS -->
+<link href="../../../v4/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- 本文档额外专用css -->
+<link href="../../../v4/assets/css/docsearch.min.css" rel="stylesheet">
+<link href="../../../v4/assets/css/docs.min.css" rel="stylesheet">
+<link href="../../style/bv_path.css" rel="stylesheet">
+
+<!-- Favicons图标定义 -->
+<link data-n-head="ssr" rel="manifest" href="../../manifest.json">
+<link data-n-head="ssr" rel="shortcut icon" href="../../style/icons/icon_64.png">
+<link data-n-head="ssr" rel="apple-touch-icon" href="../../style/icons/icon_512.png" sizes="512x512">
+
+<!-- Meta关键字定义 -->
+<meta name="description" content="The most popular HTML, CSS, and JS library in the world.">
+<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+
+</head>
+<body>
+<a id="skippy" class="sr-only sr-only-focusable" href="#content">
+<div class="container"> <span class="skiplink-text">跳到主体内容</span> </div>
+</a>
+<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar"> <a class="navbar-brand mr-0 mr-md-2" href="../" aria-label="Bootstrap">
+  <svg class="d-block" width="36" height="36" viewbox="0 0 612 612" xmlns="http://www.w3.org/2000/svg" focusable="false">
+    <title>Bootstrap</title>
+    <path fill="currentColor" d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z"/>
+    <path fill="currentColor" d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z"/>
+  </svg>
+  </a>
+  <div class="navbar-nav-scroll">
+    <ul class="navbar-nav bd-navbar-nav flex-row">
+      <li class="nav-item"><a class="nav-link " href="../">首页</a></li>
+      <li class="nav-item"><a class="nav-link active" href="../../v4/docs/">中文手册</a></li>
+      <li class="nav-item"><a class="nav-link " href="../../v4/examples/">实例</a></li>
+      <li class="nav-item dropdown">
+<a class="nav-item nav-link dropdown-toggle mr-md-2" id="bd-versions" aria-expanded="false" aria-haspopup="true" href="#" data-toggle="dropdown"> 主题模板 </a>
+<div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
+<a class="dropdown-item" href="../../V4/themes/" target="_blank">主题门户</a>
+<a class="dropdown-item" href="../../V4/themes/live.html">精选模板</a>
+</div>
+</li>
+      <li class="nav-item"><a class="nav-link" href="//ico.z01.com" target="_blank" rel="noopener">zico图标系统</a></li>
+      <li class="nav-item"><a class="nav-link" href="https://expo.getbootstrap.com" target="_blank" rel="noopener">优站精选</a></li>
+      <li class="nav-item"><a class="nav-link" href="https://blog.getbootstrap.com" target="_blank" rel="noopener">Blog</a></li>
+    </ul>
+  </div>
+  <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="alse"> v2.6.1 </a>
+      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions"> 
+        <a class="dropdown-item active" href="../../../bootstrap-vue/docs/4.0/">Latest (4.3.x)</a>
+        <a class="dropdown-item" href="/Boot/">v3.3.7</a>
+        <a class="dropdown-item" href="/Sass/">Sass语言</a>
+        <a class="dropdown-item" href="/Emmet/">Emmet语法</a>
+        <a class="dropdown-item" href="//www.z01.com/tool/" target="_blank">IIS站长工具</a>
+        <a class="dropdown-item" href="//ad.z01.com/" target="_blank">广告源码</a>
+        <a class="dropdown-item" href="//v.z01.com/mb/" target="_blank">免费模板</a>
+        <a class="dropdown-item" href="//v.z01.com/" target="_blank">H5移动创作</a>
+        <a class="dropdown-item" href="//www.z01.com/help/web/3234.shtml" target="_blank">Flexbox布局</a>
+		<a class="dropdown-item" href="/boot/font.html" target="_blank">Font Awesome</a>
+</div>
+    </li>
+    <li class="nav-item"> <a class="nav-link p-2" href="//zoomla.github.io/bootstrap4-zhcn-documentation" target="_blank" rel="noopener" aria-label="GitHub">
+      <svg class="navbar-nav-svg" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 499.36" focusable="false">
+        <title>GitHub</title>
+        <path d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z" fill="currentColor" fill-rule="evenodd"/>
+      </svg>
+      </a> </li>
+    <li class="nav-item"> <a class="nav-link p-2" href="http://www.z01.com/blog/ren/3214.shtml" target="_blank" rel="noopener" aria-label="Slack">译者说</a></li>
+  </ul>
+  <a class="btn btn-bd-yellow d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="download.html">下载 Bootstrap</a> </header>
+
+<div class="container-fluid">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+      <form class="bd-search d-flex align-items-center">
+        <input type="search" class="form-control" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
+        <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30" focusable="false">
+          <title>Menu</title>
+          <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/>
+        </svg>
+        </button>
+      </form>
+
+
+<nav class="collapse bd-links" id="bd-docs-nav">
+<div class=""><a href="../" class="bd-toc-link">首页</a></div>
+<div class="bd-toc-item nuxt-link-exact-active "><a href="../../../bootstrap-vue/docs/" class="bd-toc-link  "> 起步 </a>
+<ul class="nav bd-sidenav">
+</ul>
+</div>
+<div class="bd-toc-item active"><a href="../../../bootstrap-vue/docs/components/" class="bd-toc-link nuxt-link-exact-active"> 组件 </a>
+<ul class="nav bd-sidenav">
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/index.html" class="nav-link"> 组件目录 </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/alert.html" class="nav-link"> 警告提示框(Alert) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/badge.html" class="nav-link"> 徽章(Badge) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/badge.html" class="nav-link"> 面包屑导航(Breadcrumb) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/button.html" class="nav-link"> 按钮(Button) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/button-group.html" class="nav-link"> 按钮组(Button Group) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/button-toolbar.html" class="nav-link"> 按钮Toolbar(Button Toolbar) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/calendar.html" class="nav-link"> 日历组件(Calendar) <small class="badge text-uppercase badge-success">New</small> </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/card.html" class="nav-link"> 卡片(Card) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/carousel.html" class="nav-link"> 轮播效果(Carousel) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/collapse.html" class="nav-link"> 折叠面板(Collapse) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/dropdown.html" class="nav-link"> 下拉菜单(Dropdown) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/embed.html" class="nav-link"> 嵌入(Embed) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form.html" class="nav-link"> 表单(Form) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-checkbox.html" class="nav-link"> 表单复选框(Form Checkbox) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-datepicker.html" class="nav-link"> 表单时间选择器(Form Datepicker) <small class="badge text-uppercase badge-success">New</small> </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-file.html" class="nav-link"> 文件选择(Form File) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-group.html" class="nav-link"> 表单组合(Form Group) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-input.html" class="nav-link"> 表单输入框(Form Input) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-radio.html" class="nav-link"> 单选择表单Form Radio </a></li>
+<li class="nav-item active"><a href="../../../bootstrap-vue/docs/components/form-select.html" class="nav-link"> 下拉式表单(Form Select) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-spinbutton.html" class="nav-link"> 按钮式表单(Form Spinbuttno) <small class="badge text-uppercase badge-success">New</small> </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-tags.html" class="nav-link"> Tags表单选择器(Form Tags) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-textarea.html" class="nav-link"> 文本框(Form Textarea) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-timepicker.html" class="nav-link"> 表单内时间控件(Form Timepicker) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/image.html" class="nav-link"> 图片(Image) </a></li>
+
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/input-group.html" class="nav-link"> 输入框(Input Group) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/jumbotron.html" class="nav-link"> Hero大块屏(Jumbotron) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/layout.html" class="nav-link"> 布局与网络Layout and Grid System </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/link.html" class="nav-link"> 链接(Link)</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/list-group.html" class="nav-link"> 列表组(List group) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/media.html" class="nav-link"> 媒体(Media) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/modal.html" class="nav-link"> 弹出模态框(Modal) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/nav.html" class="nav-link"> 导航(Nav) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/navbar.html" class="nav-link"> 导航栏(Navbar) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/pagination.html" class="nav-link"> 分页(Pagination) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/pagination-nav.html" class="nav-link"> 分页导航(Pagination Nav) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/popover.html" class="nav-link"> 指示备注(Popover) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/progress.html" class="nav-link"> 进度指示器(Progress) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/spinner.html" class="nav-link"> 旋转指示器(Spinner) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/table.html" class="nav-link"> 表格(Table) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/tabs.html" class="nav-link"> 选项卡(Tabs) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/time.html" class="nav-link"> 时间组件(Time) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/toast.html" class="nav-link"> 冒泡推送(Toasts) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/tooltip.html" class="nav-link"> tip提示组件(Tooltip) </a></li>
+</ul>
+</div>
+<div class="bd-toc-item"><a href="../../../bootstrap-vue/docs/directives/" class="bd-toc-link"> 指令 </a>
+<ul class="nav bd-sidenav">
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/directives/index.html" class="nav-link"> 指令目录 </a></li>
+<li class="nav-item active"><a href="../../../bootstrap-vue/docs/directives/hover.html" class="nav-link"> Hover 指令<small class="badge text-uppercase badge-success">New</small> </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/directives/popover.html" class="nav-link"> Popover 提示备注</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/directives/scrollspy.html" class="nav-link"> Scrollspy 滚动监听</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/directives/tooltip.html" class="nav-link"> Tooltip 提示指令</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/directives/visible.html" class="nav-link"> Visible 可见性操作<small class="badge text-uppercase badge-success">New</small> </a></li>
+</ul>
+</div>
+<div class="bd-toc-item"><a href="../../../bootstrap-vue/docs/icons.html" class="bd-toc-link"> Icons图标</a>
+<ul class="nav bd-sidenav">
+</ul>
+</div>
+  
+<div class="bd-toc-item"><a class="bd-toc-link" href="../../../bootstrap-vue/docs/reference">参考</a>
+<ul class="nav bd-sidenav">
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference" class="nav-link.html"> 参考目录 </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/accessibility.html" class="nav-link">友好访问</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/color-variants.html" class="nav-link">Color颜色变量 </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/images.html" class="nav-link"> 组件图像img的src路径解析</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/router-links.html" class="nav-link"> Router路由支持 </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/size-props.html" class="nav-link">大小规格</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/spacing-classes.html" class="nav-link">间距处理</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/starter-templates.html" class="nav-link">开始模板</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/theming.html" class="nav-link">主题色彩</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/utility-classes.html" class="nav-link">通用Class类</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/validation.html" class="nav-link">Form表单验证</a></li>
+</ul>
+</div>
+<div class="bd-toc-item"> <a class="bd-toc-link" href="../components/alerts.html"> 杂项 </a>
+  <ul class="nav bd-sidenav">
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/misc/changelog" class="nav-link"> Changelog </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/misc/contributing" class="nav-link"> Contributing </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/misc/settings" class="nav-link"> Settings </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/misc/third-party" class="nav-link"> Third party libraries </a></li>
+  </ul>
+</div>
+<div class=""><a href="/play" class="bd-toc-link">在线模拟器</a></div>
+</nav>
+</div>
+
+<div class="d-none d-xl-block col-xl-2 bd-toc">
+
+<ul class="section-nav">
+<li class="nav-item toc-entry mb-2"><a target="_self" href="#form-select" class="nav-link font-weight-bold"><span>Form Select</span></a></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#options-property" class="nav-link"><span>Options property</span></a>
+<ul class="nav flex-column">
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#options-as-an-array" class="nav-link"><span>Options as an array</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#options-as-an-array-of-objects" class="nav-link"><span>Options as an array of objects</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#options-as-an-object" class="nav-link"><span>Options as an object</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#changing-the-option-field-names" class="nav-link"><span>Changing the option field names</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#option-notes" class="nav-link"><span>Option notes</span></a></li>
+</ul>
+</li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#standard-single-select" class="nav-link"><span>Standard (single) select</span></a>
+<ul class="nav flex-column">
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#value-in-single-mode" class="nav-link"><span>Value in single mode</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#select-sizing-displayed-rows" class="nav-link"><span>Select sizing (displayed rows)</span></a></li>
+</ul>
+</li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#multiple-select-support" class="nav-link"><span>Multiple select support</span></a>
+<ul class="nav flex-column">
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#value-in-multiple-mode" class="nav-link"><span>Value in multiple mode</span></a></li>
+</ul>
+</li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#control-sizing" class="nav-link"><span>Control sizing</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#autofocus" class="nav-link"><span>Autofocus</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#contextual-states" class="nav-link"><span>Contextual states</span></a>
+<ul class="nav flex-column">
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#conveying-contextual-validation-state-to-assistive-technologies-and-colorblind-users" class="nav-link"><span>Conveying contextual validation state to assistive technologies and colorblind users</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#aria-aria-invalid-attribute" class="nav-link"><span>ARIA aria-invalid attribute:</span></a></li>
+</ul>
+</li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#non-custom-select" class="nav-link"><span>Non custom select</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#component-reference" class="nav-link"><span>Component reference</span></a>
+<ul class="nav flex-column">
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#comp-ref-b-form-select" class="nav-link"><span>&lt;b-form-select&gt;</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#comp-ref-b-form-select-option" class="nav-link"><span>&lt;b-form-select-option&gt;</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#comp-ref-b-form-select-option-group" class="nav-link"><span>&lt;b-form-select-option-group&gt;</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#importing-individual-components" class="nav-link"><span>Importing individual components</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#importing-as-a-plugin" class="nav-link"><span>Importing as a Vue.js plugin</span></a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+<main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+
+<nav data-v-aafc4aea="" aria-label="Breadcrumbs" class="float-left mt-2 mb-0 mb-lg-2">
+<ol data-v-aafc4aea="" class="breadcrumb d-inline-flex bg-transparent px-2 py-1 my-0">
+<li data-v-aafc4aea="" class="breadcrumb-item"><a data-v-aafc4aea="" href="../../" class="nuxt-link-active" target="_self">首页</a></li>
+<li data-v-aafc4aea="" class="breadcrumb-item"><a data-v-aafc4aea="" href="../../../bootstrap-vue/docs" class="nuxt-link-active" target="_self">中文手册</a></li>
+<li data-v-aafc4aea="" class="breadcrumb-item"><a data-v-aafc4aea="" href="../../../bootstrap-vue/docs/components/" class="nuxt-link-active" target="_self">组件</a></li>
+<li data-v-aafc4aea="" class="breadcrumb-item active"><span data-v-aafc4aea="" aria-current="location">下拉式表单</span></li>
+</ol>
+</nav>
+<div class="clearfix d-block"></div>
+  <h1 class="bd-title" id="content">下拉式表单(Form Select)</h1>
+<p class="bd-lead">Bootstrap custom <code translate="no" class="notranslate text-nowrap">&lt;select&gt;</code> using custom styles. Optionally specify options based on an array, array of objects, or an object.</p>
+  <script type="text/javascript" src="../../../v4/assets/js/pupCMS.js"></script>
+
+
+
+
+<nav class="bd-quick-links mb-3 d-xl-none" data-v-811345e6="">
+<header data-v-811345e6="">
+<button data-v-811345e6="" type="button" class="btn font-weight-bold btn-outline-secondary btn-sm btn-block collapsed" aria-controls="bd-quick-links-collapse" aria-expanded="false"><span data-v-811345e6="">Show</span> page table of contents </button>
+</header>
+<ul data-v-811345e6="" id="bd-quick-links-collapse" class="collapse" style="display: none;">
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#options-property" class=""><span data-v-811345e6="">Options property</span></a>
+<ul data-v-811345e6="">
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#options-as-an-array" class=""><span data-v-811345e6="">Options as an array</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#options-as-an-array-of-objects" class=""><span data-v-811345e6="">Options as an array of objects</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#options-as-an-object" class=""><span data-v-811345e6="">Options as an object</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#changing-the-option-field-names" class=""><span data-v-811345e6="">Changing the option field names</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#option-notes" class=""><span data-v-811345e6="">Option notes</span></a></li>
+</ul>
+</li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#standard-single-select" class=""><span data-v-811345e6="">Standard (single) select</span></a>
+<ul data-v-811345e6="">
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#value-in-single-mode" class=""><span data-v-811345e6="">Value in single mode</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#select-sizing-displayed-rows" class=""><span data-v-811345e6="">Select sizing (displayed rows)</span></a></li>
+</ul>
+</li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#multiple-select-support" class=""><span data-v-811345e6="">Multiple select support</span></a>
+<ul data-v-811345e6="">
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#value-in-multiple-mode" class=""><span data-v-811345e6="">Value in multiple mode</span></a></li>
+</ul>
+</li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#control-sizing" class=""><span data-v-811345e6="">Control sizing</span></a> </li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#autofocus" class=""><span data-v-811345e6="">Autofocus</span></a> </li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#contextual-states" class=""><span data-v-811345e6="">Contextual states</span></a>
+<ul data-v-811345e6="">
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#conveying-contextual-validation-state-to-assistive-technologies-and-colorblind-users" class=""><span data-v-811345e6="">Conveying contextual validation state to assistive technologies and colorblind users</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#aria-aria-invalid-attribute" class=""><span data-v-811345e6="">ARIA aria-invalid attribute:</span></a></li>
+</ul>
+</li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#non-custom-select" class=""><span data-v-811345e6="">Non custom select</span></a> </li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#component-reference" class=""><span data-v-811345e6="">Component reference</span></a>
+<ul data-v-811345e6="">
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#comp-ref-b-form-select" class=""><span data-v-811345e6="">&lt;b-form-select&gt;</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#comp-ref-b-form-select-option" class=""><span data-v-811345e6="">&lt;b-form-select-option&gt;</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#comp-ref-b-form-select-option-group" class=""><span data-v-811345e6="">&lt;b-form-select-option-group&gt;</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#importing-individual-components" class=""><span data-v-811345e6="">Importing individual components</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#importing-as-a-plugin" class=""><span data-v-811345e6="">Importing as a Vue.js plugin</span></a></li>
+</ul>
+</li>
+</ul>
+</nav>
+<p>Generate your select options by passing an array or object to the <code translate="no" class="notranslate text-nowrap">options</code> props:</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-form-select-options notranslate">
+<div>
+<select class="custom-select" id="__BVID__1147">
+<option value="">Please select an option</option>
+<option value="a">This is First option</option>
+<option value="b">Selected Option</option>
+<option value="[object Object]">This is an option with object value</option>
+<option disabled="disabled" value="d">This one is disabled</option>
+</select>
+<select class="mt-3 custom-select custom-select-sm" id="__BVID__1148">
+<option value="">Please select an option</option>
+<option value="a">This is First option</option>
+<option value="b">Selected Option</option>
+<option value="[object Object]">This is an option with object value</option>
+<option disabled="disabled" value="d">This one is disabled</option>
+</select>
+<div class="mt-3">Selected: <strong></strong></div>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-select</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">"selected"</span> <span class="hljs-attr">:options</span>=<span class="hljs-string">"options"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-select</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-select</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">"selected"</span> <span class="hljs-attr">:options</span>=<span class="hljs-string">"options"</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"sm"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mt-3"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-select</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mt-3"</span>&gt;</span>Selected: <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>{{ selected }}<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    data() {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">selected</span>: <span class="hljs-literal">null</span>,
+        <span class="hljs-attr">options</span>: [
+          { <span class="hljs-attr">value</span>: <span class="hljs-literal">null</span>, <span class="hljs-attr">text</span>: <span class="hljs-string">'Please select an option'</span> },
+          { <span class="hljs-attr">value</span>: <span class="hljs-string">'a'</span>, <span class="hljs-attr">text</span>: <span class="hljs-string">'This is First option'</span> },
+          { <span class="hljs-attr">value</span>: <span class="hljs-string">'b'</span>, <span class="hljs-attr">text</span>: <span class="hljs-string">'Selected Option'</span> },
+          { <span class="hljs-attr">value</span>: { <span class="hljs-attr">C</span>: <span class="hljs-string">'3PO'</span> }, <span class="hljs-attr">text</span>: <span class="hljs-string">'This is an option with object value'</span> },
+          { <span class="hljs-attr">value</span>: <span class="hljs-string">'d'</span>, <span class="hljs-attr">text</span>: <span class="hljs-string">'This one is disabled'</span>, <span class="hljs-attr">disabled</span>: <span class="hljs-literal">true</span> }
+        ]
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+<p>You can even define option groups with the <code translate="no" class="notranslate text-nowrap">options</code> prop:</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-form-select-options notranslate">
+<div>
+<select class="custom-select" id="__BVID__1150">
+<option value="">Please select an option</option>
+<option value="a">This is First option</option>
+<option disabled="disabled" value="b">Selected Option</option>
+<optgroup label="Grouped options">
+<option value="[object Object]">Option with object value</option>
+<option value="[object Object]">Another option with object value</option>
+</optgroup>
+</select>
+<div class="mt-3">Selected: <strong></strong></div>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-select</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">"selected"</span> <span class="hljs-attr">:options</span>=<span class="hljs-string">"options"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-select</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mt-3"</span>&gt;</span>Selected: <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>{{ selected }}<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    data() {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">selected</span>: <span class="hljs-literal">null</span>,
+        <span class="hljs-attr">options</span>: [
+          { <span class="hljs-attr">value</span>: <span class="hljs-literal">null</span>, <span class="hljs-attr">text</span>: <span class="hljs-string">'Please select an option'</span> },
+          { <span class="hljs-attr">value</span>: <span class="hljs-string">'a'</span>, <span class="hljs-attr">text</span>: <span class="hljs-string">'This is First option'</span> },
+          { <span class="hljs-attr">value</span>: <span class="hljs-string">'b'</span>, <span class="hljs-attr">text</span>: <span class="hljs-string">'Selected Option'</span>, <span class="hljs-attr">disabled</span>: <span class="hljs-literal">true</span> },
+          {
+            <span class="hljs-attr">label</span>: <span class="hljs-string">'Grouped options'</span>,
+            <span class="hljs-attr">options</span>: [
+              { <span class="hljs-attr">value</span>: { <span class="hljs-attr">C</span>: <span class="hljs-string">'3PO'</span> }, <span class="hljs-attr">text</span>: <span class="hljs-string">'Option with object value'</span> },
+              { <span class="hljs-attr">value</span>: { <span class="hljs-attr">R</span>: <span class="hljs-string">'2D2'</span> }, <span class="hljs-attr">text</span>: <span class="hljs-string">'Another option with object value'</span> }
+            ]
+          }
+        ]
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+<p>Or manually provide your options and option groups:</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-form-select-manual notranslate">
+<div>
+<select class="mb-3 custom-select" id="__BVID__1153">
+<option value="">Please select an option</option>
+<option value="a">Option A</option>
+<option disabled="disabled" value="b">Option B (disabled)</option>
+<optgroup label="Grouped options">
+<option value="[object Object]">Option with object value</option>
+<option value="[object Object]">Another option with object value</option>
+</optgroup>
+</select>
+<div class="mt-2">Selected: <strong></strong></div>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-select</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">"selected"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-3"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-form-select-option</span> <span class="hljs-attr">:value</span>=<span class="hljs-string">"null"</span>&gt;</span>Please select an option<span class="hljs-tag">&lt;/<span class="hljs-name">b-form-select-option</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-form-select-option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"a"</span>&gt;</span>Option A<span class="hljs-tag">&lt;/<span class="hljs-name">b-form-select-option</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-form-select-option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"b"</span> <span class="hljs-attr">disabled</span>&gt;</span>Option B (disabled)<span class="hljs-tag">&lt;/<span class="hljs-name">b-form-select-option</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-form-select-option-group</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Grouped options"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">b-form-select-option</span> <span class="hljs-attr">:value</span>=<span class="hljs-string">"{ C: '3PO' }"</span>&gt;</span>Option with object value<span class="hljs-tag">&lt;/<span class="hljs-name">b-form-select-option</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">b-form-select-option</span> <span class="hljs-attr">:value</span>=<span class="hljs-string">"{ R: '2D2' }"</span>&gt;</span>Another option with object value<span class="hljs-tag">&lt;/<span class="hljs-name">b-form-select-option</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">b-form-select-option-group</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-form-select</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mt-2"</span>&gt;</span>Selected: <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>{{ selected }}<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    data() {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">selected</span>: <span class="hljs-literal">null</span>
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+<p>Feel free to mix the <code translate="no" class="notranslate text-nowrap">options</code> prop with <code translate="no" class="notranslate text-nowrap">&lt;b-form-select-option&gt;</code> and <code translate="no" class="notranslate text-nowrap">&lt;b-form-select-option-group&gt;</code>. Manually placed options and option groups will appear <em>below</em> the
+options generated via the <code translate="no" class="notranslate text-nowrap">options</code> prop. To place manual options and option groups <em>above</em> the
+options specified by the <code translate="no" class="notranslate text-nowrap">options</code> prop, use the named slot <code translate="no" class="notranslate text-nowrap">first</code>.</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-form-select-both notranslate">
+<div>
+<select class="mb-3 custom-select" id="__BVID__1156">
+<option disabled="disabled" value="">-- Please select an option --</option>
+<option value="A">Option A (from options prop)</option>
+<option value="B">Option B (from options prop)</option>
+<option value="C">Option C</option>
+<option value="D">Option D</option>
+</select>
+<div class="mt-3">Selected: <strong></strong></div>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-select</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">"selected"</span> <span class="hljs-attr">:options</span>=<span class="hljs-string">"options"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-3"</span>&gt;</span>
+      <span class="hljs-comment">&lt;!-- This slot appears above the options from 'options' prop --&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">template</span> <span class="hljs-attr">v-slot:first</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">b-form-select-option</span> <span class="hljs-attr">:value</span>=<span class="hljs-string">"null"</span> <span class="hljs-attr">disabled</span>&gt;</span>-- Please select an option --<span class="hljs-tag">&lt;/<span class="hljs-name">b-form-select-option</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+      <span class="hljs-comment">&lt;!-- These options will appear after the ones from 'options' prop --&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-form-select-option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"C"</span>&gt;</span>Option C<span class="hljs-tag">&lt;/<span class="hljs-name">b-form-select-option</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-form-select-option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"D"</span>&gt;</span>Option D<span class="hljs-tag">&lt;/<span class="hljs-name">b-form-select-option</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-form-select</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mt-3"</span>&gt;</span>Selected: <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>{{ selected }}<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    data() {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">selected</span>: <span class="hljs-literal">null</span>,
+        <span class="hljs-attr">options</span>: [
+          { <span class="hljs-attr">value</span>: <span class="hljs-string">'A'</span>, <span class="hljs-attr">text</span>: <span class="hljs-string">'Option A (from options prop)'</span> },
+          { <span class="hljs-attr">value</span>: <span class="hljs-string">'B'</span>, <span class="hljs-attr">text</span>: <span class="hljs-string">'Option B (from options prop)'</span> }
+        ]
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+<h2 id="options-property" class="bv-no-focus-ring"><span class="bd-content-title">Options property<a class="anchorjs-link" href="#options-property" aria-labelledby="options-property"></a></span></h2>
+<p><code translate="no" class="notranslate text-nowrap">options</code> can be an array of strings or objects, or a key-value object. Available fields:</p>
+<ul>
+<li><strong><code translate="no" class="notranslate text-nowrap">value</code></strong> The selected value which will be set on <code translate="no" class="notranslate text-nowrap">v-model</code></li>
+<li><strong><code translate="no" class="notranslate text-nowrap">disabled</code></strong> Disables item for selection</li>
+<li><strong><code translate="no" class="notranslate text-nowrap">text</code></strong> Display text, or <strong><code translate="no" class="notranslate text-nowrap">html</code></strong> Display basic inline html</li>
+</ul>
+<p><code translate="no" class="notranslate text-nowrap">value</code> can be a string, number, or simple object. Avoid using complex types in values.</p>
+<p>If both <code translate="no" class="notranslate text-nowrap">html</code> and <code translate="no" class="notranslate text-nowrap">text</code> are provided, <code translate="no" class="notranslate text-nowrap">html</code> will take precedence. Only basic/native HTML is
+supported in the <code translate="no" class="notranslate text-nowrap">html</code> field (components will not work). Note that not all browsers will render
+inline html (i.e. <code translate="no" class="notranslate text-nowrap">&lt;i&gt;</code>, <code translate="no" class="notranslate text-nowrap">&lt;strong&gt;</code>, etc) inside <code translate="no" class="notranslate text-nowrap">&lt;option&gt;</code> elements of a <code translate="no" class="notranslate text-nowrap">&lt;select&gt;</code>.</p>
+<p class="alert alert-danger"> <strong>Be cautious</strong> of placing user supplied content in the <code class="notranslate" translate="no">html</code> field,
+  as it may make you vulnerable to <a class="alert-link" href="https://en.wikipedia.org/wiki/Cross-site_scripting"> <abbr title="Cross Site Scripting Attacks">XSS attacks</abbr></a>, if you do not first <a class="alert-link" href="https://en.wikipedia.org/wiki/HTML_sanitization">sanitize</a> the
+  user supplied string. </p>
+<h3 id="options-as-an-array" class="bv-no-focus-ring"><span class="bd-content-title">Options as an array<a class="anchorjs-link" href="#options-as-an-array" aria-labelledby="options-as-an-array"></a></span></h3>
+<!-- eslint-disable no-unused-vars -->
+
+<pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-keyword">const</span> options = [<span class="hljs-string">'A'</span>, <span class="hljs-string">'B'</span>, <span class="hljs-string">'C'</span>, { <span class="hljs-attr">text</span>: <span class="hljs-string">'D'</span>, <span class="hljs-attr">value</span>: { <span class="hljs-attr">d</span>: <span class="hljs-number">1</span> }, <span class="hljs-attr">disabled</span>: <span class="hljs-literal">true</span> }, <span class="hljs-string">'E'</span>, <span class="hljs-string">'F'</span>]</pre>
+<p>If an array entry is a string, it will be used for both the generated <code translate="no" class="notranslate text-nowrap">value</code> and <code translate="no" class="notranslate text-nowrap">text</code> fields.</p>
+<p>You can mix using strings and <a href="#options-as-an-array-of-objects" class="font-weight-bold">objects</a> in the array.</p>
+<p>Internally, BootstrapVue will convert the above array to the following array (the <a href="#options-as-an-array-of-objects" class="font-weight-bold">array of objects</a>) format:</p>
+<!-- eslint-disable no-unused-vars -->
+
+<pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-keyword">const</span> options = [
+  { <span class="hljs-attr">text</span>: <span class="hljs-string">'A'</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">'A'</span>, <span class="hljs-attr">disabled</span>: <span class="hljs-literal">false</span> },
+  { <span class="hljs-attr">text</span>: <span class="hljs-string">'B'</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">'B'</span>, <span class="hljs-attr">disabled</span>: <span class="hljs-literal">false</span> },
+  { <span class="hljs-attr">text</span>: <span class="hljs-string">'C'</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">'C'</span>, <span class="hljs-attr">disabled</span>: <span class="hljs-literal">false</span> },
+  { <span class="hljs-attr">text</span>: <span class="hljs-string">'D'</span>, <span class="hljs-attr">value</span>: { <span class="hljs-attr">d</span>: <span class="hljs-number">1</span> }, <span class="hljs-attr">disabled</span>: <span class="hljs-literal">true</span> },
+  { <span class="hljs-attr">text</span>: <span class="hljs-string">'E'</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">'E'</span>, <span class="hljs-attr">disabled</span>: <span class="hljs-literal">false</span> },
+  { <span class="hljs-attr">text</span>: <span class="hljs-string">'F'</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">'F'</span>, <span class="hljs-attr">disabled</span>: <span class="hljs-literal">false</span> }
+]</pre>
+<h3 id="options-as-an-array-of-objects" class="bv-no-focus-ring"><span class="bd-content-title">Options as an array of objects<a class="anchorjs-link" href="#options-as-an-array-of-objects" aria-labelledby="options-as-an-array-of-objects"></a></span></h3>
+<!-- eslint-disable no-unused-vars -->
+
+<pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-keyword">const</span> options = [
+  { <span class="hljs-attr">text</span>: <span class="hljs-string">'Item 1'</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">'first'</span> },
+  { <span class="hljs-attr">text</span>: <span class="hljs-string">'Item 2'</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">'second'</span> },
+  { <span class="hljs-attr">html</span>: <span class="hljs-string">'&lt;b&gt;Item&lt;/b&gt; 3'</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">'third'</span>, <span class="hljs-attr">disabled</span>: <span class="hljs-literal">true</span> },
+  { <span class="hljs-attr">text</span>: <span class="hljs-string">'Item 4'</span> },
+  { <span class="hljs-attr">text</span>: <span class="hljs-string">'Item 5'</span>, <span class="hljs-attr">value</span>: { <span class="hljs-attr">foo</span>: <span class="hljs-string">'bar'</span>, <span class="hljs-attr">baz</span>: <span class="hljs-literal">true</span> } }
+]</pre>
+<p>If <code translate="no" class="notranslate text-nowrap">value</code> is missing, then <code translate="no" class="notranslate text-nowrap">text</code> will be used as both the <code translate="no" class="notranslate text-nowrap">value</code> and <code translate="no" class="notranslate text-nowrap">text</code> fields. If you use
+the <code translate="no" class="notranslate text-nowrap">html</code> property, you <strong>must</strong> supply a <code translate="no" class="notranslate text-nowrap">value</code> property.</p>
+<p><span class="badge badge-info">New in v2.2.0</span> To define option groups, just add an object with
+a <code translate="no" class="notranslate text-nowrap">label</code> prop as the groups name and a <code translate="no" class="notranslate text-nowrap">options</code> property with the array of options of the group.</p>
+<!-- eslint-disable no-unused-vars -->
+
+<pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-keyword">const</span> options = [
+  { <span class="hljs-attr">text</span>: <span class="hljs-string">'Item 1'</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">'first'</span> },
+  { <span class="hljs-attr">text</span>: <span class="hljs-string">'Item 2'</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">'second'</span> },
+  {
+    <span class="hljs-attr">label</span>: <span class="hljs-string">'Grouped options'</span>,
+    <span class="hljs-attr">options</span>: [{ <span class="hljs-attr">html</span>: <span class="hljs-string">'&lt;b&gt;Item&lt;/b&gt; 3'</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">'third'</span>, <span class="hljs-attr">disabled</span>: <span class="hljs-literal">true</span> }, { <span class="hljs-attr">text</span>: <span class="hljs-string">'Item 4'</span> }]
+  },
+  { <span class="hljs-attr">text</span>: <span class="hljs-string">'Item 5'</span>, <span class="hljs-attr">value</span>: { <span class="hljs-attr">foo</span>: <span class="hljs-string">'bar'</span>, <span class="hljs-attr">baz</span>: <span class="hljs-literal">true</span> } }
+]</pre>
+<h3 id="options-as-an-object" class="bv-no-focus-ring"><span class="bd-content-title">Options as an object<a class="anchorjs-link" href="#options-as-an-object" aria-labelledby="options-as-an-object"></a></span></h3>
+<p><span class="badge badge-warning">Deprecated</span></p>
+<p>Keys are mapped to <code translate="no" class="notranslate text-nowrap">value</code> and values are mapped to option <code translate="no" class="notranslate text-nowrap">text</code>.</p>
+<!-- eslint-disable no-unused-vars -->
+
+<pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-keyword">const</span> options = {
+  <span class="hljs-attr">a</span>: <span class="hljs-string">'Item A'</span>,
+  <span class="hljs-attr">b</span>: <span class="hljs-string">'Item B'</span>,
+  <span class="hljs-attr">c</span>: { <span class="hljs-attr">html</span>: <span class="hljs-string">'Item C'</span>, <span class="hljs-attr">disabled</span>: <span class="hljs-literal">true</span> },
+  <span class="hljs-attr">d</span>: { <span class="hljs-attr">text</span>: <span class="hljs-string">'Item D'</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">'overridden_value'</span> },
+  <span class="hljs-attr">e</span>: { <span class="hljs-attr">text</span>: <span class="hljs-string">'Item E'</span>, <span class="hljs-attr">value</span>: { <span class="hljs-attr">foo</span>: <span class="hljs-string">'bar'</span>, <span class="hljs-attr">baz</span>: <span class="hljs-literal">true</span> } }
+}</pre>
+<p>Internally, BootstrapVue will convert the above object to the following array (the <a href="#options-as-an-array-of-objects" class="font-weight-bold">array of objects</a>) format:</p>
+<!-- eslint-disable no-unused-vars -->
+
+<pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-keyword">const</span> options = [
+  { <span class="hljs-attr">text</span>: <span class="hljs-string">'Item A'</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">'a'</span>, <span class="hljs-attr">disabled</span>: <span class="hljs-literal">false</span> },
+  { <span class="hljs-attr">text</span>: <span class="hljs-string">'Item B'</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">'b'</span>, <span class="hljs-attr">disabled</span>: <span class="hljs-literal">false</span> },
+  { <span class="hljs-attr">html</span>: <span class="hljs-string">'Item C'</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">'c'</span>, <span class="hljs-attr">disabled</span>: <span class="hljs-literal">false</span> },
+  { <span class="hljs-attr">text</span>: <span class="hljs-string">'Item D'</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">'overridden_value'</span>, <span class="hljs-attr">disabled</span>: <span class="hljs-literal">true</span> },
+  { <span class="hljs-attr">text</span>: <span class="hljs-string">'Item E'</span>, <span class="hljs-attr">value</span>: { <span class="hljs-attr">foo</span>: <span class="hljs-string">'bar'</span>, <span class="hljs-attr">baz</span>: <span class="hljs-literal">true</span> }, <span class="hljs-attr">disabled</span>: <span class="hljs-literal">false</span> }
+]</pre>
+<p><strong>Note:</strong> When using the Object format, the order of the final array is <strong>not</strong> guaranteed. For this
+reason, it is recommended to use either of the previously mentioned array formats.</p>
+<h3 id="changing-the-option-field-names" class="bv-no-focus-ring"><span class="bd-content-title">Changing the option field names<a class="anchorjs-link" href="#changing-the-option-field-names" aria-labelledby="changing-the-option-field-names"></a></span></h3>
+<p>If you want to customize the field property names (for example using <code translate="no" class="notranslate text-nowrap">name</code> field for display <code translate="no" class="notranslate text-nowrap">text</code>) you can easily change them by setting the <code translate="no" class="notranslate text-nowrap">text-field</code>, <code translate="no" class="notranslate text-nowrap">html-field</code>, <code translate="no" class="notranslate text-nowrap">value-field</code>, and <code translate="no" class="notranslate text-nowrap">disabled-field</code> props to a string that contains the property name you would like to use:</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-form-select-options-fields notranslate">
+<div>
+<select class="mb-3 custom-select" id="__BVID__1158">
+<option value="A">Option A</option>
+<option value="B">Option B</option>
+<option disabled="disabled" value="D">Option C</option>
+<option value="[object Object]">Option D</option>
+</select>
+<div class="mt-3">Selected: <strong>A</strong></div>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-select</span>
+      <span class="hljs-attr">v-model</span>=<span class="hljs-string">"selected"</span>
+      <span class="hljs-attr">:options</span>=<span class="hljs-string">"options"</span>
+      <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-3"</span>
+      <span class="hljs-attr">value-field</span>=<span class="hljs-string">"item"</span>
+      <span class="hljs-attr">text-field</span>=<span class="hljs-string">"name"</span>
+      <span class="hljs-attr">disabled-field</span>=<span class="hljs-string">"notEnabled"</span>
+    &gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-select</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mt-3"</span>&gt;</span>Selected: <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>{{ selected }}<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    data() {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">selected</span>: <span class="hljs-string">'A'</span>,
+        <span class="hljs-attr">options</span>: [
+          { <span class="hljs-attr">item</span>: <span class="hljs-string">'A'</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">'Option A'</span> },
+          { <span class="hljs-attr">item</span>: <span class="hljs-string">'B'</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">'Option B'</span> },
+          { <span class="hljs-attr">item</span>: <span class="hljs-string">'D'</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">'Option C'</span>, <span class="hljs-attr">notEnabled</span>: <span class="hljs-literal">true</span> },
+          { <span class="hljs-attr">item</span>: { <span class="hljs-attr">d</span>: <span class="hljs-number">1</span> }, <span class="hljs-attr">name</span>: <span class="hljs-string">'Option D'</span> }
+        ]
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+<h3 id="option-notes" class="bv-no-focus-ring"><span class="bd-content-title">Option notes<a class="anchorjs-link" href="#option-notes" aria-labelledby="option-notes"></a></span></h3>
+<p>If the initial value of your <code translate="no" class="notranslate text-nowrap">v-model</code> expression does not match any of the options, the <code translate="no" class="notranslate text-nowrap">&lt;b-form-select&gt;</code> component (which is a native HTML5 <code translate="no" class="notranslate text-nowrap">&lt;select&gt;</code> under the hood) will render in an <em>unselected</em> state. On iOS this will cause the user not being able to select the first item because
+iOS does not fire a change event in this case. It is therefore recommended to provide a disabled
+option with an empty value as your first option.</p>
+<pre class="hljs html text-monospace p-2 notranslate" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-form-select</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">"selected"</span> <span class="hljs-attr">:options</span>=<span class="hljs-string">"options"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">template</span> <span class="hljs-attr">v-slot:first</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-select-option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">""</span> <span class="hljs-attr">disabled</span>&gt;</span>-- Please select an option --<span class="hljs-tag">&lt;/<span class="hljs-name">b-form-select-option</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b-form-select</span>&gt;</span></pre>
+<p>See the <a href="https://vuejs.org/v2/guide/forms.html#Select" target="_blank" rel="noopener">Vue select</a> documentation for more details.</p>
+<h2 id="standard-single-select" class="bv-no-focus-ring"><span class="bd-content-title">Standard (single) select<a class="anchorjs-link" href="#standard-single-select" aria-labelledby="standard-single-select"></a></span></h2>
+<p>By default, Bootstrap v4's custom select styling is applied.</p>
+<h3 id="value-in-single-mode" class="bv-no-focus-ring"><span class="bd-content-title">Value in single mode<a class="anchorjs-link" href="#value-in-single-mode" aria-labelledby="value-in-single-mode"></a></span></h3>
+<p>In non <code translate="no" class="notranslate text-nowrap">multiple</code> mode, <code translate="no" class="notranslate text-nowrap">&lt;b-form-select&gt;</code> returns the a single <code translate="no" class="notranslate text-nowrap">value</code> of the currently selected
+option.</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-form-select-single notranslate">
+<div>
+<select class="custom-select" id="__BVID__1160">
+<option value="">Please select some item</option>
+<option value="a">This is First option</option>
+<option value="b">Default Selected Option</option>
+<option value="c">This is another option</option>
+<option disabled="disabled" value="d">This one is disabled</option>
+</select>
+<div class="mt-3">Selected: <strong></strong></div>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-select</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">"selected"</span> <span class="hljs-attr">:options</span>=<span class="hljs-string">"options"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-select</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mt-3"</span>&gt;</span>Selected: <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>{{ selected }}<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    data() {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">selected</span>: <span class="hljs-literal">null</span>,
+        <span class="hljs-attr">options</span>: [
+          { <span class="hljs-attr">value</span>: <span class="hljs-literal">null</span>, <span class="hljs-attr">text</span>: <span class="hljs-string">'Please select some item'</span> },
+          { <span class="hljs-attr">value</span>: <span class="hljs-string">'a'</span>, <span class="hljs-attr">text</span>: <span class="hljs-string">'This is First option'</span> },
+          { <span class="hljs-attr">value</span>: <span class="hljs-string">'b'</span>, <span class="hljs-attr">text</span>: <span class="hljs-string">'Default Selected Option'</span> },
+          { <span class="hljs-attr">value</span>: <span class="hljs-string">'c'</span>, <span class="hljs-attr">text</span>: <span class="hljs-string">'This is another option'</span> },
+          { <span class="hljs-attr">value</span>: <span class="hljs-string">'d'</span>, <span class="hljs-attr">text</span>: <span class="hljs-string">'This one is disabled'</span>, <span class="hljs-attr">disabled</span>: <span class="hljs-literal">true</span> }
+        ]
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+<h3 id="select-sizing-displayed-rows" class="bv-no-focus-ring"><span class="bd-content-title">Select sizing (displayed rows)<a class="anchorjs-link" href="#select-sizing-displayed-rows" aria-labelledby="select-sizing-displayed-rows"></a></span></h3>
+<p>You can use the <code translate="no" class="notranslate text-nowrap">select-size</code> prop to switch the custom select into a select list-box, rather than a
+dropdown. Set the <code translate="no" class="notranslate text-nowrap">select-size</code> prop to a numerical value greater than 1 to control how many rows of
+options are visible.</p>
+<p>Note when <code translate="no" class="notranslate text-nowrap">select-size</code> is set to a value greater than 1, the Bootstrap v4 custom styling will <strong>not</strong> be applied, unless the <code translate="no" class="notranslate text-nowrap">multiple</code> prop is also set.</p>
+<p>Note that not all mobile browsers will show the select as a list-box.</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-form-select-size notranslate">
+<div>
+<select size="4" class="custom-select" id="__BVID__1162">
+<option value="">Please select some item</option>
+<option value="a">This is option a</option>
+<option value="b">Default Selected Option b</option>
+<option value="c">This is option c</option>
+<option disabled="disabled" value="d">This one is disabled</option>
+<option value="e">This is option e</option>
+<option value="e">This is option f</option>
+</select>
+<div class="mt-3">Selected: <strong></strong></div>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-select</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">"selected"</span> <span class="hljs-attr">:options</span>=<span class="hljs-string">"options"</span> <span class="hljs-attr">:select-size</span>=<span class="hljs-string">"4"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-select</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mt-3"</span>&gt;</span>Selected: <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>{{ selected }}<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    data() {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">selected</span>: <span class="hljs-literal">null</span>,
+        <span class="hljs-attr">options</span>: [
+          { <span class="hljs-attr">value</span>: <span class="hljs-literal">null</span>, <span class="hljs-attr">text</span>: <span class="hljs-string">'Please select some item'</span> },
+          { <span class="hljs-attr">value</span>: <span class="hljs-string">'a'</span>, <span class="hljs-attr">text</span>: <span class="hljs-string">'This is option a'</span> },
+          { <span class="hljs-attr">value</span>: <span class="hljs-string">'b'</span>, <span class="hljs-attr">text</span>: <span class="hljs-string">'Default Selected Option b'</span> },
+          { <span class="hljs-attr">value</span>: <span class="hljs-string">'c'</span>, <span class="hljs-attr">text</span>: <span class="hljs-string">'This is option c'</span> },
+          { <span class="hljs-attr">value</span>: <span class="hljs-string">'d'</span>, <span class="hljs-attr">text</span>: <span class="hljs-string">'This one is disabled'</span>, <span class="hljs-attr">disabled</span>: <span class="hljs-literal">true</span> },
+          { <span class="hljs-attr">value</span>: <span class="hljs-string">'e'</span>, <span class="hljs-attr">text</span>: <span class="hljs-string">'This is option e'</span> },
+          { <span class="hljs-attr">value</span>: <span class="hljs-string">'e'</span>, <span class="hljs-attr">text</span>: <span class="hljs-string">'This is option f'</span> }
+        ]
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+<h2 id="multiple-select-support" class="bv-no-focus-ring"><span class="bd-content-title">Multiple select support<a class="anchorjs-link" href="#multiple-select-support" aria-labelledby="multiple-select-support"></a></span></h2>
+<p>Enable multiple select mode by setting the prop <code translate="no" class="notranslate text-nowrap">multiple</code>, and control how many rows are displayed
+in the multiple select list-box by setting <code translate="no" class="notranslate text-nowrap">select-size</code> to the number of rows to display. The
+default is to let the browser use its default (typically 4).</p>
+<h3 id="value-in-multiple-mode" class="bv-no-focus-ring"><span class="bd-content-title">Value in multiple mode<a class="anchorjs-link" href="#value-in-multiple-mode" aria-labelledby="value-in-multiple-mode"></a></span></h3>
+<p>In <code translate="no" class="notranslate text-nowrap">multiple</code> mode, <code translate="no" class="notranslate text-nowrap">&lt;b-form-select&gt;</code> always returns an array of option values. You <strong>must</strong> provide
+an array reference as your <code translate="no" class="notranslate text-nowrap">v-model</code> when in <code translate="no" class="notranslate text-nowrap">multiple</code> mode.</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-form-select-multiple-mode notranslate">
+<div>
+<select multiple="multiple" size="4" class="custom-select" id="__BVID__1164">
+<option value="a">This is First option</option>
+<option value="b">Default Selected Option</option>
+<option value="c">This is another option</option>
+<option disabled="disabled" value="d">This one is disabled</option>
+<option value="e">This is option e</option>
+<option value="f">This is option f</option>
+<option value="g">This is option g</option>
+</select>
+<div class="mt-3">Selected: <strong>[
+  "b"
+]</strong></div>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-select</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">"selected"</span> <span class="hljs-attr">:options</span>=<span class="hljs-string">"options"</span> <span class="hljs-attr">multiple</span> <span class="hljs-attr">:select-size</span>=<span class="hljs-string">"4"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-select</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mt-3"</span>&gt;</span>Selected: <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>{{ selected }}<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    data() {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">selected</span>: [<span class="hljs-string">'b'</span>], <span class="hljs-comment">// Array reference</span>
+        <span class="hljs-attr">options</span>: [
+          { <span class="hljs-attr">value</span>: <span class="hljs-string">'a'</span>, <span class="hljs-attr">text</span>: <span class="hljs-string">'This is First option'</span> },
+          { <span class="hljs-attr">value</span>: <span class="hljs-string">'b'</span>, <span class="hljs-attr">text</span>: <span class="hljs-string">'Default Selected Option'</span> },
+          { <span class="hljs-attr">value</span>: <span class="hljs-string">'c'</span>, <span class="hljs-attr">text</span>: <span class="hljs-string">'This is another option'</span> },
+          { <span class="hljs-attr">value</span>: <span class="hljs-string">'d'</span>, <span class="hljs-attr">text</span>: <span class="hljs-string">'This one is disabled'</span>, <span class="hljs-attr">disabled</span>: <span class="hljs-literal">true</span> },
+          { <span class="hljs-attr">value</span>: <span class="hljs-string">'e'</span>, <span class="hljs-attr">text</span>: <span class="hljs-string">'This is option e'</span> },
+          { <span class="hljs-attr">value</span>: <span class="hljs-string">'f'</span>, <span class="hljs-attr">text</span>: <span class="hljs-string">'This is option f'</span> },
+          { <span class="hljs-attr">value</span>: <span class="hljs-string">'g'</span>, <span class="hljs-attr">text</span>: <span class="hljs-string">'This is option g'</span> }
+        ]
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+<h2 id="control-sizing" class="bv-no-focus-ring"><span class="bd-content-title">Control sizing<a class="anchorjs-link" href="#control-sizing" aria-labelledby="control-sizing"></a></span></h2>
+<p>Set the form-control text size using the <code translate="no" class="notranslate text-nowrap">size</code> prop to <code translate="no" class="notranslate text-nowrap">sm</code> or <code translate="no" class="notranslate text-nowrap">lg</code> for small or large
+respectively.</p>
+<p>By default <code translate="no" class="notranslate text-nowrap">&lt;b-form-select&gt;</code> will occupy the full width of the container that it appears in. To
+control the select width, place the input inside standard Bootstrap grid column.</p>
+<h2 id="autofocus" class="bv-no-focus-ring"><span class="bd-content-title">Autofocus<a class="anchorjs-link" href="#autofocus" aria-labelledby="autofocus"></a></span></h2>
+<p>When the <code translate="no" class="notranslate text-nowrap">autofocus</code> prop is set on <code translate="no" class="notranslate text-nowrap">&lt;b-form-select&gt;</code>, the select will be auto-focused when it is
+inserted (i.e. <strong>mounted</strong>) into the document or re-activated when inside a Vue <code translate="no" class="notranslate text-nowrap">&lt;keep-alive&gt;</code> component. Note that this prop <strong>does not</strong> set the <code translate="no" class="notranslate text-nowrap">autofocus</code> attribute on the select, nor can it
+tell when the select becomes visible.</p>
+<h2 id="contextual-states" class="bv-no-focus-ring"><span class="bd-content-title">Contextual states<a class="anchorjs-link" href="#contextual-states" aria-labelledby="contextual-states"></a></span></h2>
+<p>Bootstrap includes validation styles for <code translate="no" class="notranslate text-nowrap">valid</code> and <code translate="no" class="notranslate text-nowrap">invalid</code> states on most form controls.</p>
+<p>Generally speaking, you'll want to use a particular state for specific types of feedback:</p>
+<ul>
+<li><code translate="no" class="notranslate text-nowrap">false</code> (denotes invalid state) is great for when there's a blocking or required field. A user
+must fill in this field properly to submit the form.</li>
+<li><code translate="no" class="notranslate text-nowrap">true</code> (denotes valid state) is ideal for situations when you have per-field validation throughout
+a form and want to encourage a user through the rest of the fields.</li>
+<li><code translate="no" class="notranslate text-nowrap">null</code> Displays no validation state (neither valid nor invalid)</li>
+</ul>
+<p>To apply one of the contextual state icons on <code translate="no" class="notranslate text-nowrap">&lt;b-form-select&gt;</code>, set the <code translate="no" class="notranslate text-nowrap">state</code> prop to <code translate="no" class="notranslate text-nowrap">false</code> (for invalid), <code translate="no" class="notranslate text-nowrap">true</code> (for valid), or <code translate="no" class="notranslate text-nowrap">null</code> (no validation state).</p>
+<h3 id="conveying-contextual-validation-state-to-assistive-technologies-and-colorblind-users" class="bv-no-focus-ring"><span class="bd-content-title">Conveying contextual validation state to assistive technologies and colorblind users<a class="anchorjs-link" href="#conveying-contextual-validation-state-to-assistive-technologies-and-colorblind-users" aria-labelledby="conveying-contextual-validation-state-to-assistive-technologies-and-colorblind-users"></a></span></h3>
+<p>Using these contextual states to denote the state of a form control only provides a visual,
+color-based indication, which will not be conveyed to users of assistive technologies - such as
+screen readers - or to colorblind users.</p>
+<p>Ensure that an alternative indication of state is also provided. For instance, you could include a
+hint about state in the form control's <code translate="no" class="notranslate text-nowrap">&lt;label&gt;</code> text itself, or by providing an additional help
+text block (via <code translate="no" class="notranslate text-nowrap">&lt;b-form-group&gt;</code> or <code translate="no" class="notranslate text-nowrap">&lt;b-form-*-feedback&gt;</code>). Specifically for assistive technologies,
+invalid form controls can also be assigned an <code translate="no" class="notranslate text-nowrap">aria-invalid="true"</code> attribute (see below).</p>
+<h3 id="aria-aria-invalid-attribute" class="bv-no-focus-ring"><span class="bd-content-title">ARIA <code translate="no" class="notranslate text-nowrap">aria-invalid</code> attribute:<a class="anchorjs-link" href="#aria-aria-invalid-attribute" aria-labelledby="aria-aria-invalid-attribute"></a></span></h3>
+<p>When <code translate="no" class="notranslate text-nowrap">&lt;b-form-select&gt;</code> has an invalid contextual state (i.e. state = <code translate="no" class="notranslate text-nowrap">false</code>) you may also want to
+set the <code translate="no" class="notranslate text-nowrap">&lt;b-form-select&gt;</code> prop <code translate="no" class="notranslate text-nowrap">aria-invalid</code> to <code translate="no" class="notranslate text-nowrap">true</code>.</p>
+<p>Supported <code translate="no" class="notranslate text-nowrap">invalid</code> values are:</p>
+<ul>
+<li><code translate="no" class="notranslate text-nowrap">false</code> (default) No errors detected</li>
+<li><code translate="no" class="notranslate text-nowrap">true</code> The value has failed validation.</li>
+</ul>
+<p>When <code translate="no" class="notranslate text-nowrap">state</code> is set to <code translate="no" class="notranslate text-nowrap">false</code>, aria-invalid will also be set to true.</p>
+<h2 id="non-custom-select" class="bv-no-focus-ring"><span class="bd-content-title">Non custom select<a class="anchorjs-link" href="#non-custom-select" aria-labelledby="non-custom-select"></a></span></h2>
+<p>Set the prop <code translate="no" class="notranslate text-nowrap">plain</code> to have a native browser <code translate="no" class="notranslate text-nowrap">&lt;select&gt;</code> rendered (although the class <code translate="no" class="notranslate text-nowrap">.form-control</code> will always be placed on the select).</p>
+<p>A <code translate="no" class="notranslate text-nowrap">plain</code> select will always be rendered for non <code translate="no" class="notranslate text-nowrap">multiple</code> selects which have the <code translate="no" class="notranslate text-nowrap">select-size</code> prop set to a value greater than 1.</p>
+<!-- Component reference added automatically from component package.json -->
+
+<h2 id="component-reference" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title">Component reference<a href="../../../bootstrap-vue/docs/components/form-select#component-reference" class="anchorjs-link" aria-labelledby="component-reference" target="_self"></a></span></h2>
+<section data-v-866a22e8="" class="bd-content">
+<header data-v-866a22e8="" class="row align-items-center">
+<div data-v-866a22e8="" class="col-sm-9">
+<h3 data-v-866a22e8="" id="comp-ref-b-form-select" tabindex="-1" class="bv-no-focus-ring"><span data-v-866a22e8="" class="bd-content-title"><code data-v-866a22e8="" translate="translate" class="notranslate bigger">&lt;b-form-select&gt;</code><a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/form-select#comp-ref-b-form-select" class="anchorjs-link" aria-labelledby="comp-ref-b-form-select" target="_self"></a></span></h3>
+</div>
+<div data-v-866a22e8="" class="text-sm-right col-sm-3"><a data-v-866a22e8="" rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev/src/components/form-select/form-select.js" class="btn btn-outline-secondary btn-sm"> View source </a></div>
+</header>
+<ul data-v-866a22e8="" class="component-ref-mini-toc my-3">
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-form-select-aliases"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-form-select&gt;</code> Component aliases </a></li>
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-form-select-props"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-form-select&gt;</code> Properties </a></li>
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-form-select-v-model"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-form-select&gt;</code> v-model </a></li>
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-form-select-slots"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-form-select&gt;</code> Slots </a></li>
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-form-select-events"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-form-select&gt;</code> Events </a></li>
+</ul>
+<h4 data-v-866a22e8="" id="comp-ref-b-form-select-aliases" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> Component aliases <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/form-select#comp-ref-b-form-select-aliases" class="anchorjs-link" aria-labelledby="comp-ref-b-form-select-aliases" target="_self"></a></span></h4>
+<p data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-form-select&gt;</code> can also be used via the following aliases:</p>
+<ul data-v-866a22e8="">
+<li data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-select&gt;</code></li>
+</ul>
+<div data-v-866a22e8="" class="alert alert-info">
+<p data-v-866a22e8="" class="mb-0 small"> Note: component aliases are only available when importing all of BootstrapVue or using
+        the component group plugin. </p>
+</div>
+<h4 data-v-866a22e8="" id="comp-ref-b-form-select-props" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> Properties <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/form-select#comp-ref-b-form-select-props" class="anchorjs-link" aria-labelledby="comp-ref-b-form-select-props" target="_self"></a></span></h4>
+<div data-v-866a22e8="" class="table-responsive-sm">
+<table role="table" aria-busy="false" aria-colcount="4" class="table b-table bv-docs-table table-striped" id="__BVID__1017">
+<thead role="rowgroup" class="">
+<tr role="row" class="">
+<th role="columnheader" scope="col" tabindex="0" aria-colindex="1" aria-sort="none" class="b-table-sort-icon-left">Property<span class="sr-only"> (Click to sort Ascending)</span></th>
+<th role="columnheader" scope="col" tabindex="0" aria-colindex="2" class="">Type</th>
+<th role="columnheader" scope="col" tabindex="0" aria-colindex="3" class="">Default</th>
+<th role="columnheader" scope="col" tabindex="0" aria-colindex="4" class="">Description</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+<tr role="row" data-pk="id" class="" id="__BVID__1017__row_id">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">id</code></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">Used to set the 'id' attribute on the rendered content, and used as the base to generate any additional element IDs as needed</td>
+</tr>
+<tr role="row" data-pk="name" class="" id="__BVID__1017__row_name">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">name</code></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">Sets the value of the 'name' attribute on the form control</td>
+</tr>
+<tr role="row" data-pk="disabled" class="" id="__BVID__1017__row_disabled">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">disabled</code></td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">When set to 'true', disables the component's functionality and places it in a disabled state</td>
+</tr>
+<tr role="row" data-pk="required" class="" id="__BVID__1017__row_required">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">required</code></td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">Adds the 'required' attribute to the form control</td>
+</tr>
+<tr role="row" data-pk="form" class="" id="__BVID__1017__row_form">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">form</code></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">ID of the form that the form control belongs to. Sets the 'form' attribute on the control</td>
+</tr>
+<tr role="row" data-pk="autofocus" class="" id="__BVID__1017__row_autofocus">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">autofocus</code></td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">When set to 'true', attempts to auto-focus the control when it is mounted, or re-activated when in a keep-alive. Does not set the 'autofocus' attribute on the control</td>
+</tr>
+<tr role="row" data-pk="size" class="" id="__BVID__1017__row_size">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">size</code></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">Set the size of the component's appearance. 'sm', 'md' (default), or 'lg'</td>
+</tr>
+<tr role="row" data-pk="state" class="" id="__BVID__1017__row_state">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">state</code></td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">Controls the validation state appearance of the component. 'true' for valid, 'false' for invalid', or 'null' for no validation state</td>
+</tr>
+<tr role="row" data-pk="plain" class="" id="__BVID__1017__row_plain">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">plain</code></td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">Render the form control in plain mode, rather than custom styled mode</td>
+</tr>
+<tr role="row" data-pk="options" class="" id="__BVID__1017__row_options">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">options</code></td>
+<td aria-colindex="2" role="cell" class="">Array or Object</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">[]</code></td>
+<td aria-colindex="4" role="cell" class="">Array of items to render in the component</td>
+</tr>
+<tr role="row" data-pk="value-field" class="" id="__BVID__1017__row_value-field">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">value-field</code></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'value'</code></td>
+<td aria-colindex="4" role="cell" class="">Field name in the 'options' array that should be used for the value</td>
+</tr>
+<tr role="row" data-pk="text-field" class="" id="__BVID__1017__row_text-field">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">text-field</code></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'text'</code></td>
+<td aria-colindex="4" role="cell" class="">Field name in the 'options' array that should be used for the text label</td>
+</tr>
+<tr role="row" data-pk="html-field" class="" id="__BVID__1017__row_html-field">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">html-field</code></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'html'</code></td>
+<td aria-colindex="4" role="cell" class="">Field name in the 'options' array that should be used for the html label instead of text field. Use with caution.</td>
+</tr>
+<tr role="row" data-pk="disabled-field" class="" id="__BVID__1017__row_disabled-field">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">disabled-field</code></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'disabled'</code></td>
+<td aria-colindex="4" role="cell" class="">Field name in the 'options' array that should be used for the disabled state</td>
+</tr>
+<tr role="row" data-pk="label-field" class="" id="__BVID__1017__row_label-field">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">label-field</code></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'label'</code></td>
+<td aria-colindex="4" role="cell" class=""></td>
+</tr>
+<tr role="row" data-pk="options-field" class="" id="__BVID__1017__row_options-field">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">options-field</code></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'options'</code></td>
+<td aria-colindex="4" role="cell" class=""></td>
+</tr>
+<tr role="row" data-pk="value" class="" id="__BVID__1017__row_value">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">value</code> <span data-v-866a22e8="" class="badge badge-primary">v-model</span></td>
+<td aria-colindex="2" role="cell" class="">Any</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">Current value of the select. Should be set to an array when the 'multiple' prop is set</td>
+</tr>
+<tr role="row" data-pk="multiple" class="" id="__BVID__1017__row_multiple">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">multiple</code></td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">When set, allows multiple options to be selected (multi-select)</td>
+</tr>
+<tr role="row" data-pk="select-size" class="" id="__BVID__1017__row_select-size">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">select-size</code></td>
+<td aria-colindex="2" role="cell" class="">Number</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">0</code></td>
+<td aria-colindex="4" role="cell" class="">When set to a number larger than 0, will set the number of display option rows. Note not all browser will respect this setting</td>
+</tr>
+<tr role="row" data-pk="aria-invalid" class="" id="__BVID__1017__row_aria-invalid">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">aria-invalid</code></td>
+<td aria-colindex="2" role="cell" class="">Boolean or String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">Optional value to set for the 'aria-invalid' attribute. Supported values are 'true' and 'false'. If not set, the 'state' prop will dictate the value</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h4 data-v-866a22e8="" id="comp-ref-b-form-select-v-model" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> v-model <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/form-select#comp-ref-b-form-select-v-model" class="anchorjs-link" aria-labelledby="comp-ref-b-form-select-v-model" target="_self"></a></span></h4>
+<div data-v-866a22e8="" class="table-responsive-sm">
+<table role="table" aria-busy="false" aria-colcount="2" class="table b-table bv-docs-table table-striped" id="__BVID__1047">
+<thead role="rowgroup" class="">
+<tr role="row" class="">
+<th role="columnheader" scope="col" aria-colindex="1" class="">Property</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">Event</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+<tr role="row" class="">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="notranslate">value</code></td>
+<td aria-colindex="2" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="notranslate">input</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h4 data-v-866a22e8="" id="comp-ref-b-form-select-slots" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> Slots <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/form-select#comp-ref-b-form-select-slots" class="anchorjs-link" aria-labelledby="comp-ref-b-form-select-slots" target="_self"></a></span></h4>
+<div data-v-866a22e8="" class="table-responsive-sm">
+<table role="table" aria-busy="false" aria-colcount="2" class="table b-table bv-docs-table table-striped" id="__BVID__1056">
+<thead role="rowgroup" class="">
+<tr role="row" class="">
+<th role="columnheader" scope="col" aria-colindex="1" class="">Slot Name</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">Description</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+<tr role="row" data-pk="first" class="" id="__BVID__1056__row_first">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">first</code></td>
+<td aria-colindex="2" role="cell" class="">Slot to place options or option groups above options provided via the 'options' prop</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h4 data-v-866a22e8="" id="comp-ref-b-form-select-events" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> Events <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/form-select#comp-ref-b-form-select-events" class="anchorjs-link" aria-labelledby="comp-ref-b-form-select-events" target="_self"></a></span></h4>
+<div data-v-866a22e8="" class="table-responsive-sm">
+<table role="table" aria-busy="false" aria-colcount="3" class="table b-table bv-docs-table table-striped" id="__BVID__1065">
+<thead role="rowgroup" class="">
+<tr role="row" class="">
+<th role="columnheader" scope="col" aria-colindex="1" class="">Event</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">Arguments</th>
+<th role="columnheader" scope="col" aria-colindex="3" class="">Description</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+<tr role="row" data-pk="input" class="" id="__BVID__1065__row_input">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="notranslate">input</code></td>
+<td aria-colindex="2" role="cell" class=""><ol data-v-866a22e8="" class="list-unstyled mb-0">
+<li data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">value</code> - <span data-v-866a22e8="">current selected value(s) of the select.</span></li>
+</ol></td>
+<td aria-colindex="3" role="cell" class="">Emitted with the select value changes</td>
+</tr>
+<tr role="row" data-pk="change" class="" id="__BVID__1065__row_change">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="notranslate">change</code></td>
+<td aria-colindex="2" role="cell" class=""><ol data-v-866a22e8="" class="list-unstyled mb-0">
+<li data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">value</code> - <span data-v-866a22e8="">current selected value(s) of the select.</span></li>
+</ol></td>
+<td aria-colindex="3" role="cell" class="">Emitted with the select value changes via user interaction</td>
+</tr>
+</tbody>
+</table>
+</div>
+<header data-v-866a22e8="" class="row align-items-center">
+<div data-v-866a22e8="" class="col-sm-9">
+<h3 data-v-866a22e8="" id="comp-ref-b-form-select-option" tabindex="-1" class="bv-no-focus-ring"><span data-v-866a22e8="" class="bd-content-title"><code data-v-866a22e8="" translate="translate" class="notranslate bigger">&lt;b-form-select-option&gt;</code><a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/form-select#comp-ref-b-form-select-option" class="anchorjs-link" aria-labelledby="comp-ref-b-form-select-option" target="_self"></a></span></h3>
+<span data-v-866a22e8="" class="badge badge-success">v2.2.0+</span> <a data-v-866a22e8="" rel="noopener" target="_blank" href="https://vuejs.org/v2/guide/render-function.html#Functional-Components" class="badge badge-secondary"> Functional Component </a></div>
+<div data-v-866a22e8="" class="text-sm-right col-sm-3"><a data-v-866a22e8="" rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev/src/components/form-select/form-select-option.js" class="btn btn-outline-secondary btn-sm"> View source </a></div>
+</header>
+<ul data-v-866a22e8="" class="component-ref-mini-toc my-3">
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-form-select-option-aliases"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-form-select-option&gt;</code> Component aliases </a></li>
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-form-select-option-props"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-form-select-option&gt;</code> Properties </a></li>
+</ul>
+<article data-v-866a22e8="" class="bd-content">
+<h4 data-v-866a22e8="" id="comp-ref-b-form-select-option-aliases" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> Component aliases <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/form-select#comp-ref-b-form-select-option-aliases" class="anchorjs-link" aria-labelledby="comp-ref-b-form-select-option-aliases" target="_self"></a></span></h4>
+<p data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-form-select-option&gt;</code> can also be used via the following aliases:</p>
+<ul data-v-866a22e8="">
+<li data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-select-option&gt;</code></li>
+</ul>
+<div data-v-866a22e8="" class="alert alert-info">
+<p data-v-866a22e8="" class="mb-0 small"> Note: component aliases are only available when importing all of BootstrapVue or using
+        the component group plugin. </p>
+</div>
+<h4 data-v-866a22e8="" id="comp-ref-b-form-select-option-props" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> Properties <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/form-select#comp-ref-b-form-select-option-props" class="anchorjs-link" aria-labelledby="comp-ref-b-form-select-option-props" target="_self"></a></span></h4>
+<div data-v-866a22e8="" class="table-responsive-sm">
+<table role="table" aria-busy="false" aria-colcount="4" class="table b-table bv-docs-table table-striped" id="__BVID__1083">
+<thead role="rowgroup" class="">
+<tr role="row" class="">
+<th role="columnheader" scope="col" aria-colindex="1" class="">Property</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">Type</th>
+<th role="columnheader" scope="col" aria-colindex="3" class="">Default</th>
+<th role="columnheader" scope="col" aria-colindex="4" class="">Description</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+<tr role="row" data-pk="value" class="" id="__BVID__1083__row_value">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">value</code> <span data-v-866a22e8="" class="badge badge-info">Required</span></td>
+<td aria-colindex="2" role="cell" class="">Any</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">The value of the option</td>
+</tr>
+<tr role="row" data-pk="disabled" class="" id="__BVID__1083__row_disabled">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">disabled</code></td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">When set to 'true', disables the component's functionality and places it in a disabled state</td>
+</tr>
+</tbody>
+</table>
+</div>
+<header data-v-866a22e8="" class="row align-items-center">
+<div data-v-866a22e8="" class="col-sm-9">
+<h3 data-v-866a22e8="" id="comp-ref-b-form-select-option-group" tabindex="-1" class="bv-no-focus-ring"><span data-v-866a22e8="" class="bd-content-title"><code data-v-866a22e8="" translate="translate" class="notranslate bigger">&lt;b-form-select-option-group&gt;</code><a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/form-select#comp-ref-b-form-select-option-group" class="anchorjs-link" aria-labelledby="comp-ref-b-form-select-option-group" target="_self"></a></span></h3>
+<span data-v-866a22e8="" class="badge badge-success">v2.2.0+</span> </div>
+<div data-v-866a22e8="" class="text-sm-right col-sm-3"><a data-v-866a22e8="" rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev/src/components/form-select/form-select-option-group.js" class="btn btn-outline-secondary btn-sm"> View source </a></div>
+</header>
+<ul data-v-866a22e8="" class="component-ref-mini-toc my-3">
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-form-select-option-group-aliases"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-form-select-option-group&gt;</code> Component aliases </a></li>
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-form-select-option-group-props"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-form-select-option-group&gt;</code> Properties </a></li>
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-form-select-option-group-slots"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-form-select-option-group&gt;</code> Slots </a></li>
+</ul>
+<article data-v-866a22e8="" class="bd-content">
+<h4 data-v-866a22e8="" id="comp-ref-b-form-select-option-group-aliases" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> Component aliases <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/form-select#comp-ref-b-form-select-option-group-aliases" class="anchorjs-link" aria-labelledby="comp-ref-b-form-select-option-group-aliases" target="_self"></a></span></h4>
+<p data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-form-select-option-group&gt;</code> can also be used via the following aliases:</p>
+<ul data-v-866a22e8="">
+<li data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-select-option-group&gt;</code></li>
+</ul>
+<div data-v-866a22e8="" class="alert alert-info">
+<p data-v-866a22e8="" class="mb-0 small"> Note: component aliases are only available when importing all of BootstrapVue or using
+        the component group plugin. </p>
+</div>
+<h4 data-v-866a22e8="" id="comp-ref-b-form-select-option-group-props" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> Properties <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/form-select#comp-ref-b-form-select-option-group-props" class="anchorjs-link" aria-labelledby="comp-ref-b-form-select-option-group-props" target="_self"></a></span></h4>
+<div data-v-866a22e8="" class="table-responsive-sm">
+<table role="table" aria-busy="false" aria-colcount="4" class="table b-table bv-docs-table table-striped" id="__BVID__1101">
+<thead role="rowgroup" class="">
+<tr role="row" class="">
+<th role="columnheader" scope="col" aria-colindex="1" class="">Property</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">Type</th>
+<th role="columnheader" scope="col" aria-colindex="3" class="">Default</th>
+<th role="columnheader" scope="col" aria-colindex="4" class="">Description</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+<tr role="row" data-pk="options" class="" id="__BVID__1101__row_options">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">options</code></td>
+<td aria-colindex="2" role="cell" class="">Array or Object</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">[]</code></td>
+<td aria-colindex="4" role="cell" class="">Array of items to render in the component</td>
+</tr>
+<tr role="row" data-pk="value-field" class="" id="__BVID__1101__row_value-field">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">value-field</code></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'value'</code></td>
+<td aria-colindex="4" role="cell" class="">Field name in the 'options' array that should be used for the value</td>
+</tr>
+<tr role="row" data-pk="text-field" class="" id="__BVID__1101__row_text-field">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">text-field</code></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'text'</code></td>
+<td aria-colindex="4" role="cell" class="">Field name in the 'options' array that should be used for the text label</td>
+</tr>
+<tr role="row" data-pk="html-field" class="" id="__BVID__1101__row_html-field">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">html-field</code></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'html'</code></td>
+<td aria-colindex="4" role="cell" class="">Field name in the 'options' array that should be used for the html label instead of text field. Use with caution.</td>
+</tr>
+<tr role="row" data-pk="disabled-field" class="" id="__BVID__1101__row_disabled-field">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">disabled-field</code></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'disabled'</code></td>
+<td aria-colindex="4" role="cell" class="">Field name in the 'options' array that should be used for the disabled state</td>
+</tr>
+<tr role="row" data-pk="label" class="" id="__BVID__1101__row_label">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">label</code> <span data-v-866a22e8="" class="badge badge-info">Required</span></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class=""></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h4 data-v-866a22e8="" id="comp-ref-b-form-select-option-group-slots" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> Slots <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/form-select#comp-ref-b-form-select-option-group-slots" class="anchorjs-link" aria-labelledby="comp-ref-b-form-select-option-group-slots" target="_self"></a></span></h4>
+<div data-v-866a22e8="" class="table-responsive-sm">
+<table role="table" aria-busy="false" aria-colcount="2" class="table b-table bv-docs-table table-striped" id="__BVID__1117">
+<thead role="rowgroup" class="">
+<tr role="row" class="">
+<th role="columnheader" scope="col" aria-colindex="1" class="">Slot Name</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">Description</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+<tr role="row" data-pk="first" class="" id="__BVID__1117__row_first">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">first</code></td>
+<td aria-colindex="2" role="cell" class="">Slot to place options above options provided via the 'options' prop</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<h3 id="importing-individual-components" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title"> Importing individual components <a href="../../../bootstrap-vue/docs/components/form-select#importing-individual-components" class="anchorjs-link" aria-labelledby="importing-individual-components" target="_self"></a></span></h3>
+<p> You can import individual components into your project via the following named
+        exports: </p>
+<div class="table-responsive-sm">
+<table role="table" aria-busy="false" aria-colcount="3" class="table b-table bv-docs-table table-striped" id="__BVID__1127">
+<thead role="rowgroup" class="thead-default">
+<tr role="row" class="">
+<th role="columnheader" scope="col" aria-colindex="1" class="">Component</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">Named Export</th>
+<th role="columnheader" scope="col" aria-colindex="3" class="">Import Path</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+<tr role="row" class="">
+<td aria-colindex="1" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">&lt;b-form-select&gt;</code></td>
+<td aria-colindex="2" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">BFormSelect</code></td>
+<td aria-colindex="3" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">bootstrap-vue</code></td>
+</tr>
+<tr role="row" class="">
+<td aria-colindex="1" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">&lt;b-form-select-option&gt;</code></td>
+<td aria-colindex="2" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">BFormSelectOption</code></td>
+<td aria-colindex="3" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">bootstrap-vue</code></td>
+</tr>
+<tr role="row" class="">
+<td aria-colindex="1" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">&lt;b-form-select-option-group&gt;</code></td>
+<td aria-colindex="2" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">BFormSelectOptionGroup</code></td>
+<td aria-colindex="3" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">bootstrap-vue</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Example:</strong></p>
+<pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { BFormSelect } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
+Vue.component(<span class="hljs-string">'b-form-select'</span>, BFormSelect)</pre>
+</article>
+<article class="bd-content">
+<h3 id="importing-as-a-plugin" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title"> Importing as a Vue.js plugin <a href="../../../bootstrap-vue/docs/components/form-select#importing-as-a-plugin" class="anchorjs-link" aria-labelledby="importing-as-a-plugin" target="_self"></a></span></h3>
+<p> This plugin includes all of the above listed individual
+      components.
+      Plugins also include any component aliases. </p>
+<div class="table-responsive-sm">
+<table fileds="namedExport,importPath" role="table" aria-busy="false" aria-colcount="2" class="table b-table bv-docs-table table-striped b-table-caption-top" id="__BVID__1139">
+<thead role="rowgroup" class="thead-default">
+<tr role="row" class="">
+<th role="columnheader" scope="col" aria-colindex="1" class="">Named Export</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">Import Path</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+<tr role="row" class="">
+<td aria-colindex="1" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">FormSelectPlugin</code></td>
+<td aria-colindex="2" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">bootstrap-vue</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Example:</strong></p>
+<pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { FormSelectPlugin } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
+Vue.use(FormSelectPlugin)</pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</main>
+</div>
+</div>
+
+
+<script src="../../../js/jquery-3.2.1.slim.min.js"></script> 
+<script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery-slim.min.js"><\/script>')</script> 
+<script src="../../../v4/dist/js/popper.min.js"></script> 
+<script src="../../../v4/dist/js/bootstrap.min.js"></script> 
+<script src="../../../v4/assets/js/docs.min.js"></script> 
+<script src="../../../v4/assets/js/ie-emulation-modes-warning.js"></script> 
+<script src="../../../v4/assets/js/docsearch.min.js"></script> 
+<script>
+  docsearch({
+    appId: 'PRR89ISST8',
+    apiKey: '95044d57d4d7bb744f322d1f18ed607f',
+    indexName: 'z01-bootstrapV4',
+    inputSelector: '#search-input',
+    handleSelected: function (input, event, suggestion) {
+      var url = suggestion.url;
+      url = suggestion.isLvl1 ? url.split('#')[0]: url;
+      // If it's a title we remove the anchor so it does not jump.
+      window.location.href = url;
+    },
+    transformData: function (hits) {
+      return hits.map(function (hit) {
+        hit.url = hit.url.replace('https://v4-alpha.getbootstrap.com', '/docs/4.0');
+        return hit;
+      });
+    },
+    debug: false // Set debug to true if you want to inspect the dropdown
+  });
+</script> 
+<script>
+  Holder.addTheme('gray', {
+    bg: '#777',
+    fg: 'rgba(255,255,255,.75)',
+    font: 'Helvetica',
+    fontweight: 'normal'
+  });
+</script>
+</body>
+</html>

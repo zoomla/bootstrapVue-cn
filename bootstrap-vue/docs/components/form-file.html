@@ -1,0 +1,951 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Jekyll v3.6.0">
+<title>文件选择 &middot; BootstrapVue</title>
+<!-- Bootstrap 核心CSS -->
+<link href="../../../v4/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- 本文档额外专用css -->
+<link href="../../../v4/assets/css/docsearch.min.css" rel="stylesheet">
+<link href="../../../v4/assets/css/docs.min.css" rel="stylesheet">
+<link href="../../style/bv_path.css" rel="stylesheet">
+
+<!-- Favicons图标定义 -->
+<link data-n-head="ssr" rel="manifest" href="../../manifest.json">
+<link data-n-head="ssr" rel="shortcut icon" href="../../style/icons/icon_64.png">
+<link data-n-head="ssr" rel="apple-touch-icon" href="../../style/icons/icon_512.png" sizes="512x512">
+
+<!-- Meta关键字定义 -->
+<meta name="description" content="The most popular HTML, CSS, and JS library in the world.">
+<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+
+</head>
+<body>
+<a id="skippy" class="sr-only sr-only-focusable" href="#content">
+<div class="container"> <span class="skiplink-text">跳到主体内容</span> </div>
+</a>
+<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar"> <a class="navbar-brand mr-0 mr-md-2" href="../" aria-label="Bootstrap">
+  <svg class="d-block" width="36" height="36" viewbox="0 0 612 612" xmlns="http://www.w3.org/2000/svg" focusable="false">
+    <title>Bootstrap</title>
+    <path fill="currentColor" d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z"/>
+    <path fill="currentColor" d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z"/>
+  </svg>
+  </a>
+  <div class="navbar-nav-scroll">
+    <ul class="navbar-nav bd-navbar-nav flex-row">
+      <li class="nav-item"><a class="nav-link " href="../">首页</a></li>
+      <li class="nav-item"><a class="nav-link active" href="../../v4/docs/">中文手册</a></li>
+      <li class="nav-item"><a class="nav-link " href="../../v4/examples/">实例</a></li>
+      <li class="nav-item dropdown">
+<a class="nav-item nav-link dropdown-toggle mr-md-2" id="bd-versions" aria-expanded="false" aria-haspopup="true" href="#" data-toggle="dropdown"> 主题模板 </a>
+<div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
+<a class="dropdown-item" href="../../V4/themes/" target="_blank">主题门户</a>
+<a class="dropdown-item" href="../../V4/themes/live.html">精选模板</a>
+</div>
+</li>
+      <li class="nav-item"><a class="nav-link" href="//ico.z01.com" target="_blank" rel="noopener">zico图标系统</a></li>
+      <li class="nav-item"><a class="nav-link" href="https://expo.getbootstrap.com" target="_blank" rel="noopener">优站精选</a></li>
+      <li class="nav-item"><a class="nav-link" href="https://blog.getbootstrap.com" target="_blank" rel="noopener">Blog</a></li>
+    </ul>
+  </div>
+  <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="alse"> v2.6.1 </a>
+      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions"> 
+        <a class="dropdown-item active" href="../../../bootstrap-vue/docs/4.0/">Latest (4.3.x)</a>
+        <a class="dropdown-item" href="/Boot/">v3.3.7</a>
+        <a class="dropdown-item" href="/Sass/">Sass语言</a>
+        <a class="dropdown-item" href="/Emmet/">Emmet语法</a>
+        <a class="dropdown-item" href="//www.z01.com/tool/" target="_blank">IIS站长工具</a>
+        <a class="dropdown-item" href="//ad.z01.com/" target="_blank">广告源码</a>
+        <a class="dropdown-item" href="//v.z01.com/mb/" target="_blank">免费模板</a>
+        <a class="dropdown-item" href="//v.z01.com/" target="_blank">H5移动创作</a>
+        <a class="dropdown-item" href="//www.z01.com/help/web/3234.shtml" target="_blank">Flexbox布局</a>
+		<a class="dropdown-item" href="/boot/font.html" target="_blank">Font Awesome</a>
+</div>
+    </li>
+    <li class="nav-item"> <a class="nav-link p-2" href="//zoomla.github.io/bootstrap4-zhcn-documentation" target="_blank" rel="noopener" aria-label="GitHub">
+      <svg class="navbar-nav-svg" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 499.36" focusable="false">
+        <title>GitHub</title>
+        <path d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z" fill="currentColor" fill-rule="evenodd"/>
+      </svg>
+      </a> </li>
+    <li class="nav-item"> <a class="nav-link p-2" href="http://www.z01.com/blog/ren/3214.shtml" target="_blank" rel="noopener" aria-label="Slack">译者说</a></li>
+  </ul>
+  <a class="btn btn-bd-yellow d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="download.html">下载 Bootstrap</a> </header>
+
+<div class="container-fluid">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+      <form class="bd-search d-flex align-items-center">
+        <input type="search" class="form-control" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
+        <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30" focusable="false">
+          <title>Menu</title>
+          <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/>
+        </svg>
+        </button>
+      </form>
+
+
+<nav class="collapse bd-links" id="bd-docs-nav">
+<div class=""><a href="../" class="bd-toc-link">首页</a></div>
+<div class="bd-toc-item nuxt-link-exact-active "><a href="../../../bootstrap-vue/docs/" class="bd-toc-link  "> 起步 </a>
+<ul class="nav bd-sidenav">
+</ul>
+</div>
+<div class="bd-toc-item active"><a href="../../../bootstrap-vue/docs/components/" class="bd-toc-link nuxt-link-exact-active"> 组件 </a>
+<ul class="nav bd-sidenav">
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/index.html" class="nav-link"> 组件目录 </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/alert.html" class="nav-link"> 警告提示框(Alert) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/badge.html" class="nav-link"> 徽章(Badge) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/badge.html" class="nav-link"> 面包屑导航(Breadcrumb) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/button.html" class="nav-link"> 按钮(Button) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/button-group.html" class="nav-link"> 按钮组(Button Group) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/button-toolbar.html" class="nav-link"> 按钮Toolbar(Button Toolbar) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/calendar.html" class="nav-link"> 日历组件(Calendar) <small class="badge text-uppercase badge-success">New</small> </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/card.html" class="nav-link"> 卡片(Card) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/carousel.html" class="nav-link"> 轮播效果(Carousel) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/collapse.html" class="nav-link"> 折叠面板(Collapse) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/dropdown.html" class="nav-link"> 下拉菜单(Dropdown) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/embed.html" class="nav-link"> 嵌入(Embed) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form.html" class="nav-link"> 表单(Form) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-checkbox.html" class="nav-link"> 表单复选框(Form Checkbox) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-datepicker.html" class="nav-link"> 表单时间选择器(Form Datepicker) <small class="badge text-uppercase badge-success">New</small> </a></li>
+<li class="nav-item active"><a href="../../../bootstrap-vue/docs/components/form-file.html" class="nav-link"> 文件选择(Form File) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-group.html" class="nav-link"> 表单组合(Form Group) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-input.html" class="nav-link"> 表单输入框(Form Input) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-radio.html" class="nav-link"> 单选择表单Form Radio </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-select.html" class="nav-link"> 下拉式表单(Form Select) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-spinbutton.html" class="nav-link"> 按钮式表单(Form Spinbuttno) <small class="badge text-uppercase badge-success">New</small> </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-tags.html" class="nav-link"> Tags表单选择器(Form Tags) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-textarea.html" class="nav-link"> 文本框(Form Textarea) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-timepicker.html" class="nav-link"> 表单内时间控件(Form Timepicker) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/image.html" class="nav-link"> 图片(Image) </a></li>
+
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/input-group.html" class="nav-link"> 输入框(Input Group) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/jumbotron.html" class="nav-link"> Hero大块屏(Jumbotron) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/layout.html" class="nav-link"> 布局与网络Layout and Grid System </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/link.html" class="nav-link"> 链接(Link)</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/list-group.html" class="nav-link"> 列表组(List group) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/media.html" class="nav-link"> 媒体(Media) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/modal.html" class="nav-link"> 弹出模态框(Modal) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/nav.html" class="nav-link"> 导航(Nav) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/navbar.html" class="nav-link"> 导航栏(Navbar) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/pagination.html" class="nav-link"> 分页(Pagination) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/pagination-nav.html" class="nav-link"> 分页导航(Pagination Nav) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/popover.html" class="nav-link"> 指示备注(Popover) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/progress.html" class="nav-link"> 进度指示器(Progress) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/spinner.html" class="nav-link"> 旋转指示器(Spinner) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/table.html" class="nav-link"> 表格(Table) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/tabs.html" class="nav-link"> 选项卡(Tabs) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/time.html" class="nav-link"> 时间组件(Time) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/toast.html" class="nav-link"> 冒泡推送(Toasts) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/tooltip.html" class="nav-link"> tip提示组件(Tooltip) </a></li>
+</ul>
+</div>
+<div class="bd-toc-item"><a href="../../../bootstrap-vue/docs/directives/" class="bd-toc-link"> 指令 </a>
+<ul class="nav bd-sidenav">
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/directives/index.html" class="nav-link"> 指令目录 </a></li>
+<li class="nav-item active"><a href="../../../bootstrap-vue/docs/directives/hover.html" class="nav-link"> Hover 指令<small class="badge text-uppercase badge-success">New</small> </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/directives/popover.html" class="nav-link"> Popover 提示备注</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/directives/scrollspy.html" class="nav-link"> Scrollspy 滚动监听</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/directives/tooltip.html" class="nav-link"> Tooltip 提示指令</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/directives/visible.html" class="nav-link"> Visible 可见性操作<small class="badge text-uppercase badge-success">New</small> </a></li>
+</ul>
+</div>
+<div class="bd-toc-item"><a href="../../../bootstrap-vue/docs/icons.html" class="bd-toc-link"> Icons图标</a>
+<ul class="nav bd-sidenav">
+</ul>
+</div>
+  
+<div class="bd-toc-item"><a class="bd-toc-link" href="../../../bootstrap-vue/docs/reference">参考</a>
+<ul class="nav bd-sidenav">
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference" class="nav-link.html"> 参考目录 </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/accessibility.html" class="nav-link">友好访问</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/color-variants.html" class="nav-link">Color颜色变量 </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/images.html" class="nav-link"> 组件图像img的src路径解析</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/router-links.html" class="nav-link"> Router路由支持 </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/size-props.html" class="nav-link">大小规格</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/spacing-classes.html" class="nav-link">间距处理</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/starter-templates.html" class="nav-link">开始模板</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/theming.html" class="nav-link">主题色彩</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/utility-classes.html" class="nav-link">通用Class类</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/validation.html" class="nav-link">Form表单验证</a></li>
+</ul>
+</div>
+<div class="bd-toc-item"> <a class="bd-toc-link" href="../components/alerts.html"> 杂项 </a>
+  <ul class="nav bd-sidenav">
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/misc/changelog" class="nav-link"> Changelog </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/misc/contributing" class="nav-link"> Contributing </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/misc/settings" class="nav-link"> Settings </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/misc/third-party" class="nav-link"> Third party libraries </a></li>
+  </ul>
+</div>
+<div class=""><a href="/play" class="bd-toc-link">在线模拟器</a></div>
+</nav>
+</div>
+
+<div class="d-none d-xl-block col-xl-2 bd-toc">
+
+<ul class="section-nav">
+<li class="nav-item toc-entry mb-2"><a target="_self" href="#form-file-input" class="nav-link font-weight-bold"><span>Form File Input</span></a></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#single-file-default" class="nav-link"><span>Single file (default)</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#multiple-files" class="nav-link"><span>Multiple files</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#directory-mode" class="nav-link"><span>Directory mode</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#drag-and-drop-support" class="nav-link"><span>Drag and Drop support</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#limiting-to-certain-file-types" class="nav-link"><span>Limiting to certain file types</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#customizing" class="nav-link"><span>Customizing</span></a>
+<ul class="nav flex-column">
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#control-sizing" class="nav-link"><span>Control sizing</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#customize-the-placeholder-text" class="nav-link"><span>Customize the placeholder text</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#customize-browse-button-label" class="nav-link"><span>Customize browse button label</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#file-name-formatter-function" class="nav-link"><span>File name formatter function</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#file-name-formatting-via-scoped-slot" class="nav-link"><span>File name formatting via scoped slot</span></a></li>
+</ul>
+</li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#non-custom-file-input" class="nav-link"><span>Non custom file input</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#contextual-state-feedback" class="nav-link"><span>Contextual state feedback</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#autofocus" class="nav-link"><span>Autofocus</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#accessibility" class="nav-link"><span>Accessibility</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#clearing-the-file-selection" class="nav-link"><span>Clearing the file selection</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#component-reference" class="nav-link"><span>Component reference</span></a>
+<ul class="nav flex-column">
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#comp-ref-b-form-file" class="nav-link"><span>&lt;b-form-file&gt;</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#importing-individual-components" class="nav-link"><span>Importing individual components</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#importing-as-a-plugin" class="nav-link"><span>Importing as a Vue.js plugin</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+
+<nav data-v-aafc4aea="" aria-label="Breadcrumbs" class="float-left mt-2 mb-0 mb-lg-2">
+<ol data-v-aafc4aea="" class="breadcrumb d-inline-flex bg-transparent px-2 py-1 my-0">
+<li data-v-aafc4aea="" class="breadcrumb-item"><a data-v-aafc4aea="" href="../../" class="nuxt-link-active" target="_self">首页</a></li>
+<li data-v-aafc4aea="" class="breadcrumb-item"><a data-v-aafc4aea="" href="../../../bootstrap-vue/docs" class="nuxt-link-active" target="_self">中文手册</a></li>
+<li data-v-aafc4aea="" class="breadcrumb-item"><a data-v-aafc4aea="" href="../../../bootstrap-vue/docs/components/" class="nuxt-link-active" target="_self">组件</a></li>
+<li data-v-aafc4aea="" class="breadcrumb-item active"><span data-v-aafc4aea="" aria-current="location">文件选择</span></li>
+</ol>
+</nav>
+<div class="clearfix d-block"></div>
+  <h1 class="bd-title" id="content">文件选择(Form File Input)</h1>
+<p class="bd-lead">Customized, cross-browser consistent, file input control that supports single file, multiple files, and directory upload (for browsers that support directory mode)</p>
+  <script type="text/javascript" src="../../../v4/assets/js/pupCMS.js"></script>
+
+
+
+
+<nav class="bd-quick-links mb-3 d-xl-none" data-v-811345e6="">
+<header data-v-811345e6="">
+<button data-v-811345e6="" type="button" class="btn font-weight-bold btn-outline-secondary btn-sm btn-block collapsed" aria-controls="bd-quick-links-collapse" aria-expanded="false"><span data-v-811345e6="">Show</span> page table of contents </button>
+</header>
+<ul data-v-811345e6="" id="bd-quick-links-collapse" class="collapse" style="display: none;">
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#single-file-default" class=""><span data-v-811345e6="">Single file (default)</span></a> <!----></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#multiple-files" class=""><span data-v-811345e6="">Multiple files</span></a> <!----></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#directory-mode" class=""><span data-v-811345e6="">Directory mode</span></a> <!----></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#drag-and-drop-support" class=""><span data-v-811345e6="">Drag and Drop support</span></a> <!----></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#limiting-to-certain-file-types" class=""><span data-v-811345e6="">Limiting to certain file types</span></a> <!----></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#customizing" class=""><span data-v-811345e6="">Customizing</span></a>
+<ul data-v-811345e6="">
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#control-sizing" class=""><span data-v-811345e6="">Control sizing</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#customize-the-placeholder-text" class=""><span data-v-811345e6="">Customize the placeholder text</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#customize-browse-button-label" class=""><span data-v-811345e6="">Customize browse button label</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#file-name-formatter-function" class=""><span data-v-811345e6="">File name formatter function</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#file-name-formatting-via-scoped-slot" class=""><span data-v-811345e6="">File name formatting via scoped slot</span></a></li>
+</ul>
+</li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#non-custom-file-input" class=""><span data-v-811345e6="">Non custom file input</span></a> <!----></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#contextual-state-feedback" class=""><span data-v-811345e6="">Contextual state feedback</span></a> <!----></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#autofocus" class=""><span data-v-811345e6="">Autofocus</span></a> <!----></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#accessibility" class=""><span data-v-811345e6="">Accessibility</span></a> <!----></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#clearing-the-file-selection" class=""><span data-v-811345e6="">Clearing the file selection</span></a> <!----></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#component-reference" class=""><span data-v-811345e6="">Component reference</span></a>
+<ul data-v-811345e6="">
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#comp-ref-b-form-file" class=""><span data-v-811345e6="">&lt;b-form-file&gt;</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#importing-individual-components" class=""><span data-v-811345e6="">Importing individual components</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#importing-as-a-plugin" class=""><span data-v-811345e6="">Importing as a Vue.js plugin</span></a></li>
+</ul>
+</li>
+</ul>
+</nav>
+<div translate="translate" class="bd-example vue-example vue-example-b-form-file notranslate">
+<div>
+<div class="custom-file b-form-file is-invalid" id="__BVID__3716__BV_file_outer_">
+<input type="file" class="custom-file-input is-invalid" id="__BVID__3716">
+<label data-browse="Browse" class="custom-file-label" for="__BVID__3716">Choose a file or drop it here...</label>
+</div>
+<div class="mt-3">Selected file: </div>
+<input type="file" class="mt-3 form-control-file" id="__BVID__3717">
+<div class="mt-3">Selected file: </div>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- Styled --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-file</span>
+      <span class="hljs-attr">v-model</span>=<span class="hljs-string">"file"</span>
+      <span class="hljs-attr">:state</span>=<span class="hljs-string">"Boolean(file)"</span>
+      <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Choose a file or drop it here..."</span>
+      <span class="hljs-attr">drop-placeholder</span>=<span class="hljs-string">"Drop file here..."</span>
+    &gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-file</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mt-3"</span>&gt;</span>Selected file: {{ file ? file.name : '' }}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+    <span class="hljs-comment">&lt;!-- Plain mode --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-file</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">"file2"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mt-3"</span> <span class="hljs-attr">plain</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-file</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mt-3"</span>&gt;</span>Selected file: {{ file2 ? file2.name : '' }}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    data() {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">file</span>: <span class="hljs-literal">null</span>,
+        <span class="hljs-attr">file2</span>: <span class="hljs-literal">null</span>
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+<p>For cross browser consistency, Form file defaults to the Bootstrap custom file input to replace the
+browser defaults. They're built on top of semantic and accessible markup, so it is a solid
+replacement for the default file input.</p>
+<h2 id="single-file-default" class="bv-no-focus-ring"><span class="bd-content-title">Single file (default)<a class="anchorjs-link" href="#single-file-default" aria-labelledby="single-file-default"></a></span></h2>
+<p>On single file mode, when no file is selected or user cancels Browse dialog, <code translate="no" class="notranslate text-nowrap">v-model</code> is <code translate="no" class="notranslate text-nowrap">null</code> indicating no file selected. When a file is selected the return value will be a JavaScript <a href="https://developer.mozilla.org/en/docs/Web/API/File" target="_blank" rel="noopener"><code translate="no" class="notranslate text-nowrap">File</code></a> object instance.</p>
+<h2 id="multiple-files" class="bv-no-focus-ring"><span class="bd-content-title">Multiple files<a class="anchorjs-link" href="#multiple-files" aria-labelledby="multiple-files"></a></span></h2>
+<p>Multiple file uploading is supported by adding <code translate="no" class="notranslate text-nowrap">multiple</code> prop to component. In this case <code translate="no" class="notranslate text-nowrap">v-model</code> is <em>always</em> an <code translate="no" class="notranslate text-nowrap">Array</code>. When no files are selected, an empty array will be returned. When a file or
+files are selected the return value will be an array of JavaScript <a href="https://developer.mozilla.org/en/docs/Web/API/File" target="_blank" rel="noopener"><code translate="no" class="notranslate text-nowrap">File</code></a> object instances.</p>
+<h2 id="directory-mode" class="bv-no-focus-ring"><span class="bd-content-title">Directory mode<a class="anchorjs-link" href="#directory-mode" aria-labelledby="directory-mode"></a></span></h2>
+<p>By adding <code translate="no" class="notranslate text-nowrap">directory</code> prop, the user can select directories instead of files. When a directory is
+selected, the directory and its entire hierarchy of contents are included in the set of selected
+items. The selected file system entries can be obtained using the <code translate="no" class="notranslate text-nowrap">webkitEntries</code> property.</p>
+<p><strong>CAUTION</strong> This is a non standard feature while being supported by latest Firefox and Chrome
+versions, and should not be relied for production. <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/webkitdirectory" target="_blank" rel="noopener">Read more on MDN</a></p>
+<p>Directory mode is not supported when the file input is in plain mode.</p>
+<h2 id="drag-and-drop-support" class="bv-no-focus-ring"><span class="bd-content-title">Drag and Drop support<a class="anchorjs-link" href="#drag-and-drop-support" aria-labelledby="drag-and-drop-support"></a></span></h2>
+<p>Drop mode is enabled by default. It can disabled by setting the <code translate="no" class="notranslate text-nowrap">no-drop</code> prop. <code translate="no" class="notranslate text-nowrap">no-drop</code>has no
+effect in plain mode.</p>
+<p>You can optionally set a different placeholder while dragging via the <code translate="no" class="notranslate text-nowrap">drop-placeholder</code> prop. The
+default is no drop placeholder text. Only plain text is supported. HTML and components are not
+supported. The <code translate="no" class="notranslate text-nowrap">drop-placeholder</code> prop has no effect if <code translate="no" class="notranslate text-nowrap">no-drop</code>is set or in <code translate="no" class="notranslate text-nowrap">plain</code> mode,</p>
+<h2 id="limiting-to-certain-file-types" class="bv-no-focus-ring"><span class="bd-content-title">Limiting to certain file types<a class="anchorjs-link" href="#limiting-to-certain-file-types" aria-labelledby="limiting-to-certain-file-types"></a></span></h2>
+<p>You can limit the file types by setting the <code translate="no" class="notranslate text-nowrap">accept</code> prop to a string containing the allowed file
+type(s). To specify more than one type, separate the values with a comma.</p>
+<pre class="hljs html text-monospace p-2 notranslate" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- Accept all image formats by IANA media type wildcard--&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-form-file</span> <span class="hljs-attr">accept</span>=<span class="hljs-string">"image/*"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-file</span>&gt;</span>
+
+  <span class="hljs-comment">&lt;!-- Accept specific image formats by IANA type --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-form-file</span> <span class="hljs-attr">accept</span>=<span class="hljs-string">"image/jpeg, image/png, image/gif"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-file</span>&gt;</span>
+
+  <span class="hljs-comment">&lt;!-- Accept specific image formats by extension --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-form-file</span> <span class="hljs-attr">accept</span>=<span class="hljs-string">".jpg, .png, .gif"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-file</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<p>To accept any file type, leave <code translate="no" class="notranslate text-nowrap">accept</code> as null (default). You can mix and match IANA media types
+and extensions.</p>
+<p>Refer to <a href="http://www.iana.org/assignments/media-types/" target="_blank" rel="noopener">IANA Media Types</a> for a complete list of
+standard media types.</p>
+<p><strong>Note:</strong> Not all browsers support or respect the <code translate="no" class="notranslate text-nowrap">accept</code> attribute on file inputs.</p>
+<h2 id="customizing" class="bv-no-focus-ring"><span class="bd-content-title">Customizing<a class="anchorjs-link" href="#customizing" aria-labelledby="customizing"></a></span></h2>
+<p><code translate="no" class="notranslate text-nowrap">&lt;b-form-file&gt;</code>, when not in <a href="#non-custom-file-input" class="font-weight-bold"><code translate="no" class="notranslate text-nowrap">plain</code> mode</a>, provides several features for
+customizing its appearance.</p>
+<h3 id="control-sizing" class="bv-no-focus-ring"><span class="bd-content-title">Control sizing<a class="anchorjs-link" href="#control-sizing" aria-labelledby="control-sizing"></a></span></h3>
+<p>Use the <code translate="no" class="notranslate text-nowrap">size</code> prop to control the visual size of the input. The default size is considered <code translate="no" class="notranslate text-nowrap">md</code> (medium). Optional sizes are <code translate="no" class="notranslate text-nowrap">lg</code> (large) and <code translate="no" class="notranslate text-nowrap">sm</code> (small). These sizes line up with the sizes
+available on other form controls.</p>
+<div translate="translate" class="bd-example vue-example vue-example-form-file-sizes notranslate">
+<div>
+<div role="group" class="form-row form-group" id="__BVID__3719">
+<label for="file-small" class="col-sm-2 col-form-label col-form-label-sm" id="__BVID__3719__BV_label_">Small:</label>
+<div class="bv-no-focus-ring col">
+<div id="file-small__BV_file_outer_" class="custom-file b-form-file b-custom-control-sm">
+<input type="file" id="file-small" class="custom-file-input">
+<label for="file-small" data-browse="Browse" class="custom-file-label">No file chosen</label>
+</div>
+<!----><!----><!----></div>
+</div>
+<div role="group" class="form-row form-group" id="__BVID__3721">
+<label for="file-default" class="col-sm-2 col-form-label" id="__BVID__3721__BV_label_">Default:</label>
+<div class="bv-no-focus-ring col">
+<div id="file-default__BV_file_outer_" class="custom-file b-form-file">
+<input type="file" id="file-default" class="custom-file-input">
+<label for="file-default" data-browse="Browse" class="custom-file-label">No file chosen</label>
+</div>
+<!----><!----><!----></div>
+</div>
+<div role="group" class="form-row form-group" id="__BVID__3723">
+<label for="file-large" class="col-sm-2 col-form-label col-form-label-lg" id="__BVID__3723__BV_label_">Large:</label>
+<div class="bv-no-focus-ring col">
+<div id="file-large__BV_file_outer_" class="custom-file b-form-file b-custom-control-lg">
+<input type="file" id="file-large" class="custom-file-input">
+<label for="file-large" data-browse="Browse" class="custom-file-label">No file chosen</label>
+</div>
+<!----><!----><!----></div>
+</div>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-form-group</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Small:"</span> <span class="hljs-attr">label-for</span>=<span class="hljs-string">"file-small"</span> <span class="hljs-attr">label-cols-sm</span>=<span class="hljs-string">"2"</span> <span class="hljs-attr">label-size</span>=<span class="hljs-string">"sm"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-file</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"file-small"</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"sm"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-file</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-form-group</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-form-group</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Default:"</span> <span class="hljs-attr">label-for</span>=<span class="hljs-string">"file-default"</span> <span class="hljs-attr">label-cols-sm</span>=<span class="hljs-string">"2"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-file</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"file-default"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-file</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-form-group</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-form-group</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Large:"</span> <span class="hljs-attr">label-for</span>=<span class="hljs-string">"file-large"</span> <span class="hljs-attr">label-cols-sm</span>=<span class="hljs-string">"2"</span> <span class="hljs-attr">label-size</span>=<span class="hljs-string">"lg"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-file</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"file-large"</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"lg"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-file</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-form-group</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<p><strong>Note:</strong> Bootstrap v4.x does not natively support sizes for the custom file control. However,
+BootstrapVue includes custom SCSS/CSS that adds support for sizing the custom file input control.</p>
+<h3 id="customize-the-placeholder-text" class="bv-no-focus-ring"><span class="bd-content-title">Customize the placeholder text<a class="anchorjs-link" href="#customize-the-placeholder-text" aria-labelledby="customize-the-placeholder-text"></a></span></h3>
+<p>Use the prop <code translate="no" class="notranslate text-nowrap">placeholder</code> to change the prompt text that is shown when no files are selected. Only
+plain text is supported. HTML and components are not supported.</p>
+<h3 id="customize-browse-button-label" class="bv-no-focus-ring"><span class="bd-content-title">Customize browse button label<a class="anchorjs-link" href="#customize-browse-button-label" aria-labelledby="customize-browse-button-label"></a></span></h3>
+<p>If you want to globally change <code translate="no" class="notranslate text-nowrap">Browse</code> label, you can add something like this to your global
+stylesheets. Also it is advised to use <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:lang" target="_blank" rel="noopener">:lang()</a> for multi-language sites.</p>
+<pre class="hljs css text-monospace p-2 notranslate" translate="no"><span class="hljs-selector-class">.custom-file-input</span><span class="hljs-selector-pseudo">:lang(en)</span> ~ <span class="hljs-selector-class">.custom-file-label</span><span class="hljs-selector-pseudo">::after</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">'Browse'</span>;
+}</pre>
+<p>Alternatively you can set the content of the custom file browse button text via the <code translate="no" class="notranslate text-nowrap">browse-text</code> prop. Note, only plain text is supported. HTML and components are not supported.</p>
+<h3 id="file-name-formatter-function" class="bv-no-focus-ring"><span class="bd-content-title">File name formatter function<a class="anchorjs-link" href="#file-name-formatter-function" aria-labelledby="file-name-formatter-function"></a></span></h3>
+<p>Set the prop <code translate="no" class="notranslate text-nowrap">file-name-formatter</code> to a function that accepts a single argument which is an array of <a href="https://developer.mozilla.org/en-US/docs/Web/API/File" target="_blank" rel="noopener"><code translate="no" class="notranslate text-nowrap">File</code></a> objects. The function should return
+a single formatted string (HTML is not supported). The formatter will not be called if no files are
+selected.</p>
+<p>Regardless of if the prop <code translate="no" class="notranslate text-nowrap">multiple</code> is set or not, the argument to the formatter will always be an
+array.</p>
+<div translate="translate" class="bd-example vue-example vue-example-file-formatter-function notranslate">
+<div class="custom-file b-form-file" id="__BVID__3726__BV_file_outer_">
+<input type="file" multiple="multiple" class="custom-file-input" id="__BVID__3726">
+<label data-browse="Browse" class="custom-file-label" for="__BVID__3726">No file chosen</label>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-form-file</span> <span class="hljs-attr">multiple</span> <span class="hljs-attr">:file-name-formatter</span>=<span class="hljs-string">"formatNames"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-file</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    <span class="hljs-attr">methods</span>: {
+      formatNames(files) {
+        <span class="hljs-keyword">if</span> (files.length === <span class="hljs-number">1</span>) {
+          <span class="hljs-keyword">return</span> files[<span class="hljs-number">0</span>].name
+        } <span class="hljs-keyword">else</span> {
+          <span class="hljs-keyword">return</span> <span class="hljs-string">`<span class="hljs-subst">${files.length}</span> files selected`</span>
+        }
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+<h3 id="file-name-formatting-via-scoped-slot" class="bv-no-focus-ring"><span class="bd-content-title">File name formatting via scoped slot<a class="anchorjs-link" href="#file-name-formatting-via-scoped-slot" aria-labelledby="file-name-formatting-via-scoped-slot"></a></span></h3>
+<p>Alternatively, you can use the scoped slot <code translate="no" class="notranslate text-nowrap">file-name</code> to render the file names. The scoped slot
+will receive the following properties:</p>
+<div class="table-responsive-sm">
+<table class="b-table table table-bordered table-striped bv-docs-table">
+<thead class="thead-default">
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code translate="no" class="notranslate text-nowrap">files</code></td>
+<td>Array</td>
+<td>Array of <code translate="no" class="notranslate text-nowrap">File</code> objects</td>
+</tr>
+<tr>
+<td><code translate="no" class="notranslate text-nowrap">names</code></td>
+<td>Array</td>
+<td>Array of file names</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Both properties are always arrays, regardless of the setting of the <code translate="no" class="notranslate text-nowrap">multiple</code> prop.</p>
+<div translate="translate" class="bd-example vue-example vue-example-file-formatter-slot notranslate">
+<div class="custom-file b-form-file" id="__BVID__3728__BV_file_outer_">
+<input type="file" multiple="multiple" class="custom-file-input" id="__BVID__3728">
+<label data-browse="Browse" class="custom-file-label" for="__BVID__3728">No file chosen</label>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-form-file</span> <span class="hljs-attr">multiple</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">template</span> <span class="hljs-attr">slot</span>=<span class="hljs-string">"file-name"</span> <span class="hljs-attr">slot-scope</span>=<span class="hljs-string">"{ names }"</span>&gt;</span>
+     <span class="hljs-tag">&lt;<span class="hljs-name">b-badge</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"dark"</span>&gt;</span>{{ names[0] }}<span class="hljs-tag">&lt;/<span class="hljs-name">b-badge</span>&gt;</span>
+     <span class="hljs-tag">&lt;<span class="hljs-name">b-badge</span> <span class="hljs-attr">v-if</span>=<span class="hljs-string">"names.length &gt; 1"</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"dark"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ml-1"</span>&gt;</span>
+       + {{ names.length - 1 }} More files
+     <span class="hljs-tag">&lt;/<span class="hljs-name">b-badge</span>&gt;</span>
+   <span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-form-file</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span></pre>
+<p>When using the <code translate="no" class="notranslate text-nowrap">file-name</code> slot, the <code translate="no" class="notranslate text-nowrap">file-name-formatter</code> prop is ignored. Also, the slot will not
+be rendered when there are no file(s) selected.</p>
+<h2 id="non-custom-file-input" class="bv-no-focus-ring"><span class="bd-content-title">Non custom file input<a class="anchorjs-link" href="#non-custom-file-input" aria-labelledby="non-custom-file-input"></a></span></h2>
+<p>You can have <code translate="no" class="notranslate text-nowrap">&lt;b-form-file&gt;</code> render a browser native file input by setting the <code translate="no" class="notranslate text-nowrap">plain</code> prop. Note
+that many of the custom form-file features do not apply when <code translate="no" class="notranslate text-nowrap">plain</code> is set.</p>
+<h2 id="contextual-state-feedback" class="bv-no-focus-ring"><span class="bd-content-title">Contextual state feedback<a class="anchorjs-link" href="#contextual-state-feedback" aria-labelledby="contextual-state-feedback"></a></span></h2>
+<p>Bootstrap includes validation styles for <code translate="no" class="notranslate text-nowrap">valid</code> and <code translate="no" class="notranslate text-nowrap">invalid</code> states on most form controls.</p>
+<p>Generally speaking, you'll want to use a particular state for specific types of feedback:</p>
+<ul>
+<li><code translate="no" class="notranslate text-nowrap">false</code> (denotes invalid state) is great for when there's a blocking or required field. A user
+must fill in this field properly to submit the form.</li>
+<li><code translate="no" class="notranslate text-nowrap">true</code> (denotes valid state) is ideal for situations when you have per-field validation throughout
+a form and want to encourage a user through the rest of the fields.</li>
+<li><code translate="no" class="notranslate text-nowrap">null</code> Displays no validation state (neither valid nor invalid)</li>
+</ul>
+<p>To apply one of the contextual state icons on <code translate="no" class="notranslate text-nowrap">&lt;b-form-file&gt;</code>, set the <code translate="no" class="notranslate text-nowrap">state</code> prop to <code translate="no" class="notranslate text-nowrap">false</code> (for
+invalid), <code translate="no" class="notranslate text-nowrap">true</code> (for valid), or <code translate="no" class="notranslate text-nowrap">null</code> (no validation state).</p>
+<p><strong>Note:</strong> Contextual states are <strong>not</strong> supported when in button mode.</p>
+<h2 id="autofocus" class="bv-no-focus-ring"><span class="bd-content-title">Autofocus<a class="anchorjs-link" href="#autofocus" aria-labelledby="autofocus"></a></span></h2>
+<p>When the <code translate="no" class="notranslate text-nowrap">autofocus</code> prop is set on <code translate="no" class="notranslate text-nowrap">&lt;b-form-file&gt;</code>, the input will be auto-focused when it is
+inserted (i.e. <strong>mounted</strong>) into the document, or re-activated when inside a Vue <code translate="no" class="notranslate text-nowrap">&lt;keep-alive&gt;</code> component. Note that this prop <strong>does not</strong> set the <code translate="no" class="notranslate text-nowrap">autofocus</code> attribute on the input, nor can it
+tell when the input becomes visible.</p>
+<h2 id="accessibility" class="bv-no-focus-ring"><span class="bd-content-title">Accessibility<a class="anchorjs-link" href="#accessibility" aria-labelledby="accessibility"></a></span></h2>
+<p>When using the custom version of <code translate="no" class="notranslate text-nowrap">&lt;b-form-file&gt;</code> input which hides the original input, it is <strong>highly recommended</strong> that you supply a document unique ID string via the <code translate="no" class="notranslate text-nowrap">id</code> prop. This will
+automatically render the extra ARIA attributes required to improve usability for persons using
+assistive technologies.</p>
+<h2 id="clearing-the-file-selection" class="bv-no-focus-ring"><span class="bd-content-title">Clearing the file selection<a class="anchorjs-link" href="#clearing-the-file-selection" aria-labelledby="clearing-the-file-selection"></a></span></h2>
+<p>With inputs of type file, normally the <code translate="no" class="notranslate text-nowrap">v-model</code> is uni-directional (meaning you cannot pre-set the
+selected files). However, you can clear the file input's selected files by setting the <code translate="no" class="notranslate text-nowrap">v-model</code> to
+either <code translate="no" class="notranslate text-nowrap">null</code> (for single mode) or an empty array <code translate="no" class="notranslate text-nowrap">[]</code> (for multiple/directory mode).</p>
+<p>Alternatively, <code translate="no" class="notranslate text-nowrap">&lt;b-form-file&gt;</code> provides a <code translate="no" class="notranslate text-nowrap">reset()</code> method that can be called to clear the file
+input. To take advantage of the <code translate="no" class="notranslate text-nowrap">reset()</code> method, you will need to obtain a reference to the <code translate="no" class="notranslate text-nowrap">&lt;b-form-file&gt;</code> component.</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-form-file-reset notranslate">
+<div>
+<div class="custom-file b-form-file mb-2" id="__BVID__3730__BV_file_outer_">
+<input type="file" class="custom-file-input" id="__BVID__3730">
+<label data-browse="Browse" class="custom-file-label" for="__BVID__3730">No file chosen</label>
+</div>
+<button type="button" class="btn mr-2 btn-secondary">Reset via method</button>
+<button type="button" class="btn btn-secondary">Reset via v-model</button>
+<p class="mt-2">Selected file: <b></b></p>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-file</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">"file"</span> <span class="hljs-attr">ref</span>=<span class="hljs-string">"file-input"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-2"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-file</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"clearFiles"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mr-2"</span>&gt;</span>Reset via method<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"file = null"</span>&gt;</span>Reset via v-model<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mt-2"</span>&gt;</span>Selected file: <span class="hljs-tag">&lt;<span class="hljs-name">b</span>&gt;</span>{{ file ? file.name : '' }}<span class="hljs-tag">&lt;/<span class="hljs-name">b</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    data() {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">file</span>: <span class="hljs-literal">null</span>
+      }
+    },
+    <span class="hljs-attr">methods</span>: {
+      clearFiles() {
+        <span class="hljs-keyword">this</span>.$refs[<span class="hljs-string">'file-input'</span>].reset()
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+<p><strong>Implementation note:</strong> As not all browsers allow setting a value of a file input (even to null or
+an empty string), <code translate="no" class="notranslate text-nowrap">b-form-input</code> employs a technique that works cross-browser that involves changing
+the input type to <code translate="no" class="notranslate text-nowrap">null</code> and then immediately back to type <code translate="no" class="notranslate text-nowrap">file</code>.</p>
+<!-- Component reference added automatically from component package.json --> 
+
+<h2 id="component-reference" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title">Component reference<a href="../../../bootstrap-vue/docs/components/form-file#component-reference" class="anchorjs-link" aria-labelledby="component-reference" target="_self"></a></span></h2>
+
+<header data-v-866a22e8="" class="row align-items-center">
+<div data-v-866a22e8="" class="col-sm-9">
+<h3 data-v-866a22e8="" id="comp-ref-b-form-file" tabindex="-1" class="bv-no-focus-ring"><span data-v-866a22e8="" class="bd-content-title"><code data-v-866a22e8="" translate="translate" class="notranslate bigger">&lt;b-form-file&gt;</code><a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/form-file#comp-ref-b-form-file" class="anchorjs-link" aria-labelledby="comp-ref-b-form-file" target="_self"></a></span></h3>
+<!----> <!----></div>
+<div data-v-866a22e8="" class="text-sm-right col-sm-3"><a data-v-866a22e8="" rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev/src/components/form-file/form-file.js" class="btn btn-outline-secondary btn-sm"> View source </a></div>
+</header>
+<ul data-v-866a22e8="" class="component-ref-mini-toc my-3">
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-form-file-aliases"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-form-file&gt;</code> Component aliases </a></li>
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-form-file-props"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-form-file&gt;</code> Properties </a></li>
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-form-file-v-model"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-form-file&gt;</code> v-model </a></li>
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-form-file-slots"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-form-file&gt;</code> Slots </a></li>
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-form-file-events"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-form-file&gt;</code> Events </a></li>
+<!---->
+</ul>
+<article data-v-866a22e8="" class="bd-content">
+<h4 data-v-866a22e8="" id="comp-ref-b-form-file-aliases" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> Component aliases <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/form-file#comp-ref-b-form-file-aliases" class="anchorjs-link" aria-labelledby="comp-ref-b-form-file-aliases" target="_self"></a></span></h4>
+<p data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-form-file&gt;</code> can also be used via the following aliases:</p>
+<ul data-v-866a22e8="">
+<li data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-file&gt;</code></li>
+</ul>
+<div data-v-866a22e8="" class="alert alert-info">
+<p data-v-866a22e8="" class="mb-0 small"> Note: component aliases are only available when importing all of BootstrapVue or using
+        the component group plugin. </p>
+</div>
+</article>
+<article data-v-866a22e8="" class="bd-content">
+<h4 data-v-866a22e8="" id="comp-ref-b-form-file-props" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> Properties <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/form-file#comp-ref-b-form-file-props" class="anchorjs-link" aria-labelledby="comp-ref-b-form-file-props" target="_self"></a></span></h4>
+<div data-v-866a22e8="" class="table-responsive-sm">
+<table role="table" aria-busy="false" aria-colcount="4" class="table b-table bv-docs-table table-striped" id="__BVID__3637">
+<!----><!---->
+<thead role="rowgroup" class="">
+<!---->
+<tr role="row" class="">
+<th role="columnheader" scope="col" tabindex="0" aria-colindex="1" aria-sort="none" class="b-table-sort-icon-left">Property<span class="sr-only"> (Click to sort Ascending)</span></th>
+<th role="columnheader" scope="col" tabindex="0" aria-colindex="2" class="">Type</th>
+<th role="columnheader" scope="col" tabindex="0" aria-colindex="3" class="">Default</th>
+<th role="columnheader" scope="col" tabindex="0" aria-colindex="4" class="">Description</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+<!---->
+<tr role="row" data-pk="id" class="" id="__BVID__3637__row_id">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">id</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">Used to set the 'id' attribute on the rendered content, and used as the base to generate any additional element IDs as needed</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="name" class="" id="__BVID__3637__row_name">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">name</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">Sets the value of the 'name' attribute on the form control</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="disabled" class="" id="__BVID__3637__row_disabled">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">disabled</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">When set to 'true', disables the component's functionality and places it in a disabled state</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="required" class="" id="__BVID__3637__row_required">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">required</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">Adds the 'required' attribute to the form control</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="form" class="" id="__BVID__3637__row_form">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">form</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">ID of the form that the form control belongs to. Sets the 'form' attribute on the control</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="autofocus" class="" id="__BVID__3637__row_autofocus">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">autofocus</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">When set to 'true', attempts to auto-focus the control when it is mounted, or re-activated when in a keep-alive. Does not set the 'autofocus' attribute on the control</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="state" class="" id="__BVID__3637__row_state">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">state</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">Controls the validation state appearance of the component. 'true' for valid, 'false' for invalid', or 'null' for no validation state</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="plain" class="" id="__BVID__3637__row_plain">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">plain</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">Render the form control in plain mode, rather than custom styled mode</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="size" class="" id="__BVID__3637__row_size">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">size</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">Set the size of the component's appearance. 'sm', 'md' (default), or 'lg'</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="value" class="" id="__BVID__3637__row_value">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">value</code> <!----> <!----> <span data-v-866a22e8="" class="badge badge-primary">v-model</span> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">File or Array</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">The current value of the file input. Will be a single File object or an array of File objects (if multiple or directory is set). Can be set to null, or an empty array to reset the file input</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="accept" class="" id="__BVID__3637__row_accept">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">accept</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">Value to set on the file input's 'accept' attribute</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="capture" class="" id="__BVID__3637__row_capture">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">capture</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">When set, will instruction the browser to use the devices camera (if supported)</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="placeholder" class="" id="__BVID__3637__row_placeholder">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">placeholder</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'No file chosen'</code></td>
+<td aria-colindex="4" role="cell" class="">Sets the 'placeholder' attribute value on the form control</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="browse-text" class="" id="__BVID__3637__row_browse-text">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">browse-text</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'Browse'</code></td>
+<td aria-colindex="4" role="cell" class="">Text content for the file browse button</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="drop-placeholder" class="" id="__BVID__3637__row_drop-placeholder">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">drop-placeholder</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'Drop files here'</code></td>
+<td aria-colindex="4" role="cell" class="">Text to display as the placeholder when fies are being dragged</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="multiple" class="" id="__BVID__3637__row_multiple">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">multiple</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">When set, will allow multiple files to be selected. v-model will be an array</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="directory" class="" id="__BVID__3637__row_directory">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">directory</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">Enable directory drop mode (on browsers that support directory mode)</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="no-traverse" class="" id="__BVID__3637__row_no-traverse">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">no-traverse</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">For directory drop mode: returns files as a flat array</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="no-drop" class="" id="__BVID__3637__row_no-drop">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">no-drop</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">Disable drag and drop mode</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="file-name-formatter" class="" id="__BVID__3637__row_file-name-formatter">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">file-name-formatter</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">Function</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">Method to format the file names for display. Refer to the docs for details</td>
+</tr>
+<!----><!----><!----><!---->
+</tbody>
+<!---->
+</table>
+</div>
+<!----> <!----></article>
+<article data-v-866a22e8="" class="bd-content">
+<h4 data-v-866a22e8="" id="comp-ref-b-form-file-v-model" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> v-model <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/form-file#comp-ref-b-form-file-v-model" class="anchorjs-link" aria-labelledby="comp-ref-b-form-file-v-model" target="_self"></a></span></h4>
+<div data-v-866a22e8="" class="table-responsive-sm">
+<table role="table" aria-busy="false" aria-colcount="2" class="table b-table bv-docs-table table-striped" id="__BVID__3667">
+<!----><!---->
+<thead role="rowgroup" class="">
+<!---->
+<tr role="row" class="">
+<th role="columnheader" scope="col" aria-colindex="1" class="">Property</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">Event</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+<!---->
+<tr role="row" class="">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="notranslate">value</code></td>
+<td aria-colindex="2" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="notranslate">input</code></td>
+</tr>
+<!----><!---->
+</tbody>
+<!---->
+</table>
+</div>
+</article>
+<article data-v-866a22e8="" class="bd-content">
+<h4 data-v-866a22e8="" id="comp-ref-b-form-file-slots" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> Slots <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/form-file#comp-ref-b-form-file-slots" class="anchorjs-link" aria-labelledby="comp-ref-b-form-file-slots" target="_self"></a></span></h4>
+<div data-v-866a22e8="" class="table-responsive-sm">
+<table role="table" aria-busy="false" aria-colcount="3" class="table b-table bv-docs-table table-striped" id="__BVID__3676">
+<!----><!---->
+<thead role="rowgroup" class="">
+<!---->
+<tr role="row" class="">
+<th role="columnheader" scope="col" aria-colindex="1" class="">Slot Name</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">Description</th>
+<th role="columnheader" scope="col" aria-colindex="3" class="">Scoped</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+<!---->
+<tr role="row" data-pk="file-name" class="" id="__BVID__3676__row_file-name">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">file-name</code> <!----></td>
+<td aria-colindex="2" role="cell" class="">Scoped slot for formatting the file names</td>
+<td aria-colindex="3" role="cell" class=""><button data-v-866a22e8="" type="button" class="btn py-0 btn-info btn-sm"> Scope </button></td>
+</tr>
+<!----><!----><!----><!---->
+</tbody>
+<!---->
+</table>
+</div>
+</article>
+<article data-v-866a22e8="" class="bd-content">
+<h4 data-v-866a22e8="" id="comp-ref-b-form-file-events" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> Events <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/form-file#comp-ref-b-form-file-events" class="anchorjs-link" aria-labelledby="comp-ref-b-form-file-events" target="_self"></a></span></h4>
+<div data-v-866a22e8="" class="table-responsive-sm">
+<table role="table" aria-busy="false" aria-colcount="3" class="table b-table bv-docs-table table-striped" id="__BVID__3686">
+<!----><!---->
+<thead role="rowgroup" class="">
+<!---->
+<tr role="row" class="">
+<th role="columnheader" scope="col" aria-colindex="1" class="">Event</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">Arguments</th>
+<th role="columnheader" scope="col" aria-colindex="3" class="">Description</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+<!---->
+<tr role="row" data-pk="change" class="" id="__BVID__3686__row_change">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="notranslate">change</code> <!----></td>
+<td aria-colindex="2" role="cell" class=""><ol data-v-866a22e8="" class="list-unstyled mb-0">
+<li data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">event</code> - <span data-v-866a22e8="">Native change event object</span></li>
+</ol></td>
+<td aria-colindex="3" role="cell" class="">original native change event on input</td>
+</tr>
+<tr role="row" data-pk="input" class="" id="__BVID__3686__row_input">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="notranslate">input</code> <!----></td>
+<td aria-colindex="2" role="cell" class=""><ol data-v-866a22e8="" class="list-unstyled mb-0">
+<li data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">file</code> - <span data-v-866a22e8="">Will be a single File object in single mode or an array of File objects in multiple mode</span></li>
+</ol></td>
+<td aria-colindex="3" role="cell" class="">Updates the v-model value (see docs for more details)</td>
+</tr>
+<!----><!---->
+</tbody>
+<!---->
+</table>
+</div>
+</article>
+
+<article class="bd-content">
+<h3 id="importing-individual-components" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title"> Importing individual components <a href="../../../bootstrap-vue/docs/components/form-file#importing-individual-components" class="anchorjs-link" aria-labelledby="importing-individual-components" target="_self"></a></span></h3>
+<p> You can import individual components into your project via the following named
+        exports: </p>
+<div class="table-responsive-sm">
+<table role="table" aria-busy="false" aria-colcount="3" class="table b-table bv-docs-table table-striped" id="__BVID__3698">
+<!----><!---->
+<thead role="rowgroup" class="thead-default">
+<!---->
+<tr role="row" class="">
+<th role="columnheader" scope="col" aria-colindex="1" class="">Component</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">Named Export</th>
+<th role="columnheader" scope="col" aria-colindex="3" class="">Import Path</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+<!---->
+<tr role="row" class="">
+<td aria-colindex="1" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">&lt;b-form-file&gt;</code></td>
+<td aria-colindex="2" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">BFormFile</code></td>
+<td aria-colindex="3" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">bootstrap-vue</code></td>
+</tr>
+<!----><!---->
+</tbody>
+<!---->
+</table>
+</div>
+<p><strong>Example:</strong></p>
+<pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { BFormFile } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
+Vue.component(<span class="hljs-string">'b-form-file'</span>, BFormFile)</pre>
+</article>
+<!---->
+<article class="bd-content">
+<h3 id="importing-as-a-plugin" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title"> Importing as a Vue.js plugin <a href="../../../bootstrap-vue/docs/components/form-file#importing-as-a-plugin" class="anchorjs-link" aria-labelledby="importing-as-a-plugin" target="_self"></a></span></h3>
+<p> This plugin includes all of the above listed individual
+      components<!---->.
+      Plugins also include any component aliases. </p>
+<div class="table-responsive-sm">
+<table fileds="namedExport,importPath" role="table" aria-busy="false" aria-colcount="2" class="table b-table bv-docs-table table-striped b-table-caption-top" id="__BVID__3708">
+<!----><!---->
+<thead role="rowgroup" class="thead-default">
+<!---->
+<tr role="row" class="">
+<th role="columnheader" scope="col" aria-colindex="1" class="">Named Export</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">Import Path</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+<!---->
+<tr role="row" class="">
+<td aria-colindex="1" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">FormFilePlugin</code></td>
+<td aria-colindex="2" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">bootstrap-vue</code></td>
+</tr>
+<!----><!---->
+</tbody>
+<!---->
+</table>
+</div>
+<!---->
+<p><strong>Example:</strong></p>
+<pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { FormFilePlugin } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
+Vue.use(FormFilePlugin)</pre>
+</article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</main>
+</div>
+</div>
+
+
+<script src="../../../js/jquery-3.2.1.slim.min.js"></script> 
+<script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery-slim.min.js"><\/script>')</script> 
+<script src="../../../v4/dist/js/popper.min.js"></script> 
+<script src="../../../v4/dist/js/bootstrap.min.js"></script> 
+<script src="../../../v4/assets/js/docs.min.js"></script> 
+<script src="../../../v4/assets/js/ie-emulation-modes-warning.js"></script> 
+<script src="../../../v4/assets/js/docsearch.min.js"></script> 
+<script>
+  docsearch({
+    appId: 'PRR89ISST8',
+    apiKey: '95044d57d4d7bb744f322d1f18ed607f',
+    indexName: 'z01-bootstrapV4',
+    inputSelector: '#search-input',
+    handleSelected: function (input, event, suggestion) {
+      var url = suggestion.url;
+      url = suggestion.isLvl1 ? url.split('#')[0]: url;
+      // If it's a title we remove the anchor so it does not jump.
+      window.location.href = url;
+    },
+    transformData: function (hits) {
+      return hits.map(function (hit) {
+        hit.url = hit.url.replace('https://v4-alpha.getbootstrap.com', '/docs/4.0');
+        return hit;
+      });
+    },
+    debug: false // Set debug to true if you want to inspect the dropdown
+  });
+</script> 
+<script>
+  Holder.addTheme('gray', {
+    bg: '#777',
+    fg: 'rgba(255,255,255,.75)',
+    font: 'Helvetica',
+    fontweight: 'normal'
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,1440 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Jekyll v3.6.0">
+<title>表单时间选择器 &middot; BootstrapVue</title>
+<!-- Bootstrap 核心CSS -->
+<link href="../../../v4/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- 本文档额外专用css -->
+<link href="../../../v4/assets/css/docsearch.min.css" rel="stylesheet">
+<link href="../../../v4/assets/css/docs.min.css" rel="stylesheet">
+<link href="../../style/bv_path.css" rel="stylesheet">
+
+<!-- Favicons图标定义 -->
+<link data-n-head="ssr" rel="manifest" href="../../manifest.json">
+<link data-n-head="ssr" rel="shortcut icon" href="../../style/icons/icon_64.png">
+<link data-n-head="ssr" rel="apple-touch-icon" href="../../style/icons/icon_512.png" sizes="512x512">
+
+<!-- Meta关键字定义 -->
+<meta name="description" content="The most popular HTML, CSS, and JS library in the world.">
+<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+
+</head>
+<body>
+<a id="skippy" class="sr-only sr-only-focusable" href="#content">
+<div class="container"> <span class="skiplink-text">跳到主体内容</span> </div>
+</a>
+<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar"> <a class="navbar-brand mr-0 mr-md-2" href="../" aria-label="Bootstrap">
+  <svg class="d-block" width="36" height="36" viewbox="0 0 612 612" xmlns="http://www.w3.org/2000/svg" focusable="false">
+    <title>Bootstrap</title>
+    <path fill="currentColor" d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z"/>
+    <path fill="currentColor" d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z"/>
+  </svg>
+  </a>
+  <div class="navbar-nav-scroll">
+    <ul class="navbar-nav bd-navbar-nav flex-row">
+      <li class="nav-item"><a class="nav-link " href="../">首页</a></li>
+      <li class="nav-item"><a class="nav-link active" href="../../v4/docs/">中文手册</a></li>
+      <li class="nav-item"><a class="nav-link " href="../../v4/examples/">实例</a></li>
+      <li class="nav-item dropdown">
+<a class="nav-item nav-link dropdown-toggle mr-md-2" id="bd-versions" aria-expanded="false" aria-haspopup="true" href="#" data-toggle="dropdown"> 主题模板 </a>
+<div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
+<a class="dropdown-item" href="../../V4/themes/" target="_blank">主题门户</a>
+<a class="dropdown-item" href="../../V4/themes/live.html">精选模板</a>
+</div>
+</li>
+      <li class="nav-item"><a class="nav-link" href="//ico.z01.com" target="_blank" rel="noopener">zico图标系统</a></li>
+      <li class="nav-item"><a class="nav-link" href="https://expo.getbootstrap.com" target="_blank" rel="noopener">优站精选</a></li>
+      <li class="nav-item"><a class="nav-link" href="https://blog.getbootstrap.com" target="_blank" rel="noopener">Blog</a></li>
+    </ul>
+  </div>
+  <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="alse"> v2.6.1 </a>
+      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions"> 
+        <a class="dropdown-item active" href="../../../bootstrap-vue/docs/4.0/">Latest (4.3.x)</a>
+        <a class="dropdown-item" href="/Boot/">v3.3.7</a>
+        <a class="dropdown-item" href="/Sass/">Sass语言</a>
+        <a class="dropdown-item" href="/Emmet/">Emmet语法</a>
+        <a class="dropdown-item" href="//www.z01.com/tool/" target="_blank">IIS站长工具</a>
+        <a class="dropdown-item" href="//ad.z01.com/" target="_blank">广告源码</a>
+        <a class="dropdown-item" href="//v.z01.com/mb/" target="_blank">免费模板</a>
+        <a class="dropdown-item" href="//v.z01.com/" target="_blank">H5移动创作</a>
+        <a class="dropdown-item" href="//www.z01.com/help/web/3234.shtml" target="_blank">Flexbox布局</a>
+		<a class="dropdown-item" href="/boot/font.html" target="_blank">Font Awesome</a>
+</div>
+    </li>
+    <li class="nav-item"> <a class="nav-link p-2" href="//zoomla.github.io/bootstrap4-zhcn-documentation" target="_blank" rel="noopener" aria-label="GitHub">
+      <svg class="navbar-nav-svg" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 499.36" focusable="false">
+        <title>GitHub</title>
+        <path d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z" fill="currentColor" fill-rule="evenodd"/>
+      </svg>
+      </a> </li>
+    <li class="nav-item"> <a class="nav-link p-2" href="http://www.z01.com/blog/ren/3214.shtml" target="_blank" rel="noopener" aria-label="Slack">译者说</a></li>
+  </ul>
+  <a class="btn btn-bd-yellow d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="download.html">下载 Bootstrap</a> </header>
+
+<div class="container-fluid">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+      <form class="bd-search d-flex align-items-center">
+        <input type="search" class="form-control" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
+        <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30" focusable="false">
+          <title>Menu</title>
+          <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/>
+        </svg>
+        </button>
+      </form>
+
+
+<nav class="collapse bd-links" id="bd-docs-nav">
+<div class=""><a href="../" class="bd-toc-link">首页</a></div>
+<div class="bd-toc-item nuxt-link-exact-active "><a href="../../../bootstrap-vue/docs/" class="bd-toc-link  "> 起步 </a>
+<ul class="nav bd-sidenav">
+</ul>
+</div>
+<div class="bd-toc-item active"><a href="../../../bootstrap-vue/docs/components/" class="bd-toc-link nuxt-link-exact-active"> 组件 </a>
+<ul class="nav bd-sidenav">
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/index.html" class="nav-link"> 组件目录 </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/alert.html" class="nav-link"> 警告提示框(Alert) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/badge.html" class="nav-link"> 徽章(Badge) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/badge.html" class="nav-link"> 面包屑导航(Breadcrumb) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/button.html" class="nav-link"> 按钮(Button) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/button-group.html" class="nav-link"> 按钮组(Button Group) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/button-toolbar.html" class="nav-link"> 按钮Toolbar(Button Toolbar) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/calendar.html" class="nav-link"> 日历组件(Calendar) <small class="badge text-uppercase badge-success">New</small> </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/card.html" class="nav-link"> 卡片(Card) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/carousel.html" class="nav-link"> 轮播效果(Carousel) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/collapse.html" class="nav-link"> 折叠面板(Collapse) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/dropdown.html" class="nav-link"> 下拉菜单(Dropdown) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/embed.html" class="nav-link"> 嵌入(Embed) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form.html" class="nav-link"> 表单(Form) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-checkbox.html" class="nav-link"> 表单复选框(Form Checkbox) </a></li>
+<li class="nav-item active"><a href="../../../bootstrap-vue/docs/components/form-datepicker.html" class="nav-link"> 表单时间选择器(Form Datepicker) <small class="badge text-uppercase badge-success">New</small> </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-file.html" class="nav-link"> 文件选择(Form File) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-group.html" class="nav-link"> 表单组合(Form Group) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-input.html" class="nav-link"> 表单输入框(Form Input) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-radio.html" class="nav-link"> 单选择表单Form Radio </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-select.html" class="nav-link"> 下拉式表单(Form Select) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-spinbutton.html" class="nav-link"> 按钮式表单(Form Spinbuttno) <small class="badge text-uppercase badge-success">New</small> </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-tags.html" class="nav-link"> Tags表单选择器(Form Tags) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-textarea.html" class="nav-link"> 文本框(Form Textarea) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-timepicker.html" class="nav-link"> 表单内时间控件(Form Timepicker) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/image.html" class="nav-link"> 图片(Image) </a></li>
+
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/input-group.html" class="nav-link"> 输入框(Input Group) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/jumbotron.html" class="nav-link"> Hero大块屏(Jumbotron) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/layout.html" class="nav-link"> 布局与网络Layout and Grid System </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/link.html" class="nav-link"> 链接(Link)</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/list-group.html" class="nav-link"> 列表组(List group) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/media.html" class="nav-link"> 媒体(Media) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/modal.html" class="nav-link"> 弹出模态框(Modal) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/nav.html" class="nav-link"> 导航(Nav) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/navbar.html" class="nav-link"> 导航栏(Navbar) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/pagination.html" class="nav-link"> 分页(Pagination) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/pagination-nav.html" class="nav-link"> 分页导航(Pagination Nav) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/popover.html" class="nav-link"> 指示备注(Popover) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/progress.html" class="nav-link"> 进度指示器(Progress) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/spinner.html" class="nav-link"> 旋转指示器(Spinner) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/table.html" class="nav-link"> 表格(Table) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/tabs.html" class="nav-link"> 选项卡(Tabs) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/time.html" class="nav-link"> 时间组件(Time) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/toast.html" class="nav-link"> 冒泡推送(Toasts) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/tooltip.html" class="nav-link"> tip提示组件(Tooltip) </a></li>
+</ul>
+</div>
+<div class="bd-toc-item"><a href="../../../bootstrap-vue/docs/directives/" class="bd-toc-link"> 指令 </a>
+<ul class="nav bd-sidenav">
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/directives/index.html" class="nav-link"> 指令目录 </a></li>
+<li class="nav-item active"><a href="../../../bootstrap-vue/docs/directives/hover.html" class="nav-link"> Hover 指令<small class="badge text-uppercase badge-success">New</small> </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/directives/popover.html" class="nav-link"> Popover 提示备注</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/directives/scrollspy.html" class="nav-link"> Scrollspy 滚动监听</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/directives/tooltip.html" class="nav-link"> Tooltip 提示指令</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/directives/visible.html" class="nav-link"> Visible 可见性操作<small class="badge text-uppercase badge-success">New</small> </a></li>
+</ul>
+</div>
+<div class="bd-toc-item"><a href="../../../bootstrap-vue/docs/icons.html" class="bd-toc-link"> Icons图标</a>
+<ul class="nav bd-sidenav">
+</ul>
+</div>
+  
+<div class="bd-toc-item"><a class="bd-toc-link" href="../../../bootstrap-vue/docs/reference">参考</a>
+<ul class="nav bd-sidenav">
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference" class="nav-link.html"> 参考目录 </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/accessibility.html" class="nav-link">友好访问</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/color-variants.html" class="nav-link">Color颜色变量 </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/images.html" class="nav-link"> 组件图像img的src路径解析</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/router-links.html" class="nav-link"> Router路由支持 </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/size-props.html" class="nav-link">大小规格</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/spacing-classes.html" class="nav-link">间距处理</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/starter-templates.html" class="nav-link">开始模板</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/theming.html" class="nav-link">主题色彩</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/utility-classes.html" class="nav-link">通用Class类</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/validation.html" class="nav-link">Form表单验证</a></li>
+</ul>
+</div>
+<div class="bd-toc-item"> <a class="bd-toc-link" href="../components/alerts.html"> 杂项 </a>
+  <ul class="nav bd-sidenav">
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/misc/changelog" class="nav-link"> Changelog </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/misc/contributing" class="nav-link"> Contributing </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/misc/settings" class="nav-link"> Settings </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/misc/third-party" class="nav-link"> Third party libraries </a></li>
+  </ul>
+</div>
+<div class=""><a href="/play" class="bd-toc-link">在线模拟器</a></div>
+</nav>
+</div>
+
+<div class="d-none d-xl-block col-xl-2 bd-toc">
+
+<ul class="section-nav">
+<li class="nav-item toc-entry mb-2"><a target="_self" href="#form-datepicker" class="nav-link font-weight-bold"><span>Form Datepicker</span></a></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#v-model-return-value" class="nav-link"><span>v-model return value</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#disabled-and-readonly-states" class="nav-link"><span>Disabled and readonly states</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#date-constraints" class="nav-link"><span>Date constraints</span></a>
+<ul class="nav flex-column">
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#minimum-and-maximum-dates" class="nav-link"><span>Minimum and maximum dates</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#disabling-dates" class="nav-link"><span>Disabling dates</span></a></li>
+</ul>
+</li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#validation-states" class="nav-link"><span>Validation states</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#styling" class="nav-link"><span>Styling</span></a>
+<ul class="nav flex-column">
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#variants" class="nav-link"><span>Variants</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#control-sizing" class="nav-link"><span>Control sizing</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#placeholder" class="nav-link"><span>Placeholder</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#optional-controls" class="nav-link"><span>Optional controls</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#dropdown-placement" class="nav-link"><span>Dropdown placement</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#dark-mode" class="nav-link"><span>Dark mode</span></a></li>
+</ul>
+</li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#internationalization" class="nav-link"><span>Internationalization</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#accessibility" class="nav-link"><span>Accessibility</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#implementation-notes" class="nav-link"><span>Implementation notes</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#see-also" class="nav-link"><span>See also</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#component-reference" class="nav-link"><span>Component reference</span></a>
+<ul class="nav flex-column">
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#comp-ref-b-form-datepicker" class="nav-link"><span>&lt;b-form-datepicker&gt;</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#importing-individual-components" class="nav-link"><span>Importing individual components</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#importing-as-a-plugin" class="nav-link"><span>Importing as a Vue.js plugin</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+
+<nav data-v-aafc4aea="" aria-label="Breadcrumbs" class="float-left mt-2 mb-0 mb-lg-2">
+<ol data-v-aafc4aea="" class="breadcrumb d-inline-flex bg-transparent px-2 py-1 my-0">
+<li data-v-aafc4aea="" class="breadcrumb-item"><a data-v-aafc4aea="" href="../../" class="nuxt-link-active" target="_self">首页</a></li>
+<li data-v-aafc4aea="" class="breadcrumb-item"><a data-v-aafc4aea="" href="../../../bootstrap-vue/docs" class="nuxt-link-active" target="_self">中文手册</a></li>
+<li data-v-aafc4aea="" class="breadcrumb-item"><a data-v-aafc4aea="" href="../../../bootstrap-vue/docs/components/" class="nuxt-link-active" target="_self">组件</a></li>
+<li data-v-aafc4aea="" class="breadcrumb-item active"><span data-v-aafc4aea="" aria-current="location">表单时间选择器</span></li>
+</ol>
+</nav>
+<div class="clearfix d-block"></div>
+  <h1 class="bd-title" id="content">表单时间选择器(Form Datepicker)</h1>
+<p class="bd-lead"><code translate="no" class="notranslate text-nowrap">&lt;b-form-datepicker&gt;</code> is a BootstrapVue custom date picker input form control, which provides full WAI-ARIA compliance and internationalization support.</p>
+  <script type="text/javascript" src="../../../v4/assets/js/pupCMS.js"></script>
+
+
+
+
+<nav class="bd-quick-links mb-3 d-xl-none" data-v-811345e6="">
+<header data-v-811345e6="">
+<button data-v-811345e6="" type="button" class="btn font-weight-bold btn-outline-secondary btn-sm btn-block collapsed" aria-controls="bd-quick-links-collapse" aria-expanded="false"><span data-v-811345e6="">Show</span> page table of contents </button>
+</header>
+<ul data-v-811345e6="" id="bd-quick-links-collapse" class="collapse" style="display: none;">
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#v-model-return-value" class=""><span data-v-811345e6="">v-model return value</span></a> <!----></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#disabled-and-readonly-states" class=""><span data-v-811345e6="">Disabled and readonly states</span></a> <!----></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#date-constraints" class=""><span data-v-811345e6="">Date constraints</span></a>
+<ul data-v-811345e6="">
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#minimum-and-maximum-dates" class=""><span data-v-811345e6="">Minimum and maximum dates</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#disabling-dates" class=""><span data-v-811345e6="">Disabling dates</span></a></li>
+</ul>
+</li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#validation-states" class=""><span data-v-811345e6="">Validation states</span></a> <!----></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#styling" class=""><span data-v-811345e6="">Styling</span></a>
+<ul data-v-811345e6="">
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#variants" class=""><span data-v-811345e6="">Variants</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#control-sizing" class=""><span data-v-811345e6="">Control sizing</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#placeholder" class=""><span data-v-811345e6="">Placeholder</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#optional-controls" class=""><span data-v-811345e6="">Optional controls</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#dropdown-placement" class=""><span data-v-811345e6="">Dropdown placement</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#dark-mode" class=""><span data-v-811345e6="">Dark mode</span></a></li>
+</ul>
+</li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#internationalization" class=""><span data-v-811345e6="">Internationalization</span></a> <!----></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#accessibility" class=""><span data-v-811345e6="">Accessibility</span></a> <!----></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#implementation-notes" class=""><span data-v-811345e6="">Implementation notes</span></a> <!----></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#see-also" class=""><span data-v-811345e6="">See also</span></a> <!----></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#component-reference" class=""><span data-v-811345e6="">Component reference</span></a>
+<ul data-v-811345e6="">
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#comp-ref-b-form-datepicker" class=""><span data-v-811345e6="">&lt;b-form-datepicker&gt;</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#importing-individual-components" class=""><span data-v-811345e6="">Importing individual components</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#importing-as-a-plugin" class=""><span data-v-811345e6="">Importing as a Vue.js plugin</span></a></li>
+</ul>
+</li>
+</ul>
+</nav>
+<p>As a form control wrapper component for the <a href="../../../bootstrap-vue/docs/components/calendar" class="font-weight-bold"><code translate="no" class="notranslate text-nowrap">&lt;b-calendar&gt;</code></a> component,
+it provides additional validation state presentation and a compact interface. Native HTML5 date
+inputs vary in presentation, accessibility, and in some instances are not supported by all browsers. <code translate="no" class="notranslate text-nowrap">&lt;b-form-datepicker&gt;</code> provides a consistent and accessible interface across all browser platforms
+and devices.</p>
+<p>The <code translate="no" class="notranslate text-nowrap">&lt;b-form-datepicker&gt;</code> component was introduced in BootstrapVue release <code translate="no" class="notranslate text-nowrap">v2.5.0</code>.</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-form-datepicker notranslate">
+<div>
+<label for="example-datepicker">Choose a date</label>
+<div id="example-datepicker__b-form-date_" role="group" aria-labelledby="example-datepicker__value_" dir="ltr" class="b-form-datepicker form-control dropdown h-auto p-0 d-flex mb-2">
+<button id="example-datepicker" type="button" aria-haspopup="dialog" aria-expanded="false" class="btn border-0 h-auto py-0">
+<div aria-hidden="true">
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-calendar b-icon bi">
+<g transform="translate(10 10) scale(1.25 1.25) translate(-10 -10)">
+<path fill-rule="evenodd" d="M16 2H4a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V4a2 2 0 00-2-2zM3 5.857C3 5.384 3.448 5 4 5h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H4c-.552 0-1-.384-1-.857V5.857z" clip-rule="evenodd"></path>
+<path fill-rule="evenodd" d="M8.5 9a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm-9 3a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm-9 3a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path>
+</g>
+</svg>
+</div>
+</button>
+<!---->
+<div id="example-datepicker__dialog_" role="dialog" aria-modal="false" aria-labelledby="example-datepicker__value_" class="dropdown-menu p-2"><!----></div>
+<label id="example-datepicker__value_" for="example-datepicker" dir="ltr" class="form-control text-break text-wrap border-0 bg-transparent h-auto pl-1 m-0 text-muted" lang="zh-CN">No date selected<!----></label>
+</div>
+<p>Value: ''</p>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"example-datepicker"</span>&gt;</span>Choose a date<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-datepicker</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"example-datepicker"</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">"value"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-2"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-datepicker</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Value: '{{ value }}'<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    data() {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">value</span>: <span class="hljs-string">''</span>
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+<p><code translate="no" class="notranslate text-nowrap">&lt;b-form-datepicker&gt;</code> supports many of the props available on <a href="../../../bootstrap-vue/docs/components/calendar" class="font-weight-bold"><code translate="no" class="notranslate text-nowrap">&lt;b-calendar&gt;</code></a> as well as some of the props available on <a href="../../../bootstrap-vue/docs/components/dropdown" class="font-weight-bold"><code translate="no" class="notranslate text-nowrap">&lt;b-dropdown&gt;</code></a>.</p>
+<h2 id="v-model-return-value" class="bv-no-focus-ring"><span class="bd-content-title"><code translate="no" class="notranslate text-nowrap">v-model</code> return value<a class="anchorjs-link" href="#v-model-return-value" aria-labelledby="v-model-return-value"></a></span></h2>
+<p>By default, <code translate="no" class="notranslate text-nowrap">&lt;b-form-datepicker&gt;</code> returns dates as a string in the <code translate="no" class="notranslate text-nowrap">YYYY-MM-DD</code> format, which is the
+same format returned by native browser <code translate="no" class="notranslate text-nowrap">&lt;input type="date"&gt;</code> controls. You can have <code translate="no" class="notranslate text-nowrap">&lt;b-form-datepicker&gt;</code> return a <code translate="no" class="notranslate text-nowrap">Date</code> object (with no time portion) as the <code translate="no" class="notranslate text-nowrap">v-model</code> value instead
+by setting the <code translate="no" class="notranslate text-nowrap">value-as-date</code> prop.</p>
+<p>If no date is selected, <code translate="no" class="notranslate text-nowrap">&lt;b-form-datepicker&gt;</code> returns an empty string <code translate="no" class="notranslate text-nowrap">''</code>, or returns <code translate="no" class="notranslate text-nowrap">null</code> if the <code translate="no" class="notranslate text-nowrap">value-as-date</code> prop is set.</p>
+<p>Note that when <code translate="no" class="notranslate text-nowrap">value-as-date</code> prop is set, the returned <code translate="no" class="notranslate text-nowrap">Date</code> object will be in the browser's
+default timezone.</p>
+<p>If <code translate="no" class="notranslate text-nowrap">&lt;b-form-datepicker&gt;</code> has a value set for the <code translate="no" class="notranslate text-nowrap">name</code> prop, a hidden input will be created which
+will have its name attribute set to the value of the <code translate="no" class="notranslate text-nowrap">name</code> prop, and the value attribute will be
+set to the selected date as a <code translate="no" class="notranslate text-nowrap">YYYY-MM-DD</code> string. This will allow the <code translate="no" class="notranslate text-nowrap">&lt;b-form-datepicker&gt;</code> selected value to be submitted via native browser form submission.</p>
+<h2 id="disabled-and-readonly-states" class="bv-no-focus-ring"><span class="bd-content-title">Disabled and readonly states<a class="anchorjs-link" href="#disabled-and-readonly-states" aria-labelledby="disabled-and-readonly-states"></a></span></h2>
+<p>Setting the <code translate="no" class="notranslate text-nowrap">disabled</code> prop will remove all interactivity of the <code translate="no" class="notranslate text-nowrap">&lt;b-form-datepicker&gt;</code> component.</p>
+<p>Setting the <code translate="no" class="notranslate text-nowrap">readonly</code> prop will disable selecting a date, but will keep the component interactive,
+allowing for date navigation. The <code translate="no" class="notranslate text-nowrap">v-model</code> will not be updated in the readonly state.</p>
+<p>For disabling specific dates or setting minimum and maximum date limits, refer to the <a href="#date-constraints" class="font-weight-bold">Date constraints</a> section.</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-form-datepicker-disabled-readonly notranslate">
+<div>
+<fieldset class="form-group" id="__BVID__3547">
+<legend tabindex="-1" class="bv-no-focus-ring col-form-label pt-0" id="__BVID__3547__BV_label_">Select date picker interactive state</legend>
+<div tabindex="-1" role="group" class="bv-no-focus-ring">
+<div role="radiogroup" tabindex="-1" class="bv-no-focus-ring" aria-controls="ex-disabled-readonly" id="__BVID__3548">
+<div class="custom-control custom-control-inline custom-radio">
+<input type="radio" autocomplete="off" class="custom-control-input" value="disabled" id="__BVID__3549" name="__BVID__3548">
+<label class="custom-control-label" for="__BVID__3549">Disabled</label>
+</div>
+<div class="custom-control custom-control-inline custom-radio">
+<input type="radio" autocomplete="off" class="custom-control-input" value="readonly" id="__BVID__3550" name="__BVID__3548">
+<label class="custom-control-label" for="__BVID__3550">Readonly</label>
+</div>
+<div class="custom-control custom-control-inline custom-radio">
+<input type="radio" autocomplete="off" class="custom-control-input" value="normal" id="__BVID__3551" name="__BVID__3548">
+<label class="custom-control-label" for="__BVID__3551">Normal</label>
+</div>
+</div>
+<!----><!----><!----></div>
+</fieldset>
+<div id="ex-disabled-readonly__b-form-date_" role="group" aria-disabled="true" aria-labelledby="ex-disabled-readonly__value_" dir="ltr" class="b-form-datepicker form-control dropdown h-auto p-0 d-flex">
+<button id="ex-disabled-readonly" type="button" disabled="disabled" aria-haspopup="dialog" aria-expanded="false" class="btn border-0 h-auto py-0">
+<div aria-hidden="true">
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-calendar b-icon bi">
+<g transform="translate(10 10) scale(1.25 1.25) translate(-10 -10)">
+<path fill-rule="evenodd" d="M16 2H4a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V4a2 2 0 00-2-2zM3 5.857C3 5.384 3.448 5 4 5h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H4c-.552 0-1-.384-1-.857V5.857z" clip-rule="evenodd"></path>
+<path fill-rule="evenodd" d="M8.5 9a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm-9 3a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm-9 3a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path>
+</g>
+</svg>
+</div>
+</button>
+<!---->
+<div id="ex-disabled-readonly__dialog_" role="dialog" aria-modal="false" aria-labelledby="ex-disabled-readonly__value_" class="dropdown-menu p-2"><!----></div>
+<label id="ex-disabled-readonly__value_" for="ex-disabled-readonly" dir="ltr" class="form-control text-break text-wrap border-0 bg-transparent h-auto pl-1 m-0 text-muted" lang="zh-CN">No date selected<!----></label>
+</div>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-group</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Select date picker interactive state"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-form-radio-group</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">"state"</span> <span class="hljs-attr">aria-controls</span>=<span class="hljs-string">"ex-disabled-readonly"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">b-form-radio</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"disabled"</span>&gt;</span>Disabled<span class="hljs-tag">&lt;/<span class="hljs-name">b-form-radio</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">b-form-radio</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"readonly"</span>&gt;</span>Readonly<span class="hljs-tag">&lt;/<span class="hljs-name">b-form-radio</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">b-form-radio</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"normal"</span>&gt;</span>Normal<span class="hljs-tag">&lt;/<span class="hljs-name">b-form-radio</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">b-form-radio-group</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-form-group</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-datepicker</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"ex-disabled-readonly"</span> <span class="hljs-attr">:disabled</span>=<span class="hljs-string">"disabled"</span> <span class="hljs-attr">:readonly</span>=<span class="hljs-string">"readonly"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-datepicker</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    data() {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">state</span>: <span class="hljs-string">'disabled'</span>
+      }
+    },
+    <span class="hljs-attr">computed</span>: {
+      disabled() {
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.state === <span class="hljs-string">'disabled'</span>
+      },
+      readonly() {
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.state === <span class="hljs-string">'readonly'</span>
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+<h2 id="date-constraints" class="bv-no-focus-ring"><span class="bd-content-title">Date constraints<a class="anchorjs-link" href="#date-constraints" aria-labelledby="date-constraints"></a></span></h2>
+<h3 id="minimum-and-maximum-dates" class="bv-no-focus-ring"><span class="bd-content-title">Minimum and maximum dates<a class="anchorjs-link" href="#minimum-and-maximum-dates" aria-labelledby="minimum-and-maximum-dates"></a></span></h3>
+<p>Restrict the calendar range via the <code translate="no" class="notranslate text-nowrap">min</code> and <code translate="no" class="notranslate text-nowrap">max</code> props. The props accept a date string in the
+format of <code translate="no" class="notranslate text-nowrap">YYYY-MM-DD</code> or a <code translate="no" class="notranslate text-nowrap">Date</code> object.</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-form-datepicker-min-max notranslate">
+<div>
+<div role="group" dir="ltr" class="b-form-datepicker form-control dropdown h-auto p-0 d-flex" id="__BVID__3555__b-form-date_" aria-labelledby="__BVID__3555__value_">
+<button type="button" aria-haspopup="dialog" aria-expanded="false" class="btn border-0 h-auto py-0" id="__BVID__3555">
+<div aria-hidden="true">
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-calendar b-icon bi">
+<g transform="translate(10 10) scale(1.25 1.25) translate(-10 -10)">
+<path fill-rule="evenodd" d="M16 2H4a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V4a2 2 0 00-2-2zM3 5.857C3 5.384 3.448 5 4 5h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H4c-.552 0-1-.384-1-.857V5.857z" clip-rule="evenodd"></path>
+<path fill-rule="evenodd" d="M8.5 9a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm-9 3a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm-9 3a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path>
+</g>
+</svg>
+</div>
+</button>
+<!---->
+<div role="dialog" aria-modal="false" class="dropdown-menu p-2" id="__BVID__3555__dialog_" aria-labelledby="__BVID__3555__value_"><!----></div>
+<label dir="ltr" class="form-control text-break text-wrap border-0 bg-transparent h-auto pl-1 m-0 text-muted" id="__BVID__3555__value_" for="__BVID__3555" lang="en">No date selected<!----></label>
+</div>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-datepicker</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">"value"</span> <span class="hljs-attr">:min</span>=<span class="hljs-string">"min"</span> <span class="hljs-attr">:max</span>=<span class="hljs-string">"max"</span> <span class="hljs-attr">locale</span>=<span class="hljs-string">"en"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-datepicker</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    data() {
+      <span class="hljs-keyword">const</span> now = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>()
+      <span class="hljs-keyword">const</span> today = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(now.getFullYear(), now.getMonth(), now.getDate())
+      <span class="hljs-comment">// 15th two months prior</span>
+      <span class="hljs-keyword">const</span> minDate = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(today)
+      minDate.setMonth(minDate.getMonth() - <span class="hljs-number">2</span>)
+      minDate.setDate(<span class="hljs-number">15</span>)
+      <span class="hljs-comment">// 15th in two months</span>
+      <span class="hljs-keyword">const</span> maxDate = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(today)
+      maxDate.setMonth(maxDate.getMonth() + <span class="hljs-number">2</span>)
+      maxDate.setDate(<span class="hljs-number">15</span>)
+
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">value</span>: <span class="hljs-string">''</span>,
+        <span class="hljs-attr">min</span>: minDate,
+        <span class="hljs-attr">max</span>: maxDate
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+<h3 id="disabling-dates" class="bv-no-focus-ring"><span class="bd-content-title">Disabling dates<a class="anchorjs-link" href="#disabling-dates" aria-labelledby="disabling-dates"></a></span></h3>
+<p>If you need to disable specific dates within the date picker, specify a function reference to the <code translate="no" class="notranslate text-nowrap">date-disabled-fn</code> prop. The function is passed two arguments:</p>
+<ul>
+<li><code translate="no" class="notranslate text-nowrap">ymd</code> The date as a <code translate="no" class="notranslate text-nowrap">YYYY-MM-DD</code> string</li>
+<li><code translate="no" class="notranslate text-nowrap">date</code> The date as a <code translate="no" class="notranslate text-nowrap">Date</code> object</li>
+</ul>
+<p>The function should either return <code translate="no" class="notranslate text-nowrap">true</code> if the date <em>cannot</em> be selected (disabled), or <code translate="no" class="notranslate text-nowrap">false</code> if
+the date <em>can</em> be selected (enabled). Note that the function <strong>cannot</strong> be asynchronous, and should
+return a value as quickly as possible.</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-form-datepicker-disabled-dates notranslate">
+<div>
+<div role="group" dir="ltr" class="b-form-datepicker form-control dropdown h-auto p-0 d-flex" id="__BVID__3558__b-form-date_" aria-labelledby="__BVID__3558__value_">
+<button type="button" aria-haspopup="dialog" aria-expanded="false" class="btn border-0 h-auto py-0" id="__BVID__3558">
+<div aria-hidden="true">
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-calendar b-icon bi">
+<g transform="translate(10 10) scale(1.25 1.25) translate(-10 -10)">
+<path fill-rule="evenodd" d="M16 2H4a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V4a2 2 0 00-2-2zM3 5.857C3 5.384 3.448 5 4 5h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H4c-.552 0-1-.384-1-.857V5.857z" clip-rule="evenodd"></path>
+<path fill-rule="evenodd" d="M8.5 9a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm-9 3a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm-9 3a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path>
+</g>
+</svg>
+</div>
+</button>
+<!---->
+<div role="dialog" aria-modal="false" class="dropdown-menu p-2" id="__BVID__3558__dialog_" aria-labelledby="__BVID__3558__value_"><!----></div>
+<label dir="ltr" class="form-control text-break text-wrap border-0 bg-transparent h-auto pl-1 m-0 text-muted" id="__BVID__3558__value_" for="__BVID__3558" lang="en">No date selected<!----></label>
+</div>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-datepicker</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">"value"</span> <span class="hljs-attr">:date-disabled-fn</span>=<span class="hljs-string">"dateDisabled"</span> <span class="hljs-attr">locale</span>=<span class="hljs-string">"en"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-datepicker</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    data() {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">value</span>: <span class="hljs-string">''</span>
+      }
+    },
+    <span class="hljs-attr">methods</span>: {
+      dateDisabled(ymd, date) {
+        <span class="hljs-comment">// Disable weekends (Sunday = `0`, Saturday = `6`) and</span>
+        <span class="hljs-comment">// disable days that fall on the 13th of the month</span>
+        <span class="hljs-keyword">const</span> weekday = date.getDay()
+        <span class="hljs-keyword">const</span> day = date.getDate()
+        <span class="hljs-comment">// Return `true` if the date should be disabled</span>
+        <span class="hljs-keyword">return</span> weekday === <span class="hljs-number">0</span> || weekday === <span class="hljs-number">6</span> || day === <span class="hljs-number">13</span>
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+<p>Note the <code translate="no" class="notranslate text-nowrap">min</code> and <code translate="no" class="notranslate text-nowrap">max</code> date constraints are evaluated first, before <code translate="no" class="notranslate text-nowrap">date-disabled-fn</code>.</p>
+<h2 id="validation-states" class="bv-no-focus-ring"><span class="bd-content-title">Validation states<a class="anchorjs-link" href="#validation-states" aria-labelledby="validation-states"></a></span></h2>
+<p><code translate="no" class="notranslate text-nowrap">&lt;b-form-datepicker&gt;</code> supports invalid and valid styling via the boolean <code translate="no" class="notranslate text-nowrap">state</code> prop. Setting <code translate="no" class="notranslate text-nowrap">state</code> to boolean <code translate="no" class="notranslate text-nowrap">false</code> will style the input as invalid, while setting it to boolean <code translate="no" class="notranslate text-nowrap">true</code> will
+style it as valid. Setting <code translate="no" class="notranslate text-nowrap">state</code> to <code translate="no" class="notranslate text-nowrap">null</code> will not show any validation state styling (the
+default).</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-form-datepicker-invalid-valid notranslate">
+<div>
+<label for="datepicker-invalid">Choose a date (invalid style)</label>
+<div id="datepicker-invalid__b-form-date_" role="group" aria-labelledby="datepicker-invalid__value_" aria-invalid="true" dir="ltr" class="b-form-datepicker form-control dropdown h-auto p-0 d-flex mb-2 is-invalid">
+<button id="datepicker-invalid" type="button" aria-haspopup="dialog" aria-expanded="false" aria-invalid="true" class="btn border-0 h-auto py-0">
+<div aria-hidden="true">
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-calendar b-icon bi">
+<g transform="translate(10 10) scale(1.25 1.25) translate(-10 -10)">
+<path fill-rule="evenodd" d="M16 2H4a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V4a2 2 0 00-2-2zM3 5.857C3 5.384 3.448 5 4 5h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H4c-.552 0-1-.384-1-.857V5.857z" clip-rule="evenodd"></path>
+<path fill-rule="evenodd" d="M8.5 9a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm-9 3a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm-9 3a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path>
+</g>
+</svg>
+</div>
+</button>
+<!---->
+<div id="datepicker-invalid__dialog_" role="dialog" aria-modal="false" aria-labelledby="datepicker-invalid__value_" class="dropdown-menu p-2"><!----></div>
+<label id="datepicker-invalid__value_" for="datepicker-invalid" dir="ltr" aria-invalid="true" class="form-control text-break text-wrap border-0 bg-transparent h-auto pl-1 m-0 text-muted is-invalid" lang="zh-CN">No date selected<!----></label>
+</div>
+<label for="datepicker-valid">Choose a date (valid style)</label>
+<div id="datepicker-valid__b-form-date_" role="group" aria-labelledby="datepicker-valid__value_" dir="ltr" class="b-form-datepicker form-control dropdown h-auto p-0 d-flex is-valid">
+<button id="datepicker-valid" type="button" aria-haspopup="dialog" aria-expanded="false" class="btn border-0 h-auto py-0">
+<div aria-hidden="true">
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-calendar b-icon bi">
+<g transform="translate(10 10) scale(1.25 1.25) translate(-10 -10)">
+<path fill-rule="evenodd" d="M16 2H4a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V4a2 2 0 00-2-2zM3 5.857C3 5.384 3.448 5 4 5h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H4c-.552 0-1-.384-1-.857V5.857z" clip-rule="evenodd"></path>
+<path fill-rule="evenodd" d="M8.5 9a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm-9 3a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm-9 3a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path>
+</g>
+</svg>
+</div>
+</button>
+<!---->
+<div id="datepicker-valid__dialog_" role="dialog" aria-modal="false" aria-labelledby="datepicker-valid__value_" class="dropdown-menu p-2"><!----></div>
+<label id="datepicker-valid__value_" for="datepicker-valid" dir="ltr" class="form-control text-break text-wrap border-0 bg-transparent h-auto pl-1 m-0 text-muted is-valid" lang="zh-CN">No date selected<!----></label>
+</div>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"datepicker-invalid"</span>&gt;</span>Choose a date (invalid style)<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-datepicker</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"datepicker-invalid"</span> <span class="hljs-attr">:state</span>=<span class="hljs-string">"false"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-2"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-datepicker</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"datepicker-valid"</span>&gt;</span>Choose a date (valid style)<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-datepicker</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"datepicker-valid"</span> <span class="hljs-attr">:state</span>=<span class="hljs-string">"true"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-datepicker</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span></pre>
+<p>Note that native browser validation is <em>not</em> available with <code translate="no" class="notranslate text-nowrap">&lt;b-form-datepicker&gt;</code>.</p>
+<h2 id="styling" class="bv-no-focus-ring"><span class="bd-content-title">Styling<a class="anchorjs-link" href="#styling" aria-labelledby="styling"></a></span></h2>
+<h3 id="variants" class="bv-no-focus-ring"><span class="bd-content-title">Variants<a class="anchorjs-link" href="#variants" aria-labelledby="variants"></a></span></h3>
+<p>The selected date button (background color) defaults to the <code translate="no" class="notranslate text-nowrap">'primary'</code> theme variant. You can
+change this to any of the Bootstrap v4 theme variant colors: <code translate="no" class="notranslate text-nowrap">'secondary'</code>, <code translate="no" class="notranslate text-nowrap">'success'</code>, <code translate="no" class="notranslate text-nowrap">'danger'</code>, <code translate="no" class="notranslate text-nowrap">'warning'</code>, <code translate="no" class="notranslate text-nowrap">'info'</code>, etc, via the <code translate="no" class="notranslate text-nowrap">selected-variant</code> prop.</p>
+<p>Today's date will also be highlighted (text color) using the same variant as the selected date by
+default. To specify a different theme color to use for today's date, use the <code translate="no" class="notranslate text-nowrap">today-variant</code> prop.</p>
+<p>To disable highlighting of today's date altogether, set the <code translate="no" class="notranslate text-nowrap">no-highlight-today</code> prop.</p>
+<h3 id="control-sizing" class="bv-no-focus-ring"><span class="bd-content-title">Control sizing<a class="anchorjs-link" href="#control-sizing" aria-labelledby="control-sizing"></a></span></h3>
+<p>Fancy a smaller or larger <code translate="no" class="notranslate text-nowrap">&lt;b-form-datepicker&gt;</code> control? Set the <code translate="no" class="notranslate text-nowrap">size</code> prop to <code translate="no" class="notranslate text-nowrap">'sm'</code> for a smaller
+form control, or <code translate="no" class="notranslate text-nowrap">'lg'</code> for a larger form form control. Note this does not affect the size of the
+popup calendar dialog.</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-form-datepicker-sizes notranslate">
+<div>
+<label for="datepicker-sm">Small date picker</label>
+<div id="datepicker-sm__b-form-date_" role="group" aria-labelledby="datepicker-sm__value_" dir="ltr" class="b-form-datepicker form-control dropdown h-auto p-0 d-flex mb-2 form-control-sm" local="en">
+<button id="datepicker-sm" type="button" aria-haspopup="dialog" aria-expanded="false" class="btn border-0 h-auto py-0 btn-sm">
+<div aria-hidden="true">
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-calendar b-icon bi">
+<g transform="translate(10 10) scale(1.25 1.25) translate(-10 -10)">
+<path fill-rule="evenodd" d="M16 2H4a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V4a2 2 0 00-2-2zM3 5.857C3 5.384 3.448 5 4 5h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H4c-.552 0-1-.384-1-.857V5.857z" clip-rule="evenodd"></path>
+<path fill-rule="evenodd" d="M8.5 9a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm-9 3a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm-9 3a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path>
+</g>
+</svg>
+</div>
+</button>
+<!---->
+<div id="datepicker-sm__dialog_" role="dialog" aria-modal="false" aria-labelledby="datepicker-sm__value_" class="dropdown-menu p-2"><!----></div>
+<label id="datepicker-sm__value_" for="datepicker-sm" dir="ltr" class="form-control text-break text-wrap border-0 bg-transparent h-auto pl-1 m-0 text-muted form-control-sm" lang="zh-CN">No date selected<!----></label>
+</div>
+<label for="datepicker-lg">Large date picker</label>
+<div id="datepicker-lg__b-form-date_" role="group" aria-labelledby="datepicker-lg__value_" dir="ltr" class="b-form-datepicker form-control dropdown h-auto p-0 d-flex form-control-lg" local="en">
+<button id="datepicker-lg" type="button" aria-haspopup="dialog" aria-expanded="false" class="btn border-0 h-auto py-0 btn-lg">
+<div aria-hidden="true">
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-calendar b-icon bi">
+<g transform="translate(10 10) scale(1.25 1.25) translate(-10 -10)">
+<path fill-rule="evenodd" d="M16 2H4a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V4a2 2 0 00-2-2zM3 5.857C3 5.384 3.448 5 4 5h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H4c-.552 0-1-.384-1-.857V5.857z" clip-rule="evenodd"></path>
+<path fill-rule="evenodd" d="M8.5 9a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm-9 3a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm-9 3a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path>
+</g>
+</svg>
+</div>
+</button>
+<!---->
+<div id="datepicker-lg__dialog_" role="dialog" aria-modal="false" aria-labelledby="datepicker-lg__value_" class="dropdown-menu p-2"><!----></div>
+<label id="datepicker-lg__value_" for="datepicker-lg" dir="ltr" class="form-control text-break text-wrap border-0 bg-transparent h-auto pl-1 m-0 text-muted form-control-lg" lang="zh-CN">No date selected<!----></label>
+</div>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"datepicker-sm"</span>&gt;</span>Small date picker<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-datepicker</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"datepicker-sm"</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"sm"</span> <span class="hljs-attr">local</span>=<span class="hljs-string">"en"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-2"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-datepicker</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"datepicker-lg"</span>&gt;</span>Large date picker<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-datepicker</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"datepicker-lg"</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"lg"</span> <span class="hljs-attr">local</span>=<span class="hljs-string">"en"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-datepicker</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span></pre>
+<h3 id="placeholder" class="bv-no-focus-ring"><span class="bd-content-title">Placeholder<a class="anchorjs-link" href="#placeholder" aria-labelledby="placeholder"></a></span></h3>
+<p>Add custom placeholder text to the control, when no date is selected, via the <code translate="no" class="notranslate text-nowrap">placeholder</code> prop. If
+a placeholder is not provided, the value of the <code translate="no" class="notranslate text-nowrap">label-no-date-selected</code> prop is used.</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-form-datepicker-placeholder notranslate">
+<div>
+<label for="datepicker-placeholder">Date picker with placeholder</label>
+<div id="datepicker-placeholder__b-form-date_" role="group" aria-labelledby="datepicker-placeholder__value_" dir="ltr" class="b-form-datepicker form-control dropdown h-auto p-0 d-flex" local="en">
+<button id="datepicker-placeholder" type="button" aria-haspopup="dialog" aria-expanded="false" class="btn border-0 h-auto py-0">
+<div aria-hidden="true">
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-calendar b-icon bi">
+<g transform="translate(10 10) scale(1.25 1.25) translate(-10 -10)">
+<path fill-rule="evenodd" d="M16 2H4a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V4a2 2 0 00-2-2zM3 5.857C3 5.384 3.448 5 4 5h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H4c-.552 0-1-.384-1-.857V5.857z" clip-rule="evenodd"></path>
+<path fill-rule="evenodd" d="M8.5 9a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm-9 3a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm-9 3a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path>
+</g>
+</svg>
+</div>
+</button>
+<!---->
+<div id="datepicker-placeholder__dialog_" role="dialog" aria-modal="false" aria-labelledby="datepicker-placeholder__value_" class="dropdown-menu p-2"><!----></div>
+<label id="datepicker-placeholder__value_" for="datepicker-placeholder" dir="ltr" class="form-control text-break text-wrap border-0 bg-transparent h-auto pl-1 m-0 text-muted" lang="zh-CN">Choose a date<!----></label>
+</div>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"datepicker-placeholder"</span>&gt;</span>Date picker with placeholder<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-datepicker</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"datepicker-placeholder"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Choose a date"</span> <span class="hljs-attr">local</span>=<span class="hljs-string">"en"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-datepicker</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span></pre>
+<h3 id="optional-controls" class="bv-no-focus-ring"><span class="bd-content-title">Optional controls<a class="anchorjs-link" href="#optional-controls" aria-labelledby="optional-controls"></a></span></h3>
+<p>Add optional control buttons to the bottom of the calendar popup via the props <code translate="no" class="notranslate text-nowrap">today-button</code>, <code translate="no" class="notranslate text-nowrap">reset-button</code> and <code translate="no" class="notranslate text-nowrap">close-button</code>.</p>
+<ul>
+<li>The today button selects today's date</li>
+<li>The reset button either clears the selected date, or sets the date to the value of the prop <code translate="no" class="notranslate text-nowrap">reset-value</code> (if provided)</li>
+<li>The close button closes the calendar popup</li>
+</ul>
+<p>By default, clicking on the today or reset button will also close the calendar popup, unless the
+prop <code translate="no" class="notranslate text-nowrap">no-close-on-select</code> is set.</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-form-datepicker-buttons notranslate">
+<div>
+<label for="datepicker-buttons">Date picker with optional footer buttons</label>
+<div id="datepicker-buttons__b-form-date_" role="group" aria-labelledby="datepicker-buttons__value_" dir="ltr" class="b-form-datepicker form-control dropdown h-auto p-0 d-flex">
+<button id="datepicker-buttons" type="button" aria-haspopup="dialog" aria-expanded="false" class="btn border-0 h-auto py-0">
+<div aria-hidden="true">
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-calendar b-icon bi">
+<g transform="translate(10 10) scale(1.25 1.25) translate(-10 -10)">
+<path fill-rule="evenodd" d="M16 2H4a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V4a2 2 0 00-2-2zM3 5.857C3 5.384 3.448 5 4 5h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H4c-.552 0-1-.384-1-.857V5.857z" clip-rule="evenodd"></path>
+<path fill-rule="evenodd" d="M8.5 9a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm-9 3a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm-9 3a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path>
+</g>
+</svg>
+</div>
+</button>
+<!---->
+<div id="datepicker-buttons__dialog_" role="dialog" aria-modal="false" aria-labelledby="datepicker-buttons__value_" class="dropdown-menu p-2"><!----></div>
+<label id="datepicker-buttons__value_" for="datepicker-buttons" dir="ltr" class="form-control text-break text-wrap border-0 bg-transparent h-auto pl-1 m-0 text-muted" lang="en">No date selected<!----></label>
+</div>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"datepicker-buttons"</span>&gt;</span>Date picker with optional footer buttons<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-datepicker</span>
+      <span class="hljs-attr">id</span>=<span class="hljs-string">"datepicker-buttons"</span>
+      <span class="hljs-attr">today-button</span>
+      <span class="hljs-attr">reset-button</span>
+      <span class="hljs-attr">close-button</span>
+      <span class="hljs-attr">locale</span>=<span class="hljs-string">"en"</span>
+    &gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-datepicker</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span></pre>
+<p>The text for the optional buttons can be set via the <code translate="no" class="notranslate text-nowrap">label-today-button</code>, <code translate="no" class="notranslate text-nowrap">label-reset-button</code>, and
+the <code translate="no" class="notranslate text-nowrap">label-close-button</code> props. Due to the limited width of the footer section, it is recommended to
+keep these labels short.</p>
+<h3 id="dropdown-placement" class="bv-no-focus-ring"><span class="bd-content-title">Dropdown placement<a class="anchorjs-link" href="#dropdown-placement" aria-labelledby="dropdown-placement"></a></span></h3>
+<p>Use the dropdown props <code translate="no" class="notranslate text-nowrap">right</code>, <code translate="no" class="notranslate text-nowrap">dropup</code>, <code translate="no" class="notranslate text-nowrap">dropright</code>, <code translate="no" class="notranslate text-nowrap">dropleft</code>, <code translate="no" class="notranslate text-nowrap">no-flip</code>, and <code translate="no" class="notranslate text-nowrap">offset</code> to
+control the positioning of the popup calendar.</p>
+<p>Refer to the <a href="../../../bootstrap-vue/docs/components/dropdown" class="font-weight-bold"><code translate="no" class="notranslate text-nowrap">&lt;b-dropdown&gt;</code> documentation</a> for details on the effects
+and usage of these props.</p>
+<h3 id="dark-mode" class="bv-no-focus-ring"><span class="bd-content-title">Dark mode<a class="anchorjs-link" href="#dark-mode" aria-labelledby="dark-mode"></a></span></h3>
+<p>Want a fancy popup with a dark background instead of a light background? Set the <code translate="no" class="notranslate text-nowrap">dark</code> prop to <code translate="no" class="notranslate text-nowrap">true</code> to enable the dark background.</p>
+<h2 id="internationalization" class="bv-no-focus-ring"><span class="bd-content-title">Internationalization<a class="anchorjs-link" href="#internationalization" aria-labelledby="internationalization"></a></span></h2>
+<p>Internationalization of the date picker's calendar is provided via <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat" target="_blank" rel="noopener"><code translate="no" class="notranslate text-nowrap">Intl.DateTimeFormat</code></a>,
+except for labels applied to elements of the calendar control (aria-labels, selected status, and
+help text). You must provide your own translations for these labels. The available locales will be
+browser dependant (not all browsers support all locales)</p>
+<p>By default <code translate="no" class="notranslate text-nowrap">&lt;b-form-datepicker&gt;</code> will use the browser's default locale, but you can specify the
+locale (or locales) to use via the <code translate="no" class="notranslate text-nowrap">locale</code> prop. The prop accepts either a single locale string, or
+an array of locale strings (listed in order of preferred locale).</p>
+<p>The calendar starts the week on Sunday. This can be changed by setting the <code translate="no" class="notranslate text-nowrap">start-weekday</code> prop to a
+number in the range of <code translate="no" class="notranslate text-nowrap">0</code> to <code translate="no" class="notranslate text-nowrap">6</code> where <code translate="no" class="notranslate text-nowrap">0</code> represents Sunday, <code translate="no" class="notranslate text-nowrap">1</code> for Monday, up to <code translate="no" class="notranslate text-nowrap">6</code> for
+Saturday.</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-form-datepicker-i18n notranslate">
+<div>
+<label for="example-locales">Locale:</label>
+<select id="example-locales" class="mb-2 custom-select">
+<option value="en-US">English US (en-US)</option>
+<option value="de">German (de)</option>
+<option value="ar-EG">Arabic Egyptian (ar-EG)</option>
+<option value="zh">Chinese (zh)</option>
+</select>
+<label for="example-weekdays">Start weekday:</label>
+<select id="example-weekdays" class="mb-2 custom-select">
+<option value="0">Sunday</option>
+<option value="1">Monday</option>
+<option value="6">Saturday</option>
+</select>
+<label for="example-i18n-picker">Date picker:</label>
+<div id="example-i18n-picker__b-form-date_" role="group" aria-labelledby="example-i18n-picker__value_" dir="ltr" class="b-form-datepicker form-control dropdown h-auto p-0 d-flex mb-2">
+<button id="example-i18n-picker" type="button" aria-haspopup="dialog" aria-expanded="false" class="btn border-0 h-auto py-0">
+<div aria-hidden="true">
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-calendar b-icon bi">
+<g transform="translate(10 10) scale(1.25 1.25) translate(-10 -10)">
+<path fill-rule="evenodd" d="M16 2H4a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V4a2 2 0 00-2-2zM3 5.857C3 5.384 3.448 5 4 5h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H4c-.552 0-1-.384-1-.857V5.857z" clip-rule="evenodd"></path>
+<path fill-rule="evenodd" d="M8.5 9a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm-9 3a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm-9 3a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path>
+</g>
+</svg>
+</div>
+</button>
+<!---->
+<div id="example-i18n-picker__dialog_" role="dialog" aria-modal="false" aria-labelledby="example-i18n-picker__value_" class="dropdown-menu p-2"><!----></div>
+<label id="example-i18n-picker__value_" for="example-i18n-picker" dir="ltr" class="form-control text-break text-wrap border-0 bg-transparent h-auto pl-1 m-0 text-muted" lang="en-US">No date selected<!----></label>
+</div>
+<p>Value: <b>''</b></p>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"example-locales"</span>&gt;</span>Locale:<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-select</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"example-locales"</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">"locale"</span> <span class="hljs-attr">:options</span>=<span class="hljs-string">"locales"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-2"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-select</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"example-weekdays"</span>&gt;</span>Start weekday:<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-select</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"example-weekdays"</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">"weekday"</span> <span class="hljs-attr">:options</span>=<span class="hljs-string">"weekdays"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-2"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-select</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"example-i18n-picker"</span>&gt;</span>Date picker:<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-datepicker</span>
+      <span class="hljs-attr">id</span>=<span class="hljs-string">"example-i18n-picker"</span>
+      <span class="hljs-attr">v-model</span>=<span class="hljs-string">"value"</span>
+      <span class="hljs-attr">v-bind</span>=<span class="hljs-string">"labels[locale] || {}"</span>
+      <span class="hljs-attr">:locale</span>=<span class="hljs-string">"locale"</span>
+      <span class="hljs-attr">:start-weekday</span>=<span class="hljs-string">"weekday"</span>
+      <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-2"</span>
+     &gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-datepicker</span>&gt;</span>
+     <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Value: <span class="hljs-tag">&lt;<span class="hljs-name">b</span>&gt;</span>'{{ value }}'<span class="hljs-tag">&lt;/<span class="hljs-name">b</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    data() {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">value</span>: <span class="hljs-string">''</span>,
+        <span class="hljs-attr">locale</span>: <span class="hljs-string">'en-US'</span>,
+        <span class="hljs-attr">locales</span>: [
+          { <span class="hljs-attr">value</span>: <span class="hljs-string">'en-US'</span>, <span class="hljs-attr">text</span>: <span class="hljs-string">'English US (en-US)'</span> },
+          { <span class="hljs-attr">value</span>: <span class="hljs-string">'de'</span>, <span class="hljs-attr">text</span>: <span class="hljs-string">'German (de)'</span> },
+          { <span class="hljs-attr">value</span>: <span class="hljs-string">'ar-EG'</span>, <span class="hljs-attr">text</span>: <span class="hljs-string">'Arabic Egyptian (ar-EG)'</span> },
+          { <span class="hljs-attr">value</span>: <span class="hljs-string">'zh'</span>, <span class="hljs-attr">text</span>: <span class="hljs-string">'Chinese (zh)'</span> }
+        ],
+        <span class="hljs-attr">weekday</span>: <span class="hljs-number">0</span>,
+        <span class="hljs-attr">weekdays</span>: [
+          { <span class="hljs-attr">value</span>: <span class="hljs-number">0</span>, <span class="hljs-attr">text</span>: <span class="hljs-string">'Sunday'</span> },
+          { <span class="hljs-attr">value</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">text</span>: <span class="hljs-string">'Monday'</span> },
+          { <span class="hljs-attr">value</span>: <span class="hljs-number">6</span>, <span class="hljs-attr">text</span>: <span class="hljs-string">'Saturday'</span> }
+        ],
+        <span class="hljs-attr">labels</span>: {
+          <span class="hljs-attr">de</span>: {
+            <span class="hljs-attr">labelPrevYear</span>: <span class="hljs-string">'Vorheriges Jahr'</span>,
+            <span class="hljs-attr">labelPrevMonth</span>: <span class="hljs-string">'Vorheriger Monat'</span>,
+            <span class="hljs-attr">labelCurrentMonth</span>: <span class="hljs-string">'Aktueller Monat'</span>,
+            <span class="hljs-attr">labelNextMonth</span>: <span class="hljs-string">'Nächster Monat'</span>,
+            <span class="hljs-attr">labelNextYear</span>: <span class="hljs-string">'Nächstes Jahr'</span>,
+            <span class="hljs-attr">labelToday</span>: <span class="hljs-string">'Heute'</span>,
+            <span class="hljs-attr">labelSelected</span>: <span class="hljs-string">'Ausgewähltes Datum'</span>,
+            <span class="hljs-attr">labelNoDateSelected</span>: <span class="hljs-string">'Kein Datum gewählt'</span>,
+            <span class="hljs-attr">labelCalendar</span>: <span class="hljs-string">'Kalender'</span>,
+            <span class="hljs-attr">labelNav</span>: <span class="hljs-string">'Kalendernavigation'</span>,
+            <span class="hljs-attr">labelHelp</span>: <span class="hljs-string">'Mit den Pfeiltasten durch den Kalender navigieren'</span>
+          },
+          <span class="hljs-string">'ar-EG'</span>: {
+            <span class="hljs-attr">labelPrevYear</span>: <span class="hljs-string">'العام السابق'</span>,
+            <span class="hljs-attr">labelPrevMonth</span>: <span class="hljs-string">'الشهر السابق'</span>,
+            <span class="hljs-attr">labelCurrentMonth</span>: <span class="hljs-string">'الشهر الحالي'</span>,
+            <span class="hljs-attr">labelNextMonth</span>: <span class="hljs-string">'الشهر المقبل'</span>,
+            <span class="hljs-attr">labelNextYear</span>: <span class="hljs-string">'العام المقبل'</span>,
+            <span class="hljs-attr">labelToday</span>: <span class="hljs-string">'اليوم'</span>,
+            <span class="hljs-attr">labelSelected</span>: <span class="hljs-string">'التاريخ المحدد'</span>,
+            <span class="hljs-attr">labelNoDateSelected</span>: <span class="hljs-string">'لم يتم اختيار تاريخ'</span>,
+            <span class="hljs-attr">labelCalendar</span>: <span class="hljs-string">'التقويم'</span>,
+            <span class="hljs-attr">labelNav</span>: <span class="hljs-string">'الملاحة التقويم'</span>,
+            <span class="hljs-attr">labelHelp</span>: <span class="hljs-string">'استخدم مفاتيح المؤشر للتنقل في التواريخ'</span>
+          },
+          <span class="hljs-attr">zh</span>: {
+            <span class="hljs-attr">labelPrevYear</span>: <span class="hljs-string">'上一年'</span>,
+            <span class="hljs-attr">labelPrevMonth</span>: <span class="hljs-string">'上个月'</span>,
+            <span class="hljs-attr">labelCurrentMonth</span>: <span class="hljs-string">'当前月份'</span>,
+            <span class="hljs-attr">labelNextMonth</span>: <span class="hljs-string">'下个月'</span>,
+            <span class="hljs-attr">labelNextYear</span>: <span class="hljs-string">'明年'</span>,
+            <span class="hljs-attr">labelToday</span>: <span class="hljs-string">'今天'</span>,
+            <span class="hljs-attr">labelSelected</span>: <span class="hljs-string">'选定日期'</span>,
+            <span class="hljs-attr">labelNoDateSelected</span>: <span class="hljs-string">'未选择日期'</span>,
+            <span class="hljs-attr">labelCalendar</span>: <span class="hljs-string">'日历'</span>,
+            <span class="hljs-attr">labelNav</span>: <span class="hljs-string">'日历导航'</span>,
+            <span class="hljs-attr">labelHelp</span>: <span class="hljs-string">'使用光标键浏览日期'</span>
+          }
+        }
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+<p>You can listen to for the <code translate="no" class="notranslate text-nowrap">context</code> event to determine the locale and directionality that the
+calendar has resolved to.</p>
+<p>Refer to the <a href="../../../bootstrap-vue/docs/components/calendar#internationalization" class="font-weight-bold"><code translate="no" class="notranslate text-nowrap">&lt;b-calendar&gt;</code></a> documentation for
+additional details.</p>
+<h2 id="accessibility" class="bv-no-focus-ring"><span class="bd-content-title">Accessibility<a class="anchorjs-link" href="#accessibility" aria-labelledby="accessibility"></a></span></h2>
+<p>The popup calendar supports the same <a href="../../../bootstrap-vue/docs/components/calendar#accessibility" class="font-weight-bold">keyboard controls as <code translate="no" class="notranslate text-nowrap">&lt;b-calendar&gt;</code></a>, along with the
+following:</p>
+<ul>
+<li><kbd class="notranslate" translate="no">ESC</kbd> will close the popup calendar without selecting a date</li>
+</ul>
+<p>When internationalizing the datepicker, it is important to also update the <code translate="no" class="notranslate text-nowrap">label-*</code> props with
+appropriate translated strings, so that international screen reader users will hear the correct
+prompts and descriptions.</p>
+<p>Refer to the <a href="../../../bootstrap-vue/docs/components/calendar#accessibility" class="font-weight-bold"><code translate="no" class="notranslate text-nowrap">&lt;b-calendar&gt;</code></a> documentation for additional
+details.</p>
+<h2 id="implementation-notes" class="bv-no-focus-ring"><span class="bd-content-title">Implementation notes<a class="anchorjs-link" href="#implementation-notes" aria-labelledby="implementation-notes"></a></span></h2>
+<p><code translate="no" class="notranslate text-nowrap">&lt;b-form-datepicker&gt;</code> is based upon the components <a href="../../../bootstrap-vue/docs/components/calendar" class="font-weight-bold"><code translate="no" class="notranslate text-nowrap">&lt;b-calendar&gt;</code></a> and <a href="../../../bootstrap-vue/docs/components/dropdown" class="font-weight-bold"><code translate="no" class="notranslate text-nowrap">&lt;b-dropdown&gt;</code></a>.</p>
+<p><code translate="no" class="notranslate text-nowrap">&lt;b-form-datepicker&gt;</code> uses Bootstrap's margin, padding, border, and flex utility classes, along with
+button (<code translate="no" class="notranslate text-nowrap">btn-*</code>) classes, and the <code translate="no" class="notranslate text-nowrap">form-control*</code> (plus validation) classes.</p>
+<p>BootstrapVue's Custom SCSS/CSS is also required for proper styling of the date picker and calendar.</p>
+<h2 id="see-also" class="bv-no-focus-ring"><span class="bd-content-title">See also<a class="anchorjs-link" href="#see-also" aria-labelledby="see-also"></a></span></h2>
+<ul>
+<li><a href="../../../bootstrap-vue/docs/components/calendar" class="font-weight-bold"><code translate="no" class="notranslate text-nowrap">&lt;b-calendar&gt;</code> Calendar date selection widget</a></li>
+<li><a href="../../../bootstrap-vue/docs/components/dropdown" class="font-weight-bold"><code translate="no" class="notranslate text-nowrap">&lt;b-dropdown&gt;</code> Dropdown component</a></li>
+</ul>
+
+<h2 id="component-reference" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title">Component reference<a href="../../../bootstrap-vue/docs/components/form-datepicker#component-reference" class="anchorjs-link" aria-labelledby="component-reference" target="_self"></a></span></h2>
+
+<header data-v-866a22e8="" class="row align-items-center">
+<div data-v-866a22e8="" class="col-sm-9">
+<h3 data-v-866a22e8="" id="comp-ref-b-form-datepicker" tabindex="-1" class="bv-no-focus-ring"><span data-v-866a22e8="" class="bd-content-title"><code data-v-866a22e8="" translate="translate" class="notranslate bigger">&lt;b-form-datepicker&gt;</code><a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/form-datepicker#comp-ref-b-form-datepicker" class="anchorjs-link" aria-labelledby="comp-ref-b-form-datepicker" target="_self"></a></span></h3>
+<span data-v-866a22e8="" class="badge badge-success">v2.5.0+</span> <!----></div>
+<div data-v-866a22e8="" class="text-sm-right col-sm-3"><a data-v-866a22e8="" rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev/src/components/form-datepicker/form-datepicker.js" class="btn btn-outline-secondary btn-sm"> View source </a></div>
+</header>
+<ul data-v-866a22e8="" class="component-ref-mini-toc my-3">
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-form-datepicker-aliases"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-form-datepicker&gt;</code> Component aliases </a></li>
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-form-datepicker-props"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-form-datepicker&gt;</code> Properties </a></li>
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-form-datepicker-v-model"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-form-datepicker&gt;</code> v-model </a></li>
+<!---->
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-form-datepicker-events"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-form-datepicker&gt;</code> Events </a></li>
+<!---->
+</ul>
+<article data-v-866a22e8="" class="bd-content">
+<h4 data-v-866a22e8="" id="comp-ref-b-form-datepicker-aliases" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> Component aliases <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/form-datepicker#comp-ref-b-form-datepicker-aliases" class="anchorjs-link" aria-labelledby="comp-ref-b-form-datepicker-aliases" target="_self"></a></span></h4>
+<p data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-form-datepicker&gt;</code> can also be used via the following aliases:</p>
+<ul data-v-866a22e8="">
+<li data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-datepicker&gt;</code></li>
+</ul>
+<div data-v-866a22e8="" class="alert alert-info">
+<p data-v-866a22e8="" class="mb-0 small"> Note: component aliases are only available when importing all of BootstrapVue or using
+        the component group plugin. </p>
+</div>
+</article>
+<article data-v-866a22e8="" class="bd-content">
+<h4 data-v-866a22e8="" id="comp-ref-b-form-datepicker-props" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> Properties <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/form-datepicker#comp-ref-b-form-datepicker-props" class="anchorjs-link" aria-labelledby="comp-ref-b-form-datepicker-props" target="_self"></a></span></h4>
+<div data-v-866a22e8="" class="table-responsive-sm">
+<table role="table" aria-busy="false" aria-colcount="4" class="table b-table bv-docs-table table-striped" id="__BVID__3443">
+<!----><!---->
+<thead role="rowgroup" class="">
+<!---->
+<tr role="row" class="">
+<th role="columnheader" scope="col" tabindex="0" aria-colindex="1" aria-sort="none" class="b-table-sort-icon-left">Property<span class="sr-only"> (Click to sort Ascending)</span></th>
+<th role="columnheader" scope="col" tabindex="0" aria-colindex="2" class="">Type</th>
+<th role="columnheader" scope="col" tabindex="0" aria-colindex="3" class="">Default</th>
+<th role="columnheader" scope="col" tabindex="0" aria-colindex="4" class="">Description</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+<!---->
+<tr role="row" data-pk="id" class="" id="__BVID__3443__row_id">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">id</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">Used to set the 'id' attribute on the rendered content, and used as the base to generate any additional element IDs as needed</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="value" class="" id="__BVID__3443__row_value">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">value</code> <!----> <!----> <span data-v-866a22e8="" class="badge badge-primary">v-model</span> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">String or Date</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">Initially selected date value. Accepts either a `YYYY-MM-DD` string or a `Date` object</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="value-as-date" class="" id="__BVID__3443__row_value-as-date">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">value-as-date</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">Returns a `Date` object for the v-model instead of a `YYYY-MM-DD` string</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="reset-value" class="" id="__BVID__3443__row_reset-value">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">reset-value</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">String or Date</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">When the optional `reset` button is clicked, the selected date will be set to this value. Default is to clear the selected value</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="placeholder" class="" id="__BVID__3443__row_placeholder">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">placeholder</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">Text so show in the form control when no date is selected. Defaults to the `label-no-date-selected` prop value</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="size" class="" id="__BVID__3443__row_size">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">size</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">Set the size of the component's appearance. 'sm', 'md' (default), or 'lg'</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="min" class="" id="__BVID__3443__row_min">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">min</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">String or Date</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">The minimum date the calendar will show</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="max" class="" id="__BVID__3443__row_max">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">max</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">String or Date</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">The maximum date the calendar will show</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="disabled" class="" id="__BVID__3443__row_disabled">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">disabled</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">Places the calendar in a non-interactive disabled state</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="readonly" class="" id="__BVID__3443__row_readonly">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">readonly</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">Places the calendar in an interactive readonly state. Disables updating the v-model, while still allowing date navigation</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="required" class="" id="__BVID__3443__row_required">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">required</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">When set, adds the `aria-required="true"` attribute on the component. Required validation needs to be handled by your application</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="name" class="" id="__BVID__3443__row_name">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">name</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">Sets the value of the 'name' attribute on the form control</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="form" class="" id="__BVID__3443__row_form">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">form</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">ID of the form that the form control belongs to. Sets the 'form' attribute on the control</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="state" class="" id="__BVID__3443__row_state">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">state</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">Controls the validation state appearance of the component. 'true' for valid, 'false' for invalid', or 'null' for no validation state</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="date-disabled-fn" class="" id="__BVID__3443__row_date-disabled-fn">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">date-disabled-fn</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">Function</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">Set to a function reference which returns `true` if the date is disabled, or `false` if the date should be enabled. See documentation for details</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="no-close-on-select" class="" id="__BVID__3443__row_no-close-on-select">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">no-close-on-select</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">Disables closing the popup date picker when a date is clicked/selected</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="hide-header" class="" id="__BVID__3443__row_hide-header">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">hide-header</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">When set, visually hides the selected date header</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="locale" class="" id="__BVID__3443__row_locale">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">locale</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">String or Array</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">Locale (or locales) for the calendar to use. When passing an array of locales, the order of the locales is from most preferred to least preferred</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="start-weekday" class="" id="__BVID__3443__row_start-weekday">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">start-weekday</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">Number or String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">0</code></td>
+<td aria-colindex="4" role="cell" class="">Day of week to start the calendar. `0` for Sunday, `1` for Monday, `6` for Saturday, etc.</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="direction" class="" id="__BVID__3443__row_direction">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">direction</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">Set to the string 'rtl' or 'ltr' to explicitly force the calendar to render in right-to-left or left-ro-right (respectively) mode. Defaults to the resolved locale's directionality</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="selected-variant" class="" id="__BVID__3443__row_selected-variant">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">selected-variant</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'primary'</code></td>
+<td aria-colindex="4" role="cell" class="">Theme color variant to use for the selected date button</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="today-variant" class="" id="__BVID__3443__row_today-variant">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">today-variant</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">Theme color variant to use for highlighting todays date button. Defaults to the `variant` prop</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="no-highlight-today" class="" id="__BVID__3443__row_no-highlight-today">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">no-highlight-today</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">Disabled the highlighting of todays date in the calendar</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="today-button" class="" id="__BVID__3443__row_today-button">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">today-button</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">When set, shows the optional `select today` button</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="label-today-button" class="" id="__BVID__3443__row_label-today-button">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">label-today-button</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'Select today'</code></td>
+<td aria-colindex="4" role="cell" class="">Content for the optional `Select today` button</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="today-button-variant" class="" id="__BVID__3443__row_today-button-variant">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">today-button-variant</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'outline-primary'</code></td>
+<td aria-colindex="4" role="cell" class="">Button variant to use for the optional `select today` button</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="reset-button" class="" id="__BVID__3443__row_reset-button">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">reset-button</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">When set, shows the optional `reset` button</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="label-reset-button" class="" id="__BVID__3443__row_label-reset-button">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">label-reset-button</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'Reset'</code></td>
+<td aria-colindex="4" role="cell" class="">Content for the optional `Reset` button</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="reset-button-variant" class="" id="__BVID__3443__row_reset-button-variant">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">reset-button-variant</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'outline-danger'</code></td>
+<td aria-colindex="4" role="cell" class="">Button variant to use for the optional `reset` button</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="close-button" class="" id="__BVID__3443__row_close-button">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">close-button</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">When set, shows the optional close button</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="label-close-button" class="" id="__BVID__3443__row_label-close-button">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">label-close-button</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'Close'</code></td>
+<td aria-colindex="4" role="cell" class="">Content for the optional `Close` button</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="close-button-variant" class="" id="__BVID__3443__row_close-button-variant">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">close-button-variant</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'outline-secondary'</code></td>
+<td aria-colindex="4" role="cell" class="">Button variant to use for the optional `close` button</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="label-prev-year" class="" id="__BVID__3443__row_label-prev-year">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">label-prev-year</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'Previous year'</code></td>
+<td aria-colindex="4" role="cell" class="">Value of the `aria-label` and `title` attributes on the `Previous Year` navigation button</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="label-prev-month" class="" id="__BVID__3443__row_label-prev-month">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">label-prev-month</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'Previous month'</code></td>
+<td aria-colindex="4" role="cell" class="">Value of the `aria-label` and `title` attributes on the `Previous Month` navigation button</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="label-current-month" class="" id="__BVID__3443__row_label-current-month">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">label-current-month</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'Current month'</code></td>
+<td aria-colindex="4" role="cell" class="">Value of the `aria-label` and `title` attributes on the `Current Month` navigation button</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="label-next-month" class="" id="__BVID__3443__row_label-next-month">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">label-next-month</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'Next month'</code></td>
+<td aria-colindex="4" role="cell" class="">Value of the `aria-label` and `title` attributes on the `Next Month` navigation button</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="label-next-year" class="" id="__BVID__3443__row_label-next-year">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">label-next-year</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'Next year'</code></td>
+<td aria-colindex="4" role="cell" class="">Value of the `aria-label` and `title` attributes on the `Next Year` navigation button</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="label-today" class="" id="__BVID__3443__row_label-today">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">label-today</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'Today'</code></td>
+<td aria-colindex="4" role="cell" class="">Value of the `aria-label` attribute for the calendar grid date button to signify that the date is today's date</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="label-selected" class="" id="__BVID__3443__row_label-selected">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">label-selected</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'Selected date'</code></td>
+<td aria-colindex="4" role="cell" class="">Value of the `aria-label` attribute set on the calendar grid date button that is selected</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="label-no-date-selected" class="" id="__BVID__3443__row_label-no-date-selected">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">label-no-date-selected</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'No date selected'</code></td>
+<td aria-colindex="4" role="cell" class="">Label to use when no date is currently selected</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="label-calendar" class="" id="__BVID__3443__row_label-calendar">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">label-calendar</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'Calendar'</code></td>
+<td aria-colindex="4" role="cell" class="">Value of the `aria-label` and `role-description` attributes applied to the calendar grid</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="label-nav" class="" id="__BVID__3443__row_label-nav">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">label-nav</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'Calendar navigation'</code></td>
+<td aria-colindex="4" role="cell" class="">Value of the `aria-label` attribute on to the calendar navigation button wrapper</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="label-help" class="" id="__BVID__3443__row_label-help">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">label-help</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'Use cursor keys to navigate calendar dates'</code></td>
+<td aria-colindex="4" role="cell" class="">help text that appears at the bottom of the calendar grid</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="dark" class="" id="__BVID__3443__row_dark">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">dark</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">When set, gives the popup calendar dialog a dark background</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="dropup" class="" id="__BVID__3443__row_dropup">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">dropup</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">When set, positions the menu on the top of the button</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="dropright" class="" id="__BVID__3443__row_dropright">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">dropright</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">When set, positions the menu to the right of the button</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="dropleft" class="" id="__BVID__3443__row_dropleft">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">dropleft</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">When set, positions the menu to the left of the button</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="right" class="" id="__BVID__3443__row_right">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">right</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">Align the right edge of the menu with the right of the button</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="offset" class="" id="__BVID__3443__row_offset">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">offset</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">Number or String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">0</code></td>
+<td aria-colindex="4" role="cell" class="">Specify the number of pixels to shift the menu by. Negative values supported</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="no-flip" class="" id="__BVID__3443__row_no-flip">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">no-flip</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">Prevent the menu from auto flipping positions</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="popper-opts" class="" id="__BVID__3443__row_popper-opts">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">popper-opts</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">Any</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">Additional configuration to pass to Popper.js</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="boundary" class="" id="__BVID__3443__row_boundary">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">boundary</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">String or HTMLElement</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'scrollParent'</code></td>
+<td aria-colindex="4" role="cell" class="">The boundary constraint of the menu: `'scrollParent'`, `'window'`, `'viewport'`, or a reference to an `HTMLElement`</td>
+</tr>
+<!----><!----><!----><!---->
+</tbody>
+<!---->
+</table>
+</div>
+<!----> <!----></article>
+<article data-v-866a22e8="" class="bd-content">
+<h4 data-v-866a22e8="" id="comp-ref-b-form-datepicker-v-model" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> v-model <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/form-datepicker#comp-ref-b-form-datepicker-v-model" class="anchorjs-link" aria-labelledby="comp-ref-b-form-datepicker-v-model" target="_self"></a></span></h4>
+<div data-v-866a22e8="" class="table-responsive-sm">
+<table role="table" aria-busy="false" aria-colcount="2" class="table b-table bv-docs-table table-striped" id="__BVID__3505">
+<!----><!---->
+<thead role="rowgroup" class="">
+<!---->
+<tr role="row" class="">
+<th role="columnheader" scope="col" aria-colindex="1" class="">Property</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">Event</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+<!---->
+<tr role="row" class="">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="notranslate">value</code></td>
+<td aria-colindex="2" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="notranslate">input</code></td>
+</tr>
+<!----><!---->
+</tbody>
+<!---->
+</table>
+</div>
+</article>
+<!---->
+<article data-v-866a22e8="" class="bd-content">
+<h4 data-v-866a22e8="" id="comp-ref-b-form-datepicker-events" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> Events <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/form-datepicker#comp-ref-b-form-datepicker-events" class="anchorjs-link" aria-labelledby="comp-ref-b-form-datepicker-events" target="_self"></a></span></h4>
+<div data-v-866a22e8="" class="table-responsive-sm">
+<table role="table" aria-busy="false" aria-colcount="3" class="table b-table bv-docs-table table-striped" id="__BVID__3514">
+<!----><!---->
+<thead role="rowgroup" class="">
+<!---->
+<tr role="row" class="">
+<th role="columnheader" scope="col" aria-colindex="1" class="">Event</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">Arguments</th>
+<th role="columnheader" scope="col" aria-colindex="3" class="">Description</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+<!---->
+<tr role="row" data-pk="input" class="" id="__BVID__3514__row_input">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="notranslate">input</code> <!----></td>
+<td aria-colindex="2" role="cell" class=""><ol data-v-866a22e8="" class="list-unstyled mb-0">
+<li data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">date</code> - <span data-v-866a22e8="">Either a string in the format of `YYYY-MM-DD` or a `Date` object (if `value-as-date` prop is `true`)</span></li>
+</ol></td>
+<td aria-colindex="3" role="cell" class="">Emitted when updating the v-model</td>
+</tr>
+<tr role="row" data-pk="context" class="" id="__BVID__3514__row_context">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="notranslate">context</code> <!----></td>
+<td aria-colindex="2" role="cell" class=""><ol data-v-866a22e8="" class="list-unstyled mb-0">
+<li data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">context</code> - <span data-v-866a22e8="">The `b-calendar` context object. See the `b-calendar` documentaion for details</span></li>
+</ol></td>
+<td aria-colindex="3" role="cell" class="">`b-calendar` context event. Emitted when the user changes the active date via date navigation buttons or cursor control</td>
+</tr>
+<!----><!---->
+</tbody>
+<!---->
+</table>
+</div>
+</article>
+
+<article class="bd-content">
+<h3 id="importing-individual-components" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title"> Importing individual components <a href="../../../bootstrap-vue/docs/components/form-datepicker#importing-individual-components" class="anchorjs-link" aria-labelledby="importing-individual-components" target="_self"></a></span></h3>
+<p> You can import individual components into your project via the following named
+        exports: </p>
+<div class="table-responsive-sm">
+<table role="table" aria-busy="false" aria-colcount="3" class="table b-table bv-docs-table table-striped" id="__BVID__3526">
+<!----><!---->
+<thead role="rowgroup" class="thead-default">
+<!---->
+<tr role="row" class="">
+<th role="columnheader" scope="col" aria-colindex="1" class="">Component</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">Named Export</th>
+<th role="columnheader" scope="col" aria-colindex="3" class="">Import Path</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+<!---->
+<tr role="row" class="">
+<td aria-colindex="1" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">&lt;b-form-datepicker&gt;</code></td>
+<td aria-colindex="2" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">BFormDatepicker</code></td>
+<td aria-colindex="3" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">bootstrap-vue</code></td>
+</tr>
+<!----><!---->
+</tbody>
+<!---->
+</table>
+</div>
+<p><strong>Example:</strong></p>
+<pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { BFormDatepicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
+Vue.component(<span class="hljs-string">'b-form-datepicker'</span>, BFormDatepicker)</pre>
+</article>
+<!---->
+<article class="bd-content">
+<h3 id="importing-as-a-plugin" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title"> Importing as a Vue.js plugin <a href="../../../bootstrap-vue/docs/components/form-datepicker#importing-as-a-plugin" class="anchorjs-link" aria-labelledby="importing-as-a-plugin" target="_self"></a></span></h3>
+<p> This plugin includes all of the above listed individual
+      components<!---->.
+      Plugins also include any component aliases. </p>
+<div class="table-responsive-sm">
+<table fileds="namedExport,importPath" role="table" aria-busy="false" aria-colcount="2" class="table b-table bv-docs-table table-striped b-table-caption-top" id="__BVID__3536">
+<!----><!---->
+<thead role="rowgroup" class="thead-default">
+<!---->
+<tr role="row" class="">
+<th role="columnheader" scope="col" aria-colindex="1" class="">Named Export</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">Import Path</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+<!---->
+<tr role="row" class="">
+<td aria-colindex="1" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">FormDatepickerPlugin</code></td>
+<td aria-colindex="2" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">bootstrap-vue</code></td>
+</tr>
+<!----><!---->
+</tbody>
+<!---->
+</table>
+</div>
+<!---->
+<p><strong>Example:</strong></p>
+<pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { FormDatepickerPlugin } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
+Vue.use(FormDatepickerPlugin)</pre>
+</article>
+
+
+
+
+
+
+
+
+
+</main>
+</div>
+</div>
+
+
+<script src="../../../js/jquery-3.2.1.slim.min.js"></script> 
+<script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery-slim.min.js"><\/script>')</script> 
+<script src="../../../v4/dist/js/popper.min.js"></script> 
+<script src="../../../v4/dist/js/bootstrap.min.js"></script> 
+<script src="../../../v4/assets/js/docs.min.js"></script> 
+<script src="../../../v4/assets/js/ie-emulation-modes-warning.js"></script> 
+<script src="../../../v4/assets/js/docsearch.min.js"></script> 
+<script>
+  docsearch({
+    appId: 'PRR89ISST8',
+    apiKey: '95044d57d4d7bb744f322d1f18ed607f',
+    indexName: 'z01-bootstrapV4',
+    inputSelector: '#search-input',
+    handleSelected: function (input, event, suggestion) {
+      var url = suggestion.url;
+      url = suggestion.isLvl1 ? url.split('#')[0]: url;
+      // If it's a title we remove the anchor so it does not jump.
+      window.location.href = url;
+    },
+    transformData: function (hits) {
+      return hits.map(function (hit) {
+        hit.url = hit.url.replace('https://v4-alpha.getbootstrap.com', '/docs/4.0');
+        return hit;
+      });
+    },
+    debug: false // Set debug to true if you want to inspect the dropdown
+  });
+</script> 
+<script>
+  Holder.addTheme('gray', {
+    bg: '#777',
+    fg: 'rgba(255,255,255,.75)',
+    font: 'Helvetica',
+    fontweight: 'normal'
+  });
+</script>
+</body>
+</html>

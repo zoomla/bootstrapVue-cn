@@ -1,0 +1,815 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Jekyll v3.6.0">
+<title>折叠面板 &middot; BootstrapVue</title>
+<!-- Bootstrap 核心CSS -->
+<link href="../../../v4/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- 本文档额外专用css -->
+<link href="../../../v4/assets/css/docsearch.min.css" rel="stylesheet">
+<link href="../../../v4/assets/css/docs.min.css" rel="stylesheet">
+<link href="../../style/bv_path.css" rel="stylesheet">
+
+<!-- Favicons图标定义 -->
+<link data-n-head="ssr" rel="manifest" href="../../manifest.json">
+<link data-n-head="ssr" rel="shortcut icon" href="../../style/icons/icon_64.png">
+<link data-n-head="ssr" rel="apple-touch-icon" href="../../style/icons/icon_512.png" sizes="512x512">
+
+<!-- Meta关键字定义 -->
+<meta name="description" content="The most popular HTML, CSS, and JS library in the world.">
+<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+
+</head>
+<body>
+<a id="skippy" class="sr-only sr-only-focusable" href="#content">
+<div class="container"> <span class="skiplink-text">跳到主体内容</span> </div>
+</a>
+<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar"> <a class="navbar-brand mr-0 mr-md-2" href="../" aria-label="Bootstrap">
+  <svg class="d-block" width="36" height="36" viewbox="0 0 612 612" xmlns="http://www.w3.org/2000/svg" focusable="false">
+    <title>Bootstrap</title>
+    <path fill="currentColor" d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z"/>
+    <path fill="currentColor" d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z"/>
+  </svg>
+  </a>
+  <div class="navbar-nav-scroll">
+    <ul class="navbar-nav bd-navbar-nav flex-row">
+      <li class="nav-item"><a class="nav-link " href="../">首页</a></li>
+      <li class="nav-item"><a class="nav-link active" href="../../v4/docs/">中文手册</a></li>
+      <li class="nav-item"><a class="nav-link " href="../../v4/examples/">实例</a></li>
+      <li class="nav-item dropdown">
+<a class="nav-item nav-link dropdown-toggle mr-md-2" id="bd-versions" aria-expanded="false" aria-haspopup="true" href="#" data-toggle="dropdown"> 主题模板 </a>
+<div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
+<a class="dropdown-item" href="../../V4/themes/" target="_blank">主题门户</a>
+<a class="dropdown-item" href="../../V4/themes/live.html">精选模板</a>
+</div>
+</li>
+      <li class="nav-item"><a class="nav-link" href="//ico.z01.com" target="_blank" rel="noopener">zico图标系统</a></li>
+      <li class="nav-item"><a class="nav-link" href="https://expo.getbootstrap.com" target="_blank" rel="noopener">优站精选</a></li>
+      <li class="nav-item"><a class="nav-link" href="https://blog.getbootstrap.com" target="_blank" rel="noopener">Blog</a></li>
+    </ul>
+  </div>
+  <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="alse"> v2.6.1 </a>
+      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions"> 
+        <a class="dropdown-item active" href="../../../bootstrap-vue/docs/4.0/">Latest (4.3.x)</a>
+        <a class="dropdown-item" href="/Boot/">v3.3.7</a>
+        <a class="dropdown-item" href="/Sass/">Sass语言</a>
+        <a class="dropdown-item" href="/Emmet/">Emmet语法</a>
+        <a class="dropdown-item" href="//www.z01.com/tool/" target="_blank">IIS站长工具</a>
+        <a class="dropdown-item" href="//ad.z01.com/" target="_blank">广告源码</a>
+        <a class="dropdown-item" href="//v.z01.com/mb/" target="_blank">免费模板</a>
+        <a class="dropdown-item" href="//v.z01.com/" target="_blank">H5移动创作</a>
+        <a class="dropdown-item" href="//www.z01.com/help/web/3234.shtml" target="_blank">Flexbox布局</a>
+		<a class="dropdown-item" href="/boot/font.html" target="_blank">Font Awesome</a>
+</div>
+    </li>
+    <li class="nav-item"> <a class="nav-link p-2" href="//zoomla.github.io/bootstrap4-zhcn-documentation" target="_blank" rel="noopener" aria-label="GitHub">
+      <svg class="navbar-nav-svg" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 499.36" focusable="false">
+        <title>GitHub</title>
+        <path d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z" fill="currentColor" fill-rule="evenodd"/>
+      </svg>
+      </a> </li>
+    <li class="nav-item"> <a class="nav-link p-2" href="http://www.z01.com/blog/ren/3214.shtml" target="_blank" rel="noopener" aria-label="Slack">译者说</a></li>
+  </ul>
+  <a class="btn btn-bd-yellow d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="download.html">下载 Bootstrap</a> </header>
+
+<div class="container-fluid">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+      <form class="bd-search d-flex align-items-center">
+        <input type="search" class="form-control" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
+        <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30" focusable="false">
+          <title>Menu</title>
+          <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/>
+        </svg>
+        </button>
+      </form>
+
+
+<nav class="collapse bd-links" id="bd-docs-nav">
+<div class=""><a href="../" class="bd-toc-link">首页</a></div>
+<div class="bd-toc-item nuxt-link-exact-active "><a href="../../../bootstrap-vue/docs/" class="bd-toc-link  "> 起步 </a>
+<ul class="nav bd-sidenav">
+</ul>
+</div>
+<div class="bd-toc-item active"><a href="../../../bootstrap-vue/docs/components/" class="bd-toc-link nuxt-link-exact-active"> 组件 </a>
+<ul class="nav bd-sidenav">
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/index.html" class="nav-link"> 组件目录 </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/alert.html" class="nav-link"> 警告提示框(Alert) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/badge.html" class="nav-link"> 徽章(Badge) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/badge.html" class="nav-link"> 面包屑导航(Breadcrumb) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/button.html" class="nav-link"> 按钮(Button) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/button-group.html" class="nav-link"> 按钮组(Button Group) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/button-toolbar.html" class="nav-link"> 按钮Toolbar(Button Toolbar) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/calendar.html" class="nav-link"> 日历组件(Calendar) <small class="badge text-uppercase badge-success">New</small> </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/card.html" class="nav-link"> 卡片(Card) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/carousel.html" class="nav-link"> 轮播效果(Carousel) </a></li>
+<li class="nav-item active"><a href="../../../bootstrap-vue/docs/components/collapse.html" class="nav-link"> 折叠面板(Collapse) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/dropdown.html" class="nav-link"> 下拉菜单(Dropdown) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/embed.html" class="nav-link"> 嵌入(Embed) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form.html" class="nav-link"> 表单(Form) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-checkbox.html" class="nav-link"> 表单复选框(Form Checkbox) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-datepicker.html" class="nav-link"> 表单时间选择器(Form Datepicker) <small class="badge text-uppercase badge-success">New</small> </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-file.html" class="nav-link"> 文件选择(Form File) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-group.html" class="nav-link"> 表单组合(Form Group) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-input.html" class="nav-link"> 表单输入框(Form Input) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-radio.html" class="nav-link"> 单选择表单Form Radio </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-select.html" class="nav-link"> 下拉式表单(Form Select) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-spinbutton.html" class="nav-link"> 按钮式表单(Form Spinbuttno) <small class="badge text-uppercase badge-success">New</small> </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-tags.html" class="nav-link"> Tags表单选择器(Form Tags) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-textarea.html" class="nav-link"> 文本框(Form Textarea) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-timepicker.html" class="nav-link"> 表单内时间控件(Form Timepicker) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/image.html" class="nav-link"> 图片(Image) </a></li>
+
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/input-group.html" class="nav-link"> 输入框(Input Group) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/jumbotron.html" class="nav-link"> Hero大块屏(Jumbotron) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/layout.html" class="nav-link"> 布局与网络Layout and Grid System </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/link.html" class="nav-link"> 链接(Link)</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/list-group.html" class="nav-link"> 列表组(List group) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/media.html" class="nav-link"> 媒体(Media) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/modal.html" class="nav-link"> 弹出模态框(Modal) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/nav.html" class="nav-link"> 导航(Nav) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/navbar.html" class="nav-link"> 导航栏(Navbar) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/pagination.html" class="nav-link"> 分页(Pagination) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/pagination-nav.html" class="nav-link"> 分页导航(Pagination Nav) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/popover.html" class="nav-link"> 指示备注(Popover) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/progress.html" class="nav-link"> 进度指示器(Progress) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/spinner.html" class="nav-link"> 旋转指示器(Spinner) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/table.html" class="nav-link"> 表格(Table) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/tabs.html" class="nav-link"> 选项卡(Tabs) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/time.html" class="nav-link"> 时间组件(Time) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/toast.html" class="nav-link"> 冒泡推送(Toasts) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/tooltip.html" class="nav-link"> tip提示组件(Tooltip) </a></li>
+</ul>
+</div>
+<div class="bd-toc-item"><a href="../../../bootstrap-vue/docs/directives/" class="bd-toc-link"> 指令 </a>
+<ul class="nav bd-sidenav">
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/directives/index.html" class="nav-link"> 指令目录 </a></li>
+<li class="nav-item active"><a href="../../../bootstrap-vue/docs/directives/hover.html" class="nav-link"> Hover 指令<small class="badge text-uppercase badge-success">New</small> </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/directives/popover.html" class="nav-link"> Popover 提示备注</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/directives/scrollspy.html" class="nav-link"> Scrollspy 滚动监听</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/directives/tooltip.html" class="nav-link"> Tooltip 提示指令</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/directives/visible.html" class="nav-link"> Visible 可见性操作<small class="badge text-uppercase badge-success">New</small> </a></li>
+</ul>
+</div>
+<div class="bd-toc-item"><a href="../../../bootstrap-vue/docs/icons.html" class="bd-toc-link"> Icons图标</a>
+<ul class="nav bd-sidenav">
+</ul>
+</div>
+  
+<div class="bd-toc-item"><a class="bd-toc-link" href="../../../bootstrap-vue/docs/reference">参考</a>
+<ul class="nav bd-sidenav">
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference" class="nav-link.html"> 参考目录 </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/accessibility.html" class="nav-link">友好访问</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/color-variants.html" class="nav-link">Color颜色变量 </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/images.html" class="nav-link"> 组件图像img的src路径解析</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/router-links.html" class="nav-link"> Router路由支持 </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/size-props.html" class="nav-link">大小规格</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/spacing-classes.html" class="nav-link">间距处理</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/starter-templates.html" class="nav-link">开始模板</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/theming.html" class="nav-link">主题色彩</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/utility-classes.html" class="nav-link">通用Class类</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/validation.html" class="nav-link">Form表单验证</a></li>
+</ul>
+</div>
+<div class="bd-toc-item"> <a class="bd-toc-link" href="../components/alerts.html"> 杂项 </a>
+  <ul class="nav bd-sidenav">
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/misc/changelog" class="nav-link"> Changelog </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/misc/contributing" class="nav-link"> Contributing </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/misc/settings" class="nav-link"> Settings </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/misc/third-party" class="nav-link"> Third party libraries </a></li>
+  </ul>
+</div>
+<div class=""><a href="/play" class="bd-toc-link">在线模拟器</a></div>
+</nav>
+</div>
+
+<div class="d-none d-xl-block col-xl-2 bd-toc">
+
+<ul class="section-nav">
+<li class="nav-item toc-entry mb-2"><a target="_self" href="#collapse" class="nav-link font-weight-bold"><span>Collapse</span></a></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#usage" class="nav-link"><span>Usage</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#initial-visibility-start-expanded" class="nav-link"><span>Initial visibility (start expanded)</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#v-model-support" class="nav-link"><span>v-model support</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#trigger-multiple-collapse-elements" class="nav-link"><span>Trigger multiple collapse elements</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#accordion-support" class="nav-link"><span>Accordion support</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#hiding-and-showing-content-in-the-toggle-button-based-on-collapse-state" class="nav-link"><span>Hiding and showing content in the toggle button based on collapse state</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#global-root-instance-events" class="nav-link"><span>'Global' $root instance events</span></a>
+<ul class="nav flex-column">
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#listening-to-collapses-state-changes-via-root-events" class="nav-link"><span>Listening to collapses state changes via $root events</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#toggling-collapses-via-root-events" class="nav-link"><span>Toggling collapses via $root events</span></a></li>
+</ul>
+</li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#optionally-scoped-default-slot" class="nav-link"><span>Optionally scoped default slot</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#accessibility" class="nav-link"><span>Accessibility</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#component-reference" class="nav-link"><span>Component reference</span></a>
+<ul class="nav flex-column">
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#comp-ref-b-collapse" class="nav-link"><span>&lt;b-collapse&gt;</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#importing-individual-components" class="nav-link"><span>Importing individual components</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#importing-individual-directives" class="nav-link"><span>Importing individual directives</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#importing-as-a-plugin" class="nav-link"><span>Importing as a Vue.js plugin</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+
+<nav data-v-aafc4aea="" aria-label="Breadcrumbs" class="float-left mt-2 mb-0 mb-lg-2">
+<ol data-v-aafc4aea="" class="breadcrumb d-inline-flex bg-transparent px-2 py-1 my-0">
+<li data-v-aafc4aea="" class="breadcrumb-item"><a data-v-aafc4aea="" href="../../" class="nuxt-link-active" target="_self">首页</a></li>
+<li data-v-aafc4aea="" class="breadcrumb-item"><a data-v-aafc4aea="" href="../../../bootstrap-vue/docs" class="nuxt-link-active" target="_self">中文手册</a></li>
+<li data-v-aafc4aea="" class="breadcrumb-item"><a data-v-aafc4aea="" href="../../../bootstrap-vue/docs/components/" class="nuxt-link-active" target="_self">组件</a></li>
+<li data-v-aafc4aea="" class="breadcrumb-item active"><span data-v-aafc4aea="" aria-current="location">折叠面板</span></li>
+</ol>
+</nav>
+<div class="clearfix d-block"></div>
+  <h1 class="bd-title" id="content">折叠面板(Collapse)</h1>
+  <p class="bd-lead">Easily toggle visibility of almost any content on your pages. Includes support for making accordions.</p>
+  <script type="text/javascript" src="../../../v4/assets/js/pupCMS.js"></script>
+
+
+
+<pre class="hljs html text-monospace p-2 notranslate" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>></span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">v-b-toggle.collapse-1</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"primary"</span>></span>Toggle Collapse<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>></span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-collapse</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"collapse-1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mt-2"</span>></span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-card</span>></span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-text"</span>></span>Collapse contents Here<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>></span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">v-b-toggle.collapse-1-inner</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"sm"</span>></span>Toggle Inner Collapse<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>></span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-collapse</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"collapse-1-inner"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mt-2"</span>></span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">b-card</span>></span>Hello!<span class="hljs-tag">&lt;/<span class="hljs-name">b-card</span>></span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">b-collapse</span>></span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-card</span>></span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-collapse</span>></span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>></span>
+
+<span class="hljs-comment">&lt;!-- b-collapse.vue --></span></pre>
+<h2 id="usage" class="bv-no-focus-ring"><span class="bd-content-title">Usage<a class="anchorjs-link" href="#usage" aria-labelledby="usage"></a></span></h2>
+<p>Other elements can easily toggle <code translate="no" class="notranslate text-nowrap">&lt;b-collapse></code> components using the <code translate="no" class="notranslate text-nowrap">v-b-toggle</code> directive.</p>
+<pre class="hljs html text-monospace p-2 notranslate" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>></span>
+  <span class="hljs-comment">&lt;!-- Using modifiers --></span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">v-b-toggle.collapse-2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"m-1"</span>></span>Toggle Collapse<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>></span>
+
+  <span class="hljs-comment">&lt;!-- Using value --></span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">v-b-toggle</span>=<span class="hljs-string">"'collapse-2'"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"m-1"</span>></span>Toggle Collapse<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>></span>
+
+  <span class="hljs-comment">&lt;!-- Element to collapse --></span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-collapse</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"collapse-2"</span>></span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-card</span>></span>I am collapsible content!<span class="hljs-tag">&lt;/<span class="hljs-name">b-card</span>></span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-collapse</span>></span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>></span>
+
+<span class="hljs-comment">&lt;!-- b-collapse-usage.vue --></span></pre>
+<h2 id="initial-visibility-start-expanded" class="bv-no-focus-ring"><span class="bd-content-title">Initial visibility (start expanded)<a class="anchorjs-link" href="#initial-visibility-start-expanded" aria-labelledby="initial-visibility-start-expanded"></a></span></h2>
+<p>To make the <code translate="no" class="notranslate text-nowrap">&lt;b-collapse></code> show initially, set the <code translate="no" class="notranslate text-nowrap">visible</code> prop:</p>
+<pre class="hljs html text-monospace p-2 notranslate" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>></span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">v-b-toggle.collapse-3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"m-1"</span>></span>Toggle Collapse<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>></span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-collapse</span> <span class="hljs-attr">visible</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"collapse-3"</span>></span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-card</span>></span>I should start open!<span class="hljs-tag">&lt;/<span class="hljs-name">b-card</span>></span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-collapse</span>></span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>></span>
+
+<span class="hljs-comment">&lt;!-- b-collapse-visible.vue --></span></pre>
+<p>By default, an initially visible collapse will not animate on mount. To enable the collapse
+expanding animation on mount (when <code translate="no" class="notranslate text-nowrap">visible</code> or <code translate="no" class="notranslate text-nowrap">v-model</code> is <code translate="no" class="notranslate text-nowrap">true</code>), set the <code translate="no" class="notranslate text-nowrap">appear</code> prop on <code translate="no" class="notranslate text-nowrap">&lt;b-collapse></code>.</p>
+<h2 id="v-model-support" class="bv-no-focus-ring"><span class="bd-content-title"><code translate="no" class="notranslate text-nowrap">v-model</code> support<a class="anchorjs-link" href="#v-model-support" aria-labelledby="v-model-support"></a></span></h2>
+<p>The component's collapsed (visible) state can also be set with <code translate="no" class="notranslate text-nowrap">v-model</code> which binds internally to
+the <code translate="no" class="notranslate text-nowrap">visible</code> prop.</p>
+<p>Note, when using <code translate="no" class="notranslate text-nowrap">v-model</code> to control <code translate="no" class="notranslate text-nowrap">&lt;b-collapse></code>, the <code translate="no" class="notranslate text-nowrap">aria-*</code> attributes and class <code translate="no" class="notranslate text-nowrap">collapsed</code> are not automatically placed on the trigger button (as is the case when using the <code translate="no" class="notranslate text-nowrap">v-b-toggle</code> directive). In this example we <strong>must control the attributes ourselves</strong> for proper accessibility
+support.</p>
+<pre class="hljs html text-monospace p-2 notranslate" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>></span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>></span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span>
+      <span class="hljs-attr">:class</span>=<span class="hljs-string">"visible ? null : 'collapsed'"</span>
+      <span class="hljs-attr">:aria-expanded</span>=<span class="hljs-string">"visible ? 'true' : 'false'"</span>
+      <span class="hljs-attr">aria-controls</span>=<span class="hljs-string">"collapse-4"</span>
+      @<span class="hljs-attr">click</span>=<span class="hljs-string">"visible = !visible"</span>
+    ></span>
+      Toggle Collapse
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>></span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-collapse</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"collapse-4"</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">"visible"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mt-2"</span>></span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-card</span>></span>I should start open!<span class="hljs-tag">&lt;/<span class="hljs-name">b-card</span>></span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-collapse</span>></span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>></span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>></span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>></span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    data() {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">visible</span>: <span class="hljs-literal">true</span>
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>></span>
+
+<span class="hljs-comment">&lt;!-- b-collapse-v-model.vue --></span></pre>
+<h2 id="trigger-multiple-collapse-elements" class="bv-no-focus-ring"><span class="bd-content-title">Trigger multiple collapse elements<a class="anchorjs-link" href="#trigger-multiple-collapse-elements" aria-labelledby="trigger-multiple-collapse-elements"></a></span></h2>
+<p>You can even collapse multiple <code translate="no" class="notranslate text-nowrap">&lt;b-collapse></code> components via a single <code translate="no" class="notranslate text-nowrap">v-b-toggle</code> by providing
+multiple target IDs using modifiers:</p>
+<pre class="hljs html text-monospace p-2 notranslate" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>></span>
+  <span class="hljs-comment">&lt;!-- Single button triggers two "&lt;b-collapse>" components --></span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">v-b-toggle.collapse-a.collapse-b</span>></span>Toggle Both Collapse A and B<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>></span>
+
+  <span class="hljs-comment">&lt;!-- Elements to collapse --></span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-collapse</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"collapse-a"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mt-2"</span>></span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-card</span>></span>I am collapsible content A!<span class="hljs-tag">&lt;/<span class="hljs-name">b-card</span>></span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-collapse</span>></span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-collapse</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"collapse-b"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mt-2"</span>></span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-card</span>></span>I am collapsible content B!<span class="hljs-tag">&lt;/<span class="hljs-name">b-card</span>></span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-collapse</span>></span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>></span>
+
+<span class="hljs-comment">&lt;!-- b-collapse-trigger-multiple.vue --></span></pre>
+<h2 id="accordion-support" class="bv-no-focus-ring"><span class="bd-content-title">Accordion support<a class="anchorjs-link" href="#accordion-support" aria-labelledby="accordion-support"></a></span></h2>
+<p>Turn a group of <code translate="no" class="notranslate text-nowrap">&lt;b-collapse></code> components into an accordion by supplying an accordion group
+identifier via the <code translate="no" class="notranslate text-nowrap">accordion</code> prop. Note that only one collapse in an accordion group can be open
+at a time.</p>
+<pre class="hljs html text-monospace p-2 notranslate" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>></span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"tablist"</span>></span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-card</span> <span class="hljs-attr">no-body</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-1"</span>></span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-card-header</span> <span class="hljs-attr">header-tag</span>=<span class="hljs-string">"header"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"p-1"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"tab"</span>></span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">block</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">v-b-toggle.accordion-1</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"info"</span>></span>Accordion 1<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>></span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">b-card-header</span>></span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-collapse</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"accordion-1"</span> <span class="hljs-attr">visible</span> <span class="hljs-attr">accordion</span>=<span class="hljs-string">"my-accordion"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"tabpanel"</span>></span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">b-card-body</span>></span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">b-card-text</span>></span>I start opened because <span class="hljs-tag">&lt;<span class="hljs-name">code</span>></span>visible<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>></span> is <span class="hljs-tag">&lt;<span class="hljs-name">code</span>></span>true<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>></span><span class="hljs-tag">&lt;/<span class="hljs-name">b-card-text</span>></span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">b-card-text</span>></span>{{ text }}<span class="hljs-tag">&lt;/<span class="hljs-name">b-card-text</span>></span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">b-card-body</span>></span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">b-collapse</span>></span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-card</span>></span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-card</span> <span class="hljs-attr">no-body</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-1"</span>></span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-card-header</span> <span class="hljs-attr">header-tag</span>=<span class="hljs-string">"header"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"p-1"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"tab"</span>></span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">block</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">v-b-toggle.accordion-2</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"info"</span>></span>Accordion 2<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>></span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">b-card-header</span>></span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-collapse</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"accordion-2"</span> <span class="hljs-attr">accordion</span>=<span class="hljs-string">"my-accordion"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"tabpanel"</span>></span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">b-card-body</span>></span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">b-card-text</span>></span>{{ text }}<span class="hljs-tag">&lt;/<span class="hljs-name">b-card-text</span>></span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">b-card-body</span>></span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">b-collapse</span>></span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-card</span>></span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-card</span> <span class="hljs-attr">no-body</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-1"</span>></span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-card-header</span> <span class="hljs-attr">header-tag</span>=<span class="hljs-string">"header"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"p-1"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"tab"</span>></span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">block</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">v-b-toggle.accordion-3</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"info"</span>></span>Accordion 3<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>></span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">b-card-header</span>></span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-collapse</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"accordion-3"</span> <span class="hljs-attr">accordion</span>=<span class="hljs-string">"my-accordion"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"tabpanel"</span>></span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">b-card-body</span>></span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">b-card-text</span>></span>{{ text }}<span class="hljs-tag">&lt;/<span class="hljs-name">b-card-text</span>></span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">b-card-body</span>></span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">b-collapse</span>></span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-card</span>></span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>></span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>></span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>></span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    data() {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">text</span>: <span class="hljs-string">`
+          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+          richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor
+          brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon
+          tempor, sunt aliqua put a bird on it squid single-origin coffee nulla
+          assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore
+          wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher
+          vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic
+          synth nesciunt you probably haven't heard of them accusamus labore VHS.
+        `</span>
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>></span>
+
+<span class="hljs-comment">&lt;!-- b-accordion.vue --></span></pre>
+<p><strong>Notes:</strong></p>
+<ul>
+<li>When using accordion mode, make sure you place the trigger elements and <code translate="no" class="notranslate text-nowrap">&lt;b-collapse></code> components
+inside an element with <code translate="no" class="notranslate text-nowrap">role="tablist"</code> and set <code translate="no" class="notranslate text-nowrap">role="tab"</code> on each trigger element's container
+(each trigger element should be wrapped) in order to help screen reader users navigate the
+accordion group.</li>
+<li>If using the <code translate="no" class="notranslate text-nowrap">v-model</code> feature of <code translate="no" class="notranslate text-nowrap">&lt;b-collapse></code> in accordion mode, do not bind the <code translate="no" class="notranslate text-nowrap">v-model</code> or <code translate="no" class="notranslate text-nowrap">visible</code> prop of all the collapses in the accordion group to the same variable!</li>
+<li>Ensure, at most, only one <code translate="no" class="notranslate text-nowrap">&lt;b-collapse></code> in the accordion group has the <code translate="no" class="notranslate text-nowrap">visible</code> prop and/or <code translate="no" class="notranslate text-nowrap">v-model</code> set to <code translate="no" class="notranslate text-nowrap">true</code>. Only one collapse in an accordion group can be open at a time.</li>
+</ul>
+<h2 id="hiding-and-showing-content-in-the-toggle-button-based-on-collapse-state" class="bv-no-focus-ring"><span class="bd-content-title">Hiding and showing content in the toggle button based on collapse state<a class="anchorjs-link" href="#hiding-and-showing-content-in-the-toggle-button-based-on-collapse-state" aria-labelledby="hiding-and-showing-content-in-the-toggle-button-based-on-collapse-state"></a></span></h2>
+<p>When using the <code translate="no" class="notranslate text-nowrap">v-b-toggle</code> directive, the class <code translate="no" class="notranslate text-nowrap">collapsed</code> will automatically be placed on the
+trigger element when the collapse is closed, and removed when open. You can use this class to
+display or hide content within the toggle via custom CSS:</p>
+<p><strong>Example HTML markup:</strong></p>
+<pre class="hljs html text-monospace p-2 notranslate" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>></span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">v-b-toggle.my-collapse</span>></span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"when-opened"</span>></span>Close<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>></span> <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"when-closed"</span>></span>Open<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>></span> My Collapse
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>></span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-collapse</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"my-collapse"</span>></span>
+    <span class="hljs-comment">&lt;!-- Content here --></span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-collapse</span>></span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>></span></pre>
+<p><strong>Example Custom CSS:</strong></p>
+<pre class="hljs css text-monospace p-2 notranslate" translate="no"><span class="hljs-selector-class">.collapsed</span> > <span class="hljs-selector-class">.when-opened</span>,
+<span class="hljs-selector-pseudo">:not(.collapsed)</span> > <span class="hljs-selector-class">.when-closed</span> {
+  <span class="hljs-attribute">display</span>: none;
+}</pre>
+<h2 id="global-root-instance-events" class="bv-no-focus-ring"><span class="bd-content-title">'Global' $root instance events<a class="anchorjs-link" href="#global-root-instance-events" aria-labelledby="global-root-instance-events"></a></span></h2>
+<p>Using <code translate="no" class="notranslate text-nowrap">$root</code> instance it is possible to emit and listen events somewhere out of a component, where <code translate="no" class="notranslate text-nowrap">&lt;b-collapse></code> is used. In short, <code translate="no" class="notranslate text-nowrap">$root</code> behaves like a global event emitters and listener. Details
+about <code translate="no" class="notranslate text-nowrap">$root</code> instance can be found in <a href="https://vuejs.org/v2/guide/components-edge-cases.html#Accessing-the-Root-Instance" target="_blank" rel="noopener">the official Vue docs</a>.</p>
+<h3 id="listening-to-collapses-state-changes-via-root-events" class="bv-no-focus-ring"><span class="bd-content-title">Listening to collapses state changes via $root events<a class="anchorjs-link" href="#listening-to-collapses-state-changes-via-root-events" aria-labelledby="listening-to-collapses-state-changes-via-root-events"></a></span></h3>
+<p>To listen to any collapse state changes, use:</p>
+<pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+  mounted() {
+    <span class="hljs-keyword">this</span>.$root.$on(<span class="hljs-string">'bv::collapse::state'</span>, (collapseId, isJustShown) => {
+      <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'collapseId:'</span>, collapseId)
+      <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'isJustShown:'</span>, isJustShown)
+    })
+  }
+}</pre>
+<p>where <code translate="no" class="notranslate text-nowrap">collapseId</code> is collapse id which changed its state; <code translate="no" class="notranslate text-nowrap">isJustShown</code> is true/false, i.e.
+shown/hidden collapse.</p>
+<h3 id="toggling-collapses-via-root-events" class="bv-no-focus-ring"><span class="bd-content-title">Toggling collapses via $root events<a class="anchorjs-link" href="#toggling-collapses-via-root-events" aria-labelledby="toggling-collapses-via-root-events"></a></span></h3>
+<p>To toggle (open/close) a <strong>specific collapse</strong>, pass the collapse <code translate="no" class="notranslate text-nowrap">id</code>:</p>
+<pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-keyword">this</span>.$root.$emit(<span class="hljs-string">'bv::toggle::collapse'</span>, <span class="hljs-string">'my-collapse-id'</span>)</pre>
+<h2 id="optionally-scoped-default-slot" class="bv-no-focus-ring"><span class="bd-content-title">Optionally scoped default slot<a class="anchorjs-link" href="#optionally-scoped-default-slot" aria-labelledby="optionally-scoped-default-slot"></a></span></h2>
+<p><span class="badge badge-info small">New in v2.2.0</span></p>
+<p>The default slot can be optionally scoped. The following scope properties are available:</p>
+<div class="table-responsive-sm">
+<table class="b-table table table-bordered table-striped bv-docs-table">
+<thead class="thead-default">
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code translate="no" class="notranslate text-nowrap">visible</code></td>
+<td>Boolean</td>
+<td>Visible state of the collapse</td>
+</tr>
+<tr>
+<td><code translate="no" class="notranslate text-nowrap">close</code></td>
+<td>Function</td>
+<td>When called, will close the collapse</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="accessibility" class="bv-no-focus-ring"><span class="bd-content-title">Accessibility<a class="anchorjs-link" href="#accessibility" aria-labelledby="accessibility"></a></span></h2>
+<p>The <code translate="no" class="notranslate text-nowrap">v-b-toggle</code> directive will automatically add the ARIA attributes <code translate="no" class="notranslate text-nowrap">aria-controls</code> and <code translate="no" class="notranslate text-nowrap">aria-expanded</code> to the component that the directive appears on (as well as add the class <code translate="no" class="notranslate text-nowrap">collapsed</code> when not expanded). <code translate="no" class="notranslate text-nowrap">aria-expanded</code> will reflect the state of the target <code translate="no" class="notranslate text-nowrap">&lt;b-collapse></code> component,
+while <code translate="no" class="notranslate text-nowrap">aria-controls</code> will be set to the ID(s) of the target <code translate="no" class="notranslate text-nowrap">&lt;b-collapse></code> component(s).</p>
+<p>If using <code translate="no" class="notranslate text-nowrap">v-model</code> to set the visible state instead of the directive <code translate="no" class="notranslate text-nowrap">v-b-toggle</code>, you will be
+required to, on the toggle element, add the <code translate="no" class="notranslate text-nowrap">aria-controls</code> and other appropriate attributes and
+classes yourself.</p>
+<p>While the <code translate="no" class="notranslate text-nowrap">v-b-toggle</code> directive can be placed on almost any HTML element or Vue component, it is
+recommended to use a button or link (or similar component) to act as your toggler. Otherwise your
+trigger elements may be inaccessible to keyboard or screen reader users. If you do place them on
+something other than a button or link (or similar component), you should add the attributes <code translate="no" class="notranslate text-nowrap">tabindex="0"</code> and <code translate="no" class="notranslate text-nowrap">role="button"</code> to allow users of assistive technology to reach your trigger
+element.</p>
+<p>When using accordion mode, make sure you place the trigger elements and <code translate="no" class="notranslate text-nowrap">&lt;b-collapse></code> components
+inside an element with <code translate="no" class="notranslate text-nowrap">role="tablist"</code> and set <code translate="no" class="notranslate text-nowrap">role="tab"</code> on each trigger element's container in
+order to help screen reader users navigate the accordion group. Unfortunately, BootstrapVue cannot
+apply those roles for you automatically, as it depends on your final document markup.</p>
+<!-- Component reference added automatically from component package.json -->
+
+<h2 id="component-reference" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title">Component reference<a href="../../../bootstrap-vue/docs/components/collapse#component-reference" aria-labelledby="component-reference" target="_self" class="anchorjs-link"></a></span></h2>
+<header class="row align-items-center" data-v-866a22e8 data-v-866a22e8>
+<div class="col-sm-9" data-v-866a22e8 data-v-866a22e8>
+<h3 id="comp-ref-b-collapse" tabindex="-1" class="bv-no-focus-ring" data-v-866a22e8 data-v-866a22e8>
+<span class="bd-content-title" data-v-866a22e8 data-v-866a22e8><code translate="translate" class="notranslate bigger" data-v-866a22e8>&lt;b-collapse></code><a href="../../../bootstrap-vue/docs/components/collapse#comp-ref-b-collapse" aria-labelledby="comp-ref-b-collapse" target="_self" class="anchorjs-link" data-v-866a22e8></a></span>
+</h3>
+</div>
+<div class="text-sm-right col-sm-3" data-v-866a22e8 data-v-866a22e8>
+<a rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev/src/components/collapse/collapse.js" class="btn btn-outline-secondary btn-sm" data-v-866a22e8> View source </a>
+</div>
+</header>
+<ul class="component-ref-mini-toc my-3" data-v-866a22e8>
+<li data-v-866a22e8><a href="#comp-ref-b-collapse-props" data-v-866a22e8><code translate="translate" class="notranslate" data-v-866a22e8>&lt;b-collapse></code> Properties </a></li>
+<li data-v-866a22e8><a href="#comp-ref-b-collapse-v-model" data-v-866a22e8><code translate="translate" class="notranslate" data-v-866a22e8>&lt;b-collapse></code> v-model </a></li>
+<li data-v-866a22e8><a href="#comp-ref-b-collapse-slots" data-v-866a22e8><code translate="translate" class="notranslate" data-v-866a22e8>&lt;b-collapse></code> Slots </a></li>
+<li data-v-866a22e8><a href="#comp-ref-b-collapse-events" data-v-866a22e8><code translate="translate" class="notranslate" data-v-866a22e8>&lt;b-collapse></code> Events </a></li>
+<li data-v-866a22e8><a href="#comp-ref-b-collapse-rootEventListeners" data-v-866a22e8><code translate="translate" class="notranslate" data-v-866a22e8>&lt;b-collapse></code> <code translate="translate" class="notranslate" data-v-866a22e8>$root</code> Event Listeners </a></li>
+</ul>
+<article class="bd-content" data-v-866a22e8>
+<h4 id="comp-ref-b-collapse-props" tabindex="-1" class="bv-no-focus-ring mb-3" data-v-866a22e8 data-v-866a22e8>
+<span class="bd-content-title" data-v-866a22e8 data-v-866a22e8> Properties <a href="../../../bootstrap-vue/docs/components/collapse#comp-ref-b-collapse-props" aria-labelledby="comp-ref-b-collapse-props" target="_self" class="anchorjs-link" data-v-866a22e8></a></span>
+</h4>
+<div class="table-responsive-sm" data-v-866a22e8>
+<table role="table" aria-busy="false" aria-colcount="4" class="table b-table bv-docs-table table-striped">
+<thead role="rowgroup">
+<tr role="row">
+<th role="columnheader" scope="col" aria-colindex="1">Property</th>
+<th role="columnheader" scope="col" aria-colindex="2">Type</th>
+<th role="columnheader" scope="col" aria-colindex="3">Default</th>
+<th role="columnheader" scope="col" aria-colindex="4">Description</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+<tr role="row" data-pk="id">
+<td aria-colindex="1" role="cell"><code translate="translate" class="text-nowrap notranslate" data-v-866a22e8>id</code></td>
+<td aria-colindex="2" role="cell">String</td>
+<td aria-colindex="3" role="cell"></td>
+<td aria-colindex="4" role="cell">Used to set the 'id' attribute on the rendered content, and used as the base to generate any additional element IDs as needed</td>
+</tr>
+<tr role="row" data-pk="is-nav">
+<td aria-colindex="1" role="cell"><code translate="translate" class="text-nowrap notranslate" data-v-866a22e8>is-nav</code></td>
+<td aria-colindex="2" role="cell">Boolean</td>
+<td aria-colindex="3" role="cell"><code translate="translate" class="word-wrap-normal notranslate" data-v-866a22e8>false</code></td>
+<td aria-colindex="4" role="cell">When set, signifies that the collapse is bart of a navbar, enabling certain features for navbar support</td>
+</tr>
+<tr role="row" data-pk="accordion">
+<td aria-colindex="1" role="cell"><code translate="translate" class="text-nowrap notranslate" data-v-866a22e8>accordion</code></td>
+<td aria-colindex="2" role="cell">String</td>
+<td aria-colindex="3" role="cell"></td>
+<td aria-colindex="4" role="cell">The name of the accordion group that this collapse belongs to</td>
+</tr>
+<tr role="row" data-pk="visible">
+<td aria-colindex="1" role="cell"><code translate="translate" class="text-nowrap notranslate" data-v-866a22e8>visible</code> <span class="badge badge-primary" data-v-866a22e8>v-model</span></td>
+<td aria-colindex="2" role="cell">Boolean</td>
+<td aria-colindex="3" role="cell"><code translate="translate" class="word-wrap-normal notranslate" data-v-866a22e8>false</code></td>
+<td aria-colindex="4" role="cell">When 'true', expands the collapse</td>
+</tr>
+<tr role="row" data-pk="tag">
+<td aria-colindex="1" role="cell"><code translate="translate" class="text-nowrap notranslate" data-v-866a22e8>tag</code></td>
+<td aria-colindex="2" role="cell">String</td>
+<td aria-colindex="3" role="cell"><code translate="translate" class="word-wrap-normal notranslate" data-v-866a22e8>'div'</code></td>
+<td aria-colindex="4" role="cell">Specify the HTML tag to render instead of the default tag</td>
+</tr>
+<tr role="row" data-pk="appear">
+<td aria-colindex="1" role="cell"><code translate="translate" class="text-nowrap notranslate" data-v-866a22e8>appear</code> <span class="badge badge-secondary" data-v-866a22e8>v2.2.0+</span></td>
+<td aria-colindex="2" role="cell">Boolean</td>
+<td aria-colindex="3" role="cell"><code translate="translate" class="word-wrap-normal notranslate" data-v-866a22e8>false</code></td>
+<td aria-colindex="4" role="cell">When set, and prop 'visible' is true on mount, will animate on initial mount</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+<article class="bd-content" data-v-866a22e8>
+<h4 id="comp-ref-b-collapse-v-model" tabindex="-1" class="bv-no-focus-ring mb-3" data-v-866a22e8 data-v-866a22e8>
+<span class="bd-content-title" data-v-866a22e8 data-v-866a22e8> v-model <a href="../../../bootstrap-vue/docs/components/collapse#comp-ref-b-collapse-v-model" aria-labelledby="comp-ref-b-collapse-v-model" target="_self" class="anchorjs-link" data-v-866a22e8></a></span>
+</h4>
+<div class="table-responsive-sm" data-v-866a22e8>
+<table role="table" aria-busy="false" aria-colcount="2" class="table b-table bv-docs-table table-striped">
+<thead role="rowgroup">
+<tr role="row">
+<th role="columnheader" scope="col" aria-colindex="1">Property</th>
+<th role="columnheader" scope="col" aria-colindex="2">Event</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+<tr role="row">
+<td aria-colindex="1" role="cell"><code translate="translate" class="notranslate" data-v-866a22e8>visible</code></td>
+<td aria-colindex="2" role="cell"><code translate="translate" class="notranslate" data-v-866a22e8>input</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+<article class="bd-content" data-v-866a22e8>
+<h4 id="comp-ref-b-collapse-slots" tabindex="-1" class="bv-no-focus-ring mb-3" data-v-866a22e8 data-v-866a22e8>
+<span class="bd-content-title" data-v-866a22e8 data-v-866a22e8> Slots <a href="../../../bootstrap-vue/docs/components/collapse#comp-ref-b-collapse-slots" aria-labelledby="comp-ref-b-collapse-slots" target="_self" class="anchorjs-link" data-v-866a22e8></a></span>
+</h4>
+<div class="table-responsive-sm" data-v-866a22e8>
+<table role="table" aria-busy="false" aria-colcount="3" class="table b-table bv-docs-table table-striped">
+<thead role="rowgroup">
+<tr role="row">
+<th role="columnheader" scope="col" aria-colindex="1">Slot Name</th>
+<th role="columnheader" scope="col" aria-colindex="2">Description</th>
+<th role="columnheader" scope="col" aria-colindex="3">Scoped</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+<tr role="row" data-pk="default">
+<td aria-colindex="1" role="cell"><code translate="translate" class="text-nowrap notranslate" data-v-866a22e8>default</code> <span class="badge badge-secondary" data-v-866a22e8>v2.2.0+</span></td>
+<td aria-colindex="2" role="cell"></td>
+<td aria-colindex="3" role="cell"><button type="button" class="btn py-0 btn-info btn-sm" data-v-866a22e8> Scope </button></td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+<article class="bd-content" data-v-866a22e8>
+<h4 id="comp-ref-b-collapse-events" tabindex="-1" class="bv-no-focus-ring mb-3" data-v-866a22e8 data-v-866a22e8>
+<span class="bd-content-title" data-v-866a22e8 data-v-866a22e8> Events <a href="../../../bootstrap-vue/docs/components/collapse#comp-ref-b-collapse-events" aria-labelledby="comp-ref-b-collapse-events" target="_self" class="anchorjs-link" data-v-866a22e8></a></span>
+</h4>
+<div class="table-responsive-sm" data-v-866a22e8>
+<table role="table" aria-busy="false" aria-colcount="3" class="table b-table bv-docs-table table-striped">
+<thead role="rowgroup">
+<tr role="row">
+<th role="columnheader" scope="col" aria-colindex="1">Event</th>
+<th role="columnheader" scope="col" aria-colindex="2">Arguments</th>
+<th role="columnheader" scope="col" aria-colindex="3">Description</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+<tr role="row" data-pk="input">
+<td aria-colindex="1" role="cell"><code translate="translate" class="notranslate" data-v-866a22e8>input</code></td>
+<td aria-colindex="2" role="cell"><ol class="list-unstyled mb-0" data-v-866a22e8>
+<li data-v-866a22e8><code translate="translate" class="notranslate" data-v-866a22e8>visible</code> - <span data-v-866a22e8>Will be true if the collapse is visible</span></li>
+</ol></td>
+<td aria-colindex="3" role="cell">Used to update the v-model</td>
+</tr>
+<tr role="row" data-pk="show">
+<td aria-colindex="1" role="cell"><code translate="translate" class="notranslate" data-v-866a22e8>show</code></td>
+<td aria-colindex="2" role="cell"></td>
+<td aria-colindex="3" role="cell">Emitted when collapse has started to open</td>
+</tr>
+<tr role="row" data-pk="shown">
+<td aria-colindex="1" role="cell"><code translate="translate" class="notranslate" data-v-866a22e8>shown</code></td>
+<td aria-colindex="2" role="cell"></td>
+<td aria-colindex="3" role="cell">Emitted when collapse has finished opening</td>
+</tr>
+<tr role="row" data-pk="hide">
+<td aria-colindex="1" role="cell"><code translate="translate" class="notranslate" data-v-866a22e8>hide</code></td>
+<td aria-colindex="2" role="cell"></td>
+<td aria-colindex="3" role="cell">Emitted when collapse has started to close</td>
+</tr>
+<tr role="row" data-pk="hidden">
+<td aria-colindex="1" role="cell"><code translate="translate" class="notranslate" data-v-866a22e8>hidden</code></td>
+<td aria-colindex="2" role="cell"></td>
+<td aria-colindex="3" role="cell">Emitted when collapse has finished closing</td>
+</tr>
+<tr role="row" data-pk="bv::collapse::state">
+<td aria-colindex="1" role="cell"><code translate="translate" class="notranslate" data-v-866a22e8>bv::collapse::state</code></td>
+<td aria-colindex="2" role="cell"><ol class="list-unstyled mb-0" data-v-866a22e8>
+<li data-v-866a22e8><code translate="translate" class="notranslate" data-v-866a22e8>id</code> - <span data-v-866a22e8>changed state collapse id</span></li>
+<li data-v-866a22e8><code translate="translate" class="notranslate" data-v-866a22e8>state</code> - <span data-v-866a22e8>true or false, i.e. opened or closed</span></li>
+</ol></td>
+<td aria-colindex="3" role="cell">Emitted on $root when collapse has changed its state</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+<article class="bd-content" data-v-866a22e8>
+<h4 id="comp-ref-b-collapse-rootEventListeners" tabindex="-1" class="bv-no-focus-ring mb-3" data-v-866a22e8 data-v-866a22e8>
+<span class="bd-content-title" data-v-866a22e8 data-v-866a22e8><code translate="translate" class="notranslate" data-v-866a22e8>$root</code> Event Listeners <a href="../../../bootstrap-vue/docs/components/collapse#comp-ref-b-collapse-rootEventListeners" aria-labelledby="comp-ref-b-collapse-rootEventListeners" target="_self" class="anchorjs-link" data-v-866a22e8></a></span>
+</h4>
+<p data-v-866a22e8> You can control <code translate="translate" class="notranslate" data-v-866a22e8>&lt;b-collapse></code> by emitting the
+      following events on <samp translate="translate" class="notranslate" data-v-866a22e8>$root</samp>: </p>
+<div class="table-responsive-sm" data-v-866a22e8>
+<table role="table" aria-busy="false" aria-colcount="3" class="table b-table bv-docs-table table-striped">
+<thead role="rowgroup">
+<tr role="row">
+<th role="columnheader" scope="col" aria-colindex="1">Event</th>
+<th role="columnheader" scope="col" aria-colindex="2">Arguments</th>
+<th role="columnheader" scope="col" aria-colindex="3">Description</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+<tr role="row" data-pk="bv::toggle::collapse">
+<td aria-colindex="1" role="cell"><code translate="translate" class="text-nowrap notranslate" data-v-866a22e8>bv::toggle::collapse</code></td>
+<td aria-colindex="2" role="cell"><p class="mb-1" data-v-866a22e8><code translate="translate" class="text-nowrap notranslate" data-v-866a22e8>id</code> <span data-v-866a22e8> - collapse id to toggle</span></p></td>
+<td aria-colindex="3" role="cell">Toggles visible state of collapse with specified id when this event is emitted on $root</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+<article class="bd-content">
+<h3 id="importing-individual-components" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title"> Importing individual components <a href="../../../bootstrap-vue/docs/components/collapse#importing-individual-components" aria-labelledby="importing-individual-components" target="_self" class="anchorjs-link"></a></span></h3>
+<p> You can import individual components into your project via the following named
+        exports: </p>
+<div class="table-responsive-sm">
+<table role="table" aria-busy="false" aria-colcount="3" class="table b-table bv-docs-table table-striped">
+<thead role="rowgroup" class="thead-default">
+<tr role="row">
+<th role="columnheader" scope="col" aria-colindex="1">Component</th>
+<th role="columnheader" scope="col" aria-colindex="2">Named Export</th>
+<th role="columnheader" scope="col" aria-colindex="3">Import Path</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+<tr role="row">
+<td aria-colindex="1" role="cell"><code translate="translate" class="text-nowrap notranslate">&lt;b-collapse></code></td>
+<td aria-colindex="2" role="cell"><code translate="translate" class="text-nowrap notranslate">BCollapse</code></td>
+<td aria-colindex="3" role="cell"><code translate="translate" class="text-nowrap notranslate">bootstrap-vue</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Example:</strong></p>
+<pre translate="translate" class="hljs language-js text-monospace p-2 notranslate">import { BCollapse } from 'bootstrap-vue'
+Vue.component('b-collapse', BCollapse)</pre>
+</article>
+<article class="bd-content">
+<h3 id="importing-individual-directives" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title"> Importing individual directives <a href="../../../bootstrap-vue/docs/components/collapse#importing-individual-directives" aria-labelledby="importing-individual-directives" target="_self" class="anchorjs-link"></a></span></h3>
+<p> You can import individual directives into your project via the following named
+        exports: </p>
+<div class="table-responsive-sm">
+<table role="table" aria-busy="false" aria-colcount="3" class="table b-table bv-docs-table table-striped">
+<thead role="rowgroup" class="thead-default">
+<tr role="row">
+<th role="columnheader" scope="col" aria-colindex="1">Directive</th>
+<th role="columnheader" scope="col" aria-colindex="2">Named Export</th>
+<th role="columnheader" scope="col" aria-colindex="3">Import Path</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+<tr role="row">
+<td aria-colindex="1" role="cell"><code translate="translate" class="text-nowrap notranslate">v-b-toggle</code></td>
+<td aria-colindex="2" role="cell"><code translate="translate" class="text-nowrap notranslate">VBToggle</code></td>
+<td aria-colindex="3" role="cell"><code translate="translate" class="text-nowrap notranslate">bootstrap-vue</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Example:</strong></p>
+<pre translate="translate" class="hljs language-js text-monospace p-2 notranslate">import { VBToggle } from 'bootstrap-vue'
+// Note: Vue automatically prefixes the directive name with 'v-'
+Vue.directive('b-toggle', VBToggle)</pre>
+</article>
+<article class="bd-content">
+<h3 id="importing-as-a-plugin" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title"> Importing as a Vue.js plugin <a href="../../../bootstrap-vue/docs/components/collapse#importing-as-a-plugin" aria-labelledby="importing-as-a-plugin" target="_self" class="anchorjs-link"></a></span></h3>
+<p> This plugin includes all of the above listed individual
+      components<span> and directives</span>.
+      Plugins also include any component aliases. </p>
+<div class="table-responsive-sm">
+<table fileds="namedExport,importPath" role="table" aria-busy="false" aria-colcount="2" class="table b-table bv-docs-table table-striped b-table-caption-top">
+<thead role="rowgroup" class="thead-default">
+<tr role="row">
+<th role="columnheader" scope="col" aria-colindex="1">Named Export</th>
+<th role="columnheader" scope="col" aria-colindex="2">Import Path</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+<tr role="row">
+<td aria-colindex="1" role="cell"><code translate="translate" class="text-nowrap notranslate">CollapsePlugin</code></td>
+<td aria-colindex="2" role="cell"><code translate="translate" class="text-nowrap notranslate">bootstrap-vue</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Example:</strong></p>
+<pre translate="translate" class="hljs language-js text-monospace p-2 notranslate">import { CollapsePlugin } from 'bootstrap-vue'
+Vue.use(CollapsePlugin)</pre>
+</article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</main>
+</div>
+</div>
+
+
+<script src="../../../js/jquery-3.2.1.slim.min.js"></script> 
+<script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery-slim.min.js"><\/script>')</script> 
+<script src="../../../v4/dist/js/popper.min.js"></script> 
+<script src="../../../v4/dist/js/bootstrap.min.js"></script> 
+<script src="../../../v4/assets/js/docs.min.js"></script> 
+<script src="../../../v4/assets/js/ie-emulation-modes-warning.js"></script> 
+<script src="../../../v4/assets/js/docsearch.min.js"></script> 
+<script>
+  docsearch({
+    appId: 'PRR89ISST8',
+    apiKey: '95044d57d4d7bb744f322d1f18ed607f',
+    indexName: 'z01-bootstrapV4',
+    inputSelector: '#search-input',
+    handleSelected: function (input, event, suggestion) {
+      var url = suggestion.url;
+      url = suggestion.isLvl1 ? url.split('#')[0]: url;
+      // If it's a title we remove the anchor so it does not jump.
+      window.location.href = url;
+    },
+    transformData: function (hits) {
+      return hits.map(function (hit) {
+        hit.url = hit.url.replace('https://v4-alpha.getbootstrap.com', '/docs/4.0');
+        return hit;
+      });
+    },
+    debug: false // Set debug to true if you want to inspect the dropdown
+  });
+</script> 
+<script>
+  Holder.addTheme('gray', {
+    bg: '#777',
+    fg: 'rgba(255,255,255,.75)',
+    font: 'Helvetica',
+    fontweight: 'normal'
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,1557 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Jekyll v3.6.0">
+<title>导航 &middot; BootstrapVue</title>
+<!-- Bootstrap 核心CSS -->
+<link href="../../../v4/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- 本文档额外专用css -->
+<link href="../../../v4/assets/css/docsearch.min.css" rel="stylesheet">
+<link href="../../../v4/assets/css/docs.min.css" rel="stylesheet">
+<link href="../../style/bv_path.css" rel="stylesheet">
+
+<!-- Favicons图标定义 -->
+<link data-n-head="ssr" rel="manifest" href="../../manifest.json">
+<link data-n-head="ssr" rel="shortcut icon" href="../../style/icons/icon_64.png">
+<link data-n-head="ssr" rel="apple-touch-icon" href="../../style/icons/icon_512.png" sizes="512x512">
+
+<!-- Meta关键字定义 -->
+<meta name="description" content="The most popular HTML, CSS, and JS library in the world.">
+<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+
+</head>
+<body>
+<a id="skippy" class="sr-only sr-only-focusable" href="#content">
+<div class="container"> <span class="skiplink-text">跳到主体内容</span> </div>
+</a>
+<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar"> <a class="navbar-brand mr-0 mr-md-2" href="../" aria-label="Bootstrap">
+  <svg class="d-block" width="36" height="36" viewbox="0 0 612 612" xmlns="http://www.w3.org/2000/svg" focusable="false">
+    <title>Bootstrap</title>
+    <path fill="currentColor" d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z"/>
+    <path fill="currentColor" d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z"/>
+  </svg>
+  </a>
+  <div class="navbar-nav-scroll">
+    <ul class="navbar-nav bd-navbar-nav flex-row">
+      <li class="nav-item"><a class="nav-link " href="../">首页</a></li>
+      <li class="nav-item"><a class="nav-link active" href="../../v4/docs/">中文手册</a></li>
+      <li class="nav-item"><a class="nav-link " href="../../v4/examples/">实例</a></li>
+      <li class="nav-item dropdown">
+<a class="nav-item nav-link dropdown-toggle mr-md-2" id="bd-versions" aria-expanded="false" aria-haspopup="true" href="#" data-toggle="dropdown"> 主题模板 </a>
+<div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
+<a class="dropdown-item" href="../../V4/themes/" target="_blank">主题门户</a>
+<a class="dropdown-item" href="../../V4/themes/live.html">精选模板</a>
+</div>
+</li>
+      <li class="nav-item"><a class="nav-link" href="//ico.z01.com" target="_blank" rel="noopener">zico图标系统</a></li>
+      <li class="nav-item"><a class="nav-link" href="https://expo.getbootstrap.com" target="_blank" rel="noopener">优站精选</a></li>
+      <li class="nav-item"><a class="nav-link" href="https://blog.getbootstrap.com" target="_blank" rel="noopener">Blog</a></li>
+    </ul>
+  </div>
+  <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="alse"> v2.6.1 </a>
+      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions"> 
+        <a class="dropdown-item active" href="../../../bootstrap-vue/docs/4.0/">Latest (4.3.x)</a>
+        <a class="dropdown-item" href="/Boot/">v3.3.7</a>
+        <a class="dropdown-item" href="/Sass/">Sass语言</a>
+        <a class="dropdown-item" href="/Emmet/">Emmet语法</a>
+        <a class="dropdown-item" href="//www.z01.com/tool/" target="_blank">IIS站长工具</a>
+        <a class="dropdown-item" href="//ad.z01.com/" target="_blank">广告源码</a>
+        <a class="dropdown-item" href="//v.z01.com/mb/" target="_blank">免费模板</a>
+        <a class="dropdown-item" href="//v.z01.com/" target="_blank">H5移动创作</a>
+        <a class="dropdown-item" href="//www.z01.com/help/web/3234.shtml" target="_blank">Flexbox布局</a>
+		<a class="dropdown-item" href="/boot/font.html" target="_blank">Font Awesome</a>
+</div>
+    </li>
+    <li class="nav-item"> <a class="nav-link p-2" href="//zoomla.github.io/bootstrap4-zhcn-documentation" target="_blank" rel="noopener" aria-label="GitHub">
+      <svg class="navbar-nav-svg" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 499.36" focusable="false">
+        <title>GitHub</title>
+        <path d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z" fill="currentColor" fill-rule="evenodd"/>
+      </svg>
+      </a> </li>
+    <li class="nav-item"> <a class="nav-link p-2" href="http://www.z01.com/blog/ren/3214.shtml" target="_blank" rel="noopener" aria-label="Slack">译者说</a></li>
+  </ul>
+  <a class="btn btn-bd-yellow d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="download.html">下载 Bootstrap</a> </header>
+
+<div class="container-fluid">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+      <form class="bd-search d-flex align-items-center">
+        <input type="search" class="form-control" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
+        <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30" focusable="false">
+          <title>Menu</title>
+          <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/>
+        </svg>
+        </button>
+      </form>
+
+
+<nav class="collapse bd-links" id="bd-docs-nav">
+<div class=""><a href="../" class="bd-toc-link">首页</a></div>
+<div class="bd-toc-item nuxt-link-exact-active "><a href="../../../bootstrap-vue/docs/" class="bd-toc-link  "> 起步 </a>
+<ul class="nav bd-sidenav">
+</ul>
+</div>
+<div class="bd-toc-item active"><a href="../../../bootstrap-vue/docs/components/" class="bd-toc-link nuxt-link-exact-active"> 组件 </a>
+<ul class="nav bd-sidenav">
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/index.html" class="nav-link"> 组件目录 </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/alert.html" class="nav-link"> 警告提示框(Alert) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/badge.html" class="nav-link"> 徽章(Badge) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/badge.html" class="nav-link"> 面包屑导航(Breadcrumb) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/button.html" class="nav-link"> 按钮(Button) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/button-group.html" class="nav-link"> 按钮组(Button Group) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/button-toolbar.html" class="nav-link"> 按钮Toolbar(Button Toolbar) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/calendar.html" class="nav-link"> 日历组件(Calendar) <small class="badge text-uppercase badge-success">New</small> </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/card.html" class="nav-link"> 卡片(Card) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/carousel.html" class="nav-link"> 轮播效果(Carousel) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/collapse.html" class="nav-link"> 折叠面板(Collapse) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/dropdown.html" class="nav-link"> 下拉菜单(Dropdown) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/embed.html" class="nav-link"> 嵌入(Embed) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form.html" class="nav-link"> 表单(Form) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-checkbox.html" class="nav-link"> 表单复选框(Form Checkbox) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-datepicker.html" class="nav-link"> 表单时间选择器(Form Datepicker) <small class="badge text-uppercase badge-success">New</small> </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-file.html" class="nav-link"> 文件选择(Form File) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-group.html" class="nav-link"> 表单组合(Form Group) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-input.html" class="nav-link"> 表单输入框(Form Input) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-radio.html" class="nav-link"> 单选择表单Form Radio </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-select.html" class="nav-link"> 下拉式表单(Form Select) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-spinbutton.html" class="nav-link"> 按钮式表单(Form Spinbuttno) <small class="badge text-uppercase badge-success">New</small> </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-tags.html" class="nav-link"> Tags表单选择器(Form Tags) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-textarea.html" class="nav-link"> 文本框(Form Textarea) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-timepicker.html" class="nav-link"> 表单内时间控件(Form Timepicker) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/image.html" class="nav-link"> 图片(Image) </a></li>
+
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/input-group.html" class="nav-link"> 输入框(Input Group) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/jumbotron.html" class="nav-link"> Hero大块屏(Jumbotron) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/layout.html" class="nav-link"> 布局与网络Layout and Grid System </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/link.html" class="nav-link"> 链接(Link)</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/list-group.html" class="nav-link"> 列表组(List group) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/media.html" class="nav-link"> 媒体(Media) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/modal.html" class="nav-link"> 弹出模态框(Modal) </a></li>
+<li class="nav-item active"><a href="../../../bootstrap-vue/docs/components/nav.html" class="nav-link"> 导航(Nav) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/navbar.html" class="nav-link"> 导航栏(Navbar) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/pagination.html" class="nav-link"> 分页(Pagination) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/pagination-nav.html" class="nav-link"> 分页导航(Pagination Nav) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/popover.html" class="nav-link"> 指示备注(Popover) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/progress.html" class="nav-link"> 进度指示器(Progress) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/spinner.html" class="nav-link"> 旋转指示器(Spinner) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/table.html" class="nav-link"> 表格(Table) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/tabs.html" class="nav-link"> 选项卡(Tabs) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/time.html" class="nav-link"> 时间组件(Time) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/toast.html" class="nav-link"> 冒泡推送(Toasts) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/tooltip.html" class="nav-link"> tip提示组件(Tooltip) </a></li>
+</ul>
+</div>
+<div class="bd-toc-item"><a href="../../../bootstrap-vue/docs/directives/" class="bd-toc-link"> 指令 </a>
+<ul class="nav bd-sidenav">
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/directives/index.html" class="nav-link"> 指令目录 </a></li>
+<li class="nav-item active"><a href="../../../bootstrap-vue/docs/directives/hover.html" class="nav-link"> Hover 指令<small class="badge text-uppercase badge-success">New</small> </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/directives/popover.html" class="nav-link"> Popover 提示备注</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/directives/scrollspy.html" class="nav-link"> Scrollspy 滚动监听</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/directives/tooltip.html" class="nav-link"> Tooltip 提示指令</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/directives/visible.html" class="nav-link"> Visible 可见性操作<small class="badge text-uppercase badge-success">New</small> </a></li>
+</ul>
+</div>
+<div class="bd-toc-item"><a href="../../../bootstrap-vue/docs/icons.html" class="bd-toc-link"> Icons图标</a>
+<ul class="nav bd-sidenav">
+</ul>
+</div>
+  
+<div class="bd-toc-item"><a class="bd-toc-link" href="../../../bootstrap-vue/docs/reference">参考</a>
+<ul class="nav bd-sidenav">
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference" class="nav-link.html"> 参考目录 </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/accessibility.html" class="nav-link">友好访问</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/color-variants.html" class="nav-link">Color颜色变量 </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/images.html" class="nav-link"> 组件图像img的src路径解析</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/router-links.html" class="nav-link"> Router路由支持 </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/size-props.html" class="nav-link">大小规格</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/spacing-classes.html" class="nav-link">间距处理</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/starter-templates.html" class="nav-link">开始模板</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/theming.html" class="nav-link">主题色彩</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/utility-classes.html" class="nav-link">通用Class类</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/validation.html" class="nav-link">Form表单验证</a></li>
+</ul>
+</div><div class="bd-toc-item"> <a class="bd-toc-link" href="../components/alerts.html"> 杂项 </a>
+<ul class="nav bd-sidenav">
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/misc/changelog" class="nav-link"> Changelog </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/misc/contributing" class="nav-link"> Contributing </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/misc/settings" class="nav-link"> Settings </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/misc/third-party" class="nav-link"> Third party libraries </a></li>
+</ul>
+</div>
+<div class=""><a href="/play" class="bd-toc-link">在线模拟器</a></div>
+</nav>
+</div>
+
+<div class="d-none d-xl-block col-xl-2 bd-toc">
+<ul class="section-nav">
+<li class="nav-item toc-entry mb-2"><a target="_self" href="#navs" class="nav-link font-weight-bold"><span>Navs</span></a></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#overview" class="nav-link"><span>Overview</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#link-appearance" class="nav-link"><span>Link appearance</span></a>
+<ul class="nav flex-column">
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#tab-style" class="nav-link"><span>Tab style</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#pill-style" class="nav-link"><span>Pill style</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#small" class="nav-link"><span>Small</span></a></li>
+</ul>
+</li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#fill-and-justify" class="nav-link"><span>Fill and justify</span></a>
+<ul class="nav flex-column">
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#fill" class="nav-link"><span>Fill</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#justified" class="nav-link"><span>Justified</span></a></li>
+</ul>
+</li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#alignment" class="nav-link"><span>Alignment</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#vertical-variation" class="nav-link"><span>Vertical variation</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#dropdown-support" class="nav-link"><span>Dropdown support</span></a>
+<ul class="nav flex-column">
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#optionally-scoped-default-slot" class="nav-link"><span>Optionally scoped default slot</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#lazy-dropdown" class="nav-link"><span>Lazy dropdown</span></a></li>
+</ul>
+</li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#nav-text-content" class="nav-link"><span>Nav text content</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#nav-inline-forms" class="nav-link"><span>Nav inline forms</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#tabbed-local-content-support" class="nav-link"><span>Tabbed local content support</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#card-integration" class="nav-link"><span>Card integration</span></a>
+<ul class="nav flex-column">
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#using-with-vue-router" class="nav-link"><span>Using with Vue Router</span></a></li>
+</ul>
+</li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#accessibility" class="nav-link"><span>Accessibility</span></a>
+<ul class="nav flex-column">
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#tabbed-interface-accessibility" class="nav-link"><span>Tabbed interface accessibility</span></a></li>
+</ul>
+</li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#see-also" class="nav-link"><span>See also</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#component-reference" class="nav-link"><span>Component reference</span></a>
+<ul class="nav flex-column">
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#comp-ref-b-nav" class="nav-link"><span>&lt;b-nav&gt;</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#comp-ref-b-nav-item" class="nav-link"><span>&lt;b-nav-item&gt;</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#comp-ref-b-nav-text" class="nav-link"><span>&lt;b-nav-text&gt;</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#comp-ref-b-nav-form" class="nav-link"><span>&lt;b-nav-form&gt;</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#comp-ref-b-nav-item-dropdown" class="nav-link"><span>&lt;b-nav-item-dropdown&gt;</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#importing-individual-components" class="nav-link"><span>Importing individual components</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#importing-as-a-plugin" class="nav-link"><span>Importing as a Vue.js plugin</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+
+<nav data-v-aafc4aea="" aria-label="Breadcrumbs" class="float-left mt-2 mb-0 mb-lg-2">
+<ol data-v-aafc4aea="" class="breadcrumb d-inline-flex bg-transparent px-2 py-1 my-0">
+<li data-v-aafc4aea="" class="breadcrumb-item"><a data-v-aafc4aea="" href="../../" class="nuxt-link-active" target="_self">首页</a></li>
+<li data-v-aafc4aea="" class="breadcrumb-item"><a data-v-aafc4aea="" href="../../../bootstrap-vue/docs" class="nuxt-link-active" target="_self">中文手册</a></li>
+<li data-v-aafc4aea="" class="breadcrumb-item"><a data-v-aafc4aea="" href="../../../bootstrap-vue/docs/components/" class="nuxt-link-active" target="_self">组件</a></li>
+<li data-v-aafc4aea="" class="breadcrumb-item active"><span data-v-aafc4aea="" aria-current="location">导航</span></li>
+</ol>
+</nav>
+<div class="clearfix d-block"></div>
+  <h1 class="bd-title" id="content">导航(Navs)</h1>
+<p class="bd-lead">Navigation available in Bootstrap share general markup and styles, from the base <code translate="no" class="notranslate text-nowrap">&lt;b-nav&gt;</code> class to the <code translate="no" class="notranslate text-nowrap">active</code> and <code translate="no" class="notranslate text-nowrap">disabled</code> states. Swap modifier props to switch between each style.</p>
+  <script type="text/javascript" src="../../../v4/assets/js/pupCMS.js"></script>
+
+
+
+
+
+<nav class="bd-quick-links mb-3 d-xl-none" data-v-811345e6="">
+<header data-v-811345e6="">
+<button data-v-811345e6="" type="button" class="btn font-weight-bold btn-outline-secondary btn-sm btn-block collapsed" aria-controls="bd-quick-links-collapse" aria-expanded="false"><span data-v-811345e6="">Show</span> page table of contents </button>
+</header>
+<ul data-v-811345e6="" id="bd-quick-links-collapse" class="collapse" style="display: none;">
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#overview" class=""><span data-v-811345e6="">Overview</span></a> </li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#link-appearance" class=""><span data-v-811345e6="">Link appearance</span></a>
+<ul data-v-811345e6="">
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#tab-style" class=""><span data-v-811345e6="">Tab style</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#pill-style" class=""><span data-v-811345e6="">Pill style</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#small" class=""><span data-v-811345e6="">Small</span></a></li>
+</ul>
+</li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#fill-and-justify" class=""><span data-v-811345e6="">Fill and justify</span></a>
+<ul data-v-811345e6="">
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#fill" class=""><span data-v-811345e6="">Fill</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#justified" class=""><span data-v-811345e6="">Justified</span></a></li>
+</ul>
+</li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#alignment" class=""><span data-v-811345e6="">Alignment</span></a> </li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#vertical-variation" class=""><span data-v-811345e6="">Vertical variation</span></a> </li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#dropdown-support" class=""><span data-v-811345e6="">Dropdown support</span></a>
+<ul data-v-811345e6="">
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#optionally-scoped-default-slot" class=""><span data-v-811345e6="">Optionally scoped default slot</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#lazy-dropdown" class=""><span data-v-811345e6="">Lazy dropdown</span></a></li>
+</ul>
+</li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#nav-text-content" class=""><span data-v-811345e6="">Nav text content</span></a> </li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#nav-inline-forms" class=""><span data-v-811345e6="">Nav inline forms</span></a> </li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#tabbed-local-content-support" class=""><span data-v-811345e6="">Tabbed local content support</span></a> </li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#card-integration" class=""><span data-v-811345e6="">Card integration</span></a>
+<ul data-v-811345e6="">
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#using-with-vue-router" class=""><span data-v-811345e6="">Using with Vue Router</span></a></li>
+</ul>
+</li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#accessibility" class=""><span data-v-811345e6="">Accessibility</span></a>
+<ul data-v-811345e6="">
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#tabbed-interface-accessibility" class=""><span data-v-811345e6="">Tabbed interface accessibility</span></a></li>
+</ul>
+</li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#see-also" class=""><span data-v-811345e6="">See also</span></a> </li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#component-reference" class=""><span data-v-811345e6="">Component reference</span></a>
+<ul data-v-811345e6="">
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#comp-ref-b-nav" class=""><span data-v-811345e6="">&lt;b-nav&gt;</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#comp-ref-b-nav-item" class=""><span data-v-811345e6="">&lt;b-nav-item&gt;</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#comp-ref-b-nav-text" class=""><span data-v-811345e6="">&lt;b-nav-text&gt;</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#comp-ref-b-nav-form" class=""><span data-v-811345e6="">&lt;b-nav-form&gt;</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#comp-ref-b-nav-item-dropdown" class=""><span data-v-811345e6="">&lt;b-nav-item-dropdown&gt;</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#importing-individual-components" class=""><span data-v-811345e6="">Importing individual components</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#importing-as-a-plugin" class=""><span data-v-811345e6="">Importing as a Vue.js plugin</span></a></li>
+</ul>
+</li>
+</ul>
+</nav>
+<div translate="translate" class="bd-example vue-example vue-example-b-nav notranslate">
+<div>
+<ul class="nav">
+<li class="nav-item"><a target="_self" href="#" class="nav-link active">Active</a></li>
+<li class="nav-item"><a target="_self" href="#" class="nav-link">Link</a></li>
+<li class="nav-item"><a target="_self" href="#" class="nav-link">Another Link</a></li>
+<li class="nav-item"><a target="_self" tabindex="-1" aria-disabled="true" href="#" class="nav-link disabled">Disabled</a></li>
+</ul>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-nav</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-nav-item</span> <span class="hljs-attr">active</span>&gt;</span>Active<span class="hljs-tag">&lt;/<span class="hljs-name">b-nav-item</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-nav-item</span>&gt;</span>Link<span class="hljs-tag">&lt;/<span class="hljs-name">b-nav-item</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-nav-item</span>&gt;</span>Another Link<span class="hljs-tag">&lt;/<span class="hljs-name">b-nav-item</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-nav-item</span> <span class="hljs-attr">disabled</span>&gt;</span>Disabled<span class="hljs-tag">&lt;/<span class="hljs-name">b-nav-item</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-nav</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<h2 id="overview" class="bv-no-focus-ring"><span class="bd-content-title">Overview<a class="anchorjs-link" href="#overview" aria-labelledby="overview"></a></span></h2>
+<p>The base <code translate="no" class="notranslate text-nowrap">&lt;b-nav&gt;</code> component is built with flexbox and provides a strong foundation for building all
+types of navigation components. It includes some style overrides (for working with lists), some link
+padding for larger hit areas, and basic disabled styling. No active states are included in the base
+nav.</p>
+<p><code translate="no" class="notranslate text-nowrap">&lt;b-nav&gt;</code> supports the following child components:</p>
+<ul>
+<li><code translate="no" class="notranslate text-nowrap">&lt;b-nav-item&gt;</code> for actionable links (or router-links)</li>
+<li><code translate="no" class="notranslate text-nowrap">&lt;b-nav-item-dropdown&gt;</code> for dropdowns</li>
+<li><code translate="no" class="notranslate text-nowrap">&lt;b-nav-text&gt;</code> for plain text content</li>
+<li><code translate="no" class="notranslate text-nowrap">&lt;b-nav-form&gt;</code> for inline forms</li>
+</ul>
+<h2 id="link-appearance" class="bv-no-focus-ring"><span class="bd-content-title">Link appearance<a class="anchorjs-link" href="#link-appearance" aria-labelledby="link-appearance"></a></span></h2>
+<p>Two style variations are supported: <code translate="no" class="notranslate text-nowrap">tabs</code> and <code translate="no" class="notranslate text-nowrap">pills</code>, which support <code translate="no" class="notranslate text-nowrap">active</code> state styling. These
+variants are mutually exclusive - use only one style or the other.</p>
+<h3 id="tab-style" class="bv-no-focus-ring"><span class="bd-content-title">Tab style<a class="anchorjs-link" href="#tab-style" aria-labelledby="tab-style"></a></span></h3>
+<p>Make the nav look like tabs by setting the <code translate="no" class="notranslate text-nowrap">tabs</code> prop.</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-nav-tabs notranslate">
+<div>
+<ul class="nav nav-tabs">
+<li class="nav-item"><a target="_self" href="#" class="nav-link active">Active</a></li>
+<li class="nav-item"><a target="_self" href="#" class="nav-link">Link</a></li>
+<li class="nav-item"><a target="_self" href="#" class="nav-link">Another Link</a></li>
+<li class="nav-item"><a target="_self" tabindex="-1" aria-disabled="true" href="#" class="nav-link disabled">Disabled</a></li>
+</ul>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-nav</span> <span class="hljs-attr">tabs</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-nav-item</span> <span class="hljs-attr">active</span>&gt;</span>Active<span class="hljs-tag">&lt;/<span class="hljs-name">b-nav-item</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-nav-item</span>&gt;</span>Link<span class="hljs-tag">&lt;/<span class="hljs-name">b-nav-item</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-nav-item</span>&gt;</span>Another Link<span class="hljs-tag">&lt;/<span class="hljs-name">b-nav-item</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-nav-item</span> <span class="hljs-attr">disabled</span>&gt;</span>Disabled<span class="hljs-tag">&lt;/<span class="hljs-name">b-nav-item</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-nav</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<h3 id="pill-style" class="bv-no-focus-ring"><span class="bd-content-title">Pill style<a class="anchorjs-link" href="#pill-style" aria-labelledby="pill-style"></a></span></h3>
+<p>Use the pill style by setting the <code translate="no" class="notranslate text-nowrap">pills</code> prop.</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-nav-pills notranslate">
+<div>
+<ul class="nav nav-pills">
+<li class="nav-item"><a target="_self" href="#" class="nav-link active">Active</a></li>
+<li class="nav-item"><a target="_self" href="#" class="nav-link">Link</a></li>
+<li class="nav-item"><a target="_self" href="#" class="nav-link">Another Link</a></li>
+<li class="nav-item"><a target="_self" tabindex="-1" aria-disabled="true" href="#" class="nav-link disabled">Disabled</a></li>
+</ul>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-nav</span> <span class="hljs-attr">pills</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-nav-item</span> <span class="hljs-attr">active</span>&gt;</span>Active<span class="hljs-tag">&lt;/<span class="hljs-name">b-nav-item</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-nav-item</span>&gt;</span>Link<span class="hljs-tag">&lt;/<span class="hljs-name">b-nav-item</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-nav-item</span>&gt;</span>Another Link<span class="hljs-tag">&lt;/<span class="hljs-name">b-nav-item</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-nav-item</span> <span class="hljs-attr">disabled</span>&gt;</span>Disabled<span class="hljs-tag">&lt;/<span class="hljs-name">b-nav-item</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-nav</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<h3 id="small" class="bv-no-focus-ring"><span class="bd-content-title">Small<a class="anchorjs-link" href="#small" aria-labelledby="small"></a></span></h3>
+<p>Make the nav smaller by setting the <code translate="no" class="notranslate text-nowrap">small</code> prop.</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-nav-small notranslate">
+<div>
+<ul class="nav small">
+<li class="nav-item"><a target="_self" href="#" class="nav-link active">Active</a></li>
+<li class="nav-item"><a target="_self" href="#" class="nav-link">Link</a></li>
+<li class="nav-item"><a target="_self" href="#" class="nav-link">Another Link</a></li>
+<li class="nav-item"><a target="_self" tabindex="-1" aria-disabled="true" href="#" class="nav-link disabled">Disabled</a></li>
+</ul>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-nav</span> <span class="hljs-attr">small</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-nav-item</span> <span class="hljs-attr">active</span>&gt;</span>Active<span class="hljs-tag">&lt;/<span class="hljs-name">b-nav-item</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-nav-item</span>&gt;</span>Link<span class="hljs-tag">&lt;/<span class="hljs-name">b-nav-item</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-nav-item</span>&gt;</span>Another Link<span class="hljs-tag">&lt;/<span class="hljs-name">b-nav-item</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-nav-item</span> <span class="hljs-attr">disabled</span>&gt;</span>Disabled<span class="hljs-tag">&lt;/<span class="hljs-name">b-nav-item</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-nav</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<h2 id="fill-and-justify" class="bv-no-focus-ring"><span class="bd-content-title">Fill and justify<a class="anchorjs-link" href="#fill-and-justify" aria-labelledby="fill-and-justify"></a></span></h2>
+<p>Force your <code translate="no" class="notranslate text-nowrap">&lt;b-nav&gt;</code> content to extend the full available width.</p>
+<h3 id="fill" class="bv-no-focus-ring"><span class="bd-content-title">Fill<a class="anchorjs-link" href="#fill" aria-labelledby="fill"></a></span></h3>
+<p>To proportionately fill all available space with your <code translate="no" class="notranslate text-nowrap">&lt;b-nav-item&gt;</code> components, set the <code translate="no" class="notranslate text-nowrap">fill</code> prop. Notice that all horizontal space is occupied, but not every nav item has the same width.</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-nav-fill notranslate">
+<div>
+<ul class="nav nav-tabs nav-fill">
+<li class="nav-item"><a target="_self" href="#" class="nav-link active">Active</a></li>
+<li class="nav-item"><a target="_self" href="#" class="nav-link">Link</a></li>
+<li class="nav-item"><a target="_self" href="#" class="nav-link">Link with a long name </a></li>
+<li class="nav-item"><a target="_self" tabindex="-1" aria-disabled="true" href="#" class="nav-link disabled">Disabled</a></li>
+</ul>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-nav</span> <span class="hljs-attr">tabs</span> <span class="hljs-attr">fill</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-nav-item</span> <span class="hljs-attr">active</span>&gt;</span>Active<span class="hljs-tag">&lt;/<span class="hljs-name">b-nav-item</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-nav-item</span>&gt;</span>Link<span class="hljs-tag">&lt;/<span class="hljs-name">b-nav-item</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-nav-item</span>&gt;</span>Link with a long name <span class="hljs-tag">&lt;/<span class="hljs-name">b-nav-item</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-nav-item</span> <span class="hljs-attr">disabled</span>&gt;</span>Disabled<span class="hljs-tag">&lt;/<span class="hljs-name">b-nav-item</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-nav</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<h3 id="justified" class="bv-no-focus-ring"><span class="bd-content-title">Justified<a class="anchorjs-link" href="#justified" aria-labelledby="justified"></a></span></h3>
+<p>For equal-width elements, set the <code translate="no" class="notranslate text-nowrap">justified</code> prop instead. All horizontal space will be occupied by
+nav links, but unlike <code translate="no" class="notranslate text-nowrap">fill</code> above, every <code translate="no" class="notranslate text-nowrap">&lt;b-nav-item&gt;</code> will be the same width.</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-nav-justified notranslate">
+<div>
+<ul class="nav nav-tabs nav-justified">
+<li class="nav-item"><a target="_self" href="#" class="nav-link active">Active</a></li>
+<li class="nav-item"><a target="_self" href="#" class="nav-link">Link</a></li>
+<li class="nav-item"><a target="_self" href="#" class="nav-link">Link with a long name </a></li>
+<li class="nav-item"><a target="_self" tabindex="-1" aria-disabled="true" href="#" class="nav-link disabled">Disabled</a></li>
+</ul>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-nav</span> <span class="hljs-attr">tabs</span> <span class="hljs-attr">justified</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-nav-item</span> <span class="hljs-attr">active</span>&gt;</span>Active<span class="hljs-tag">&lt;/<span class="hljs-name">b-nav-item</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-nav-item</span>&gt;</span>Link<span class="hljs-tag">&lt;/<span class="hljs-name">b-nav-item</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-nav-item</span>&gt;</span>Link with a long name <span class="hljs-tag">&lt;/<span class="hljs-name">b-nav-item</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-nav-item</span> <span class="hljs-attr">disabled</span>&gt;</span>Disabled<span class="hljs-tag">&lt;/<span class="hljs-name">b-nav-item</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-nav</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<h2 id="alignment" class="bv-no-focus-ring"><span class="bd-content-title">Alignment<a class="anchorjs-link" href="#alignment" aria-labelledby="alignment"></a></span></h2>
+<p>To align your <code translate="no" class="notranslate text-nowrap">&lt;b-nav-item&gt;</code> components, use the <code translate="no" class="notranslate text-nowrap">align</code> prop. Available values are <code translate="no" class="notranslate text-nowrap">left</code>, <code translate="no" class="notranslate text-nowrap">center</code> and <code translate="no" class="notranslate text-nowrap">right</code>.</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-nav-alignment notranslate">
+<div>
+<ul class="nav nav-tabs justify-content-center">
+<li class="nav-item"><a target="_self" href="#" class="nav-link active">Active</a></li>
+<li class="nav-item"><a target="_self" href="#" class="nav-link">Link</a></li>
+<li class="nav-item"><a target="_self" href="#" class="nav-link">Link with a long name </a></li>
+<li class="nav-item"><a target="_self" tabindex="-1" aria-disabled="true" href="#" class="nav-link disabled">Disabled</a></li>
+</ul>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-nav</span> <span class="hljs-attr">tabs</span> <span class="hljs-attr">align</span>=<span class="hljs-string">"center"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-nav-item</span> <span class="hljs-attr">active</span>&gt;</span>Active<span class="hljs-tag">&lt;/<span class="hljs-name">b-nav-item</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-nav-item</span>&gt;</span>Link<span class="hljs-tag">&lt;/<span class="hljs-name">b-nav-item</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-nav-item</span>&gt;</span>Link with a long name <span class="hljs-tag">&lt;/<span class="hljs-name">b-nav-item</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-nav-item</span> <span class="hljs-attr">disabled</span>&gt;</span>Disabled<span class="hljs-tag">&lt;/<span class="hljs-name">b-nav-item</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-nav</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<h2 id="vertical-variation" class="bv-no-focus-ring"><span class="bd-content-title">Vertical variation<a class="anchorjs-link" href="#vertical-variation" aria-labelledby="vertical-variation"></a></span></h2>
+<p>By default <code translate="no" class="notranslate text-nowrap">&lt;b-nav&gt;</code> appear on a horizontal line. Stack your navigation by setting the <code translate="no" class="notranslate text-nowrap">vertical</code> prop.</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-nav-vertical notranslate">
+<div>
+<ul class="nav w-25 flex-column">
+<li class="nav-item"><a target="_self" href="#" class="nav-link active">Active</a></li>
+<li class="nav-item"><a target="_self" href="#" class="nav-link">Link</a></li>
+<li class="nav-item"><a target="_self" href="#" class="nav-link">Another Link</a></li>
+<li class="nav-item"><a target="_self" tabindex="-1" aria-disabled="true" href="#" class="nav-link disabled">Disabled</a></li>
+</ul>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-nav</span> <span class="hljs-attr">vertical</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"w-25"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-nav-item</span> <span class="hljs-attr">active</span>&gt;</span>Active<span class="hljs-tag">&lt;/<span class="hljs-name">b-nav-item</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-nav-item</span>&gt;</span>Link<span class="hljs-tag">&lt;/<span class="hljs-name">b-nav-item</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-nav-item</span>&gt;</span>Another Link<span class="hljs-tag">&lt;/<span class="hljs-name">b-nav-item</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-nav-item</span> <span class="hljs-attr">disabled</span>&gt;</span>Disabled<span class="hljs-tag">&lt;/<span class="hljs-name">b-nav-item</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-nav</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<h2 id="dropdown-support" class="bv-no-focus-ring"><span class="bd-content-title">Dropdown support<a class="anchorjs-link" href="#dropdown-support" aria-labelledby="dropdown-support"></a></span></h2>
+<p>Use <code translate="no" class="notranslate text-nowrap">&lt;b-nav-item-dropdown&gt;</code> to place dropdown items within your nav.</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-nav-dropdown notranslate">
+<div>
+<ul class="nav nav-pills">
+<li class="nav-item"><a target="_self" href="#" class="nav-link active">Active</a></li>
+<li class="nav-item"><a target="_self" href="#" class="nav-link">Link</a></li>
+<li id="my-nav-dropdown" class="nav-item b-nav-dropdown dropdown"><a id="my-nav-dropdown__BV_button_" aria-haspopup="true" aria-expanded="false" target="_self" href="#" class="nav-link dropdown-toggle nav-link-custom"><span>Dropdown</span></a>
+<ul tabindex="-1" aria-labelledby="my-nav-dropdown__BV_button_" class="dropdown-menu dropdown-menu-right">
+<li role="presentation"><a role="menuitem" target="_self" href="#" class="dropdown-item">One</a></li>
+<li role="presentation"><a role="menuitem" target="_self" href="#" class="dropdown-item">Two</a></li>
+<li role="presentation">
+<hr role="separator" aria-orientation="horizontal" class="dropdown-divider">
+</li>
+<li role="presentation"><a role="menuitem" target="_self" href="#" class="dropdown-item">Three</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-nav</span> <span class="hljs-attr">pills</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-nav-item</span> <span class="hljs-attr">active</span>&gt;</span>Active<span class="hljs-tag">&lt;/<span class="hljs-name">b-nav-item</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-nav-item</span>&gt;</span>Link<span class="hljs-tag">&lt;/<span class="hljs-name">b-nav-item</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-nav-item-dropdown</span>
+      <span class="hljs-attr">id</span>=<span class="hljs-string">"my-nav-dropdown"</span>
+      <span class="hljs-attr">text</span>=<span class="hljs-string">"Dropdown"</span>
+      <span class="hljs-attr">toggle-class</span>=<span class="hljs-string">"nav-link-custom"</span>
+      <span class="hljs-attr">right</span>
+    &gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-dropdown-item</span>&gt;</span>One<span class="hljs-tag">&lt;/<span class="hljs-name">b-dropdown-item</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-dropdown-item</span>&gt;</span>Two<span class="hljs-tag">&lt;/<span class="hljs-name">b-dropdown-item</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-dropdown-divider</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-dropdown-divider</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-dropdown-item</span>&gt;</span>Three<span class="hljs-tag">&lt;/<span class="hljs-name">b-dropdown-item</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-nav-item-dropdown</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-nav</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<p>Sometimes you want to add your own class names to the generated dropdown toggle button, that by
+default have the classes <code translate="no" class="notranslate text-nowrap">nav-link</code> and <code translate="no" class="notranslate text-nowrap">dropdown-toggle</code>. Use the <code translate="no" class="notranslate text-nowrap">toggle-class</code> prop to add them
+(like above) which will produce something like:</p>
+<pre class="hljs html text-monospace p-2 notranslate" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"my-nav-dropdown"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nav-item b-nav-dropdown dropdown"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">a</span>
+    <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>
+    <span class="hljs-attr">id</span>=<span class="hljs-string">"my-nav-dropdown__BV_button_"</span>
+    <span class="hljs-attr">aria-haspopup</span>=<span class="hljs-string">"true"</span>
+    <span class="hljs-attr">aria-expanded</span>=<span class="hljs-string">"false"</span>
+    <span class="hljs-attr">class</span>=<span class="hljs-string">"nav-link dropdown-toggle nav-link-custom"</span>
+  &gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+  ...
+<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span></pre>
+<p>Refer to <a href="../../../bootstrap-vue/docs/components/dropdown" class="font-weight-bold"><code translate="no" class="notranslate text-nowrap">&lt;b-dropdown&gt;</code></a> for a list of supported sub-components.</p>
+<h3 id="optionally-scoped-default-slot" class="bv-no-focus-ring"><span class="bd-content-title">Optionally scoped default slot<a class="anchorjs-link" href="#optionally-scoped-default-slot" aria-labelledby="optionally-scoped-default-slot"></a></span></h3>
+<p>The dropdown default slot is optionally scoped with the following scope available:</p>
+<div class="table-responsive-sm">
+<table class="b-table table table-bordered table-striped bv-docs-table">
+<thead class="thead-default">
+<tr>
+<th>Property or Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code translate="no" class="notranslate text-nowrap">hide()</code></td>
+<td>Can be used to close the dropdown menu. Accepts an optional boolean argument, which if <code translate="no" class="notranslate text-nowrap">true</code> returns focus to the toggle button</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="lazy-dropdown" class="bv-no-focus-ring"><span class="bd-content-title">Lazy dropdown<a class="anchorjs-link" href="#lazy-dropdown" aria-labelledby="lazy-dropdown"></a></span></h3>
+<p>By default, <code translate="no" class="notranslate text-nowrap">&lt;b-nav-item-dropdown&gt;</code> renders the menu contents in the DOM even when the menu is not
+shown. When there are a large number of dropdowns rendered on the same page, performance could be
+impacted due to larger overall memory utilization. You can instruct <code translate="no" class="notranslate text-nowrap">&lt;b-nav-item-dropdown&gt;</code> to
+render the menu contents only when it is shown by setting the <code translate="no" class="notranslate text-nowrap">lazy</code> prop to true.</p>
+<h2 id="nav-text-content" class="bv-no-focus-ring"><span class="bd-content-title">Nav text content<a class="anchorjs-link" href="#nav-text-content" aria-labelledby="nav-text-content"></a></span></h2>
+<p>Use the <code translate="no" class="notranslate text-nowrap">&lt;b-nav-text&gt;</code> child component to place plain text content into the nav:</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-nav-text notranslate">
+<div>
+<ul class="nav">
+<li class="nav-item"><a target="_self" href="#1" class="nav-link">Link 1</a></li>
+<li class="nav-item"><a target="_self" href="#2" class="nav-link">Link 2</a></li>
+<li class="navbar-text">Plain text</li>
+</ul>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-nav</span> &gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-nav-item</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#1"</span>&gt;</span>Link 1<span class="hljs-tag">&lt;/<span class="hljs-name">b-nav-item</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-nav-item</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#2"</span>&gt;</span>Link 2<span class="hljs-tag">&lt;/<span class="hljs-name">b-nav-item</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-nav-text</span>&gt;</span>Plain text<span class="hljs-tag">&lt;/<span class="hljs-name">b-nav-text</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-nav</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<h2 id="nav-inline-forms" class="bv-no-focus-ring"><span class="bd-content-title">Nav inline forms<a class="anchorjs-link" href="#nav-inline-forms" aria-labelledby="nav-inline-forms"></a></span></h2>
+<p>Use the <code translate="no" class="notranslate text-nowrap">&lt;b-nav-form&gt;</code> child component to place an <em>inline</em> form into the nav:</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-nav-form notranslate">
+<div>
+<ul class="nav nav-pills">
+<li class="nav-item"><a target="_self" href="#1" class="nav-link active">Link 1</a></li>
+<li class="nav-item"><a target="_self" href="#2" class="nav-link">Link 2</a></li>
+<li class="form-inline">
+<form class="form-inline">
+<input type="text" class="mr-1 form-control" aria-label="Input" id="__BVID__577">
+<button type="submit" class="btn btn-secondary">Ok</button>
+</form>
+</li>
+</ul>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-nav</span> <span class="hljs-attr">pills</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-nav-item</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#1"</span> <span class="hljs-attr">active</span>&gt;</span>Link 1<span class="hljs-tag">&lt;/<span class="hljs-name">b-nav-item</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-nav-item</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#2"</span>&gt;</span>Link 2<span class="hljs-tag">&lt;/<span class="hljs-name">b-nav-item</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-nav-form</span> @<span class="hljs-attr">submit.stop.prevent</span>=<span class="hljs-string">"alert('Form Submitted')"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-form-input</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Input"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mr-1"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-input</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span>&gt;</span>Ok<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-nav-form</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-nav</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<p>Refer to the <a href="../../../bootstrap-vue/docs/components/form#inline-form" class="font-weight-bold"><code translate="no" class="notranslate text-nowrap">&lt;b-form&gt;</code> inline</a> documentation for additional
+details on placing form controls.</p>
+<h2 id="tabbed-local-content-support" class="bv-no-focus-ring"><span class="bd-content-title">Tabbed local content support<a class="anchorjs-link" href="#tabbed-local-content-support" aria-labelledby="tabbed-local-content-support"></a></span></h2>
+<p>See the <a href="../../../bootstrap-vue/docs/components/tabs" class="font-weight-bold"><code translate="no" class="notranslate text-nowrap">&lt;b-tabs&gt;</code></a> component for creating tabbable panes of local content
+(not suited for navigation).</p>
+<h2 id="card-integration" class="bv-no-focus-ring"><span class="bd-content-title">Card integration<a class="anchorjs-link" href="#card-integration" aria-labelledby="card-integration"></a></span></h2>
+<p>Use a <code translate="no" class="notranslate text-nowrap">&lt;b-nav&gt;</code> in a <a href="../../../bootstrap-vue/docs/components/card" class="font-weight-bold"><code translate="no" class="notranslate text-nowrap">&lt;b-card&gt;</code></a> header, by enabling the <code translate="no" class="notranslate text-nowrap">card-header</code> prop
+on <code translate="no" class="notranslate text-nowrap">&lt;b-nav&gt;</code> and setting either the <code translate="no" class="notranslate text-nowrap">pills</code> or <code translate="no" class="notranslate text-nowrap">tabs</code> props:</p>
+<p><strong>Tabs style:</strong></p>
+<div translate="translate" class="bd-example vue-example vue-example-nav-card-tabs notranslate">
+<div>
+<div class="card">
+<nav class="card-header">
+<ul class="nav nav-tabs card-header-tabs">
+<li class="nav-item"><a target="_self" href="#" class="nav-link active">Active</a></li>
+<li class="nav-item"><a target="_self" href="#" class="nav-link">Inactive</a></li>
+<li class="nav-item"><a target="_self" tabindex="-1" aria-disabled="true" href="#" class="nav-link disabled">Disabled</a></li>
+</ul>
+</nav>
+<div class="card-body text-center">
+<p class="card-text"> With supporting text below as a natural lead-in to additional content. </p>
+<button type="button" class="btn btn-primary">Go somewhere</button>
+</div>
+</div>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-card</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Card Title"</span> <span class="hljs-attr">no-body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-card-header</span> <span class="hljs-attr">header-tag</span>=<span class="hljs-string">"nav"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-nav</span> <span class="hljs-attr">card-header</span> <span class="hljs-attr">tabs</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">b-nav-item</span> <span class="hljs-attr">active</span>&gt;</span>Active<span class="hljs-tag">&lt;/<span class="hljs-name">b-nav-item</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">b-nav-item</span>&gt;</span>Inactive<span class="hljs-tag">&lt;/<span class="hljs-name">b-nav-item</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">b-nav-item</span> <span class="hljs-attr">disabled</span>&gt;</span>Disabled<span class="hljs-tag">&lt;/<span class="hljs-name">b-nav-item</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">b-nav</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-card-header</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-card-body</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-center"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-card-text</span>&gt;</span>
+        With supporting text below as a natural lead-in to additional content.
+      <span class="hljs-tag">&lt;/<span class="hljs-name">b-card-text</span>&gt;</span>
+
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"primary"</span>&gt;</span>Go somewhere<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-card-body</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-card</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<p><strong>Pill style:</strong></p>
+<div translate="translate" class="bd-example vue-example vue-example-nav-card-pills notranslate">
+<div>
+<div class="card">
+<nav class="card-header">
+<ul class="nav nav-pills card-header-pills">
+<li class="nav-item"><a target="_self" href="#" class="nav-link active">Active</a></li>
+<li class="nav-item"><a target="_self" href="#" class="nav-link">Inactive</a></li>
+<li class="nav-item"><a target="_self" tabindex="-1" aria-disabled="true" href="#" class="nav-link disabled">Disabled</a></li>
+</ul>
+</nav>
+<div class="card-body text-center">
+<p class="card-text"> With supporting text below as a natural lead-in to additional content. </p>
+<button type="button" class="btn btn-primary">Go somewhere</button>
+</div>
+</div>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-card</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Card Title"</span> <span class="hljs-attr">no-body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-card-header</span> <span class="hljs-attr">header-tag</span>=<span class="hljs-string">"nav"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-nav</span> <span class="hljs-attr">card-header</span> <span class="hljs-attr">pills</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">b-nav-item</span> <span class="hljs-attr">active</span>&gt;</span>Active<span class="hljs-tag">&lt;/<span class="hljs-name">b-nav-item</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">b-nav-item</span>&gt;</span>Inactive<span class="hljs-tag">&lt;/<span class="hljs-name">b-nav-item</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">b-nav-item</span> <span class="hljs-attr">disabled</span>&gt;</span>Disabled<span class="hljs-tag">&lt;/<span class="hljs-name">b-nav-item</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">b-nav</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-card-header</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-card-body</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-center"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-card-text</span>&gt;</span>
+        With supporting text below as a natural lead-in to additional content.
+      <span class="hljs-tag">&lt;/<span class="hljs-name">b-card-text</span>&gt;</span>
+
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"primary"</span>&gt;</span>Go somewhere<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-card-body</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-card</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<p><strong>Plain style:</strong></p>
+<p>The <code translate="no" class="notranslate text-nowrap">card-header</code> prop is only needed when you are applying <code translate="no" class="notranslate text-nowrap">tabs</code> or <code translate="no" class="notranslate text-nowrap">pills</code> style. Note that
+Bootstrap v4 SCSS does not have special styling for <code translate="no" class="notranslate text-nowrap">active</code> state plain style nav items.</p>
+<div translate="translate" class="bd-example vue-example vue-example-nav-card-plain notranslate">
+<div>
+<div class="card">
+<nav class="card-header">
+<ul class="nav">
+<li class="nav-item"><a target="_self" href="#" class="nav-link active">Active</a></li>
+<li class="nav-item"><a target="_self" href="#" class="nav-link">Inactive</a></li>
+<li class="nav-item"><a target="_self" tabindex="-1" aria-disabled="true" href="#" class="nav-link disabled">Disabled</a></li>
+</ul>
+</nav>
+<div class="card-body text-center">
+<p class="card-text"> With supporting text below as a natural lead-in to additional content. </p>
+<button type="button" class="btn btn-primary">Go somewhere</button>
+</div>
+</div>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-card</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Card Title"</span> <span class="hljs-attr">no-body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-card-header</span> <span class="hljs-attr">header-tag</span>=<span class="hljs-string">"nav"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-nav</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">b-nav-item</span> <span class="hljs-attr">active</span>&gt;</span>Active<span class="hljs-tag">&lt;/<span class="hljs-name">b-nav-item</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">b-nav-item</span>&gt;</span>Inactive<span class="hljs-tag">&lt;/<span class="hljs-name">b-nav-item</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">b-nav-item</span> <span class="hljs-attr">disabled</span>&gt;</span>Disabled<span class="hljs-tag">&lt;/<span class="hljs-name">b-nav-item</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">b-nav</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-card-header</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-card-body</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-center"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-card-text</span>&gt;</span>
+        With supporting text below as a natural lead-in to additional content.
+      <span class="hljs-tag">&lt;/<span class="hljs-name">b-card-text</span>&gt;</span>
+
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"primary"</span>&gt;</span>Go somewhere<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-card-body</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-card</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<p>The <code translate="no" class="notranslate text-nowrap">card-header</code> prop has no styling effect if the <code translate="no" class="notranslate text-nowrap">&lt;b-nav&gt;</code> is in <code translate="no" class="notranslate text-nowrap">vertical</code> mode.</p>
+<h3 id="using-with-vue-router" class="bv-no-focus-ring"><span class="bd-content-title">Using with Vue Router<a class="anchorjs-link" href="#using-with-vue-router" aria-labelledby="using-with-vue-router"></a></span></h3>
+<p>Have your card <code translate="no" class="notranslate text-nowrap">&lt;b-nav&gt;</code> control vue router nested routes via <code translate="no" class="notranslate text-nowrap">&lt;router-view&gt;</code> or <code translate="no" class="notranslate text-nowrap">&lt;nuxt-child&gt;</code> components, to created tabbed content that changes with route URL:</p>
+<pre class="hljs html text-monospace p-2 notranslate" translate="no">// On page with route `/some/route`
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-card</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Card Title"</span> <span class="hljs-attr">no-body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-card-header</span> <span class="hljs-attr">header-tag</span>=<span class="hljs-string">"nav"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-nav</span> <span class="hljs-attr">card-header</span> <span class="hljs-attr">tabs</span>&gt;</span>
+        <span class="hljs-comment">&lt;!-- &lt;b-nav-item&gt;'s with child routes. Note the trailing slash on the first &lt;b-nav-item&gt; --&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">b-nav-item</span> <span class="hljs-attr">to</span>=<span class="hljs-string">"/some/route/"</span> <span class="hljs-attr">exact</span> <span class="hljs-attr">exact-active-class</span>=<span class="hljs-string">"active"</span>&gt;</span>Active<span class="hljs-tag">&lt;/<span class="hljs-name">b-nav-item</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">b-nav-item</span> <span class="hljs-attr">to</span>=<span class="hljs-string">"/some/route/foo"</span> <span class="hljs-attr">exact</span> <span class="hljs-attr">exact-active-class</span>=<span class="hljs-string">"active"</span>&gt;</span>Foo<span class="hljs-tag">&lt;/<span class="hljs-name">b-nav-item</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">b-nav-item</span> <span class="hljs-attr">to</span>=<span class="hljs-string">"/some/route/bar"</span> <span class="hljs-attr">exact</span> <span class="hljs-attr">exact-active-class</span>=<span class="hljs-string">"active"</span>&gt;</span>Bar<span class="hljs-tag">&lt;/<span class="hljs-name">b-nav-item</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">b-nav</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-card-header</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-card-body</span>&gt;</span>
+      <span class="hljs-comment">&lt;!-- Child route gets rendered in &lt;router-view&gt; or &lt;nuxt-child&gt; --&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">router-view</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">router-view</span>&gt;</span>
+      <span class="hljs-comment">&lt;!-- Or if using Nuxt.js
+      &lt;nuxt-child&gt;&lt;/nuxt-child&gt;
+      --&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-card-body</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-card</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<p>Note: Vue Router does not support defining active routes with hashes (<code translate="no" class="notranslate text-nowrap">#</code>), which is why you must
+define the "tab" content as child routes.</p>
+<p><strong>Example router config for above:</strong></p>
+<!-- eslint-disable no-unused-vars, no-undef -->
+
+<pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-keyword">const</span> routes = [
+  {
+    <span class="hljs-attr">path</span>: <span class="hljs-string">'/some/route'</span>,
+    <span class="hljs-comment">// We don't provide a name on this parent route, but rather</span>
+    <span class="hljs-comment">// set the name on the default child route instead</span>
+    <span class="hljs-comment">// name: 'some-route',</span>
+    <span class="hljs-attr">component</span>: SomeRouteComponent,
+    <span class="hljs-comment">// Child route "tabs"</span>
+    <span class="hljs-attr">children</span>: [
+      <span class="hljs-comment">// Note we provide the above parent route name on the default child tab</span>
+      <span class="hljs-comment">// route to ensure this tab is rendered by default when using named routes</span>
+      { <span class="hljs-attr">path</span>: <span class="hljs-string">''</span>, <span class="hljs-attr">component</span>: DefaultTabComponent, <span class="hljs-attr">name</span>: <span class="hljs-string">'some-route'</span> },
+      { <span class="hljs-attr">path</span>: <span class="hljs-string">'foo'</span>, <span class="hljs-attr">component</span>: FooTabComponent },
+      { <span class="hljs-attr">path</span>: <span class="hljs-string">'bar'</span>, <span class="hljs-attr">component</span>: BarTabComponent }
+    ]
+  }
+]</pre>
+<p>One can also use Vue Router <a href="https://router.vuejs.org/guide/essentials/named-routes.html#named-routes" target="_blank" rel="noopener">named routes</a> and/or
+route params instead of path based routes.</p>
+<p>For more details see:</p>
+<ul>
+<li><a href="https://router.vuejs.org/api/#router-view" target="_blank" rel="noopener">Vue Router <code translate="no" class="notranslate text-nowrap">&lt;router-view&gt;</code></a></li>
+<li><a href="https://nuxtjs.org/api/components-nuxt-child" target="_blank" rel="noopener">Nuxt.JS <code translate="no" class="notranslate text-nowrap">&lt;nuxt-child&gt;</code></a></li>
+</ul>
+<h2 id="accessibility" class="bv-no-focus-ring"><span class="bd-content-title">Accessibility<a class="anchorjs-link" href="#accessibility" aria-labelledby="accessibility"></a></span></h2>
+<p>If you're using <code translate="no" class="notranslate text-nowrap">&lt;b-nav&gt;</code> to provide a navigation bar, be sure to add a <code translate="no" class="notranslate text-nowrap">role="navigation"</code> to the
+most logical parent container of <code translate="no" class="notranslate text-nowrap">&lt;b-nav&gt;</code>, or wrap a <code translate="no" class="notranslate text-nowrap">&lt;nav&gt;</code> element around <code translate="no" class="notranslate text-nowrap">&lt;b-nav&gt;</code>. Do <strong>not</strong> add the role to the <code translate="no" class="notranslate text-nowrap">&lt;b-nav&gt;</code> itself, as this would prevent it from being announced as an actual
+list by assistive technologies.</p>
+<p>When using a <code translate="no" class="notranslate text-nowrap">&lt;b-nav-item-dropdown&gt;</code> in your <code translate="no" class="notranslate text-nowrap">&lt;b-nav&gt;</code>, be sure to assign a unique <code translate="no" class="notranslate text-nowrap">id</code> prop value
+to the <code translate="no" class="notranslate text-nowrap">&lt;b-nav-dropdown&gt;</code> so that the appropriate <code translate="no" class="notranslate text-nowrap">aria-*</code> attributes can be automatically
+generated.</p>
+<h3 id="tabbed-interface-accessibility" class="bv-no-focus-ring"><span class="bd-content-title">Tabbed interface accessibility<a class="anchorjs-link" href="#tabbed-interface-accessibility" aria-labelledby="tabbed-interface-accessibility"></a></span></h3>
+<p>Note that navigation bars, even if visually styled as tabs, should <strong>not</strong> be given <code translate="no" class="notranslate text-nowrap">role="tablist"</code>, <code translate="no" class="notranslate text-nowrap">role="tab"</code> or <code translate="no" class="notranslate text-nowrap">role="tabpanel"</code> attributes. These are only appropriate for <a href="../../../bootstrap-vue/docs/components/tabs" class="font-weight-bold">tabbed interfaces</a> that do not change the URL or <code translate="no" class="notranslate text-nowrap">$route</code>, as described in
+the <a href="https://www.w3.org/TR/wai-aria-practices/#tabpanel" target="_blank" rel="noopener">WAI ARIA Authoring Practices</a>. See <a href="../../../bootstrap-vue/docs/components/tabs" class="font-weight-bold"><code translate="no" class="notranslate text-nowrap">&lt;b-tabs&gt;</code></a> for dynamic tabbed interfaces that are compliant with WAI ARIA.</p>
+<p>Tabbed interfaces should avoid using dropdown menus, as this causes both usability and accessibility
+issues:</p>
+<ul>
+<li>From a usability perspective, the fact that the currently displayed tab’s trigger element is not
+immediately visible (as it’s inside the closed dropdown menu) can cause confusion.</li>
+<li>From an accessibility point of view, there is currently no sensible way to map this sort of
+construct to a standard WAI ARIA pattern, meaning that it cannot be easily made understandable to
+users of assistive technologies.</li>
+</ul>
+<h2 id="see-also" class="bv-no-focus-ring"><span class="bd-content-title">See also<a class="anchorjs-link" href="#see-also" aria-labelledby="see-also"></a></span></h2>
+<ul>
+<li><a href="../../../bootstrap-vue/docs/components/tabs" class="font-weight-bold"><code translate="no" class="notranslate text-nowrap">&lt;b-tabs&gt;</code></a> to create tabbable panes of local content, even via dropdown
+menus.</li>
+<li><a href="../../../bootstrap-vue/docs/components/navbar" class="font-weight-bold"><code translate="no" class="notranslate text-nowrap">&lt;b-navbar&gt;</code></a> a wrapper that positions branding, navigation, and other
+elements in a concise header.</li>
+<li><a href="../../../bootstrap-vue/docs/components/dropdown" class="font-weight-bold"><code translate="no" class="notranslate text-nowrap">&lt;b-dropdown&gt;</code></a> for sub-components that you can place inside <code translate="no" class="notranslate text-nowrap">&lt;b-nav-item-dropdown&gt;</code></li>
+<li><a href="../../../bootstrap-vue/docs/reference/router-links" class="font-weight-bold">Router Link Support reference</a> for information about router-link
+specific props available on <code translate="no" class="notranslate text-nowrap">&lt;b-nav-item&gt;</code></li>
+</ul>
+<!-- Component reference added automatically from component package.json --> 
+
+<h2 id="component-reference" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title">Component reference<a href="../../../bootstrap-vue/docs/components/nav/#component-reference" class="anchorjs-link" aria-labelledby="component-reference" target="_self"></a></span></h2>
+<section data-v-866a22e8="" class="bd-content">
+<header data-v-866a22e8="" class="row align-items-center">
+<div data-v-866a22e8="" class="col-sm-9">
+<h3 data-v-866a22e8="" id="comp-ref-b-nav" tabindex="-1" class="bv-no-focus-ring"><span data-v-866a22e8="" class="bd-content-title"><code data-v-866a22e8="" translate="translate" class="notranslate bigger">&lt;b-nav&gt;</code><a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/nav/#comp-ref-b-nav" class="anchorjs-link" aria-labelledby="comp-ref-b-nav" target="_self"></a></span></h3>
+ <a data-v-866a22e8="" rel="noopener" target="_blank" href="https://vuejs.org/v2/guide/render-function.html#Functional-Components" class="badge badge-secondary"> Functional Component </a></div>
+<div data-v-866a22e8="" class="text-sm-right col-sm-3"><a data-v-866a22e8="" rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev/src/components/nav/nav.js" class="btn btn-outline-secondary btn-sm"> View source </a></div>
+</header>
+<ul data-v-866a22e8="" class="component-ref-mini-toc my-3">
+
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-nav-props"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-nav&gt;</code> Properties </a></li>
+   
+</ul>
+
+<article data-v-866a22e8="" class="bd-content">
+<h4 data-v-866a22e8="" id="comp-ref-b-nav-props" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> Properties <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/nav/#comp-ref-b-nav-props" class="anchorjs-link" aria-labelledby="comp-ref-b-nav-props" target="_self"></a></span></h4>
+<div data-v-866a22e8="" class="table-responsive-sm">
+<table role="table" aria-busy="false" aria-colcount="4" class="table b-table bv-docs-table table-striped" id="__BVID__336">
+
+<thead role="rowgroup" class="">
+
+<tr role="row" class="">
+<th role="columnheader" scope="col" aria-colindex="1" class="">Property</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">Type</th>
+<th role="columnheader" scope="col" aria-colindex="3" class="">Default</th>
+<th role="columnheader" scope="col" aria-colindex="4" class="">Description</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+
+<tr role="row" data-pk="tag" class="" id="__BVID__336__row_tag">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">tag</code>     </td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'ul'</code></td>
+<td aria-colindex="4" role="cell" class="">Specify the HTML tag to render instead of the default tag</td>
+</tr>
+
+<tr role="row" data-pk="fill" class="" id="__BVID__336__row_fill">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">fill</code>     </td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">Proportionately fills all horizontal space with nav items. All horizontal space is occupied, but not every nav item has the same width</td>
+</tr>
+
+<tr role="row" data-pk="justified" class="" id="__BVID__336__row_justified">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">justified</code>     </td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">Fills all horizontal space with nav items, but unlike 'fill', every nav item will be the same width</td>
+</tr>
+
+<tr role="row" data-pk="align" class="" id="__BVID__336__row_align">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">align</code>     </td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">Align the nav items in the nav: 'start' (or 'left'), 'center', 'end' (or 'right')</td>
+</tr>
+
+<tr role="row" data-pk="tabs" class="" id="__BVID__336__row_tabs">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">tabs</code>     </td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">Renders the nav items with the appearance of tabs</td>
+</tr>
+
+<tr role="row" data-pk="pills" class="" id="__BVID__336__row_pills">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">pills</code>     </td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">Renders the nav items with the appearance of pill buttons</td>
+</tr>
+
+<tr role="row" data-pk="vertical" class="" id="__BVID__336__row_vertical">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">vertical</code>     </td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">Renders the nav vertically</td>
+</tr>
+
+<tr role="row" data-pk="small" class="" id="__BVID__336__row_small">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">small</code>     </td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">Makes the nav smaller</td>
+</tr>
+
+<tr role="row" data-pk="card-header" class="" id="__BVID__336__row_card-header">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">card-header</code>  <span data-v-866a22e8="" class="badge badge-secondary">v2.0.0+</span>   </td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">Set this prop when the nav is placed inside a card header</td>
+</tr>
+
+</tbody>
+
+</table>
+</div>
+ </article>
+   </section>
+<section data-v-866a22e8="" class="bd-content">
+<header data-v-866a22e8="" class="row align-items-center">
+<div data-v-866a22e8="" class="col-sm-9">
+<h3 data-v-866a22e8="" id="comp-ref-b-nav-item" tabindex="-1" class="bv-no-focus-ring"><span data-v-866a22e8="" class="bd-content-title"><code data-v-866a22e8="" translate="translate" class="notranslate bigger">&lt;b-nav-item&gt;</code><a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/nav/#comp-ref-b-nav-item" class="anchorjs-link" aria-labelledby="comp-ref-b-nav-item" target="_self"></a></span></h3>
+ <a data-v-866a22e8="" rel="noopener" target="_blank" href="https://vuejs.org/v2/guide/render-function.html#Functional-Components" class="badge badge-secondary"> Functional Component </a></div>
+<div data-v-866a22e8="" class="text-sm-right col-sm-3"><a data-v-866a22e8="" rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev/src/components/nav/nav-item.js" class="btn btn-outline-secondary btn-sm"> View source </a></div>
+</header>
+<ul data-v-866a22e8="" class="component-ref-mini-toc my-3">
+
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-nav-item-props"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-nav-item&gt;</code> Properties </a></li>
+   
+</ul>
+
+<article data-v-866a22e8="" class="bd-content">
+<h4 data-v-866a22e8="" id="comp-ref-b-nav-item-props" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> Properties <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/nav/#comp-ref-b-nav-item-props" class="anchorjs-link" aria-labelledby="comp-ref-b-nav-item-props" target="_self"></a></span></h4>
+<div data-v-866a22e8="" class="table-responsive-sm">
+<table role="table" aria-busy="false" aria-colcount="4" class="table b-table bv-docs-table table-striped" id="__BVID__360">
+
+<thead role="rowgroup" class="">
+
+<tr role="row" class="">
+<th role="columnheader" scope="col" tabindex="0" aria-colindex="1" aria-sort="none" class="b-table-sort-icon-left">Property<span class="sr-only"> (Click to sort Ascending)</span></th>
+<th role="columnheader" scope="col" tabindex="0" aria-colindex="2" class="">Type</th>
+<th role="columnheader" scope="col" tabindex="0" aria-colindex="3" class="">Default</th>
+<th role="columnheader" scope="col" tabindex="0" aria-colindex="4" class="">Description</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+
+<tr role="row" data-pk="href" class="" id="__BVID__360__row_href">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">href</code>     </td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">Denotes the target URL of the link for standard a links</td>
+</tr>
+
+<tr role="row" data-pk="rel" class="" id="__BVID__360__row_rel">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">rel</code>     </td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">Sets the 'rel' attribute on the rendered link</td>
+</tr>
+
+<tr role="row" data-pk="target" class="" id="__BVID__360__row_target">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">target</code>     </td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'_self'</code></td>
+<td aria-colindex="4" role="cell" class="">Sets the 'target' attribute on the rendered link</td>
+</tr>
+
+<tr role="row" data-pk="active" class="" id="__BVID__360__row_active">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">active</code>     </td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">When set to 'true', places the component in the active state with active styling</td>
+</tr>
+
+<tr role="row" data-pk="disabled" class="" id="__BVID__360__row_disabled">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">disabled</code>     </td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">When set to 'true', disables the component's functionality and places it in a disabled state</td>
+</tr>
+
+<tr role="row" data-pk="to" class="" id="__BVID__360__row_to">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">to</code>     </td>
+<td aria-colindex="2" role="cell" class="">String or Object</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">router-link prop: Denotes the target route of the link. When clicked, the value of the to prop will be passed to router.push() internally, so the value can be either a string or a Location descriptor object</td>
+</tr>
+
+<tr role="row" data-pk="append" class="" id="__BVID__360__row_append">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">append</code>     </td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">router-link prop: Setting append prop always appends the relative path to the current path</td>
+</tr>
+
+<tr role="row" data-pk="replace" class="" id="__BVID__360__row_replace">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">replace</code>     </td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">router-link prop: Setting the replace prop will call 'router.replace()' instead of 'router.push()' when clicked, so the navigation will not leave a history record</td>
+</tr>
+
+<tr role="row" data-pk="event" class="" id="__BVID__360__row_event">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">event</code>     </td>
+<td aria-colindex="2" role="cell" class="">String or Array</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'click'</code></td>
+<td aria-colindex="4" role="cell" class="">router-link prop: Specify the event that triggers the link. In most cases you should leave this as the default</td>
+</tr>
+
+<tr role="row" data-pk="active-class" class="" id="__BVID__360__row_active-class">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">active-class</code>     </td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">router-link prop: Configure the active CSS class applied when the link is active. Typically you will want to set this to class name 'active'</td>
+</tr>
+
+<tr role="row" data-pk="exact" class="" id="__BVID__360__row_exact">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">exact</code>     </td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">router-link prop: The default active class matching behavior is inclusive match. Setting this prop forces the mode to exactly match the route</td>
+</tr>
+
+<tr role="row" data-pk="exact-active-class" class="" id="__BVID__360__row_exact-active-class">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">exact-active-class</code>     </td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">router-link prop: Configure the active CSS class applied when the link is active with exact match. Typically you will want to set this to class name 'active'</td>
+</tr>
+
+<tr role="row" data-pk="router-tag" class="" id="__BVID__360__row_router-tag">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">router-tag</code>     </td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'a'</code></td>
+<td aria-colindex="4" role="cell" class="">router-link prop: Specify which tag to render, and it will still listen to click events for navigation. 'router-tag' translates to the tag prop on the final rendered router-link. Typically you should use the default value</td>
+</tr>
+
+<tr role="row" data-pk="no-prefetch" class="" id="__BVID__360__row_no-prefetch">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">no-prefetch</code>     </td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">nuxt-link prop: To improve the responsiveness of your Nuxt.js applications, when the link will be displayed within the viewport, Nuxt.js will automatically prefetch the code splitted page. Setting 'no-prefetch' will disabled this feature for the specific link</td>
+</tr>
+
+<tr role="row" data-pk="link-attrs" class="" id="__BVID__360__row_link-attrs">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">link-attrs</code>     </td>
+<td aria-colindex="2" role="cell" class="">Object</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">Additional attributes to place on the nested link element</td>
+</tr>
+
+<tr role="row" data-pk="link-classes" class="" id="__BVID__360__row_link-classes">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">link-classes</code>     </td>
+<td aria-colindex="2" role="cell" class="">String or Object or Array</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">CSS class (or classes) to place on the nested link element</td>
+</tr>
+
+</tbody>
+
+</table>
+</div>
+<div data-v-866a22e8="" class="alert alert-info">
+<p data-v-866a22e8="" class="mb-0 small"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-nav-item&gt;</code> supports generating <code data-v-866a22e8="" translate="translate" class="notranslate">&lt;router-link&gt;</code> or <code data-v-866a22e8="" translate="translate" class="notranslate">&lt;nuxt-link&gt;</code> component (if using Nuxt.js).
+        For more details on the router link (or nuxt link) specific props, see the <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/reference/router-links" class="alert-link" target="_self">Router support</a> reference section. </p>
+</div>
+</article>
+   </section>
+<section data-v-866a22e8="" class="bd-content">
+<header data-v-866a22e8="" class="row align-items-center">
+<div data-v-866a22e8="" class="col-sm-9">
+<h3 data-v-866a22e8="" id="comp-ref-b-nav-text" tabindex="-1" class="bv-no-focus-ring"><span data-v-866a22e8="" class="bd-content-title"><code data-v-866a22e8="" translate="translate" class="notranslate bigger">&lt;b-nav-text&gt;</code><a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/nav/#comp-ref-b-nav-text" class="anchorjs-link" aria-labelledby="comp-ref-b-nav-text" target="_self"></a></span></h3>
+ <a data-v-866a22e8="" rel="noopener" target="_blank" href="https://vuejs.org/v2/guide/render-function.html#Functional-Components" class="badge badge-secondary"> Functional Component </a></div>
+<div data-v-866a22e8="" class="text-sm-right col-sm-3"><a data-v-866a22e8="" rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev/src/components/nav/nav-text.js" class="btn btn-outline-secondary btn-sm"> View source </a></div>
+</header>
+<ul data-v-866a22e8="" class="component-ref-mini-toc my-3">
+     
+</ul>
+     </section>
+<section data-v-866a22e8="" class="bd-content">
+<header data-v-866a22e8="" class="row align-items-center">
+<div data-v-866a22e8="" class="col-sm-9">
+<h3 data-v-866a22e8="" id="comp-ref-b-nav-form" tabindex="-1" class="bv-no-focus-ring"><span data-v-866a22e8="" class="bd-content-title"><code data-v-866a22e8="" translate="translate" class="notranslate bigger">&lt;b-nav-form&gt;</code><a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/nav/#comp-ref-b-nav-form" class="anchorjs-link" aria-labelledby="comp-ref-b-nav-form" target="_self"></a></span></h3>
+ <a data-v-866a22e8="" rel="noopener" target="_blank" href="https://vuejs.org/v2/guide/render-function.html#Functional-Components" class="badge badge-secondary"> Functional Component </a></div>
+<div data-v-866a22e8="" class="text-sm-right col-sm-3"><a data-v-866a22e8="" rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev/src/components/nav/nav-form.js" class="btn btn-outline-secondary btn-sm"> View source </a></div>
+</header>
+<ul data-v-866a22e8="" class="component-ref-mini-toc my-3">
+
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-nav-form-props"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-nav-form&gt;</code> Properties </a></li>
+ 
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-nav-form-events"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-nav-form&gt;</code> Events </a></li>
+
+</ul>
+
+<article data-v-866a22e8="" class="bd-content">
+<h4 data-v-866a22e8="" id="comp-ref-b-nav-form-props" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> Properties <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/nav/#comp-ref-b-nav-form-props" class="anchorjs-link" aria-labelledby="comp-ref-b-nav-form-props" target="_self"></a></span></h4>
+<div data-v-866a22e8="" class="table-responsive-sm">
+<table role="table" aria-busy="false" aria-colcount="4" class="table b-table bv-docs-table table-striped" id="__BVID__398">
+
+<thead role="rowgroup" class="">
+
+<tr role="row" class="">
+<th role="columnheader" scope="col" aria-colindex="1" class="">Property</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">Type</th>
+<th role="columnheader" scope="col" aria-colindex="3" class="">Default</th>
+<th role="columnheader" scope="col" aria-colindex="4" class="">Description</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+
+<tr role="row" data-pk="id" class="" id="__BVID__398__row_id">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">id</code>     </td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">Used to set the 'id' attribute on the rendered content, and used as the base to generate any additional element IDs as needed</td>
+</tr>
+
+<tr role="row" data-pk="novalidate" class="" id="__BVID__398__row_novalidate">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">novalidate</code>     </td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">When set, disables browser native HTML5 validation on controls in the form</td>
+</tr>
+
+<tr role="row" data-pk="validated" class="" id="__BVID__398__row_validated">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">validated</code>     </td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">When set, adds the Bootstrap class 'was-validated' on the form, triggering the native browser validation states</td>
+</tr>
+
+<tr role="row" data-pk="form-class" class="" id="__BVID__398__row_form-class">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">form-class</code>     </td>
+<td aria-colindex="2" role="cell" class="">String or Array or Object</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class=""></td>
+</tr>
+
+</tbody>
+
+</table>
+</div>
+ </article>
+ 
+<article data-v-866a22e8="" class="bd-content">
+<h4 data-v-866a22e8="" id="comp-ref-b-nav-form-events" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> Events <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/nav/#comp-ref-b-nav-form-events" class="anchorjs-link" aria-labelledby="comp-ref-b-nav-form-events" target="_self"></a></span></h4>
+<div data-v-866a22e8="" class="table-responsive-sm">
+<table role="table" aria-busy="false" aria-colcount="3" class="table b-table bv-docs-table table-striped" id="__BVID__412">
+
+<thead role="rowgroup" class="">
+
+<tr role="row" class="">
+<th role="columnheader" scope="col" aria-colindex="1" class="">Event</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">Arguments</th>
+<th role="columnheader" scope="col" aria-colindex="3" class="">Description</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+
+<tr role="row" data-pk="submit" class="" id="__BVID__412__row_submit">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="notranslate">submit</code> </td>
+<td aria-colindex="2" role="cell" class=""><ol data-v-866a22e8="" class="list-unstyled mb-0">
+<li data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">event</code> - <span data-v-866a22e8="">Native submit event.</span></li>
+</ol></td>
+<td aria-colindex="3" role="cell" class="">Emitted when the form is being submitted</td>
+</tr>
+
+</tbody>
+
+</table>
+</div>
+</article>
+</section>
+<section data-v-866a22e8="" class="bd-content">
+<header data-v-866a22e8="" class="row align-items-center">
+<div data-v-866a22e8="" class="col-sm-9">
+<h3 data-v-866a22e8="" id="comp-ref-b-nav-item-dropdown" tabindex="-1" class="bv-no-focus-ring"><span data-v-866a22e8="" class="bd-content-title"><code data-v-866a22e8="" translate="translate" class="notranslate bigger">&lt;b-nav-item-dropdown&gt;</code><a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/nav/#comp-ref-b-nav-item-dropdown" class="anchorjs-link" aria-labelledby="comp-ref-b-nav-item-dropdown" target="_self"></a></span></h3>
+ </div>
+<div data-v-866a22e8="" class="text-sm-right col-sm-3"><a data-v-866a22e8="" rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev/src/components/nav/nav-item-dropdown.js" class="btn btn-outline-secondary btn-sm"> View source </a></div>
+</header>
+<ul data-v-866a22e8="" class="component-ref-mini-toc my-3">
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-nav-item-dropdown-aliases"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-nav-item-dropdown&gt;</code> Component aliases </a></li>
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-nav-item-dropdown-props"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-nav-item-dropdown&gt;</code> Properties </a></li>
+
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-nav-item-dropdown-slots"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-nav-item-dropdown&gt;</code> Slots </a></li>
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-nav-item-dropdown-events"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-nav-item-dropdown&gt;</code> Events </a></li>
+
+</ul>
+<article data-v-866a22e8="" class="bd-content">
+<h4 data-v-866a22e8="" id="comp-ref-b-nav-item-dropdown-aliases" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> Component aliases <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/nav/#comp-ref-b-nav-item-dropdown-aliases" class="anchorjs-link" aria-labelledby="comp-ref-b-nav-item-dropdown-aliases" target="_self"></a></span></h4>
+<p data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-nav-item-dropdown&gt;</code> can also be used via the following aliases:</p>
+<ul data-v-866a22e8="">
+<li data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-nav-item-dd&gt;</code></li>
+<li data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-nav-dropdown&gt;</code></li>
+<li data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-nav-dd&gt;</code></li>
+</ul>
+<div data-v-866a22e8="" class="alert alert-info">
+<p data-v-866a22e8="" class="mb-0 small"> Note: component aliases are only available when importing all of BootstrapVue or using
+        the component group plugin. </p>
+</div>
+</article>
+<article data-v-866a22e8="" class="bd-content">
+<h4 data-v-866a22e8="" id="comp-ref-b-nav-item-dropdown-props" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> Properties <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/nav/#comp-ref-b-nav-item-dropdown-props" class="anchorjs-link" aria-labelledby="comp-ref-b-nav-item-dropdown-props" target="_self"></a></span></h4>
+<div data-v-866a22e8="" class="table-responsive-sm">
+<table role="table" aria-busy="false" aria-colcount="4" class="table b-table bv-docs-table table-striped" id="__BVID__428">
+
+<thead role="rowgroup" class="">
+
+<tr role="row" class="">
+<th role="columnheader" scope="col" tabindex="0" aria-colindex="1" aria-sort="none" class="b-table-sort-icon-left">Property<span class="sr-only"> (Click to sort Ascending)</span></th>
+<th role="columnheader" scope="col" tabindex="0" aria-colindex="2" class="">Type</th>
+<th role="columnheader" scope="col" tabindex="0" aria-colindex="3" class="">Default</th>
+<th role="columnheader" scope="col" tabindex="0" aria-colindex="4" class="">Description</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+
+<tr role="row" data-pk="id" class="" id="__BVID__428__row_id">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">id</code>     </td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">Used to set the 'id' attribute on the rendered content, and used as the base to generate any additional element IDs as needed</td>
+</tr>
+
+<tr role="row" data-pk="disabled" class="" id="__BVID__428__row_disabled">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">disabled</code>     </td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">When set to 'true', disables the component's functionality and places it in a disabled state</td>
+</tr>
+
+<tr role="row" data-pk="dropup" class="" id="__BVID__428__row_dropup">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">dropup</code>     </td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">When set, positions the menu on the top of the button</td>
+</tr>
+
+<tr role="row" data-pk="dropright" class="" id="__BVID__428__row_dropright">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">dropright</code>     </td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">When set, positions the menu to the right of the button</td>
+</tr>
+
+<tr role="row" data-pk="dropleft" class="" id="__BVID__428__row_dropleft">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">dropleft</code>     </td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">When set, positions the menu to the left of the button</td>
+</tr>
+
+<tr role="row" data-pk="right" class="" id="__BVID__428__row_right">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">right</code>     </td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">Align the right edge of the menu with the right of the button</td>
+</tr>
+
+<tr role="row" data-pk="offset" class="" id="__BVID__428__row_offset">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">offset</code>     </td>
+<td aria-colindex="2" role="cell" class="">Number or String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">0</code></td>
+<td aria-colindex="4" role="cell" class=""></td>
+</tr>
+
+<tr role="row" data-pk="no-flip" class="" id="__BVID__428__row_no-flip">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">no-flip</code>     </td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">Prevent the menu from auto flipping positions</td>
+</tr>
+
+<tr role="row" data-pk="popper-opts" class="" id="__BVID__428__row_popper-opts">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">popper-opts</code>     </td>
+<td aria-colindex="2" role="cell" class="">Any</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">Additional configuration to pass to Popper.js</td>
+</tr>
+
+<tr role="row" data-pk="boundary" class="" id="__BVID__428__row_boundary">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">boundary</code>  <span data-v-866a22e8="" class="badge badge-secondary">v2.4.0+</span>   </td>
+<td aria-colindex="2" role="cell" class="">String or HTMLElement</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'scrollParent'</code></td>
+<td aria-colindex="4" role="cell" class="">The boundary constraint of the menu: 'scrollParent', 'window', 'viewport', or a reference to an HTMLElement. Has no effect when dropdown is inside a b-navbar</td>
+</tr>
+
+<tr role="row" data-pk="text" class="" id="__BVID__428__row_text">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">text</code>     </td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">Text to place in the toggle button, or in the split button is split mode</td>
+</tr>
+
+<tr role="row" data-pk="html" class="" id="__BVID__428__row_html">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">html</code>     </td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">HTML string to place in the toggle button, or in the split button is split mode. Use with caution</td>
+</tr>
+
+<tr role="row" data-pk="menu-class" class="" id="__BVID__428__row_menu-class">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">menu-class</code>     </td>
+<td aria-colindex="2" role="cell" class="">String or Array or Object</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">CSS class (or classes) to add to the menu container</td>
+</tr>
+
+<tr role="row" data-pk="toggle-class" class="" id="__BVID__428__row_toggle-class">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">toggle-class</code>     </td>
+<td aria-colindex="2" role="cell" class="">String or Array or Object</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">CSS class (or classes) to add to the toggle button</td>
+</tr>
+
+<tr role="row" data-pk="no-caret" class="" id="__BVID__428__row_no-caret">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">no-caret</code>     </td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">Hide the caret indicator on the toggle button</td>
+</tr>
+
+<tr role="row" data-pk="role" class="" id="__BVID__428__row_role">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">role</code>     </td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'menu'</code></td>
+<td aria-colindex="4" role="cell" class="">Sets the ARIA attribute 'role' to a specific value</td>
+</tr>
+
+<tr role="row" data-pk="lazy" class="" id="__BVID__428__row_lazy">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">lazy</code>     </td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">When set, will only mount the menu content into the DOM when the menu is open</td>
+</tr>
+
+</tbody>
+
+</table>
+</div>
+ </article>
+
+<article data-v-866a22e8="" class="bd-content">
+<h4 data-v-866a22e8="" id="comp-ref-b-nav-item-dropdown-slots" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> Slots <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/nav/#comp-ref-b-nav-item-dropdown-slots" class="anchorjs-link" aria-labelledby="comp-ref-b-nav-item-dropdown-slots" target="_self"></a></span></h4>
+<div data-v-866a22e8="" class="table-responsive-sm">
+<table role="table" aria-busy="false" aria-colcount="3" class="table b-table bv-docs-table table-striped" id="__BVID__455">
+
+<thead role="rowgroup" class="">
+
+<tr role="row" class="">
+<th role="columnheader" scope="col" aria-colindex="1" class="">Slot Name</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">Description</th>
+<th role="columnheader" scope="col" aria-colindex="3" class="">Scoped</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+
+<tr role="row" data-pk="button-content" class="" id="__BVID__455__row_button-content">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">button-content</code> </td>
+<td aria-colindex="2" role="cell" class="">Can be used to implement custom text with icons and more styling.</td>
+<td aria-colindex="3" role="cell" class=""></td>
+</tr>
+
+<tr role="row" data-pk="default" class="" id="__BVID__455__row_default">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">default</code> </td>
+<td aria-colindex="2" role="cell" class="">Optionally scoped default slot for dropdown menu content.</td>
+<td aria-colindex="3" role="cell" class=""><button data-v-866a22e8="" type="button" class="btn py-0 btn-info btn-sm"> Scope </button></td>
+</tr>
+
+</tbody>
+
+</table>
+</div>
+</article>
+<article data-v-866a22e8="" class="bd-content">
+<h4 data-v-866a22e8="" id="comp-ref-b-nav-item-dropdown-events" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> Events <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/nav/#comp-ref-b-nav-item-dropdown-events" class="anchorjs-link" aria-labelledby="comp-ref-b-nav-item-dropdown-events" target="_self"></a></span></h4>
+<div data-v-866a22e8="" class="table-responsive-sm">
+<table role="table" aria-busy="false" aria-colcount="3" class="table b-table bv-docs-table table-striped" id="__BVID__466">
+
+<thead role="rowgroup" class="">
+
+<tr role="row" class="">
+<th role="columnheader" scope="col" aria-colindex="1" class="">Event</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">Arguments</th>
+<th role="columnheader" scope="col" aria-colindex="3" class="">Description</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+
+<tr role="row" data-pk="show" class="" id="__BVID__466__row_show">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="notranslate">show</code> </td>
+<td aria-colindex="2" role="cell" class=""><ol data-v-866a22e8="" class="list-unstyled mb-0">
+<li data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">bvEvt</code> - <span data-v-866a22e8="">BvEvent object. Call bvEvt.preventDefault() to cancel show.</span></li>
+</ol></td>
+<td aria-colindex="3" role="cell" class="">Emitted just before dropdown is shown. Cancelable.</td>
+</tr>
+<tr role="row" data-pk="shown" class="" id="__BVID__466__row_shown">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="notranslate">shown</code> </td>
+<td aria-colindex="2" role="cell" class=""></td>
+<td aria-colindex="3" role="cell" class="">Emitted when dropdown is shown.</td>
+</tr>
+<tr role="row" data-pk="hide" class="" id="__BVID__466__row_hide">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="notranslate">hide</code> </td>
+<td aria-colindex="2" role="cell" class=""><ol data-v-866a22e8="" class="list-unstyled mb-0">
+<li data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">bvEvt</code> - <span data-v-866a22e8="">BvEvent object. Call bvEvt.preventDefault() to cancel hide.</span></li>
+</ol></td>
+<td aria-colindex="3" role="cell" class="">Emitted just before dropdown is hidden. Cancelable.</td>
+</tr>
+<tr role="row" data-pk="hidden" class="" id="__BVID__466__row_hidden">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="notranslate">hidden</code> </td>
+<td aria-colindex="2" role="cell" class=""></td>
+<td aria-colindex="3" role="cell" class="">Emitted when dropdown is hidden.</td>
+</tr>
+<tr role="row" data-pk="toggle" class="" id="__BVID__466__row_toggle">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="notranslate">toggle</code> </td>
+<td aria-colindex="2" role="cell" class=""></td>
+<td aria-colindex="3" role="cell" class="">Emitted when toggle button is clicked.</td>
+</tr>
+
+</tbody>
+
+</table>
+</div>
+</article>
+
+<h3 id="importing-individual-components" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title"> Importing individual components <a href="../../../bootstrap-vue/docs/components/nav/#importing-individual-components" class="anchorjs-link" aria-labelledby="importing-individual-components" target="_self"></a></span></h3>
+<p> You can import individual components into your project via the following named
+        exports: </p>
+<div class="table-responsive-sm">
+<table role="table" aria-busy="false" aria-colcount="3" class="table b-table bv-docs-table table-striped" id="__BVID__481">
+
+<thead role="rowgroup" class="thead-default">
+
+<tr role="row" class="">
+<th role="columnheader" scope="col" aria-colindex="1" class="">Component</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">Named Export</th>
+<th role="columnheader" scope="col" aria-colindex="3" class="">Import Path</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+
+<tr role="row" class="">
+<td aria-colindex="1" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">&lt;b-nav&gt;</code></td>
+<td aria-colindex="2" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">BNav</code></td>
+<td aria-colindex="3" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">bootstrap-vue</code></td>
+</tr>
+<tr role="row" class="">
+<td aria-colindex="1" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">&lt;b-nav-item&gt;</code></td>
+<td aria-colindex="2" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">BNavItem</code></td>
+<td aria-colindex="3" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">bootstrap-vue</code></td>
+</tr>
+<tr role="row" class="">
+<td aria-colindex="1" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">&lt;b-nav-text&gt;</code></td>
+<td aria-colindex="2" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">BNavText</code></td>
+<td aria-colindex="3" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">bootstrap-vue</code></td>
+</tr>
+<tr role="row" class="">
+<td aria-colindex="1" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">&lt;b-nav-form&gt;</code></td>
+<td aria-colindex="2" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">BNavForm</code></td>
+<td aria-colindex="3" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">bootstrap-vue</code></td>
+</tr>
+<tr role="row" class="">
+<td aria-colindex="1" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">&lt;b-nav-item-dropdown&gt;</code></td>
+<td aria-colindex="2" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">BNavItemDropdown</code></td>
+<td aria-colindex="3" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">bootstrap-vue</code></td>
+</tr>
+
+</tbody>
+
+</table>
+</div>
+<p><strong>Example:</strong></p>
+<pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { BNav } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
+Vue.component(<span class="hljs-string">'b-nav'</span>, BNav)</pre>
+</article>
+
+<article class="bd-content">
+<h3 id="importing-as-a-plugin" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title"> Importing as a Vue.js plugin <a href="../../../bootstrap-vue/docs/components/nav/#importing-as-a-plugin" class="anchorjs-link" aria-labelledby="importing-as-a-plugin" target="_self"></a></span></h3>
+<p> This plugin includes all of the above listed individual
+      components.
+      Plugins also include any component aliases. </p>
+<div class="table-responsive-sm">
+<table fileds="namedExport,importPath" role="table" aria-busy="false" aria-colcount="2" class="table b-table bv-docs-table table-striped b-table-caption-top" id="__BVID__495">
+
+<thead role="rowgroup" class="thead-default">
+
+<tr role="row" class="">
+<th role="columnheader" scope="col" aria-colindex="1" class="">Named Export</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">Import Path</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+
+<tr role="row" class="">
+<td aria-colindex="1" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">NavPlugin</code></td>
+<td aria-colindex="2" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">bootstrap-vue</code></td>
+</tr>
+
+</tbody>
+
+</table>
+</div>
+<p>This plugin also automatically includes the following plugins:</p>
+<ul>
+<li><code translate="translate" class="notranslate">DropdownPlugin</code></li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { NavPlugin } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
+Vue.use(NavPlugin)</pre>
+
+
+
+
+
+
+
+
+
+
+</main>
+</div>
+</div>
+
+
+<script src="../../../js/jquery-3.2.1.slim.min.js"></script> 
+<script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery-slim.min.js"><\/script>')</script> 
+<script src="../../../v4/dist/js/popper.min.js"></script> 
+<script src="../../../v4/dist/js/bootstrap.min.js"></script> 
+<script src="../../../v4/assets/js/docs.min.js"></script> 
+<script src="../../../v4/assets/js/ie-emulation-modes-warning.js"></script> 
+<script src="../../../v4/assets/js/docsearch.min.js"></script> 
+<script>
+  docsearch({
+    appId: 'PRR89ISST8',
+    apiKey: '95044d57d4d7bb744f322d1f18ed607f',
+    indexName: 'z01-bootstrapV4',
+    inputSelector: '#search-input',
+    handleSelected: function (input, event, suggestion) {
+      var url = suggestion.url;
+      url = suggestion.isLvl1 ? url.split('#')[0]: url;
+      // If it's a title we remove the anchor so it does not jump.
+      window.location.href = url;
+    },
+    transformData: function (hits) {
+      return hits.map(function (hit) {
+        hit.url = hit.url.replace('https://v4-alpha.getbootstrap.com', '/docs/4.0');
+        return hit;
+      });
+    },
+    debug: false // Set debug to true if you want to inspect the dropdown
+  });
+</script> 
+<script>
+  Holder.addTheme('gray', {
+    bg: '#777',
+    fg: 'rgba(255,255,255,.75)',
+    font: 'Helvetica',
+    fontweight: 'normal'
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,641 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="zoomla!逐浪CMS">
+<title>Git使用文档 &middot; Zoomla!逐浪CMS团队</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<link href="../v4/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="../v4/dist/css/zico.min.css" rel="stylesheet">
+<!-- 本文档额外专用css -->
+<!--<link href="../v4/assets/css/docsearch.min.css" rel="stylesheet">-->
+<link href="style/global.css" rel="stylesheet">
+
+<!-- Favicons图标定义 -->
+<link rel="apple-touch-icon" href="../assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="../assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="../assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="../assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="../assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+<link rel="icon" href="../favicon.ico">
+<meta name="msapplication-config" content="../assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#563d7c">
+
+<!-- Meta关键字定义 -->
+<meta name="description" content="站长与开发者手册">
+<meta name="author" content="逐浪CMS官方文档">
+</head>
+<body>
+<a id="skippy" class="sr-only sr-only-focusable" href="#content">
+<div class="container"> <span class="skiplink-text">跳到主体内容</span> </div>
+</a>
+<header class="navbar navbar-expand navbar-dark flex-column flex-md-row i_navbar"> <a class="navbar-brand mr-0 mr-md-2" href="../" aria-label="Bootstrap">
+<svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 2200"><title>逐浪CMS技术文档</title><path fill="currentColor" d="M25 251h1749q11 0 24 23v337q0 11-24 23H915v8q31 39 348 229v16l-647 697v15h1158q11 0 24 23v337q0 11-24 23H25q-13 0-25-23v-337q0-37 372-429 380-411 494-544v-15H25q-13 0-25-23V274q0-11 25-23z"></path></svg>
+  </a>
+  <div class="navbar-nav-scroll">
+    <ul class="navbar-nav bd-navbar-nav flex-row">
+      <li class="nav-item"><a class="nav-link " href="../">首页</a></li>
+      <li class="nav-item"><a class="nav-link active" href="../../v4/docs/">中文手册</a></li>
+      <li class="nav-item"><a class="nav-link " href="../../v4/examples/">实例</a></li>
+      <li class="nav-item dropdown">
+<a class="nav-item nav-link dropdown-toggle mr-md-2" id="bd-versions" aria-expanded="false" aria-haspopup="true" href="#" data-toggle="dropdown"> 主题模板 </a>
+<div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
+<a class="dropdown-item" href="../../V4/themes/" target="_blank">主题门户</a>
+<a class="dropdown-item" href="../../V4/themes/live.html">精选模板</a>
+</div>
+</li>
+      <li class="nav-item"><a class="nav-link" href="//ico.z01.com" target="_blank" rel="noopener">zico图标系统</a></li>
+      <li class="nav-item"><a class="nav-link" href="https://expo.getbootstrap.com" target="_blank" rel="noopener">优站精选</a></li>
+      <li class="nav-item"><a class="nav-link" href="https://blog.getbootstrap.com" target="_blank" rel="noopener">Blog</a></li>
+    </ul>
+  </div>
+  <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v4.3 </a>
+      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions"> 
+        <a class="dropdown-item active" href="/docs/4.0/">Latest (4.3.x)</a>
+        <a class="dropdown-item" href="/Boot/">v3.3.7</a>
+        <a class="dropdown-item" href="/Sass/">Sass语言</a>
+        <a class="dropdown-item" href="/Emmet/">Emmet语法</a>
+        <a class="dropdown-item" href="//www.z01.com/tool/" target="_blank">IIS站长工具</a>
+        <a class="dropdown-item" href="//ad.z01.com/" target="_blank">广告源码</a>
+        <a class="dropdown-item" href="//v.z01.com/mb/" target="_blank">免费模板</a>
+        <a class="dropdown-item" href="//v.z01.com/" target="_blank">H5移动创作</a>
+        <a class="dropdown-item" href="//www.z01.com/help/web/3234.shtml" target="_blank">Flexbox布局</a>
+		<a class="dropdown-item" href="/boot/font.html" target="_blank">Font Awesome</a>
+		</div>
+    </li>
+    <li class="nav-item"> <a class="nav-link p-2" href="//zoomla.github.io/bootstrap4-zhcn-documentation" target="_blank" rel="noopener" aria-label="GitHub">
+      <svg class="navbar-nav-svg" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 499.36" focusable="false">
+        <title>GitHub</title>
+        <path d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z" fill="currentColor" fill-rule="evenodd"/>
+      </svg>
+      </a> </li>
+    <li class="nav-item"> <a class="nav-link p-2" href="http://www.z01.com/blog/ren/3214.shtml" target="_blank" rel="noopener" aria-label="Slack">译者说</a></li>
+  </ul>
+  <a class="btn btn-outline-info d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="//www.z01.com/pub">下载 Zoomla!逐浪CMS</a> </header>
+<div class="container-fluid">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+      <form class="bd-search d-flex align-items-center">
+        <input type="search" class="form-control" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
+        <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30" focusable="false">
+          <title>Menu</title>
+          <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/>
+        </svg>
+        </button>
+      </form>
+
+      <nav class="collapse bd-links" id="bd-docs-nav">
+        <div class="bd-toc-item active"> <a class="bd-toc-link" href="../../v4/docs/">快速入门</a>
+          <ul class="nav bd-sidenav">
+            <li><a href="vscode.html">vscode与Markdown使用技巧</a></li>
+            <li class="active"><a href="git.html">git使用指引</a></li>
+            <li><a href="Powershell.html">Powershell使用手册</a></li>
+            <li><a href="Vue.html">Vue开发指引</a></li>
+            <li><a href="../v4/docs/javascript.html">JavaScript脚本</a></li>
+            <li><a href="../v4/docs/theming.html">主题化</a></li>
+            <li><a href="../v4/docs/build-tools.html">编译工具</a></li>
+            <li><a href="../v4/docs/webpack.html"> Webpack模块化</a></li>
+            <li><a href="../v4/docs/accessibility.html">无障碍浏览</a></li>
+          </ul>
+        </div>
+        <div class="bd-toc-item"> <a class="bd-toc-link" href="../layout/overview.html">布局</a>
+          <ul class="nav bd-sidenav">
+            <li><a href="../layout/overview.html">概览</a></li>
+            <li><a href="../layout/grid.html">栅格</a></li>
+            <li><a href="../layout/utilities-for-layout.html"> 布局实施建议 </a> </li>
+          </ul>
+        </div>
+        <div class="bd-toc-item"> <a class="bd-toc-link" href="../content/reboot.html">内容 </a>
+          <ul class="nav bd-sidenav">
+            <li> <a href="../content/reboot.html"> 初始化与CSS重置 </a> </li>
+            <li> <a href="../content/typography.html"> 排版 </a> </li>
+            <li> <a href="../content/code.html"> 代码 </a> </li>
+            <li> <a href="../content/images.html"> 图片 </a> </li>
+            <li> <a href="../content/tables.html"> 表格 </a> </li>
+            <li> <a href="../content/figures.html"> 图文框 </a> </li>
+          </ul>
+        </div>
+        <div class="bd-toc-item"> <a class="bd-toc-link" href="../components/alerts.html"> 组件 </a>
+          <ul class="nav bd-sidenav">
+    <li><a href="../components/alerts.html"> 警告提示框(Alerts) </a> </li>
+    <li><a href="../components/badge.html"> 徽章(Badge) </a> </li>
+    <li><a href="../components/breadcrumb.html"> 面包屑导航(Breadcrumb) </a> </li>
+    <li><a href="../components/buttons.html"> 按钮(Button) </a> </li>
+    <li><a href="../components/button-group.html"> 按钮组(Button-group) </a> </li>
+    <li><a href="../components/card.html"> 卡片(Card) </a> </li>
+    <li><a href="../components/carousel.html">  轮播效果(Carousell) </a> </li>
+    <li><a href="../components/collapse.html"> 折叠面板(Collapse) </a> </li>
+    <li><a href="../components/dropdowns.html"> 下拉菜单(Dropdown) </a> </li>
+    <li><a href="../components/forms.html"> 表单(Form) </a> </li>
+    <li><a href="../components/input-group.html"> 输入框(Input-group) </a> </li>
+    <li><a href="../components/jumbotron.html"> Hero大块屏(Jumbotron) </a> </li>
+    <li><a href="../components/list-group.html"> 列表组(List-group) </a> </li>
+    <li><a href="../components/media-object.html"> 媒体对象/图文混排(Media-object) </a> </li>
+    <li><a href="../components/modal.html"> 弹出模态框(Modal) </a> </li>
+    <li><a href="../components/navs.html"> 导航/滑动门(Nav) </a> </li>
+    <li><a href="../components/navbar.html"> 导航栏(Navbar) </a> </li>
+    <li><a href="../components/pagination.html"> 分页(Pagination) </a> </li>
+    <li><a href="../components/popovers.html"> POP提示(Popover) </a> </li>
+    <li><a href="../components/progress.html"> 进度条(Progress) </a> </li>
+    <li><a href="../components/scrollspy.html"> 滚动监听(Scrollspy) </a> </li>
+    <li><a href="../components/spinners.html"> 旋转特效(Spinners) </a> </li>
+    <li><a href="../components/toasts.html"> 弹出提示框(Toasts) </a> </li>
+    <li><a href="../components/tooltips.html"> 提示冒泡(Tooltip) </a> </li>
+          </ul>
+        </div>
+        <div class="bd-toc-item"> <a class="bd-toc-link" href="../utilities/borders.html"> 公共样式 </a>
+          <ul class="nav bd-sidenav">
+            <li> <a href="../utilities/borders.html"> 边框(border) </a> </li>
+            <li> <a href="../utilities/clearfix.html"> 清动浮动(clearfix) </a> </li>
+            <li> <a href="../utilities/close-icon.html"> 关闭图标(close icon) </a> </li>
+            <li> <a href="../utilities/colors.html"> 颜色(color) </a> </li>
+            <li> <a href="../utilities/display.html"> Display显示属性 </a> </li>
+            <li> <a href="../utilities/embed.html"> 嵌入(embed) </a> </li>
+            <li> <a href="../utilities/flex.html"> Flex弹性布局 </a> </li>
+            <li> <a href="../utilities/float.html"> Float浮动属性 </a> </li>
+            <li> <a href="../utilities/image-replacement.html"> 图像替换 </a> </li>
+			<li><a href="../utilities/overflow.html"> 溢出 </a> </li>
+            <li> <a href="../utilities/position.html"> 固顶(底）及定位 </a> </li>
+            <li> <a href="../utilities/screenreaders.html"> 读屏器 (Screenreaders) </a> </li>
+			<li><a href="../utilities/shadows.html"> 阴影(shadows) </a> </li>
+            <li> <a href="../utilities/sizing.html"> 规格(sizi) </a> </li>
+            <li> <a href="../utilities/spacing.html"> 间隔(spacing) </a> </li>
+            <li> <a href="../utilities/text.html"> 文本处理 </a> </li>
+            <li> <a href="../utilities/vertical-align.html"> 垂直对齐(vertical align) </a> </li>
+            <li> <a href="../utilities/visibility.html"> Visibility显示或隐藏(能见度)处理 </a> </li>
+          </ul>
+        </div>
+        <div class="bd-toc-item"> <a class="bd-toc-link" href="../extend/approach.html"> 延伸 </a>
+          <ul class="nav bd-sidenav">
+            <li><a href="../extend/approach.html"> 方法论 </a> </li>
+            <li> <a href="../extend/icons.html"> 图标 </a> </li>
+          </ul>
+        </div>
+        <div class="bd-toc-item"> <a class="bd-toc-link" href="../migration/"> 迁移 </a>
+          <ul class="nav bd-sidenav">
+          </ul>
+        </div>
+        <div class="bd-toc-item"> <a class="bd-toc-link" href="../about/history.html"> 关于 </a>
+          <ul class="nav bd-sidenav">
+            <li> <a href="../about/history.html"> 成长历史 </a> </li>
+            <li> <a href="../about/team.html"> 项目团队 </a> </li>
+            <li> <a href="../about/brand.html"> 品牌标志 </a> </li>
+            <li> <a href="../about/license.html"> 许可授权 </a> </li>
+            <li> <a href="../about/translations.html"> 翻译 </a> </li>
+          </ul>
+        </div>
+      </nav>
+
+    </div>
+
+<div class="d-none d-xl-block col-xl-2 bd-toc">
+  <ol class="section-nav">
+    <li class="toc-entry toc-h2"><a href="#git-about">git新生-开源软件之父的匠心之作</a></li>  
+    <li class="toc-entry toc-h2"><a href="#github-about">github平台</a></li>  
+    <li class="toc-entry toc-h2"><a href="#git-reg">git创建并上传代码到远程仓库中</a></li>
+    <li class="toc-entry toc-h2"><a href="#git-error">报错处理</a></li>
+    <li class="toc-entry toc-h2"><a href="#git-push-f">强制提交</a></li>
+    <li class="toc-entry toc-h2"><a href="#git-target">忽略文件夹提交</a></li>
+    <li class="toc-entry toc-h2"><a href="#git-gitee">gitee码云</a>
+      <ol>
+        <li class="toc-entry toc-h3"><a href="#git-gitee">快速提交到码云</a></li>
+        <li class="toc-entry toc-h3"><a href="#git-gitee-ssh">码云多用户协同与SSH公钥生成</a></li>
+      </ol>    
+    </li>
+    <li class="toc-entry toc-h2"><a href="#git-gitee">分支与历史管理</a>
+      <ol>
+        <li class="toc-entry toc-h3"><a href="#git-history">获取指定历史版本</a></li>
+        <li class="toc-entry toc-h3"><a href="#git-develop">推送develop分支</a></li>
+        <li class="toc-entry toc-h3"><a href="#git-master-develop">切换master/develop分支</a></li>
+        <li class="toc-entry toc-h3"><a href="#git-master-try">强制覆盖master分支</a></li>
+        <li class="toc-entry toc-h3"><a href="#git-master-tryDevelop">变更master分支为develop</a></li>
+        <li class="toc-entry toc-h3"><a href="#git-stash">项目保存到暂存区</a></li>
+      </ol>    
+    </li>    
+
+    <li class="toc-entry toc-h2"><a href="#grunt">安装使用Grunt</a></li>
+<!--
+    <li class="toc-entry toc-h2"><a href="#sass-buid-any">Sass编译参数选择</a>
+      <ol>
+        <li class="toc-entry toc-h3"><a href="#watch">--wath伺服侦测自动编译程式</a></li>
+        <li class="toc-entry toc-h3"><a href="#css-any">输出Css代码样式选择</a></li>
+        <li class="toc-entry toc-h3"><a href="#cn">支持中文变量</a></li>
+        <li class="toc-entry toc-h3"><a href="#Source-map">Source map输出支持</a></li>        
+      </ol>    
+
+    </li>    
+-->
+  </ol>
+</div>
+    
+<main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 i_con" role="main">
+  <h1 class="bd-title" id="content">git、github以及nodeJS的使用</h1>
+  <p class="bd-lead">基于开放的git、nodeJS以及github社区开发，是一个全新高效的世界。<del>本手册不断更新|请密切关注...</del></p>
+  <script type="text/javascript" src="style/js/pupCMS.js"></script>
+  <h2 id="git-about">git新生-开源软件之父的匠心之作</h2>
+  <p>git诞生，离不开著名的开源软件之父linus<code class="highlighter-rouge">（全名：Linus Benedict Torvalds，有一些文档也称其为Torvalds，实则指同一人）</code>，这也是他一生的第二个伟大作品（他的第一个伟大作品，就是linux内核的发明人<i class="zi zi_digg"></i>）。</p>
+  <p>现代软件的研发，需要对软件版本进行管理，从而可以合理分工、回溯、备份、还原等操作，逾是大型软件研发逾显得重要，Linux开源社区同样如此。</p>
+  <p>2005年由于BitKeeper软件公司对Linux社区停止了免费使用权。Linus迫不得己自己开发了一个分布式版本控制工具，从而Git诞生了。</p>
+  <p>目前使用Git作为版本控制的开源软件：Linux kernel，Android, jQuery, Ruby on Rails，Debian…</p>
+    <p>Eclipse上使用Git的项目数量也已经超过了使用排名第二的SVN仓库数。</p>
+    <p>Git优点</p>
+    <p>- 分布式，离线操作</p>
+    <p>- 每日工作备份</p>
+    <p>- 异地协同工作</p>
+    <p>- 现场版本控制</p>
+    <p>- 快</p>
+    <p></p>
+    <p>Git缺点</p>
+    <p>- 复杂的信息模型</p>
+    <p>- 抓狂的命令语法</p>
+    <p>- 让人费解的文档</p>
+    <p>- 新概念泛滥</p>
+    <p>- 保密性差</p>
+    <p>- 学习周期长</p>
+    <p></p>
+    <p>通过git命令克降一个库的经典语法：</p>    
+  <figure class="highlight">
+    <pre><code class="language-plaintext" data-lang="plaintext">git clone https://github.com/zoomla/cms2.git</code></pre>
+  </figure>
+
+
+
+  <h2 id="github-about">github平台</h2>
+  <p>2008年，美国人Tom Preston-Werner、ChrisWanstrath推出Github网站，使用Git作为版本控制软件创建了<i class="zi zi_link"></i> <a href="http://Github.com">http://Github.com</a>，这是一个专门托管代码并且可以实现版本控制的网站。Tom之所以把网站叫做Github，是因为其核心部分版本控制是用Git来处理的。但是为什么有人回复调侃Github是全球最大男性交友网站呢？那是因为Github的注册用户大都是男生，而且彼此之间可以相互关注（类似于微博）。</p>
+  <p>2016年6月，微软以75亿美元的价格收购了它,此前该公司作为一家独立公司已经经营了近10年，依托微软技术可以更好的为用户提供服务，也依然坚守开源免费的策略</p>
+  <p>由此可见：github是网上仓库,你写的代码的各个版本都可以存在这个网站平台上。</p>
+  <p>结论：一般人们称github事实上是指github.com这个网站平台，而git则是最底层的命令和技术，相当于北方人面粉和面之间的关系--面粉是基础，而面是面粉最后的形态之一。</p>
+  
+  <p></p>
+  <p>git和github的区别，恐怕很多人都说不清楚。</p>
+  <p>用一句话形容这二者的关系：git是弓，你的代码是箭，github是靶子。</p>
+  <p>git是软件,它可在本地建立仓库,你写的代码的各个版本都可以储存在互联网上，而且不需要另外付费购买空间，可追溯、镜像、分享。</p>
+  
+  <h2 id="git-reg">git创建并上传代码到远程仓库中</h2>
+  <p>首先安装git支持，只要访问<i class="zi zi_link"></i> <a href="https://git-scm.com/">https://git-scm.com/</a>下载对应的版本，一路回车就可以完成安装，安装完成在命令行中运行<code class="highlighter-rouge">git -v</code>就能看到友好版本提示，即告安装成功，如下图所示：</p>
+  <p><img src="images/git2.png" alt="git安装成功界面" /></p>
+  <p>第一步：接下来我们需要先创建一个本地的版本库（其实也就是一个文件夹）。</p>
+  <p>你可以直接右击新建文件夹，也可以右击打开Git bash命令行窗口通过命令来创建。</p>
+  <p>现在我通过命令行在桌面新建一个TEST文件夹（你也可以在其他任何地方创建这个文件夹），并且进入这个文件夹</p>
+  <p><img src="images/git3.png" alt="创建git文件夹" /></p>
+  <p>第二步：接下来通过命令<code class="highlighter-rouge">git init</code>把这个文件夹变成Git可管理的仓库：</p>
+  <p><img src="images/git4.png" alt="把这个文件夹变成Git可管理的仓库" /></p>
+  <p>这时你会发现TEST里面多了个.git文件夹，它是Git用来跟踪和管理版本库的。如果你看不到，是因为它默认是隐藏文件，那你就需要设置资源管理器参数，允许隐藏文件可见。</p>
+  <p><img src="images/git5.png" alt="这时你会发现TEST里面多了个.git文件夹" /></p>
+  <p>第三步：这时候你就可以把你的项目粘贴到这个本地Git仓库里面（粘贴后你可以通过git status来查看你当前的状态），然后通过git add把项目添加到仓库（或git add .把该目录下的所有文件添加到仓库，注意点是用空格隔开的）。在这个过程中你其实可以一直使用git status来查看你当前的状态。</p>
+  <p><img src="images/git6.png" alt="这时候你就可以把你的项目粘贴到这个本地Git仓库里面" /></p>  
+  <p><img src="images/git7.png" alt="这时候你就可以把你的项目粘贴到这个本地Git仓库里面" /></p> 
+  <p>这里提示你虽然把项目粘贴过来了，但还没有add到Git仓库上，然后我们通过<code class="highlighter-rouge">git add .</code>把刚才复制过来的项目全部添加到仓库上。</p>
+  <p><img src="images/git8.png" alt="然后我们通过git add .把刚才复制过来的项目全部添加到仓库上" /></p>  
+  <p><img src="images/git9.png" alt="然后我们通过git add .把刚才复制过来的项目全部添加到仓库上" /></p>
+  <p>第四步：用<code class="highlighter-rouge">git commit</code>把项目提交到仓库。</p>
+  <p><img src="images/git10.png" alt="把项目提交到仓库" /></p> 
+  <p> -m后面引号里面是本次提交的注释内容，这个可以不写，但最好写上，不然会报错，详情自行Google。 好了，我们本地Git仓库这边的工作做完了，下面就到了连接远程仓库（也就是连接Github）</p>
+  <p>由于本地Git仓库和Github仓库之间的传输是通过SSH加密的，所以连接时需要设置一下.</p>
+  <p></p>
+  <p>第五步：创建SSH KEY。先看一下你C盘用户目录下有没有.ssh目录，有的话看下里面有没有id_rsa和id_rsa.pub这两个文件，有就跳到下一步，没有就通过下面命令创建:</p>
+  <figure class="highlight">
+    <pre><code class="language-plaintext" data-lang="plaintext">$ ssh-keygen -t rsa -C "youremail@example.com"</code></pre>
+  </figure>
+  <p>然后一路回车。这时你就会在用户下的.ssh目录里找到<code class="highlighter-rouge">id_rsa</code>和<code class="highlighter-rouge">id_rsa.pub</code>这两个文件   </p>
+  <p></p>
+  <p>第六步：登录Github,找到右上角的图标，打开点进里面的Settings，再选中里面的SSH and GPG KEYS，点击右上角的New SSH key，然后Title里面随便填，再把刚才id_rsa.pub里面的内容复制到Title下面的Key内容框里面，最后点击Add SSH key，这样就完成了SSH Key的加密。具体步骤也可看下面：</p>
+    <p><img src="images/git11.png" class="border" alt="github的ssh设置1" /></p> 
+    <p><img src="images/git12.png" class="border" alt="github的ssh设置2" /></p> 
+    <p><img src="images/git13.png" class="border" alt="github的ssh设置3" /></p> 
+    <p><img src="images/git14.png" class="border" alt="github的ssh设置4" /></p> 
+    <p><img src="images/git15.png" class="border" alt="github的ssh设置5" /></p>
+    <p></p>
+    <p>第七步：在Github上创建一个Git仓库。</p>
+    <p>你可以直接点New repository来创建，比如我创建了一个TEST2的仓库（因为我里面已经有了一个test的仓库，所以不能再创建TEST仓库）。</p>
+    <p><img src="images/git16.png" class="border" alt="在Github上创建一个Git仓库" /></p>
+    <p></p>
+    <p>第八步：在Github上创建好Git仓库之后我们就可以和本地仓库进行关联了，根据创建好的Git仓库页面的提示，可以在本地TEST仓库的命令行输入：</p>
+  <figure class="highlight">
+    <pre><code class="language-plaintext" data-lang="plaintext">$ git remote add origin https://github.com/guyibang/TEST2.git</code></pre>
+  </figure>  
+    <p><img src="images/git17.png" alt="在Github上创建好Git仓库之后我们就可以和本地仓库进行关联" /></p>
+    <p>注意origin后面加的是你Github上创建好的仓库的地址。</p>
+    <p><img src="images/git18.png" alt="注意origin后面加的是你Github上创建好的仓库的地址" /></p>
+    <p></p>
+    <p>第九步：关联好之后我们就可以把本地库的所有内容推送到远程仓库（也就是Github）上了，通过：</p>
+     <figure class="highlight">
+        <pre><code class="language-plaintext" data-lang="plaintext">$ git push -u origin master</code></pre>
+      </figure>
+     <p>由于新建的远程仓库是空的，所以要加上-u这个参数，等远程仓库里面有了内容之后，下次再从本地库上传内容的时候只需下面这样就可以了：</p>
+     <figure class="highlight">
+        <pre><code class="language-plaintext" data-lang="plaintext">$ git push origin master</code></pre>
+      </figure>
+     <p>上传过程中可能会验证您的用户权限，命令是：</p>
+     <figure class="highlight">
+        <pre><code class="language-plaintext" data-lang="plaintext">
+git config --global user.email "邮箱"
+git config --global user.name "名字"        
+        </code></pre>
+      </figure>      
+      <p>上传项目的过程可能需要等一段时间，完成之后是这样的：</p>
+    <p><img src="images/git19.png" alt="上传项目的过程可能需要等一段时间" /></p>
+    <p>这时候你再重新刷新你的Github页面进入刚才新建的那个仓库里面就会发现项目已经成功上传了：</p>
+    <p><img src="images/git20.png" alt="这时候你再重新刷新你的Github页面进入刚才新建的那个仓库里面就会发现项目已经成功上传了" /></p>
+    <p>至此就完成了将本地项目上传到Github的整个过程。</p>
+    <p></p>
+    <p><i class="zi zi_bulbGlow"></i> 总结：对于一个关联好的Git项目，你需要执行以下三步完成提交：</p>
+    <figure class="highlight">
+    <pre><code class="language-plaintext" data-lang="plaintext">git add .</code></pre>
+    </figure>  
+    <figure class="highlight">
+    <pre><code class="language-plaintext" data-lang="plaintext">git commit -m “提交信息的描述文字”</code></pre>
+ </figure>    
+    <figure class="highlight">
+    <pre><code class="language-plaintext" data-lang="plaintext">git push origin master</code></pre>
+ </figure>    
+  
+    <p></p>
+    <p>另外，这里有个坑需要注意一下，就是在上面第七步创建远程仓库的时候，如果你勾选了Initialize this repository with a README（就是创建仓库的时候自动给你创建一个README文件），那么到了第九步你将本地仓库内容推送到远程仓库的时候就会报一个failed to push some refs to  https://github.com/guyibang/TEST2.git的错。</p>
+    <p><img src="images/git21.png" alt="这里有个坑需要注意一下" /></p>
+    <p>这是由于你新创建的那个仓库里面的README文件不在本地仓库目录中，这时我们可以通过以下命令先将内容合并一下：</p>
+    <figure class="highlight">
+    <pre><code class="language-plaintext" data-lang="plaintext">$ git pull --rebase origin master</code></pre>
+  </figure>
+    <p>有时系统会忽略node等配置，但如果你需要强制上传，则可以使用强制上传一个文件夹的方法：</p>
+    <figure class="highlight">
+    <pre><code class="language-plaintext" data-lang="plaintext">$ git add -f public</code></pre>
+  </figure>  
+  
+    <p><img src="images/git22.png" alt="成功" /></p>
+    <p>这时你再push就能成功了。</p>
+    <P>总结：其实只需要进行下面几步就能把本地项目上传到Github</p>
+    <P>1、在本地创建一个版本库（即文件夹），通过git init把它变成Git仓库；</p>
+    <P>2、把项目复制到这个文件夹里面，再通过git add .把项目添加到仓库；</p>
+    <P>3、再通过git commit -m "注释内容"把项目提交到仓库；</p>
+    <P>4、在Github上设置好SSH密钥后，新建一个远程仓库，通过git remote add origin https://github.com/guyibang/TEST2.git将本地仓库和远程仓库进行关联；</p>
+    <P>5、最后通过git push -u origin master把本地仓库的项目推送到远程仓库（也就是Github）上；（若新建远程仓库的时候自动创建了README文件会报错，解决办法看上面）。</p>
+    <P>这里只是总结了Git上传项目的一些基本操作，要想更好地使用Git还需更进一步的学习。</p>
+
+ 
+  
+  <h2 id="git-error">报错处理</h2>
+  <p>1、git添加远程库的时候有可能出现如下的错误: </p>
+  <p>'fatal:remote origin already exists'</p>
+  <p><img src="images/git1.png" alt="git报错" /></p>
+  <figure class="highlight">
+    <pre><code class="language-plaintext" data-lang="plaintext">#删除本地库关联重新建立git关系:
+git remote rm origin</code></pre>
+  </figure>  
+  <p>2、github上git clone一个项目，在里面创建一个目录，然后git push的时候，出现报错”Everything up-to-date” </p>
+  <p> 原因：<br/>
+1）没有git add .<br/>
+2）没有git commit -m “提交信息”<br/>
+如果上面两个步骤都成功执行，还出现这个错误是因为创建的目录下是空的，目录下必须有文件才能git push上传成功。
+  </p>
+<p>3、git报错：Pull is not possible because you have unmerged files冲突解决方法</p>  
+<p>在git pull的过程中，如果有冲突，那么除了冲突的文件之外，其它的文件都会做为staged区的文件保存起来。</p>
+ <figure class="highlight">
+    <pre><code class="language-plaintext" data-lang="plaintext">git reset --hard FETCH_HEAD
+git pull</code></pre>
+  </figure>
+git reset --hard FETCH_HEAD
+git pull
+
+
+<h2 id="git-push-f">强制提交</h2>
+<p>在提交时，会遇到：! [rejected] master -> master (fetch first)，这是由于本地库和远程库不同步造成的，解决方案是使用git pull将本地库更新到与远程库一致的版本，但要注意本地库后来做的修改可能被覆盖，最好使用git fetch(不会自动合并)，查看更新情况再有选择合并，或先将本地库修改过的文件备份，git pull后再重新修改。
+</p>
+<p>如果你想强制合并，则可以用这个命令：</p>
+ <figure class="highlight">
+    <pre><code class="language-plaintext" data-lang="plaintext">#强制本地库提交覆盖远程
+git push -f origin master</code></pre>
+  </figure>
+ <figure class="highlight">
+    <pre><code class="language-plaintext" data-lang="plaintext">#强制本地库提交覆盖远程完整语法
+ git push origin master --force</code></pre>
+  </figure>
+  
+  <h2 id="git-target">忽略文件或文件夹进行git提交</h2>  
+  <p>使用git提交，有时需要忽略不必要的文件或文件夹，只保留一些关键文件。只要在当前项目文件包中，找到.gitignore文件编辑它：</p>
+ <figure class="highlight">
+    <pre><code class="language-plaintext" data-lang="plaintext">##ignore this file下面是忽略文件夹与文件设置##
+/target/
+.classpath
+.project
+.settings
+</code></pre>
+</figure>
+<p>编辑完成，再执行git就能忽略public提交了。</p>  
+  
+  <h2 id="git-gitee">快速提交到gitee码云</h2>
+  <p>先将仓库clone到本地，修改后再push到码云的仓库仓库:</p>
+  <figure class="highlight">
+    <pre><code class="language-plaintext" data-lang="plaintext">git clone https://gitee.com/用户个性地址/HelloGitee.git #将远程仓库克隆到本地
+</code></pre>
+</figure>
+<p>配置本地的git配置信息，执行git config命令预先配置好相关的用户信息，配置执行如下:</p>
+  <figure class="highlight">
+    <pre><code class="language-plaintext" data-lang="plaintext">git config --global user.name "你的名字或昵称"
+git config --global user.email "你的邮箱"
+</code></pre>
+</figure>
+<p>修改代码后，在仓库目录下执行下面命令:</p>
+  <figure class="highlight">
+    <pre><code class="language-plaintext" data-lang="plaintext">git add . #将当前目录所有文件添加到git暂存区
+git commit -m "my first commit" #提交并备注提交信息
+git push origin master #将本地提交推送到远程仓库
+</code></pre>
+</figure> 
+
+<h2 id="git-gitee-ssh">码云多用户协同与SSH公钥生成</h2>
+<p>作为仓库创建者，你已经提交成功了，但不要得意，如果非仓库管理者，在码云上要提交成功，还查行几步操作，否则会遇到诸如"You do not have permission to push to protection branch 'master'"的错：</p>
+<p>第一步：在gitee码云中，管理项目，设置保护分支，即允许特定的人才能push。</p>
+<img src="../../img/gitee01.jpg" class="img-fluid border" alt="码云保护分支">
+<p>第二步：在windows上右键打开Git Bash工具，输入ssh-keygen -t rsa -C "你的邮箱地址"，默认状态下三次回车之后就可以生成密钥对</p>
+<p>第三步：输入cat ~/.ssh/id_rsa.pub 查看你的 public key（公钥），结果如下：</p>
+<img src="../../img/gitee02.png" class="img-fluid border" alt="生成public key">
+<p>第四步：把上图中从ssh-ras（包含）到最后面的邮箱地址（包含）复制一下。</p>
+<p>第五步：打开码云 -> 设置 -> SSH公钥，就出现了下面的画面，把我们刚才复制的内容贴到提示区，最后点击左下角的确定即可。</p>
+<img src="../../img/gitee03.png" class="img-fluid border" alt="gitee ssh设置">
+<p>第六步：输入 <code class="highlighter-rouge">ssh -T git@gitee.com</code>，系统会提示你输入yes/no，输入yes，如果出现：You've successfully authenticated, but GitHub does not provide shell access.
+就表示成功了。</p>
+<p>最后一步：配置用户名密码</p>
+ <figure class="highlight">
+    <pre><code class="language-plaintext" data-lang="plaintext">git config --global user.name "你的gitee账号"
+git config --global user.email "你在gitee的邮箱地址"
+</code></pre>
+</figure>
+<p>设置完以上这些之后，再试试git push，是不是已经畅通：）</p>
+
+  
+  <h2 id="git-history">获取指定历史版本</h2>
+<p>git管理就在于可回溯，所以你可以回滚到任意存在的历史版本。</p>  
+<p>首先，你必须先用<code class="highlighter-rouge">git clone url</code>克隆当前最新版本的仓库，然后进入当前仓库地址。</p>
+<p>接下来，执行<code class="highlighter-rouge">git log</code>命令，你就能获得当前仓库的历史版本（如果当前仓库已经回滚过一次，并不会显所有版本，你可能要执行<code class="highlighter-rouge">git push -f origin master</code>来强制更新。</p>
+<img src="../../img/git01.jpg" class="img-fluid border" alt="git历史版本">
+<p>最后，你只要执行接下来输入命令行：<code class="highlighter-rouge">git checkout b74be8e78ff*****0a15d04967</code>，就能回滚到定版本号了。</p>
+  <figure class="highlight">
+    <pre><code class="language-plaintext" data-lang="plaintext">git check  [commit] #输入长长的历史版本字符串回滚
+</code></pre>
+</figure> 
+  
+  <h2 id="git-develop">推送develop分支</h2>
+<p>任何版本库建立时，都有master和develop两个分支，首先是获取远程的develop分支，命令是：</p>
+<figure class="highlight">
+<pre><code class="language-plaintext" data-lang="plaintext">git clone -b develop https://github.com/zoomla/xxxx.git #获取develop分支
+</code></pre>
+</figure>
+<p>提交时，前两项命令不变，最后一项命令则要指明develop分支</p>
+<figure class="highlight">
+<pre><code class="language-plaintext" data-lang="plaintext">git add . #或指定README.md等特定文件
+git commit -m "你的注释"   
+git push origin develop
+</code></pre>
+</figure>
+
+  <h2 id="git-master-develop">切换master/develop分支</h2>
+<p>1、遍历当前项目所有分支</p>
+<figure class="highlight">
+<pre><code class="language-plaintext" data-lang="plaintext"># 遍历当前项目所有分支
+git branch -a
+</code></pre>
+</figure>
+<p>2、查看当前项目所在的分支</p>
+<figure class="highlight">
+<pre><code class="language-plaintext" data-lang="plaintext"># 查看当前使用分支(结果列表中前面标*号的表示当前使用分支)
+git branch
+</code></pre>
+</figure>
+<p>3、切换分支</p>
+<figure class="highlight">
+<pre><code class="language-plaintext" data-lang="plaintext"># 切换分支
+git checkout 分支名
+</code></pre>
+</figure>
+<p>4、merge合并代码(不是所有项目都要merge)</p>
+<figure class="highlight">
+<pre><code class="language-plaintext" data-lang="plaintext"># merge合并代码
+git merge develop
+</code></pre>
+</figure>
+<p>注意：切换分支或合并后，提并需要重新执行<code class="highlighter-rouge">git add .</code>和<code class="highlighter-rouge">git commit ""</code>再执行<code class="highlighter-rouge">git push origin master</code>经典三步曲完成提交。</p>
+
+<h2 id="git-master-try">强制覆盖master分支</h2>
+<p>如果master和develop分支同时有了提交，就会产生冲突，git不会同时抹除，会平行保留，从而产生很多“<code><<<<<<< HEAD >>>>>>>></code>”代码，用来代表不同版本差异，这里你可能需要强制将develop分支强制覆盖到master分支：</p>
+<figure class="highlight">
+<pre><code class="language-plaintext" data-lang="plaintext"># 用develop强制覆盖master分支
+git push origin develop:master -f
+</code></pre>
+</figure>
+<p>注意：强制覆盖后，远程分支则做到了develop与master相同，而本地的master分支依然会有冲突，这时推荐你将本地文件删除，重新clon远程分支进行开发，避免冲突。</p>
+
+<h2 id="git-master-tryDevelop">变更master分支为develop</h2>
+<figure class="highlight">
+<pre><code class="language-plaintext" data-lang="plaintext"># 将本地的旧分支 master 重置成 develop
+git reset --hard develop
+</code></pre>
+</figure>
+<p>重置成功后，如果你需要用本地分支替换远程，则需要使用强制制命令，即：</p>
+ <figure class="highlight">
+<pre><code class="language-plaintext" data-lang="plaintext"># 将本地的 develop 分支强制推送到远程 master 分支并覆盖。
+git reset --hard develop
+</code></pre>
+</figure>
+
+<h2 id="git-stash">项目保存到暂存区</h2>
+<p>在开发中，瞬息万变，有时写到一半，旧代码需要紧急维护，这时stash暂存功能就很重要了</p>
+<figure class="highlight">
+<pre><code class="language-plaintext" data-lang="plaintext"># 存到暂存区
+git add.
+git stash 
+# 取出的时候使用 
+git stash pop
+</code></pre>
+</figure>
+
+
+
+<h2 id="grunt">安装和使用Grunt</h2>
+<p>前端项目一般分为两种类型：The first，纯静态页面，都是html,类似WebApp（当然也有很多动态页面的WEBAPP）； The second，包含一些动态页面，如jsp、php、 asp.net 或者是一些别的web服务语言。
+由于第二种类型的前端的项目居多，那么我们先从第二种类型的项目上入手，使用grunt来操作项目的部署。</p>
+<p>
+安装grunt包和任务插件：</p>
+<p>(1)安装grunt。</p>
+ <figure class="highlight">
+    <pre><code class="language-plaintext" data-lang="plaintext">以管理员身份运行 如下命令
+　　　　npm install -g grunt-cli</code></pre>
+  </figure>
+<p>(2)测试是否安装成功。
+</p>
+ <figure class="highlight">
+    <pre><code class="language-plaintext" data-lang="plaintext">cmd,输入命令行 
+    grunt -version
+    显示版本号即成功.
+    
+    PS C:\Users\admin> grunt -version
+    grunt-cli v1.3.2
+</code></pre>
+  </figure>　 
+          
+ <figure class="highlight">
+    <pre><code class="language-plaintext" data-lang="plaintext">
+    grunt包安装 ： npm install grunt --save-dev
+    合并插件：npm install grunt-contrib-concat --save-dev
+    按照上面的插件的安装方式继续安装其它插件
+    JS混淆压缩 ：grunt-contrib-uglify
+    CSS压缩：grunt-contrib-cssmin
+    清除：grunt-contrib-clean
+    添加指纹：grunt-rev
+    替换页面中的静态资源引用 ：grunt-contrib-levin-usemin
+
+    或者根据已有的package.json文件中的devDependencies依赖项进行一次安装
+    npm install
+    
+    </code></pre>
+  </figure>
+</p>
+
+
+
+</main>
+</div>
+</div>
+
+<script src="/js/jquery-3.2.1.slim.min.js"></script> 
+<script>window.jQuery || document.write('<script src="../v4/assets/js/vendor/jquery-slim.min.js"><\/script>')</script> 
+<script src="../v4/dist/js/popper.min.js"></script> 
+<script src="../v4/dist/js/bootstrap.min.js"></script> 
+<script src="../v4/assets/js/docs.min.js"></script> 
+<script src="../v4/assets/js/ie-emulation-modes-warning.js"></script> 
+<script src="../v4/assets/js/docsearch.min.js"></script> 
+<script>
+  docsearch({
+    appId: 'PRR89ISST8',
+    apiKey: '95044d57d4d7bb744f322d1f18ed607f',
+    indexName: 'z01-bootstrapV4',
+	inputSelector: '#search-input',
+    handleSelected: function (input, event, suggestion) {
+      var url = suggestion.url;
+      url = suggestion.isLvl1 ? url.split('#')[0]: url;
+      // If it's a title we remove the anchor so it does not jump.
+      window.location.href = url;
+    },
+    transformData: function (hits) {
+      return hits.map(function (hit) {
+        hit.url = hit.url.replace('https://v4-alpha.getbootstrap.com', '/docs/4.0');
+        return hit;
+      });
+    },
+    debug: false // Set debug to true if you want to inspect the dropdown
+  });
+</script> 
+<script>
+  Holder.addTheme('gray', {
+    bg: '#777',
+    fg: 'rgba(255,255,255,.75)',
+    font: 'Helvetica',
+    fontweight: 'normal'
+  });
+</script>
+</body>
+</html>

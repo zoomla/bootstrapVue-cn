@@ -1,0 +1,558 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Jekyll v3.6.0">
+<title>Vue开发指引 &middot; Zoomla!逐浪CMS团队</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<link href="../v4/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="../v4/dist/css/zico.min.css" rel="stylesheet">
+<!-- 本文档额外专用css -->
+<!--<link href="../v4/assets/css/docsearch.min.css" rel="stylesheet">-->
+<link href="style/global.css" rel="stylesheet">
+
+<!-- Favicons图标定义 -->
+<link rel="apple-touch-icon" href="../assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="../assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="../assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="../assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="../assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+<link rel="icon" href="../favicon.ico">
+<meta name="msapplication-config" content="../assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#563d7c">
+
+<!-- Meta关键字定义 -->
+<meta name="description" content="站长与开发者手册">
+<meta name="author" content="逐浪CMS官方文档">
+</head>
+<body>
+<a id="skippy" class="sr-only sr-only-focusable" href="#content">
+<div class="container"> <span class="skiplink-text">跳到主体内容</span> </div>
+</a>
+<header class="navbar navbar-expand navbar-dark flex-column flex-md-row i_navbar"> <a class="navbar-brand mr-0 mr-md-2" href="../" aria-label="Bootstrap">
+  <svg class="logo" width="36" height="36" viewbox="0 0 612 612" xmlns="http://www.w3.org/2000/svg" focusable="false"><svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 2200"><title>逐浪CMS技术文档</title><path fill="currentColor" d="M25 251h1749q11 0 24 23v337q0 11-24 23H915v8q31 39 348 229v16l-647 697v15h1158q11 0 24 23v337q0 11-24 23H25q-13 0-25-23v-337q0-37 372-429 380-411 494-544v-15H25q-13 0-25-23V274q0-11 25-23z"></path></svg>
+  </a>
+  <div class="navbar-nav-scroll">
+    <ul class="navbar-nav bd-navbar-nav flex-row">
+      <li class="nav-item"><a class="nav-link " href="../">首页</a></li>
+      <li class="nav-item"><a class="nav-link active" href="../../v4/docs/">中文手册</a></li>
+      <li class="nav-item"><a class="nav-link " href="../../v4/examples/">实例</a></li>
+      <li class="nav-item dropdown">
+<a class="nav-item nav-link dropdown-toggle mr-md-2" id="bd-versions" aria-expanded="false" aria-haspopup="true" href="#" data-toggle="dropdown"> 主题模板 </a>
+<div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
+<a class="dropdown-item" href="../../V4/themes/" target="_blank">主题门户</a>
+<a class="dropdown-item" href="../../V4/themes/live.html">精选模板</a>
+</div>
+</li>
+      <li class="nav-item"><a class="nav-link" href="//ico.z01.com" target="_blank" rel="noopener">zico图标系统</a></li>
+      <li class="nav-item"><a class="nav-link" href="https://expo.getbootstrap.com" target="_blank" rel="noopener">优站精选</a></li>
+      <li class="nav-item"><a class="nav-link" href="https://blog.getbootstrap.com" target="_blank" rel="noopener">Blog</a></li>
+    </ul>
+  </div>
+  <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v4.3 </a>
+      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions"> 
+        <a class="dropdown-item active" href="/docs/4.0/">Latest (4.3.x)</a>
+        <a class="dropdown-item" href="/Boot/">v3.3.7</a>
+        <a class="dropdown-item" href="/Sass/">Sass语言</a>
+        <a class="dropdown-item" href="/Emmet/">Emmet语法</a>
+        <a class="dropdown-item" href="//www.z01.com/tool/" target="_blank">IIS站长工具</a>
+        <a class="dropdown-item" href="//ad.z01.com/" target="_blank">广告源码</a>
+        <a class="dropdown-item" href="//v.z01.com/mb/" target="_blank">免费模板</a>
+        <a class="dropdown-item" href="//v.z01.com/" target="_blank">H5移动创作</a>
+        <a class="dropdown-item" href="//www.z01.com/help/web/3234.shtml" target="_blank">Flexbox布局</a>
+		<a class="dropdown-item" href="/boot/font.html" target="_blank">Font Awesome</a>
+		</div>
+    </li>
+    <li class="nav-item"> <a class="nav-link p-2" href="//zoomla.github.io/bootstrap4-zhcn-documentation" target="_blank" rel="noopener" aria-label="GitHub">
+      <svg class="navbar-nav-svg" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 499.36" focusable="false">
+        <title>GitHub</title>
+        <path d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z" fill="currentColor" fill-rule="evenodd"/>
+      </svg>
+      </a> </li>
+    <li class="nav-item"> <a class="nav-link p-2" href="http://www.z01.com/blog/ren/3214.shtml" target="_blank" rel="noopener" aria-label="Slack">译者说</a></li>
+  </ul>
+  <a class="btn btn-outline-info d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="//www.z01.com/pub">下载 Zoomla!逐浪CMS</a> </header>
+<div class="container-fluid">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+      <form class="bd-search d-flex align-items-center">
+        <input type="search" class="form-control" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
+        <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30" focusable="false">
+          <title>Menu</title>
+          <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/>
+        </svg>
+        </button>
+      </form>
+
+      <nav class="collapse bd-links" id="bd-docs-nav">
+        <div class="bd-toc-item active"> <a class="bd-toc-link" href="../../v4/docs/">快速入门</a>
+          <ul class="nav bd-sidenav">
+            <li><a href="vscode.html">vscode与Markdown使用技巧</a></li>
+            <li><a href="git.html">git使用指引</a></li>
+            <li><a href="Powershell.html">Powershell使用手册</a></li>
+            <li class="active"><a href="Vue.html">Vue开发指引</a></li>
+            <li><a href="../v4/docs/javascript.html">JavaScript脚本</a></li>
+            <li><a href="../v4/docs/theming.html">主题化</a></li>
+            <li><a href="../v4/docs/build-tools.html">编译工具</a></li>
+            <li><a href="../v4/docs/webpack.html"> Webpack模块化</a></li>
+            <li><a href="../v4/docs/accessibility.html">无障碍浏览</a></li>
+          </ul>
+        </div>
+        <div class="bd-toc-item"> <a class="bd-toc-link" href="../layout/overview.html">布局</a>
+          <ul class="nav bd-sidenav">
+            <li><a href="../layout/overview.html">概览</a></li>
+            <li><a href="../layout/grid.html">栅格</a></li>
+            <li><a href="../layout/utilities-for-layout.html"> 布局实施建议 </a> </li>
+          </ul>
+        </div>
+        <div class="bd-toc-item"> <a class="bd-toc-link" href="../content/reboot.html">内容 </a>
+          <ul class="nav bd-sidenav">
+            <li> <a href="../content/reboot.html"> 初始化与CSS重置 </a> </li>
+            <li> <a href="../content/typography.html"> 排版 </a> </li>
+            <li> <a href="../content/code.html"> 代码 </a> </li>
+            <li> <a href="../content/images.html"> 图片 </a> </li>
+            <li> <a href="../content/tables.html"> 表格 </a> </li>
+            <li> <a href="../content/figures.html"> 图文框 </a> </li>
+          </ul>
+        </div>
+        <div class="bd-toc-item"> <a class="bd-toc-link" href="../components/alerts.html"> 组件 </a>
+          <ul class="nav bd-sidenav">
+    <li><a href="../components/alerts.html"> 警告提示框(Alerts) </a> </li>
+    <li><a href="../components/badge.html"> 徽章(Badge) </a> </li>
+    <li><a href="../components/breadcrumb.html"> 面包屑导航(Breadcrumb) </a> </li>
+    <li><a href="../components/buttons.html"> 按钮(Button) </a> </li>
+    <li><a href="../components/button-group.html"> 按钮组(Button-group) </a> </li>
+    <li><a href="../components/card.html"> 卡片(Card) </a> </li>
+    <li><a href="../components/carousel.html">  轮播效果(Carousell) </a> </li>
+    <li><a href="../components/collapse.html"> 折叠面板(Collapse) </a> </li>
+    <li><a href="../components/dropdowns.html"> 下拉菜单(Dropdown) </a> </li>
+    <li><a href="../components/forms.html"> 表单(Form) </a> </li>
+    <li><a href="../components/input-group.html"> 输入框(Input-group) </a> </li>
+    <li><a href="../components/jumbotron.html"> Hero大块屏(Jumbotron) </a> </li>
+    <li><a href="../components/list-group.html"> 列表组(List-group) </a> </li>
+    <li><a href="../components/media-object.html"> 媒体对象/图文混排(Media-object) </a> </li>
+    <li><a href="../components/modal.html"> 弹出模态框(Modal) </a> </li>
+    <li><a href="../components/navs.html"> 导航/滑动门(Nav) </a> </li>
+    <li><a href="../components/navbar.html"> 导航栏(Navbar) </a> </li>
+    <li><a href="../components/pagination.html"> 分页(Pagination) </a> </li>
+    <li><a href="../components/popovers.html"> POP提示(Popover) </a> </li>
+    <li><a href="../components/progress.html"> 进度条(Progress) </a> </li>
+    <li><a href="../components/scrollspy.html"> 滚动监听(Scrollspy) </a> </li>
+    <li><a href="../components/spinners.html"> 旋转特效(Spinners) </a> </li>
+    <li><a href="../components/toasts.html"> 弹出提示框(Toasts) </a> </li>
+    <li><a href="../components/tooltips.html"> 提示冒泡(Tooltip) </a> </li>
+          </ul>
+        </div>
+        <div class="bd-toc-item"> <a class="bd-toc-link" href="../utilities/borders.html"> 公共样式 </a>
+          <ul class="nav bd-sidenav">
+            <li> <a href="../utilities/borders.html"> 边框(border) </a> </li>
+            <li> <a href="../utilities/clearfix.html"> 清动浮动(clearfix) </a> </li>
+            <li> <a href="../utilities/close-icon.html"> 关闭图标(close icon) </a> </li>
+            <li> <a href="../utilities/colors.html"> 颜色(color) </a> </li>
+            <li> <a href="../utilities/display.html"> Display显示属性 </a> </li>
+            <li> <a href="../utilities/embed.html"> 嵌入(embed) </a> </li>
+            <li> <a href="../utilities/flex.html"> Flex弹性布局 </a> </li>
+            <li> <a href="../utilities/float.html"> Float浮动属性 </a> </li>
+            <li> <a href="../utilities/image-replacement.html"> 图像替换 </a> </li>
+			<li><a href="../utilities/overflow.html"> 溢出 </a> </li>
+            <li> <a href="../utilities/position.html"> 固顶(底）及定位 </a> </li>
+            <li> <a href="../utilities/screenreaders.html"> 读屏器 (Screenreaders) </a> </li>
+			<li><a href="../utilities/shadows.html"> 阴影(shadows) </a> </li>
+            <li> <a href="../utilities/sizing.html"> 规格(sizi) </a> </li>
+            <li> <a href="../utilities/spacing.html"> 间隔(spacing) </a> </li>
+            <li> <a href="../utilities/text.html"> 文本处理 </a> </li>
+            <li> <a href="../utilities/vertical-align.html"> 垂直对齐(vertical align) </a> </li>
+            <li> <a href="../utilities/visibility.html"> Visibility显示或隐藏(能见度)处理 </a> </li>
+          </ul>
+        </div>
+        <div class="bd-toc-item"> <a class="bd-toc-link" href="../extend/approach.html"> 延伸 </a>
+          <ul class="nav bd-sidenav">
+            <li><a href="../extend/approach.html"> 方法论 </a> </li>
+            <li> <a href="../extend/icons.html"> 图标 </a> </li>
+          </ul>
+        </div>
+        <div class="bd-toc-item"> <a class="bd-toc-link" href="../migration/"> 迁移 </a>
+          <ul class="nav bd-sidenav">
+          </ul>
+        </div>
+        <div class="bd-toc-item"> <a class="bd-toc-link" href="../about/history.html"> 关于 </a>
+          <ul class="nav bd-sidenav">
+            <li> <a href="../about/history.html"> 成长历史 </a> </li>
+            <li> <a href="../about/team.html"> 项目团队 </a> </li>
+            <li> <a href="../about/brand.html"> 品牌标志 </a> </li>
+            <li> <a href="../about/license.html"> 许可授权 </a> </li>
+            <li> <a href="../about/translations.html"> 翻译 </a> </li>
+          </ul>
+        </div>
+      </nav>
+
+    </div>
+
+<div class="d-none d-xl-block col-xl-2 bd-toc">
+  <ul class="section-nav">
+    <li class="toc-entry toc-h2"><a href="#httpserver">本地文件夹http服务器http-server</a></li>
+    <li class="toc-entry toc-h2"><a href="#vue-cli">常用vue-cli命令</a></li>
+    <li class="toc-entry toc-h2"><a href="#vue-bootstrap">在vue-cli项目中使用bootstrap</a></li>
+    <li class="toc-entry toc-h2"><a href="#error1">error:no-mixed-spaces-and-tabs</a></li>
+    <li class="toc-entry toc-h2"><a href="#error2">Error: No module ....CssDependency</a></li>
+    <li class="toc-entry toc-h2"><a href="#npm">重装安装Npm依赖的方法</a></li>
+    <li class="toc-entry toc-h2"><a href="#babel">@babel/polyfill的使用</a></li>
+    <li class="toc-entry toc-h2"><a href="#bootstrap">引入Jquery、zico、Bootstrap</a></li>
+    <li class="toc-entry toc-h2"><a href="#vue-add">npm安装模块遇到ENOENT: no such file or directory, rename错误 </a></li>
+   
+
+
+  </ul>
+</div>
+    
+<main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+  <h1 class="bd-title" id="content">Vue及Vue cli相关技巧</h1>
+  <p class="bd-lead">快速轻便的前端开发工具，本文档最低版本为vue cli 4.1.2。</p>
+  <script type="text/javascript" src="/v4/assets/js/pupCMS.js"></script>
+  <h2 id="httpserver">本地文件夹http服务器http-server</h2>
+  <p>已经安装nodejs的客户端，可以通过此方法启动http访问本地文件夹，好处是可以方便实现跨域和防止跨域（google表现的同源策略）等，避免每次要访问一点静态资源总要去配置IIS或Apache，本工具官方网址<a href="https://www.npmjs.com/package/http-server" target="_blank">https://www.npmjs.com/package/http-server</a>。</p>
+  <figure class="highlight">
+    <pre><code class="language-plaintext" data-lang="plaintext">#安装http-server服务
+npm install http-server -g</code></pre>
+  </figure>
+  <figure class="highlight">
+    <pre><code class="language-plaintext" data-lang="plaintext">#进入静态文件目录运行命令，即会弹输出Http结果
+http-server</code></pre>
+  </figure>
+  <figure class="highlight">
+    <pre><code class="language-plaintext" data-lang="plaintext">#或者你可以指定路径运行:
+http-server D:\Folder</code></pre>
+  </figure>  
+<img src="https://www.z01.com/UploadFiles/Anony/content/md/nYwllgPIcy.jpg" class="img-fluid" alt="成功界面" />
+  <h2 id="vue-cli">常用vue-cli命令</h2>
+  <p>一些常用vue-cli命令</p>
+  <figure class="highlight">
+    <pre><code class="language-plaintext" data-lang="plaintext">#安装vue cli
+npm install -g @vue/cli</code></pre>
+  </figure>  
+  <figure class="highlight">
+    <pre><code class="language-plaintext" data-lang="plaintext">#创建vue cli项目
+vue create my-project</code></pre>
+  </figure> 
+  <figure class="highlight">
+    <pre><code class="language-plaintext" data-lang="plaintext">#vue cli可视化管理工具
+vue ui</code></pre>
+  </figure>
+  <figure class="highlight">
+    <pre><code class="language-plaintext" data-lang="plaintext">#运行当前项目
+npm run serve</code></pre>
+  </figure>  
+    <figure class="highlight">
+    <pre><code class="language-plaintext" data-lang="plaintext">用法：vue-cli-service serve [options] [entry]
+选项：
+  --open    在服务器启动时打开浏览器
+  --copy    在服务器启动时将 URL 复制到剪切版
+  --mode    指定环境模式 (默认值：development)
+  --host    指定 host (默认值：0.0.0.0)
+  --port    指定 port (默认值：8080)
+  --https   使用 https (默认值：false)</code></pre>
+  </figure>  
+  <figure class="highlight">
+    <pre><code class="language-plaintext" data-lang="plaintext">#编译当前项目
+npm run build</code></pre>
+  </figure>   
+    <figure class="highlight">
+    <pre><code class="language-plaintext" data-lang="plaintext">用法：vue-cli-service build [options] [entry|pattern]
+选项：
+  --mode        指定环境模式 (默认值：production)
+  --dest        指定输出目录 (默认值：dist)
+  --modern      面向现代浏览器带自动回退地构建应用
+  --target      app | lib | wc | wc-async (默认值：app)
+  --name        库或 Web Components 模式下的名字 (默认值：package.json 中的 "name" 字段或入口文件名)
+  --no-clean    在构建项目之前不清除目标目录
+  --report      生成 report.html 以帮助分析包内容
+  --report-json 生成 report.json 以帮助分析包内容
+  --watch       监听文件变化</code></pre>
+  </figure>
+  <p>vue-cli-service build 会在 dist/ 目录产生一个可用于生产环境的包，带有 JS/CSS/HTML 的压缩，和为更好的缓存而做的自动的 vendor chunk splitting。它的 chunk manifest 会内联在 HTML 里。</p>
+  <p>这里还有一些有用的命令参数：</p>
+  <p>--modern 使用现代模式构建应用，为现代浏览器交付原生支持的 ES2015 代码，并生成一个兼容老浏览器的包用来自动回退。</p>
+  <p>--target 允许你将项目中的任何组件以一个库或 Web Components 组件的方式进行构建。更多细节请查阅构建目标。</p>
+  <p>--report 和 --report-json 会根据构建统计生成报告，它会帮助你分析包中包含的模块们的大小。</p> 
+  <h2 id="vue-bootstrap">在vue-cli项目中使用bootstrap</h2>
+  <p>虽然Vue插件库中有一个bootstrap-vue的插件，但是此插件并不会带来完整的bootstrap体验，所以需要用本方法进行全局引用（zico方法引用相同）</p>
+    <figure class="highlight">
+    <pre><code class="language-plaintext" data-lang="plaintext">#首先安装引用插件
+npm install jquery --save
+npm install bootstrap --save
+npm install popper.js --save
+</code></pre>
+  </figure>
+  <p>如果cli版本小于3：需要配置webpack.base.conf.js</p>
+    <figure class="highlight">
+    <pre><code class="language-plaintext" data-lang="plaintext">//在顶部添加
+const webpack = require('webpack')
+
+//在module.exports = {}末尾添加下面代码
+module.exports = {
+...
+plugins: [
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery"
+    })
+  ]
+}
+</code></pre>
+  </figure>
+  <p>在vue-cli 3版本中，需要在根目录中添加一个文件vue.config.js，然后写入下面配置：</p>
+    <figure class="highlight">
+    <pre><code class="language-plaintext" data-lang="plaintext">#首先安装引用插件
+npm install jquery --save
+npm install bootstrap --save
+npm install popper.js --save
+</code></pre>
+  </figure>
+  <p>如果cli版本小于3：需要配置webpack.base.conf.js</p>
+    <figure class="highlight">
+    <pre><code class="language-plaintext" data-lang="plaintext">const webpack = require('webpack')
+module.exports = {
+  configureWebpack: {
+    plugins: [
+      new webpack.ProvidePlugin({
+        $: "jquery",
+        jQuery: "jquery"
+      })
+    ]
+  }
+}
+</code></pre>
+  </figure>
+  <p>最后在main.js中引入：</p>
+    <figure class="highlight">
+    <pre><code class="language-plaintext" data-lang="plaintext">import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.min.js";
+</code></pre>
+  </figure>
+  <h2 id="error1">Vue 中 error处理：no-mixed-spaces-and-tabs</h2>
+  <p>在处理vue时，常会报“no-mixed-spaces-and-tabs”的错，这是提示我们禁止使用 空格 和 tab 混合缩进；大多数代码约定要求使用空格或 tab 进行缩进。因此，一行代码同时混有 tab 缩进和空格缩进，通常是错误的；</p>
+<p>解决方法是删除报错的地方的空格，再进行编译，成功通过。</p>
+  <h2 id="error2">不能更改文件名，发布时报错Error: No module factory available for dependency type: CssDependency</h2>
+  <p>vue cli4 的 vue ui的发布界面中,点击任务-bulid发布报错<code class="highlighter-rouge">Error: No module factory available for dependency type: CssDependency</code>，而如果直接使用<code class="highlighter-rouge">npm run build</code>则不会报错，但是可以发布出来。</p>
+  <p>这样发布出来的文件有一个问题，如将index.html改为test.html，其它目录全不变，但依然不能访问，原因是启用了hostory模式的路由，修改方法：将路由改为默认的hash模式，一般是定义\src\router\router.js下的文件：</p>
+  <figure class="highlight">
+    <pre><code class="language-plaintext" data-lang="plaintext">const router = new VueRouter({
+  routes
+  // mode: 'history',
+  // routes,
+})
+</code></pre>
+  </figure>
+  <h2 id="npm">重装安装Npm依赖的方法</h2>
+  <p>有两种方法，前者是重装，后者是删除后重装</p>
+  <figure class="highlight">
+    <pre><code class="language-plaintext" data-lang="plaintext">#重新安装依赖-请分步执行
+npm uninstall --save-dev webpack
+rm -R node_modules
+npm install
+</code></pre>
+  </figure>
+  <figure class="highlight">
+    <pre><code class="language-plaintext" data-lang="plaintext">#删除目录重新安装-请分步执行
+rm -r node_modules
+rm package-lock.json
+npm i
+</code></pre>
+  </figure>
+  <h2 id="babel">@babel/polyfill的使用</h2>
+  <p>Babel 包含一个polyfill 库。这个库里包含 regenerator 和 core-js.这个库将会模拟一个完全的 ES2015+ 的环境。</p>
+  <p>这意味着你可以使用 新的内置语法 比如 promise 或者 WeakMap， 静态方法比如Array.from 或 Object.assign, 实例方法 比如 Array.prototype.includes 和 generator 函数。</p>
+<figure class="highlight">
+    <pre><code class="language-plaintext" data-lang="plaintext">#安装@babel/polyfill
+npm install --save @babel/polyfill
+</code></pre>
+  </figure>
+  <small>SIZE:由于是在source code 前运行的，所以安装的时候是 --save</small>
+  <p>polyfill 用起来很方便，但是你应该和 @babel/preset-env 以及 useBuiltIns option 一起用。这样在使用的时候就不会包含那些我们一般不会用到的polyfill 了。如果不这样做的话，我们还是建议你手动引入你需要的每个polyfill。</p>
+  <p>T39提案：如果你想使用一些不在 Stage 4 中的提案，@babel/polyfill 不会自动帮你引入它们。你可以从 core-js 中单独引入。</p>
+  <p>在浏览器中使用的话，直接引入@babel/polyfill 发布的文件dist/polyfill.js 就行了。
+这个文件需要包含在所有你编译好的代码之前。你可以把它放在你编译好的代码之前，也可以放在一个script 标签之中。</p>
+<p>完整示例：</p>
+<figure class="highlight">
+    <pre><code class="language-plaintext" data-lang="plaintext">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;浏览器环境babel&lt;/title&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id=&quot;output&quot;&gt;&lt;/div&gt;
+&lt;!-- 引入polyfill 让es6新的api能够在ie11上使用 这其实和babel没什么关系 --&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;./polyfill.min.js&quot;&gt;&lt;/script&gt;
+&lt;!-- 引用@babel/standalone 这个是babel在浏览器上使用的模块 会把ES6转成ES5 但是它依赖ES6的新api --&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;https://unpkg.com/@babel/standalone/babel.min.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/babel&quot;&gt;
+const getMessage = () =&gt; &quot;Hello World&quot;;
+document.getElementById('output').innerHTML = getMessage();
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+  </figure>
+  <h2 id="#bootstrap">引入Jquery、zico和Bootstrap</h2>
+  <p>方法一：在Vue cli4中，可以直接加载BootstrapVue插件，此插件引用后，则需要使用专用的标签来使用(否则会失去相应事件属性），比如导航栏则需要写作为：
+ <figure class="highlight">
+    <pre><code class="language-plaintext" data-lang="plaintext"><pre translate="no">&lt;div&gt; 
+    &lt;b-navbar toggleable="lg" type="dark" variant="info"&gt;
+    &lt;b-navbar-brand href="#"&gt;NavBar&lt;/b-navbar-brand&gt;
+    &lt;b-navbar-toggle target="nav-collapse"&gt;&lt;/b-navbar-toggle&gt;
+    &lt;b-collapse id="nav-collapse" is-nav&gt;
+    &lt;b-navbar-nav&gt;  
+        &lt;b-nav-item href="#"&gt;Link&lt;/b-nav-item&gt;  
+        &lt;b-nav-item href="#" disabled&gt;Disabled&lt;/b-nav-item&gt;
+    &lt;/b-navbar-nav&gt;
+    
+    &lt;!-- Right aligned nav items --&gt;
+    &lt;b-navbar-nav class="ml-auto"&gt;  
+    &lt;b-nav-form&gt;    
+        &lt;b-form-input size="sm" class="mr-sm-2" placeholder="Search"&gt;&lt;/b-form-input&gt;    
+        &lt;b-button size="sm" class="my-2 my-sm-0" type="submit"&gt;Search&lt;/b-button&gt;  
+    &lt;/b-nav-form&gt; 
+    
+    &lt;b-nav-item-dropdown text="Lang" right&gt;    
+        &lt;b-dropdown-item href="#"&gt;EN&lt;/b-dropdown-item&gt;    
+        &lt;b-dropdown-item href="#"&gt;ES&lt;/b-dropdown-item&gt;    
+        &lt;b-dropdown-item href="#"&gt;RU&lt;/b-dropdown-item&gt;    
+        &lt;b-dropdown-item href="#"&gt;FA&lt;/b-dropdown-item&gt;  
+    &lt;/b-nav-item-dropdown&gt;
+    
+    &lt;b-nav-item-dropdown right&gt;    
+        &lt;!-- Using 'button-content' slot --&gt;    
+        &lt;template v-slot:button-content&gt;      
+            &lt;em&gt;User&lt;/em&gt;    
+        &lt;/template&gt;    
+        &lt;b-dropdown-item href="#"&gt;Profile&lt;/b-dropdown-item&gt;    
+        &lt;b-dropdown-item href="#"&gt;Sign Out&lt;/b-dropdown-item&gt;  
+        &lt;/b-nav-item-dropdown&gt;
+    &lt;/b-navbar-nav&gt;
+    &lt;/b-collapse&gt;
+&lt;/b-navbar&gt;
+&lt;/div&gt;</pre>
+</code></pre>
+  </figure>  
+  <p>方法二：如果你对原生的html更熟悉，则可以采用手工方法，分别引入Jquery、zico和Bootstrap</p>
+<figure class="highlight">
+    <pre><code class="language-plaintext" data-lang="plaintext"><pre translate="no">#第一步，分别在项目文件目录运行npm获取四个插件（其中bootstrap需要引用popper.js)
+npm installjquery --save-dev
+npm install zico -D
+npm install bootstrap -D
+npm install popper.js -D
+</pre>
+</code></pre>
+</figure>  
+<figure class="highlight">
+    <pre><code class="language-plaintext" data-lang="plaintext"><pre translate="no">#第二步，在main.js中引用相关方法
+import Vue from 'vue'
+import App from './App.vue'
+import router from './router'
+
+// 自定义引用bootstrap和zico
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.min.js";
+import "zico/css/zico.min.css";
+
+Vue.config.productionTip = false
+
+new Vue({
+  router,
+  render: h => h(App)
+}).$mount('#app')
+</pre>
+</code></pre>
+</figure>  
+<figure class="highlight">
+    <pre><code class="language-plaintext" data-lang="plaintext"><pre translate="no">#第三步，检查package.json中是否有引用，没有则补上，注意下方dependencies段落：
+{
+  "name": "vuecli-homepage",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "core-js": "^3.6.4",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.16.1",
+    "vue": "^2.6.11",
+    "vue-router": "^3.1.5",
+    "zico": "^1.5.1"
+  },
+  "devDependencies": {
+  ......
+</pre>
+</code></pre>
+</figure>
+<p>上面三步完成后，就可以自由的采用原生的bootstrap代码和标准的html来写作了，直接拷贝<i class="zi zi_link"></i> <a href="http://code.z01.com/v4">code.z01.com/v4</a>官方站的代码提升开发效率。</p>
+
+<h2 id="vue-add">npm安装模块遇到ENOENT: no such file or directory, rename错误</h2>
+<p>一个已经开发过程中的项目，突然要加一个组件，但无论如何 都无当安装成功，提示报错如下：</p>
+<figure class="highlight">
+  <pre><code class="language-plaintext" data-lang="plaintext"><pre translate="no">ENOENT: no such file or directory, rename 'C:\Projects\demo\.staging\axios-6e40ca64\node_modules\is-buffer' -> 'C:\Projects\demo\node_modules\.staging\is-buffer-ddd200d3'
+</pre>
+</code></pre>
+</figure>
+<p>而且因为运行了错误的安装，原包也会出现问题，无法<code>npm run serve</code>或<code>build</code>，虽然可以用删除node_modules再重新安装npm，恢复原包，但新包怎么也安装不上。</p>
+<p>github上有帮助：</p>
+<figure class="highlight">
+  <pre><code class="language-plaintext" data-lang="plaintext"><pre translate="no">Besides deleting package-lock.json the other workaround here is to upgrade to node-sqlite3@4.0.2
+</pre>
+</code></pre>
+</figure>
+<p>解决方法是：删除<code>package-lock.json</code>，然后运行<code>npm i xxx</code>，安装成功后，再恢复<code>package-lock.json</code>，虽然麻烦，但有效。</p>
+
+
+
+
+</main>
+</div>
+</div>
+
+<script src="/js/jquery-3.2.1.slim.min.js"></script> 
+<script>window.jQuery || document.write('<script src="../v4/assets/js/vendor/jquery-slim.min.js"><\/script>')</script> 
+<script src="../v4//dist/js/popper.min.js"></script> 
+<script src="../v4/dist/js/bootstrap.min.js"></script> 
+<script src="../v4/assets/js/docs.min.js"></script> 
+<script src="../v4/assets/js/ie-emulation-modes-warning.js"></script> 
+<script src="../v4/assets/js/docsearch.min.js"></script> 
+<script>
+  docsearch({
+    appId: 'PRR89ISST8',
+    apiKey: '95044d57d4d7bb744f322d1f18ed607f',
+    indexName: 'z01-bootstrapV4',
+	inputSelector: '#search-input',
+    handleSelected: function (input, event, suggestion) {
+      var url = suggestion.url;
+      url = suggestion.isLvl1 ? url.split('#')[0]: url;
+      // If it's a title we remove the anchor so it does not jump.
+      window.location.href = url;
+    },
+    transformData: function (hits) {
+      return hits.map(function (hit) {
+        hit.url = hit.url.replace('https://v4-alpha.getbootstrap.com', '/docs/4.0');
+        return hit;
+      });
+    },
+    debug: false // Set debug to true if you want to inspect the dropdown
+  });
+</script> 
+<script>
+  Holder.addTheme('gray', {
+    bg: '#777',
+    fg: 'rgba(255,255,255,.75)',
+    font: 'Helvetica',
+    fontweight: 'normal'
+  });
+</script>
+</body>
+</html>

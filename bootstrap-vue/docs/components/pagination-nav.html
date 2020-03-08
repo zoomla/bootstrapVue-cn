@@ -1,0 +1,1572 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Jekyll v3.6.0">
+<title>分页导航 &middot; BootstrapVue</title>
+<!-- Bootstrap 核心CSS -->
+<link href="../../../v4/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- 本文档额外专用css -->
+<link href="../../../v4/assets/css/docsearch.min.css" rel="stylesheet">
+<link href="../../../v4/assets/css/docs.min.css" rel="stylesheet">
+<link href="../../style/bv_path.css" rel="stylesheet">
+
+<!-- Favicons图标定义 -->
+<link data-n-head="ssr" rel="manifest" href="../../manifest.json">
+<link data-n-head="ssr" rel="shortcut icon" href="../../style/icons/icon_64.png">
+<link data-n-head="ssr" rel="apple-touch-icon" href="../../style/icons/icon_512.png" sizes="512x512">
+
+<!-- Meta关键字定义 -->
+<meta name="description" content="The most popular HTML, CSS, and JS library in the world.">
+<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+
+</head>
+<body>
+<a id="skippy" class="sr-only sr-only-focusable" href="#content">
+<div class="container"> <span class="skiplink-text">跳到主体内容</span> </div>
+</a>
+<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar"> <a class="navbar-brand mr-0 mr-md-2" href="../" aria-label="Bootstrap">
+  <svg class="d-block" width="36" height="36" viewbox="0 0 612 612" xmlns="http://www.w3.org/2000/svg" focusable="false">
+    <title>Bootstrap</title>
+    <path fill="currentColor" d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z"/>
+    <path fill="currentColor" d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z"/>
+  </svg>
+  </a>
+  <div class="navbar-nav-scroll">
+    <ul class="navbar-nav bd-navbar-nav flex-row">
+      <li class="nav-item"><a class="nav-link " href="../">首页</a></li>
+      <li class="nav-item"><a class="nav-link active" href="../../v4/docs/">中文手册</a></li>
+      <li class="nav-item"><a class="nav-link " href="../../v4/examples/">实例</a></li>
+      <li class="nav-item dropdown">
+<a class="nav-item nav-link dropdown-toggle mr-md-2" id="bd-versions" aria-expanded="false" aria-haspopup="true" href="#" data-toggle="dropdown"> 主题模板 </a>
+<div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
+<a class="dropdown-item" href="../../V4/themes/" target="_blank">主题门户</a>
+<a class="dropdown-item" href="../../V4/themes/live.html">精选模板</a>
+</div>
+</li>
+      <li class="nav-item"><a class="nav-link" href="//ico.z01.com" target="_blank" rel="noopener">zico图标系统</a></li>
+      <li class="nav-item"><a class="nav-link" href="https://expo.getbootstrap.com" target="_blank" rel="noopener">优站精选</a></li>
+      <li class="nav-item"><a class="nav-link" href="https://blog.getbootstrap.com" target="_blank" rel="noopener">Blog</a></li>
+    </ul>
+  </div>
+  <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="alse"> v2.6.1 </a>
+      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions"> 
+        <a class="dropdown-item active" href="../../../bootstrap-vue/docs/4.0/">Latest (4.3.x)</a>
+        <a class="dropdown-item" href="/Boot/">v3.3.7</a>
+        <a class="dropdown-item" href="/Sass/">Sass语言</a>
+        <a class="dropdown-item" href="/Emmet/">Emmet语法</a>
+        <a class="dropdown-item" href="//www.z01.com/tool/" target="_blank">IIS站长工具</a>
+        <a class="dropdown-item" href="//ad.z01.com/" target="_blank">广告源码</a>
+        <a class="dropdown-item" href="//v.z01.com/mb/" target="_blank">免费模板</a>
+        <a class="dropdown-item" href="//v.z01.com/" target="_blank">H5移动创作</a>
+        <a class="dropdown-item" href="//www.z01.com/help/web/3234.shtml" target="_blank">Flexbox布局</a>
+		<a class="dropdown-item" href="/boot/font.html" target="_blank">Font Awesome</a>
+</div>
+    </li>
+    <li class="nav-item"> <a class="nav-link p-2" href="//zoomla.github.io/bootstrap4-zhcn-documentation" target="_blank" rel="noopener" aria-label="GitHub">
+      <svg class="navbar-nav-svg" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 499.36" focusable="false">
+        <title>GitHub</title>
+        <path d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z" fill="currentColor" fill-rule="evenodd"/>
+      </svg>
+      </a> </li>
+    <li class="nav-item"> <a class="nav-link p-2" href="http://www.z01.com/blog/ren/3214.shtml" target="_blank" rel="noopener" aria-label="Slack">译者说</a></li>
+  </ul>
+  <a class="btn btn-bd-yellow d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="download.html">下载 Bootstrap</a> </header>
+
+<div class="container-fluid">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+      <form class="bd-search d-flex align-items-center">
+        <input type="search" class="form-control" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
+        <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30" focusable="false">
+          <title>Menu</title>
+          <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/>
+        </svg>
+        </button>
+      </form>
+
+
+<nav class="collapse bd-links" id="bd-docs-nav">
+<div class=""><a href="../" class="bd-toc-link">首页</a></div>
+<div class="bd-toc-item nuxt-link-exact-active "><a href="../../../bootstrap-vue/docs/" class="bd-toc-link  "> 起步 </a>
+<ul class="nav bd-sidenav">
+</ul>
+</div>
+<div class="bd-toc-item active"><a href="../../../bootstrap-vue/docs/components/" class="bd-toc-link nuxt-link-exact-active"> 组件 </a>
+<ul class="nav bd-sidenav">
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/index.html" class="nav-link"> 组件目录 </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/alert.html" class="nav-link"> 警告提示框(Alert) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/badge.html" class="nav-link"> 徽章(Badge) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/badge.html" class="nav-link"> 面包屑导航(Breadcrumb) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/button.html" class="nav-link"> 按钮(Button) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/button-group.html" class="nav-link"> 按钮组(Button Group) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/button-toolbar.html" class="nav-link"> 按钮Toolbar(Button Toolbar) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/calendar.html" class="nav-link"> 日历组件(Calendar) <small class="badge text-uppercase badge-success">New</small> </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/card.html" class="nav-link"> 卡片(Card) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/carousel.html" class="nav-link"> 轮播效果(Carousel) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/collapse.html" class="nav-link"> 折叠面板(Collapse) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/dropdown.html" class="nav-link"> 下拉菜单(Dropdown) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/embed.html" class="nav-link"> 嵌入(Embed) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form.html" class="nav-link"> 表单(Form) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-checkbox.html" class="nav-link"> 表单复选框(Form Checkbox) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-datepicker.html" class="nav-link"> 表单时间选择器(Form Datepicker) <small class="badge text-uppercase badge-success">New</small> </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-file.html" class="nav-link"> 文件选择(Form File) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-group.html" class="nav-link"> 表单组合(Form Group) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-input.html" class="nav-link"> 表单输入框(Form Input) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-radio.html" class="nav-link"> 单选择表单Form Radio </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-select.html" class="nav-link"> 下拉式表单(Form Select) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-spinbutton.html" class="nav-link"> 按钮式表单(Form Spinbuttno) <small class="badge text-uppercase badge-success">New</small> </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-tags.html" class="nav-link"> Tags表单选择器(Form Tags) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-textarea.html" class="nav-link"> 文本框(Form Textarea) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-timepicker.html" class="nav-link"> 表单内时间控件(Form Timepicker) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/image.html" class="nav-link"> 图片(Image) </a></li>
+
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/input-group.html" class="nav-link"> 输入框(Input Group) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/jumbotron.html" class="nav-link"> Hero大块屏(Jumbotron) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/layout.html" class="nav-link"> 布局与网络Layout and Grid System </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/link.html" class="nav-link"> 链接(Link)</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/list-group.html" class="nav-link"> 列表组(List group) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/media.html" class="nav-link"> 媒体(Media) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/modal.html" class="nav-link"> 弹出模态框(Modal) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/nav.html" class="nav-link"> 导航(Nav) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/navbar.html" class="nav-link"> 导航栏(Navbar) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/pagination.html" class="nav-link"> 分页(Pagination) </a></li>
+<li class="nav-item active"><a href="../../../bootstrap-vue/docs/components/pagination-nav.html" class="nav-link"> 分页导航(Pagination Nav) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/popover.html" class="nav-link"> 指示备注(Popover) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/progress.html" class="nav-link"> 进度指示器(Progress) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/spinner.html" class="nav-link"> 旋转指示器(Spinner) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/table.html" class="nav-link"> 表格(Table) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/tabs.html" class="nav-link"> 选项卡(Tabs) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/time.html" class="nav-link"> 时间组件(Time) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/toast.html" class="nav-link"> 冒泡推送(Toasts) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/tooltip.html" class="nav-link"> tip提示组件(Tooltip) </a></li>
+</ul>
+</div>
+<div class="bd-toc-item"><a href="../../../bootstrap-vue/docs/directives/" class="bd-toc-link"> 指令 </a>
+<ul class="nav bd-sidenav">
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/directives/index.html" class="nav-link"> 指令目录 </a></li>
+<li class="nav-item active"><a href="../../../bootstrap-vue/docs/directives/hover.html" class="nav-link"> Hover 指令<small class="badge text-uppercase badge-success">New</small> </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/directives/popover.html" class="nav-link"> Popover 提示备注</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/directives/scrollspy.html" class="nav-link"> Scrollspy 滚动监听</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/directives/tooltip.html" class="nav-link"> Tooltip 提示指令</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/directives/visible.html" class="nav-link"> Visible 可见性操作<small class="badge text-uppercase badge-success">New</small> </a></li>
+</ul>
+</div>
+<div class="bd-toc-item"><a href="../../../bootstrap-vue/docs/icons.html" class="bd-toc-link"> Icons图标</a>
+<ul class="nav bd-sidenav">
+</ul>
+</div>
+  
+<div class="bd-toc-item"><a class="bd-toc-link" href="../../../bootstrap-vue/docs/reference">参考</a>
+<ul class="nav bd-sidenav">
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference" class="nav-link.html"> 参考目录 </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/accessibility.html" class="nav-link">友好访问</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/color-variants.html" class="nav-link">Color颜色变量 </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/images.html" class="nav-link"> 组件图像img的src路径解析</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/router-links.html" class="nav-link"> Router路由支持 </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/size-props.html" class="nav-link">大小规格</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/spacing-classes.html" class="nav-link">间距处理</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/starter-templates.html" class="nav-link">开始模板</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/theming.html" class="nav-link">主题色彩</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/utility-classes.html" class="nav-link">通用Class类</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/validation.html" class="nav-link">Form表单验证</a></li>
+</ul>
+</div><div class="bd-toc-item"> <a class="bd-toc-link" href="../components/alerts.html"> 杂项 </a>
+<ul class="nav bd-sidenav">
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/misc/changelog" class="nav-link"> Changelog </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/misc/contributing" class="nav-link"> Contributing </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/misc/settings" class="nav-link"> Settings </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/misc/third-party" class="nav-link"> Third party libraries </a></li>
+</ul>
+</div>
+<div class=""><a href="/play" class="bd-toc-link">在线模拟器</a></div>
+</nav>
+</div>
+
+<div class="d-none d-xl-block col-xl-2 bd-toc">
+<ul class="section-nav">
+<li class="nav-item toc-entry mb-2"><a target="_self" href="#pagination-navigation" class="nav-link font-weight-bold"><span>Pagination Navigation</span></a></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#page-link-and-number-generation" class="nav-link"><span>Page link and number generation</span></a>
+<ul class="nav flex-column">
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#router-links" class="nav-link"><span>Router links</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#link-generator-function" class="nav-link"><span>Link generator function</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#page-number-generation" class="nav-link"><span>Page number generation</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#providing-an-array-of-pages" class="nav-link"><span>Providing an array of pages</span></a></li>
+</ul>
+</li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#customizing-appearance" class="nav-link"><span>Customizing appearance</span></a>
+<ul class="nav flex-column">
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#limiting-the-number-of-displayed-buttons" class="nav-link"><span>Limiting the number of displayed buttons</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#button-content" class="nav-link"><span>Button content</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#goto-firstlast-button-type" class="nav-link"><span>Goto first/last button type</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#button-size" class="nav-link"><span>Button size</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#pill-style" class="nav-link"><span>Pill style</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#alignment" class="nav-link"><span>Alignment</span></a></li>
+</ul>
+</li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#auto-current-page-detection-and-v-model-support" class="nav-link"><span>Auto current page detection and v-model support</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#accessibility" class="nav-link"><span>Accessibility</span></a>
+<ul class="nav flex-column">
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#aria-labels" class="nav-link"><span>ARIA labels</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#keyboard-navigation" class="nav-link"><span>Keyboard navigation</span></a></li>
+</ul>
+</li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#see-also" class="nav-link"><span>See also</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#component-reference" class="nav-link"><span>Component reference</span></a>
+<ul class="nav flex-column">
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#comp-ref-b-pagination-nav" class="nav-link"><span>&lt;b-pagination-nav&gt;</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#importing-individual-components" class="nav-link"><span>Importing individual components</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#importing-as-a-plugin" class="nav-link"><span>Importing as a Vue.js plugin</span></a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+<main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+
+<nav data-v-aafc4aea="" aria-label="Breadcrumbs" class="float-left mt-2 mb-0 mb-lg-2">
+<ol data-v-aafc4aea="" class="breadcrumb d-inline-flex bg-transparent px-2 py-1 my-0">
+<li data-v-aafc4aea="" class="breadcrumb-item"><a data-v-aafc4aea="" href="../../" class="nuxt-link-active" target="_self">首页</a></li>
+<li data-v-aafc4aea="" class="breadcrumb-item"><a data-v-aafc4aea="" href="../../../bootstrap-vue/docs" class="nuxt-link-active" target="_self">中文手册</a></li>
+<li data-v-aafc4aea="" class="breadcrumb-item"><a data-v-aafc4aea="" href="../../../bootstrap-vue/docs/components/" class="nuxt-link-active" target="_self">组件</a></li>
+<li data-v-aafc4aea="" class="breadcrumb-item active"><span data-v-aafc4aea="" aria-current="location">分页导航</span></li>
+</ol>
+</nav>
+<div class="clearfix d-block"></div>
+  <h1 class="bd-title" id="content">分页导航(Pagination Navigation)</h1>
+<p class="bd-lead">Quick first, previous, next, last, and page buttons for navigation based pagination, supporting regular links or router links.</p>
+  <script type="text/javascript" src="../../../v4/assets/js/pupCMS.js"></script>
+
+
+
+
+
+
+
+
+
+<nav data-v-811345e6="" class="bd-quick-links mb-3 d-xl-none">
+<header data-v-811345e6="">
+<button data-v-811345e6="" type="button" class="btn font-weight-bold btn-outline-secondary btn-sm btn-block collapsed" aria-controls="bd-quick-links-collapse" aria-expanded="false"><span data-v-811345e6="">Show</span> page table of contents </button>
+</header>
+<ul data-v-811345e6="" id="bd-quick-links-collapse" class="collapse" style="display: none;">
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#page-link-and-number-generation" class=""><span data-v-811345e6="">Page link and number generation</span></a>
+<ul data-v-811345e6="">
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#router-links" class=""><span data-v-811345e6="">Router links</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#link-generator-function" class=""><span data-v-811345e6="">Link generator function</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#page-number-generation" class=""><span data-v-811345e6="">Page number generation</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#providing-an-array-of-pages" class=""><span data-v-811345e6="">Providing an array of pages</span></a></li>
+</ul>
+</li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#customizing-appearance" class=""><span data-v-811345e6="">Customizing appearance</span></a>
+<ul data-v-811345e6="">
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#limiting-the-number-of-displayed-buttons" class=""><span data-v-811345e6="">Limiting the number of displayed buttons</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#button-content" class=""><span data-v-811345e6="">Button content</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#goto-firstlast-button-type" class=""><span data-v-811345e6="">Goto first/last button type</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#button-size" class=""><span data-v-811345e6="">Button size</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#pill-style" class=""><span data-v-811345e6="">Pill style</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#alignment" class=""><span data-v-811345e6="">Alignment</span></a></li>
+</ul>
+</li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#auto-current-page-detection-and-v-model-support" class=""><span data-v-811345e6="">Auto current page detection and v-model support</span></a> </li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#accessibility" class=""><span data-v-811345e6="">Accessibility</span></a>
+<ul data-v-811345e6="">
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#aria-labels" class=""><span data-v-811345e6="">ARIA labels</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#keyboard-navigation" class=""><span data-v-811345e6="">Keyboard navigation</span></a></li>
+</ul>
+</li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#see-also" class=""><span data-v-811345e6="">See also</span></a> </li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#component-reference" class=""><span data-v-811345e6="">Component reference</span></a>
+<ul data-v-811345e6="">
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#comp-ref-b-pagination-nav" class=""><span data-v-811345e6="">&lt;b-pagination-nav&gt;</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#importing-individual-components" class=""><span data-v-811345e6="">Importing individual components</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#importing-as-a-plugin" class=""><span data-v-811345e6="">Importing as a Vue.js plugin</span></a></li>
+</ul>
+</li>
+</ul>
+</nav>
+<p><code translate="no" class="notranslate text-nowrap">b-pagination-nav</code> will try and auto-detect which page link is active page button based on the
+current page's URL (via either <code translate="no" class="notranslate text-nowrap">$route</code> detection or, if no <code translate="no" class="notranslate text-nowrap">$router</code> detected, the browser location
+URL).</p>
+<p><strong>Note:</strong> <code translate="no" class="notranslate text-nowrap">&lt;b-pagination-nav&gt;</code> is used for navigating to new page URLs. For controlling in page
+component pagination (such as table or list pagination), use the <a href="../../../bootstrap-vue/docs/components/pagination" class="font-weight-bold"><code translate="no" class="notranslate text-nowrap">&lt;b-pagination&gt;</code></a> component instead.</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-pagination-nav-lead notranslate">
+<div class="overflow-auto">
+<nav aria-hidden="false">
+<ul role="menubar" aria-disabled="false" aria-label="Pagination" class="pagination b-pagination">
+<li role="presentation" aria-hidden="true" class="page-item disabled"><span role="menuitem" aria-label="Go to first page" aria-disabled="true" class="page-link">«</span></li>
+<li role="presentation" aria-hidden="true" class="page-item disabled"><span role="menuitem" aria-label="Go to previous page" aria-disabled="true" class="page-link">‹</span></li>
+<li role="presentation" class="page-item active"><a href="../../../bootstrap-vue/docs/components/pagination-nav" class="page-link nuxt-link-exact-active nuxt-link-active" role="menuitemradio" aria-label="Go to page 1" aria-checked="true" aria-posinset="1" aria-setsize="10" tabindex="0">1</a></li>
+<li role="presentation" class="page-item"><a href="../../../bootstrap-vue/docs/components/pagination-nav?page=2" class="page-link" role="menuitemradio" aria-label="Go to page 2" aria-checked="false" aria-posinset="2" aria-setsize="10" tabindex="-1">2</a></li>
+<li role="presentation" class="page-item"><a href="../../../bootstrap-vue/docs/components/pagination-nav?page=3" class="page-link" role="menuitemradio" aria-label="Go to page 3" aria-checked="false" aria-posinset="3" aria-setsize="10" tabindex="-1">3</a></li>
+<li role="presentation" class="page-item bv-d-xs-down-none"><a href="../../../bootstrap-vue/docs/components/pagination-nav?page=4" class="page-link" role="menuitemradio" aria-label="Go to page 4" aria-checked="false" aria-posinset="4" aria-setsize="10" tabindex="-1">4</a></li>
+<li role="separator" class="page-item disabled bv-d-xs-down-none"><span class="page-link">…</span></li>
+<li role="presentation" class="page-item"><a href="../../../bootstrap-vue/docs/components/pagination-nav?page=2" class="page-link" role="menuitem" tabindex="-1" aria-label="Go to next page">›</a></li>
+<li role="presentation" class="page-item"><a href="../../../bootstrap-vue/docs/components/pagination-nav?page=10" class="page-link" role="menuitem" tabindex="-1" aria-label="Go to last page">»</a></li>
+</ul>
+</nav>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"overflow-auto"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-pagination-nav</span> <span class="hljs-attr">:link-gen</span>=<span class="hljs-string">"linkGen"</span> <span class="hljs-attr">:number-of-pages</span>=<span class="hljs-string">"10"</span> <span class="hljs-attr">use-router</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-pagination-nav</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    <span class="hljs-attr">methods</span>: {
+      linkGen(pageNum) {
+        <span class="hljs-keyword">return</span> pageNum === <span class="hljs-number">1</span> ? <span class="hljs-string">'?'</span> : <span class="hljs-string">`?page=<span class="hljs-subst">${pageNum}</span>`</span>
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+<p><code translate="no" class="notranslate text-nowrap">&lt;b-pagination-nav&gt;</code> is a custom input component that provides navigational pagination. The total
+number of pages set with the <code translate="no" class="notranslate text-nowrap">number-of-pages</code> prop. Page numbers are indexed from 1 through <code translate="no" class="notranslate text-nowrap">number-of-pages</code>.</p>
+<h2 id="page-link-and-number-generation" class="bv-no-focus-ring"><span class="bd-content-title">Page link and number generation<a class="anchorjs-link" href="#page-link-and-number-generation" aria-labelledby="page-link-and-number-generation"></a></span></h2>
+<p>By default, <code translate="no" class="notranslate text-nowrap">&lt;b-pagination-nav&gt;</code> generates plain link tags, setting the HREF attribute to <code translate="no" class="notranslate text-nowrap">base-url</code> concatenated with the page number. The <code translate="no" class="notranslate text-nowrap">base-url</code> prop defaults to '/'. The number of pages is
+specified via the <code translate="no" class="notranslate text-nowrap">number-of-pages</code> prop. Pages are numbers from <code translate="no" class="notranslate text-nowrap">1</code> through to <code translate="no" class="notranslate text-nowrap">number-of-pages</code>.</p>
+<h3 id="router-links" class="bv-no-focus-ring"><span class="bd-content-title">Router links<a class="anchorjs-link" href="#router-links" aria-labelledby="router-links"></a></span></h3>
+<p>To generate page links as <a href="https://router.vuejs.org/api/#router-link" target="_blank" rel="noopener"><code translate="no" class="notranslate text-nowrap">&lt;router link&gt;</code></a> components
+(or <a href="https://nuxtjs.org/api/components-nuxt-link#the-lt-nuxt-link-gt-component" target="_blank" rel="noopener"><code translate="no" class="notranslate text-nowrap">&lt;nuxt-link&gt;</code></a> if <a href="https://nuxtjs.org/" target="_blank" rel="noopener">Nuxt.js</a> is detected), set the <code translate="no" class="notranslate text-nowrap">use-router</code> prop. The HREF will then become
+the <code translate="no" class="notranslate text-nowrap">to</code> prop of the router link. Or, optionally, use a link generator function to return a
+router-link <a href="https://router.vuejs.org/api/#to" target="_blank" rel="noopener"><code translate="no" class="notranslate text-nowrap">to</code> location</a> object.</p>
+<p>If a <code translate="no" class="notranslate text-nowrap">$router</code> is not detected on your app, <code translate="no" class="notranslate text-nowrap">&lt;b-pagination-nav&gt;</code> will fallback to regular <code translate="no" class="notranslate text-nowrap">&lt;a&gt;</code> elements, and any <code translate="no" class="notranslate text-nowrap">to</code> location object will be converted to a standard URL (if possible).</p>
+<p>The following router link specific props are supported:</p>
+<ul>
+<li><code translate="no" class="notranslate text-nowrap">active-class</code></li>
+<li><code translate="no" class="notranslate text-nowrap">exact</code></li>
+<li><code translate="no" class="notranslate text-nowrap">exact-active-class</code></li>
+<li><code translate="no" class="notranslate text-nowrap">no-prefetch</code> (<code translate="no" class="notranslate text-nowrap">&lt;nuxt-link&gt;</code> specific prop)</li>
+</ul>
+<p>For details on the above props, refer to the <a href="../../../bootstrap-vue/docs/reference/router-links" class="font-weight-bold">Router Link Support</a> reference section.</p>
+<h3 id="link-generator-function" class="bv-no-focus-ring"><span class="bd-content-title">Link generator function<a class="anchorjs-link" href="#link-generator-function" aria-labelledby="link-generator-function"></a></span></h3>
+<p>If you need finer grained control over the generated link URLs or <code translate="no" class="notranslate text-nowrap">&lt;router-link&gt;</code> <code translate="no" class="notranslate text-nowrap">to</code> props, you
+may set the <code translate="no" class="notranslate text-nowrap">link-gen</code> prop to a function reference that receives two arguments: the page number,
+and an object containing two fields (<code translate="no" class="notranslate text-nowrap">link</code> and <code translate="no" class="notranslate text-nowrap">page</code>), where <code translate="no" class="notranslate text-nowrap">page</code> is the page number and <code translate="no" class="notranslate text-nowrap">link</code> is the internally generated link.</p>
+<p>The <code translate="no" class="notranslate text-nowrap">link-gen</code> function should return either a string (for HREF) or a router <code translate="no" class="notranslate text-nowrap">to</code> object. If the
+returned value is an object, then a router-link will always be generated (if a <code translate="no" class="notranslate text-nowrap">$router</code> is
+detected). If the return value is a string, a standard link is generated by default unless the <code translate="no" class="notranslate text-nowrap">use-router</code> prop is set. If a <code translate="no" class="notranslate text-nowrap">to</code> location object is used, then the <code translate="no" class="notranslate text-nowrap">base-url</code> prop will have no
+effect.</p>
+<!-- eslint-disable no-dupe-keys -->
+
+<pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+  <span class="hljs-attr">methods</span>: {
+    <span class="hljs-comment">// For regular HREF (or string `to` prop if `use-router` is set)</span>
+    linkGen(pageNum) {
+      <span class="hljs-keyword">return</span> <span class="hljs-string">`/foo/page/<span class="hljs-subst">${pageNum}</span>`</span>
+    },
+
+    <span class="hljs-comment">// Returning a router-link `to` object</span>
+    linkGen(pageNum) {
+      <span class="hljs-keyword">return</span> { <span class="hljs-attr">path</span>: <span class="hljs-string">`/foo/page/<span class="hljs-subst">${pageNum}</span>`</span> }
+    },
+
+    <span class="hljs-comment">// Returning a router-link `to` object with query parameters</span>
+    linkGen(pageNum) {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">path</span>: <span class="hljs-string">'/foo/'</span>,
+        <span class="hljs-attr">query</span>: { <span class="hljs-attr">page</span>: pageNum }
+      }
+    },
+
+    <span class="hljs-comment">// Returning a router-link `to` object with named route and parameters</span>
+    linkGen(pageNum) {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">name</span>: <span class="hljs-string">'posts'</span>,
+        <span class="hljs-attr">params</span>: { <span class="hljs-attr">post</span>: pageNum }
+      }
+    }
+  }
+}</pre>
+<p><strong>Note:</strong> when falling back from a <code translate="no" class="notranslate text-nowrap">to</code> location object to a standard link (when no <code translate="no" class="notranslate text-nowrap">$router</code> is
+available), only the following location properties are used to generate the URL:</p>
+<ul>
+<li><code translate="no" class="notranslate text-nowrap">path</code> (if not provided defaults to the page's current URL path)</li>
+<li><code translate="no" class="notranslate text-nowrap">query</code></li>
+<li><code translate="no" class="notranslate text-nowrap">hash</code> (must include the leading <code translate="no" class="notranslate text-nowrap">#</code> if used)</li>
+</ul>
+<p>The conversion of <code translate="no" class="notranslate text-nowrap">name</code> routes and <code translate="no" class="notranslate text-nowrap">params</code> is not supported.</p>
+<h3 id="page-number-generation" class="bv-no-focus-ring"><span class="bd-content-title">Page number generation<a class="anchorjs-link" href="#page-number-generation" aria-labelledby="page-number-generation"></a></span></h3>
+<p>By default, <code translate="no" class="notranslate text-nowrap">&lt;b-pagination-nav&gt;</code> renders page numbers (1-N) in the page link buttons. You can
+override this behaviour by supplying a function reference to the <code translate="no" class="notranslate text-nowrap">page-gen</code> property. The function
+reference should accept a single argument which is a page number (1-N). The <code translate="no" class="notranslate text-nowrap">page-gen</code> function
+should return a string.</p>
+<p><strong>Note:</strong> HTML content in generated page number strings is <strong>not</strong> supported. For basic HTML, you
+can use the scoped slot <code translate="no" class="notranslate text-nowrap">page</code> for finer-grained formatting.</p>
+<p><strong>Example: Using an array of links to generate pagination:</strong></p>
+<div translate="translate" class="bd-example vue-example vue-example-b-pagination-nav-links notranslate">
+<div class="overflow-auto">
+<nav aria-hidden="false">
+<ul role="menubar" aria-disabled="false" aria-label="Pagination" class="pagination b-pagination">
+<li role="presentation" aria-hidden="true" class="page-item disabled"><span role="menuitem" aria-label="Go to first page" aria-disabled="true" class="page-link">«</span></li>
+<li role="presentation" aria-hidden="true" class="page-item disabled"><span role="menuitem" aria-label="Go to previous page" aria-disabled="true" class="page-link">‹</span></li>
+<li role="presentation" class="page-item"><a role="menuitemradio" aria-label="Go to page 1" aria-checked="false" aria-posinset="1" aria-setsize="4" tabindex="0" href="#foo" class="page-link">foo</a></li>
+<li role="presentation" class="page-item"><a role="menuitemradio" aria-label="Go to page 2" aria-checked="false" aria-posinset="2" aria-setsize="4" tabindex="-1" href="#bar" class="page-link">bar</a></li>
+<li role="presentation" class="page-item"><a role="menuitemradio" aria-label="Go to page 3" aria-checked="false" aria-posinset="3" aria-setsize="4" tabindex="-1" href="#baz" class="page-link">baz</a></li>
+<li role="presentation" class="page-item bv-d-xs-down-none"><a role="menuitemradio" aria-label="Go to page 4" aria-checked="false" aria-posinset="4" aria-setsize="4" tabindex="-1" href="#faz" class="page-link">faz</a></li>
+<li role="presentation" aria-hidden="true" class="page-item disabled"><span role="menuitem" aria-label="Go to next page" aria-disabled="true" class="page-link">›</span></li>
+<li role="presentation" aria-hidden="true" class="page-item disabled"><span role="menuitem" aria-label="Go to last page" aria-disabled="true" class="page-link">»</span></li>
+</ul>
+</nav>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"overflow-auto"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-pagination-nav</span>
+      <span class="hljs-attr">:link-gen</span>=<span class="hljs-string">"linkGen"</span>
+      <span class="hljs-attr">:page-gen</span>=<span class="hljs-string">"pageGen"</span>
+      <span class="hljs-attr">:number-of-pages</span>=<span class="hljs-string">"links.length"</span>
+    &gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-pagination-nav</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    data() {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">links</span>: [<span class="hljs-string">'#foo'</span>, <span class="hljs-string">'#bar'</span>, <span class="hljs-string">'#baz'</span>, <span class="hljs-string">'#faz'</span>]
+      }
+    },
+    <span class="hljs-attr">methods</span>: {
+      linkGen(pageNum) {
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.links[pageNum - <span class="hljs-number">1</span>]
+      },
+      pageGen(pageNum) {
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.links[pageNum - <span class="hljs-number">1</span>].slice(<span class="hljs-number">1</span>)
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+<h3 id="providing-an-array-of-pages" class="bv-no-focus-ring"><span class="bd-content-title">Providing an array of pages<a class="anchorjs-link" href="#providing-an-array-of-pages" aria-labelledby="providing-an-array-of-pages"></a></span></h3>
+<p>Rather than using <code translate="no" class="notranslate text-nowrap">number-of-pages</code> to auto generate page links, you can pass an array of links via
+the <code translate="no" class="notranslate text-nowrap">pages</code> prop. When the <code translate="no" class="notranslate text-nowrap">pages</code> prop has an array of length <code translate="no" class="notranslate text-nowrap">1</code> or greater, it will be used to
+generate the page links.</p>
+<p>The array can be one of two formats:</p>
+<ul>
+<li>Array of strings, where each entry is a link. in this mode, the page button numbers will
+automatically be set to <code translate="no" class="notranslate text-nowrap">1</code> through to the number of entries in the array.</li>
+<li>Array of objects, where each object has two fields: <code translate="no" class="notranslate text-nowrap">link</code> (required) and <code translate="no" class="notranslate text-nowrap">text</code> (optional). Link
+can be be either a string specifying the link, or a <code translate="no" class="notranslate text-nowrap">to</code> location object. <code translate="no" class="notranslate text-nowrap">text</code> will be the
+content of the page link buttons. If <code translate="no" class="notranslate text-nowrap">text</code> is omitted, page button content will default to the
+page number.</li>
+</ul>
+<p>When a string link is provided, <code translate="no" class="notranslate text-nowrap">&lt;b-pagination-nav&gt;</code> will use regular <code translate="no" class="notranslate text-nowrap">&lt;a&gt;</code> elements, unless the <code translate="no" class="notranslate text-nowrap">use-router</code> prop is set. When link (in the array of objects form) is a <code translate="no" class="notranslate text-nowrap">to</code> location object, then a
+router link will automatically be generated (if a <code translate="no" class="notranslate text-nowrap">$router</code> is detected).</p>
+<p>With the array format, link strings (and/or location objects) are used as-as and <code translate="no" class="notranslate text-nowrap">base-url</code> prop
+will be ignored.</p>
+<div translate="translate" class="bd-example vue-example vue-example-pagination-nav-array notranslate">
+<nav aria-hidden="false">
+<ul role="menubar" aria-disabled="false" aria-label="Pagination" class="pagination b-pagination">
+<li role="presentation" aria-hidden="true" class="page-item disabled"><span role="menuitem" aria-label="Go to first page" aria-disabled="true" class="page-link">«</span></li>
+<li role="presentation" aria-hidden="true" class="page-item disabled"><span role="menuitem" aria-label="Go to previous page" aria-disabled="true" class="page-link">‹</span></li>
+<li role="presentation" class="page-item"><a href="../../../bootstrap-vue/docs/components/pagination-nav?page=1" class="page-link" role="menuitemradio" aria-label="Go to page 1" aria-checked="false" aria-posinset="1" aria-setsize="3" tabindex="0">1</a></li>
+<li role="presentation" class="page-item"><a href="../../../bootstrap-vue/docs/components/pagination-nav?page=2" class="page-link" role="menuitemradio" aria-label="Go to page 2" aria-checked="false" aria-posinset="2" aria-setsize="3" tabindex="-1">2</a></li>
+<li role="presentation" class="page-item"><a href="../../../bootstrap-vue/docs/components/pagination-nav?page=3" class="page-link" role="menuitemradio" aria-label="Go to page 3" aria-checked="false" aria-posinset="3" aria-setsize="3" tabindex="-1">3</a></li>
+<li role="presentation" aria-hidden="true" class="page-item disabled"><span role="menuitem" aria-label="Go to next page" aria-disabled="true" class="page-link">›</span></li>
+<li role="presentation" aria-hidden="true" class="page-item disabled"><span role="menuitem" aria-label="Go to last page" aria-disabled="true" class="page-link">»</span></li>
+</ul>
+</nav>
+<nav aria-hidden="false">
+<ul role="menubar" aria-disabled="false" aria-label="Pagination" class="pagination b-pagination">
+<li role="presentation" aria-hidden="true" class="page-item disabled"><span role="menuitem" aria-label="Go to first page" aria-disabled="true" class="page-link">«</span></li>
+<li role="presentation" aria-hidden="true" class="page-item disabled"><span role="menuitem" aria-label="Go to previous page" aria-disabled="true" class="page-link">‹</span></li>
+<li role="presentation" class="page-item"><a href="../../../bootstrap-vue/docs/components/pagination-nav?page=1" class="page-link" role="menuitemradio" aria-label="Go to page 1" aria-checked="false" aria-posinset="1" aria-setsize="3" tabindex="0">One</a></li>
+<li role="presentation" class="page-item"><a href="../../../bootstrap-vue/docs/components/pagination-nav?page=2" class="page-link" role="menuitemradio" aria-label="Go to page 2" aria-checked="false" aria-posinset="2" aria-setsize="3" tabindex="-1">Two</a></li>
+<li role="presentation" class="page-item"><a href="../../../bootstrap-vue/docs/components/pagination-nav?page=3" class="page-link" role="menuitemradio" aria-label="Go to page 3" aria-checked="false" aria-posinset="3" aria-setsize="3" tabindex="-1">Three</a></li>
+<li role="presentation" aria-hidden="true" class="page-item disabled"><span role="menuitem" aria-label="Go to next page" aria-disabled="true" class="page-link">›</span></li>
+<li role="presentation" aria-hidden="true" class="page-item disabled"><span role="menuitem" aria-label="Go to last page" aria-disabled="true" class="page-link">»</span></li>
+</ul>
+</nav>
+<nav aria-hidden="false">
+<ul role="menubar" aria-disabled="false" aria-label="Pagination" class="pagination b-pagination">
+<li role="presentation" aria-hidden="true" class="page-item disabled"><span role="menuitem" aria-label="Go to first page" aria-disabled="true" class="page-link">«</span></li>
+<li role="presentation" aria-hidden="true" class="page-item disabled"><span role="menuitem" aria-label="Go to previous page" aria-disabled="true" class="page-link">‹</span></li>
+<li role="presentation" class="page-item"><a href="../../../bootstrap-vue/docs/components/pagination-nav?page=1" class="page-link" role="menuitemradio" aria-label="Go to page 1" aria-checked="false" aria-posinset="1" aria-setsize="3" tabindex="0">Page 1</a></li>
+<li role="presentation" class="page-item"><a href="../../../bootstrap-vue/docs/components/pagination-nav?page=2" class="page-link" role="menuitemradio" aria-label="Go to page 2" aria-checked="false" aria-posinset="2" aria-setsize="3" tabindex="-1">Page 2</a></li>
+<li role="presentation" class="page-item"><a href="../../../bootstrap-vue/docs/components/pagination-nav?page=3" class="page-link" role="menuitemradio" aria-label="Go to page 3" aria-checked="false" aria-posinset="3" aria-setsize="3" tabindex="-1">Page 3</a></li>
+<li role="presentation" aria-hidden="true" class="page-item disabled"><span role="menuitem" aria-label="Go to next page" aria-disabled="true" class="page-link">›</span></li>
+<li role="presentation" aria-hidden="true" class="page-item disabled"><span role="menuitem" aria-label="Go to last page" aria-disabled="true" class="page-link">»</span></li>
+</ul>
+</nav>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-pagination-nav</span> <span class="hljs-attr">:pages</span>=<span class="hljs-string">"pages1"</span> <span class="hljs-attr">use-router</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-pagination-nav</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-pagination-nav</span> <span class="hljs-attr">:pages</span>=<span class="hljs-string">"pages2"</span> <span class="hljs-attr">use-router</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-pagination-nav</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-pagination-nav</span> <span class="hljs-attr">:pages</span>=<span class="hljs-string">"pages3"</span> <span class="hljs-attr">use-router</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-pagination-nav</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+  data() {
+    <span class="hljs-keyword">return</span> {
+      <span class="hljs-comment">// Simple array of strings</span>
+      <span class="hljs-attr">pages1</span>: [<span class="hljs-string">'?page=1'</span>, <span class="hljs-string">'?page=2'</span>, <span class="hljs-string">'?page=3'</span>],
+      <span class="hljs-comment">// Array of objects with string links</span>
+      <span class="hljs-attr">pages2</span>: [
+        { <span class="hljs-attr">link</span>: <span class="hljs-string">'?page=1'</span>, <span class="hljs-attr">text</span>: <span class="hljs-string">'One'</span> },
+        { <span class="hljs-attr">link</span>: <span class="hljs-string">'?page=2'</span>, <span class="hljs-attr">text</span>: <span class="hljs-string">'Two'</span> },
+        { <span class="hljs-attr">link</span>: <span class="hljs-string">'?page=3'</span>, <span class="hljs-attr">text</span>: <span class="hljs-string">'Three'</span> }
+      ],
+      <span class="hljs-comment">// Array of objects with router `to` locations</span>
+      <span class="hljs-attr">pages3</span>: [
+        { <span class="hljs-attr">link</span>: { <span class="hljs-attr">query</span>: { <span class="hljs-attr">page</span>: <span class="hljs-number">1</span> } }, <span class="hljs-attr">text</span>: <span class="hljs-string">'Page 1'</span> },
+        { <span class="hljs-attr">link</span>: { <span class="hljs-attr">query</span>: { <span class="hljs-attr">page</span>: <span class="hljs-number">2</span> } }, <span class="hljs-attr">text</span>: <span class="hljs-string">'Page 2'</span> },
+        { <span class="hljs-attr">link</span>: { <span class="hljs-attr">query</span>: { <span class="hljs-attr">page</span>: <span class="hljs-number">3</span> } }, <span class="hljs-attr">text</span>: <span class="hljs-string">'Page 3'</span> }
+      ]
+    }
+  }
+}
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+<h2 id="customizing-appearance" class="bv-no-focus-ring"><span class="bd-content-title">Customizing appearance<a class="anchorjs-link" href="#customizing-appearance" aria-labelledby="customizing-appearance"></a></span></h2>
+<h3 id="limiting-the-number-of-displayed-buttons" class="bv-no-focus-ring"><span class="bd-content-title">Limiting the number of displayed buttons<a class="anchorjs-link" href="#limiting-the-number-of-displayed-buttons" aria-labelledby="limiting-the-number-of-displayed-buttons"></a></span></h3>
+<p>To restrict the number of page buttons (including the ellipsis, but excluding the first, prev, next,
+and last buttons) shown, use the <code translate="no" class="notranslate text-nowrap">limit</code> prop to specify the desired number of page buttons
+(including the ellipsis, if shown). The default <code translate="no" class="notranslate text-nowrap">limit</code> is <code translate="no" class="notranslate text-nowrap">5</code>. The minimum supported value is <code translate="no" class="notranslate text-nowrap">3</code>.
+When <code translate="no" class="notranslate text-nowrap">limit</code> is set to <code translate="no" class="notranslate text-nowrap">3</code>, no ellipsis indicators will be shown for practical purposes.</p>
+<p>The <code translate="no" class="notranslate text-nowrap">first</code> and <code translate="no" class="notranslate text-nowrap">last</code> buttons can be optionally hidden by setting the <code translate="no" class="notranslate text-nowrap">hide-goto-end-buttons</code> prop.</p>
+<p>The showing of the <code translate="no" class="notranslate text-nowrap">ellipsis</code> can be optionally disabled by setting the <code translate="no" class="notranslate text-nowrap">hide-ellipsis</code> prop.</p>
+<h4 id="small-screen-support" class="bv-no-focus-ring"><span class="bd-content-title">Small screen support<a class="anchorjs-link" href="#small-screen-support" aria-labelledby="small-screen-support"></a></span></h4>
+<p>On smaller screens (i.e. mobile), some of the <code translate="no" class="notranslate text-nowrap">&lt;b-pagination-nav&gt;</code> buttons will be hidden to
+minimize the potential of the pagination interface wrapping onto multiple lines:</p>
+<ul>
+<li>The ellipsis indicators will be hidden on screens <code translate="no" class="notranslate text-nowrap">xs</code> and smaller.</li>
+<li>Page number buttons will be limited to a maximum of 3 visible on <code translate="no" class="notranslate text-nowrap">xs</code> screens and smaller.</li>
+</ul>
+<p>This ensures that no more than 3 page number buttons are visible, along with the goto <em>first</em>, <em>prev</em>, <em>next</em>, and <em>last</em> buttons.</p>
+<h3 id="button-content" class="bv-no-focus-ring"><span class="bd-content-title">Button content<a class="anchorjs-link" href="#button-content" aria-labelledby="button-content"></a></span></h3>
+<p><code translate="no" class="notranslate text-nowrap">&lt;b-pagination-nav&gt;</code> supports several props/slots that allow you to customize the appearance. All <code translate="no" class="notranslate text-nowrap">*-text</code> props are text-only and strip out HTML but you can use their equally named slot
+counterparts for that.</p>
+<p>For a full list of all available slots see the <a href="#comp-ref-b-pagination-nav-slots" class="font-weight-bold">Slots</a> section
+below.</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-pagination-nav-appearance notranslate">
+<div class="overflow-auto">
+<nav aria-hidden="false">
+<ul role="menubar" aria-disabled="false" aria-label="Pagination" class="pagination b-pagination">
+<li role="presentation" aria-hidden="true" class="page-item disabled"><span role="menuitem" aria-label="Go to first page" aria-disabled="true" class="page-link">First</span></li>
+<li role="presentation" aria-hidden="true" class="page-item disabled"><span role="menuitem" aria-label="Go to previous page" aria-disabled="true" class="page-link">Prev</span></li>
+<li role="presentation" class="page-item"><a role="menuitemradio" aria-label="Go to page 1" aria-checked="false" aria-posinset="1" aria-setsize="10" tabindex="0" href="#1" class="page-link">1</a></li>
+<li role="presentation" class="page-item"><a role="menuitemradio" aria-label="Go to page 2" aria-checked="false" aria-posinset="2" aria-setsize="10" tabindex="-1" href="#2" class="page-link">2</a></li>
+<li role="presentation" class="page-item"><a role="menuitemradio" aria-label="Go to page 3" aria-checked="false" aria-posinset="3" aria-setsize="10" tabindex="-1" href="#3" class="page-link">3</a></li>
+<li role="presentation" class="page-item bv-d-xs-down-none"><a role="menuitemradio" aria-label="Go to page 4" aria-checked="false" aria-posinset="4" aria-setsize="10" tabindex="-1" href="#4" class="page-link">4</a></li>
+<li role="separator" class="page-item disabled bv-d-xs-down-none"><span class="page-link">…</span></li>
+<li role="presentation" aria-hidden="true" class="page-item disabled"><span role="menuitem" aria-label="Go to next page" aria-disabled="true" class="page-link">Next</span></li>
+<li role="presentation" aria-hidden="true" class="page-item disabled"><span role="menuitem" aria-label="Go to last page" aria-disabled="true" class="page-link">Last</span></li>
+</ul>
+</nav>
+<nav aria-hidden="false" class="mt-4">
+<ul role="menubar" aria-disabled="false" aria-label="Pagination" class="pagination b-pagination">
+<li role="presentation" aria-hidden="true" class="page-item disabled"><span role="menuitem" aria-label="Go to first page" aria-disabled="true" class="page-link">⏮</span></li>
+<li role="presentation" aria-hidden="true" class="page-item disabled"><span role="menuitem" aria-label="Go to previous page" aria-disabled="true" class="page-link">⏪</span></li>
+<li role="presentation" class="page-item"><a role="menuitemradio" aria-label="Go to page 1" aria-checked="false" aria-posinset="1" aria-setsize="10" tabindex="0" href="#1" class="page-link">1</a></li>
+<li role="presentation" class="page-item"><a role="menuitemradio" aria-label="Go to page 2" aria-checked="false" aria-posinset="2" aria-setsize="10" tabindex="-1" href="#2" class="page-link">2</a></li>
+<li role="presentation" class="page-item"><a role="menuitemradio" aria-label="Go to page 3" aria-checked="false" aria-posinset="3" aria-setsize="10" tabindex="-1" href="#3" class="page-link">3</a></li>
+<li role="presentation" class="page-item bv-d-xs-down-none"><a role="menuitemradio" aria-label="Go to page 4" aria-checked="false" aria-posinset="4" aria-setsize="10" tabindex="-1" href="#4" class="page-link">4</a></li>
+<li role="separator" class="page-item disabled bv-d-xs-down-none"><span class="page-link">…</span></li>
+<li role="presentation" aria-hidden="true" class="page-item disabled"><span role="menuitem" aria-label="Go to next page" aria-disabled="true" class="page-link">⏩</span></li>
+<li role="presentation" aria-hidden="true" class="page-item disabled"><span role="menuitem" aria-label="Go to last page" aria-disabled="true" class="page-link">⏭</span></li>
+</ul>
+</nav>
+<nav aria-hidden="false" class="mt-4">
+<ul role="menubar" aria-disabled="false" aria-label="Pagination" class="pagination b-pagination">
+<li role="presentation" aria-hidden="true" class="page-item disabled"><span role="menuitem" aria-label="Go to first page" aria-disabled="true" class="page-link"><span class="text-success">First</span></span></li>
+<li role="presentation" aria-hidden="true" class="page-item disabled"><span role="menuitem" aria-label="Go to previous page" aria-disabled="true" class="page-link"><span class="text-danger">Prev</span></span></li>
+<li role="presentation" class="page-item"><a role="menuitemradio" aria-label="Go to page 1" aria-checked="false" aria-posinset="1" aria-setsize="10" tabindex="0" href="#1" class="page-link"><i>1</i></a></li>
+<li role="presentation" class="page-item"><a role="menuitemradio" aria-label="Go to page 2" aria-checked="false" aria-posinset="2" aria-setsize="10" tabindex="-1" href="#2" class="page-link"><i>2</i></a></li>
+<li role="presentation" class="page-item"><a role="menuitemradio" aria-label="Go to page 3" aria-checked="false" aria-posinset="3" aria-setsize="10" tabindex="-1" href="#3" class="page-link"><i>3</i></a></li>
+<li role="presentation" class="page-item bv-d-xs-down-none"><a role="menuitemradio" aria-label="Go to page 4" aria-checked="false" aria-posinset="4" aria-setsize="10" tabindex="-1" href="#4" class="page-link"><i>4</i></a></li>
+<li role="separator" class="page-item disabled bv-d-xs-down-none"><span class="page-link"><span aria-hidden="true" class="spinner-grow spinner-grow-sm"></span> <span aria-hidden="true" class="spinner-grow spinner-grow-sm"></span> <span aria-hidden="true" class="spinner-grow spinner-grow-sm"></span></span></li>
+<li role="presentation" aria-hidden="true" class="page-item disabled"><span role="menuitem" aria-label="Go to next page" aria-disabled="true" class="page-link"><span class="text-warning">Next</span></span></li>
+<li role="presentation" aria-hidden="true" class="page-item disabled"><span role="menuitem" aria-label="Go to last page" aria-disabled="true" class="page-link"><span class="text-info">Last</span></span></li>
+</ul>
+</nav>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"overflow-auto"</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- Use text in props --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-pagination-nav</span>
+      <span class="hljs-attr">number-of-pages</span>=<span class="hljs-string">"10"</span>
+      <span class="hljs-attr">base-url</span>=<span class="hljs-string">"#"</span>
+      <span class="hljs-attr">first-text</span>=<span class="hljs-string">"First"</span>
+      <span class="hljs-attr">prev-text</span>=<span class="hljs-string">"Prev"</span>
+      <span class="hljs-attr">next-text</span>=<span class="hljs-string">"Next"</span>
+      <span class="hljs-attr">last-text</span>=<span class="hljs-string">"Last"</span>
+    &gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-pagination-nav</span>&gt;</span>
+
+    <span class="hljs-comment">&lt;!-- Use emojis in props --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-pagination-nav</span>
+      <span class="hljs-attr">number-of-pages</span>=<span class="hljs-string">"10"</span>
+      <span class="hljs-attr">base-url</span>=<span class="hljs-string">"#"</span>
+      <span class="hljs-attr">first-text</span>=<span class="hljs-string">"⏮"</span>
+      <span class="hljs-attr">prev-text</span>=<span class="hljs-string">"⏪"</span>
+      <span class="hljs-attr">next-text</span>=<span class="hljs-string">"⏩"</span>
+      <span class="hljs-attr">last-text</span>=<span class="hljs-string">"⏭"</span>
+      <span class="hljs-attr">class</span>=<span class="hljs-string">"mt-4"</span>
+    &gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-pagination-nav</span>&gt;</span>
+
+    <span class="hljs-comment">&lt;!-- Use HTML and sub-components in slots --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-pagination-nav</span>
+      <span class="hljs-attr">number-of-pages</span>=<span class="hljs-string">"10"</span>
+      <span class="hljs-attr">base-url</span>=<span class="hljs-string">"#"</span>
+      <span class="hljs-attr">class</span>=<span class="hljs-string">"mt-4"</span>
+    &gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">template</span> <span class="hljs-attr">v-slot:first-text</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-success"</span>&gt;</span>First<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">template</span> <span class="hljs-attr">v-slot:prev-text</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-danger"</span>&gt;</span>Prev<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">template</span> <span class="hljs-attr">v-slot:next-text</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-warning"</span>&gt;</span>Next<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">template</span> <span class="hljs-attr">v-slot:last-text</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-info"</span>&gt;</span>Last<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">template</span> <span class="hljs-attr">v-slot:ellipsis-text</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">b-spinner</span> <span class="hljs-attr">small</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"grow"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-spinner</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">b-spinner</span> <span class="hljs-attr">small</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"grow"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-spinner</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">b-spinner</span> <span class="hljs-attr">small</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"grow"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-spinner</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">template</span> <span class="hljs-attr">v-slot:page</span>=<span class="hljs-string">"{ page, active }"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">b</span> <span class="hljs-attr">v-if</span>=<span class="hljs-string">"active"</span>&gt;</span>{{ page }}<span class="hljs-tag">&lt;/<span class="hljs-name">b</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">v-else</span>&gt;</span>{{ page }}<span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-pagination-nav</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span></pre>
+<p>The slot <code translate="no" class="notranslate text-nowrap">page</code> is always scoped, while the slots <code translate="no" class="notranslate text-nowrap">first-text</code>, <code translate="no" class="notranslate text-nowrap">prev-text</code>, <code translate="no" class="notranslate text-nowrap">next-text</code> and <code translate="no" class="notranslate text-nowrap">last-text</code> are optionally scoped. The <code translate="no" class="notranslate text-nowrap">ellipsis-text</code> slot is not scoped.</p>
+<p><strong>Scoped variables properties available to the <code translate="no" class="notranslate text-nowrap">page</code> slot:</strong></p>
+<div class="table-responsive-sm">
+<table class="b-table table table-bordered table-striped bv-docs-table">
+<thead class="thead-default">
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code translate="no" class="notranslate text-nowrap">page</code></td>
+<td>Number</td>
+<td>Page number (from <code translate="no" class="notranslate text-nowrap">1</code> to <code translate="no" class="notranslate text-nowrap">numberOfPages</code>)</td>
+</tr>
+<tr>
+<td><code translate="no" class="notranslate text-nowrap">index</code></td>
+<td>Number</td>
+<td>Page number (indexed from <code translate="no" class="notranslate text-nowrap">0</code> to <code translate="no" class="notranslate text-nowrap">numberOfPages -1</code>)</td>
+</tr>
+<tr>
+<td><code translate="no" class="notranslate text-nowrap">active</code></td>
+<td>Boolean</td>
+<td>If the page is the active page</td>
+</tr>
+<tr>
+<td><code translate="no" class="notranslate text-nowrap">disabled</code></td>
+<td>Boolean</td>
+<td>If the page button is disabled</td>
+</tr>
+<tr>
+<td><code translate="no" class="notranslate text-nowrap">content</code></td>
+<td>String</td>
+<td>default content, or the result of the <code translate="no" class="notranslate text-nowrap">page-gen</code> function</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Scoped variables properties available to the <code translate="no" class="notranslate text-nowrap">first-text</code>, <code translate="no" class="notranslate text-nowrap">prev-text</code>, <code translate="no" class="notranslate text-nowrap">next-text</code> and <code translate="no" class="notranslate text-nowrap">last-text</code> slots:</strong></p>
+<div class="table-responsive-sm">
+<table class="b-table table table-bordered table-striped bv-docs-table">
+<thead class="thead-default">
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code translate="no" class="notranslate text-nowrap">page</code></td>
+<td>Number</td>
+<td>Page number (from <code translate="no" class="notranslate text-nowrap">1</code> to <code translate="no" class="notranslate text-nowrap">numberOfPages</code>)</td>
+</tr>
+<tr>
+<td><code translate="no" class="notranslate text-nowrap">index</code></td>
+<td>Number</td>
+<td>Page number (indexed from <code translate="no" class="notranslate text-nowrap">0</code> to <code translate="no" class="notranslate text-nowrap">numberOfPages -1</code>)</td>
+</tr>
+<tr>
+<td><code translate="no" class="notranslate text-nowrap">disabled</code></td>
+<td>Boolean</td>
+<td>If the page button is disabled</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="goto-firstlast-button-type" class="bv-no-focus-ring"><span class="bd-content-title">Goto first/last button type<a class="anchorjs-link" href="#goto-firstlast-button-type" aria-labelledby="goto-firstlast-button-type"></a></span></h3>
+<p>If you prefer to have buttons with the first and last page number to go to the corresponding page,
+use the <code translate="no" class="notranslate text-nowrap">first-number</code> and <code translate="no" class="notranslate text-nowrap">last-number</code> props.</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-pagination-nav-goto-first-last-number notranslate">
+<div class="overflow-auto">
+<div>
+<h6>Goto first button number</h6>
+<nav aria-hidden="false">
+<ul role="menubar" aria-disabled="false" aria-label="Pagination" class="pagination b-pagination">
+<li role="presentation" class="page-item"><a role="menuitem" tabindex="-1" aria-label="Go to previous page" href="#4" class="page-link">‹</a></li>
+<li role="presentation" class="page-item"><a role="menuitemradio" aria-label="Go to page 1" aria-checked="false" aria-posinset="1" aria-setsize="100" tabindex="-1" href="#1" class="page-link">1</a></li>
+<li role="separator" class="page-item disabled bv-d-xs-down-none"><span class="page-link">…</span></li>
+<li role="presentation" class="page-item"><a role="menuitemradio" aria-label="Go to page 4" aria-checked="false" aria-posinset="4" aria-setsize="100" tabindex="-1" href="#4" class="page-link">4</a></li>
+<li role="presentation" class="page-item active"><a role="menuitemradio" aria-label="Go to page 5" aria-checked="true" aria-posinset="5" aria-setsize="100" tabindex="0" href="#5" class="page-link">5</a></li>
+<li role="presentation" class="page-item"><a role="menuitemradio" aria-label="Go to page 6" aria-checked="false" aria-posinset="6" aria-setsize="100" tabindex="-1" href="#6" class="page-link">6</a></li>
+<li role="separator" class="page-item disabled bv-d-xs-down-none"><span class="page-link">…</span></li>
+<li role="presentation" class="page-item"><a role="menuitem" tabindex="-1" aria-label="Go to next page" href="#6" class="page-link">›</a></li>
+<li role="presentation" class="page-item"><a role="menuitem" tabindex="-1" aria-label="Go to last page" href="#100" class="page-link">»</a></li>
+</ul>
+</nav>
+</div>
+<div class="mt-3">
+<h6>Goto last button number</h6>
+<nav aria-hidden="false">
+<ul role="menubar" aria-disabled="false" aria-label="Pagination" class="pagination b-pagination">
+<li role="presentation" class="page-item"><a role="menuitem" tabindex="-1" aria-label="Go to first page" href="#1" class="page-link">«</a></li>
+<li role="presentation" class="page-item"><a role="menuitem" tabindex="-1" aria-label="Go to previous page" href="#4" class="page-link">‹</a></li>
+<li role="separator" class="page-item disabled bv-d-xs-down-none"><span class="page-link">…</span></li>
+<li role="presentation" class="page-item"><a role="menuitemradio" aria-label="Go to page 4" aria-checked="false" aria-posinset="4" aria-setsize="100" tabindex="-1" href="#4" class="page-link">4</a></li>
+<li role="presentation" class="page-item active"><a role="menuitemradio" aria-label="Go to page 5" aria-checked="true" aria-posinset="5" aria-setsize="100" tabindex="0" href="#5" class="page-link">5</a></li>
+<li role="presentation" class="page-item"><a role="menuitemradio" aria-label="Go to page 6" aria-checked="false" aria-posinset="6" aria-setsize="100" tabindex="-1" href="#6" class="page-link">6</a></li>
+<li role="separator" class="page-item disabled bv-d-xs-down-none"><span class="page-link">…</span></li>
+<li role="presentation" class="page-item"><a role="menuitemradio" aria-label="Go to page 100" aria-checked="false" aria-posinset="100" aria-setsize="100" tabindex="-1" href="#100" class="page-link">100</a></li>
+<li role="presentation" class="page-item"><a role="menuitem" tabindex="-1" aria-label="Go to next page" href="#6" class="page-link">›</a></li>
+</ul>
+</nav>
+</div>
+<div class="mt-3">
+<h6>Goto first and last button number</h6>
+<nav aria-hidden="false">
+<ul role="menubar" aria-disabled="false" aria-label="Pagination" class="pagination b-pagination">
+<li role="presentation" class="page-item"><a role="menuitem" tabindex="-1" aria-label="Go to previous page" href="#4" class="page-link">‹</a></li>
+<li role="presentation" class="page-item"><a role="menuitemradio" aria-label="Go to page 1" aria-checked="false" aria-posinset="1" aria-setsize="100" tabindex="-1" href="#1" class="page-link">1</a></li>
+<li role="separator" class="page-item disabled bv-d-xs-down-none"><span class="page-link">…</span></li>
+<li role="presentation" class="page-item"><a role="menuitemradio" aria-label="Go to page 4" aria-checked="false" aria-posinset="4" aria-setsize="100" tabindex="-1" href="#4" class="page-link">4</a></li>
+<li role="presentation" class="page-item active"><a role="menuitemradio" aria-label="Go to page 5" aria-checked="true" aria-posinset="5" aria-setsize="100" tabindex="0" href="#5" class="page-link">5</a></li>
+<li role="presentation" class="page-item"><a role="menuitemradio" aria-label="Go to page 6" aria-checked="false" aria-posinset="6" aria-setsize="100" tabindex="-1" href="#6" class="page-link">6</a></li>
+<li role="separator" class="page-item disabled bv-d-xs-down-none"><span class="page-link">…</span></li>
+<li role="presentation" class="page-item"><a role="menuitemradio" aria-label="Go to page 100" aria-checked="false" aria-posinset="100" aria-setsize="100" tabindex="-1" href="#100" class="page-link">100</a></li>
+<li role="presentation" class="page-item"><a role="menuitem" tabindex="-1" aria-label="Go to next page" href="#6" class="page-link">›</a></li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"overflow-auto"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h6</span>&gt;</span>Goto first button number<span class="hljs-tag">&lt;/<span class="hljs-name">h6</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-pagination-nav</span>
+        <span class="hljs-attr">v-model</span>=<span class="hljs-string">"currentPage"</span>
+        <span class="hljs-attr">:number-of-pages</span>=<span class="hljs-string">"pages"</span>
+        <span class="hljs-attr">base-url</span>=<span class="hljs-string">"#"</span>
+        <span class="hljs-attr">first-number</span>
+      &gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-pagination-nav</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mt-3"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h6</span>&gt;</span>Goto last button number<span class="hljs-tag">&lt;/<span class="hljs-name">h6</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-pagination-nav</span>
+        <span class="hljs-attr">v-model</span>=<span class="hljs-string">"currentPage"</span>
+        <span class="hljs-attr">:number-of-pages</span>=<span class="hljs-string">"pages"</span>
+        <span class="hljs-attr">base-url</span>=<span class="hljs-string">"#"</span>
+        <span class="hljs-attr">last-number</span>
+      &gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-pagination-nav</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mt-3"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h6</span>&gt;</span>Goto first and last button number<span class="hljs-tag">&lt;/<span class="hljs-name">h6</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-pagination-nav</span>
+        <span class="hljs-attr">v-model</span>=<span class="hljs-string">"currentPage"</span>
+        <span class="hljs-attr">:number-of-pages</span>=<span class="hljs-string">"pages"</span>
+        <span class="hljs-attr">base-url</span>=<span class="hljs-string">"#"</span>
+        <span class="hljs-attr">first-number</span>
+        <span class="hljs-attr">last-number</span>
+      &gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-pagination-nav</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    data() {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">pages</span>: <span class="hljs-number">100</span>,
+        <span class="hljs-attr">currentPage</span>: <span class="hljs-number">5</span>
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+<h3 id="button-size" class="bv-no-focus-ring"><span class="bd-content-title">Button size<a class="anchorjs-link" href="#button-size" aria-labelledby="button-size"></a></span></h3>
+<p>Optionally change from the default button size by setting the <code translate="no" class="notranslate text-nowrap">size</code> prop to either <code translate="no" class="notranslate text-nowrap">'sm'</code> for
+smaller buttons or <code translate="no" class="notranslate text-nowrap">'lg'</code> for larger buttons.</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-pagination-nav-size notranslate">
+<div class="overflow-auto">
+<div>
+<h6>Small</h6>
+<nav aria-hidden="false">
+<ul role="menubar" aria-disabled="false" aria-label="Pagination" class="pagination b-pagination pagination-sm">
+<li role="presentation" aria-hidden="true" class="page-item disabled"><span role="menuitem" aria-label="Go to first page" aria-disabled="true" class="page-link">«</span></li>
+<li role="presentation" aria-hidden="true" class="page-item disabled"><span role="menuitem" aria-label="Go to previous page" aria-disabled="true" class="page-link">‹</span></li>
+<li role="presentation" class="page-item"><a role="menuitemradio" aria-label="Go to page 1" aria-checked="false" aria-posinset="1" aria-setsize="10" tabindex="0" href="#1" class="page-link">1</a></li>
+<li role="presentation" class="page-item"><a role="menuitemradio" aria-label="Go to page 2" aria-checked="false" aria-posinset="2" aria-setsize="10" tabindex="-1" href="#2" class="page-link">2</a></li>
+<li role="presentation" class="page-item"><a role="menuitemradio" aria-label="Go to page 3" aria-checked="false" aria-posinset="3" aria-setsize="10" tabindex="-1" href="#3" class="page-link">3</a></li>
+<li role="presentation" class="page-item bv-d-xs-down-none"><a role="menuitemradio" aria-label="Go to page 4" aria-checked="false" aria-posinset="4" aria-setsize="10" tabindex="-1" href="#4" class="page-link">4</a></li>
+<li role="separator" class="page-item disabled bv-d-xs-down-none"><span class="page-link">…</span></li>
+<li role="presentation" aria-hidden="true" class="page-item disabled"><span role="menuitem" aria-label="Go to next page" aria-disabled="true" class="page-link">›</span></li>
+<li role="presentation" aria-hidden="true" class="page-item disabled"><span role="menuitem" aria-label="Go to last page" aria-disabled="true" class="page-link">»</span></li>
+</ul>
+</nav>
+</div>
+<div class="mt-3">
+<h6>Default</h6>
+<nav aria-hidden="false">
+<ul role="menubar" aria-disabled="false" aria-label="Pagination" class="pagination b-pagination">
+<li role="presentation" aria-hidden="true" class="page-item disabled"><span role="menuitem" aria-label="Go to first page" aria-disabled="true" class="page-link">«</span></li>
+<li role="presentation" aria-hidden="true" class="page-item disabled"><span role="menuitem" aria-label="Go to previous page" aria-disabled="true" class="page-link">‹</span></li>
+<li role="presentation" class="page-item"><a role="menuitemradio" aria-label="Go to page 1" aria-checked="false" aria-posinset="1" aria-setsize="10" tabindex="0" href="#1" class="page-link">1</a></li>
+<li role="presentation" class="page-item"><a role="menuitemradio" aria-label="Go to page 2" aria-checked="false" aria-posinset="2" aria-setsize="10" tabindex="-1" href="#2" class="page-link">2</a></li>
+<li role="presentation" class="page-item"><a role="menuitemradio" aria-label="Go to page 3" aria-checked="false" aria-posinset="3" aria-setsize="10" tabindex="-1" href="#3" class="page-link">3</a></li>
+<li role="presentation" class="page-item bv-d-xs-down-none"><a role="menuitemradio" aria-label="Go to page 4" aria-checked="false" aria-posinset="4" aria-setsize="10" tabindex="-1" href="#4" class="page-link">4</a></li>
+<li role="separator" class="page-item disabled bv-d-xs-down-none"><span class="page-link">…</span></li>
+<li role="presentation" aria-hidden="true" class="page-item disabled"><span role="menuitem" aria-label="Go to next page" aria-disabled="true" class="page-link">›</span></li>
+<li role="presentation" aria-hidden="true" class="page-item disabled"><span role="menuitem" aria-label="Go to last page" aria-disabled="true" class="page-link">»</span></li>
+</ul>
+</nav>
+</div>
+<div class="mt-3">
+<h6>Large</h6>
+<nav aria-hidden="false">
+<ul role="menubar" aria-disabled="false" aria-label="Pagination" class="pagination b-pagination pagination-lg">
+<li role="presentation" aria-hidden="true" class="page-item disabled"><span role="menuitem" aria-label="Go to first page" aria-disabled="true" class="page-link">«</span></li>
+<li role="presentation" aria-hidden="true" class="page-item disabled"><span role="menuitem" aria-label="Go to previous page" aria-disabled="true" class="page-link">‹</span></li>
+<li role="presentation" class="page-item"><a role="menuitemradio" aria-label="Go to page 1" aria-checked="false" aria-posinset="1" aria-setsize="10" tabindex="0" href="#1" class="page-link">1</a></li>
+<li role="presentation" class="page-item"><a role="menuitemradio" aria-label="Go to page 2" aria-checked="false" aria-posinset="2" aria-setsize="10" tabindex="-1" href="#2" class="page-link">2</a></li>
+<li role="presentation" class="page-item"><a role="menuitemradio" aria-label="Go to page 3" aria-checked="false" aria-posinset="3" aria-setsize="10" tabindex="-1" href="#3" class="page-link">3</a></li>
+<li role="presentation" class="page-item bv-d-xs-down-none"><a role="menuitemradio" aria-label="Go to page 4" aria-checked="false" aria-posinset="4" aria-setsize="10" tabindex="-1" href="#4" class="page-link">4</a></li>
+<li role="separator" class="page-item disabled bv-d-xs-down-none"><span class="page-link">…</span></li>
+<li role="presentation" aria-hidden="true" class="page-item disabled"><span role="menuitem" aria-label="Go to next page" aria-disabled="true" class="page-link">›</span></li>
+<li role="presentation" aria-hidden="true" class="page-item disabled"><span role="menuitem" aria-label="Go to last page" aria-disabled="true" class="page-link">»</span></li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"overflow-auto"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h6</span>&gt;</span>Small<span class="hljs-tag">&lt;/<span class="hljs-name">h6</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-pagination-nav</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"sm"</span> <span class="hljs-attr">number-of-pages</span>=<span class="hljs-string">"10"</span> <span class="hljs-attr">base-url</span>=<span class="hljs-string">"#"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-pagination-nav</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mt-3"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h6</span>&gt;</span>Default<span class="hljs-tag">&lt;/<span class="hljs-name">h6</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-pagination-nav</span> <span class="hljs-attr">number-of-pages</span>=<span class="hljs-string">"10"</span> <span class="hljs-attr">base-url</span>=<span class="hljs-string">"#"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-pagination-nav</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mt-3"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h6</span>&gt;</span>Large<span class="hljs-tag">&lt;/<span class="hljs-name">h6</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-pagination-nav</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"lg"</span> <span class="hljs-attr">number-of-pages</span>=<span class="hljs-string">"10"</span> <span class="hljs-attr">base-url</span>=<span class="hljs-string">"#"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-pagination-nav</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span></pre>
+<h3 id="pill-style" class="bv-no-focus-ring"><span class="bd-content-title">Pill style<a class="anchorjs-link" href="#pill-style" aria-labelledby="pill-style"></a></span></h3>
+<p>Easily switch to pill style buttons by setting the <code translate="no" class="notranslate text-nowrap">pills</code> prop</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-pagination-nav-pills notranslate">
+<div class="overflow-auto">
+<div>
+<h6>Small Pills</h6>
+<nav aria-hidden="false">
+<ul role="menubar" aria-disabled="false" aria-label="Pagination" class="pagination b-pagination pagination-sm b-pagination-pills">
+<li role="presentation" aria-hidden="true" class="page-item disabled"><span role="menuitem" aria-label="Go to first page" aria-disabled="true" class="page-link">«</span></li>
+<li role="presentation" aria-hidden="true" class="page-item disabled"><span role="menuitem" aria-label="Go to previous page" aria-disabled="true" class="page-link">‹</span></li>
+<li role="presentation" class="page-item"><a role="menuitemradio" aria-label="Go to page 1" aria-checked="false" aria-posinset="1" aria-setsize="10" tabindex="0" href="#1" class="page-link">1</a></li>
+<li role="presentation" class="page-item"><a role="menuitemradio" aria-label="Go to page 2" aria-checked="false" aria-posinset="2" aria-setsize="10" tabindex="-1" href="#2" class="page-link">2</a></li>
+<li role="presentation" class="page-item"><a role="menuitemradio" aria-label="Go to page 3" aria-checked="false" aria-posinset="3" aria-setsize="10" tabindex="-1" href="#3" class="page-link">3</a></li>
+<li role="presentation" class="page-item bv-d-xs-down-none"><a role="menuitemradio" aria-label="Go to page 4" aria-checked="false" aria-posinset="4" aria-setsize="10" tabindex="-1" href="#4" class="page-link">4</a></li>
+<li role="separator" class="page-item disabled bv-d-xs-down-none"><span class="page-link">…</span></li>
+<li role="presentation" aria-hidden="true" class="page-item disabled"><span role="menuitem" aria-label="Go to next page" aria-disabled="true" class="page-link">›</span></li>
+<li role="presentation" aria-hidden="true" class="page-item disabled"><span role="menuitem" aria-label="Go to last page" aria-disabled="true" class="page-link">»</span></li>
+</ul>
+</nav>
+</div>
+<div class="mt-3">
+<h6>Default Pills</h6>
+<nav aria-hidden="false">
+<ul role="menubar" aria-disabled="false" aria-label="Pagination" class="pagination b-pagination b-pagination-pills">
+<li role="presentation" aria-hidden="true" class="page-item disabled"><span role="menuitem" aria-label="Go to first page" aria-disabled="true" class="page-link">«</span></li>
+<li role="presentation" aria-hidden="true" class="page-item disabled"><span role="menuitem" aria-label="Go to previous page" aria-disabled="true" class="page-link">‹</span></li>
+<li role="presentation" class="page-item"><a role="menuitemradio" aria-label="Go to page 1" aria-checked="false" aria-posinset="1" aria-setsize="10" tabindex="0" href="#1" class="page-link">1</a></li>
+<li role="presentation" class="page-item"><a role="menuitemradio" aria-label="Go to page 2" aria-checked="false" aria-posinset="2" aria-setsize="10" tabindex="-1" href="#2" class="page-link">2</a></li>
+<li role="presentation" class="page-item"><a role="menuitemradio" aria-label="Go to page 3" aria-checked="false" aria-posinset="3" aria-setsize="10" tabindex="-1" href="#3" class="page-link">3</a></li>
+<li role="presentation" class="page-item bv-d-xs-down-none"><a role="menuitemradio" aria-label="Go to page 4" aria-checked="false" aria-posinset="4" aria-setsize="10" tabindex="-1" href="#4" class="page-link">4</a></li>
+<li role="separator" class="page-item disabled bv-d-xs-down-none"><span class="page-link">…</span></li>
+<li role="presentation" aria-hidden="true" class="page-item disabled"><span role="menuitem" aria-label="Go to next page" aria-disabled="true" class="page-link">›</span></li>
+<li role="presentation" aria-hidden="true" class="page-item disabled"><span role="menuitem" aria-label="Go to last page" aria-disabled="true" class="page-link">»</span></li>
+</ul>
+</nav>
+</div>
+<div class="mt-3">
+<h6>Large Pills</h6>
+<nav aria-hidden="false">
+<ul role="menubar" aria-disabled="false" aria-label="Pagination" class="pagination b-pagination pagination-lg b-pagination-pills">
+<li role="presentation" aria-hidden="true" class="page-item disabled"><span role="menuitem" aria-label="Go to first page" aria-disabled="true" class="page-link">«</span></li>
+<li role="presentation" aria-hidden="true" class="page-item disabled"><span role="menuitem" aria-label="Go to previous page" aria-disabled="true" class="page-link">‹</span></li>
+<li role="presentation" class="page-item"><a role="menuitemradio" aria-label="Go to page 1" aria-checked="false" aria-posinset="1" aria-setsize="10" tabindex="0" href="#1" class="page-link">1</a></li>
+<li role="presentation" class="page-item"><a role="menuitemradio" aria-label="Go to page 2" aria-checked="false" aria-posinset="2" aria-setsize="10" tabindex="-1" href="#2" class="page-link">2</a></li>
+<li role="presentation" class="page-item"><a role="menuitemradio" aria-label="Go to page 3" aria-checked="false" aria-posinset="3" aria-setsize="10" tabindex="-1" href="#3" class="page-link">3</a></li>
+<li role="presentation" class="page-item bv-d-xs-down-none"><a role="menuitemradio" aria-label="Go to page 4" aria-checked="false" aria-posinset="4" aria-setsize="10" tabindex="-1" href="#4" class="page-link">4</a></li>
+<li role="separator" class="page-item disabled bv-d-xs-down-none"><span class="page-link">…</span></li>
+<li role="presentation" aria-hidden="true" class="page-item disabled"><span role="menuitem" aria-label="Go to next page" aria-disabled="true" class="page-link">›</span></li>
+<li role="presentation" aria-hidden="true" class="page-item disabled"><span role="menuitem" aria-label="Go to last page" aria-disabled="true" class="page-link">»</span></li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"overflow-auto"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h6</span>&gt;</span>Small Pills<span class="hljs-tag">&lt;/<span class="hljs-name">h6</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-pagination-nav</span> <span class="hljs-attr">pills</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"sm"</span> <span class="hljs-attr">number-of-pages</span>=<span class="hljs-string">"10"</span> <span class="hljs-attr">base-url</span>=<span class="hljs-string">"#"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-pagination-nav</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mt-3"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h6</span>&gt;</span>Default Pills<span class="hljs-tag">&lt;/<span class="hljs-name">h6</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-pagination-nav</span> <span class="hljs-attr">pills</span> <span class="hljs-attr">number-of-pages</span>=<span class="hljs-string">"10"</span> <span class="hljs-attr">base-url</span>=<span class="hljs-string">"#"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-pagination-nav</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mt-3"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h6</span>&gt;</span>Large Pills<span class="hljs-tag">&lt;/<span class="hljs-name">h6</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-pagination-nav</span> <span class="hljs-attr">pills</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"lg"</span> <span class="hljs-attr">number-of-pages</span>=<span class="hljs-string">"10"</span> <span class="hljs-attr">base-url</span>=<span class="hljs-string">"#"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-pagination-nav</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span></pre>
+<p><strong>Note:</strong> Pill styling requires BootstrapVue's custom CSS/SCSS.</p>
+<h3 id="alignment" class="bv-no-focus-ring"><span class="bd-content-title">Alignment<a class="anchorjs-link" href="#alignment" aria-labelledby="alignment"></a></span></h3>
+<p>By default the pagination component is left aligned. Change the alignment to <code translate="no" class="notranslate text-nowrap">center</code>, <code translate="no" class="notranslate text-nowrap">right</code> (<code translate="no" class="notranslate text-nowrap">right</code> is an alias for <code translate="no" class="notranslate text-nowrap">end</code>), or 'fill' by setting the prop <code translate="no" class="notranslate text-nowrap">align</code> to the appropriate value.</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-pagination-nav-alignment notranslate">
+<div class="overflow-auto">
+<div>
+<h6>Left alignment (default)</h6>
+<nav aria-hidden="false">
+<ul role="menubar" aria-disabled="false" aria-label="Pagination" class="pagination b-pagination">
+<li role="presentation" aria-hidden="true" class="page-item disabled"><span role="menuitem" aria-label="Go to first page" aria-disabled="true" class="page-link">«</span></li>
+<li role="presentation" aria-hidden="true" class="page-item disabled"><span role="menuitem" aria-label="Go to previous page" aria-disabled="true" class="page-link">‹</span></li>
+<li role="presentation" class="page-item"><a role="menuitemradio" aria-label="Go to page 1" aria-checked="false" aria-posinset="1" aria-setsize="10" tabindex="0" href="#1" class="page-link">1</a></li>
+<li role="presentation" class="page-item"><a role="menuitemradio" aria-label="Go to page 2" aria-checked="false" aria-posinset="2" aria-setsize="10" tabindex="-1" href="#2" class="page-link">2</a></li>
+<li role="presentation" class="page-item"><a role="menuitemradio" aria-label="Go to page 3" aria-checked="false" aria-posinset="3" aria-setsize="10" tabindex="-1" href="#3" class="page-link">3</a></li>
+<li role="presentation" class="page-item bv-d-xs-down-none"><a role="menuitemradio" aria-label="Go to page 4" aria-checked="false" aria-posinset="4" aria-setsize="10" tabindex="-1" href="#4" class="page-link">4</a></li>
+<li role="separator" class="page-item disabled bv-d-xs-down-none"><span class="page-link">…</span></li>
+<li role="presentation" aria-hidden="true" class="page-item disabled"><span role="menuitem" aria-label="Go to next page" aria-disabled="true" class="page-link">›</span></li>
+<li role="presentation" aria-hidden="true" class="page-item disabled"><span role="menuitem" aria-label="Go to last page" aria-disabled="true" class="page-link">»</span></li>
+</ul>
+</nav>
+</div>
+<div class="mt-3">
+<h6 class="text-center">Center alignment</h6>
+<nav aria-hidden="false">
+<ul role="menubar" aria-disabled="false" aria-label="Pagination" class="pagination b-pagination justify-content-center">
+<li role="presentation" aria-hidden="true" class="page-item disabled"><span role="menuitem" aria-label="Go to first page" aria-disabled="true" class="page-link">«</span></li>
+<li role="presentation" aria-hidden="true" class="page-item disabled"><span role="menuitem" aria-label="Go to previous page" aria-disabled="true" class="page-link">‹</span></li>
+<li role="presentation" class="page-item"><a role="menuitemradio" aria-label="Go to page 1" aria-checked="false" aria-posinset="1" aria-setsize="10" tabindex="0" href="#1" class="page-link">1</a></li>
+<li role="presentation" class="page-item"><a role="menuitemradio" aria-label="Go to page 2" aria-checked="false" aria-posinset="2" aria-setsize="10" tabindex="-1" href="#2" class="page-link">2</a></li>
+<li role="presentation" class="page-item"><a role="menuitemradio" aria-label="Go to page 3" aria-checked="false" aria-posinset="3" aria-setsize="10" tabindex="-1" href="#3" class="page-link">3</a></li>
+<li role="presentation" class="page-item bv-d-xs-down-none"><a role="menuitemradio" aria-label="Go to page 4" aria-checked="false" aria-posinset="4" aria-setsize="10" tabindex="-1" href="#4" class="page-link">4</a></li>
+<li role="separator" class="page-item disabled bv-d-xs-down-none"><span class="page-link">…</span></li>
+<li role="presentation" aria-hidden="true" class="page-item disabled"><span role="menuitem" aria-label="Go to next page" aria-disabled="true" class="page-link">›</span></li>
+<li role="presentation" aria-hidden="true" class="page-item disabled"><span role="menuitem" aria-label="Go to last page" aria-disabled="true" class="page-link">»</span></li>
+</ul>
+</nav>
+</div>
+<div class="mt-3">
+<h6 class="text-right">Right (end) alignment</h6>
+<nav aria-hidden="false">
+<ul role="menubar" aria-disabled="false" aria-label="Pagination" class="pagination b-pagination justify-content-end">
+<li role="presentation" aria-hidden="true" class="page-item disabled"><span role="menuitem" aria-label="Go to first page" aria-disabled="true" class="page-link">«</span></li>
+<li role="presentation" aria-hidden="true" class="page-item disabled"><span role="menuitem" aria-label="Go to previous page" aria-disabled="true" class="page-link">‹</span></li>
+<li role="presentation" class="page-item"><a role="menuitemradio" aria-label="Go to page 1" aria-checked="false" aria-posinset="1" aria-setsize="10" tabindex="0" href="#1" class="page-link">1</a></li>
+<li role="presentation" class="page-item"><a role="menuitemradio" aria-label="Go to page 2" aria-checked="false" aria-posinset="2" aria-setsize="10" tabindex="-1" href="#2" class="page-link">2</a></li>
+<li role="presentation" class="page-item"><a role="menuitemradio" aria-label="Go to page 3" aria-checked="false" aria-posinset="3" aria-setsize="10" tabindex="-1" href="#3" class="page-link">3</a></li>
+<li role="presentation" class="page-item bv-d-xs-down-none"><a role="menuitemradio" aria-label="Go to page 4" aria-checked="false" aria-posinset="4" aria-setsize="10" tabindex="-1" href="#4" class="page-link">4</a></li>
+<li role="separator" class="page-item disabled bv-d-xs-down-none"><span class="page-link">…</span></li>
+<li role="presentation" aria-hidden="true" class="page-item disabled"><span role="menuitem" aria-label="Go to next page" aria-disabled="true" class="page-link">›</span></li>
+<li role="presentation" aria-hidden="true" class="page-item disabled"><span role="menuitem" aria-label="Go to last page" aria-disabled="true" class="page-link">»</span></li>
+</ul>
+</nav>
+</div>
+<div class="mt-3">
+<h6 class="text-center">Fill alignment</h6>
+<nav aria-hidden="false">
+<ul role="menubar" aria-disabled="false" aria-label="Pagination" class="pagination b-pagination text-center">
+<li role="presentation" aria-hidden="true" class="page-item disabled flex-fill"><span role="menuitem" aria-label="Go to first page" aria-disabled="true" class="page-link">«</span></li>
+<li role="presentation" aria-hidden="true" class="page-item disabled flex-fill"><span role="menuitem" aria-label="Go to previous page" aria-disabled="true" class="page-link">‹</span></li>
+<li role="presentation" class="page-item flex-fill"><a role="menuitemradio" aria-label="Go to page 1" aria-checked="false" aria-posinset="1" aria-setsize="10" tabindex="0" href="#1" class="page-link">1</a></li>
+<li role="presentation" class="page-item flex-fill"><a role="menuitemradio" aria-label="Go to page 2" aria-checked="false" aria-posinset="2" aria-setsize="10" tabindex="-1" href="#2" class="page-link">2</a></li>
+<li role="presentation" class="page-item flex-fill"><a role="menuitemradio" aria-label="Go to page 3" aria-checked="false" aria-posinset="3" aria-setsize="10" tabindex="-1" href="#3" class="page-link">3</a></li>
+<li role="presentation" class="page-item flex-fill bv-d-xs-down-none"><a role="menuitemradio" aria-label="Go to page 4" aria-checked="false" aria-posinset="4" aria-setsize="10" tabindex="-1" href="#4" class="page-link">4</a></li>
+<li role="separator" class="page-item disabled bv-d-xs-down-none flex-fill"><span class="page-link">…</span></li>
+<li role="presentation" aria-hidden="true" class="page-item disabled flex-fill"><span role="menuitem" aria-label="Go to next page" aria-disabled="true" class="page-link">›</span></li>
+<li role="presentation" aria-hidden="true" class="page-item disabled flex-fill"><span role="menuitem" aria-label="Go to last page" aria-disabled="true" class="page-link">»</span></li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"overflow-auto"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h6</span>&gt;</span>Left alignment (default)<span class="hljs-tag">&lt;/<span class="hljs-name">h6</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-pagination-nav</span> <span class="hljs-attr">number-of-pages</span>=<span class="hljs-string">"10"</span> <span class="hljs-attr">base-url</span>=<span class="hljs-string">"#"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-pagination-nav</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mt-3"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h6</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-center"</span>&gt;</span>Center alignment<span class="hljs-tag">&lt;/<span class="hljs-name">h6</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-pagination-nav</span> <span class="hljs-attr">number-of-pages</span>=<span class="hljs-string">"10"</span> <span class="hljs-attr">base-url</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">align</span>=<span class="hljs-string">"center"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-pagination-nav</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mt-3"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h6</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-right"</span>&gt;</span>Right (end) alignment<span class="hljs-tag">&lt;/<span class="hljs-name">h6</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-pagination-nav</span> <span class="hljs-attr">number-of-pages</span>=<span class="hljs-string">"10"</span> <span class="hljs-attr">base-url</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">align</span>=<span class="hljs-string">"right"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-pagination-nav</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mt-3"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h6</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-center"</span>&gt;</span>Fill alignment<span class="hljs-tag">&lt;/<span class="hljs-name">h6</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-pagination-nav</span> <span class="hljs-attr">number-of-pages</span>=<span class="hljs-string">"10"</span> <span class="hljs-attr">base-url</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">align</span>=<span class="hljs-string">"fill"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-pagination-nav</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span></pre>
+<h2 id="auto-current-page-detection-and-v-model-support" class="bv-no-focus-ring"><span class="bd-content-title">Auto current page detection and <code translate="no" class="notranslate text-nowrap">v-model</code> support<a class="anchorjs-link" href="#auto-current-page-detection-and-v-model-support" aria-labelledby="auto-current-page-detection-and-v-model-support"></a></span></h2>
+<p><code translate="no" class="notranslate text-nowrap">&lt;b-pagination-nav&gt;</code> will try and automatically detect which page button should be active, based on
+the page's current URL or <code translate="no" class="notranslate text-nowrap">$route</code> (if a router is detected). In cases where it cannot detect the
+page, no page number buttons will be in the active state, and the first, previous, next and last
+buttons will be in the disabled state until a page button is clicked.</p>
+<p><code translate="no" class="notranslate text-nowrap">v-model</code> is optionally supported (updated by the <code translate="no" class="notranslate text-nowrap">input</code> event, and tied to the <code translate="no" class="notranslate text-nowrap">value</code> prop).
+Setting the <code translate="no" class="notranslate text-nowrap">v-model</code> to <code translate="no" class="notranslate text-nowrap">null</code> (the default) initially will trigger auto active page detection, and
+will subsequently be updated with the current page number (indexed from <code translate="no" class="notranslate text-nowrap">1</code> to number of pages). If
+you initially set the <code translate="no" class="notranslate text-nowrap">v-model</code> to a value of <code translate="no" class="notranslate text-nowrap">1</code> or greater, auto page detection will not occur
+(until after a user clicks a page button), and the page specified by the <code translate="no" class="notranslate text-nowrap">v-model</code> will be set as <code translate="no" class="notranslate text-nowrap">active</code>.</p>
+<p>To disable auto active page detection, set the <code translate="no" class="notranslate text-nowrap">no-page-detect</code> prop to <code translate="no" class="notranslate text-nowrap">true</code>.</p>
+<p><strong>Note:</strong> Auto page detection needs to loop through all possible page links until a match is
+detected. For larger <code translate="no" class="notranslate text-nowrap">number-of-pages</code>, this check can take some time so you may want to manually
+control which page is the active via the <code translate="no" class="notranslate text-nowrap">v-model</code> and the <code translate="no" class="notranslate text-nowrap">no-page-detect</code> prop.</p>
+<h2 id="accessibility" class="bv-no-focus-ring"><span class="bd-content-title">Accessibility<a class="anchorjs-link" href="#accessibility" aria-labelledby="accessibility"></a></span></h2>
+<p>The <code translate="no" class="notranslate text-nowrap">&lt;b-pagination-nav&gt;</code> component provides many features to support assistive technology users,
+such as <code translate="no" class="notranslate text-nowrap">aria-</code> attributes and keyboard navigation.</p>
+<h3 id="aria-labels" class="bv-no-focus-ring"><span class="bd-content-title">ARIA labels<a class="anchorjs-link" href="#aria-labels" aria-labelledby="aria-labels"></a></span></h3>
+<p><code translate="no" class="notranslate text-nowrap">&lt;b-pagination-nav&gt;</code> provides various <code translate="no" class="notranslate text-nowrap">*-label-*</code> props which are used to set the <code translate="no" class="notranslate text-nowrap">aria-label</code> attributes on the various elements within the component, which will help users of assistive
+technology.</p>
+<div class="table-responsive-sm">
+<table class="b-table table table-bordered table-striped bv-docs-table">
+<thead class="thead-default">
+<tr>
+<th>Prop</th>
+<th><code translate="no" class="notranslate text-nowrap">aria-label</code> content default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code translate="no" class="notranslate text-nowrap">label-first-page</code></td>
+<td>"Goto first page"</td>
+</tr>
+<tr>
+<td><code translate="no" class="notranslate text-nowrap">label-prev-page</code></td>
+<td>"Goto previous page"</td>
+</tr>
+<tr>
+<td><code translate="no" class="notranslate text-nowrap">label-next-page</code></td>
+<td>"Goto next page"</td>
+</tr>
+<tr>
+<td><code translate="no" class="notranslate text-nowrap">label-last-page</code></td>
+<td>"Goto last page"</td>
+</tr>
+<tr>
+<td><code translate="no" class="notranslate text-nowrap">label-page</code></td>
+<td>"Goto page", appended with the page number</td>
+</tr>
+<tr>
+<td><code translate="no" class="notranslate text-nowrap">aria-label</code></td>
+<td>"Pagination", applied to the outer pagination container</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The <code translate="no" class="notranslate text-nowrap">label-page</code> will optionally accept a function to generate the aria-label. The function is
+passed a single argument which is the page number (indexed from 1 to number of pages).</p>
+<p>You can remove any label by setting the prop to an empty string (<code translate="no" class="notranslate text-nowrap">''</code>), although this is not
+recommended unless the content of the button textually conveys its purpose.</p>
+<h3 id="keyboard-navigation" class="bv-no-focus-ring"><span class="bd-content-title">Keyboard navigation<a class="anchorjs-link" href="#keyboard-navigation" aria-labelledby="keyboard-navigation"></a></span></h3>
+<p><code translate="no" class="notranslate text-nowrap">&lt;b-pagination-nav&gt;</code> supports keyboard navigation out of the box, and follows the <a href="https://www.w3.org/TR/wai-aria-practices-1.2/#kbd_roving_tabindex" target="_blank" rel="noopener">WAI-ARIA roving tabindex</a> pattern.</p>
+<ul>
+<li>Tabbing into the pagination component will autofocus the current active page button</li>
+<li><kbd class="notranslate" translate="no">LEFT</kbd> (or <kbd class="notranslate" translate="no">UP</kbd>) and <kbd class="notranslate" translate="no">RIGHT</kbd> (or <kbd class="notranslate" translate="no">DOWN</kbd>) arrow keys will focus
+the previous and next buttons, respectively, in the page list</li>
+<li><kbd class="notranslate" translate="no">ENTER</kbd> or <kbd class="notranslate" translate="no">SPACE</kbd> keys will select (click) the currently focused page button</li>
+<li>Pressing <kbd class="notranslate" translate="no">TAB</kbd> will move to the next control or link on the page, while pressing <kbd class="notranslate" translate="no">SHIFT</kbd>+<kbd class="notranslate" translate="no">TAB</kbd> will move to the previous control or link on the page.</li>
+</ul>
+<h2 id="see-also" class="bv-no-focus-ring"><span class="bd-content-title">See also<a class="anchorjs-link" href="#see-also" aria-labelledby="see-also"></a></span></h2>
+<p>Refer to the <a href="../../../bootstrap-vue/docs/reference/router-links" class="font-weight-bold">Router support</a> reference page for router-link specific
+props.</p>
+<p>For pagination control of a component (such as <code translate="no" class="notranslate text-nowrap">&lt;b-table&gt;</code>), use the <a href="../../../bootstrap-vue/docs/components/pagination" class="font-weight-bold"><code translate="no" class="notranslate text-nowrap">&lt;b-pagination&gt;</code></a> component instead.</p>
+<!-- Component reference added automatically from component package.json -->
+
+<h2 id="component-reference" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title">Component reference<a href="../../../bootstrap-vue/docs/components/pagination-nav#component-reference" class="anchorjs-link" aria-labelledby="component-reference" target="_self"></a></span></h2>
+<section data-v-866a22e8="" class="bd-content">
+<header data-v-866a22e8="" class="row align-items-center">
+<div data-v-866a22e8="" class="col-sm-9">
+<h3 data-v-866a22e8="" id="comp-ref-b-pagination-nav" tabindex="-1" class="bv-no-focus-ring"><span data-v-866a22e8="" class="bd-content-title"><code data-v-866a22e8="" translate="translate" class="notranslate bigger">&lt;b-pagination-nav&gt;</code><a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/pagination-nav#comp-ref-b-pagination-nav" class="anchorjs-link" aria-labelledby="comp-ref-b-pagination-nav" target="_self"></a></span></h3>
+</div>
+<div data-v-866a22e8="" class="text-sm-right col-sm-3"><a data-v-866a22e8="" rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev/src/components/pagination-nav/pagination-nav.js" class="btn btn-outline-secondary btn-sm"> View source </a></div>
+</header>
+<ul data-v-866a22e8="" class="component-ref-mini-toc my-3">
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-pagination-nav-props"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-pagination-nav&gt;</code> Properties </a></li>
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-pagination-nav-v-model"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-pagination-nav&gt;</code> v-model </a></li>
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-pagination-nav-slots"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-pagination-nav&gt;</code> Slots </a></li>
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-pagination-nav-events"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-pagination-nav&gt;</code> Events </a></li>
+</ul>
+<article data-v-866a22e8="" class="bd-content">
+<h4 data-v-866a22e8="" id="comp-ref-b-pagination-nav-props" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> Properties <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/pagination-nav#comp-ref-b-pagination-nav-props" class="anchorjs-link" aria-labelledby="comp-ref-b-pagination-nav-props" target="_self"></a></span></h4>
+<div data-v-866a22e8="" class="table-responsive-sm">
+<table role="table" aria-busy="false" aria-colcount="4" class="table b-table bv-docs-table table-striped" id="__BVID__879">
+<thead role="rowgroup" class="">
+<tr role="row" class="">
+<th role="columnheader" scope="col" tabindex="0" aria-colindex="1" aria-sort="none" class="b-table-sort-icon-left">Property<span class="sr-only"> (Click to sort Ascending)</span></th>
+<th role="columnheader" scope="col" tabindex="0" aria-colindex="2" class="">Type</th>
+<th role="columnheader" scope="col" tabindex="0" aria-colindex="3" class="">Default</th>
+<th role="columnheader" scope="col" tabindex="0" aria-colindex="4" class="">Description</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+<tr role="row" data-pk="disabled" class="" id="__BVID__879__row_disabled">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">disabled</code></td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">When set to 'true', disables the component's functionality and places it in a disabled state</td>
+</tr>
+<tr role="row" data-pk="value" class="" id="__BVID__879__row_value">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">value</code> <span data-v-866a22e8="" class="badge badge-primary">v-model</span></td>
+<td aria-colindex="2" role="cell" class="">Number or String</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">Current page number, starting from 1</td>
+</tr>
+<tr role="row" data-pk="limit" class="" id="__BVID__879__row_limit">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">limit</code></td>
+<td aria-colindex="2" role="cell" class="">Number or String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">5</code></td>
+<td aria-colindex="4" role="cell" class="">Maximum number of buttons to show (including ellipsis if shown, but excluding the bookend buttons)</td>
+</tr>
+<tr role="row" data-pk="align" class="" id="__BVID__879__row_align">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">align</code></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'left'</code></td>
+<td aria-colindex="4" role="cell" class="">Alignment of the page buttons: 'start' (or 'left'), 'center', 'end' (or 'right'), or 'fill'</td>
+</tr>
+<tr role="row" data-pk="pills" class="" id="__BVID__879__row_pills">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">pills</code> <span data-v-866a22e8="" class="badge badge-secondary">v2.1.0+</span></td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">Applies pill styling to the pagination buttons</td>
+</tr>
+<tr role="row" data-pk="hide-goto-end-buttons" class="" id="__BVID__879__row_hide-goto-end-buttons">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">hide-goto-end-buttons</code></td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">Hides the goto first and goto last page buttons</td>
+</tr>
+<tr role="row" data-pk="aria-label" class="" id="__BVID__879__row_aria-label">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">aria-label</code></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'Pagination'</code></td>
+<td aria-colindex="4" role="cell" class="">Value to place in the 'aria-label' attribute of the pagination control</td>
+</tr>
+<tr role="row" data-pk="label-first-page" class="" id="__BVID__879__row_label-first-page">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">label-first-page</code></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'Go to first page'</code></td>
+<td aria-colindex="4" role="cell" class="">Value to place in the 'aria-label' attribute of the goto first page button</td>
+</tr>
+<tr role="row" data-pk="first-text" class="" id="__BVID__879__row_first-text">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">first-text</code></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'«'</code></td>
+<td aria-colindex="4" role="cell" class="">Content to place in the goto first page button</td>
+</tr>
+<tr role="row" data-pk="first-number" class="" id="__BVID__879__row_first-number">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">first-number</code> <span data-v-866a22e8="" class="badge badge-secondary">v2.3.0+</span></td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">Display first page number instead of Goto First button</td>
+</tr>
+<tr role="row" data-pk="first-class" class="" id="__BVID__879__row_first-class">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">first-class</code> <span data-v-866a22e8="" class="badge badge-secondary">v2.3.0+</span></td>
+<td aria-colindex="2" role="cell" class="">String or Array or Object</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">Class(es) to apply to the 'Go to first page' button</td>
+</tr>
+<tr role="row" data-pk="label-prev-page" class="" id="__BVID__879__row_label-prev-page">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">label-prev-page</code></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'Go to previous page'</code></td>
+<td aria-colindex="4" role="cell" class="">Value to place in the 'aria-label' attribute of the goto previous page button</td>
+</tr>
+<tr role="row" data-pk="prev-text" class="" id="__BVID__879__row_prev-text">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">prev-text</code></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'‹'</code></td>
+<td aria-colindex="4" role="cell" class="">Content to place in the goto previous page button</td>
+</tr>
+<tr role="row" data-pk="prev-class" class="" id="__BVID__879__row_prev-class">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">prev-class</code> <span data-v-866a22e8="" class="badge badge-secondary">v2.3.0+</span></td>
+<td aria-colindex="2" role="cell" class="">String or Array or Object</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">Class(es) to apply to the 'Go to previous page' button</td>
+</tr>
+<tr role="row" data-pk="label-next-page" class="" id="__BVID__879__row_label-next-page">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">label-next-page</code></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'Go to next page'</code></td>
+<td aria-colindex="4" role="cell" class="">Value to place in the 'aria-label' attribute of the goto next page button</td>
+</tr>
+<tr role="row" data-pk="next-text" class="" id="__BVID__879__row_next-text">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">next-text</code></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'›'</code></td>
+<td aria-colindex="4" role="cell" class="">Content to place in the goto next page button</td>
+</tr>
+<tr role="row" data-pk="next-class" class="" id="__BVID__879__row_next-class">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">next-class</code> <span data-v-866a22e8="" class="badge badge-secondary">v2.3.0+</span></td>
+<td aria-colindex="2" role="cell" class="">String or Array or Object</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">Class(es) to apply to the 'Go to next page' button</td>
+</tr>
+<tr role="row" data-pk="label-last-page" class="" id="__BVID__879__row_label-last-page">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">label-last-page</code></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'Go to last page'</code></td>
+<td aria-colindex="4" role="cell" class="">Value to place in the 'aria-label' attribute of the goto last page button</td>
+</tr>
+<tr role="row" data-pk="last-text" class="" id="__BVID__879__row_last-text">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">last-text</code></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'»'</code></td>
+<td aria-colindex="4" role="cell" class="">Content to place in the goto last page button</td>
+</tr>
+<tr role="row" data-pk="last-number" class="" id="__BVID__879__row_last-number">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">last-number</code> <span data-v-866a22e8="" class="badge badge-secondary">v2.3.0+</span></td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">Display last page number instead of Goto Last button</td>
+</tr>
+<tr role="row" data-pk="last-class" class="" id="__BVID__879__row_last-class">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">last-class</code> <span data-v-866a22e8="" class="badge badge-secondary">v2.3.0+</span></td>
+<td aria-colindex="2" role="cell" class="">String or Array or Object</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">Class(es) to apply to the 'Go to last page' button</td>
+</tr>
+<tr role="row" data-pk="label-page" class="" id="__BVID__879__row_label-page">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">label-page</code></td>
+<td aria-colindex="2" role="cell" class="">String or Function</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'Go to page'</code></td>
+<td aria-colindex="4" role="cell" class="">Value to place in the 'aria-label' attribute of the goto page button. Page number will be prepended automatically</td>
+</tr>
+<tr role="row" data-pk="page-class" class="" id="__BVID__879__row_page-class">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">page-class</code> <span data-v-866a22e8="" class="badge badge-secondary">v2.3.0+</span></td>
+<td aria-colindex="2" role="cell" class="">String or Array or Object</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">Class(es) to apply to the 'Go to page #' buttons</td>
+</tr>
+<tr role="row" data-pk="hide-ellipsis" class="" id="__BVID__879__row_hide-ellipsis">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">hide-ellipsis</code></td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">Do not show ellipsis buttons</td>
+</tr>
+<tr role="row" data-pk="ellipsis-text" class="" id="__BVID__879__row_ellipsis-text">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">ellipsis-text</code></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'…'</code></td>
+<td aria-colindex="4" role="cell" class="">Content to place in the ellipsis placeholder</td>
+</tr>
+<tr role="row" data-pk="ellipsis-class" class="" id="__BVID__879__row_ellipsis-class">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">ellipsis-class</code> <span data-v-866a22e8="" class="badge badge-secondary">v2.3.0+</span></td>
+<td aria-colindex="2" role="cell" class="">String or Array or Object</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">Class(es) to apply to the 'ellipsis' placeholders</td>
+</tr>
+<tr role="row" data-pk="size" class="" id="__BVID__879__row_size">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">size</code></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">Size of the rendered buttons: 'sm', 'md' (default), or 'lg'</td>
+</tr>
+<tr role="row" data-pk="number-of-pages" class="" id="__BVID__879__row_number-of-pages">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">number-of-pages</code></td>
+<td aria-colindex="2" role="cell" class="">Number or String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">1</code></td>
+<td aria-colindex="4" role="cell" class="">Total number of pages</td>
+</tr>
+<tr role="row" data-pk="base-url" class="" id="__BVID__879__row_base-url">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">base-url</code></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'/'</code></td>
+<td aria-colindex="4" role="cell" class="">Base URL to use when auto generating page links</td>
+</tr>
+<tr role="row" data-pk="use-router" class="" id="__BVID__879__row_use-router">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">use-router</code></td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">Render router-links instead of links when auto generating the page links</td>
+</tr>
+<tr role="row" data-pk="link-gen" class="" id="__BVID__879__row_link-gen">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">link-gen</code></td>
+<td aria-colindex="2" role="cell" class="">Function</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">Link generator function. See docs for details</td>
+</tr>
+<tr role="row" data-pk="page-gen" class="" id="__BVID__879__row_page-gen">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">page-gen</code></td>
+<td aria-colindex="2" role="cell" class="">Function</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">page number generator function. See docs for details</td>
+</tr>
+<tr role="row" data-pk="pages" class="" id="__BVID__879__row_pages">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">pages</code></td>
+<td aria-colindex="2" role="cell" class="">Array</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">Array of page numbers and links</td>
+</tr>
+<tr role="row" data-pk="no-page-detect" class="" id="__BVID__879__row_no-page-detect">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">no-page-detect</code></td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">Disable of auto detection of current page</td>
+</tr>
+<tr role="row" data-pk="active-class" class="" id="__BVID__879__row_active-class">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">active-class</code></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">router-link prop: Configure the active CSS class applied when the link is active. Typically you will want to set this to class name 'active'</td>
+</tr>
+<tr role="row" data-pk="exact" class="" id="__BVID__879__row_exact">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">exact</code></td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">router-link prop: The default active class matching behavior is inclusive match. Setting this prop forces the mode to exactly match the route</td>
+</tr>
+<tr role="row" data-pk="exact-active-class" class="" id="__BVID__879__row_exact-active-class">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">exact-active-class</code></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">router-link prop: Configure the active CSS class applied when the link is active with exact match. Typically you will want to set this to class name 'active'</td>
+</tr>
+<tr role="row" data-pk="no-prefetch" class="" id="__BVID__879__row_no-prefetch">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">no-prefetch</code></td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">nuxt-link prop: To improve the responsiveness of your Nuxt.js applications, when the link will be displayed within the viewport, Nuxt.js will automatically prefetch the code splitted page. Setting 'no-prefetch' will disabled this feature for the specific link</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div data-v-866a22e8="" class="alert alert-info">
+<p data-v-866a22e8="" class="mb-0 small"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-pagination-nav&gt;</code> supports generating <code data-v-866a22e8="" translate="translate" class="notranslate">&lt;router-link&gt;</code> or <code data-v-866a22e8="" translate="translate" class="notranslate">&lt;nuxt-link&gt;</code> component (if using Nuxt.js).
+        For more details on the router link (or nuxt link) specific props, see the <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/reference/router-links" class="alert-link" target="_self">Router support</a> reference section. </p>
+</div>
+</article>
+<article data-v-866a22e8="" class="bd-content">
+<h4 data-v-866a22e8="" id="comp-ref-b-pagination-nav-v-model" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> v-model <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/pagination-nav#comp-ref-b-pagination-nav-v-model" class="anchorjs-link" aria-labelledby="comp-ref-b-pagination-nav-v-model" target="_self"></a></span></h4>
+<div data-v-866a22e8="" class="table-responsive-sm">
+<table role="table" aria-busy="false" aria-colcount="2" class="table b-table bv-docs-table table-striped" id="__BVID__929">
+<thead role="rowgroup" class="">
+<tr role="row" class="">
+<th role="columnheader" scope="col" aria-colindex="1" class="">Property</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">Event</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+<tr role="row" class="">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="notranslate">value</code></td>
+<td aria-colindex="2" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="notranslate">input</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+<article data-v-866a22e8="" class="bd-content">
+<h4 data-v-866a22e8="" id="comp-ref-b-pagination-nav-slots" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> Slots <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/pagination-nav#comp-ref-b-pagination-nav-slots" class="anchorjs-link" aria-labelledby="comp-ref-b-pagination-nav-slots" target="_self"></a></span></h4>
+<div data-v-866a22e8="" class="table-responsive-sm">
+<table role="table" aria-busy="false" aria-colcount="3" class="table b-table bv-docs-table table-striped" id="__BVID__938">
+<thead role="rowgroup" class="">
+<tr role="row" class="">
+<th role="columnheader" scope="col" aria-colindex="1" class="">Slot Name</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">Description</th>
+<th role="columnheader" scope="col" aria-colindex="3" class="">Scoped</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+<tr role="row" data-pk="first-text" class="" id="__BVID__938__row_first-text">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">first-text</code></td>
+<td aria-colindex="2" role="cell" class="">The "go to first page" button content. Optionally scoped</td>
+<td aria-colindex="3" role="cell" class=""><button data-v-866a22e8="" type="button" class="btn py-0 btn-info btn-sm"> Scope </button></td>
+</tr>
+<tr role="row" data-pk="prev-text" class="" id="__BVID__938__row_prev-text">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">prev-text</code></td>
+<td aria-colindex="2" role="cell" class="">The "go to previous page" button content. Optionally scoped</td>
+<td aria-colindex="3" role="cell" class=""><button data-v-866a22e8="" type="button" class="btn py-0 btn-info btn-sm"> Scope </button></td>
+</tr>
+<tr role="row" data-pk="next-text" class="" id="__BVID__938__row_next-text">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">next-text</code></td>
+<td aria-colindex="2" role="cell" class="">The "go to next page" button content. Optionally scoped</td>
+<td aria-colindex="3" role="cell" class=""><button data-v-866a22e8="" type="button" class="btn py-0 btn-info btn-sm"> Scope </button></td>
+</tr>
+<tr role="row" data-pk="last-text" class="" id="__BVID__938__row_last-text">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">last-text</code></td>
+<td aria-colindex="2" role="cell" class="">The "go to last page" button content. Optionally scoped</td>
+<td aria-colindex="3" role="cell" class=""><button data-v-866a22e8="" type="button" class="btn py-0 btn-info btn-sm"> Scope </button></td>
+</tr>
+<tr role="row" data-pk="ellipsis-text" class="" id="__BVID__938__row_ellipsis-text">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">ellipsis-text</code></td>
+<td aria-colindex="2" role="cell" class="">The '...' indicator content. Not scoped</td>
+<td aria-colindex="3" role="cell" class=""></td>
+</tr>
+<tr role="row" data-pk="page" class="" id="__BVID__938__row_page">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">page</code></td>
+<td aria-colindex="2" role="cell" class="">Page number button content. Always scoped</td>
+<td aria-colindex="3" role="cell" class=""><button data-v-866a22e8="" type="button" class="btn py-0 btn-info btn-sm"> Scope </button></td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+<article data-v-866a22e8="" class="bd-content">
+<h4 data-v-866a22e8="" id="comp-ref-b-pagination-nav-events" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> Events <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/pagination-nav#comp-ref-b-pagination-nav-events" class="anchorjs-link" aria-labelledby="comp-ref-b-pagination-nav-events" target="_self"></a></span></h4>
+<div data-v-866a22e8="" class="table-responsive-sm">
+<table role="table" aria-busy="false" aria-colcount="3" class="table b-table bv-docs-table table-striped" id="__BVID__953">
+<thead role="rowgroup" class="">
+<tr role="row" class="">
+<th role="columnheader" scope="col" aria-colindex="1" class="">Event</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">Arguments</th>
+<th role="columnheader" scope="col" aria-colindex="3" class="">Description</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+<tr role="row" data-pk="input" class="" id="__BVID__953__row_input">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="notranslate">input</code></td>
+<td aria-colindex="2" role="cell" class=""><ol data-v-866a22e8="" class="list-unstyled mb-0">
+<li data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">page</code> - <span data-v-866a22e8="">Selected page number (starting with 1), or null if no page found</span></li>
+</ol></td>
+<td aria-colindex="3" role="cell" class="">when page changes via user interaction or programmatically</td>
+</tr>
+<tr role="row" data-pk="change" class="" id="__BVID__953__row_change">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="notranslate">change</code></td>
+<td aria-colindex="2" role="cell" class=""><ol data-v-866a22e8="" class="list-unstyled mb-0">
+<li data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">page</code> - <span data-v-866a22e8="">Selected page number (starting with 1)</span></li>
+</ol></td>
+<td aria-colindex="3" role="cell" class="">when page changes via user interaction</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+<h3 id="importing-individual-components" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title"> Importing individual components <a href="../../../bootstrap-vue/docs/components/pagination-nav#importing-individual-components" class="anchorjs-link" aria-labelledby="importing-individual-components" target="_self"></a></span></h3>
+<p> You can import individual components into your project via the following named
+        exports: </p>
+<div class="table-responsive-sm">
+<table role="table" aria-busy="false" aria-colcount="3" class="table b-table bv-docs-table table-striped" id="__BVID__965">
+<thead role="rowgroup" class="thead-default">
+<tr role="row" class="">
+<th role="columnheader" scope="col" aria-colindex="1" class="">Component</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">Named Export</th>
+<th role="columnheader" scope="col" aria-colindex="3" class="">Import Path</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+<tr role="row" class="">
+<td aria-colindex="1" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">&lt;b-pagination-nav&gt;</code></td>
+<td aria-colindex="2" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">BPaginationNav</code></td>
+<td aria-colindex="3" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">bootstrap-vue</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Example:</strong></p>
+<pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { BPaginationNav } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
+Vue.component(<span class="hljs-string">'b-pagination-nav'</span>, BPaginationNav)</pre>
+</article>
+<article class="bd-content">
+<h3 id="importing-as-a-plugin" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title"> Importing as a Vue.js plugin <a href="../../../bootstrap-vue/docs/components/pagination-nav#importing-as-a-plugin" class="anchorjs-link" aria-labelledby="importing-as-a-plugin" target="_self"></a></span></h3>
+<p> This plugin includes all of the above listed individual
+      components.
+      Plugins also include any component aliases. </p>
+<div class="table-responsive-sm">
+<table fileds="namedExport,importPath" role="table" aria-busy="false" aria-colcount="2" class="table b-table bv-docs-table table-striped b-table-caption-top" id="__BVID__975">
+<thead role="rowgroup" class="thead-default">
+<tr role="row" class="">
+<th role="columnheader" scope="col" aria-colindex="1" class="">Named Export</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">Import Path</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+<tr role="row" class="">
+<td aria-colindex="1" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">PaginationNavPlugin</code></td>
+<td aria-colindex="2" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">bootstrap-vue</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Example:</strong></p>
+<pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { PaginationNavPlugin } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
+Vue.use(PaginationNavPlugin)</pre>
+
+
+
+
+
+</main>
+</div>
+</div>
+
+
+<script src="../../../js/jquery-3.2.1.slim.min.js"></script> 
+<script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery-slim.min.js"><\/script>')</script> 
+<script src="../../../v4/dist/js/popper.min.js"></script> 
+<script src="../../../v4/dist/js/bootstrap.min.js"></script> 
+<script src="../../../v4/assets/js/docs.min.js"></script> 
+<script src="../../../v4/assets/js/ie-emulation-modes-warning.js"></script> 
+<script src="../../../v4/assets/js/docsearch.min.js"></script> 
+<script>
+  docsearch({
+    appId: 'PRR89ISST8',
+    apiKey: '95044d57d4d7bb744f322d1f18ed607f',
+    indexName: 'z01-bootstrapV4',
+    inputSelector: '#search-input',
+    handleSelected: function (input, event, suggestion) {
+      var url = suggestion.url;
+      url = suggestion.isLvl1 ? url.split('#')[0]: url;
+      // If it's a title we remove the anchor so it does not jump.
+      window.location.href = url;
+    },
+    transformData: function (hits) {
+      return hits.map(function (hit) {
+        hit.url = hit.url.replace('https://v4-alpha.getbootstrap.com', '/docs/4.0');
+        return hit;
+      });
+    },
+    debug: false // Set debug to true if you want to inspect the dropdown
+  });
+</script> 
+<script>
+  Holder.addTheme('gray', {
+    bg: '#777',
+    fg: 'rgba(255,255,255,.75)',
+    font: 'Helvetica',
+    fontweight: 'normal'
+  });
+</script>
+</body>
+</html>

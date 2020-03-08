@@ -1,0 +1,1549 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Jekyll v3.6.0">
+<title>布局与网格 &middot; BootstrapVue</title>
+<!-- Bootstrap 核心CSS -->
+<link href="../../../v4/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- 本文档额外专用css -->
+<link href="../../../v4/assets/css/docsearch.min.css" rel="stylesheet">
+<link href="../../../v4/assets/css/docs.min.css" rel="stylesheet">
+<link href="../../style/bv_path.css" rel="stylesheet">
+
+<!-- Favicons图标定义 -->
+<link data-n-head="ssr" rel="manifest" href="../../manifest.json">
+<link data-n-head="ssr" rel="shortcut icon" href="../../style/icons/icon_64.png">
+<link data-n-head="ssr" rel="apple-touch-icon" href="../../style/icons/icon_512.png" sizes="512x512">
+
+<!-- Meta关键字定义 -->
+<meta name="description" content="The most popular HTML, CSS, and JS library in the world.">
+<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+
+</head>
+<body>
+<a id="skippy" class="sr-only sr-only-focusable" href="#content">
+<div class="container"> <span class="skiplink-text">跳到主体内容</span> </div>
+</a>
+<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar"> <a class="navbar-brand mr-0 mr-md-2" href="../" aria-label="Bootstrap">
+  <svg class="d-block" width="36" height="36" viewbox="0 0 612 612" xmlns="http://www.w3.org/2000/svg" focusable="false">
+    <title>Bootstrap</title>
+    <path fill="currentColor" d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z"/>
+    <path fill="currentColor" d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z"/>
+  </svg>
+  </a>
+  <div class="navbar-nav-scroll">
+    <ul class="navbar-nav bd-navbar-nav flex-row">
+      <li class="nav-item"><a class="nav-link " href="../">首页</a></li>
+      <li class="nav-item"><a class="nav-link active" href="../../v4/docs/">中文手册</a></li>
+      <li class="nav-item"><a class="nav-link " href="../../v4/examples/">实例</a></li>
+      <li class="nav-item dropdown">
+<a class="nav-item nav-link dropdown-toggle mr-md-2" id="bd-versions" aria-expanded="false" aria-haspopup="true" href="#" data-toggle="dropdown"> 主题模板 </a>
+<div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
+<a class="dropdown-item" href="../../V4/themes/" target="_blank">主题门户</a>
+<a class="dropdown-item" href="../../V4/themes/live.html">精选模板</a>
+</div>
+</li>
+      <li class="nav-item"><a class="nav-link" href="//ico.z01.com" target="_blank" rel="noopener">zico图标系统</a></li>
+      <li class="nav-item"><a class="nav-link" href="https://expo.getbootstrap.com" target="_blank" rel="noopener">优站精选</a></li>
+      <li class="nav-item"><a class="nav-link" href="https://blog.getbootstrap.com" target="_blank" rel="noopener">Blog</a></li>
+    </ul>
+  </div>
+  <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="alse"> v2.6.1 </a>
+      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions"> 
+        <a class="dropdown-item active" href="../../../bootstrap-vue/docs/4.0/">Latest (4.3.x)</a>
+        <a class="dropdown-item" href="/Boot/">v3.3.7</a>
+        <a class="dropdown-item" href="/Sass/">Sass语言</a>
+        <a class="dropdown-item" href="/Emmet/">Emmet语法</a>
+        <a class="dropdown-item" href="//www.z01.com/tool/" target="_blank">IIS站长工具</a>
+        <a class="dropdown-item" href="//ad.z01.com/" target="_blank">广告源码</a>
+        <a class="dropdown-item" href="//v.z01.com/mb/" target="_blank">免费模板</a>
+        <a class="dropdown-item" href="//v.z01.com/" target="_blank">H5移动创作</a>
+        <a class="dropdown-item" href="//www.z01.com/help/web/3234.shtml" target="_blank">Flexbox布局</a>
+		<a class="dropdown-item" href="/boot/font.html" target="_blank">Font Awesome</a>
+</div>
+    </li>
+    <li class="nav-item"> <a class="nav-link p-2" href="//zoomla.github.io/bootstrap4-zhcn-documentation" target="_blank" rel="noopener" aria-label="GitHub">
+      <svg class="navbar-nav-svg" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 499.36" focusable="false">
+        <title>GitHub</title>
+        <path d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z" fill="currentColor" fill-rule="evenodd"/>
+      </svg>
+      </a> </li>
+    <li class="nav-item"> <a class="nav-link p-2" href="http://www.z01.com/blog/ren/3214.shtml" target="_blank" rel="noopener" aria-label="Slack">译者说</a></li>
+  </ul>
+  <a class="btn btn-bd-yellow d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="download.html">下载 Bootstrap</a> </header>
+
+<div class="container-fluid">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+      <form class="bd-search d-flex align-items-center">
+        <input type="search" class="form-control" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
+        <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30" focusable="false">
+          <title>Menu</title>
+          <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/>
+        </svg>
+        </button>
+      </form>
+
+
+<nav class="collapse bd-links" id="bd-docs-nav">
+<div class=""><a href="../" class="bd-toc-link">首页</a></div>
+<div class="bd-toc-item nuxt-link-exact-active "><a href="../../../bootstrap-vue/docs/" class="bd-toc-link  "> 起步 </a>
+<ul class="nav bd-sidenav">
+</ul>
+</div>
+<div class="bd-toc-item active"><a href="../../../bootstrap-vue/docs/components/" class="bd-toc-link nuxt-link-exact-active"> 组件 </a>
+<ul class="nav bd-sidenav">
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/index.html" class="nav-link"> 组件目录 </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/alert.html" class="nav-link"> 警告提示框(Alert) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/badge.html" class="nav-link"> 徽章(Badge) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/badge.html" class="nav-link"> 面包屑导航(Breadcrumb) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/button.html" class="nav-link"> 按钮(Button) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/button-group.html" class="nav-link"> 按钮组(Button Group) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/button-toolbar.html" class="nav-link"> 按钮Toolbar(Button Toolbar) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/calendar.html" class="nav-link"> 日历组件(Calendar) <small class="badge text-uppercase badge-success">New</small> </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/card.html" class="nav-link"> 卡片(Card) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/carousel.html" class="nav-link"> 轮播效果(Carousel) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/collapse.html" class="nav-link"> 折叠面板(Collapse) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/dropdown.html" class="nav-link"> 下拉菜单(Dropdown) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/embed.html" class="nav-link"> 嵌入(Embed) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form.html" class="nav-link"> 表单(Form) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-checkbox.html" class="nav-link"> 表单复选框(Form Checkbox) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-datepicker.html" class="nav-link"> 表单时间选择器(Form Datepicker) <small class="badge text-uppercase badge-success">New</small> </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-file.html" class="nav-link"> 文件选择(Form File) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-group.html" class="nav-link"> 表单组合(Form Group) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-input.html" class="nav-link"> 表单输入框(Form Input) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-radio.html" class="nav-link"> 单选择表单Form Radio </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-select.html" class="nav-link"> 下拉式表单(Form Select) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-spinbutton.html" class="nav-link"> 按钮式表单(Form Spinbuttno) <small class="badge text-uppercase badge-success">New</small> </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-tags.html" class="nav-link"> Tags表单选择器(Form Tags) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-textarea.html" class="nav-link"> 文本框(Form Textarea) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-timepicker.html" class="nav-link"> 表单内时间控件(Form Timepicker) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/image.html" class="nav-link"> 图片(Image) </a></li>
+
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/input-group.html" class="nav-link"> 输入框(Input Group) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/jumbotron.html" class="nav-link"> Hero大块屏(Jumbotron) </a></li>
+<li class="nav-item active"><a href="../../../bootstrap-vue/docs/components/layout.html" class="nav-link"> 布局与网络Layout and Grid System </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/link.html" class="nav-link"> 链接(Link)</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/list-group.html" class="nav-link"> 列表组(List group) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/media.html" class="nav-link"> 媒体(Media) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/modal.html" class="nav-link"> 弹出模态框(Modal) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/nav.html" class="nav-link"> 导航(Nav) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/navbar.html" class="nav-link"> 导航栏(Navbar) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/pagination.html" class="nav-link"> 分页(Pagination) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/pagination-nav.html" class="nav-link"> 分页导航(Pagination Nav) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/popover.html" class="nav-link"> 指示备注(Popover) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/progress.html" class="nav-link"> 进度指示器(Progress) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/spinner.html" class="nav-link"> 旋转指示器(Spinner) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/table.html" class="nav-link"> 表格(Table) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/tabs.html" class="nav-link"> 选项卡(Tabs) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/time.html" class="nav-link"> 时间组件(Time) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/toast.html" class="nav-link"> 冒泡推送(Toasts) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/tooltip.html" class="nav-link"> tip提示组件(Tooltip) </a></li>
+</ul>
+</div>
+<div class="bd-toc-item"><a href="../../../bootstrap-vue/docs/directives/" class="bd-toc-link"> 指令 </a>
+<ul class="nav bd-sidenav">
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/directives/index.html" class="nav-link"> 指令目录 </a></li>
+<li class="nav-item active"><a href="../../../bootstrap-vue/docs/directives/hover.html" class="nav-link"> Hover 指令<small class="badge text-uppercase badge-success">New</small> </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/directives/popover.html" class="nav-link"> Popover 提示备注</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/directives/scrollspy.html" class="nav-link"> Scrollspy 滚动监听</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/directives/tooltip.html" class="nav-link"> Tooltip 提示指令</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/directives/visible.html" class="nav-link"> Visible 可见性操作<small class="badge text-uppercase badge-success">New</small> </a></li>
+</ul>
+</div>
+<div class="bd-toc-item"><a href="../../../bootstrap-vue/docs/icons.html" class="bd-toc-link"> Icons图标</a>
+<ul class="nav bd-sidenav">
+</ul>
+</div>
+  
+<div class="bd-toc-item"><a class="bd-toc-link" href="../../../bootstrap-vue/docs/reference">参考</a>
+<ul class="nav bd-sidenav">
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference" class="nav-link.html"> 参考目录 </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/accessibility.html" class="nav-link">友好访问</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/color-variants.html" class="nav-link">Color颜色变量 </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/images.html" class="nav-link"> 组件图像img的src路径解析</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/router-links.html" class="nav-link"> Router路由支持 </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/size-props.html" class="nav-link">大小规格</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/spacing-classes.html" class="nav-link">间距处理</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/starter-templates.html" class="nav-link">开始模板</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/theming.html" class="nav-link">主题色彩</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/utility-classes.html" class="nav-link">通用Class类</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/validation.html" class="nav-link">Form表单验证</a></li>
+</ul>
+</div><div class="bd-toc-item"> <a class="bd-toc-link" href="../components/alerts.html"> 杂项 </a>
+<ul class="nav bd-sidenav">
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/misc/changelog" class="nav-link"> Changelog </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/misc/contributing" class="nav-link"> Contributing </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/misc/settings" class="nav-link"> Settings </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/misc/third-party" class="nav-link"> Third party libraries </a></li>
+</ul>
+</div>
+<div class=""><a href="/play" class="bd-toc-link">在线模拟器</a></div>
+</nav>
+</div>
+
+<div class="d-none d-xl-block col-xl-2 bd-toc">
+<ul class="section-nav">
+<li class="nav-item toc-entry mb-2"><a target="_self" href="#layout-and-grid-system" class="nav-link font-weight-bold"><span>Layout and Grid System</span></a></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#how-it-works" class="nav-link"><span>How it works</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#containers-b-container" class="nav-link"><span>Containers &lt;b-container&gt;</span></a>
+<ul class="nav flex-column">
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#default-container" class="nav-link"><span>Default container</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#fluid-width-container" class="nav-link"><span>Fluid width container</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#responsive-fluid-containers" class="nav-link"><span>Responsive fluid containers</span></a></li>
+</ul>
+</li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#rows-b-row-and-b-form-row" class="nav-link"><span>Rows &lt;b-row&gt; and &lt;b-form-row&gt;</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#columns-b-col" class="nav-link"><span>Columns &lt;b-col&gt;</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#grid-options" class="nav-link"><span>Grid options</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#auto-layout-columns" class="nav-link"><span>Auto-layout columns</span></a>
+<ul class="nav flex-column">
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#equal-width-columns" class="nav-link"><span>Equal-width columns</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#equal-width-multi-line" class="nav-link"><span>Equal-width multi-line</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#setting-one-column-width" class="nav-link"><span>Setting one column width</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#variable-width-content" class="nav-link"><span>Variable width content</span></a></li>
+</ul>
+</li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#responsive-classes" class="nav-link"><span>Responsive classes</span></a>
+<ul class="nav flex-column">
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#all-breakpoints" class="nav-link"><span>All breakpoints</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#stacked-to-horizontal" class="nav-link"><span>Stacked to horizontal</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#mix-and-match" class="nav-link"><span>Mix and match</span></a></li>
+</ul>
+</li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#alignment" class="nav-link"><span>Alignment</span></a>
+<ul class="nav flex-column">
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#vertical-alignment" class="nav-link"><span>Vertical alignment</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#horizontal-alignment" class="nav-link"><span>Horizontal alignment</span></a></li>
+</ul>
+</li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#reordering" class="nav-link"><span>Reordering</span></a>
+<ul class="nav flex-column">
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#ordering-columns" class="nav-link"><span>Ordering columns</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#offsetting-columns" class="nav-link"><span>Offsetting columns</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#margin-utilities-on-columns" class="nav-link"><span>Margin utilities on columns</span></a></li>
+</ul>
+</li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#nesting-grids" class="nav-link"><span>Nesting grids</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#row-columns" class="nav-link"><span>Row columns</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#utilities-for-layout" class="nav-link"><span>Utilities for layout</span></a>
+<ul class="nav flex-column">
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#changing-display" class="nav-link"><span>Changing display</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#flexbox-options" class="nav-link"><span>Flexbox options</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#margin-and-padding" class="nav-link"><span>Margin and padding</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#toggle-visibility" class="nav-link"><span>Toggle visibility</span></a></li>
+</ul>
+</li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#component-reference" class="nav-link"><span>Component reference</span></a>
+<ul class="nav flex-column">
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#comp-ref-b-container" class="nav-link"><span>&lt;b-container&gt;</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#comp-ref-b-row" class="nav-link"><span>&lt;b-row&gt;</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#comp-ref-b-col" class="nav-link"><span>&lt;b-col&gt;</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#comp-ref-b-form-row" class="nav-link"><span>&lt;b-form-row&gt;</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#importing-individual-components" class="nav-link"><span>Importing individual components</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#importing-as-a-plugin" class="nav-link"><span>Importing as a Vue.js plugin</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+
+<nav data-v-aafc4aea="" aria-label="Breadcrumbs" class="float-left mt-2 mb-0 mb-lg-2">
+<ol data-v-aafc4aea="" class="breadcrumb d-inline-flex bg-transparent px-2 py-1 my-0">
+<li data-v-aafc4aea="" class="breadcrumb-item"><a data-v-aafc4aea="" href="../../" class="nuxt-link-active" target="_self">首页</a></li>
+<li data-v-aafc4aea="" class="breadcrumb-item"><a data-v-aafc4aea="" href="../../../bootstrap-vue/docs" class="nuxt-link-active" target="_self">中文手册</a></li>
+<li data-v-aafc4aea="" class="breadcrumb-item"><a data-v-aafc4aea="" href="../../../bootstrap-vue/docs/components/" class="nuxt-link-active" target="_self">组件</a></li>
+<li data-v-aafc4aea="" class="breadcrumb-item active"><span data-v-aafc4aea="" aria-current="location">布局与网格</span></li>
+</ol>
+</nav>
+<div class="clearfix d-block"></div>
+  <h1 class="bd-title" id="content">布局与网格(Layout and Grid System)</h1>
+<p class="bd-lead">Use the powerful mobile-first flexbox grid (via the <code translate="no" class="notranslate text-nowrap">&lt;b-container&gt;</code>, <code translate="no" class="notranslate text-nowrap">&lt;b-row&gt;</code>, <code translate="no" class="notranslate text-nowrap">&lt;b-form-row&gt;</code> and <code translate="no" class="notranslate text-nowrap">&lt;b-col&gt;</code> components) to build layouts of all shapes and sizes thanks to a twelve column system,five default responsive tiers, CSS Sass variables and mixins, and dozens of predefined classes.</p>
+  <script type="text/javascript" src="../../../v4/assets/js/pupCMS.js"></script>
+
+
+
+
+
+
+<nav class="bd-quick-links mb-3 d-xl-none" data-v-811345e6="">
+<header data-v-811345e6="">
+<button data-v-811345e6="" type="button" class="btn font-weight-bold btn-outline-secondary btn-sm btn-block collapsed" aria-controls="bd-quick-links-collapse" aria-expanded="false"><span data-v-811345e6="">Show</span> page table of contents </button>
+</header>
+<ul data-v-811345e6="" id="bd-quick-links-collapse" class="collapse" style="display: none;">
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#how-it-works" class=""><span data-v-811345e6="">How it works</span></a> </li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#containers-b-container" class=""><span data-v-811345e6="">Containers &lt;b-container&gt;</span></a>
+<ul data-v-811345e6="">
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#default-container" class=""><span data-v-811345e6="">Default container</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#fluid-width-container" class=""><span data-v-811345e6="">Fluid width container</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#responsive-fluid-containers" class=""><span data-v-811345e6="">Responsive fluid containers</span></a></li>
+</ul>
+</li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#rows-b-row-and-b-form-row" class=""><span data-v-811345e6="">Rows &lt;b-row&gt; and &lt;b-form-row&gt;</span></a> </li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#columns-b-col" class=""><span data-v-811345e6="">Columns &lt;b-col&gt;</span></a> </li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#grid-options" class=""><span data-v-811345e6="">Grid options</span></a> </li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#auto-layout-columns" class=""><span data-v-811345e6="">Auto-layout columns</span></a>
+<ul data-v-811345e6="">
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#equal-width-columns" class=""><span data-v-811345e6="">Equal-width columns</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#equal-width-multi-line" class=""><span data-v-811345e6="">Equal-width multi-line</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#setting-one-column-width" class=""><span data-v-811345e6="">Setting one column width</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#variable-width-content" class=""><span data-v-811345e6="">Variable width content</span></a></li>
+</ul>
+</li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#responsive-classes" class=""><span data-v-811345e6="">Responsive classes</span></a>
+<ul data-v-811345e6="">
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#all-breakpoints" class=""><span data-v-811345e6="">All breakpoints</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#stacked-to-horizontal" class=""><span data-v-811345e6="">Stacked to horizontal</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#mix-and-match" class=""><span data-v-811345e6="">Mix and match</span></a></li>
+</ul>
+</li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#alignment" class=""><span data-v-811345e6="">Alignment</span></a>
+<ul data-v-811345e6="">
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#vertical-alignment" class=""><span data-v-811345e6="">Vertical alignment</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#horizontal-alignment" class=""><span data-v-811345e6="">Horizontal alignment</span></a></li>
+</ul>
+</li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#reordering" class=""><span data-v-811345e6="">Reordering</span></a>
+<ul data-v-811345e6="">
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#ordering-columns" class=""><span data-v-811345e6="">Ordering columns</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#offsetting-columns" class=""><span data-v-811345e6="">Offsetting columns</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#margin-utilities-on-columns" class=""><span data-v-811345e6="">Margin utilities on columns</span></a></li>
+</ul>
+</li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#nesting-grids" class=""><span data-v-811345e6="">Nesting grids</span></a> </li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#row-columns" class=""><span data-v-811345e6="">Row columns</span></a> </li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#utilities-for-layout" class=""><span data-v-811345e6="">Utilities for layout</span></a>
+<ul data-v-811345e6="">
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#changing-display" class=""><span data-v-811345e6="">Changing display</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#flexbox-options" class=""><span data-v-811345e6="">Flexbox options</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#margin-and-padding" class=""><span data-v-811345e6="">Margin and padding</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#toggle-visibility" class=""><span data-v-811345e6="">Toggle visibility</span></a></li>
+</ul>
+</li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#component-reference" class=""><span data-v-811345e6="">Component reference</span></a>
+<ul data-v-811345e6="">
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#comp-ref-b-container" class=""><span data-v-811345e6="">&lt;b-container&gt;</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#comp-ref-b-row" class=""><span data-v-811345e6="">&lt;b-row&gt;</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#comp-ref-b-col" class=""><span data-v-811345e6="">&lt;b-col&gt;</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#comp-ref-b-form-row" class=""><span data-v-811345e6="">&lt;b-form-row&gt;</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#importing-individual-components" class=""><span data-v-811345e6="">Importing individual components</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#importing-as-a-plugin" class=""><span data-v-811345e6="">Importing as a Vue.js plugin</span></a></li>
+</ul>
+</li>
+</ul>
+</nav>
+<p>BootstrapVue provides several convenient <em>functional</em> components tailored for layout, which can
+simplify your complex page markup compared to traditional Bootstrap v4 markup. Feel free to switch
+back and forth between traditional Bootstrap v4 markup (i.e. <code translate="no" class="notranslate text-nowrap">&lt;div&gt;</code>s and classes) and
+BootstrapVue's convenient functional layout components.</p>
+<h2 id="how-it-works" class="bv-no-focus-ring"><span class="bd-content-title">How it works<a class="anchorjs-link" href="#how-it-works" aria-labelledby="how-it-works"></a></span></h2>
+<p>Bootstrap's grid system uses a series of containers, rows, and columns to layout and align content.
+It's built with <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox" target="_blank" rel="noopener">flexbox</a> and is fully responsive. Below is an example and an in-depth look at how the grid comes together.</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-grid-how-it-works notranslate">
+<div class="bv-example-row container">
+<div class="row">
+<div class="col">1 of 3</div>
+<div class="col">2 of 3</div>
+<div class="col">3 of 3</div>
+</div>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bv-example-row"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>1 of 3<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>2 of 3<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>3 of 3<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span></pre>
+<p>The above example creates three equal-width columns on small, medium, large, and extra large devices
+using Bootstrap v4's predefined grid classes. Those columns are centered in the page with the parent <code translate="no" class="notranslate text-nowrap">.container</code>.</p>
+<p>Breaking it down, here's how it works:</p>
+<ul>
+<li>Containers provide a means to center and horizontally pad your site's contents. Use <code translate="no" class="notranslate text-nowrap">&lt;b-container&gt;</code> for a responsive pixel width or <code translate="no" class="notranslate text-nowrap">&lt;b-container fluid&gt;</code> for <code translate="no" class="notranslate text-nowrap">width: 100%</code> across all
+viewport and device sizes.</li>
+<li>Rows are wrappers for columns. Each column has horizontal <code translate="no" class="notranslate text-nowrap">padding</code> (called a gutter) for
+controlling the space between them. This <code translate="no" class="notranslate text-nowrap">padding</code> is then counteracted on the rows with negative
+margins. This way, all the content in your columns is visually aligned down the left side.</li>
+<li>In a grid layout, content must be placed within columns and only columns may be immediate children
+of rows.</li>
+<li>Thanks to flexbox, grid columns without a set width will automatically layout with equal widths.
+For example, four instances of <code translate="no" class="notranslate text-nowrap">&lt;b-col sm="auto"&gt;</code> will each automatically be 25% wide for small
+breakpoints.</li>
+<li>Column prop <code translate="no" class="notranslate text-nowrap">cols</code> indicates the number of columns you'd like to use out of the possible 12 per
+row regardless of breakpoint (starting at breakpoint <code translate="no" class="notranslate text-nowrap">xs</code>). So, if you want three equal-width
+columns at any breakpoint, you can use <code translate="no" class="notranslate text-nowrap">&lt;b-col cols="4"&gt;</code>.</li>
+<li>Column props <code translate="no" class="notranslate text-nowrap">sm</code>, <code translate="no" class="notranslate text-nowrap">md</code>, <code translate="no" class="notranslate text-nowrap">lg</code>, <code translate="no" class="notranslate text-nowrap">xl</code> indicate the number of columns you'd like to use out of the
+possible 12 per row, at the various breakpoints. So, if you want three equal-width columns at
+breakpoint <code translate="no" class="notranslate text-nowrap">sm</code>, you can use <code translate="no" class="notranslate text-nowrap">&lt;b-col sm="4"&gt;</code>. the special value <code translate="no" class="notranslate text-nowrap">auto</code> can be used to take up the
+remaining available column space in a row.</li>
+<li>Column <code translate="no" class="notranslate text-nowrap">width</code>s are set in percentages, so they're always fluid and sized relative to their parent
+element.</li>
+<li>Columns have horizontal <code translate="no" class="notranslate text-nowrap">padding</code> to create the gutters between individual columns, however, you
+can remove the <code translate="no" class="notranslate text-nowrap">margin</code> from <code translate="no" class="notranslate text-nowrap">&lt;b-row&gt;</code> and <code translate="no" class="notranslate text-nowrap">padding</code> from <code translate="no" class="notranslate text-nowrap">&lt;b-col&gt;</code> by setting the <code translate="no" class="notranslate text-nowrap">no-gutters</code> prop on <code translate="no" class="notranslate text-nowrap">&lt;b-row&gt;</code>.</li>
+<li>To make the grid responsive, there are five grid breakpoints, one for each responsive breakpoint:
+all breakpoints (extra small), small, medium, large, and extra large.</li>
+<li>Grid breakpoints are based on minimum width media queries, meaning <strong>they apply to that one
+breakpoint and all those above it</strong> (e.g., <code translate="no" class="notranslate text-nowrap">&lt;b-col sm="4"&gt;</code> applies to small, medium, large, and
+extra large devices, but not the first <code translate="no" class="notranslate text-nowrap">xs</code> breakpoint).</li>
+<li>You can use predefined grid classes or Sass mixins for more semantic markup.</li>
+</ul>
+<p>Be aware of the limitations and <a href="https://github.com/philipwalton/flexbugs" target="_blank" rel="noopener">bugs around flexbox</a>,
+like the <a href="https://github.com/philipwalton/flexbugs#flexbug-9" target="_blank" rel="noopener">inability to use some HTML elements as flex containers</a>.</p>
+<h2 id="containers-b-container" class="bv-no-focus-ring"><span class="bd-content-title">Containers <code translate="no" class="notranslate text-nowrap">&lt;b-container&gt;</code><a class="anchorjs-link" href="#containers-b-container" aria-labelledby="containers-b-container"></a></span></h2>
+<p>Containers (<code translate="no" class="notranslate text-nowrap">&lt;b-container&gt;</code>) are the most basic layout element in Bootstrap. Choose from a
+responsive, fixed-width container (meaning its <code translate="no" class="notranslate text-nowrap">max-width</code> changes at each breakpoint) by default,
+or fluid-width (meaning it's 100% wide all the time) by setting 'fluid' prop, or responsive
+containers where the container is fluid up until a specific breakpoint (requires Bootstrap CSS <code translate="no" class="notranslate text-nowrap">v4.4+</code>).</p>
+<p>While containers can be nested, most layouts do not require a nested container.</p>
+<p>The default breakpoint widths can be configured using Bootstrap V4.x SCSS variables. See the <a href="../../../bootstrap-vue/docs/reference/theming" class="font-weight-bold">Theming</a> reference page for additional details, and the table in the <a href="#grid-options" class="font-weight-bold">Grid options</a> section below.</p>
+<h3 id="default-container" class="bv-no-focus-ring"><span class="bd-content-title">Default container<a class="anchorjs-link" href="#default-container" aria-labelledby="default-container"></a></span></h3>
+<p>The default <code translate="no" class="notranslate text-nowrap">&lt;b-container&gt;</code> is a responsive, fixed-width container, meaning its <code translate="no" class="notranslate text-nowrap">max-width</code> changes
+at each viewport width breakpoint.</p>
+<pre class="hljs html text-monospace p-2 notranslate" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- Content here --&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span></pre>
+<h3 id="fluid-width-container" class="bv-no-focus-ring"><span class="bd-content-title">Fluid width container<a class="anchorjs-link" href="#fluid-width-container" aria-labelledby="fluid-width-container"></a></span></h3>
+<p>Using the <code translate="no" class="notranslate text-nowrap">fluid</code> prop on <code translate="no" class="notranslate text-nowrap">&lt;b-container&gt;</code> will render a container that is always 100% width,
+regardless of viewport breakpoint.</p>
+<pre class="hljs html text-monospace p-2 notranslate" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">fluid</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- Content here --&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span></pre>
+<p>Setting the <code translate="no" class="notranslate text-nowrap">fluid</code> prop to true (or an empty string) is equivalent to the Bootstrap <code translate="no" class="notranslate text-nowrap">.container-fluid</code> class.</p>
+<h3 id="responsive-fluid-containers" class="bv-no-focus-ring"><span class="bd-content-title">Responsive fluid containers<a class="anchorjs-link" href="#responsive-fluid-containers" aria-labelledby="responsive-fluid-containers"></a></span></h3>
+<p><span class="badge badge-info small">Requires Bootstrap v4.4+ CSS</span></p>
+<p>Responsive containers are new in Bootstrap v4.4. They allow you to specify a container that is 100%
+wide (fluid) until particular breakpoint is reached at which point a <code translate="no" class="notranslate text-nowrap">max-width</code> is applied. For
+example, setting prop <code translate="no" class="notranslate text-nowrap">fluid</code> to <code translate="no" class="notranslate text-nowrap">'md'</code> will render a container that is 100% wide to start until the <code translate="no" class="notranslate text-nowrap">'md'</code> breakpoint is reached, at which point it will remain at that breakpoint's container <code translate="no" class="notranslate text-nowrap">max-width</code>.</p>
+<pre class="hljs html text-monospace p-2 notranslate" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">fluid</span>=<span class="hljs-string">"sm"</span>&gt;</span>
+  100% wide until small breakpoint
+<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">fluid</span>=<span class="hljs-string">"md"</span>&gt;</span>
+  100% wide until medium breakpoint
+<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">fluid</span>=<span class="hljs-string">"lg"</span>&gt;</span>
+  100% wide until large breakpoint
+<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">fluid</span>=<span class="hljs-string">"xl"</span>&gt;</span>
+  100% wide until extra large breakpoint
+<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span></pre>
+<p>Setting the fluid prop to a breakpoint name translates to the Bootstrap class <code translate="no" class="notranslate text-nowrap">.container-{breakpoint}</code>.</p>
+<h2 id="rows-b-row-and-b-form-row" class="bv-no-focus-ring"><span class="bd-content-title">Rows <code translate="no" class="notranslate text-nowrap">&lt;b-row&gt;</code> and <code translate="no" class="notranslate text-nowrap">&lt;b-form-row&gt;</code><a class="anchorjs-link" href="#rows-b-row-and-b-form-row" aria-labelledby="rows-b-row-and-b-form-row"></a></span></h2>
+<p>Rows are wrappers for <a href="#columns-b-col" class="font-weight-bold">columns</a>. Each column has horizontal padding (called a
+gutter) for controlling the space between them. This padding is then counteracted on the rows with
+negative margins. This way, all the content in your columns is visually aligned down the left side.</p>
+<p>You can remove the margin from <code translate="no" class="notranslate text-nowrap">&lt;b-row&gt;</code> and padding from <code translate="no" class="notranslate text-nowrap">&lt;b-col&gt;</code> by setting the <code translate="no" class="notranslate text-nowrap">no-gutters</code> prop
+on <code translate="no" class="notranslate text-nowrap">&lt;b-row&gt;</code>.</p>
+<p>Or, for compact margins (smaller gutters between columns), use the <code translate="no" class="notranslate text-nowrap">&lt;b-form-row&gt;</code> component, which
+is typically used when laying out <a href="../../../bootstrap-vue/docs/components/form" class="font-weight-bold">forms</a>.</p>
+<h2 id="columns-b-col" class="bv-no-focus-ring"><span class="bd-content-title">Columns <code translate="no" class="notranslate text-nowrap">&lt;b-col&gt;</code><a class="anchorjs-link" href="#columns-b-col" aria-labelledby="columns-b-col"></a></span></h2>
+<p><code translate="no" class="notranslate text-nowrap">&lt;b-col&gt;</code> Must be placed inside a <code translate="no" class="notranslate text-nowrap">&lt;b-row&gt;</code> component, or an element (such as a <code translate="no" class="notranslate text-nowrap">&lt;div&gt;</code>) that has
+the class <code translate="no" class="notranslate text-nowrap">row</code> applied to it, or - in the case of <a href="../../../bootstrap-vue/docs/components/form" class="font-weight-bold">forms</a> - inside a <code translate="no" class="notranslate text-nowrap">&lt;b-form-row&gt;</code> component (to obtain columns with more compact margins).</p>
+<h2 id="grid-options" class="bv-no-focus-ring"><span class="bd-content-title">Grid options<a class="anchorjs-link" href="#grid-options" aria-labelledby="grid-options"></a></span></h2>
+<p>While Bootstrap uses <code translate="no" class="notranslate text-nowrap">em</code> or <code translate="no" class="notranslate text-nowrap">rem</code> units for defining most sizes, <code translate="no" class="notranslate text-nowrap">px</code>s are used for grid
+breakpoints and container widths. This is because the viewport width is in pixels and does not
+change with the <a href="https://drafts.csswg.org/mediaqueries-3/#units" target="_blank" rel="noopener">font size</a>.</p>
+<p>See how aspects of the Bootstrap grid system work across multiple devices with a handy table.</p>
+<table class="table table-bordered table-striped">
+<thead>
+<tr>
+<th></th>
+<th> <strong>Extra small</strong> (xs)<br>
+<code class="notranslate" translate="no">&lt;576px</code> </th>
+<th> <strong>Small</strong> (sm)<br>
+<code class="notranslate" translate="no">≥576px</code> </th>
+<th> <strong>Medium</strong> (md)<br>
+<code class="notranslate" translate="no">≥768px</code> </th>
+<th> <strong>Large</strong> (lg)<br>
+<code class="notranslate" translate="no">≥992px</code> </th>
+<th> <strong>Extra large</strong> (xl)<br>
+<code class="notranslate" translate="no">≥1200px</code> </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="text-left">Max container width</th>
+<td>None (auto)</td>
+<td>540px</td>
+<td>720px</td>
+<td>960px</td>
+<td>1140px</td>
+</tr>
+<tr>
+<th class="text-left">Prop</th>
+<td><code class="notranslate" translate="no">cols="*"</code></td>
+<td><code class="notranslate" translate="no">sm="*"</code></td>
+<td><code class="notranslate" translate="no">md="*"</code></td>
+<td><code class="notranslate" translate="no">lg="*"</code></td>
+<td><code class="notranslate" translate="no">xl="*"</code></td>
+</tr>
+<tr>
+<th class="text-left"># of columns</th>
+<td colspan="5">12</td>
+</tr>
+<tr>
+<th class="text-left">Gutter width</th>
+<td colspan="5">30px (15px on each side of a column)</td>
+</tr>
+<tr>
+<th class="text-left">Nestable</th>
+<td colspan="5">Yes</td>
+</tr>
+<tr>
+<th class="text-left">Offset</th>
+<td><code class="notranslate" translate="no">offset="*"</code></td>
+<td><code class="notranslate" translate="no">offset-sm="*"</code></td>
+<td><code class="notranslate" translate="no">offset-md="*"</code></td>
+<td><code class="notranslate" translate="no">offset-lg="*"</code></td>
+<td><code class="notranslate" translate="no">offset-xl="*"</code></td>
+</tr>
+<tr>
+<th class="text-left">Order</th>
+<td><code class="notranslate" translate="no">order="*"</code></td>
+<td><code class="notranslate" translate="no">order-sm="*"</code></td>
+<td><code class="notranslate" translate="no">order-md="*"</code></td>
+<td><code class="notranslate" translate="no">order-lg="*"</code></td>
+<td><code class="notranslate" translate="no">order-xl="*"</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Notes:</strong></p>
+<ul>
+<li>There is no <code translate="no" class="notranslate text-nowrap">xs</code> prop. The <code translate="no" class="notranslate text-nowrap">cols</code> prop refers to the <code translate="no" class="notranslate text-nowrap">xs</code> (smallest) breakpoint.</li>
+<li>The above breakpoint values and names are the Bootstrap defaults. They can be customized via <a href="../../../bootstrap-vue/docs/reference/theming" class="font-weight-bold">SCSS variables</a>, and (if also using custom breakpoint names), via the
+BootstrapVue <a href="../../../bootstrap-vue/docs/misc/settings" class="font-weight-bold">global configuration</a>.</li>
+</ul>
+<h2 id="auto-layout-columns" class="bv-no-focus-ring"><span class="bd-content-title">Auto-layout columns<a class="anchorjs-link" href="#auto-layout-columns" aria-labelledby="auto-layout-columns"></a></span></h2>
+<p>Utilize breakpoint-specific column classes for easy column sizing without an explicit numbered prop
+like <code translate="no" class="notranslate text-nowrap">&lt;b-col sm="6"&gt;</code>.</p>
+<h3 id="equal-width-columns" class="bv-no-focus-ring"><span class="bd-content-title">Equal-width columns<a class="anchorjs-link" href="#equal-width-columns" aria-labelledby="equal-width-columns"></a></span></h3>
+<p>For example, here are two grid layouts that apply to every device and viewport, from <code translate="no" class="notranslate text-nowrap">xs</code> to <code translate="no" class="notranslate text-nowrap">xl</code>.
+Add any number of unit-less classes for each breakpoint you need and every column will be the same
+width.</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-grid-equal-width notranslate">
+<div class="bv-example-row container">
+<div class="row">
+<div class="col">1 of 2</div>
+<div class="col">2 of 2</div>
+</div>
+<div class="row">
+<div class="col">1 of 3</div>
+<div class="col">2 of 3</div>
+<div class="col">3 of 3</div>
+</div>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bv-example-row"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>1 of 2<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>2 of 2<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>1 of 3<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>2 of 3<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>3 of 3<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span></pre>
+<h3 id="equal-width-multi-line" class="bv-no-focus-ring"><span class="bd-content-title">Equal-width multi-line<a class="anchorjs-link" href="#equal-width-multi-line" aria-labelledby="equal-width-multi-line"></a></span></h3>
+<p>Create equal-width columns that span multiple lines by inserting a <code translate="no" class="notranslate text-nowrap">.w-100</code> where you want the
+columns to break to a new line. Make the breaks responsive by mixing <code translate="no" class="notranslate text-nowrap">.w-100</code> with some <a href="https://getbootstrap.com/docs/4.3/utilities/display/" target="_blank" rel="noopener">responsive display utilities</a>.</p>
+<p>There was a <a href="https://github.com/philipwalton/flexbugs#flexbug-11" target="_blank" rel="noopener">Safari flexbox bug</a> that prevented
+this from working without an explicit <code translate="no" class="notranslate text-nowrap">flex-basis</code> or <code translate="no" class="notranslate text-nowrap">border</code>. There are workarounds for older
+browser versions, but they shouldn't be necessary if your target browsers don't fall into the buggy
+versions.</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-grid-equal-width-multiple-lines notranslate">
+<div class="bv-example-row container">
+<div class="row">
+<div class="col">Column</div>
+<div class="col">Column</div>
+<div class="w-100"></div>
+<div class="col">Column</div>
+<div class="col">Column</div>
+</div>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bv-example-row"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>Column<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>Column<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"w-100"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>Column<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>Column<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span></pre>
+<h3 id="setting-one-column-width" class="bv-no-focus-ring"><span class="bd-content-title">Setting one column width<a class="anchorjs-link" href="#setting-one-column-width" aria-labelledby="setting-one-column-width"></a></span></h3>
+<p>Auto-layout for flexbox grid columns also means you can set the width of one column and have the
+sibling columns automatically resize around it. You may use predefined grid classes (as shown
+below), grid mixins, or inline widths. Note that the other columns will resize no matter the width
+of the center column.</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-grid-one-width notranslate">
+<div class="bv-example-row container">
+<div class="row text-center">
+<div class="col">1 of 3</div>
+<div class="col-8">2 of 3 (wider)</div>
+<div class="col">3 of 3</div>
+</div>
+<div class="row text-center">
+<div class="col">1 of 3</div>
+<div class="col-5">2 of 3 (wider)</div>
+<div class="col">3 of 3</div>
+</div>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bv-example-row"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-center"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>1 of 3<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"8"</span>&gt;</span>2 of 3 (wider)<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>3 of 3<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-center"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>1 of 3<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"5"</span>&gt;</span>2 of 3 (wider)<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>3 of 3<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span></pre>
+<h3 id="variable-width-content" class="bv-no-focus-ring"><span class="bd-content-title">Variable width content<a class="anchorjs-link" href="#variable-width-content" aria-labelledby="variable-width-content"></a></span></h3>
+<p>Use <code translate="no" class="notranslate text-nowrap">{breakpoint}="auto"</code> props to size columns based on the natural width of their content.</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-grid-variable-width notranslate">
+<div class="bv-example-row container">
+<div class="row justify-content-md-center">
+<div class="col-lg-2 col">1 of 3</div>
+<div class="col-md-auto col-12">Variable width content</div>
+<div class="col-lg-2 col">3 of 3</div>
+</div>
+<div class="row">
+<div class="col">1 of 3</div>
+<div class="col-md-auto col-12">Variable width content</div>
+<div class="col-lg-2 col">3 of 3</div>
+</div>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bv-example-row"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"justify-content-md-center"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">col</span> <span class="hljs-attr">lg</span>=<span class="hljs-string">"2"</span>&gt;</span>1 of 3<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"12"</span> <span class="hljs-attr">md</span>=<span class="hljs-string">"auto"</span>&gt;</span>Variable width content<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">col</span> <span class="hljs-attr">lg</span>=<span class="hljs-string">"2"</span>&gt;</span>3 of 3<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>1 of 3<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"12"</span> <span class="hljs-attr">md</span>=<span class="hljs-string">"auto"</span>&gt;</span>Variable width content<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">col</span> <span class="hljs-attr">lg</span>=<span class="hljs-string">"2"</span>&gt;</span>3 of 3<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span></pre>
+<h2 id="responsive-classes" class="bv-no-focus-ring"><span class="bd-content-title">Responsive classes<a class="anchorjs-link" href="#responsive-classes" aria-labelledby="responsive-classes"></a></span></h2>
+<p>Bootstrap's grid includes five tiers of predefined classes for building complex responsive layouts.
+Customize the size of your columns on extra small, small, medium, large, or extra large devices
+however you see fit.</p>
+<h3 id="all-breakpoints" class="bv-no-focus-ring"><span class="bd-content-title">All breakpoints<a class="anchorjs-link" href="#all-breakpoints" aria-labelledby="all-breakpoints"></a></span></h3>
+<p>For grids that are the same from the smallest of devices to the largest, use the <code translate="no" class="notranslate text-nowrap">col</code> and <code translate="no" class="notranslate text-nowrap">cols="*"</code> props. Specify a number of <code translate="no" class="notranslate text-nowrap">cols</code> when you need a particularly sized column; otherwise,
+feel free to stick to <code translate="no" class="notranslate text-nowrap">col</code> (which is applied automatically if no <code translate="no" class="notranslate text-nowrap">cols</code> are specified).</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-grid-size-all-breakpoints notranslate">
+<div class="bv-example-row container">
+<div class="row">
+<div class="col">col</div>
+<div class="col">col</div>
+<div class="col">col</div>
+<div class="col">col</div>
+</div>
+<div class="row">
+<div class="col-8">col-8</div>
+<div class="col-4">col-4</div>
+</div>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bv-example-row"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>col<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>col<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>col<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>col<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"8"</span>&gt;</span>col-8<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"4"</span>&gt;</span>col-4<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span></pre>
+<h3 id="stacked-to-horizontal" class="bv-no-focus-ring"><span class="bd-content-title">Stacked to horizontal<a class="anchorjs-link" href="#stacked-to-horizontal" aria-labelledby="stacked-to-horizontal"></a></span></h3>
+<p>Using a single set of <code translate="no" class="notranslate text-nowrap">sm="*"</code> or <code translate="no" class="notranslate text-nowrap">sm</code> (boolean for equal width @sm) props, you can create a basic
+grid system that starts out stacked on extra small devices before becoming horizontal on desktop
+(medium) devices.</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-grid-horizontal-stacked notranslate">
+<div class="bv-example-row container">
+<div class="row">
+<div class="col-sm-8">col-sm-8</div>
+<div class="col-sm-4">col-sm-4</div>
+</div>
+<div class="row">
+<div class="col-sm">col-sm</div>
+<div class="col-sm">col-sm</div>
+<div class="col-sm">col-sm</div>
+</div>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bv-example-row"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">sm</span>=<span class="hljs-string">"8"</span>&gt;</span>col-sm-8<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">sm</span>=<span class="hljs-string">"4"</span>&gt;</span>col-sm-4<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">sm</span>&gt;</span>col-sm<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">sm</span>&gt;</span>col-sm<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">sm</span>&gt;</span>col-sm<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span></pre>
+<h3 id="mix-and-match" class="bv-no-focus-ring"><span class="bd-content-title">Mix and match<a class="anchorjs-link" href="#mix-and-match" aria-labelledby="mix-and-match"></a></span></h3>
+<p>Don't want your columns to simply stack in some grid tiers? Use a combination of different props for
+each tier as needed. See the example below for a better idea of how it all works.</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-grid-mix-and-match notranslate">
+<div class="bv-example-row container">
+<div class="row">
+<div class="col-md-8 col-12">cols="12" md="8"</div>
+<div class="col-md-4 col-6">cols="6" md="4"</div>
+</div>
+<div class="row">
+<div class="col-md-4 col-6">cols="6" md="4"</div>
+<div class="col-md-4 col-6">cols="6" md="4"</div>
+<div class="col-md-4 col-6">cols="6" md="4"</div>
+</div>
+<div class="row">
+<div class="col-6">cols="6"</div>
+<div class="col-6">cols="6"</div>
+</div>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bv-example-row"</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- Stack the columns on mobile by making one full-width and the other half-width --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"12"</span> <span class="hljs-attr">md</span>=<span class="hljs-string">"8"</span>&gt;</span>cols="12" md="8"<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"6"</span> <span class="hljs-attr">md</span>=<span class="hljs-string">"4"</span>&gt;</span>cols="6" md="4"<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+
+  <span class="hljs-comment">&lt;!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"6"</span> <span class="hljs-attr">md</span>=<span class="hljs-string">"4"</span>&gt;</span>cols="6" md="4"<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"6"</span> <span class="hljs-attr">md</span>=<span class="hljs-string">"4"</span>&gt;</span>cols="6" md="4"<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"6"</span> <span class="hljs-attr">md</span>=<span class="hljs-string">"4"</span>&gt;</span>cols="6" md="4"<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+
+  <span class="hljs-comment">&lt;!-- Columns are always 50% wide, on mobile and desktop --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"6"</span>&gt;</span>cols="6"<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"6"</span>&gt;</span>cols="6"<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span></pre>
+<h2 id="alignment" class="bv-no-focus-ring"><span class="bd-content-title">Alignment<a class="anchorjs-link" href="#alignment" aria-labelledby="alignment"></a></span></h2>
+<p>Use flexbox alignment utilities to vertically and horizontally align columns.</p>
+<h3 id="vertical-alignment" class="bv-no-focus-ring"><span class="bd-content-title">Vertical alignment<a class="anchorjs-link" href="#vertical-alignment" aria-labelledby="vertical-alignment"></a></span></h3>
+<div translate="translate" class="bd-example vue-example vue-example-b-grid-vertical-alignment notranslate">
+<div class="bv-example-row bv-example-row-flex-cols container">
+<div class="row align-items-start">
+<div class="col">One of three columns</div>
+<div class="col">One of three columns</div>
+<div class="col">One of three columns</div>
+</div>
+<div class="row align-items-center">
+<div class="col">One of three columns</div>
+<div class="col">One of three columns</div>
+<div class="col">One of three columns</div>
+</div>
+<div class="row align-items-end">
+<div class="col">One of three columns</div>
+<div class="col">One of three columns</div>
+<div class="col">One of three columns</div>
+</div>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bv-example-row bv-example-row-flex-cols"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span> <span class="hljs-attr">align-v</span>=<span class="hljs-string">"start"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>One of three columns<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>One of three columns<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>One of three columns<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span> <span class="hljs-attr">align-v</span>=<span class="hljs-string">"center"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>One of three columns<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>One of three columns<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>One of three columns<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span> <span class="hljs-attr">align-v</span>=<span class="hljs-string">"end"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>One of three columns<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>One of three columns<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>One of three columns<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span></pre>
+<div translate="translate" class="bd-example vue-example vue-example-b-grid-align-self notranslate">
+<div class="bv-example-row bv-example-row-flex-cols container">
+<div class="row">
+<div class="col align-self-start">One of three columns</div>
+<div class="col align-self-center">One of three columns</div>
+<div class="col align-self-end">One of three columns</div>
+</div>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bv-example-row bv-example-row-flex-cols"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">align-self</span>=<span class="hljs-string">"start"</span>&gt;</span>One of three columns<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">align-self</span>=<span class="hljs-string">"center"</span>&gt;</span>One of three columns<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">align-self</span>=<span class="hljs-string">"end"</span>&gt;</span>One of three columns<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span></pre>
+<h3 id="horizontal-alignment" class="bv-no-focus-ring"><span class="bd-content-title">Horizontal alignment<a class="anchorjs-link" href="#horizontal-alignment" aria-labelledby="horizontal-alignment"></a></span></h3>
+<div translate="translate" class="bd-example vue-example vue-example-b-grid-horizontal-alignment notranslate">
+<div class="bv-example-row container">
+<div class="row justify-content-start">
+<div class="col-4">One of two columns</div>
+<div class="col-4">One of two columns</div>
+</div>
+<div class="row justify-content-center">
+<div class="col-4">One of two columns</div>
+<div class="col-4">One of two columns</div>
+</div>
+<div class="row justify-content-end">
+<div class="col-4">One of two columns</div>
+<div class="col-4">One of two columns</div>
+</div>
+<div class="row justify-content-around">
+<div class="col-4">One of two columns</div>
+<div class="col-4">One of two columns</div>
+</div>
+<div class="row justify-content-between">
+<div class="col-4">One of two columns</div>
+<div class="col-4">One of two columns</div>
+</div>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bv-example-row"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span> <span class="hljs-attr">align-h</span>=<span class="hljs-string">"start"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"4"</span>&gt;</span>One of two columns<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"4"</span>&gt;</span>One of two columns<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span> <span class="hljs-attr">align-h</span>=<span class="hljs-string">"center"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"4"</span>&gt;</span>One of two columns<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"4"</span>&gt;</span>One of two columns<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span> <span class="hljs-attr">align-h</span>=<span class="hljs-string">"end"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"4"</span>&gt;</span>One of two columns<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"4"</span>&gt;</span>One of two columns<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span> <span class="hljs-attr">align-h</span>=<span class="hljs-string">"around"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"4"</span>&gt;</span>One of two columns<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"4"</span>&gt;</span>One of two columns<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span> <span class="hljs-attr">align-h</span>=<span class="hljs-string">"between"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"4"</span>&gt;</span>One of two columns<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"4"</span>&gt;</span>One of two columns<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span></pre>
+<h2 id="reordering" class="bv-no-focus-ring"><span class="bd-content-title">Reordering<a class="anchorjs-link" href="#reordering" aria-labelledby="reordering"></a></span></h2>
+<h3 id="ordering-columns" class="bv-no-focus-ring"><span class="bd-content-title">Ordering columns<a class="anchorjs-link" href="#ordering-columns" aria-labelledby="ordering-columns"></a></span></h3>
+<p>Use <code translate="no" class="notranslate text-nowrap">order-*</code> props for controlling the visual order of your content. These props are responsive, so
+you can set the order by breakpoint (e.g., <code translate="no" class="notranslate text-nowrap">order="1" order-md="2"</code>). Includes support for 1 through
+12 across all five grid tiers. <code translate="no" class="notranslate text-nowrap">&lt;b-col&gt;</code> defaults to an order value of <code translate="no" class="notranslate text-nowrap">0</code>.</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-grid-order notranslate">
+<div class="bv-example-row container-fluid">
+<div class="row mb-3">
+<div class="col">First in DOM, no order applied</div>
+<div class="col order-5">Second in DOM, with a larger order</div>
+<div class="col order-1">Third in DOM, with an order of 1</div>
+</div>
+<div class="row mb-3">
+<div class="col order-6">First in DOM, with order of 6</div>
+<div class="col order-1">Second in DOM, with an order of 1</div>
+<div class="col">Third in DOM, no order applied</div>
+</div>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">fluid</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bv-example-row"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-3"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>First in DOM, no order applied<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">order</span>=<span class="hljs-string">"5"</span>&gt;</span>Second in DOM, with a larger order<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">order</span>=<span class="hljs-string">"1"</span>&gt;</span>Third in DOM, with an order of 1<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-3"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">order</span>=<span class="hljs-string">"6"</span>&gt;</span>First in DOM, with order of 6<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">order</span>=<span class="hljs-string">"1"</span>&gt;</span>Second in DOM, with an order of 1<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>Third in DOM, no order applied<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span></pre>
+<p>Ordering is controlled by flexbox's CSS style <code translate="no" class="notranslate text-nowrap">order</code>.</p>
+<h3 id="offsetting-columns" class="bv-no-focus-ring"><span class="bd-content-title">Offsetting columns<a class="anchorjs-link" href="#offsetting-columns" aria-labelledby="offsetting-columns"></a></span></h3>
+<p>You can offset grid columns in two ways: our responsive <code translate="no" class="notranslate text-nowrap">offset-*</code> props or the <a href="../../../bootstrap-vue/docs/reference/spacing-classes" class="font-weight-bold">margin</a> utility classes. Grid <code translate="no" class="notranslate text-nowrap">offset-*</code> props are sized to match
+columns while margins utility classes are more useful for quick layouts where the width of the
+offset is variable.</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-grid-offset notranslate">
+<div class="bv-example-row container-fluid">
+<div class="row">
+<div class="col-md-4">md="4"</div>
+<div class="col-md-4 offset-md-4">md="4" offset-md="4"</div>
+</div>
+<div class="row">
+<div class="col-md-3 offset-md-3">md="3" offset-md="3"</div>
+<div class="col-md-3 offset-md-3">md="3" offset-md="3"</div>
+</div>
+<div class="row">
+<div class="col-md-6 offset-md-3">md="6" offset-md="3"</div>
+</div>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">fluid</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bv-example-row"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">md</span>=<span class="hljs-string">"4"</span>&gt;</span>md="4"<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">md</span>=<span class="hljs-string">"4"</span> <span class="hljs-attr">offset-md</span>=<span class="hljs-string">"4"</span>&gt;</span>md="4" offset-md="4"<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">md</span>=<span class="hljs-string">"3"</span> <span class="hljs-attr">offset-md</span>=<span class="hljs-string">"3"</span>&gt;</span>md="3" offset-md="3"<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">md</span>=<span class="hljs-string">"3"</span> <span class="hljs-attr">offset-md</span>=<span class="hljs-string">"3"</span>&gt;</span>md="3" offset-md="3"<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">md</span>=<span class="hljs-string">"6"</span> <span class="hljs-attr">offset-md</span>=<span class="hljs-string">"3"</span>&gt;</span>md="6" offset-md="3"<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span></pre>
+<p>In addition to column clearing at responsive breakpoints, you may need to reset offsets by setting
+the offset to <code translate="no" class="notranslate text-nowrap">0</code> at a larger breakpoint:</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-grid-offset-reset notranslate">
+<div class="bv-example-row container-fluid">
+<div class="row">
+<div class="col-sm-5 col-md-6">sm="5" md="6"</div>
+<div class="col-sm-5 col-md-6 offset-sm-2 offset-md-0">sm="5" offset-sm="2" md="6" offset-md="0"</div>
+</div>
+<div class="row">
+<div class="col-sm-6 col-md-5 col-lg-6">sm="6" md="5" lg="6"</div>
+<div class="col-sm-6 col-md-5 col-lg-6 offset-md-2 offset-lg-0">sm="6" md="5" offset-md="2" col-lg="6" offset-lg="0"</div>
+</div>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">fluid</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bv-example-row"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">sm</span>=<span class="hljs-string">"5"</span> <span class="hljs-attr">md</span>=<span class="hljs-string">"6"</span>&gt;</span>sm="5" md="6"<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">sm</span>=<span class="hljs-string">"5"</span> <span class="hljs-attr">offset-sm</span>=<span class="hljs-string">"2"</span> <span class="hljs-attr">md</span>=<span class="hljs-string">"6"</span> <span class="hljs-attr">offset-md</span>=<span class="hljs-string">"0"</span>&gt;</span>sm="5" offset-sm="2" md="6" offset-md="0"<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">sm</span>=<span class="hljs-string">"6"</span> <span class="hljs-attr">md</span>=<span class="hljs-string">"5"</span> <span class="hljs-attr">lg</span>=<span class="hljs-string">"6"</span>&gt;</span>sm="6" md="5" lg="6"<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">sm</span>=<span class="hljs-string">"6"</span> <span class="hljs-attr">md</span>=<span class="hljs-string">"5"</span> <span class="hljs-attr">offset-md</span>=<span class="hljs-string">"2"</span> <span class="hljs-attr">lg</span>=<span class="hljs-string">"6"</span> <span class="hljs-attr">offset-lg</span>=<span class="hljs-string">"0"</span>&gt;</span>sm="6" md="5" offset-md="2" col-lg="6" offset-lg="0"<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span></pre>
+<h3 id="margin-utilities-on-columns" class="bv-no-focus-ring"><span class="bd-content-title">Margin utilities on columns<a class="anchorjs-link" href="#margin-utilities-on-columns" aria-labelledby="margin-utilities-on-columns"></a></span></h3>
+<p>With the move to flexbox in Bootstrap v4, you can use <a href="../../../bootstrap-vue/docs/reference/spacing-classes" class="font-weight-bold">margin and spacing</a> utility classes like <code translate="no" class="notranslate text-nowrap">.mr-auto</code> to force
+sibling columns away from one another.</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-grid-margins notranslate">
+<div class="text-light text-center container-fluid">
+<div class="row mb-3">
+<div class="p-3 bg-info col-md-4">md="4"</div>
+<div class="ml-auto p-3 bg-info col-md-4">md="4" .ml-auto</div>
+</div>
+<div class="row mb-3">
+<div class="ml-md-auto p-3 bg-info col-md-3">md="3" .ml-md-auto</div>
+<div class="ml-md-auto p-3 bg-info col-md-3">md="3" .ml-md-auto</div>
+</div>
+<div class="row">
+<div class="mr-auto p-3 bg-info col-auto">cols="auto" .mr-auto</div>
+<div class="p-3 bg-info col-auto">cols="auto"</div>
+</div>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">fluid</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-light text-center"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-3"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">md</span>=<span class="hljs-string">"4"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"p-3 bg-info"</span>&gt;</span>md="4"<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">md</span>=<span class="hljs-string">"4"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ml-auto p-3 bg-info"</span>&gt;</span>md="4" .ml-auto<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-3"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">md</span>=<span class="hljs-string">"3"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ml-md-auto p-3 bg-info"</span>&gt;</span>md="3" .ml-md-auto<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">md</span>=<span class="hljs-string">"3"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ml-md-auto p-3 bg-info"</span>&gt;</span>md="3" .ml-md-auto<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"auto"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mr-auto p-3 bg-info"</span>&gt;</span>cols="auto" .mr-auto<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"auto"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"p-3 bg-info"</span>&gt;</span>cols="auto"<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span></pre>
+<h2 id="nesting-grids" class="bv-no-focus-ring"><span class="bd-content-title">Nesting grids<a class="anchorjs-link" href="#nesting-grids" aria-labelledby="nesting-grids"></a></span></h2>
+<p>To nest your content with the default grid, add a new <code translate="no" class="notranslate text-nowrap">&lt;b-row&gt;</code> and set of <code translate="no" class="notranslate text-nowrap">&lt;b-col&gt;</code> components
+within an existing <code translate="no" class="notranslate text-nowrap">&lt;b-col&gt;</code> component. Nested rows should include a set of columns that add up to
+12 or fewer (it is not required that you use all 12 available columns).</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-grid-nesting notranslate">
+<div class="bv-example-row container-fluid">
+<div class="row">
+<div class="col-sm-9"> Level 1: sm="9"
+<div class="row">
+<div class="col-sm-6 col-8">Level 2: cols="8" sm="6"</div>
+<div class="col-sm-6 col-4">Level 2: cols="4" sm="6"</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">fluid</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bv-example-row"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">sm</span>=<span class="hljs-string">"9"</span>&gt;</span>
+      Level 1: sm="9"
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"8"</span> <span class="hljs-attr">sm</span>=<span class="hljs-string">"6"</span>&gt;</span>Level 2: cols="8" sm="6"<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"4"</span> <span class="hljs-attr">sm</span>=<span class="hljs-string">"6"</span>&gt;</span>Level 2: cols="4" sm="6"<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span></pre>
+<h2 id="row-columns" class="bv-no-focus-ring"><span class="bd-content-title">Row columns<a class="anchorjs-link" href="#row-columns" aria-labelledby="row-columns"></a></span></h2>
+<p><span class="badge badge-info small">Requires Bootstrap v4.4+ CSS</span></p>
+<p>Use the responsive <code translate="no" class="notranslate text-nowrap">cols-*</code> props in <code translate="no" class="notranslate text-nowrap">&lt;b-row&gt;</code> to quickly set the number of columns that best render
+your content and layout. Whereas normal column widths are apply to the individual <code translate="no" class="notranslate text-nowrap">&lt;b-col&gt;</code> columns
+(e.g., <code translate="no" class="notranslate text-nowrap">&lt;b-col md="4"&gt;</code>), the row columns <code translate="no" class="notranslate text-nowrap">col-*</code> props are set on the parent <code translate="no" class="notranslate text-nowrap">&lt;b-row&gt;</code> as a
+shortcut.</p>
+<p>Use these row columns to quickly create basic grid layouts or to control your card layouts. The
+default maximum number of row columns in Bootstrap v4.4 is <code translate="no" class="notranslate text-nowrap">6</code> (unlike the regular columns which
+have a default maximum of <code translate="no" class="notranslate text-nowrap">12</code> columns)</p>
+<p>The value specified in the <code translate="no" class="notranslate text-nowrap">&lt;b-row&gt;</code> prop(s) is the number of columns to create per row (whereas the
+props on <code translate="no" class="notranslate text-nowrap">&lt;b-col&gt;</code> refer to the number of columns to occupy).</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-grid-row-cols-introduction notranslate">
+<div class="bv-example-row mb-3 container">
+<div class="row row-cols-2">
+<div class="col">Column</div>
+<div class="col">Column</div>
+<div class="col">Column</div>
+<div class="col">Column</div>
+</div>
+</div>
+<div class="bv-example-row mb-3 container">
+<div class="row row-cols-3">
+<div class="col">Column</div>
+<div class="col">Column</div>
+<div class="col">Column</div>
+<div class="col">Column</div>
+</div>
+</div>
+<div class="bv-example-row mb-3 container">
+<div class="row row-cols-4">
+<div class="col">Column</div>
+<div class="col">Column</div>
+<div class="col">Column</div>
+<div class="col">Column</div>
+</div>
+</div>
+<div class="bv-example-row container">
+<div class="row row-cols-4">
+<div class="col">Column</div>
+<div class="col">Column</div>
+<div class="col-6">Column</div>
+<div class="col">Column</div>
+</div>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bv-example-row mb-3"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"2"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>Column<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>Column<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>Column<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>Column<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bv-example-row mb-3"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"3"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>Column<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>Column<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>Column<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>Column<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bv-example-row mb-3"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"4"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>Column<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>Column<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>Column<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>Column<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bv-example-row"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"4"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>Column<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>Column<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"6"</span>&gt;</span>Column<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>Column<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span></pre>
+<p>You can control the number of columns at each breakpoint level via the following <code translate="no" class="notranslate text-nowrap">&lt;b-row&gt;</code> props:</p>
+<ul>
+<li><code translate="no" class="notranslate text-nowrap">cols</code> for <code translate="no" class="notranslate text-nowrap">xs</code> and up screens</li>
+<li><code translate="no" class="notranslate text-nowrap">cols-sm</code> for <code translate="no" class="notranslate text-nowrap">sm</code> and up screens</li>
+<li><code translate="no" class="notranslate text-nowrap">cols-md</code> for <code translate="no" class="notranslate text-nowrap">md</code> and up screens</li>
+<li><code translate="no" class="notranslate text-nowrap">cols-lg</code> for <code translate="no" class="notranslate text-nowrap">lg</code> and up screens</li>
+<li><code translate="no" class="notranslate text-nowrap">cols-xl</code> for <code translate="no" class="notranslate text-nowrap">xl</code> and up screens</li>
+</ul>
+<div translate="translate" class="bd-example vue-example vue-example-b-grid-row-cols-breakpoints notranslate">
+<div class="bv-example-row container">
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-6">
+<div class="col">Column</div>
+<div class="col">Column</div>
+<div class="col">Column</div>
+<div class="col">Column</div>
+<div class="col">Column</div>
+<div class="col">Column</div>
+</div>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bv-example-row"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"1"</span> <span class="hljs-attr">cols-sm</span>=<span class="hljs-string">"2"</span> <span class="hljs-attr">cols-md</span>=<span class="hljs-string">"4"</span> <span class="hljs-attr">cols-lg</span>=<span class="hljs-string">"6"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>Column<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>Column<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>Column<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>Column<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>Column<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>Column<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span></pre>
+<h2 id="utilities-for-layout" class="bv-no-focus-ring"><span class="bd-content-title">Utilities for layout<a class="anchorjs-link" href="#utilities-for-layout" aria-labelledby="utilities-for-layout"></a></span></h2>
+<p>For faster mobile-friendly and responsive development, Bootstrap includes dozens of <a href="../../../bootstrap-vue/docs/reference/utility-classes" class="font-weight-bold">utility classes</a> for showing, hiding, aligning, and spacing
+content.</p>
+<h3 id="changing-display" class="bv-no-focus-ring"><span class="bd-content-title">Changing <code translate="no" class="notranslate text-nowrap">display</code><a class="anchorjs-link" href="#changing-display" aria-labelledby="changing-display"></a></span></h3>
+<p>Use Bootstrap's <a href="../../../bootstrap-vue/docs/reference/utility-classes" class="font-weight-bold">display utilities</a> for responsively toggling
+common values of the <code translate="no" class="notranslate text-nowrap">display</code> property. Mix it with the grid system, content, or components to show
+or hide them across specific viewports.</p>
+<h3 id="flexbox-options" class="bv-no-focus-ring"><span class="bd-content-title">Flexbox options<a class="anchorjs-link" href="#flexbox-options" aria-labelledby="flexbox-options"></a></span></h3>
+<p>Bootstrap 4 is built with flexbox, but not every element’s <code translate="no" class="notranslate text-nowrap">display</code> has been changed to <code translate="no" class="notranslate text-nowrap">display: flex</code> as this would add many unnecessary overrides and unexpectedly change key browser
+behaviors. Most of the components are built with flexbox enabled.</p>
+<p>Should you need to add <code translate="no" class="notranslate text-nowrap">display: flex</code> to an element, do so with <code translate="no" class="notranslate text-nowrap">.d-flex</code> or one of the responsive
+variants (e.g., <code translate="no" class="notranslate text-nowrap">.d-sm-flex</code>). You’ll need this class or <code translate="no" class="notranslate text-nowrap">display</code> value to allow the use of the
+extra <a href="../../../bootstrap-vue/docs/reference/utility-classes" class="font-weight-bold">flexbox utilities</a> for sizing, alignment, spacing, and more.</p>
+<h3 id="margin-and-padding" class="bv-no-focus-ring"><span class="bd-content-title">Margin and padding<a class="anchorjs-link" href="#margin-and-padding" aria-labelledby="margin-and-padding"></a></span></h3>
+<p>Use the <code translate="no" class="notranslate text-nowrap">margin</code> and <code translate="no" class="notranslate text-nowrap">padding</code> <a href="../../../bootstrap-vue/docs/reference/utility-classes" class="font-weight-bold">spacing utilities</a> to control how
+elements and components are spaced and sized. Bootstrap 4 includes a five-level scale for spacing
+utilities, based on a <code translate="no" class="notranslate text-nowrap">1rem</code> value default SASS <code translate="no" class="notranslate text-nowrap">$spacer</code> variable. Choose values for all viewports
+(e.g., <code translate="no" class="notranslate text-nowrap">.mr-3</code> for <code translate="no" class="notranslate text-nowrap">margin-right: 1rem</code>), or pick responsive variants to target specific viewports
+(e.g., <code translate="no" class="notranslate text-nowrap">.mr-md-3</code> for <code translate="no" class="notranslate text-nowrap">margin-right: 1rem</code> starting at the <code translate="no" class="notranslate text-nowrap">md</code> breakpoint).</p>
+<h3 id="toggle-visibility" class="bv-no-focus-ring"><span class="bd-content-title">Toggle <code translate="no" class="notranslate text-nowrap">visibility</code><a class="anchorjs-link" href="#toggle-visibility" aria-labelledby="toggle-visibility"></a></span></h3>
+<p>When toggling <code translate="no" class="notranslate text-nowrap">display</code> isn’t needed, you can toggle the <code translate="no" class="notranslate text-nowrap">visibility</code> of an element with the <a href="../../../bootstrap-vue/docs/reference/utility-classes" class="font-weight-bold">visibility utility classes</a>. Invisible elements will still affect
+the layout of the page, but are visually hidden from visitors.</p>
+<!-- Component reference added automatically from component package.json -->
+
+<h2 id="component-reference" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title">Component reference<a href="../../../bootstrap-vue/docs/components/layout#component-reference" class="anchorjs-link" aria-labelledby="component-reference" target="_self"></a></span></h2>
+<section data-v-866a22e8="" class="bd-content">
+<header data-v-866a22e8="" class="row align-items-center">
+<div data-v-866a22e8="" class="col-sm-9">
+<h3 data-v-866a22e8="" id="comp-ref-b-container" tabindex="-1" class="bv-no-focus-ring"><span data-v-866a22e8="" class="bd-content-title"><code data-v-866a22e8="" translate="translate" class="notranslate bigger">&lt;b-container&gt;</code><a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/layout#comp-ref-b-container" class="anchorjs-link" aria-labelledby="comp-ref-b-container" target="_self"></a></span></h3>
+<a data-v-866a22e8="" rel="noopener" target="_blank" href="https://vuejs.org/v2/guide/render-function.html#Functional-Components" class="badge badge-secondary"> Functional Component </a></div>
+<div data-v-866a22e8="" class="text-sm-right col-sm-3"><a data-v-866a22e8="" rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev/src/components/layout/container.js" class="btn btn-outline-secondary btn-sm"> View source </a></div>
+</header>
+<ul data-v-866a22e8="" class="component-ref-mini-toc my-3">
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-container-props"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-container&gt;</code> Properties </a></li>
+</ul>
+<article data-v-866a22e8="" class="bd-content">
+<h4 data-v-866a22e8="" id="comp-ref-b-container-props" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> Properties <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/layout#comp-ref-b-container-props" class="anchorjs-link" aria-labelledby="comp-ref-b-container-props" target="_self"></a></span></h4>
+<div data-v-866a22e8="" class="table-responsive-sm">
+<table role="table" aria-busy="false" aria-colcount="4" class="table b-table bv-docs-table table-striped" id="__BVID__1876">
+<thead role="rowgroup" class="">
+<tr role="row" class="">
+<th role="columnheader" scope="col" aria-colindex="1" class="">Property</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">Type</th>
+<th role="columnheader" scope="col" aria-colindex="3" class="">Default</th>
+<th role="columnheader" scope="col" aria-colindex="4" class="">Description</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+<tr role="row" data-pk="tag" class="" id="__BVID__1876__row_tag">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">tag</code></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'div'</code></td>
+<td aria-colindex="4" role="cell" class="">Specify the HTML tag to render instead of the default tag</td>
+</tr>
+<tr role="row" data-pk="fluid" class="" id="__BVID__1876__row_fluid">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">fluid</code></td>
+<td aria-colindex="2" role="cell" class="">Boolean or String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">When set to true, makes the row 100% wide all the time, or set to one of the Bootstrap breakpoint names for 100% width up to the breakpoint (requires Bootstrap v4.4+ CSS for breakpoint specific value)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</section>
+<section data-v-866a22e8="" class="bd-content">
+<header data-v-866a22e8="" class="row align-items-center">
+<div data-v-866a22e8="" class="col-sm-9">
+<h3 data-v-866a22e8="" id="comp-ref-b-row" tabindex="-1" class="bv-no-focus-ring"><span data-v-866a22e8="" class="bd-content-title"><code data-v-866a22e8="" translate="translate" class="notranslate bigger">&lt;b-row&gt;</code><a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/layout#comp-ref-b-row" class="anchorjs-link" aria-labelledby="comp-ref-b-row" target="_self"></a></span></h3>
+<a data-v-866a22e8="" rel="noopener" target="_blank" href="https://vuejs.org/v2/guide/render-function.html#Functional-Components" class="badge badge-secondary"> Functional Component </a></div>
+<div data-v-866a22e8="" class="text-sm-right col-sm-3"><a data-v-866a22e8="" rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev/src/components/layout/row.js" class="btn btn-outline-secondary btn-sm"> View source </a></div>
+</header>
+<ul data-v-866a22e8="" class="component-ref-mini-toc my-3">
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-row-props"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-row&gt;</code> Properties </a></li>
+</ul>
+<article data-v-866a22e8="" class="bd-content">
+<h4 data-v-866a22e8="" id="comp-ref-b-row-props" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> Properties <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/layout#comp-ref-b-row-props" class="anchorjs-link" aria-labelledby="comp-ref-b-row-props" target="_self"></a></span></h4>
+<div data-v-866a22e8="" class="table-responsive-sm">
+<table role="table" aria-busy="false" aria-colcount="4" class="table b-table bv-docs-table table-striped" id="__BVID__1893">
+<thead role="rowgroup" class="">
+<tr role="row" class="">
+<th role="columnheader" scope="col" tabindex="0" aria-colindex="1" aria-sort="none" class="b-table-sort-icon-left">Property<span class="sr-only"> (Click to sort Ascending)</span></th>
+<th role="columnheader" scope="col" tabindex="0" aria-colindex="2" class="">Type</th>
+<th role="columnheader" scope="col" tabindex="0" aria-colindex="3" class="">Default</th>
+<th role="columnheader" scope="col" tabindex="0" aria-colindex="4" class="">Description</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+<tr role="row" data-pk="tag" class="" id="__BVID__1893__row_tag">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">tag</code></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'div'</code></td>
+<td aria-colindex="4" role="cell" class="">Specify the HTML tag to render instead of the default tag</td>
+</tr>
+<tr role="row" data-pk="no-gutters" class="" id="__BVID__1893__row_no-gutters">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">no-gutters</code></td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">When set, removes the margin from the row and removes the padding from the child columns</td>
+</tr>
+<tr role="row" data-pk="align-v" class="" id="__BVID__1893__row_align-v">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">align-v</code></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">Vertical alignment of all columns in a row: 'start', 'center', or 'end'</td>
+</tr>
+<tr role="row" data-pk="align-h" class="" id="__BVID__1893__row_align-h">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">align-h</code></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">Horizontal alignment/spacing of all columns: 'start', 'center', 'end', 'around', or 'between'</td>
+</tr>
+<tr role="row" data-pk="align-content" class="" id="__BVID__1893__row_align-content">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">align-content</code></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">Align columns items together on the cross axis: 'start', 'center', 'end', 'around', 'between' or 'stretch'. Has no effect on single rows of items</td>
+</tr>
+<tr role="row" data-pk="cols" class="" id="__BVID__1893__row_cols">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">cols</code> <span data-v-866a22e8="" class="badge badge-secondary">v2.2.0+</span></td>
+<td aria-colindex="2" role="cell" class="">String or Number</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">The number row columns to create at the 'xs' breakpoint. Requires Bootstrap v4.4 CSS</td>
+</tr>
+<tr role="row" data-pk="cols-sm" class="" id="__BVID__1893__row_cols-sm">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">cols-sm</code> <span data-v-866a22e8="" class="badge badge-secondary">v2.2.0+</span></td>
+<td aria-colindex="2" role="cell" class="">String or Number</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">The number row columns to create at the 'sm' breakpoint. Requires Bootstrap v4.4 CSS</td>
+</tr>
+<tr role="row" data-pk="cols-md" class="" id="__BVID__1893__row_cols-md">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">cols-md</code> <span data-v-866a22e8="" class="badge badge-secondary">v2.2.0+</span></td>
+<td aria-colindex="2" role="cell" class="">String or Number</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">The number row columns to create at the 'md' breakpoint. Requires Bootstrap v4.4 CSS</td>
+</tr>
+<tr role="row" data-pk="cols-lg" class="" id="__BVID__1893__row_cols-lg">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">cols-lg</code> <span data-v-866a22e8="" class="badge badge-secondary">v2.2.0+</span></td>
+<td aria-colindex="2" role="cell" class="">String or Number</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">The number row columns to create at the 'lg' breakpoint. Requires Bootstrap v4.4 CSS</td>
+</tr>
+<tr role="row" data-pk="cols-xl" class="" id="__BVID__1893__row_cols-xl">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">cols-xl</code> <span data-v-866a22e8="" class="badge badge-secondary">v2.2.0+</span></td>
+<td aria-colindex="2" role="cell" class="">String or Number</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">The number row columns to create at the 'xl' breakpoint. Requires Bootstrap v4.4 CSS</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</section>
+<section data-v-866a22e8="" class="bd-content">
+<header data-v-866a22e8="" class="row align-items-center">
+<div data-v-866a22e8="" class="col-sm-9">
+<h3 data-v-866a22e8="" id="comp-ref-b-col" tabindex="-1" class="bv-no-focus-ring"><span data-v-866a22e8="" class="bd-content-title"><code data-v-866a22e8="" translate="translate" class="notranslate bigger">&lt;b-col&gt;</code><a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/layout#comp-ref-b-col" class="anchorjs-link" aria-labelledby="comp-ref-b-col" target="_self"></a></span></h3>
+<a data-v-866a22e8="" rel="noopener" target="_blank" href="https://vuejs.org/v2/guide/render-function.html#Functional-Components" class="badge badge-secondary"> Functional Component </a></div>
+<div data-v-866a22e8="" class="text-sm-right col-sm-3"><a data-v-866a22e8="" rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev/src/components/layout/col.js" class="btn btn-outline-secondary btn-sm"> View source </a></div>
+</header>
+<ul data-v-866a22e8="" class="component-ref-mini-toc my-3">
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-col-props"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-col&gt;</code> Properties </a></li>
+</ul>
+<article data-v-866a22e8="" class="bd-content">
+<h4 data-v-866a22e8="" id="comp-ref-b-col-props" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> Properties <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/layout#comp-ref-b-col-props" class="anchorjs-link" aria-labelledby="comp-ref-b-col-props" target="_self"></a></span></h4>
+<div data-v-866a22e8="" class="table-responsive-sm">
+<table role="table" aria-busy="false" aria-colcount="4" class="table b-table bv-docs-table table-striped" id="__BVID__1918">
+<thead role="rowgroup" class="">
+<tr role="row" class="">
+<th role="columnheader" scope="col" tabindex="0" aria-colindex="1" aria-sort="none" class="b-table-sort-icon-left">Property<span class="sr-only"> (Click to sort Ascending)</span></th>
+<th role="columnheader" scope="col" tabindex="0" aria-colindex="2" class="">Type</th>
+<th role="columnheader" scope="col" tabindex="0" aria-colindex="3" class="">Default</th>
+<th role="columnheader" scope="col" tabindex="0" aria-colindex="4" class="">Description</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+<tr role="row" data-pk="col" class="" id="__BVID__1918__row_col">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">col</code></td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">When true makes an equal width column grid cell spans for xs and up breakpoints</td>
+</tr>
+<tr role="row" data-pk="cols" class="" id="__BVID__1918__row_cols">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">cols</code></td>
+<td aria-colindex="2" role="cell" class="">String or Number</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">Number of columns the grid cell spans for xs and up breakpoints</td>
+</tr>
+<tr role="row" data-pk="sm" class="" id="__BVID__1918__row_sm">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">sm</code></td>
+<td aria-colindex="2" role="cell" class="">Boolean or String or Number</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">Number of columns the grid cell spans for sm and up breakpoints</td>
+</tr>
+<tr role="row" data-pk="md" class="" id="__BVID__1918__row_md">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">md</code></td>
+<td aria-colindex="2" role="cell" class="">Boolean or String or Number</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">Number of columns the grid cell spans for md and up breakpoints</td>
+</tr>
+<tr role="row" data-pk="lg" class="" id="__BVID__1918__row_lg">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">lg</code></td>
+<td aria-colindex="2" role="cell" class="">Boolean or String or Number</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">Number of columns the grid cell spans for lg and up breakpoints</td>
+</tr>
+<tr role="row" data-pk="xl" class="" id="__BVID__1918__row_xl">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">xl</code></td>
+<td aria-colindex="2" role="cell" class="">Boolean or String or Number</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">Number of columns the grid cell spans for xl and up breakpoints</td>
+</tr>
+<tr role="row" data-pk="offset" class="" id="__BVID__1918__row_offset">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">offset</code></td>
+<td aria-colindex="2" role="cell" class="">String or Number</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">Number of columns the grid cell is offset for xs and up breakpoints</td>
+</tr>
+<tr role="row" data-pk="offset-sm" class="" id="__BVID__1918__row_offset-sm">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">offset-sm</code></td>
+<td aria-colindex="2" role="cell" class="">String or Number</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">Number of columns the grid cell is offset for sm and up breakpoints</td>
+</tr>
+<tr role="row" data-pk="offset-md" class="" id="__BVID__1918__row_offset-md">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">offset-md</code></td>
+<td aria-colindex="2" role="cell" class="">String or Number</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">Number of columns the grid cell is offset for md and up breakpoints</td>
+</tr>
+<tr role="row" data-pk="offset-lg" class="" id="__BVID__1918__row_offset-lg">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">offset-lg</code></td>
+<td aria-colindex="2" role="cell" class="">String or Number</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">Number of columns the grid cell is offset for lg and up breakpoints</td>
+</tr>
+<tr role="row" data-pk="offset-xl" class="" id="__BVID__1918__row_offset-xl">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">offset-xl</code></td>
+<td aria-colindex="2" role="cell" class="">String or Number</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">Number of columns the grid cell is offset for xl and up breakpoints</td>
+</tr>
+<tr role="row" data-pk="order" class="" id="__BVID__1918__row_order">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">order</code></td>
+<td aria-colindex="2" role="cell" class="">String or Number</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">Flex order of the grid cell for xs and up breakpoints</td>
+</tr>
+<tr role="row" data-pk="order-sm" class="" id="__BVID__1918__row_order-sm">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">order-sm</code></td>
+<td aria-colindex="2" role="cell" class="">String or Number</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">Flex order of the grid cell for sm and up breakpoints</td>
+</tr>
+<tr role="row" data-pk="order-md" class="" id="__BVID__1918__row_order-md">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">order-md</code></td>
+<td aria-colindex="2" role="cell" class="">String or Number</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">Flex order of the grid cell for md and up breakpoints</td>
+</tr>
+<tr role="row" data-pk="order-lg" class="" id="__BVID__1918__row_order-lg">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">order-lg</code></td>
+<td aria-colindex="2" role="cell" class="">String or Number</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">Flex order of the grid cell for lg and up breakpoints</td>
+</tr>
+<tr role="row" data-pk="order-xl" class="" id="__BVID__1918__row_order-xl">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">order-xl</code></td>
+<td aria-colindex="2" role="cell" class="">String or Number</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">Flex order of the grid cell for xl and up breakpoints</td>
+</tr>
+<tr role="row" data-pk="align-self" class="" id="__BVID__1918__row_align-self">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">align-self</code></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">Vertical alignment of the grid cell with respect to the row: 'start', 'center', or 'end'</td>
+</tr>
+<tr role="row" data-pk="tag" class="" id="__BVID__1918__row_tag">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">tag</code></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'div'</code></td>
+<td aria-colindex="4" role="cell" class="">Specify the HTML tag to render instead of the default tag</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</section>
+<section data-v-866a22e8="" class="bd-content">
+<header data-v-866a22e8="" class="row align-items-center">
+<div data-v-866a22e8="" class="col-sm-9">
+<h3 data-v-866a22e8="" id="comp-ref-b-form-row" tabindex="-1" class="bv-no-focus-ring"><span data-v-866a22e8="" class="bd-content-title"><code data-v-866a22e8="" translate="translate" class="notranslate bigger">&lt;b-form-row&gt;</code><a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/layout#comp-ref-b-form-row" class="anchorjs-link" aria-labelledby="comp-ref-b-form-row" target="_self"></a></span></h3>
+<a data-v-866a22e8="" rel="noopener" target="_blank" href="https://vuejs.org/v2/guide/render-function.html#Functional-Components" class="badge badge-secondary"> Functional Component </a></div>
+<div data-v-866a22e8="" class="text-sm-right col-sm-3"><a data-v-866a22e8="" rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev/src/components/layout/form-row.js" class="btn btn-outline-secondary btn-sm"> View source </a></div>
+</header>
+<ul data-v-866a22e8="" class="component-ref-mini-toc my-3">
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-form-row-props"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-form-row&gt;</code> Properties </a></li>
+</ul>
+<article data-v-866a22e8="" class="bd-content">
+<h4 data-v-866a22e8="" id="comp-ref-b-form-row-props" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> Properties <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/layout#comp-ref-b-form-row-props" class="anchorjs-link" aria-labelledby="comp-ref-b-form-row-props" target="_self"></a></span></h4>
+<div data-v-866a22e8="" class="table-responsive-sm">
+<table role="table" aria-busy="false" aria-colcount="4" class="table b-table bv-docs-table table-striped" id="__BVID__1951">
+<thead role="rowgroup" class="">
+<tr role="row" class="">
+<th role="columnheader" scope="col" aria-colindex="1" class="">Property</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">Type</th>
+<th role="columnheader" scope="col" aria-colindex="3" class="">Default</th>
+<th role="columnheader" scope="col" aria-colindex="4" class="">Description</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+<tr role="row" data-pk="tag" class="" id="__BVID__1951__row_tag">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">tag</code></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'div'</code></td>
+<td aria-colindex="4" role="cell" class="">Specify the HTML tag to render instead of the default tag</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+<h3 id="importing-individual-components" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title"> Importing individual components <a href="../../../bootstrap-vue/docs/components/layout#importing-individual-components" class="anchorjs-link" aria-labelledby="importing-individual-components" target="_self"></a></span></h3>
+<p> You can import individual components into your project via the following named
+        exports: </p>
+<div class="table-responsive-sm">
+<table role="table" aria-busy="false" aria-colcount="3" class="table b-table bv-docs-table table-striped" id="__BVID__1963">
+<thead role="rowgroup" class="thead-default">
+<tr role="row" class="">
+<th role="columnheader" scope="col" aria-colindex="1" class="">Component</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">Named Export</th>
+<th role="columnheader" scope="col" aria-colindex="3" class="">Import Path</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+<tr role="row" class="">
+<td aria-colindex="1" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">&lt;b-container&gt;</code></td>
+<td aria-colindex="2" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">BContainer</code></td>
+<td aria-colindex="3" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">bootstrap-vue</code></td>
+</tr>
+<tr role="row" class="">
+<td aria-colindex="1" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">&lt;b-row&gt;</code></td>
+<td aria-colindex="2" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">BRow</code></td>
+<td aria-colindex="3" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">bootstrap-vue</code></td>
+</tr>
+<tr role="row" class="">
+<td aria-colindex="1" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">&lt;b-col&gt;</code></td>
+<td aria-colindex="2" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">BCol</code></td>
+<td aria-colindex="3" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">bootstrap-vue</code></td>
+</tr>
+<tr role="row" class="">
+<td aria-colindex="1" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">&lt;b-form-row&gt;</code></td>
+<td aria-colindex="2" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">BFormRow</code></td>
+<td aria-colindex="3" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">bootstrap-vue</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Example:</strong></p>
+<pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { BContainer } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
+Vue.component(<span class="hljs-string">'b-container'</span>, BContainer)</pre>
+</article>
+<article class="bd-content">
+<h3 id="importing-as-a-plugin" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title"> Importing as a Vue.js plugin <a href="../../../bootstrap-vue/docs/components/layout#importing-as-a-plugin" class="anchorjs-link" aria-labelledby="importing-as-a-plugin" target="_self"></a></span></h3>
+<p> This plugin includes all of the above listed individual
+      components.
+      Plugins also include any component aliases. </p>
+<div class="table-responsive-sm">
+<table fileds="namedExport,importPath" role="table" aria-busy="false" aria-colcount="2" class="table b-table bv-docs-table table-striped b-table-caption-top" id="__BVID__1976">
+<thead role="rowgroup" class="thead-default">
+<tr role="row" class="">
+<th role="columnheader" scope="col" aria-colindex="1" class="">Named Export</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">Import Path</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+<tr role="row" class="">
+<td aria-colindex="1" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">LayoutPlugin</code></td>
+<td aria-colindex="2" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">bootstrap-vue</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Example:</strong></p>
+<pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { LayoutPlugin } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
+Vue.use(LayoutPlugin)</pre>
+
+
+
+
+
+
+</main>
+</div>
+</div>
+
+
+<script src="../../../js/jquery-3.2.1.slim.min.js"></script> 
+<script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery-slim.min.js"><\/script>')</script> 
+<script src="../../../v4/dist/js/popper.min.js"></script> 
+<script src="../../../v4/dist/js/bootstrap.min.js"></script> 
+<script src="../../../v4/assets/js/docs.min.js"></script> 
+<script src="../../../v4/assets/js/ie-emulation-modes-warning.js"></script> 
+<script src="../../../v4/assets/js/docsearch.min.js"></script> 
+<script>
+  docsearch({
+    appId: 'PRR89ISST8',
+    apiKey: '95044d57d4d7bb744f322d1f18ed607f',
+    indexName: 'z01-bootstrapV4',
+    inputSelector: '#search-input',
+    handleSelected: function (input, event, suggestion) {
+      var url = suggestion.url;
+      url = suggestion.isLvl1 ? url.split('#')[0]: url;
+      // If it's a title we remove the anchor so it does not jump.
+      window.location.href = url;
+    },
+    transformData: function (hits) {
+      return hits.map(function (hit) {
+        hit.url = hit.url.replace('https://v4-alpha.getbootstrap.com', '/docs/4.0');
+        return hit;
+      });
+    },
+    debug: false // Set debug to true if you want to inspect the dropdown
+  });
+</script> 
+<script>
+  Holder.addTheme('gray', {
+    bg: '#777',
+    fg: 'rgba(255,255,255,.75)',
+    font: 'Helvetica',
+    fontweight: 'normal'
+  });
+</script>
+</body>
+</html>

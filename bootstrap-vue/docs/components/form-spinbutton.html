@@ -1,0 +1,1354 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Jekyll v3.6.0">
+<title>按钮式表单 &middot; BootstrapVue</title>
+<!-- Bootstrap 核心CSS -->
+<link href="../../../v4/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- 本文档额外专用css -->
+<link href="../../../v4/assets/css/docsearch.min.css" rel="stylesheet">
+<link href="../../../v4/assets/css/docs.min.css" rel="stylesheet">
+<link href="../../style/bv_path.css" rel="stylesheet">
+
+<!-- Favicons图标定义 -->
+<link data-n-head="ssr" rel="manifest" href="../../manifest.json">
+<link data-n-head="ssr" rel="shortcut icon" href="../../style/icons/icon_64.png">
+<link data-n-head="ssr" rel="apple-touch-icon" href="../../style/icons/icon_512.png" sizes="512x512">
+
+<!-- Meta关键字定义 -->
+<meta name="description" content="The most popular HTML, CSS, and JS library in the world.">
+<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+
+</head>
+<body>
+<a id="skippy" class="sr-only sr-only-focusable" href="#content">
+<div class="container"> <span class="skiplink-text">跳到主体内容</span> </div>
+</a>
+<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar"> <a class="navbar-brand mr-0 mr-md-2" href="../" aria-label="Bootstrap">
+  <svg class="d-block" width="36" height="36" viewbox="0 0 612 612" xmlns="http://www.w3.org/2000/svg" focusable="false">
+    <title>Bootstrap</title>
+    <path fill="currentColor" d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z"/>
+    <path fill="currentColor" d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z"/>
+  </svg>
+  </a>
+  <div class="navbar-nav-scroll">
+    <ul class="navbar-nav bd-navbar-nav flex-row">
+      <li class="nav-item"><a class="nav-link " href="../">首页</a></li>
+      <li class="nav-item"><a class="nav-link active" href="../../v4/docs/">中文手册</a></li>
+      <li class="nav-item"><a class="nav-link " href="../../v4/examples/">实例</a></li>
+      <li class="nav-item dropdown">
+<a class="nav-item nav-link dropdown-toggle mr-md-2" id="bd-versions" aria-expanded="false" aria-haspopup="true" href="#" data-toggle="dropdown"> 主题模板 </a>
+<div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
+<a class="dropdown-item" href="../../V4/themes/" target="_blank">主题门户</a>
+<a class="dropdown-item" href="../../V4/themes/live.html">精选模板</a>
+</div>
+</li>
+      <li class="nav-item"><a class="nav-link" href="//ico.z01.com" target="_blank" rel="noopener">zico图标系统</a></li>
+      <li class="nav-item"><a class="nav-link" href="https://expo.getbootstrap.com" target="_blank" rel="noopener">优站精选</a></li>
+      <li class="nav-item"><a class="nav-link" href="https://blog.getbootstrap.com" target="_blank" rel="noopener">Blog</a></li>
+    </ul>
+  </div>
+  <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="alse"> v2.6.1 </a>
+      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions"> 
+        <a class="dropdown-item active" href="../../../bootstrap-vue/docs/4.0/">Latest (4.3.x)</a>
+        <a class="dropdown-item" href="/Boot/">v3.3.7</a>
+        <a class="dropdown-item" href="/Sass/">Sass语言</a>
+        <a class="dropdown-item" href="/Emmet/">Emmet语法</a>
+        <a class="dropdown-item" href="//www.z01.com/tool/" target="_blank">IIS站长工具</a>
+        <a class="dropdown-item" href="//ad.z01.com/" target="_blank">广告源码</a>
+        <a class="dropdown-item" href="//v.z01.com/mb/" target="_blank">免费模板</a>
+        <a class="dropdown-item" href="//v.z01.com/" target="_blank">H5移动创作</a>
+        <a class="dropdown-item" href="//www.z01.com/help/web/3234.shtml" target="_blank">Flexbox布局</a>
+		<a class="dropdown-item" href="/boot/font.html" target="_blank">Font Awesome</a>
+</div>
+    </li>
+    <li class="nav-item"> <a class="nav-link p-2" href="//zoomla.github.io/bootstrap4-zhcn-documentation" target="_blank" rel="noopener" aria-label="GitHub">
+      <svg class="navbar-nav-svg" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 499.36" focusable="false">
+        <title>GitHub</title>
+        <path d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z" fill="currentColor" fill-rule="evenodd"/>
+      </svg>
+      </a> </li>
+    <li class="nav-item"> <a class="nav-link p-2" href="http://www.z01.com/blog/ren/3214.shtml" target="_blank" rel="noopener" aria-label="Slack">译者说</a></li>
+  </ul>
+  <a class="btn btn-bd-yellow d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="download.html">下载 Bootstrap</a> </header>
+
+<div class="container-fluid">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+      <form class="bd-search d-flex align-items-center">
+        <input type="search" class="form-control" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
+        <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30" focusable="false">
+          <title>Menu</title>
+          <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/>
+        </svg>
+        </button>
+      </form>
+
+
+<nav class="collapse bd-links" id="bd-docs-nav">
+<div class=""><a href="../" class="bd-toc-link">首页</a></div>
+<div class="bd-toc-item nuxt-link-exact-active "><a href="../../../bootstrap-vue/docs/" class="bd-toc-link  "> 起步 </a>
+<ul class="nav bd-sidenav">
+</ul>
+</div>
+<div class="bd-toc-item active"><a href="../../../bootstrap-vue/docs/components/" class="bd-toc-link nuxt-link-exact-active"> 组件 </a>
+<ul class="nav bd-sidenav">
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/index.html" class="nav-link"> 组件目录 </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/alert.html" class="nav-link"> 警告提示框(Alert) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/badge.html" class="nav-link"> 徽章(Badge) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/badge.html" class="nav-link"> 面包屑导航(Breadcrumb) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/button.html" class="nav-link"> 按钮(Button) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/button-group.html" class="nav-link"> 按钮组(Button Group) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/button-toolbar.html" class="nav-link"> 按钮Toolbar(Button Toolbar) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/calendar.html" class="nav-link"> 日历组件(Calendar) <small class="badge text-uppercase badge-success">New</small> </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/card.html" class="nav-link"> 卡片(Card) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/carousel.html" class="nav-link"> 轮播效果(Carousel) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/collapse.html" class="nav-link"> 折叠面板(Collapse) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/dropdown.html" class="nav-link"> 下拉菜单(Dropdown) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/embed.html" class="nav-link"> 嵌入(Embed) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form.html" class="nav-link"> 表单(Form) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-checkbox.html" class="nav-link"> 表单复选框(Form Checkbox) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-datepicker.html" class="nav-link"> 表单时间选择器(Form Datepicker) <small class="badge text-uppercase badge-success">New</small> </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-file.html" class="nav-link"> 文件选择(Form File) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-group.html" class="nav-link"> 表单组合(Form Group) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-input.html" class="nav-link"> 表单输入框(Form Input) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-radio.html" class="nav-link"> 单选择表单Form Radio </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-select.html" class="nav-link"> 下拉式表单(Form Select) </a></li>
+<li class="nav-item active"><a href="../../../bootstrap-vue/docs/components/form-spinbutton.html" class="nav-link"> 按钮式表单(Form Spinbuttno) <small class="badge text-uppercase badge-success">New</small> </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-tags.html" class="nav-link"> Tags表单选择器(Form Tags) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-textarea.html" class="nav-link"> 文本框(Form Textarea) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-timepicker.html" class="nav-link"> 表单内时间控件(Form Timepicker) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/image.html" class="nav-link"> 图片(Image) </a></li>
+
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/input-group.html" class="nav-link"> 输入框(Input Group) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/jumbotron.html" class="nav-link"> Hero大块屏(Jumbotron) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/layout.html" class="nav-link"> 布局与网络Layout and Grid System </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/link.html" class="nav-link"> 链接(Link)</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/list-group.html" class="nav-link"> 列表组(List group) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/media.html" class="nav-link"> 媒体(Media) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/modal.html" class="nav-link"> 弹出模态框(Modal) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/nav.html" class="nav-link"> 导航(Nav) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/navbar.html" class="nav-link"> 导航栏(Navbar) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/pagination.html" class="nav-link"> 分页(Pagination) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/pagination-nav.html" class="nav-link"> 分页导航(Pagination Nav) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/popover.html" class="nav-link"> 指示备注(Popover) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/progress.html" class="nav-link"> 进度指示器(Progress) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/spinner.html" class="nav-link"> 旋转指示器(Spinner) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/table.html" class="nav-link"> 表格(Table) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/tabs.html" class="nav-link"> 选项卡(Tabs) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/time.html" class="nav-link"> 时间组件(Time) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/toast.html" class="nav-link"> 冒泡推送(Toasts) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/tooltip.html" class="nav-link"> tip提示组件(Tooltip) </a></li>
+</ul>
+</div>
+<div class="bd-toc-item"><a href="../../../bootstrap-vue/docs/directives/" class="bd-toc-link"> 指令 </a>
+<ul class="nav bd-sidenav">
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/directives/index.html" class="nav-link"> 指令目录 </a></li>
+<li class="nav-item active"><a href="../../../bootstrap-vue/docs/directives/hover.html" class="nav-link"> Hover 指令<small class="badge text-uppercase badge-success">New</small> </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/directives/popover.html" class="nav-link"> Popover 提示备注</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/directives/scrollspy.html" class="nav-link"> Scrollspy 滚动监听</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/directives/tooltip.html" class="nav-link"> Tooltip 提示指令</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/directives/visible.html" class="nav-link"> Visible 可见性操作<small class="badge text-uppercase badge-success">New</small> </a></li>
+</ul>
+</div>
+<div class="bd-toc-item"><a href="../../../bootstrap-vue/docs/icons.html" class="bd-toc-link"> Icons图标</a>
+<ul class="nav bd-sidenav">
+</ul>
+</div>
+  
+<div class="bd-toc-item"><a class="bd-toc-link" href="../../../bootstrap-vue/docs/reference">参考</a>
+<ul class="nav bd-sidenav">
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference" class="nav-link.html"> 参考目录 </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/accessibility.html" class="nav-link">友好访问</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/color-variants.html" class="nav-link">Color颜色变量 </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/images.html" class="nav-link"> 组件图像img的src路径解析</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/router-links.html" class="nav-link"> Router路由支持 </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/size-props.html" class="nav-link">大小规格</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/spacing-classes.html" class="nav-link">间距处理</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/starter-templates.html" class="nav-link">开始模板</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/theming.html" class="nav-link">主题色彩</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/utility-classes.html" class="nav-link">通用Class类</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/validation.html" class="nav-link">Form表单验证</a></li>
+</ul>
+</div>
+<div class="bd-toc-item"> <a class="bd-toc-link" href="../components/alerts.html"> 杂项 </a>
+  <ul class="nav bd-sidenav">
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/misc/changelog" class="nav-link"> Changelog </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/misc/contributing" class="nav-link"> Contributing </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/misc/settings" class="nav-link"> Settings </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/misc/third-party" class="nav-link"> Third party libraries </a></li>
+  </ul>
+</div>
+<div class=""><a href="/play" class="bd-toc-link">在线模拟器</a></div>
+</nav>
+</div>
+
+<div class="d-none d-xl-block col-xl-2 bd-toc">
+
+<ul class="section-nav">
+<li class="nav-item toc-entry mb-2"><a target="_self" href="#form-spinbutton" class="nav-link font-weight-bold"><span>Form Spinbutton</span></a></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#overview" class="nav-link"><span>Overview</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#v-model-value" class="nav-link"><span>v-model value</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#min-max-and-step" class="nav-link"><span>Min, max, and step</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#number-wrapping" class="nav-link"><span>Number wrapping</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#styling" class="nav-link"><span>Styling</span></a>
+<ul class="nav flex-column">
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#size" class="nav-link"><span>Size</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#inline" class="nav-link"><span>Inline</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#vertical" class="nav-link"><span>Vertical</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#width" class="nav-link"><span>Width</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#number-formatting-and-locale" class="nav-link"><span>Number formatting and locale</span></a></li>
+</ul>
+</li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#disabled-and-readonly-states" class="nav-link"><span>Disabled and readonly states</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#validation-states" class="nav-link"><span>Validation states</span></a>
+<ul class="nav flex-column">
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#required-prop" class="nav-link"><span>Required prop</span></a></li>
+</ul>
+</li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#events" class="nav-link"><span>Events</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#accessibility" class="nav-link"><span>Accessibility</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#implementation-notes" class="nav-link"><span>Implementation notes</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#see-also" class="nav-link"><span>See also</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#component-reference" class="nav-link"><span>Component reference</span></a>
+<ul class="nav flex-column">
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#comp-ref-b-form-spinbutton" class="nav-link"><span>&lt;b-form-spinbutton&gt;</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#importing-individual-components" class="nav-link"><span>Importing individual components</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#importing-as-a-plugin" class="nav-link"><span>Importing as a Vue.js plugin</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+
+<nav data-v-aafc4aea="" aria-label="Breadcrumbs" class="float-left mt-2 mb-0 mb-lg-2">
+<ol data-v-aafc4aea="" class="breadcrumb d-inline-flex bg-transparent px-2 py-1 my-0">
+<li data-v-aafc4aea="" class="breadcrumb-item"><a data-v-aafc4aea="" href="../../" class="nuxt-link-active" target="_self">首页</a></li>
+<li data-v-aafc4aea="" class="breadcrumb-item"><a data-v-aafc4aea="" href="../../../bootstrap-vue/docs" class="nuxt-link-active" target="_self">中文手册</a></li>
+<li data-v-aafc4aea="" class="breadcrumb-item"><a data-v-aafc4aea="" href="../../../bootstrap-vue/docs/components/" class="nuxt-link-active" target="_self">组件</a></li>
+<li data-v-aafc4aea="" class="breadcrumb-item active"><span data-v-aafc4aea="" aria-current="location">按钮式表单</span></li>
+</ol>
+</nav>
+<div class="clearfix d-block"></div>
+  <h1 class="bd-title" id="content">按钮式表单(Form Spinbutton)</h1>
+  <p class="bd-lead">Spin buttons are a BootstrapVue custom numerical range form control. Spin buttons allow for incrementing or decrementing a numerical value within a range of a minimum and maximum number, with optional step value.</p>
+  <script type="text/javascript" src="../../../v4/assets/js/pupCMS.js"></script>
+
+
+
+
+
+<nav class="bd-quick-links mb-3 d-xl-none" data-v-811345e6="">
+<header data-v-811345e6="">
+<button data-v-811345e6="" type="button" class="btn font-weight-bold btn-outline-secondary btn-sm btn-block collapsed" aria-controls="bd-quick-links-collapse" aria-expanded="false"><span data-v-811345e6="">Show</span> page table of contents </button>
+</header>
+<ul data-v-811345e6="" id="bd-quick-links-collapse" class="collapse" style="display: none;">
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#overview" class=""><span data-v-811345e6="">Overview</span></a> <!----></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#v-model-value" class=""><span data-v-811345e6="">v-model value</span></a> <!----></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#min-max-and-step" class=""><span data-v-811345e6="">Min, max, and step</span></a> <!----></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#number-wrapping" class=""><span data-v-811345e6="">Number wrapping</span></a> <!----></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#styling" class=""><span data-v-811345e6="">Styling</span></a>
+<ul data-v-811345e6="">
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#size" class=""><span data-v-811345e6="">Size</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#inline" class=""><span data-v-811345e6="">Inline</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#vertical" class=""><span data-v-811345e6="">Vertical</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#width" class=""><span data-v-811345e6="">Width</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#number-formatting-and-locale" class=""><span data-v-811345e6="">Number formatting and locale</span></a></li>
+</ul>
+</li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#disabled-and-readonly-states" class=""><span data-v-811345e6="">Disabled and readonly states</span></a> <!----></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#validation-states" class=""><span data-v-811345e6="">Validation states</span></a>
+<ul data-v-811345e6="">
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#required-prop" class=""><span data-v-811345e6="">Required prop</span></a></li>
+</ul>
+</li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#events" class=""><span data-v-811345e6="">Events</span></a> <!----></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#accessibility" class=""><span data-v-811345e6="">Accessibility</span></a> <!----></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#implementation-notes" class=""><span data-v-811345e6="">Implementation notes</span></a> <!----></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#see-also" class=""><span data-v-811345e6="">See also</span></a> <!----></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#component-reference" class=""><span data-v-811345e6="">Component reference</span></a>
+<ul data-v-811345e6="">
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#comp-ref-b-form-spinbutton" class=""><span data-v-811345e6="">&lt;b-form-spinbutton&gt;</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#importing-individual-components" class=""><span data-v-811345e6="">Importing individual components</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#importing-as-a-plugin" class=""><span data-v-811345e6="">Importing as a Vue.js plugin</span></a></li>
+</ul>
+</li>
+</ul>
+</nav>
+<p><code translate="no" class="notranslate text-nowrap">&lt;b-form-spinbutton&gt;</code> is <a href="https://www.w3.org/TR/wai-aria-practices-1.2/#spinbutton" target="_blank" rel="noopener">WAI-ARIA compliant</a>, allowing for <a href="#accessibility" class="font-weight-bold">keyboard control</a>, and supports both horizontal (default) and vertical layout.</p>
+<p>Similar to <a href="../../../bootstrap-vue/docs/components/form-input#range-type-input" class="font-weight-bold">range type inputs</a>, BootstrapVue's <code translate="no" class="notranslate text-nowrap">&lt;b-form-spinbutton&gt;</code> <em>does not</em> allow the user to type in a value.</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-form-spinbutton-demo notranslate">
+<div>
+<label for="demo-sb">Spin Button</label>
+<div role="group" lang="zh-CN" tabindex="-1" dir="ltr" class="b-form-spinbutton form-control p-0 d-flex align-items-stretch">
+<button tabindex="-1" type="button" aria-controls="demo-sb" aria-label="Decrement" aria-keyshortcuts="ArrowDown" class="btn btn-sm border-0 rounded-0 py-0">
+<div>
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-dash b-icon bi">
+<g transform="translate(10 10) scale(1.25 1.25) translate(-10 -10)">
+<path fill-rule="evenodd" d="M5.5 10a.5.5 0 01.5-.5h8a.5.5 0 010 1H6a.5.5 0 01-.5-.5z" clip-rule="evenodd"></path>
+</g>
+</svg>
+</div>
+</button>
+<!---->
+<output id="demo-sb" role="spinbutton" tabindex="0" aria-live="off" aria-valuemin="1" aria-valuemax="100" aria-valuenow="50" aria-valuetext="50" class="flex-grow-1 w-100 align-self-center px-1 border-left border-right">
+<div class="w-100">50</div>
+</output>
+<button tabindex="-1" type="button" aria-controls="demo-sb" aria-label="Increment" aria-keyshortcuts="ArrowUp" class="btn btn-sm border-0 rounded-0 py-0">
+<div>
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-plus b-icon bi">
+<g transform="translate(10 10) scale(1.25 1.25) translate(-10 -10)">
+<path fill-rule="evenodd" d="M10 5.5a.5.5 0 01.5.5v4a.5.5 0 01-.5.5H6a.5.5 0 010-1h3.5V6a.5.5 0 01.5-.5z" clip-rule="evenodd"></path>
+<path fill-rule="evenodd" d="M9.5 10a.5.5 0 01.5-.5h4a.5.5 0 010 1h-3.5V14a.5.5 0 01-1 0v-4z" clip-rule="evenodd"></path>
+</g>
+</svg>
+</div>
+</button>
+</div>
+<p>Value: 50</p>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable live" translate="no" contenteditable="true"><span class="hljs-tag"><span class="hljs-tag">&lt;</span><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name">template</span></span></span><span class="hljs-tag">&gt;</span></span>
+  <span class="hljs-tag"><span class="hljs-tag">&lt;</span><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name">div</span></span></span><span class="hljs-tag">&gt;</span></span>
+    <span class="hljs-tag"><span class="hljs-tag">&lt;</span><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name">label</span></span></span><span class="hljs-tag"> </span><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr">for</span></span></span><span class="hljs-tag">=</span><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string">"demo-sb"</span></span></span><span class="hljs-tag">&gt;</span></span>Spin Button<span class="hljs-tag"><span class="hljs-tag">&lt;/</span><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name">label</span></span></span><span class="hljs-tag">&gt;</span></span>
+    <span class="hljs-tag"><span class="hljs-tag">&lt;</span><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name">b-form-spinbutton</span></span></span><span class="hljs-tag"> </span><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr">id</span></span></span><span class="hljs-tag">=</span><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string">"demo-sb"</span></span></span><span class="hljs-tag"> </span><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr">v-model</span></span></span><span class="hljs-tag">=</span><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string">"value"</span></span></span><span class="hljs-tag"> </span><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr">min</span></span></span><span class="hljs-tag">=</span><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string">"1"</span></span></span><span class="hljs-tag"> </span><span class="hljs-attr"><span class="hljs-tag"><span class="hljs-attr">max</span></span></span><span class="hljs-tag">=</span><span class="hljs-string"><span class="hljs-tag"><span class="hljs-string">"100"</span></span></span><span class="hljs-tag">&gt;</span></span><span class="hljs-tag"><span class="hljs-tag">&lt;/</span><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name">b-form-spinbutton</span></span></span><span class="hljs-tag">&gt;</span></span>
+    <span class="hljs-tag"><span class="hljs-tag">&lt;</span><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name">p</span></span></span><span class="hljs-tag">&gt;</span></span>Value: {{ value }}<span class="hljs-tag"><span class="hljs-tag">&lt;/</span><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name">p</span></span></span><span class="hljs-tag">&gt;</span></span>
+  <span class="hljs-tag"><span class="hljs-tag">&lt;/</span><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name">div</span></span></span><span class="hljs-tag">&gt;</span></span>
+<span class="hljs-tag"><span class="hljs-tag">&lt;/</span><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name">template</span></span></span><span class="hljs-tag">&gt;</span></span>
+
+<span class="hljs-tag"><span class="hljs-tag">&lt;</span><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name">script</span></span></span><span class="hljs-tag">&gt;</span></span><span class="javascript"><span class="javascript"> </span><span class="hljs-keyword"><span class="javascript"><span class="hljs-keyword">export</span></span></span><span class="javascript"> </span><span class="hljs-keyword"><span class="javascript"><span class="hljs-keyword">default</span></span></span><span class="javascript"> {
+    data() {
+      </span><span class="hljs-keyword"><span class="javascript"><span class="hljs-keyword">return</span></span></span><span class="javascript"> {
+        </span><span class="hljs-attr"><span class="javascript"><span class="hljs-attr">value</span></span></span><span class="javascript">: </span><span class="hljs-number"><span class="javascript"><span class="hljs-number">50</span></span></span><span class="javascript">
+      }
+    }
+  }
+</span></span><span class="hljs-tag"><span class="hljs-tag">&lt;/</span><span class="hljs-name"><span class="hljs-tag"><span class="hljs-name">script</span></span></span><span class="hljs-tag">&gt;</span></span></pre>
+<h2 id="overview" class="bv-no-focus-ring"><span class="bd-content-title">Overview<a class="anchorjs-link" href="#overview" aria-labelledby="overview"></a></span></h2>
+<p>The <kbd class="notranslate" translate="no">ArrowUp</kbd> and <kbd class="notranslate" translate="no">ArrowDown</kbd> keys can be used to increment or decrement the
+value.</p>
+<p>To be submitted via native browser form submits, the spinbutton must have a name set via the <code translate="no" class="notranslate text-nowrap">name</code> prop. This will create a hidden input containing the current value of the spinbutton. If the
+spinbutton does not have a value, the hidden input's value will be an empty string.</p>
+<h2 id="v-model-value" class="bv-no-focus-ring"><span class="bd-content-title"><code translate="no" class="notranslate text-nowrap">v-model</code> value<a class="anchorjs-link" href="#v-model-value" aria-labelledby="v-model-value"></a></span></h2>
+<p>The <code translate="no" class="notranslate text-nowrap">v-model</code> always returns the value as a number. The <code translate="no" class="notranslate text-nowrap">v-model</code> can be <code translate="no" class="notranslate text-nowrap">null</code> if no initial value
+is set.</p>
+<p>If the initial value is <code translate="no" class="notranslate text-nowrap">null</code> no value will be displayed in the spinbutton. Use the <code translate="no" class="notranslate text-nowrap">placeholder</code> prop to show a string when the spinbutton has no value (i.e. <code translate="no" class="notranslate text-nowrap">placeholder="--"</code>).</p>
+<h2 id="min-max-and-step" class="bv-no-focus-ring"><span class="bd-content-title">Min, max, and step<a class="anchorjs-link" href="#min-max-and-step" aria-labelledby="min-max-and-step"></a></span></h2>
+<p>Spinbuttons have a default range from <code translate="no" class="notranslate text-nowrap">1</code> to <code translate="no" class="notranslate text-nowrap">100</code>, which can be changed by setting the <code translate="no" class="notranslate text-nowrap">min</code> and <code translate="no" class="notranslate text-nowrap">max</code> props. The default step increment is <code translate="no" class="notranslate text-nowrap">1</code>, and can be changed via the <code translate="no" class="notranslate text-nowrap">step</code> prop (decimal
+values allowed).</p>
+<p>When <code translate="no" class="notranslate text-nowrap">step</code> is set, the value will always be a multiple of the step size plus the minimum value.</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-form-spinbutton-step notranslate">
+<div>
+<label for="sb-step">Spin button with step of 0.25</label>
+<div role="group" lang="zh-CN" tabindex="-1" dir="ltr" class="b-form-spinbutton form-control p-0 d-flex align-items-stretch">
+<button tabindex="-1" type="button" aria-controls="sb-step" aria-label="Decrement" aria-keyshortcuts="ArrowDown" class="btn btn-sm border-0 rounded-0 py-0">
+<div>
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-dash b-icon bi">
+<g transform="translate(10 10) scale(1.25 1.25) translate(-10 -10)">
+<path fill-rule="evenodd" d="M5.5 10a.5.5 0 01.5-.5h8a.5.5 0 010 1H6a.5.5 0 01-.5-.5z" clip-rule="evenodd"></path>
+</g>
+</svg>
+</div>
+</button>
+<!---->
+<output id="sb-step" role="spinbutton" tabindex="0" aria-live="off" aria-valuemin="0" aria-valuemax="10" aria-valuenow="0" aria-valuetext="0.00" class="flex-grow-1 w-100 align-self-center px-1 border-left border-right">
+<div class="w-100">0.00</div>
+</output>
+<button tabindex="-1" type="button" aria-controls="sb-step" aria-label="Increment" aria-keyshortcuts="ArrowUp" class="btn btn-sm border-0 rounded-0 py-0">
+<div>
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-plus b-icon bi">
+<g transform="translate(10 10) scale(1.25 1.25) translate(-10 -10)">
+<path fill-rule="evenodd" d="M10 5.5a.5.5 0 01.5.5v4a.5.5 0 01-.5.5H6a.5.5 0 010-1h3.5V6a.5.5 0 01.5-.5z" clip-rule="evenodd"></path>
+<path fill-rule="evenodd" d="M9.5 10a.5.5 0 01.5-.5h4a.5.5 0 010 1h-3.5V14a.5.5 0 01-1 0v-4z" clip-rule="evenodd"></path>
+</g>
+</svg>
+</div>
+</button>
+</div>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"sb-step"</span>&gt;</span>Spin button with step of 0.25<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-spinbutton</span>
+      <span class="hljs-attr">id</span>=<span class="hljs-string">"sb-step"</span>
+      <span class="hljs-attr">v-model</span>=<span class="hljs-string">"value"</span>
+      <span class="hljs-attr">min</span>=<span class="hljs-string">"0"</span>
+      <span class="hljs-attr">max</span>=<span class="hljs-string">"10"</span>
+      <span class="hljs-attr">step</span>=<span class="hljs-string">"0.25"</span>
+    &gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-spinbutton</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    data() {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">value</span>: <span class="hljs-number">0</span>
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+<h2 id="number-wrapping" class="bv-no-focus-ring"><span class="bd-content-title">Number wrapping<a class="anchorjs-link" href="#number-wrapping" aria-labelledby="number-wrapping"></a></span></h2>
+<p>By default, when the value is increased to the <code translate="no" class="notranslate text-nowrap">max</code> value, it pressing the increment button will
+have no effect. Similarly when the value is as the <code translate="no" class="notranslate text-nowrap">min</code> value, pressing the decrement button will
+have no effect.</p>
+<p>To allow the spin button to wrap from max to min when incrementing (or min to max when
+decrementing), set the <code translate="no" class="notranslate text-nowrap">wrap</code> prop to <code translate="no" class="notranslate text-nowrap">true</code>.</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-form-spinbutton-wrap notranslate">
+<div>
+<label for="sb-wrap">Wrapping value spin button</label>
+<div role="group" lang="zh-CN" tabindex="-1" dir="ltr" class="b-form-spinbutton form-control p-0 d-flex align-items-stretch">
+<button tabindex="-1" type="button" aria-controls="sb-wrap" aria-label="Decrement" aria-keyshortcuts="ArrowDown" class="btn btn-sm border-0 rounded-0 py-0">
+<div>
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-dash b-icon bi">
+<g transform="translate(10 10) scale(1.25 1.25) translate(-10 -10)">
+<path fill-rule="evenodd" d="M5.5 10a.5.5 0 01.5-.5h8a.5.5 0 010 1H6a.5.5 0 01-.5-.5z" clip-rule="evenodd"></path>
+</g>
+</svg>
+</div>
+</button>
+<!---->
+<output id="sb-wrap" role="spinbutton" tabindex="0" aria-live="off" aria-valuemin="1" aria-valuemax="25" class="flex-grow-1 w-100 align-self-center px-1 border-left border-right">
+<div class="w-100">--</div>
+</output>
+<button tabindex="-1" type="button" aria-controls="sb-wrap" aria-label="Increment" aria-keyshortcuts="ArrowUp" class="btn btn-sm border-0 rounded-0 py-0">
+<div>
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-plus b-icon bi">
+<g transform="translate(10 10) scale(1.25 1.25) translate(-10 -10)">
+<path fill-rule="evenodd" d="M10 5.5a.5.5 0 01.5.5v4a.5.5 0 01-.5.5H6a.5.5 0 010-1h3.5V6a.5.5 0 01.5-.5z" clip-rule="evenodd"></path>
+<path fill-rule="evenodd" d="M9.5 10a.5.5 0 01.5-.5h4a.5.5 0 010 1h-3.5V14a.5.5 0 01-1 0v-4z" clip-rule="evenodd"></path>
+</g>
+</svg>
+</div>
+</button>
+</div>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"sb-wrap"</span>&gt;</span>Wrapping value spin button<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-spinbutton</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"sb-wrap"</span> <span class="hljs-attr">wrap</span> <span class="hljs-attr">min</span>=<span class="hljs-string">"1"</span> <span class="hljs-attr">max</span>=<span class="hljs-string">"25"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"--"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-spinbutton</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span></pre>
+<h2 id="styling" class="bv-no-focus-ring"><span class="bd-content-title">Styling<a class="anchorjs-link" href="#styling" aria-labelledby="styling"></a></span></h2>
+<h3 id="size" class="bv-no-focus-ring"><span class="bd-content-title">Size<a class="anchorjs-link" href="#size" aria-labelledby="size"></a></span></h3>
+<p>As with other form controls, <code translate="no" class="notranslate text-nowrap">&lt;b-form-spinbutton&gt;</code> supports small and large sizing via setting the <code translate="no" class="notranslate text-nowrap">size</code> prop to either <code translate="no" class="notranslate text-nowrap">'sm'</code> or <code translate="no" class="notranslate text-nowrap">'lg'</code>, respectively.</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-form-spinbutton-size notranslate">
+<div>
+<label for="sb-small">Spin button - Small size</label>
+<div role="group" lang="zh-CN" tabindex="-1" dir="ltr" class="b-form-spinbutton form-control p-0 mb-2 form-control-sm d-flex align-items-stretch">
+<button tabindex="-1" type="button" aria-controls="sb-small" aria-label="Decrement" aria-keyshortcuts="ArrowDown" class="btn btn-sm border-0 rounded-0 py-0">
+<div>
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-dash b-icon bi">
+<g transform="translate(10 10) scale(1.25 1.25) translate(-10 -10)">
+<path fill-rule="evenodd" d="M5.5 10a.5.5 0 01.5-.5h8a.5.5 0 010 1H6a.5.5 0 01-.5-.5z" clip-rule="evenodd"></path>
+</g>
+</svg>
+</div>
+</button>
+<!---->
+<output id="sb-small" role="spinbutton" tabindex="0" aria-live="off" aria-valuemin="1" aria-valuemax="100" class="flex-grow-1 w-100 align-self-center px-1 border-left border-right">
+<div class="w-100">--</div>
+</output>
+<button tabindex="-1" type="button" aria-controls="sb-small" aria-label="Increment" aria-keyshortcuts="ArrowUp" class="btn btn-sm border-0 rounded-0 py-0">
+<div>
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-plus b-icon bi">
+<g transform="translate(10 10) scale(1.25 1.25) translate(-10 -10)">
+<path fill-rule="evenodd" d="M10 5.5a.5.5 0 01.5.5v4a.5.5 0 01-.5.5H6a.5.5 0 010-1h3.5V6a.5.5 0 01.5-.5z" clip-rule="evenodd"></path>
+<path fill-rule="evenodd" d="M9.5 10a.5.5 0 01.5-.5h4a.5.5 0 010 1h-3.5V14a.5.5 0 01-1 0v-4z" clip-rule="evenodd"></path>
+</g>
+</svg>
+</div>
+</button>
+</div>
+<label for="sb-default">Spin button - Default size</label>
+<div role="group" lang="zh-CN" tabindex="-1" dir="ltr" class="b-form-spinbutton form-control p-0 mb-2 d-flex align-items-stretch">
+<button tabindex="-1" type="button" aria-controls="sb-default" aria-label="Decrement" aria-keyshortcuts="ArrowDown" class="btn btn-sm border-0 rounded-0 py-0">
+<div>
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-dash b-icon bi">
+<g transform="translate(10 10) scale(1.25 1.25) translate(-10 -10)">
+<path fill-rule="evenodd" d="M5.5 10a.5.5 0 01.5-.5h8a.5.5 0 010 1H6a.5.5 0 01-.5-.5z" clip-rule="evenodd"></path>
+</g>
+</svg>
+</div>
+</button>
+<!---->
+<output id="sb-default" role="spinbutton" tabindex="0" aria-live="off" aria-valuemin="1" aria-valuemax="100" class="flex-grow-1 w-100 align-self-center px-1 border-left border-right">
+<div class="w-100">--</div>
+</output>
+<button tabindex="-1" type="button" aria-controls="sb-default" aria-label="Increment" aria-keyshortcuts="ArrowUp" class="btn btn-sm border-0 rounded-0 py-0">
+<div>
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-plus b-icon bi">
+<g transform="translate(10 10) scale(1.25 1.25) translate(-10 -10)">
+<path fill-rule="evenodd" d="M10 5.5a.5.5 0 01.5.5v4a.5.5 0 01-.5.5H6a.5.5 0 010-1h3.5V6a.5.5 0 01.5-.5z" clip-rule="evenodd"></path>
+<path fill-rule="evenodd" d="M9.5 10a.5.5 0 01.5-.5h4a.5.5 0 010 1h-3.5V14a.5.5 0 01-1 0v-4z" clip-rule="evenodd"></path>
+</g>
+</svg>
+</div>
+</button>
+</div>
+<label for="sb-large">Spin button - Large size</label>
+<div role="group" lang="zh-CN" tabindex="-1" dir="ltr" class="b-form-spinbutton form-control p-0 mb-2 form-control-lg d-flex align-items-stretch">
+<button tabindex="-1" type="button" aria-controls="sb-large" aria-label="Decrement" aria-keyshortcuts="ArrowDown" class="btn btn-sm border-0 rounded-0 py-0">
+<div>
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-dash b-icon bi">
+<g transform="translate(10 10) scale(1.25 1.25) translate(-10 -10)">
+<path fill-rule="evenodd" d="M5.5 10a.5.5 0 01.5-.5h8a.5.5 0 010 1H6a.5.5 0 01-.5-.5z" clip-rule="evenodd"></path>
+</g>
+</svg>
+</div>
+</button>
+<!---->
+<output id="sb-large" role="spinbutton" tabindex="0" aria-live="off" aria-valuemin="1" aria-valuemax="100" class="flex-grow-1 w-100 align-self-center px-1 border-left border-right">
+<div class="w-100">--</div>
+</output>
+<button tabindex="-1" type="button" aria-controls="sb-large" aria-label="Increment" aria-keyshortcuts="ArrowUp" class="btn btn-sm border-0 rounded-0 py-0">
+<div>
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-plus b-icon bi">
+<g transform="translate(10 10) scale(1.25 1.25) translate(-10 -10)">
+<path fill-rule="evenodd" d="M10 5.5a.5.5 0 01.5.5v4a.5.5 0 01-.5.5H6a.5.5 0 010-1h3.5V6a.5.5 0 01.5-.5z" clip-rule="evenodd"></path>
+<path fill-rule="evenodd" d="M9.5 10a.5.5 0 01.5-.5h4a.5.5 0 010 1h-3.5V14a.5.5 0 01-1 0v-4z" clip-rule="evenodd"></path>
+</g>
+</svg>
+</div>
+</button>
+</div>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"sb-small"</span>&gt;</span>Spin button - Small size<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-spinbutton</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"sb-small"</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"sm"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"--"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-2"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-spinbutton</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"sb-default"</span>&gt;</span>Spin button - Default size<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-spinbutton</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"sb-default"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"--"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-2"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-spinbutton</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"sb-large"</span>&gt;</span>Spin button - Large size<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-spinbutton</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"sb-large"</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"lg"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"--"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-2"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-spinbutton</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span></pre>
+<h3 id="inline" class="bv-no-focus-ring"><span class="bd-content-title">Inline<a class="anchorjs-link" href="#inline" aria-labelledby="inline"></a></span></h3>
+<div translate="translate" class="bd-example vue-example vue-example-b-form-spinbutton-inline notranslate">
+<div>
+<label for="sb-inline">Inline spin button</label>
+<div role="group" lang="zh-CN" tabindex="-1" dir="ltr" class="b-form-spinbutton form-control p-0 d-inline-flex align-items-stretch">
+<button tabindex="-1" type="button" aria-controls="sb-inline" aria-label="Decrement" aria-keyshortcuts="ArrowDown" class="btn btn-sm border-0 rounded-0 py-0">
+<div>
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-dash b-icon bi">
+<g transform="translate(10 10) scale(1.25 1.25) translate(-10 -10)">
+<path fill-rule="evenodd" d="M5.5 10a.5.5 0 01.5-.5h8a.5.5 0 010 1H6a.5.5 0 01-.5-.5z" clip-rule="evenodd"></path>
+</g>
+</svg>
+</div>
+</button>
+<!---->
+<output id="sb-inline" role="spinbutton" tabindex="0" aria-live="off" aria-valuemin="1" aria-valuemax="100" aria-valuenow="50" aria-valuetext="50" class="flex-grow-1 align-self-center px-1 border-left border-right">
+<div class="w-100">50</div>
+</output>
+<button tabindex="-1" type="button" aria-controls="sb-inline" aria-label="Increment" aria-keyshortcuts="ArrowUp" class="btn btn-sm border-0 rounded-0 py-0">
+<div>
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-plus b-icon bi">
+<g transform="translate(10 10) scale(1.25 1.25) translate(-10 -10)">
+<path fill-rule="evenodd" d="M10 5.5a.5.5 0 01.5.5v4a.5.5 0 01-.5.5H6a.5.5 0 010-1h3.5V6a.5.5 0 01.5-.5z" clip-rule="evenodd"></path>
+<path fill-rule="evenodd" d="M9.5 10a.5.5 0 01.5-.5h4a.5.5 0 010 1h-3.5V14a.5.5 0 01-1 0v-4z" clip-rule="evenodd"></path>
+</g>
+</svg>
+</div>
+</button>
+</div>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"sb-inline"</span>&gt;</span>Inline spin button<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-spinbutton</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"sb-inline"</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">"value"</span> <span class="hljs-attr">inline</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-spinbutton</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    data() {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">value</span>: <span class="hljs-number">50</span>
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+<p>The spin button will automatically adjust it's width to fit the displayed value. See the <a href="#width" class="font-weight-bold">Width section</a> below for details on controlling or setting the width.</p>
+<h3 id="vertical" class="bv-no-focus-ring"><span class="bd-content-title">Vertical<a class="anchorjs-link" href="#vertical" aria-labelledby="vertical"></a></span></h3>
+<p>Spinbuttons can be oriented in vertical mode:</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-form-spinbutton-vertical notranslate">
+<div>
+<label for="sb-vertical">Vertical spin button</label>
+<br>
+<div role="group" lang="zh-CN" tabindex="-1" dir="ltr" class="b-form-spinbutton form-control p-0 d-inline-flex flex-column">
+<button tabindex="-1" type="button" aria-controls="sb-vertical" aria-label="Increment" aria-keyshortcuts="ArrowUp" class="btn btn-sm border-0 rounded-0">
+<div>
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-plus b-icon bi">
+<g transform="translate(10 10) scale(1.25 1.25) translate(-10 -10)">
+<path fill-rule="evenodd" d="M10 5.5a.5.5 0 01.5.5v4a.5.5 0 01-.5.5H6a.5.5 0 010-1h3.5V6a.5.5 0 01.5-.5z" clip-rule="evenodd"></path>
+<path fill-rule="evenodd" d="M9.5 10a.5.5 0 01.5-.5h4a.5.5 0 010 1h-3.5V14a.5.5 0 01-1 0v-4z" clip-rule="evenodd"></path>
+</g>
+</svg>
+</div>
+</button>
+<!---->
+<output id="sb-vertical" role="spinbutton" tabindex="0" aria-live="off" aria-valuemin="1" aria-valuemax="100" aria-valuenow="50" aria-valuetext="50" class="flex-grow-1 d-flex align-items-center py-1 mx-1 border-top border-bottom">
+<div class="w-100">50</div>
+</output>
+<button tabindex="-1" type="button" aria-controls="sb-vertical" aria-label="Decrement" aria-keyshortcuts="ArrowDown" class="btn btn-sm border-0 rounded-0">
+<div>
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-dash b-icon bi">
+<g transform="translate(10 10) scale(1.25 1.25) translate(-10 -10)">
+<path fill-rule="evenodd" d="M5.5 10a.5.5 0 01.5-.5h8a.5.5 0 010 1H6a.5.5 0 01-.5-.5z" clip-rule="evenodd"></path>
+</g>
+</svg>
+</div>
+</button>
+</div>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"sb-vertical"</span>&gt;</span>Vertical spin button<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-spinbutton</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"sb-vertical"</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">"value"</span> <span class="hljs-attr">vertical</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-spinbutton</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    data() {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">value</span>: <span class="hljs-number">50</span>
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+<p>Vertical spin buttons can also be sized using the <a href="#size" class="font-weight-bold"><code translate="no" class="notranslate text-nowrap">size</code> prop</a>. When in vertical mode, the
+spin button is rendered as an inline element.</p>
+<p>The spin button will automatically adjust it's width to fit the displayed value. See the <a href="#width" class="font-weight-bold">Width section</a> below for details on controlling or setting the width.</p>
+<h3 id="width" class="bv-no-focus-ring"><span class="bd-content-title">Width<a class="anchorjs-link" href="#width" aria-labelledby="width"></a></span></h3>
+<p>The control (when not <code translate="no" class="notranslate text-nowrap">vertical</code> or <code translate="no" class="notranslate text-nowrap">inline</code>) will expand to the maximum width of the parent
+container You can control width via utility classes such as <code translate="no" class="notranslate text-nowrap">w-25</code>, <code translate="no" class="notranslate text-nowrap">w-50</code>, <code translate="no" class="notranslate text-nowrap">w-75</code>, or use styles to
+set the width.</p>
+<p>When either <code translate="no" class="notranslate text-nowrap">vertical</code> or <code translate="no" class="notranslate text-nowrap">inline</code> is set, the control will adjust its width based on the displayed
+value. You can use css style to control the overall width of the control (i.e. <code translate="no" class="notranslate text-nowrap">style="width: 10rem;</code>).</p>
+<h3 id="number-formatting-and-locale" class="bv-no-focus-ring"><span class="bd-content-title">Number formatting and locale<a class="anchorjs-link" href="#number-formatting-and-locale" aria-labelledby="number-formatting-and-locale"></a></span></h3>
+<p>By default <code translate="no" class="notranslate text-nowrap">&lt;b-form-spinbutton&gt;</code> will format the displayed number in the users browser default
+locale. You can change the localized formatting by specifying a locale (or array of locales) via the <code translate="no" class="notranslate text-nowrap">locale</code> prop. Number format localization is performed via <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat" target="_blank" rel="noopener"><code translate="no" class="notranslate text-nowrap">Intl.NumberFormat</code></a>.
+The locales available will be dependant on the browser implementation. Localization only controls
+the presentation of the value to the user, and does not affect the <code translate="no" class="notranslate text-nowrap">v-model</code>.</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-form-spinbutton-locale notranslate">
+<div>
+<label for="sb-locales">Locale</label>
+<select id="sb-locales" class="custom-select">
+<option value="en">English</option>
+<option value="de">German</option>
+<option value="fr-CA">French (Canadian)</option>
+<option value="fa">Persian</option>
+<option value="ar-EG">Arabic (Egyptian)</option>
+</select>
+<label for="sb-local" class="mt-2">Spin button with locale</label>
+<div role="group" lang="fr-CA" tabindex="-1" dir="ltr" class="b-form-spinbutton form-control p-0 d-flex align-items-stretch">
+<button tabindex="-1" type="button" aria-controls="sb-locale" aria-label="Decrement" aria-keyshortcuts="ArrowDown" class="btn btn-sm border-0 rounded-0 py-0">
+<div>
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-dash b-icon bi">
+<g transform="translate(10 10) scale(1.25 1.25) translate(-10 -10)">
+<path fill-rule="evenodd" d="M5.5 10a.5.5 0 01.5-.5h8a.5.5 0 010 1H6a.5.5 0 01-.5-.5z" clip-rule="evenodd"></path>
+</g>
+</svg>
+</div>
+</button>
+<!---->
+<output id="sb-locale" role="spinbutton" tabindex="0" aria-live="off" aria-valuemin="0" aria-valuemax="10" aria-valuenow="0" aria-valuetext="0,000" class="flex-grow-1 w-100 align-self-center px-1 border-left border-right">
+<div class="w-100">0,000</div>
+</output>
+<button tabindex="-1" type="button" aria-controls="sb-locale" aria-label="Increment" aria-keyshortcuts="ArrowUp" class="btn btn-sm border-0 rounded-0 py-0">
+<div>
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-plus b-icon bi">
+<g transform="translate(10 10) scale(1.25 1.25) translate(-10 -10)">
+<path fill-rule="evenodd" d="M10 5.5a.5.5 0 01.5.5v4a.5.5 0 01-.5.5H6a.5.5 0 010-1h3.5V6a.5.5 0 01.5-.5z" clip-rule="evenodd"></path>
+<path fill-rule="evenodd" d="M9.5 10a.5.5 0 01.5-.5h4a.5.5 0 010 1h-3.5V14a.5.5 0 01-1 0v-4z" clip-rule="evenodd"></path>
+</g>
+</svg>
+</div>
+</button>
+</div>
+<p>Value: 0</p>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"sb-locales"</span>&gt;</span>Locale<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-select</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"sb-locales"</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">"locale"</span> <span class="hljs-attr">:options</span>=<span class="hljs-string">"locales"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-select</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"sb-local"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mt-2"</span>&gt;</span>Spin button with locale<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-spinbutton</span>
+      <span class="hljs-attr">id</span>=<span class="hljs-string">"sb-locale"</span>
+      <span class="hljs-attr">v-model</span>=<span class="hljs-string">"value"</span>
+      <span class="hljs-attr">:locale</span>=<span class="hljs-string">"locale"</span>
+      <span class="hljs-attr">min</span>=<span class="hljs-string">"0"</span>
+      <span class="hljs-attr">max</span>=<span class="hljs-string">"10"</span>
+      <span class="hljs-attr">step</span>=<span class="hljs-string">"0.125"</span>
+    &gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-spinbutton</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Value: {{ value }}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    data() {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">value</span>: <span class="hljs-number">0</span>,
+        <span class="hljs-attr">locale</span>: <span class="hljs-string">'fr-CA'</span>,
+        <span class="hljs-attr">locales</span>: [
+          { <span class="hljs-attr">value</span>: <span class="hljs-string">'en'</span>, <span class="hljs-attr">text</span>: <span class="hljs-string">'English'</span> },
+          { <span class="hljs-attr">value</span>: <span class="hljs-string">'de'</span>, <span class="hljs-attr">text</span>: <span class="hljs-string">'German'</span> },
+          { <span class="hljs-attr">value</span>: <span class="hljs-string">'fr-CA'</span>, <span class="hljs-attr">text</span>: <span class="hljs-string">'French (Canadian)'</span> },
+          { <span class="hljs-attr">value</span>: <span class="hljs-string">'fa'</span>, <span class="hljs-attr">text</span>: <span class="hljs-string">'Persian'</span> },
+          { <span class="hljs-attr">value</span>: <span class="hljs-string">'ar-EG'</span>, <span class="hljs-attr">text</span>: <span class="hljs-string">'Arabic (Egyptian)'</span> }
+        ]
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+<p>Alternatively, you can provide your own number formatter function to format the value displayed.
+This is useful for displaying text instead of a number, or if you want to implement different
+features of <code translate="no" class="notranslate text-nowrap">Intl.NumberFormat</code>.</p>
+<p>To provide a formatter function, set the prop <code translate="no" class="notranslate text-nowrap">formatter-fn</code> to a method reference. The formatter is
+passed a single argument which is the current value. Note the formatter only affects the value
+displayed to the user and does not affect the <code translate="no" class="notranslate text-nowrap">v-model</code>.</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-form-spinbutton-formatter notranslate">
+<div>
+<label for="sb-days" class="mt-2">Spin button with formatter</label>
+<div role="group" lang="zh-CN" tabindex="-1" dir="ltr" class="b-form-spinbutton form-control p-0 d-flex align-items-stretch">
+<button tabindex="-1" type="button" aria-controls="sb-days" aria-label="Decrement" aria-keyshortcuts="ArrowDown" class="btn btn-sm border-0 rounded-0 py-0">
+<div>
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-dash b-icon bi">
+<g transform="translate(10 10) scale(1.25 1.25) translate(-10 -10)">
+<path fill-rule="evenodd" d="M5.5 10a.5.5 0 01.5-.5h8a.5.5 0 010 1H6a.5.5 0 01-.5-.5z" clip-rule="evenodd"></path>
+</g>
+</svg>
+</div>
+</button>
+<!---->
+<output id="sb-days" role="spinbutton" tabindex="0" aria-live="off" aria-valuemin="0" aria-valuemax="6" aria-valuenow="0" aria-valuetext="Sunday" class="flex-grow-1 w-100 align-self-center px-1 border-left border-right">
+<div class="w-100">Sunday</div>
+</output>
+<button tabindex="-1" type="button" aria-controls="sb-days" aria-label="Increment" aria-keyshortcuts="ArrowUp" class="btn btn-sm border-0 rounded-0 py-0">
+<div>
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-plus b-icon bi">
+<g transform="translate(10 10) scale(1.25 1.25) translate(-10 -10)">
+<path fill-rule="evenodd" d="M10 5.5a.5.5 0 01.5.5v4a.5.5 0 01-.5.5H6a.5.5 0 010-1h3.5V6a.5.5 0 01.5-.5z" clip-rule="evenodd"></path>
+<path fill-rule="evenodd" d="M9.5 10a.5.5 0 01.5-.5h4a.5.5 0 010 1h-3.5V14a.5.5 0 01-1 0v-4z" clip-rule="evenodd"></path>
+</g>
+</svg>
+</div>
+</button>
+</div>
+<p>Value: 0</p>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"sb-days"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mt-2"</span>&gt;</span>Spin button with formatter<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-spinbutton</span>
+      <span class="hljs-attr">id</span>=<span class="hljs-string">"sb-days"</span>
+      <span class="hljs-attr">v-model</span>=<span class="hljs-string">"value"</span>
+      <span class="hljs-attr">:formatter-fn</span>=<span class="hljs-string">"dayFormatter"</span>
+      <span class="hljs-attr">min</span>=<span class="hljs-string">"0"</span>
+      <span class="hljs-attr">max</span>=<span class="hljs-string">"6"</span>
+      <span class="hljs-attr">wrap</span>
+    &gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-spinbutton</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Value: {{ value }}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    data() {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">value</span>: <span class="hljs-number">0</span>,
+        <span class="hljs-attr">days</span>: [<span class="hljs-string">'Sunday'</span>, <span class="hljs-string">'Monday'</span>, <span class="hljs-string">'Tuesday'</span>, <span class="hljs-string">'Wednesday'</span>, <span class="hljs-string">'Thursday'</span>, <span class="hljs-string">'Friday'</span>, <span class="hljs-string">'Saturday'</span>]
+      }
+    },
+    <span class="hljs-attr">methods</span>: {
+      dayFormatter(value) {
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.days[value]
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+<h2 id="disabled-and-readonly-states" class="bv-no-focus-ring"><span class="bd-content-title">Disabled and readonly states<a class="anchorjs-link" href="#disabled-and-readonly-states" aria-labelledby="disabled-and-readonly-states"></a></span></h2>
+<p>Setting the prop <code translate="no" class="notranslate text-nowrap">disabled</code> places the component in a disabled, non-interactive state. The <code translate="no" class="notranslate text-nowrap">readonly</code> prop places the component in a readonly state (focusable, but the value cannot be changed
+by the user).</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-form-spinbutton-disabled-readonly notranslate">
+<div class="row">
+<div class="mb-2 col-md-6">
+<label for="sb-disabled">Disabled spin button</label>
+<div role="group" lang="zh-CN" dir="ltr" class="b-form-spinbutton form-control p-0 disabled d-flex align-items-stretch">
+<button tabindex="-1" type="button" disabled="disabled" aria-disabled="true" aria-controls="sb-disabled" aria-label="Decrement" aria-keyshortcuts="ArrowDown" class="btn btn-sm border-0 rounded-0 py-0">
+<div>
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-dash b-icon bi">
+<g transform="translate(10 10) scale(1.25 1.25) translate(-10 -10)">
+<path fill-rule="evenodd" d="M5.5 10a.5.5 0 01.5-.5h8a.5.5 0 010 1H6a.5.5 0 01-.5-.5z" clip-rule="evenodd"></path>
+</g>
+</svg>
+</div>
+</button>
+<!---->
+<output id="sb-disabled" role="spinbutton" aria-live="off" aria-valuemin="1" aria-valuemax="100" aria-valuenow="50" aria-valuetext="50" class="flex-grow-1 w-100 align-self-center px-1 border-left border-right">
+<div class="w-100">50</div>
+</output>
+<button tabindex="-1" type="button" disabled="disabled" aria-disabled="true" aria-controls="sb-disabled" aria-label="Increment" aria-keyshortcuts="ArrowUp" class="btn btn-sm border-0 rounded-0 py-0">
+<div>
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-plus b-icon bi">
+<g transform="translate(10 10) scale(1.25 1.25) translate(-10 -10)">
+<path fill-rule="evenodd" d="M10 5.5a.5.5 0 01.5.5v4a.5.5 0 01-.5.5H6a.5.5 0 010-1h3.5V6a.5.5 0 01.5-.5z" clip-rule="evenodd"></path>
+<path fill-rule="evenodd" d="M9.5 10a.5.5 0 01.5-.5h4a.5.5 0 010 1h-3.5V14a.5.5 0 01-1 0v-4z" clip-rule="evenodd"></path>
+</g>
+</svg>
+</div>
+</button>
+</div>
+</div>
+<div class="mb-2 col-md-6">
+<label for="sb-readonly">Readonly spin button</label>
+<div role="group" lang="zh-CN" tabindex="-1" dir="ltr" class="b-form-spinbutton form-control p-0 readonly d-flex align-items-stretch">
+<button tabindex="-1" type="button" disabled="disabled" aria-disabled="true" aria-controls="sb-readonly" aria-label="Decrement" aria-keyshortcuts="ArrowDown" class="btn btn-sm border-0 rounded-0 py-0">
+<div>
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-dash b-icon bi">
+<g transform="translate(10 10) scale(1.25 1.25) translate(-10 -10)">
+<path fill-rule="evenodd" d="M5.5 10a.5.5 0 01.5-.5h8a.5.5 0 010 1H6a.5.5 0 01-.5-.5z" clip-rule="evenodd"></path>
+</g>
+</svg>
+</div>
+</button>
+<!---->
+<output id="sb-readonly" role="spinbutton" tabindex="0" aria-live="off" aria-valuemin="1" aria-valuemax="100" aria-valuenow="50" aria-valuetext="50" class="flex-grow-1 w-100 align-self-center px-1 border-left border-right">
+<div class="w-100">50</div>
+</output>
+<button tabindex="-1" type="button" disabled="disabled" aria-disabled="true" aria-controls="sb-readonly" aria-label="Increment" aria-keyshortcuts="ArrowUp" class="btn btn-sm border-0 rounded-0 py-0">
+<div>
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-plus b-icon bi">
+<g transform="translate(10 10) scale(1.25 1.25) translate(-10 -10)">
+<path fill-rule="evenodd" d="M10 5.5a.5.5 0 01.5.5v4a.5.5 0 01-.5.5H6a.5.5 0 010-1h3.5V6a.5.5 0 01.5-.5z" clip-rule="evenodd"></path>
+<path fill-rule="evenodd" d="M9.5 10a.5.5 0 01.5-.5h4a.5.5 0 010 1h-3.5V14a.5.5 0 01-1 0v-4z" clip-rule="evenodd"></path>
+</g>
+</svg>
+</div>
+</button>
+</div>
+</div>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">md</span>=<span class="hljs-string">"6"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-2"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"sb-disabled"</span>&gt;</span>Disabled spin button<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-form-spinbutton</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"sb-disabled"</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">"value"</span> <span class="hljs-attr">disabled</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-spinbutton</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">md</span>=<span class="hljs-string">"6"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-2"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"sb-readonly"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">""</span>&gt;</span>Readonly spin button<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-form-spinbutton</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"sb-readonly"</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">"value"</span> <span class="hljs-attr">readonly</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-spinbutton</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    data() {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">value</span>: <span class="hljs-number">50</span>
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+<p>Disabled spinbuttons will not be submitted during native browser form submission, while a readonly
+spinbutton will be submitted (as long as a name has been set via the <code translate="no" class="notranslate text-nowrap">name</code> prop).</p>
+<h2 id="validation-states" class="bv-no-focus-ring"><span class="bd-content-title">Validation states<a class="anchorjs-link" href="#validation-states" aria-labelledby="validation-states"></a></span></h2>
+<p>When you default to a <code translate="no" class="notranslate text-nowrap">null</code> value, and the user has not selected a value, you can use the <code translate="no" class="notranslate text-nowrap">state</code> prop to apply one of the contextual validation styles to the component.</p>
+<ul>
+<li><code translate="no" class="notranslate text-nowrap">true</code> applies the valid styling to the component</li>
+<li><code translate="no" class="notranslate text-nowrap">false</code> applies the invalid styling to the component</li>
+<li><code translate="no" class="notranslate text-nowrap">null</code> applies no contextual styling (the default)</li>
+</ul>
+<h3 id="required-prop" class="bv-no-focus-ring"><span class="bd-content-title">Required prop<a class="anchorjs-link" href="#required-prop" aria-labelledby="required-prop"></a></span></h3>
+<p>Note that the required prop only generates the <code translate="no" class="notranslate text-nowrap">aria-required="true"</code> attribute on the component,
+and does not perform any validation on form submit. You must validate the <code translate="no" class="notranslate text-nowrap">v-model</code> in your
+application logic.</p>
+<p>Note that if the prop <code translate="no" class="notranslate text-nowrap">required</code> is set, and the <code translate="no" class="notranslate text-nowrap">v-model</code> is <code translate="no" class="notranslate text-nowrap">null</code>, the attribute <code translate="no" class="notranslate text-nowrap">aria-invalid="true"</code> will be rendered on the component.</p>
+<h2 id="events" class="bv-no-focus-ring"><span class="bd-content-title">Events<a class="anchorjs-link" href="#events" aria-labelledby="events"></a></span></h2>
+<p>The <code translate="no" class="notranslate text-nowrap">input</code> event is used to update the <code translate="no" class="notranslate text-nowrap">v-model</code> and is emitted any time the value changes.</p>
+<p>The <code translate="no" class="notranslate text-nowrap">change</code> event is emitted once the user releases the mouse button (when pressing the increment
+or decrement buttons) or when the user releases the <kbd class="notranslate" translate="no">ArrowDown</kbd> or <kbd class="notranslate" translate="no">ArrowUp</kbd> key.
+This can be handy when you need to debounce the input.</p>
+<p>The following example illustrates the difference between the <code translate="no" class="notranslate text-nowrap">input</code> and <code translate="no" class="notranslate text-nowrap">change</code> events. Click and
+hold the increment or decrement button (or use the up/down arrow keys).</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-form-spinbutton-events notranslate">
+<div>
+<label for="sb-input">Spin button - input and change events</label>
+<div role="group" lang="zh-CN" tabindex="-1" dir="ltr" class="b-form-spinbutton form-control p-0 d-flex align-items-stretch">
+<button tabindex="-1" type="button" aria-controls="sb-input" aria-label="Decrement" aria-keyshortcuts="ArrowDown" class="btn btn-sm border-0 rounded-0 py-0">
+<div>
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-dash b-icon bi">
+<g transform="translate(10 10) scale(1.25 1.25) translate(-10 -10)">
+<path fill-rule="evenodd" d="M5.5 10a.5.5 0 01.5-.5h8a.5.5 0 010 1H6a.5.5 0 01-.5-.5z" clip-rule="evenodd"></path>
+</g>
+</svg>
+</div>
+</button>
+<!---->
+<output id="sb-input" role="spinbutton" tabindex="0" aria-live="off" aria-valuemin="1" aria-valuemax="100" aria-valuenow="0" aria-valuetext="0" class="flex-grow-1 w-100 align-self-center px-1 border-left border-right">
+<div class="w-100">0</div>
+</output>
+<button tabindex="-1" type="button" aria-controls="sb-input" aria-label="Increment" aria-keyshortcuts="ArrowUp" class="btn btn-sm border-0 rounded-0 py-0">
+<div>
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-plus b-icon bi">
+<g transform="translate(10 10) scale(1.25 1.25) translate(-10 -10)">
+<path fill-rule="evenodd" d="M10 5.5a.5.5 0 01.5.5v4a.5.5 0 01-.5.5H6a.5.5 0 010-1h3.5V6a.5.5 0 01.5-.5z" clip-rule="evenodd"></path>
+<path fill-rule="evenodd" d="M9.5 10a.5.5 0 01.5-.5h4a.5.5 0 010 1h-3.5V14a.5.5 0 01-1 0v-4z" clip-rule="evenodd"></path>
+</g>
+</svg>
+</div>
+</button>
+</div>
+<p>Input event: 0</p>
+<p>Change event: </p>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"sb-input"</span>&gt;</span>Spin button - input and change events<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-spinbutton</span>
+      <span class="hljs-attr">id</span>=<span class="hljs-string">"sb-input"</span>
+      <span class="hljs-attr">v-model</span>=<span class="hljs-string">"value1"</span>
+      @<span class="hljs-attr">change</span>=<span class="hljs-string">"value2 = $event"</span>
+      <span class="hljs-attr">wrap</span>
+    &gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-spinbutton</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Input event: {{ value1 }}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Change event: {{ value2 }}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    data() {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">value1</span>: <span class="hljs-number">0</span>,
+        <span class="hljs-attr">value2</span>: <span class="hljs-literal">null</span>
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+<h2 id="accessibility" class="bv-no-focus-ring"><span class="bd-content-title">Accessibility<a class="anchorjs-link" href="#accessibility" aria-labelledby="accessibility"></a></span></h2>
+<p>The following keyboard controls are available when the spin button is focused:</p>
+<ul>
+<li><kbd class="notranslate" translate="no">Home</kbd> Sets the value to the <code translate="no" class="notranslate text-nowrap">min</code> value</li>
+<li><kbd class="notranslate" translate="no">End</kbd> Sets the value to the <code translate="no" class="notranslate text-nowrap">max</code> value</li>
+<li><kbd class="notranslate" translate="no">ArrowUp</kbd> Increases the value by the step amount</li>
+<li><kbd class="notranslate" translate="no">ArrowDown</kbd> Decreases the value by the step amount</li>
+<li><kbd class="notranslate" translate="no">PageUp</kbd> Increases the value by the step amount times the <code translate="no" class="notranslate text-nowrap">repeat-step-multiplier</code> amount</li>
+<li><kbd class="notranslate" translate="no">PageDown</kbd> Decreases the value by the step amount times the <code translate="no" class="notranslate text-nowrap">repeat-step-multiplier</code> amount</li>
+</ul>
+<p>Pressing an holding the <kbd class="notranslate" translate="no">ArrowUp</kbd>, <kbd class="notranslate" translate="no">ArrowDown</kbd>, <kbd class="notranslate" translate="no">PageUp</kbd>, or <kbd class="notranslate" translate="no">PageDown</kbd> keys will auto-repeat the increment or decrement (after an initial delay).
+Holding down the <kbd class="notranslate" translate="no">ArrowUp</kbd> or <kbd class="notranslate" translate="no">ArrowDown</kbd> keys for an extended period will
+multiply the increment or decrement amount by the <code translate="no" class="notranslate text-nowrap">repeat-step-multiplier</code> amount.</p>
+<p>Note the the <code translate="no" class="notranslate text-nowrap">repeat-delay</code>, <code translate="no" class="notranslate text-nowrap">repeat-threshold</code> and <code translate="no" class="notranslate text-nowrap">repeat-interval</code> only applies to the <kbd class="notranslate" translate="no">ArrowUp</kbd> or <kbd class="notranslate" translate="no">ArrowDown</kbd> keys.</p>
+<h2 id="implementation-notes" class="bv-no-focus-ring"><span class="bd-content-title">Implementation notes<a class="anchorjs-link" href="#implementation-notes" aria-labelledby="implementation-notes"></a></span></h2>
+<p><code translate="no" class="notranslate text-nowrap">&lt;b-form-spinbutton&gt;</code> uses a mixture of Bootstrap v4 utility classes (margin, padding, and flex),
+form-control and button classes, along with additional custom BootstrapVue SCSS/CSS.</p>
+<h2 id="see-also" class="bv-no-focus-ring"><span class="bd-content-title">See also<a class="anchorjs-link" href="#see-also" aria-labelledby="see-also"></a></span></h2>
+<ul>
+<li><a href="../../../bootstrap-vue/docs/components/form-input#range-type-input" class="font-weight-bold">Range type input</a></li>
+</ul>
+</section>
+<section class="bd-content bd-component-reference">
+<h2 id="component-reference" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title">Component reference<a href="../../../bootstrap-vue/docs/components/form-spinbutton#component-reference" class="anchorjs-link" aria-labelledby="component-reference" target="_self"></a></span></h2>
+<section data-v-866a22e8="" class="bd-content">
+<header data-v-866a22e8="" class="row align-items-center">
+<div data-v-866a22e8="" class="col-sm-9">
+<h3 data-v-866a22e8="" id="comp-ref-b-form-spinbutton" tabindex="-1" class="bv-no-focus-ring"><span data-v-866a22e8="" class="bd-content-title"><code data-v-866a22e8="" translate="translate" class="notranslate bigger">&lt;b-form-spinbutton&gt;</code><a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/form-spinbutton#comp-ref-b-form-spinbutton" class="anchorjs-link" aria-labelledby="comp-ref-b-form-spinbutton" target="_self"></a></span></h3>
+<span data-v-866a22e8="" class="badge badge-success">v2.5.0+</span> <!----></div>
+<div data-v-866a22e8="" class="text-sm-right col-sm-3"><a data-v-866a22e8="" rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev/src/components/form-spinbutton/form-spinbutton.js" class="btn btn-outline-secondary btn-sm"> View source </a></div>
+</header>
+<ul data-v-866a22e8="" class="component-ref-mini-toc my-3">
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-form-spinbutton-aliases"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-form-spinbutton&gt;</code> Component aliases </a></li>
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-form-spinbutton-props"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-form-spinbutton&gt;</code> Properties </a></li>
+<!----> <!---->
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-form-spinbutton-events"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-form-spinbutton&gt;</code> Events </a></li>
+<!---->
+</ul>
+<article data-v-866a22e8="" class="bd-content">
+<h4 data-v-866a22e8="" id="comp-ref-b-form-spinbutton-aliases" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> Component aliases <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/form-spinbutton#comp-ref-b-form-spinbutton-aliases" class="anchorjs-link" aria-labelledby="comp-ref-b-form-spinbutton-aliases" target="_self"></a></span></h4>
+<p data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-form-spinbutton&gt;</code> can also be used via the following aliases:</p>
+<ul data-v-866a22e8="">
+<li data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-spinbutton&gt;</code></li>
+</ul>
+<div data-v-866a22e8="" class="alert alert-info">
+<p data-v-866a22e8="" class="mb-0 small"> Note: component aliases are only available when importing all of BootstrapVue or using
+        the component group plugin. </p>
+</div>
+</article>
+<article data-v-866a22e8="" class="bd-content">
+<h4 data-v-866a22e8="" id="comp-ref-b-form-spinbutton-props" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> Properties <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/form-spinbutton#comp-ref-b-form-spinbutton-props" class="anchorjs-link" aria-labelledby="comp-ref-b-form-spinbutton-props" target="_self"></a></span></h4>
+<div data-v-866a22e8="" class="table-responsive-sm">
+<table role="table" aria-busy="false" aria-colcount="4" class="table b-table bv-docs-table table-striped" id="__BVID__648">
+<!----><!---->
+<thead role="rowgroup" class="">
+<!---->
+<tr role="row" class="">
+<th role="columnheader" scope="col" tabindex="0" aria-colindex="1" aria-sort="none" class="b-table-sort-icon-left">Property<span class="sr-only"> (Click to sort Ascending)</span></th>
+<th role="columnheader" scope="col" tabindex="0" aria-colindex="2" class="">Type</th>
+<th role="columnheader" scope="col" tabindex="0" aria-colindex="3" class="">Default</th>
+<th role="columnheader" scope="col" tabindex="0" aria-colindex="4" class="">Description</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+<!---->
+<tr role="row" data-pk="id" class="" id="__BVID__648__row_id">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">id</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">Used to set the 'id' attribute on the rendered content, and used as the base to generate any additional element IDs as needed</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="value" class="" id="__BVID__648__row_value">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">value</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">Number</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">The value of the spinbutton. Bound to the v-model</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="min" class="" id="__BVID__648__row_min">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">min</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">Number or String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">1</code></td>
+<td aria-colindex="4" role="cell" class="">The minimum value that can be selected. Negative numbers are allowed</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="max" class="" id="__BVID__648__row_max">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">max</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">Number or String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">100</code></td>
+<td aria-colindex="4" role="cell" class="">The maximum value that can be selected. Must be greater than the `min` prop.. Negative numbers are allowed</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="step" class="" id="__BVID__648__row_step">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">step</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">Number or String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">1</code></td>
+<td aria-colindex="4" role="cell" class="">A positive number that specifies the granularity that the value must adhere to</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="wrap" class="" id="__BVID__648__row_wrap">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">wrap</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">When set, allows the value to wrap around when reading the minimum or maximum value</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="formatter-fn" class="" id="__BVID__648__row_formatter-fn">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">formatter-fn</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">Function</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">A reference to a method to format the displayed value. It ss passed a single argument which is the current value</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="size" class="" id="__BVID__648__row_size">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">size</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">Set the size of the component's appearance. 'sm', 'md' (default), or 'lg'</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="placeholder" class="" id="__BVID__648__row_placeholder">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">placeholder</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">Value to show when the v-model is `null`</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="disabled" class="" id="__BVID__648__row_disabled">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">disabled</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">Places the component in a disabled state</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="readonly" class="" id="__BVID__648__row_readonly">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">readonly</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">Places the component in a readonly state</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="required" class="" id="__BVID__648__row_required">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">required</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">Adds the `aria-required="true"` attribute on the component. Note this will not prevent for submission when the value is `null`</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="name" class="" id="__BVID__648__row_name">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">name</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">Sets the value of the 'name' attribute on the form control</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="form" class="" id="__BVID__648__row_form">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">form</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">ID of the form that the form control belongs to. Sets the 'form' attribute on the control</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="state" class="" id="__BVID__648__row_state">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">state</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">Controls the validation state appearance of the component. 'true' for valid, 'false' for invalid', or 'null' for no validation state</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="inline" class="" id="__BVID__648__row_inline">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">inline</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">When set, renders the component as an inline element</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="vertical" class="" id="__BVID__648__row_vertical">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">vertical</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">When set, renders the component with a vertical layout</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="aria-label" class="" id="__BVID__648__row_aria-label">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">aria-label</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">Value to place in the `aria-label` attribute of the spinbutton</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="aria-controls" class="" id="__BVID__648__row_aria-controls">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">aria-controls</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">If this component controls another component or element, set this to the ID of the controlled component or element</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="label-decrement" class="" id="__BVID__648__row_label-decrement">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">label-decrement</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'Decrement'</code></td>
+<td aria-colindex="4" role="cell" class="">Text to be used for the `aria-label` attribute on the decrement button</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="label-increment" class="" id="__BVID__648__row_label-increment">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">label-increment</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'Increment'</code></td>
+<td aria-colindex="4" role="cell" class="">Text to be used for the `aria-label` attribute on the increment button</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="locale" class="" id="__BVID__648__row_locale">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">locale</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">String or Array</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">Specify the local to use for formatting the number. Defaults to the browser locale. Only applicable when using the internal formatter</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="repeat-delay" class="" id="__BVID__648__row_repeat-delay">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">repeat-delay</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">Number or String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">500</code></td>
+<td aria-colindex="4" role="cell" class="">Delay in milliseconds after before auto repeat increment or decrement happens. Must be a positive integer. Requires the user to click/keydown and hold</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="repeat-interval" class="" id="__BVID__648__row_repeat-interval">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">repeat-interval</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">Number or String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">100</code></td>
+<td aria-colindex="4" role="cell" class="">Interval in milliseconds between increment or decrement repeats. Must be a positive integer</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="repeat-threshold" class="" id="__BVID__648__row_repeat-threshold">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">repeat-threshold</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">Number or String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">10</code></td>
+<td aria-colindex="4" role="cell" class="">Number of repeats to occur before increasing the step size by `repeat-step-multiplier`. Must be a positive integer</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="repeat-step-multiplier" class="" id="__BVID__648__row_repeat-step-multiplier">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">repeat-step-multiplier</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">Number or String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">4</code></td>
+<td aria-colindex="4" role="cell" class="">Number of steps to jump by once the `repeat-threshold` has been reached. Must be a positive integer. This value is also used for the page up and down keys</td>
+</tr>
+<!----><!----><!----><!---->
+</tbody>
+<!---->
+</table>
+</div>
+<!----> <!----></article>
+<!----> <!---->
+<article data-v-866a22e8="" class="bd-content">
+<h4 data-v-866a22e8="" id="comp-ref-b-form-spinbutton-events" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> Events <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/form-spinbutton#comp-ref-b-form-spinbutton-events" class="anchorjs-link" aria-labelledby="comp-ref-b-form-spinbutton-events" target="_self"></a></span></h4>
+<div data-v-866a22e8="" class="table-responsive-sm">
+<table role="table" aria-busy="false" aria-colcount="3" class="table b-table bv-docs-table table-striped" id="__BVID__684">
+<!----><!---->
+<thead role="rowgroup" class="">
+<!---->
+<tr role="row" class="">
+<th role="columnheader" scope="col" aria-colindex="1" class="">Event</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">Arguments</th>
+<th role="columnheader" scope="col" aria-colindex="3" class="">Description</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+<!---->
+<tr role="row" data-pk="input" class="" id="__BVID__684__row_input">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="notranslate">input</code> <!----></td>
+<td aria-colindex="2" role="cell" class=""><ol data-v-866a22e8="" class="list-unstyled mb-0">
+<li data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">value</code> - <span data-v-866a22e8="">Current value of the spinbutton</span></li>
+</ol></td>
+<td aria-colindex="3" role="cell" class="">Emitted to update the v-model on each value change</td>
+</tr>
+<tr role="row" data-pk="change" class="" id="__BVID__684__row_change">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="notranslate">change</code> <!----></td>
+<td aria-colindex="2" role="cell" class=""><ol data-v-866a22e8="" class="list-unstyled mb-0">
+<li data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">value</code> - <span data-v-866a22e8="">Current value of the spinbutton</span></li>
+</ol></td>
+<td aria-colindex="3" role="cell" class="">Emitted when the user releases the mouse button or key</td>
+</tr>
+<!----><!---->
+</tbody>
+<!---->
+</table>
+</div>
+</article>
+<!----></section>
+
+<h3 id="importing-individual-components" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title"> Importing individual components <a href="../../../bootstrap-vue/docs/components/form-spinbutton#importing-individual-components" class="anchorjs-link" aria-labelledby="importing-individual-components" target="_self"></a></span></h3>
+<p> You can import individual components into your project via the following named
+        exports: </p>
+<div class="table-responsive-sm">
+<table role="table" aria-busy="false" aria-colcount="3" class="table b-table bv-docs-table table-striped" id="__BVID__696">
+<!----><!---->
+<thead role="rowgroup" class="thead-default">
+<!---->
+<tr role="row" class="">
+<th role="columnheader" scope="col" aria-colindex="1" class="">Component</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">Named Export</th>
+<th role="columnheader" scope="col" aria-colindex="3" class="">Import Path</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+<!---->
+<tr role="row" class="">
+<td aria-colindex="1" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">&lt;b-form-spinbutton&gt;</code></td>
+<td aria-colindex="2" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">BFormSpinbutton</code></td>
+<td aria-colindex="3" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">bootstrap-vue</code></td>
+</tr>
+<!----><!---->
+</tbody>
+<!---->
+</table>
+</div>
+<p><strong>Example:</strong></p>
+<pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { BFormSpinbutton } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
+Vue.component(<span class="hljs-string">'b-form-spinbutton'</span>, BFormSpinbutton)</pre>
+</article>
+<!---->
+<article class="bd-content">
+<h3 id="importing-as-a-plugin" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title"> Importing as a Vue.js plugin <a href="../../../bootstrap-vue/docs/components/form-spinbutton#importing-as-a-plugin" class="anchorjs-link" aria-labelledby="importing-as-a-plugin" target="_self"></a></span></h3>
+<p> This plugin includes all of the above listed individual
+      components<!---->.
+      Plugins also include any component aliases. </p>
+<div class="table-responsive-sm">
+<table fileds="namedExport,importPath" role="table" aria-busy="false" aria-colcount="2" class="table b-table bv-docs-table table-striped b-table-caption-top" id="__BVID__706">
+<!----><!---->
+<thead role="rowgroup" class="thead-default">
+<!---->
+<tr role="row" class="">
+<th role="columnheader" scope="col" aria-colindex="1" class="">Named Export</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">Import Path</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+<!---->
+<tr role="row" class="">
+<td aria-colindex="1" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">FormSpinbuttonPlugin</code></td>
+<td aria-colindex="2" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">bootstrap-vue</code></td>
+</tr>
+<!----><!---->
+</tbody>
+<!---->
+</table>
+</div>
+<!---->
+<p><strong>Example:</strong></p>
+<pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { FormSpinbuttonPlugin } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
+Vue.use(FormSpinbuttonPlugin)</pre>
+
+
+
+
+
+
+
+
+
+
+
+
+</main>
+</div>
+</div>
+
+
+<script src="../../../js/jquery-3.2.1.slim.min.js"></script> 
+<script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery-slim.min.js"><\/script>')</script> 
+<script src="../../../v4/dist/js/popper.min.js"></script> 
+<script src="../../../v4/dist/js/bootstrap.min.js"></script> 
+<script src="../../../v4/assets/js/docs.min.js"></script> 
+<script src="../../../v4/assets/js/ie-emulation-modes-warning.js"></script> 
+<script src="../../../v4/assets/js/docsearch.min.js"></script> 
+<script>
+  docsearch({
+    appId: 'PRR89ISST8',
+    apiKey: '95044d57d4d7bb744f322d1f18ed607f',
+    indexName: 'z01-bootstrapV4',
+    inputSelector: '#search-input',
+    handleSelected: function (input, event, suggestion) {
+      var url = suggestion.url;
+      url = suggestion.isLvl1 ? url.split('#')[0]: url;
+      // If it's a title we remove the anchor so it does not jump.
+      window.location.href = url;
+    },
+    transformData: function (hits) {
+      return hits.map(function (hit) {
+        hit.url = hit.url.replace('https://v4-alpha.getbootstrap.com', '/docs/4.0');
+        return hit;
+      });
+    },
+    debug: false // Set debug to true if you want to inspect the dropdown
+  });
+</script> 
+<script>
+  Holder.addTheme('gray', {
+    bg: '#777',
+    fg: 'rgba(255,255,255,.75)',
+    font: 'Helvetica',
+    fontweight: 'normal'
+  });
+</script>
+</body>
+</html>

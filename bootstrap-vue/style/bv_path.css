@@ -1,0 +1,67 @@
+@charset "UTF-8";
+/* 全局样式定义 Powered by Zoomla!逐浪CMS z01.com*/
+.bd-navbar { box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.25), inset 0 -1px 5px rgba(0, 0, 0, 0.25); }
+
+.bd-footer { margin-top: inherit; background-color: #eee; }
+
+.contributor[data-v-4c1e0c56] { width: 55px; }
+
+.hljs { background-color: #f9f9f9; box-shadow: 0 1px 1px rgba(0, 0, 0, 0.125); overflow-x: auto; position: relative; }
+
+.bd-toc { position: -webkit-sticky; position: sticky; top: 4rem; height: calc(100vh - 4rem); overflow-y: auto; border-left: 1px solid rgba(0, 0, 0, 0.1); }
+
+.section-nav { border-left: none; }
+
+.contributor .contributor-thumbnail[data-v-4c1e0c56] { width: 100%; height: 55px; }
+
+.backers .contributor[data-v-4c1e0c56] { width: 80px; }
+
+.backers .contributor .contributor-thumbnail[data-v-4c1e0c56] { height: 80px; }
+
+.bronze-sponsors .contributor[data-v-4c1e0c56] { width: 90px; }
+
+.bronze-sponsors .contributor .contributor-thumbnail[data-v-4c1e0c56] { height: 90px; }
+
+.silver-sponsors .contributor[data-v-4c1e0c56] { width: 100px; }
+
+.silver-sponsors .contributor .contributor-thumbnail[data-v-4c1e0c56] { height: 100px; }
+
+.gold-sponsors .contributor[data-v-4c1e0c56] { width: 120px; }
+
+.gold-sponsors .contributor .contributor-thumbnail[data-v-4c1e0c56] { height: 120px; }
+
+.platinum-sponsors .contributor[data-v-4c1e0c56] { width: 140px; }
+
+.platinum-sponsors .contributor .contributor-thumbnail[data-v-4c1e0c56] { height: 140px; }
+
+.bd-masthead[data-v-555a030c] { color: #f8f9fa; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); background-color: #343a40; }
+
+.bd-masthead .text-muted[data-v-555a030c] { color: #a6adb5 !important; }
+
+.bd-masthead a[href][data-v-555a030c] { color: #007bff; font-weight: 700; }
+
+.bd-masthead a[href][data-v-555a030c]:active, .bd-masthead a[href][data-v-555a030c]:visited { color: #007bff; }
+
+.bd-masthead a[href][data-v-555a030c]:hover { color: #3f9bff; text-decoration: underline; }
+
+.bd-masthead .media svg[data-v-555a030c] { -webkit-filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.94118)); filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.94118)); }
+
+.text-vue-green[data-v-555a030c] { color: #42b883; }
+
+.bv-section[data-v-555a030c] { padding-bottom: 2rem; padding-top: 14rem; background-size: 100% 4rem; background-position: top; background-repeat: no-repeat; margin-top: -1px; }
+
+.bv-section.bv-white[data-v-555a030c] { background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27826 3336' preserveAspectRatio='none'%3E%3Cpath fill='%23eee' d='M13913 3336L0 0h27826z'/%3E%3C/svg%3E"); background-color: #fff; }
+
+.bv-section.bv-gray[data-v-555a030c] { background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27826 3336' preserveAspectRatio='none'%3E%3Cpath fill='%23fff' d='M13913 3336L0 0h27826z'/%3E%3C/svg%3E"); background-color: #eee; }
+
+.bv-section.bv-gray-color[data-v-555a030c] { background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27826 3450' preserveAspectRatio='none'%3E%3Cdefs%3E%3Cfilter id='a' filterUnits='objectBoundingBox' x='-50%25' y='-50%25' width='200%25' height='200%25'%3E%3CfeOffset in='SourceGraphic' result='b' dy='20'/%3E%3CfeGaussianBlur in='b' stdDeviation='25'/%3E%3C/filter%3E%3C/defs%3E%3Cpath filter='url(%23a)' d='M13943 3336L5092 1668 0 708V0h27826v719l-5032 949z'/%3E%3Cpath fill='%2342B883' d='M13943 3336L5092 1668 0 708V0h27826v719l-5032 949z'/%3E%3Cpath filter='url(%23a)' d='M0 0h27826v371l-5067 955-8851 1668-8850-1668L0 373z'/%3E%3Cpath fill='%237952B3' d='M0 0h27826v371l-5067 955-8851 1668-8850-1668L0 373z'/%3E%3Cpath filter='url(%23a)' d='M0 0h27826l-5065 954-8851 1668L5059 954 0 1z'/%3E%3Cpath fill='%23343a40' d='M0 0h27826l-5065 954-8851 1668L5059 954 0 1z'/%3E%3C/svg%3E"); background-size: 175% 9rem; background-position-y: -2.75rem; background-color: #eee; padding-top: 9rem; }
+
+.bv-section.bv-p-reset[data-v-555a030c] { padding-top: 8rem; padding-bottom: 0; }
+
+.bv-section.bv-gray[data-v-555a030c], .bv-section.bv-white[data-v-555a030c] { background-size: 100% 8rem; }
+
+/*769-1930分辨率之间传统低分屏幕优化*/
+/*小于768px手机优化*/
+/*key:UG93ZXJlZCBieSBab29tbGEh6YCQ5rWqQ01TIHd3d3cuejAxLmNvbQ== */
+
+/*# sourceMappingURL=bv_path.css.map */

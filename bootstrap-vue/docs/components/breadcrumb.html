@@ -1,0 +1,694 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Jekyll v3.6.0">
+<title>面包屑导航 &middot; BootstrapVue</title>
+<!-- Bootstrap 核心CSS -->
+<link href="../../../v4/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- 本文档额外专用css -->
+<link href="../../../v4/assets/css/docsearch.min.css" rel="stylesheet">
+<link href="../../../v4/assets/css/docs.min.css" rel="stylesheet">
+<link href="../../style/bv_path.css" rel="stylesheet">
+
+<!-- Favicons图标定义 -->
+<link data-n-head="ssr" rel="manifest" href="../../manifest.json">
+<link data-n-head="ssr" rel="shortcut icon" href="../../style/icons/icon_64.png">
+<link data-n-head="ssr" rel="apple-touch-icon" href="../../style/icons/icon_512.png" sizes="512x512">
+
+<!-- Meta关键字定义 -->
+<meta name="description" content="The most popular HTML, CSS, and JS library in the world.">
+<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+
+</head>
+<body>
+<a id="skippy" class="sr-only sr-only-focusable" href="#content">
+<div class="container"> <span class="skiplink-text">跳到主体内容</span> </div>
+</a>
+<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar"> <a class="navbar-brand mr-0 mr-md-2" href="../" aria-label="Bootstrap">
+  <svg class="d-block" width="36" height="36" viewbox="0 0 612 612" xmlns="http://www.w3.org/2000/svg" focusable="false">
+    <title>Bootstrap</title>
+    <path fill="currentColor" d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z"/>
+    <path fill="currentColor" d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z"/>
+  </svg>
+  </a>
+  <div class="navbar-nav-scroll">
+    <ul class="navbar-nav bd-navbar-nav flex-row">
+      <li class="nav-item"><a class="nav-link " href="../">首页</a></li>
+      <li class="nav-item"><a class="nav-link active" href="../../v4/docs/">中文手册</a></li>
+      <li class="nav-item"><a class="nav-link " href="../../v4/examples/">实例</a></li>
+      <li class="nav-item dropdown">
+<a class="nav-item nav-link dropdown-toggle mr-md-2" id="bd-versions" aria-expanded="false" aria-haspopup="true" href="#" data-toggle="dropdown"> 主题模板 </a>
+<div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
+<a class="dropdown-item" href="../../V4/themes/" target="_blank">主题门户</a>
+<a class="dropdown-item" href="../../V4/themes/live.html">精选模板</a>
+</div>
+</li>
+      <li class="nav-item"><a class="nav-link" href="//ico.z01.com" target="_blank" rel="noopener">zico图标系统</a></li>
+      <li class="nav-item"><a class="nav-link" href="https://expo.getbootstrap.com" target="_blank" rel="noopener">优站精选</a></li>
+      <li class="nav-item"><a class="nav-link" href="https://blog.getbootstrap.com" target="_blank" rel="noopener">Blog</a></li>
+    </ul>
+  </div>
+  <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="alse"> v2.6.1 </a>
+      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions"> 
+        <a class="dropdown-item active" href="../../../bootstrap-vue/docs/4.0/">Latest (4.3.x)</a>
+        <a class="dropdown-item" href="/Boot/">v3.3.7</a>
+        <a class="dropdown-item" href="/Sass/">Sass语言</a>
+        <a class="dropdown-item" href="/Emmet/">Emmet语法</a>
+        <a class="dropdown-item" href="//www.z01.com/tool/" target="_blank">IIS站长工具</a>
+        <a class="dropdown-item" href="//ad.z01.com/" target="_blank">广告源码</a>
+        <a class="dropdown-item" href="//v.z01.com/mb/" target="_blank">免费模板</a>
+        <a class="dropdown-item" href="//v.z01.com/" target="_blank">H5移动创作</a>
+        <a class="dropdown-item" href="//www.z01.com/help/web/3234.shtml" target="_blank">Flexbox布局</a>
+		<a class="dropdown-item" href="/boot/font.html" target="_blank">Font Awesome</a>
+</div>
+    </li>
+    <li class="nav-item"> <a class="nav-link p-2" href="//zoomla.github.io/bootstrap4-zhcn-documentation" target="_blank" rel="noopener" aria-label="GitHub">
+      <svg class="navbar-nav-svg" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 499.36" focusable="false">
+        <title>GitHub</title>
+        <path d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z" fill="currentColor" fill-rule="evenodd"/>
+      </svg>
+      </a> </li>
+    <li class="nav-item"> <a class="nav-link p-2" href="http://www.z01.com/blog/ren/3214.shtml" target="_blank" rel="noopener" aria-label="Slack">译者说</a></li>
+  </ul>
+  <a class="btn btn-bd-yellow d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="download.html">下载 Bootstrap</a> </header>
+
+<div class="container-fluid">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+      <form class="bd-search d-flex align-items-center">
+        <input type="search" class="form-control" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
+        <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30" focusable="false">
+          <title>Menu</title>
+          <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/>
+        </svg>
+        </button>
+      </form>
+
+
+<nav class="collapse bd-links" id="bd-docs-nav">
+<div class=""><a href="../" class="bd-toc-link">首页</a></div>
+<div class="bd-toc-item nuxt-link-exact-active "><a href="../../../bootstrap-vue/docs/" class="bd-toc-link  "> 起步 </a>
+<ul class="nav bd-sidenav">
+</ul>
+</div>
+<div class="bd-toc-item active"><a href="../../../bootstrap-vue/docs/components/" class="bd-toc-link nuxt-link-exact-active"> 组件 </a>
+<ul class="nav bd-sidenav">
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/index.html" class="nav-link"> 组件目录 </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/alert.html" class="nav-link"> 警告提示框(Alert) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/badge.html" class="nav-link"> 徽章(Badge) </a></li>
+<li class="nav-item active"><a href="../../../bootstrap-vue/docs/components/breadcrumb.html" class="nav-link"> 面包屑导航(Breadcrumb) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/button.html" class="nav-link"> 按钮(Button) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/button-group.html" class="nav-link"> 按钮组(Button Group) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/button-toolbar.html" class="nav-link"> 按钮Toolbar(Button Toolbar) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/calendar.html" class="nav-link"> 日历组件(Calendar) <small class="badge text-uppercase badge-success">New</small> </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/card.html" class="nav-link"> 卡片(Card) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/carousel.html" class="nav-link"> 轮播效果(Carousel) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/collapse.html" class="nav-link"> 折叠面板(Collapse) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/dropdown.html" class="nav-link"> 下拉菜单(Dropdown) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/embed.html" class="nav-link"> 嵌入(Embed) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form.html" class="nav-link"> 表单(Form) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-checkbox.html" class="nav-link"> 表单复选框(Form Checkbox) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-datepicker.html" class="nav-link"> 表单时间选择器(Form Datepicker) <small class="badge text-uppercase badge-success">New</small> </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-file.html" class="nav-link"> 文件选择(Form File) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-group.html" class="nav-link"> 表单组合(Form Group) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-input.html" class="nav-link"> 表单输入框(Form Input) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-radio.html" class="nav-link"> 单选择表单Form Radio </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-select.html" class="nav-link"> 下拉式表单(Form Select) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-spinbutton.html" class="nav-link"> 按钮式表单(Form Spinbuttno) <small class="badge text-uppercase badge-success">New</small> </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-tags.html" class="nav-link"> Tags表单选择器(Form Tags) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-textarea.html" class="nav-link"> 文本框(Form Textarea) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-timepicker.html" class="nav-link"> 表单内时间控件(Form Timepicker) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/image.html" class="nav-link"> 图片(Image) </a></li>
+
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/input-group.html" class="nav-link"> 输入框(Input Group) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/jumbotron.html" class="nav-link"> Hero大块屏(Jumbotron) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/layout.html" class="nav-link"> 布局与网络Layout and Grid System </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/link.html" class="nav-link"> 链接(Link)</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/list-group.html" class="nav-link"> 列表组(List group) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/media.html" class="nav-link"> 媒体(Media) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/modal.html" class="nav-link"> 弹出模态框(Modal) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/nav.html" class="nav-link"> 导航(Nav) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/navbar.html" class="nav-link"> 导航栏(Navbar) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/pagination.html" class="nav-link"> 分页(Pagination) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/pagination-nav.html" class="nav-link"> 分页导航(Pagination Nav) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/popover.html" class="nav-link"> 指示备注(Popover) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/progress.html" class="nav-link"> 进度指示器(Progress) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/spinner.html" class="nav-link"> 旋转指示器(Spinner) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/table.html" class="nav-link"> 表格(Table) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/tabs.html" class="nav-link"> 选项卡(Tabs) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/time.html" class="nav-link"> 时间组件(Time) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/toast.html" class="nav-link"> 冒泡推送(Toasts) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/tooltip.html" class="nav-link"> tip提示组件(Tooltip) </a></li>
+</ul>
+</div>
+<div class="bd-toc-item"><a href="../../../bootstrap-vue/docs/directives/" class="bd-toc-link"> 指令 </a>
+<ul class="nav bd-sidenav">
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/directives/index.html" class="nav-link"> 指令目录 </a></li>
+<li class="nav-item active"><a href="../../../bootstrap-vue/docs/directives/hover.html" class="nav-link"> Hover 指令<small class="badge text-uppercase badge-success">New</small> </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/directives/popover.html" class="nav-link"> Popover 提示备注</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/directives/scrollspy.html" class="nav-link"> Scrollspy 滚动监听</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/directives/tooltip.html" class="nav-link"> Tooltip 提示指令</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/directives/visible.html" class="nav-link"> Visible 可见性操作<small class="badge text-uppercase badge-success">New</small> </a></li>
+</ul>
+</div>
+<div class="bd-toc-item"><a href="../../../bootstrap-vue/docs/icons.html" class="bd-toc-link"> Icons图标</a>
+<ul class="nav bd-sidenav">
+</ul>
+</div>
+  
+<div class="bd-toc-item"><a class="bd-toc-link" href="../../../bootstrap-vue/docs/reference">参考</a>
+<ul class="nav bd-sidenav">
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference" class="nav-link.html"> 参考目录 </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/accessibility.html" class="nav-link">友好访问</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/color-variants.html" class="nav-link">Color颜色变量 </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/images.html" class="nav-link"> 组件图像img的src路径解析</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/router-links.html" class="nav-link"> Router路由支持 </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/size-props.html" class="nav-link">大小规格</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/spacing-classes.html" class="nav-link">间距处理</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/starter-templates.html" class="nav-link">开始模板</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/theming.html" class="nav-link">主题色彩</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/utility-classes.html" class="nav-link">通用Class类</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/validation.html" class="nav-link">Form表单验证</a></li>
+</ul>
+</div>
+<div class="bd-toc-item"> <a class="bd-toc-link" href="../components/alerts.html"> 杂项 </a>
+  <ul class="nav bd-sidenav">
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/misc/changelog" class="nav-link"> Changelog </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/misc/contributing" class="nav-link"> Contributing </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/misc/settings" class="nav-link"> Settings </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/misc/third-party" class="nav-link"> Third party libraries </a></li>
+  </ul>
+</div>
+<div class=""><a href="/play" class="bd-toc-link">在线模拟器</a></div>
+</nav>
+</div>
+
+<div class="d-none d-xl-block col-xl-2 bd-toc">
+
+<ul class="section-nav">
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#breadcrumb-items" class="nav-link"><span>面包屑物品</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#manually-placed-items" class="nav-link"><span>手动放置项目</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#component-reference" class="nav-link"><span>组件参考</span></a>
+<ul class="nav flex-column">
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#comp-ref-b-breadcrumb" class="nav-link"><span>&lt;b-breadcrumb&gt;</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#comp-ref-b-breadcrumb-item" class="nav-link"><span>&lt;b-breadcrumb-item&gt;</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#importing-individual-components" class="nav-link"><span>导入单个组件</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#importing-as-a-plugin" class="nav-link"><span>导入为Vue.js插件</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+
+<nav data-v-aafc4aea="" aria-label="Breadcrumbs" class="float-left mt-2 mb-0 mb-lg-2">
+<ol data-v-aafc4aea="" class="breadcrumb d-inline-flex bg-transparent px-2 py-1 my-0">
+<li data-v-aafc4aea="" class="breadcrumb-item"><a data-v-aafc4aea="" href="../../" class="nuxt-link-active" target="_self">首页</a></li>
+<li data-v-aafc4aea="" class="breadcrumb-item"><a data-v-aafc4aea="" href="../../../bootstrap-vue/docs" class="nuxt-link-active" target="_self">中文手册</a></li>
+<li data-v-aafc4aea="" class="breadcrumb-item"><a data-v-aafc4aea="" href="../../../bootstrap-vue/docs/components/" class="nuxt-link-active" target="_self">组件</a></li>
+<li data-v-aafc4aea="" class="breadcrumb-item active"><span data-v-aafc4aea="" aria-current="location">警告提示框</span></li>
+</ol>
+</nav>
+<div class="clearfix d-block"></div>
+  <h1 class="bd-title" id="content">面包屑导航(Breadcrumb)</h1>
+<p class="bd-lead">指示当前页面在导航层次结构中的位置。分隔符通过<code class="notranslate" translate="no">::before</code>和自动添加到CSS中<code class="notranslate" translate="no">content</code>。</p>
+  <script type="text/javascript" src="../../../v4/assets/js/pupCMS.js"></script>
+
+
+
+
+
+
+
+
+<nav class="bd-quick-links mb-3 d-xl-none" data-v-811345e6="">
+<header data-v-811345e6="">
+<button data-v-811345e6="" type="button" class="btn font-weight-bold btn-outline-secondary btn-sm btn-block collapsed" aria-controls="bd-quick-links-collapse" aria-expanded="false"><span data-v-811345e6="">Show</span> page table of contents </button>
+</header>
+<ul data-v-811345e6="" id="bd-quick-links-collapse" class="collapse" style="display: none;">
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#breadcrumb-items" class=""><span data-v-811345e6="">Breadcrumb items</span></a> </li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#manually-placed-items" class=""><span data-v-811345e6="">Manually placed items</span></a> </li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#component-reference" class=""><span data-v-811345e6="">Component reference</span></a>
+<ul data-v-811345e6="">
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#comp-ref-b-breadcrumb" class=""><span data-v-811345e6="">&lt;b-breadcrumb&gt;</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#comp-ref-b-breadcrumb-item" class=""><span data-v-811345e6="">&lt;b-breadcrumb-item&gt;</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#importing-individual-components" class=""><span data-v-811345e6="">Importing individual components</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#importing-as-a-plugin" class=""><span data-v-811345e6="">Importing as a Vue.js plugin</span></a></li>
+</ul>
+</li>
+</ul>
+</nav>
+<div translate="translate" class="bd-example vue-example vue-example-b-breadcrumb notranslate">
+<ol class="breadcrumb">
+<li class="breadcrumb-item"><a target="_self" href="#" class="">Admin</a></li>
+<li class="breadcrumb-item"><a target="_self" href="#" class="">Manage</a></li>
+<li class="breadcrumb-item active"><span aria-current="location">Library</span></li>
+</ol>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-breadcrumb</span> <span class="hljs-attr">:items</span>=<span class="hljs-串">"items"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-breadcrumb</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    data() {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">items</span>: [
+          {
+            <span class="hljs-attr">text</span>: <span class="hljs-串">'Admin'</span>,
+            <span class="hljs-attr">href</span>: <span class="hljs-串">'#'</span>
+          },
+          {
+            <span class="hljs-attr">text</span>: <span class="hljs-串">'Manage'</span>,
+            <span class="hljs-attr">href</span>: <span class="hljs-串">'#'</span>
+          },
+          {
+            <span class="hljs-attr">text</span>: <span class="hljs-串">'Library'</span>,
+            <span class="hljs-attr">active</span>: <span class="hljs-literal">true</span>
+          }
+        ]
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+<h2 id="breadcrumb-items" class="bv-no-focus-ring"><span class="bd-content-title">面包屑物品<a class="anchorjs-link" href="#breadcrumb-items" aria-labelledby="breadcrumb-items"></a></span></h2>
+<p>使用 <code translate="no" class="notranslate text-nowrap">:items</code>方法渲染物品。它可以是一组对象，以提供链接和活动状态。链接可以是<code translate="no" class="notranslate text-nowrap">href</code>用于锚标记的或<code translate="no" class="notranslate text-nowrap">to</code>用于路由器链接的。如果最后一个元素的活动状态为，则会自动设置<code translate="no" class="notranslate text-nowrap">undefined</code>。</p>
+<!-- eslint-disable no-unused-vars -->
+
+<pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-keyword">const</span> items = [
+  {
+    <span class="hljs-attr">text</span>: <span class="hljs-串">'Home'</span>,
+    <span class="hljs-attr">href</span>: <span class="hljs-串">'http://google.com'</span>
+  },
+  {
+    <span class="hljs-attr">text</span>: <span class="hljs-串">'Posts'</span>,
+    <span class="hljs-attr">to</span>: { <span class="hljs-attr">name</span>: <span class="hljs-串">'home'</span> }
+  },
+  {
+    <span class="hljs-attr">text</span>: <span class="hljs-串">'Another Story'</span>,
+    <span class="hljs-attr">active</span>: <span class="hljs-literal">true</span>
+  }
+]</pre>
+<p>请参阅<a href="../../../bootstrap-vue/docs/reference/router-links" class="font-weight-bold">路由器支持</a>参考页以获取特定于路由器链接的道具。</p>
+<h2 id="manually-placed-items" class="bv-no-focus-ring"><span class="bd-content-title">手动放置项目<a class="anchorjs-link" href="#manually-placed-items" aria-labelledby="manually-placed-items"></a></span></h2>
+<p>可以手动将各个<code translate="no" class="notranslate text-nowrap">&lt;b-breadcrumb-item&gt;</code>子组件放置在组件的默认插槽中<code translate="no" class="notranslate text-nowrap">&lt;b-breadcrumb&gt;</code>，以代替使用 <code translate="no" class="notranslate text-nowrap">items</code> prop, 以更好地控制每个项目的内容：</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-breadcrumb-item notranslate">
+<ol class="breadcrumb">
+<li class="breadcrumb-item"><a target="_self" href="#home" class="">
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-house-fill b-icon bi">
+<g transform="translate(0 -1.5625)">
+<g transform="translate(10 10) scale(1.25 1.25) translate(-10 -10)">
+<path d="M8.5 12.995V16.5a.5.5 0 01-.5.5H4a.5.5 0 01-.5-.5v-7a.5.5 0 01.146-.354l6-6a.5.5 0 01.708 0l6 6a.5.5 0 01.146.354v7a.5.5 0 01-.5.5h-4a.5.5 0 01-.5-.5V13c0-.25-.25-.5-.5-.5H9c-.25 0-.5.25-.5.495z"></path>
+<path fill-rule="evenodd" d="M15 4.5V8l-2-2V4.5a.5.5 0 01.5-.5h1a.5.5 0 01.5.5z" clip-rule="evenodd"></path>
+</g>
+</g>
+</svg>
+Home </a></li>
+<li class="breadcrumb-item"><a target="_self" href="#foo" class="">Foo</a></li>
+<li class="breadcrumb-item"><a target="_self" href="#bar" class="">Bar</a></li>
+<li class="breadcrumb-item active"><span aria-current="location">Baz</span></li>
+</ol>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-breadcrumb</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-breadcrumb-item</span> <span class="hljs-attr">href</span>=<span class="hljs-串">"#home"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-icon</span> <span class="hljs-attr">icon</span>=<span class="hljs-串">"house-fill"</span> <span class="hljs-attr">scale</span>=<span class="hljs-串">"1.25"</span> <span class="hljs-attr">shift-v</span>=<span class="hljs-串">"1.25"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-串">"true"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-icon</span>&gt;</span>
+      Home
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-breadcrumb-item</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-breadcrumb-item</span> <span class="hljs-attr">href</span>=<span class="hljs-串">"#foo"</span>&gt;</span>Foo<span class="hljs-tag">&lt;/<span class="hljs-name">b-breadcrumb-item</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-breadcrumb-item</span> <span class="hljs-attr">href</span>=<span class="hljs-串">"#bar"</span>&gt;</span>Bar<span class="hljs-tag">&lt;/<span class="hljs-name">b-breadcrumb-item</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-breadcrumb-item</span> <span class="hljs-attr">active</span>&gt;</span>Baz<span class="hljs-tag">&lt;/<span class="hljs-name">b-breadcrumb-item</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-breadcrumb</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span></pre>
+<p>请记住将<code translate="no" class="notranslate text-nowrap">active</code>方法放在最后一个项目上。</p>
+<p><code translate="no" class="notranslate text-nowrap">&lt;b-breadcrumb-item&gt;</code>还支持各种<code translate="no" class="notranslate text-nowrap">&lt;router-link&gt;</code>方法，例如<code translate="no" class="notranslate text-nowrap">to</code>等等。</p>
+<!-- Component reference added automatically from component package.json --> 
+
+<h2 id="component-reference" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title">组件参考
+<a href="../../../bootstrap-vue/docs/components/breadcrumb#component-reference" class="anchorjs-link" aria-labelledby="component-reference" target="_self"></a></span></h2>
+
+
+<header data-v-866a22e8="" class="row align-items-center">
+<div data-v-866a22e8="" class="col-sm-9">
+<h3 data-v-866a22e8="" id="comp-ref-b-breadcrumb" tabindex="-1" class="bv-no-focus-ring"><span data-v-866a22e8="" class="bd-content-title"><code data-v-866a22e8="" translate="translate" class="notranslate bigger">&lt;b-breadcrumb&gt;</code><a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/breadcrumb#comp-ref-b-breadcrumb" class="anchorjs-link" aria-labelledby="comp-ref-b-breadcrumb" target="_self"></a></span></h3>
+ <a data-v-866a22e8="" rel="noopener" target="_blank" href="https://vuejs.org/v2/guide/render-function.html#Functional-Components" class="badge badge-secondary">功能组件</a></div>
+<div data-v-866a22e8="" class="text-sm-right col-sm-3"><a data-v-866a22e8="" rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev/src/components/breadcrumb/breadcrumb.js" class="btn btn-outline-secondary btn-sm">查看资料</a></div>
+</header>
+<ul data-v-866a22e8="" class="component-ref-mini-toc my-3">
+
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-breadcrumb-props"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-breadcrumb&gt;</code>物产</a></li>
+   
+</ul>
+
+<article data-v-866a22e8="" class="bd-content">
+<h4 data-v-866a22e8="" id="comp-ref-b-breadcrumb-props" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title">物产<a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/breadcrumb#comp-ref-b-breadcrumb-props" class="anchorjs-link" aria-labelledby="comp-ref-b-breadcrumb-props" target="_self"></a></span></h4>
+<div data-v-866a22e8="" class="table-responsive-sm">
+<table role="table" aria-busy="false" aria-colcount="4" class="table b-table bv-docs-table table-striped" id="__BVID__604">
+
+<thead role="rowgroup" class="">
+
+<tr role="row" class="">
+<th role="columnheader" scope="col" aria-colindex="1" class="">属性</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">类型</th>
+<th role="columnheader" scope="col" aria-colindex="3" class="">默认</th>
+<th role="columnheader" scope="col" aria-colindex="4" class="">描述</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+
+<tr role="row" data-pk="items" class="" id="__BVID__604__row_items">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">items</code>     </td>
+<td aria-colindex="2" role="cell" class="">数组</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">要呈现的面包屑项目数组</td>
+</tr>
+
+</tbody>
+
+</table>
+</div>
+ </article>
+
+<header data-v-866a22e8="" class="row align-items-center">
+<div data-v-866a22e8="" class="col-sm-9">
+<h3 data-v-866a22e8="" id="comp-ref-b-breadcrumb-item" tabindex="-1" class="bv-no-focus-ring"><span data-v-866a22e8="" class="bd-content-title"><code data-v-866a22e8="" translate="translate" class="notranslate bigger">&lt;b-breadcrumb-item&gt;</code><a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/breadcrumb#comp-ref-b-breadcrumb-item" class="anchorjs-link" aria-labelledby="comp-ref-b-breadcrumb-item" target="_self"></a></span></h3>
+ <a data-v-866a22e8="" rel="noopener" target="_blank" href="https://vuejs.org/v2/guide/render-function.html#Functional-Components" class="badge badge-secondary">功能组件</a></div>
+<div data-v-866a22e8="" class="text-sm-right col-sm-3"><a data-v-866a22e8="" rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev/src/components/breadcrumb/breadcrumb-item.js" class="btn btn-outline-secondary btn-sm">查看资料</a></div>
+</header>
+<ul data-v-866a22e8="" class="component-ref-mini-toc my-3">
+
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-breadcrumb-item-props"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-breadcrumb-item&gt;</code> 物产 </a></li>
+ 
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-breadcrumb-item-events"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-breadcrumb-item&gt;</code> 大事件 </a></li>
+
+</ul>
+
+<article data-v-866a22e8="" class="bd-content">
+<h4 data-v-866a22e8="" id="comp-ref-b-breadcrumb-item-props" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> 物产 <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/breadcrumb#comp-ref-b-breadcrumb-item-props" class="anchorjs-link" aria-labelledby="comp-ref-b-breadcrumb-item-props" target="_self"></a></span></h4>
+<div data-v-866a22e8="" class="table-responsive-sm">
+<table role="table" aria-busy="false" aria-colcount="4" class="table b-table bv-docs-table table-striped" id="__BVID__620">
+
+<thead role="rowgroup" class="">
+
+<tr role="row" class="">
+<th role="columnheader" scope="col" tabindex="0" aria-colindex="1" aria-sort="none" class="b-table-sort-icon-left">属性<span class="sr-only"> (Click to sort Ascending)</span></th>
+<th role="columnheader" scope="col" tabindex="0" aria-colindex="2" class="">类型</th>
+<th role="columnheader" scope="col" tabindex="0" aria-colindex="3" class="">默认</th>
+<th role="columnheader" scope="col" tabindex="0" aria-colindex="4" class="">描述</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+
+<tr role="row" data-pk="href" class="" id="__BVID__620__row_href">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">href</code>     </td>
+<td aria-colindex="2" role="cell" class="">串</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">表示标准a链接的链接目标URL</td>
+</tr>
+
+<tr role="row" data-pk="rel" class="" id="__BVID__620__row_rel">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">rel</code>     </td>
+<td aria-colindex="2" role="cell" class="">串</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">在渲染的链接上设置'rel'属性</td>
+</tr>
+
+<tr role="row" data-pk="target" class="" id="__BVID__620__row_target">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">target</code>     </td>
+<td aria-colindex="2" role="cell" class="">串</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'_self'</code></td>
+<td aria-colindex="4" role="cell" class="">在渲染的链接上设置'target'属性</td>
+</tr>
+
+<tr role="row" data-pk="active" class="" id="__BVID__620__row_active">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">active</code>     </td>
+<td aria-colindex="2" role="cell" class="">布尔型</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">设置为“ true”时，使用有效样式将组件置于活动状态</td>
+</tr>
+
+<tr role="row" data-pk="disabled" class="" id="__BVID__620__row_disabled">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">disabled</code>     </td>
+<td aria-colindex="2" role="cell" class="">布尔型</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">设置为“true”时，禁用组件的功能并将其置于禁用状态</td>
+</tr>
+
+<tr role="row" data-pk="to" class="" id="__BVID__620__row_to">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">to</code>     </td>
+<td aria-colindex="2" role="cell" class="">字符串或对象</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">router-link属性：表示链接的目标路由。单击时，to属性的值将在内部传递到router.push（），因此该值可以是字符串或位置描述符对象</td>
+</tr>
+
+<tr role="row" data-pk="append" class="" id="__BVID__620__row_append">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">append</code>     </td>
+<td aria-colindex="2" role="cell" class="">布尔型</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">router-link属性：设置附加属性总是将相对路径附加到当前路径</td>
+</tr>
+
+<tr role="row" data-pk="replace" class="" id="__BVID__620__row_replace">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">replace</code>     </td>
+<td aria-colindex="2" role="cell" class="">布尔型</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">router-link属性：设置替换属性将在单击时调用“ router.replace（）”而不是“ router.push（）”，因此导航不会留下历史记录</td>
+</tr>
+
+<tr role="row" data-pk="event" class="" id="__BVID__620__row_event">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">event</code>     </td>
+<td aria-colindex="2" role="cell" class="">字符串或数组</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'click'</code></td>
+<td aria-colindex="4" role="cell" class="">router-link属性：指定触发链接的事件。在大多数情况下，应将其保留为默认值</td>
+</tr>
+
+<tr role="row" data-pk="active-class" class="" id="__BVID__620__row_active-class">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">active-class</code>     </td>
+<td aria-colindex="2" role="cell" class="">串</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">router-link属性：配置在链接处于活动状态时应用的活动CSS类。通常，您将需要将此设置为类名称“ active”</td>
+</tr>
+
+<tr role="row" data-pk="exact" class="" id="__BVID__620__row_exact">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">exact</code>     </td>
+<td aria-colindex="2" role="cell" class="">布尔型</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">router-link属性：默认的活动类匹配行为是包含匹配。设置此道具将强制模式与路线完全匹配
+</td>
+</tr>
+
+<tr role="row" data-pk="exact-active-class" class="" id="__BVID__620__row_exact-active-class">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">exact-active-class</code>     </td>
+<td aria-colindex="2" role="cell" class="">串</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">router-link属性：配置当链接处于完全匹配状态时应用的活动CSS类。通常，您将需要将此设置为类名称“ active”</td>
+</tr>
+
+<tr role="row" data-pk="router-tag" class="" id="__BVID__620__row_router-tag">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">router-tag</code>     </td>
+<td aria-colindex="2" role="cell" class="">串</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'a'</code></td>
+<td aria-colindex="4" role="cell" class="">router-link属性：指定要呈现的标签，它仍将监听单击事件以进行导航。“ router-tag”转换为最终渲染的路由器链接上的标签prop。通常，您应该使用默认值</td>
+</tr>
+
+<tr role="row" data-pk="no-prefetch" class="" id="__BVID__620__row_no-prefetch">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">no-prefetch</code>     </td>
+<td aria-colindex="2" role="cell" class="">布尔型</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">nuxt-link属性：为了提高Nuxt.js应用程序的响应速度，当链接将显示在视口中时，Nuxt.js将自动预取代码拆分页面。设置“不预取”将禁用特定链接的此功能
+</td>
+</tr>
+
+<tr role="row" data-pk="text" class="" id="__BVID__620__row_text">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">text</code>     </td>
+<td aria-colindex="2" role="cell" class="">串</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">要在面包屑项目中呈现的文本</td>
+</tr>
+
+<tr role="row" data-pk="html" class="" id="__BVID__620__row_html">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">html</code>     </td>
+<td aria-colindex="2" role="cell" class="">串</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">在面包屑项目中呈现的HTML字符串。谨慎使用</td>
+</tr>
+
+<tr role="row" data-pk="aria-current" class="" id="__BVID__620__row_aria-current">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">aria-current</code>     </td>
+<td aria-colindex="2" role="cell" class="">串</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'location'</code></td>
+<td aria-colindex="4" role="cell" class="">设置“ aria-current”属性的值（当该项为活动项时）。支持的字符串值为“ location”，“ page”或“true”</td>
+</tr>
+
+</tbody>
+
+</table>
+</div>
+<div data-v-866a22e8="" class="alert alert-info">
+<p data-v-866a22e8="" class="mb-0 small"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-breadcrumb-item&gt;</code>支持生成 <code data-v-866a22e8="" translate="translate" class="notranslate">&lt;router-link&gt;</code>或<code data-v-866a22e8="" translate="translate" class="notranslate">&lt;nuxt-link&gt;</code>组件（如果使用Nuxt.js）。有关路由器链接（或nuxt链接）特定道具的更多详细信息，请参阅 <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/reference/router-links" class="alert-link" target="_self">路由器支持</a> 参考部分。</p>
+</div>
+</article>
+ 
+<article data-v-866a22e8="" class="bd-content">
+<h4 data-v-866a22e8="" id="comp-ref-b-breadcrumb-item-events" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> 大事件 <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/breadcrumb#comp-ref-b-breadcrumb-item-events" class="anchorjs-link" aria-labelledby="comp-ref-b-breadcrumb-item-events" target="_self"></a></span></h4>
+<div data-v-866a22e8="" class="table-responsive-sm">
+<table role="table" aria-busy="false" aria-colcount="3" class="table b-table bv-docs-table table-striped" id="__BVID__649">
+
+<thead role="rowgroup" class="">
+
+<tr role="row" class="">
+<th role="columnheader" scope="col" aria-colindex="1" class="">事件</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">争论</th>
+<th role="columnheader" scope="col" aria-colindex="3" class="">描述</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+
+<tr role="row" data-pk="click" class="" id="__BVID__649__row_click">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="notranslate">click</code> </td>
+<td aria-colindex="2" role="cell" class=""><ol data-v-866a22e8="" class="list-unstyled mb-0">
+<li data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">event</code> - <span data-v-866a22e8="">原生点击事件对象</span></li>
+</ol></td>
+<td aria-colindex="3" role="cell" class="">单击时发出</td>
+</tr>
+
+</tbody>
+
+</table>
+</div>
+</article>
+
+<article class="bd-content">
+<h3 id="importing-individual-components" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title">导入单个组件 
+<a href="../../../bootstrap-vue/docs/components/breadcrumb#importing-individual-components" class="anchorjs-link" aria-labelledby="importing-individual-components" target="_self"></a></span></h3>
+<p>可以通过以下命名的导出将单个组件导入到项目中：</p>
+<div class="table-responsive-sm">
+<table role="table" aria-busy="false" aria-colcount="3" class="table b-table bv-docs-table table-striped" id="__BVID__660">
+
+<thead role="rowgroup" class="thead-default">
+
+<tr role="row" class="">
+<th role="columnheader" scope="col" aria-colindex="1" class="">零件</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">命名为出口</th>
+<th role="columnheader" scope="col" aria-colindex="3" class="">导入路径</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+
+<tr role="row" class="">
+<td aria-colindex="1" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">&lt;b-breadcrumb&gt;</code></td>
+<td aria-colindex="2" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">BBreadcrumb</code></td>
+<td aria-colindex="3" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">bootstrap-vue</code></td>
+</tr>
+<tr role="row" class="">
+<td aria-colindex="1" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">&lt;b-breadcrumb-item&gt;</code></td>
+<td aria-colindex="2" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">BBreadcrumbItem</code></td>
+<td aria-colindex="3" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">bootstrap-vue</code></td>
+</tr>
+
+</tbody>
+
+</table>
+</div>
+<p><strong>例：</strong></p>
+<pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { BBreadcrumb } <span class="hljs-keyword">from</span> <span class="hljs-串">'bootstrap-vue'</span>
+Vue.component(<span class="hljs-串">'b-breadcrumb'</span>, BBreadcrumb)</pre>
+</article>
+
+<article class="bd-content">
+<h3 id="importing-as-a-plugin" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title">导入为Vue.js插件<a href="../../../bootstrap-vue/docs/components/breadcrumb#importing-as-a-plugin" class="anchorjs-link" aria-labelledby="importing-as-a-plugin" target="_self"></a></span></h3>
+<p> 该插件包括上面列出的所有单个组件。插件还包括任何组件别名。 </p>
+<div class="table-responsive-sm">
+<table fileds="namedExport,importPath" role="table" aria-busy="false" aria-colcount="2" class="table b-table bv-docs-table table-striped b-table-caption-top" id="__BVID__671">
+
+<thead role="rowgroup" class="thead-default">
+
+<tr role="row" class="">
+<th role="columnheader" scope="col" aria-colindex="1" class="">命名为出口</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">导入路径</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+
+<tr role="row" class="">
+<td aria-colindex="1" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">BreadcrumbPlugin</code></td>
+<td aria-colindex="2" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">bootstrap-vue</code></td>
+</tr>
+
+</tbody>
+
+</table>
+</div>
+
+<p><strong>例:</strong></p>
+<pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { BreadcrumbPlugin } <span class="hljs-keyword">from</span> <span class="hljs-串">'bootstrap-vue'</span>
+Vue.use(BreadcrumbPlugin)</pre>
+</article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</main>
+</div>
+</div>
+
+
+<script src="../../../js/jquery-3.2.1.slim.min.js"></script> 
+<script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery-slim.min.js"><\/script>')</script> 
+<script src="../../../v4/dist/js/popper.min.js"></script> 
+<script src="../../../v4/dist/js/bootstrap.min.js"></script> 
+<script src="../../../v4/assets/js/docs.min.js"></script> 
+<script src="../../../v4/assets/js/ie-emulation-modes-warning.js"></script> 
+<script src="../../../v4/assets/js/docsearch.min.js"></script> 
+<script>
+  docsearch({
+    appId: 'PRR89ISST8',
+    apiKey: '95044d57d4d7bb744f322d1f18ed607f',
+    indexName: 'z01-bootstrapV4',
+    inputSelector: '#search-input',
+    handleSelected: function (input, event, suggestion) {
+      var url = suggestion.url;
+      url = suggestion.isLvl1 ? url.split('#')[0]: url;
+      // If it's a title we remove the anchor so it does not jump.
+      window.location.href = url;
+    },
+    transformData: function (hits) {
+      return hits.map(function (hit) {
+        hit.url = hit.url.replace('https://v4-alpha.getbootstrap.com', '/docs/4.0');
+        return hit;
+      });
+    },
+    debug: false // Set debug to true if you want to inspect the dropdown
+  });
+</script> 
+<script>
+  Holder.addTheme('gray', {
+    bg: '#777',
+    fg: 'rgba(255,255,255,.75)',
+    font: 'Helvetica',
+    fontweight: 'normal'
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,594 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Jekyll v3.6.0">
+<title>主题色彩 &middot; BootstrapVue</title>
+<!-- Bootstrap 核心CSS -->
+<link href="../../../v4/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- 本文档额外专用css -->
+<link href="../../../v4/assets/css/docsearch.min.css" rel="stylesheet">
+<link href="../../../v4/assets/css/docs.min.css" rel="stylesheet">
+<link href="../../style/bv_path.css" rel="stylesheet">
+
+<!-- Favicons图标定义 -->
+<link data-n-head="ssr" rel="manifest" href="../../manifest.json">
+<link data-n-head="ssr" rel="shortcut icon" href="../../style/icons/icon_64.png">
+<link data-n-head="ssr" rel="apple-touch-icon" href="../../style/icons/icon_512.png" sizes="512x512">
+
+<!-- Meta关键字定义 -->
+<meta name="description" content="The most popular HTML, CSS, and JS library in the world.">
+<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+
+</head>
+<body>
+<a id="skippy" class="sr-only sr-only-focusable" href="#content">
+<div class="container"> <span class="skiplink-text">跳到主体内容</span> </div>
+</a>
+<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar"> <a class="navbar-brand mr-0 mr-md-2" href="../" aria-label="Bootstrap">
+  <svg class="d-block" width="36" height="36" viewbox="0 0 612 612" xmlns="http://www.w3.org/2000/svg" focusable="false">
+    <title>Bootstrap</title>
+    <path fill="currentColor" d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z"/>
+    <path fill="currentColor" d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z"/>
+  </svg>
+  </a>
+  <div class="navbar-nav-scroll">
+    <ul class="navbar-nav bd-navbar-nav flex-row">
+      <li class="nav-item"><a class="nav-link " href="../">首页</a></li>
+      <li class="nav-item"><a class="nav-link active" href="../../v4/docs/">中文手册</a></li>
+      <li class="nav-item"><a class="nav-link " href="../../v4/examples/">实例</a></li>
+      <li class="nav-item dropdown">
+<a class="nav-item nav-link dropdown-toggle mr-md-2" id="bd-versions" aria-expanded="false" aria-haspopup="true" href="#" data-toggle="dropdown"> 主题模板 </a>
+<div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
+<a class="dropdown-item" href="../../V4/themes/" target="_blank">主题门户</a>
+<a class="dropdown-item" href="../../V4/themes/live.html">精选模板</a>
+</div>
+</li>
+      <li class="nav-item"><a class="nav-link" href="//ico.z01.com" target="_blank" rel="noopener">zico图标系统</a></li>
+      <li class="nav-item"><a class="nav-link" href="https://expo.getbootstrap.com" target="_blank" rel="noopener">优站精选</a></li>
+      <li class="nav-item"><a class="nav-link" href="https://blog.getbootstrap.com" target="_blank" rel="noopener">Blog</a></li>
+    </ul>
+  </div>
+  <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="alse"> v2.6.1 </a>
+      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions"> 
+        <a class="dropdown-item active" href="../../../bootstrap-vue/docs/4.0/">Latest (4.3.x)</a>
+        <a class="dropdown-item" href="/Boot/">v3.3.7</a>
+        <a class="dropdown-item" href="/Sass/">Sass语言</a>
+        <a class="dropdown-item" href="/Emmet/">Emmet语法</a>
+        <a class="dropdown-item" href="//www.z01.com/tool/" target="_blank">IIS站长工具</a>
+        <a class="dropdown-item" href="//ad.z01.com/" target="_blank">广告源码</a>
+        <a class="dropdown-item" href="//v.z01.com/mb/" target="_blank">免费模板</a>
+        <a class="dropdown-item" href="//v.z01.com/" target="_blank">H5移动创作</a>
+        <a class="dropdown-item" href="//www.z01.com/help/web/3234.shtml" target="_blank">Flexbox布局</a>
+		<a class="dropdown-item" href="/boot/font.html" target="_blank">Font Awesome</a>
+</div>
+    </li>
+    <li class="nav-item"> <a class="nav-link p-2" href="//zoomla.github.io/bootstrap4-zhcn-documentation" target="_blank" rel="noopener" aria-label="GitHub">
+      <svg class="navbar-nav-svg" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 499.36" focusable="false">
+        <title>GitHub</title>
+        <path d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z" fill="currentColor" fill-rule="evenodd"/>
+      </svg>
+      </a> </li>
+    <li class="nav-item"> <a class="nav-link p-2" href="http://www.z01.com/blog/ren/3214.shtml" target="_blank" rel="noopener" aria-label="Slack">译者说</a></li>
+  </ul>
+  <a class="btn btn-bd-yellow d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="download.html">下载 Bootstrap</a> </header>
+
+<div class="container-fluid">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+      <form class="bd-search d-flex align-items-center">
+        <input type="search" class="form-control" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
+        <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30" focusable="false">
+          <title>Menu</title>
+          <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/>
+        </svg>
+        </button>
+      </form>
+
+
+<nav class="collapse bd-links" id="bd-docs-nav">
+<div class=""><a href="../" class="bd-toc-link">首页</a></div>
+<div class="bd-toc-item nuxt-link-exact-active "><a href="../../../bootstrap-vue/docs/" class="bd-toc-link  "> 起步 </a>
+<ul class="nav bd-sidenav">
+</ul>
+</div>
+<div class="bd-toc-item"><a href="../../../bootstrap-vue/docs/components/" class="bd-toc-link nuxt-link-exact-active"> 组件 </a>
+<ul class="nav bd-sidenav">
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/index.html" class="nav-link"> 组件目录 </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/alert.html" class="nav-link"> 警告提示框(Alert) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/badge.html" class="nav-link"> 徽章(Badge) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/badge.html" class="nav-link"> 面包屑导航(Breadcrumb) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/button.html" class="nav-link"> 按钮(Button) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/button-group.html" class="nav-link"> 按钮组(Button Group) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/button-toolbar.html" class="nav-link"> 按钮Toolbar(Button Toolbar) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/calendar.html" class="nav-link"> 日历组件(Calendar) <small class="badge text-uppercase badge-success">New</small> </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/card.html" class="nav-link"> 卡片(Card) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/carousel.html" class="nav-link"> 轮播效果(Carousel) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/collapse.html" class="nav-link"> 折叠面板(Collapse) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/dropdown.html" class="nav-link"> 下拉菜单(Dropdown) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/embed.html" class="nav-link"> 嵌入(Embed) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form.html" class="nav-link"> 表单(Form) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-checkbox.html" class="nav-link"> 表单复选框(Form Checkbox) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-datepicker.html" class="nav-link"> 表单时间选择器(Form Datepicker) <small class="badge text-uppercase badge-success">New</small> </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-file.html" class="nav-link"> 文件选择(Form File) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-group.html" class="nav-link"> 表单组合(Form Group) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-input.html" class="nav-link"> 表单输入框(Form Input) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-radio.html" class="nav-link"> 单选择表单Form Radio </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-select.html" class="nav-link"> 下拉式表单(Form Select) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-spinbutton.html" class="nav-link"> 按钮式表单(Form Spinbuttno) <small class="badge text-uppercase badge-success">New</small> </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-tags.html" class="nav-link"> Tags表单选择器(Form Tags) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-textarea.html" class="nav-link"> 文本框(Form Textarea) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-timepicker.html" class="nav-link"> 表单内时间控件(Form Timepicker) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/image.html" class="nav-link"> 图片(Image) </a></li>
+
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/input-group.html" class="nav-link"> 输入框(Input Group) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/jumbotron.html" class="nav-link"> Hero大块屏(Jumbotron) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/layout.html" class="nav-link"> 布局与网络Layout and Grid System </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/link.html" class="nav-link"> 链接(Link)</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/list-group.html" class="nav-link"> 列表组(List group) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/media.html" class="nav-link"> 媒体(Media) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/modal.html" class="nav-link"> 弹出模态框(Modal) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/nav.html" class="nav-link"> 导航(Nav) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/navbar.html" class="nav-link"> 导航栏(Navbar) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/pagination.html" class="nav-link"> 分页(Pagination) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/pagination-nav.html" class="nav-link"> 分页导航(Pagination Nav) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/popover.html" class="nav-link"> 指示备注(Popover) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/progress.html" class="nav-link"> 进度指示器(Progress) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/spinner.html" class="nav-link"> 旋转指示器(Spinner) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/table.html" class="nav-link"> 表格(Table) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/tabs.html" class="nav-link"> 选项卡(Tabs) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/time.html" class="nav-link"> 时间组件(Time) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/toast.html" class="nav-link"> 冒泡推送(Toasts) </a></li>
+<li class="nav-item active"><a href="../../../bootstrap-vue/docs/components/tooltip.html" class="nav-link"> tip提示组件(Tooltip) </a></li>
+</ul>
+</div>
+<div class="bd-toc-item"><a href="../../../bootstrap-vue/docs/directives/" class="bd-toc-link"> 指令 </a>
+<ul class="nav bd-sidenav">
+<li class="nav-item active"><a href="../../../bootstrap-vue/docs/directives/index.html" class="nav-link"> 指令目录 </a></li>
+<li class="nav-item active"><a href="../../../bootstrap-vue/docs/directives/hover.html" class="nav-link"> Hover 指令<small class="badge text-uppercase badge-success">New</small> </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/directives/popover.html" class="nav-link"> Popover 提示备注</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/directives/scrollspy.html" class="nav-link"> Scrollspy 滚动监听</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/directives/tooltip.html" class="nav-link"> Tooltip 提示指令</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/directives/visible.html" class="nav-link"> Visible 可见性操作<small class="badge text-uppercase badge-success">New</small> </a></li>
+</ul>
+</div>
+<div class="bd-toc-item"><a href="../../../bootstrap-vue/docs/icons.html" class="bd-toc-link"> Icons图标</a>
+<ul class="nav bd-sidenav">
+</ul>
+</div>
+  
+<div class="bd-toc-item active"> <a class="bd-toc-link" href="../../../bootstrap-vue/docs/reference">参考 </a>
+<ul class="nav bd-sidenav">
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference" class="nav-link"> 参考目录 </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/accessibility.html" class="nav-link">友好访问</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/color-variants.html" class="nav-link">Color颜色变量 </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/images.html" class="nav-link"> 组件图像img的src路径解析</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/router-links.html" class="nav-link"> Router路由支持 </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/size-props.html" class="nav-link">大小规格</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/spacing-classes.html" class="nav-link">间距处理</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/starter-templates.html" class="nav-link">开始模板</a></li>
+<li class="nav-item active"><a href="../../../bootstrap-vue/docs/reference/theming.html" class="nav-link">主题色彩</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/utility-classes.html" class="nav-link">通用Class类</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/validation.html" class="nav-link">Form表单验证</a></li>
+</ul>
+</div>
+<div class="bd-toc-item"> <a class="bd-toc-link" href="../components/alerts.html"> 杂项 </a>
+<ul class="nav bd-sidenav">
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/misc/changelog.html" class="nav-link"> Changelog </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/misc/contributing.html" class="nav-link"> Contributing </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/misc/settings.html" class="nav-link"> Settings </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/misc/third-party.html" class="nav-link"> Third party libraries </a></li>
+</ul>
+</div>
+<div class=""><a href="/play" class="bd-toc-link">在线模拟器</a></div>
+</nav>
+</div>
+
+<div class="d-none d-xl-block col-xl-2 bd-toc">
+<ul class="section-nav">
+<li class="nav-item toc-entry mb-2"><a target="_self" href="#theming-bootstrap--bootstrapvue" class="nav-link font-weight-bold"><span>Theming Bootstrap &amp; BootstrapVue</span></a></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#sass-variable-defaults" class="nav-link"><span>SASS variable defaults</span></a> </li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#default-theme-colors" class="nav-link"><span>Default theme colors</span></a> </li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#sass-options" class="nav-link"><span>SASS options</span></a>
+<ul class="nav flex-column">
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#bootstrap-sass-variables" class="nav-link"><span>Bootstrap SASS variables</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#bootstrapvue-sass-variables" class="nav-link"><span>BootstrapVue SASS variables</span></a></li>
+</ul>
+</li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#generating-custom-themes" class="nav-link"><span>Generating custom themes</span></a> </li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#css-variables" class="nav-link"><span>CSS variables</span></a>
+<ul class="nav flex-column">
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#available-bootstrap-css-variables" class="nav-link"><span>Available Bootstrap CSS variables</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#example" class="nav-link"><span>Example</span></a></li>
+</ul>
+</li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#see-also" class="nav-link"><span>See also</span></a> </li>
+</ul>
+</div>
+
+<main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+
+<nav data-v-aafc4aea="" aria-label="Breadcrumbs" class="float-left mt-2 mb-0 mb-lg-2">
+<ol data-v-aafc4aea="" class="breadcrumb d-inline-flex bg-transparent px-2 py-1 my-0">
+<li data-v-aafc4aea="" class="breadcrumb-item"><a data-v-aafc4aea="" href="../../" class="nuxt-link-active" target="_self">首页</a></li>
+<li data-v-aafc4aea="" class="breadcrumb-item"><a data-v-aafc4aea="" href="../../../bootstrap-vue/docs" class="nuxt-link-active" target="_self">中文手册</a></li>
+<li data-v-aafc4aea="" class="breadcrumb-item"><a data-v-aafc4aea="" href="../../../bootstrap-vue/docs/reference/" class="nuxt-link-active" target="_self">参考</a></li>
+<li data-v-aafc4aea="" class="breadcrumb-item active"><span data-v-aafc4aea="" aria-current="location">主题色彩</span></li>
+</ol>
+</nav>
+<div class="clearfix d-block"></div>
+  <h1 class="bd-title" id="content">主题色彩</h1>
+  <p class="bd-lead">方便的通过SASS变量来定义CSS，虽然BoostrapV4默认不内置专门的主题文件，但你可以通过不同的参数来实现渐变、阴影等变化。</p>
+  <script type="text/javascript" src="../../../v4/assets/js/pupCMS.js"></script>
+
+
+
+<nav class="bd-quick-links mb-3 d-xl-none" style="" data-v-4abf2740="">
+<header data-v-4abf2740="">
+<button data-v-4abf2740="" type="button" class="btn font-weight-bold btn-outline-secondary btn-sm btn-block collapsed" aria-controls="bd-quick-links-collapse" aria-expanded="false"> Show page table of contents </button>
+</header>
+<ul data-v-4abf2740="" id="bd-quick-links-collapse" class="collapse" style="display: none;">
+<li data-v-4abf2740=""><a data-v-4abf2740="" target="_self" href="#sass-variable-defaults" class=""><span data-v-4abf2740="">SASS variable defaults</span></a> <!----></li>
+<li data-v-4abf2740=""><a data-v-4abf2740="" target="_self" href="#default-theme-colors" class=""><span data-v-4abf2740="">Default theme colors</span></a> <!----></li>
+<li data-v-4abf2740=""><a data-v-4abf2740="" target="_self" href="#sass-options" class=""><span data-v-4abf2740="">SASS options</span></a>
+<ul data-v-4abf2740="">
+<li data-v-4abf2740=""><a data-v-4abf2740="" target="_self" href="#bootstrap-sass-variables" class=""><span data-v-4abf2740="">Bootstrap SASS variables</span></a></li>
+<li data-v-4abf2740=""><a data-v-4abf2740="" target="_self" href="#bootstrapvue-sass-variables" class=""><span data-v-4abf2740="">BootstrapVue SASS variables</span></a></li>
+</ul>
+</li>
+<li data-v-4abf2740=""><a data-v-4abf2740="" target="_self" href="#generating-custom-themes" class=""><span data-v-4abf2740="">Generating custom themes</span></a> <!----></li>
+<li data-v-4abf2740=""><a data-v-4abf2740="" target="_self" href="#css-variables" class=""><span data-v-4abf2740="">CSS variables</span></a>
+<ul data-v-4abf2740="">
+<li data-v-4abf2740=""><a data-v-4abf2740="" target="_self" href="#available-bootstrap-css-variables" class=""><span data-v-4abf2740="">Available Bootstrap CSS variables</span></a></li>
+<li data-v-4abf2740=""><a data-v-4abf2740="" target="_self" href="#example" class=""><span data-v-4abf2740="">Example</span></a></li>
+</ul>
+</li>
+<li data-v-4abf2740=""><a data-v-4abf2740="" target="_self" href="#see-also" class=""><span data-v-4abf2740="">See also</span></a> <!----></li>
+</ul>
+</nav>
+<p>While BootstrapVue uses Bootstrap's CSS, certain features of BootstrapVue uses custom CSS (i.e.
+stacked tables, etc). Our custom CSS relies on variables defined the Bootstrap v4.x SCSS. The <code class="text-nowrap" translate="no">bootstrap-vue/dist/bootstrap-vue.css</code> is compiled using the default Bootstrap v4.x variables. By
+using the BootstrapVue source SCSS, you can have your variable overrides (such as breakpoints, theme
+colors, etc) adjust the custom BootstrapVue css generation.</p>
+<h2 id="sass-variable-defaults" class="bv-no-focus-ring"><span class="bd-content-title">SASS variable defaults<a class="anchorjs-link" href="#sass-variable-defaults" aria-labelledby="sass-variable-defaults"></a></span></h2>
+<p>Every Sass variable in Bootstrap v4 and BootstrapVue includes the <code class="text-nowrap" translate="no">!default</code> flag allowing you to
+override the variable’s default value in your own Sass without modifying Bootstrap and
+BootstrapVue's source SCSS code. Copy and paste variables as needed, modify their values, and remove
+the <code class="text-nowrap" translate="no">!default</code> flag. If a variable has already been assigned, then it won’t be re-assigned by the
+default values in Bootstrap and BootstrapVue.</p>
+<p>You will find the complete list of Bootstrap’s variables in <code class="text-nowrap" translate="no">bootstrap/scss/_variables.scss</code>. Some
+variables are set to <code class="text-nowrap" translate="no">null</code>, these variables don’t output the property unless they are overridden in
+your configuration.</p>
+<p>Variable overrides within the same Sass file can come before or after the default variables.
+However, when overriding across Sass files, your overrides must come <em>before</em> you import Bootstrap
+and BootstrapVue's Sass (SCSS) files.</p>
+<p>Here’s an example that changes the <code class="text-nowrap" translate="no">background-color</code> and <code class="text-nowrap" translate="no">color</code> for the <code class="text-nowrap" translate="no">&lt;body&gt;</code> when importing
+and compiling Bootstrap and BootstrapVue SCSS:</p>
+<div class="bd-code">
+<pre class="hljs scss p-2" translate="no"><span class="hljs-comment">// Your variable overrides</span>
+<span class="hljs-variable">$body-bg</span>: <span class="hljs-number">#000</span>;
+<span class="hljs-variable">$body-color</span>: <span class="hljs-number">#111</span>;
+
+<span class="hljs-comment">// Bootstrap and its default variables</span>
+<span class="hljs-keyword">@import</span> <span class="hljs-string">'../node_modules/bootstrap/scss/bootstrap'</span>;
+<span class="hljs-comment">// BootstrapVue and its default variables</span>
+<span class="hljs-keyword">@import</span> <span class="hljs-string">'../node_modules/bootstrap-vue/src/index.scss'</span>;</pre>
+</div>
+<h2 id="default-theme-colors" class="bv-no-focus-ring"><span class="bd-content-title">Default theme colors<a class="anchorjs-link" href="#default-theme-colors" aria-labelledby="default-theme-colors"></a></span></h2>
+<p>The default them colors defined in the Bootstrap v4.4 SCSS are as follows:</p>
+<div class="row">
+<div class="col-md-4">
+<div class="p-3 mb-3 bg-primary text-light">Primary</div>
+</div>
+<div class="col-md-4">
+<div class="p-3 mb-3 bg-secondary text-light">Secondary</div>
+</div>
+<div class="col-md-4">
+<div class="p-3 mb-3 bg-success text-light">Success</div>
+</div>
+<div class="col-md-4">
+<div class="p-3 mb-3 bg-danger text-light">Danger</div>
+</div>
+<div class="col-md-4">
+<div class="p-3 mb-3 bg-warning text-dark">Warning</div>
+</div>
+<div class="col-md-4">
+<div class="p-3 mb-3 bg-info text-light">Info</div>
+</div>
+<div class="col-md-4">
+<div class="p-3 mb-3 bg-light text-dark">Light</div>
+</div>
+<div class="col-md-4">
+<div class="p-3 mb-3 bg-dark text-light">Dark</div>
+</div>
+</div>
+<p>Various components will use variations (intensities) of these default theme colors.</p>
+<p>You can alter the theme colors, and create additional theme colors, as needed via SASS variables and
+maps. Refer to the <a href="https://getbootstrap.com/docs/4.4/getting-started/theming/" target="_blank" rel="noopener">Bootstrap theming</a> docs for more details. All theme colors automatically become available as <a href="/docs/reference/color-variants" class="font-weight-bold">color variants</a> to all BootstrapVue components.</p>
+<h2 id="sass-options" class="bv-no-focus-ring"><span class="bd-content-title">SASS options<a class="anchorjs-link" href="#sass-options" aria-labelledby="sass-options"></a></span></h2>
+<p>Customize Bootstrap 4 with the built-in custom variables file and easily toggle global CSS
+preferences with Bootstrap's <code class="text-nowrap" translate="no">$enable-*</code> Sass variables.</p>
+<h3 id="bootstrap-sass-variables" class="bv-no-focus-ring"><span class="bd-content-title">Bootstrap SASS variables<a class="anchorjs-link" href="#bootstrap-sass-variables" aria-labelledby="bootstrap-sass-variables"></a></span></h3>
+<p>Some commonly used Bootstrap v4 variables are:</p>
+<div class="table-responsive-sm">
+<table class="b-table table table-bordered table-striped bv-docs-table">
+<thead class="thead-default">
+<tr>
+<th>Variable</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="text-nowrap" translate="no">$enable-rounded</code></td>
+<td>Boolean</td>
+<td><code class="text-nowrap" translate="no">true</code></td>
+<td>Enables predefined <code class="text-nowrap" translate="no">border-radius</code> styles on various components</td>
+</tr>
+<tr>
+<td><code class="text-nowrap" translate="no">$enable-shadows</code></td>
+<td>Boolean</td>
+<td><code class="text-nowrap" translate="no">false</code></td>
+<td>Enables predefined <code class="text-nowrap" translate="no">box-shadow</code> styles on various components</td>
+</tr>
+<tr>
+<td><code class="text-nowrap" translate="no">$enable-gradients</code></td>
+<td>Boolean</td>
+<td><code class="text-nowrap" translate="no">false</code></td>
+<td>Enables predefined gradients via <code class="text-nowrap" translate="no">background-image</code> styles on various components</td>
+</tr>
+<tr>
+<td><code class="text-nowrap" translate="no">$enable-transitions</code></td>
+<td>Boolean</td>
+<td><code class="text-nowrap" translate="no">true</code></td>
+<td>Enables predefined <code class="text-nowrap" translate="no">transition</code>s on various components</td>
+</tr>
+<tr>
+<td><code class="text-nowrap" translate="no">$enable-responsive-font-sizes</code></td>
+<td>Boolean</td>
+<td><code class="text-nowrap" translate="no">false</code></td>
+<td>Enables <a href="https://getbootstrap.com/docs/4.4/content/typography/#responsive-font-sizes" target="_blank" rel="noopener">responsive font sizes</a></td>
+</tr>
+<tr>
+<td><code class="text-nowrap" translate="no">$enable-validation-icons</code></td>
+<td>Boolean</td>
+<td><code class="text-nowrap" translate="no">true</code></td>
+<td>Enables <code class="text-nowrap" translate="no">background-image</code> icons within textual inputs and some custom forms for validation states</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Refer to <a href="https://getbootstrap.com/docs/4.4/getting-started/theming/" target="_blank" rel="noopener">Bootstrap's theming</a> docs for
+additional Bootstrap v4 variable information.</p>
+<h3 id="bootstrapvue-sass-variables" class="bv-no-focus-ring"><span class="bd-content-title">BootstrapVue SASS variables<a class="anchorjs-link" href="#bootstrapvue-sass-variables" aria-labelledby="bootstrapvue-sass-variables"></a></span></h3>
+<p>BootstrapVue also defines several Sass variables for controlling BootstrapVue's custom CSS
+generation. If you are not using these features in your project, you can disable the feature's CSS
+generation to reduce the size of BootstrapVue's custom CSS bundle:</p>
+<div class="table-responsive-sm">
+<table class="b-table table table-bordered table-striped bv-docs-table">
+<thead class="thead-default">
+<tr>
+<th>Variable</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="text-nowrap" translate="no">$bv-enable-table-stacked</code></td>
+<td>Boolean</td>
+<td><code class="text-nowrap" translate="no">true</code></td>
+<td>Enables stacked table CSS generation</td>
+</tr>
+<tr>
+<td><code class="text-nowrap" translate="no">$bv-enable-table-sticky</code></td>
+<td>Boolean</td>
+<td><code class="text-nowrap" translate="no">true</code></td>
+<td>Enables sticky table header and column CSS generation</td>
+</tr>
+<tr>
+<td><code class="text-nowrap" translate="no">$bv-enable-tooltip-variants</code></td>
+<td>Boolean</td>
+<td><code class="text-nowrap" translate="no">true</code></td>
+<td>Enables tooltip variant CSS generation</td>
+</tr>
+<tr>
+<td><code class="text-nowrap" translate="no">$bv-enable-popover-variants</code></td>
+<td>Boolean</td>
+<td><code class="text-nowrap" translate="no">true</code></td>
+<td>Enables popover variant CSS generation</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>You can find additional variables that control various aspects of BootstrapVue's custom CSS at <a href="https://github.com/bootstrap-vue/bootstrap-vue/blob/master/src/_variables.scss" target="_blank" rel="noopener"><code class="text-nowrap" translate="no">bootstrap-vue/src/_variables.scss</code></a>.
+Note that BootstrapVue's custom SCSS relies on Bootstrap's SASS variables, functions, and mixins.</p>
+<h2 id="generating-custom-themes" class="bv-no-focus-ring"><span class="bd-content-title">Generating custom themes<a class="anchorjs-link" href="#generating-custom-themes" aria-labelledby="generating-custom-themes"></a></span></h2>
+<p>To use your own theme and colors in BootstrapVue, you will need to create a <code class="text-nowrap" translate="no">custom.scss</code> file in
+your project, which you can include in your main app <code class="text-nowrap" translate="no">app.vue</code> file:</p>
+<p><strong>Via template:</strong></p>
+<div class="bd-code">
+<pre class="hljs html p-2" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">style</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"scss"</span>&gt;</span>
+  // Import custom SASS variable overrides, or alternatively
+  // define your variable overrides here instead
+  @import 'assets/custom-vars.scss';
+
+  // Import Bootstrap and BootstrapVue source SCSS files
+  @import '~bootstrap/scss/bootstrap.scss';
+  @import '~bootstrap-vue/src/index.scss';
+
+  // General style overrides and custom classes
+  body {
+    margin: 0;
+  }
+
+  .my-widget {
+    color: var(--danger);
+  }
+  // ...
+<span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span></pre>
+</div>
+<p>The <code class="text-nowrap" translate="no">custom-vars.scss</code> file, which needs to be loaded before Bootstrap's SCSS and BootstrapVue's
+SCSS, will include your Bootstrap v4 variable overrides (i.e. colors, shadows, font sizes,
+breakpoints, etc).</p>
+<p><strong>Via app main entry point:</strong></p>
+<p>Create an SCSS file with your custom theme variables which also imports Bootstrap and BootstrapVue's
+SCSS:</p>
+<div class="bd-code">
+<pre class="hljs scss p-2" translate="no"><span class="hljs-comment">// File: custom.scss</span>
+
+<span class="hljs-comment">// Define your variable overrides here</span>
+<span class="hljs-variable">$enable-shadows</span>: true;
+<span class="hljs-variable">$enable-gradients</span>: true;
+<span class="hljs-variable">$grid-breakpoints</span>: (
+  xs: <span class="hljs-number">0</span>,
+  sm: <span class="hljs-number">456px</span>,
+  md: <span class="hljs-number">789px</span>,
+  lg: <span class="hljs-number">999px</span>,
+  xl: <span class="hljs-number">1234px</span>
+);
+<span class="hljs-variable">$bv-enable-table-stacked</span>: false;
+
+<span class="hljs-comment">// Include Bootstrap and BootstrapVue SCSS files</span>
+<span class="hljs-keyword">@import</span> <span class="hljs-string">'~bootstrap/scss/bootstrap.scss'</span>;
+<span class="hljs-keyword">@import</span> <span class="hljs-string">'~bootstrap-vue/src/index.scss'</span>;
+
+<span class="hljs-comment">// General style overrides and custom classes</span>
+<span class="hljs-selector-tag">body</span> {
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
+}
+
+<span class="hljs-selector-class">.my-widget</span> {
+  <span class="hljs-attribute">color</span>: var(--danger);
+}
+<span class="hljs-comment">// ...</span></pre>
+</div>
+<p>Then import that single SCSS file into your main app code entry point:</p>
+<div class="bd-code">
+<pre class="hljs js p-2" translate="no" data-filename="app.js"><span class="hljs-keyword">import</span> <span class="hljs-string">'custom.scss'</span></pre>
+</div>
+<p>You can find all of the possible variables in <code class="text-nowrap" translate="no">node_modules/bootstrap/scss/_variables.scss</code>.</p>
+<p>Do not forget to include <code class="text-nowrap" translate="no">node-sass</code> and <code class="text-nowrap" translate="no">sass-loader</code> to use <code class="text-nowrap" translate="no">scss</code> in Vue:</p>
+<div class="bd-code">
+<pre class="hljs sh p-2" translate="no">npm install --save-dev node-sass sass-loader</pre>
+</div>
+<p><strong>Note:</strong> You may need to adjust the SCSS import paths based on your build environment.</p>
+<p>For an example of creating custom theme colors, see the <a href="/docs/reference/color-variants#creating-custom-variants" class="font-weight-bold">Creating custom variants</a> section in the <a href="/docs/reference/color-variants" class="font-weight-bold">Color variants</a> reference page.</p>
+<h2 id="css-variables" class="bv-no-focus-ring"><span class="bd-content-title">CSS variables<a class="anchorjs-link" href="#css-variables" aria-labelledby="css-variables"></a></span></h2>
+<p>Bootstrap's SCSS generates around two dozen <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables" target="_blank" rel="noopener">CSS custom properties (variables)</a> in the compiled CSS. These provide easy access to commonly used values like theme colors,
+breakpoints, and primary font stacks when working in your browser’s Inspector, a code sandbox, or
+general prototyping.</p>
+<h3 id="available-bootstrap-css-variables" class="bv-no-focus-ring"><span class="bd-content-title">Available Bootstrap CSS variables<a class="anchorjs-link" href="#available-bootstrap-css-variables" aria-labelledby="available-bootstrap-css-variables"></a></span></h3>
+<p>Here are the CSS variables that are generated. The values shown are based on the Bootstrap v4 <em>defaults</em>:</p>
+<div class="bd-code">
+<pre class="hljs scss p-2" translate="no"><span class="hljs-selector-pseudo">:root</span> {
+  --blue: <span class="hljs-number">#007bff</span>;
+  --indigo: <span class="hljs-number">#6610f2</span>;
+  --purple: <span class="hljs-number">#6f42c1</span>;
+  --pink: <span class="hljs-number">#e83e8c</span>;
+  --red: <span class="hljs-number">#dc3545</span>;
+  --orange: <span class="hljs-number">#fd7e14</span>;
+  --yellow: <span class="hljs-number">#ffc107</span>;
+  --green: <span class="hljs-number">#28a745</span>;
+  --teal: <span class="hljs-number">#20c997</span>;
+  --cyan: <span class="hljs-number">#17a2b8</span>;
+  --white: <span class="hljs-number">#fff</span>;
+  --gray: <span class="hljs-number">#6c757d</span>;
+  --gray-dark: <span class="hljs-number">#343a40</span>;
+  --primary: <span class="hljs-number">#007bff</span>;
+  --secondary: <span class="hljs-number">#6c757d</span>;
+  --success: <span class="hljs-number">#28a745</span>;
+  --info: <span class="hljs-number">#17a2b8</span>;
+  --warning: <span class="hljs-number">#ffc107</span>;
+  --danger: <span class="hljs-number">#dc3545</span>;
+  --light: <span class="hljs-number">#f8f9fa</span>;
+  --dark: <span class="hljs-number">#343a40</span>;
+  --breakpoint-xs: <span class="hljs-number">0</span>;
+  --breakpoint-sm: <span class="hljs-number">576px</span>;
+  --breakpoint-md: <span class="hljs-number">768px</span>;
+  --breakpoint-lg: <span class="hljs-number">992px</span>;
+  --breakpoint-xl: <span class="hljs-number">1200px</span>;
+  --<span class="hljs-attribute">font-family</span>-sans-serif: -apple-system, BlinkMacSystemFont, <span class="hljs-string">'Segoe UI'</span>, Roboto, <span class="hljs-string">'Helvetica Neue'</span>,
+    Arial, sans-serif, <span class="hljs-string">'Apple Color Emoji'</span>, <span class="hljs-string">'Segoe UI Emoji'</span>, <span class="hljs-string">'Segoe UI Symbol'</span>;
+  --<span class="hljs-attribute">font-family</span>-monospace: SFMono-Regular, Menlo, Monaco, Consolas, <span class="hljs-string">'Liberation Mono'</span>,
+    <span class="hljs-string">'Courier New'</span>, monospace;
+}</pre>
+</div>
+<p>By setting SASS variables and maps, and recompiling the SCSS, the above generated SCSS variables
+will also be updated.</p>
+<h3 id="example" class="bv-no-focus-ring"><span class="bd-content-title">Example<a class="anchorjs-link" href="#example" aria-labelledby="example"></a></span></h3>
+<p>CSS variables offer similar flexibility to SASS’s variables, but without the need for compilation
+before being served to the browser. For example, here we are resetting our page’s font and link
+styles, as well as creating a custom class that uses theme colors, via the use of CSS variables.</p>
+<div class="bd-code">
+<pre class="hljs scss p-2" translate="no"><span class="hljs-selector-tag">body</span> {
+  <span class="hljs-attribute">font</span>: <span class="hljs-number">1rem</span>/<span class="hljs-number">1.5</span> var(--font-family-sans-serif);
+}
+
+<span class="hljs-selector-tag">a</span> {
+  <span class="hljs-attribute">color</span>: var(--blue);
+}
+
+<span class="hljs-selector-class">.custom-class</span> {
+  <span class="hljs-attribute">color</span>: var(--primary);
+  <span class="hljs-attribute">background-color</span>: var(--dark);
+}</pre>
+</div>
+<h2 id="see-also" class="bv-no-focus-ring"><span class="bd-content-title">See also<a class="anchorjs-link" href="#see-also" aria-labelledby="see-also"></a></span></h2>
+<ul>
+<li>If you are defining custom breakpoint names, please see the <a href="/docs/misc/settings" class="font-weight-bold">BootstrapVue settings</a> page on how to update BootstrapVue <code class="text-nowrap" translate="no">&lt;b-col&gt;</code> and <code class="text-nowrap" translate="no">&lt;b-form-group&gt;</code> breakpoint specific props.</li>
+<li>For more details on theming Bootstrap's SCSS/CSS, refer to the <a href="https://getbootstrap.com/docs/4.4/getting-started/theming/" target="_blank" rel="noopener"><strong>Official Bootstrap v4 Theming Documentation</strong></a>.</li>
+</ul>
+
+
+
+
+</main>
+</div>
+</div>
+
+
+<script src="../../../js/jquery-3.2.1.slim.min.js"></script> 
+<script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery-slim.min.js"><\/script>')</script> 
+<script src="../../../v4/dist/js/popper.min.js"></script> 
+<script src="../../../v4/dist/js/bootstrap.min.js"></script> 
+<script src="../../../v4/assets/js/docs.min.js"></script> 
+<script src="../../../v4/assets/js/ie-emulation-modes-warning.js"></script> 
+<script src="../../../v4/assets/js/docsearch.min.js"></script> 
+<script>
+  docsearch({
+    appId: 'PRR89ISST8',
+    apiKey: '95044d57d4d7bb744f322d1f18ed607f',
+    indexName: 'z01-bootstrapV4',
+    inputSelector: '#search-input',
+    handleSelected: function (input, event, suggestion) {
+      var url = suggestion.url;
+      url = suggestion.isLvl1 ? url.split('#')[0]: url;
+      // If it's a title we remove the anchor so it does not jump.
+      window.location.href = url;
+    },
+    transformData: function (hits) {
+      return hits.map(function (hit) {
+        hit.url = hit.url.replace('https://v4-alpha.getbootstrap.com', '/docs/4.0');
+        return hit;
+      });
+    },
+    debug: false // Set debug to true if you want to inspect the dropdown
+  });
+</script> 
+<script>
+  Holder.addTheme('gray', {
+    bg: '#777',
+    fg: 'rgba(255,255,255,.75)',
+    font: 'Helvetica',
+    fontweight: 'normal'
+  });
+</script>
+</body>
+</html>

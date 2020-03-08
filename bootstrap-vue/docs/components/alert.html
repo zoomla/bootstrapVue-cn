@@ -1,0 +1,834 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Jekyll v3.6.0">
+<title>警告提示框 &middot; BootstrapVue</title>
+<!-- Bootstrap 核心CSS -->
+<link href="../../../v4/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- 本文档额外专用css -->
+<link href="../../../v4/assets/css/docsearch.min.css" rel="stylesheet">
+<link href="../../../v4/assets/css/docs.min.css" rel="stylesheet">
+<link href="../../style/bv_path.css" rel="stylesheet">
+
+<!-- Favicons图标定义 -->
+<link data-n-head="ssr" rel="manifest" href="../../manifest.json">
+<link data-n-head="ssr" rel="shortcut icon" href="../../style/icons/icon_64.png">
+<link data-n-head="ssr" rel="apple-touch-icon" href="../../style/icons/icon_512.png" sizes="512x512">
+
+<!-- Meta关键字定义 -->
+<meta name="description" content="The most popular HTML, CSS, and JS library in the world.">
+<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+
+</head>
+<body>
+<a id="skippy" class="sr-only sr-only-focusable" href="#content">
+<div class="container"> <span class="skiplink-text">跳到主体内容</span> </div>
+</a>
+<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar"> <a class="navbar-brand mr-0 mr-md-2" href="../" aria-label="Bootstrap">
+  <svg class="d-block" width="36" height="36" viewbox="0 0 612 612" xmlns="http://www.w3.org/2000/svg" focusable="false">
+    <title>Bootstrap</title>
+    <path fill="currentColor" d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z"/>
+    <path fill="currentColor" d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z"/>
+  </svg>
+  </a>
+  <div class="navbar-nav-scroll">
+    <ul class="navbar-nav bd-navbar-nav flex-row">
+      <li class="nav-item"><a class="nav-link " href="../">首页</a></li>
+      <li class="nav-item"><a class="nav-link active" href="../../v4/docs/">中文手册</a></li>
+      <li class="nav-item"><a class="nav-link " href="../../v4/examples/">实例</a></li>
+      <li class="nav-item dropdown">
+<a class="nav-item nav-link dropdown-toggle mr-md-2" id="bd-versions" aria-expanded="false" aria-haspopup="true" href="#" data-toggle="dropdown"> 主题模板 </a>
+<div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
+<a class="dropdown-item" href="../../V4/themes/" target="_blank">主题门户</a>
+<a class="dropdown-item" href="../../V4/themes/live.html">精选模板</a>
+</div>
+</li>
+      <li class="nav-item"><a class="nav-link" href="//ico.z01.com" target="_blank" rel="noopener">zico图标系统</a></li>
+      <li class="nav-item"><a class="nav-link" href="https://expo.getbootstrap.com" target="_blank" rel="noopener">优站精选</a></li>
+      <li class="nav-item"><a class="nav-link" href="https://blog.getbootstrap.com" target="_blank" rel="noopener">Blog</a></li>
+    </ul>
+  </div>
+  <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="alse"> v2.6.1 </a>
+      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions"> 
+        <a class="dropdown-item active" href="../../../bootstrap-vue/docs/4.0/">Latest (4.3.x)</a>
+        <a class="dropdown-item" href="/Boot/">v3.3.7</a>
+        <a class="dropdown-item" href="/Sass/">Sass语言</a>
+        <a class="dropdown-item" href="/Emmet/">Emmet语法</a>
+        <a class="dropdown-item" href="//www.z01.com/tool/" target="_blank">IIS站长工具</a>
+        <a class="dropdown-item" href="//ad.z01.com/" target="_blank">广告源码</a>
+        <a class="dropdown-item" href="//v.z01.com/mb/" target="_blank">免费模板</a>
+        <a class="dropdown-item" href="//v.z01.com/" target="_blank">H5移动创作</a>
+        <a class="dropdown-item" href="//www.z01.com/help/web/3234.shtml" target="_blank">Flexbox布局</a>
+		<a class="dropdown-item" href="/boot/font.html" target="_blank">Font Awesome</a>
+</div>
+    </li>
+    <li class="nav-item"> <a class="nav-link p-2" href="//zoomla.github.io/bootstrap4-zhcn-documentation" target="_blank" rel="noopener" aria-label="GitHub">
+      <svg class="navbar-nav-svg" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 499.36" focusable="false">
+        <title>GitHub</title>
+        <path d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z" fill="currentColor" fill-rule="evenodd"/>
+      </svg>
+      </a> </li>
+    <li class="nav-item"> <a class="nav-link p-2" href="http://www.z01.com/blog/ren/3214.shtml" target="_blank" rel="noopener" aria-label="Slack">译者说</a></li>
+  </ul>
+  <a class="btn btn-bd-yellow d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="download.html">下载 Bootstrap</a> </header>
+
+<div class="container-fluid">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+      <form class="bd-search d-flex align-items-center">
+        <input type="search" class="form-control" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
+        <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30" focusable="false">
+          <title>Menu</title>
+          <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/>
+        </svg>
+        </button>
+      </form>
+
+
+<nav class="collapse bd-links" id="bd-docs-nav">
+<div class=""><a href="../" class="bd-toc-link">首页</a></div>
+<div class="bd-toc-item nuxt-link-exact-active "><a href="../../../bootstrap-vue/docs/" class="bd-toc-link  "> 起步 </a>
+<ul class="nav bd-sidenav">
+</ul>
+</div>
+<div class="bd-toc-item active"><a href="../../../bootstrap-vue/docs/components/" class="bd-toc-link nuxt-link-exact-active"> 组件 </a>
+<ul class="nav bd-sidenav">
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/index.html" class="nav-link"> 组件目录 </a></li>
+<li class="nav-item active"><a href="../../../bootstrap-vue/docs/components/alert.html" class="nav-link"> 警告提示框(Alert) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/badge.html" class="nav-link"> 徽章(Badge) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/breadcrumb.html" class="nav-link"> 面包屑导航(Breadcrumb) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/button.html" class="nav-link"> 按钮(Button) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/button-group.html" class="nav-link"> 按钮组(Button Group) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/button-toolbar.html" class="nav-link"> 按钮Toolbar(Button Toolbar) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/calendar.html" class="nav-link"> 日历组件(Calendar) <small class="badge text-uppercase badge-success">New</small> </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/card.html" class="nav-link"> 卡片(Card) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/carousel.html" class="nav-link"> 轮播效果(Carousel) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/collapse.html" class="nav-link"> 折叠面板(Collapse) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/dropdown.html" class="nav-link"> 下拉菜单(Dropdown) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/embed.html" class="nav-link"> 嵌入(Embed) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form.html" class="nav-link"> 表单(Form) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-checkbox.html" class="nav-link"> 表单复选框(Form Checkbox) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-datepicker.html" class="nav-link"> 表单时间选择器(Form Datepicker) <small class="badge text-uppercase badge-success">New</small> </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-file.html" class="nav-link"> 文件选择(Form File) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-group.html" class="nav-link"> 表单组合(Form Group) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-input.html" class="nav-link"> 表单输入框(Form Input) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-radio.html" class="nav-link"> 单选择表单Form Radio </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-select.html" class="nav-link"> 下拉式表单(Form Select) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-spinbutton.html" class="nav-link"> 按钮式表单(Form Spinbuttno) <small class="badge text-uppercase badge-success">New</small> </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-tags.html" class="nav-link"> Tags表单选择器(Form Tags) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-textarea.html" class="nav-link"> 文本框(Form Textarea) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-timepicker.html" class="nav-link"> 表单内时间控件(Form Timepicker) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/image.html" class="nav-link"> 图片(Image) </a></li>
+
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/input-group.html" class="nav-link"> 输入框(Input Group) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/jumbotron.html" class="nav-link"> Hero大块屏(Jumbotron) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/layout.html" class="nav-link"> 布局与网络Layout and Grid System </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/link.html" class="nav-link"> 链接(Link)</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/list-group.html" class="nav-link"> 列表组(List group) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/media.html" class="nav-link"> 媒体(Media) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/modal.html" class="nav-link"> 弹出模态框(Modal) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/nav.html" class="nav-link"> 导航(Nav) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/navbar.html" class="nav-link"> 导航栏(Navbar) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/pagination.html" class="nav-link"> 分页(Pagination) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/pagination-nav.html" class="nav-link"> 分页导航(Pagination Nav) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/popover.html" class="nav-link"> 指示备注(Popover) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/progress.html" class="nav-link"> 进度指示器(Progress) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/spinner.html" class="nav-link"> 旋转指示器(Spinner) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/table.html" class="nav-link"> 表格(Table) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/tabs.html" class="nav-link"> 选项卡(Tabs) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/time.html" class="nav-link"> 时间组件(Time) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/toast.html" class="nav-link"> 冒泡推送(Toasts) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/tooltip.html" class="nav-link"> tip提示组件(Tooltip) </a></li>
+</ul>
+</div>
+<div class="bd-toc-item"><a href="../../../bootstrap-vue/docs/directives/" class="bd-toc-link"> 指令 </a>
+<ul class="nav bd-sidenav">
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/directives/index.html" class="nav-link"> 指令目录 </a></li>
+<li class="nav-item active"><a href="../../../bootstrap-vue/docs/directives/hover.html" class="nav-link"> Hover 指令<small class="badge text-uppercase badge-success">New</small> </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/directives/popover.html" class="nav-link"> Popover 提示备注</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/directives/scrollspy.html" class="nav-link"> Scrollspy 滚动监听</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/directives/tooltip.html" class="nav-link"> Tooltip 提示指令</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/directives/visible.html" class="nav-link"> Visible 可见性操作<small class="badge text-uppercase badge-success">New</small> </a></li>
+</ul>
+</div>
+<div class="bd-toc-item"><a href="../../../bootstrap-vue/docs/icons.html" class="bd-toc-link"> Icons图标</a>
+<ul class="nav bd-sidenav">
+</ul>
+</div>
+  
+<div class="bd-toc-item"><a class="bd-toc-link" href="../../../bootstrap-vue/docs/reference">参考</a>
+<ul class="nav bd-sidenav">
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference" class="nav-link.html"> 参考目录 </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/accessibility.html" class="nav-link">友好访问</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/color-variants.html" class="nav-link">Color颜色变量 </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/images.html" class="nav-link"> 组件图像img的src路径解析</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/router-links.html" class="nav-link"> Router路由支持 </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/size-props.html" class="nav-link">大小规格</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/spacing-classes.html" class="nav-link">间距处理</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/starter-templates.html" class="nav-link">开始模板</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/theming.html" class="nav-link">主题色彩</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/utility-classes.html" class="nav-link">通用Class类</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/validation.html" class="nav-link">Form表单验证</a></li>
+</ul>
+</div>
+<div class="bd-toc-item"> <a class="bd-toc-link" href="../components/alerts.html"> 杂项 </a>
+  <ul class="nav bd-sidenav">
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/misc/changelog" class="nav-link"> Changelog </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/misc/contributing" class="nav-link"> Contributing </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/misc/settings" class="nav-link"> Settings </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/misc/third-party" class="nav-link"> Third party libraries </a></li>
+  </ul>
+</div>
+<div class=""><a href="/play" class="bd-toc-link">在线模拟器</a></div>
+</nav>
+</div>
+
+<div class="d-none d-xl-block col-xl-2 bd-toc">
+<ul class="section-nav">
+<li class="nav-item toc-entry mb-2"><a target="_self" href="#alerts" class="nav-link font-weight-bold"><span>警告提示框Alerts</span></a></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#visible-state" class="nav-link"><span>可见状态</span></a>
+<ul class="nav flex-column">
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#v-model-support" class="nav-link"><span>v-model支持</span></a></li>
+</ul>
+</li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#contextual-variants" class="nav-link"><span>上下文变体</span></a>
+<ul class="nav flex-column">
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#conveying-meaning-to-assistive-technologies" class="nav-link"><span>向辅助技术传达意义</span></a></li>
+</ul>
+</li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#additional-content-inside-alerts" class="nav-link"><span>警告提示框中的其他内容</span></a>
+<ul class="nav flex-column">
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#color-of-links-within-alerts" class="nav-link"><span>警告提示框中链接的颜色</span></a></li>
+</ul>
+</li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#dismissible-alerts" class="nav-link"><span>可忽略的警告提示框</span></a>
+<ul class="nav flex-column">
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#auto-dismissing-alerts" class="nav-link"><span>自动关闭警告提示框</span></a></li>
+</ul>
+</li>
+<li class="nav-item toc-entry toc-h2 mb-1 active"><a target="_self" href="#fading-alerts" class="nav-link active"><span>褪色警告提示框</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#component-reference" class="nav-link"><span>组件参考</span></a>
+<ul class="nav flex-column">
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#comp-ref-b-alert" class="nav-link"><span>&lt;b-alert&gt;</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#importing-individual-components" class="nav-link"><span>导入单个组件</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#importing-as-a-plugin" class="nav-link"><span>导入为Vue.js插件</span></a></li>
+</ul>
+</li>
+</div>
+
+<main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+
+<nav data-v-aafc4aea="" aria-label="Breadcrumbs" class="float-left mt-2 mb-0 mb-lg-2">
+<ol data-v-aafc4aea="" class="breadcrumb d-inline-flex bg-transparent px-2 py-1 my-0">
+<li data-v-aafc4aea="" class="breadcrumb-item"><a data-v-aafc4aea="" href="../../" class="nuxt-link-active" target="_self">首页</a></li>
+<li data-v-aafc4aea="" class="breadcrumb-item"><a data-v-aafc4aea="" href="../../../bootstrap-vue/docs" class="nuxt-link-active" target="_self">中文手册</a></li>
+<li data-v-aafc4aea="" class="breadcrumb-item"><a data-v-aafc4aea="" href="../../../bootstrap-vue/docs/components/" class="nuxt-link-active" target="_self">组件</a></li>
+<li data-v-aafc4aea="" class="breadcrumb-item active"><span data-v-aafc4aea="" aria-current="location">警告提示框</span></li>
+</ol>
+</nav>
+<div class="clearfix d-block"></div>
+  <h1 class="bd-title" id="content">警告提示框(Alert)</h1>
+  <p class="bd-lead">BootstrapVue组件和插件。</p>
+  <script type="text/javascript" src="../../../v4/assets/js/pupCMS.js"></script>
+
+
+
+
+<nav data-v-811345e6="" class="bd-quick-links mb-3 d-xl-none">
+<header data-v-811345e6="">
+<button data-v-811345e6="" type="button" class="btn font-weight-bold btn-outline-secondary btn-sm btn-block collapsed" aria-controls="bd-quick-links-collapse" aria-expanded="false"><span data-v-811345e6="">Show</span> page table of contents </button>
+</header>
+<ul data-v-811345e6="" id="bd-quick-links-collapse" class="collapse" style="display: none;">
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#visible-state" class=""><span data-v-811345e6="">Visible state</span></a>
+<ul data-v-811345e6="">
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#v-model-support" class=""><span data-v-811345e6="">v-model support</span></a></li>
+</ul>
+</li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#contextual-variants" class=""><span data-v-811345e6="">Contextual variants</span></a>
+<ul data-v-811345e6="">
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#conveying-meaning-to-assistive-technologies" class=""><span data-v-811345e6="">Conveying meaning to assistive technologies</span></a></li>
+</ul>
+</li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#additional-content-inside-alerts" class=""><span data-v-811345e6="">Additional content inside alerts</span></a>
+<ul data-v-811345e6="">
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#color-of-links-within-alerts" class=""><span data-v-811345e6="">Color of links within alerts</span></a></li>
+</ul>
+</li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#dismissible-alerts" class=""><span data-v-811345e6="">Dismissible alerts</span></a>
+<ul data-v-811345e6="">
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#auto-dismissing-alerts" class=""><span data-v-811345e6="">Auto dismissing alerts</span></a></li>
+</ul>
+</li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#fading-alerts" class=""><span data-v-811345e6="">Fading alerts</span></a> </li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#component-reference" class=""><span data-v-811345e6="">Component reference</span></a>
+<ul data-v-811345e6="">
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#comp-ref-b-alert" class=""><span data-v-811345e6="">&lt;b-alert&gt;</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#importing-individual-components" class=""><span data-v-811345e6="">Importing individual components</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#importing-as-a-plugin" class=""><span data-v-811345e6="">Importing as a Vue.js plugin</span></a></li>
+</ul>
+</li>
+</ul>
+</nav>
+<nav class="bd-quick-links mb-3 d-none d-xl-none" data-v-811345e6="" aria-hidden="true"> </nav>
+<p>警告提示框适用于任何长度的文本，以及可选的关闭按钮（和可选的自动关闭）。</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-alert notranslate">
+<div>
+<div role="alert" aria-live="polite" aria-atomic="true" class="alert alert-info">Default Alert</div>
+<div role="alert" aria-live="polite" aria-atomic="true" class="alert alert-success">Success Alert</div>
+ 
+<button type="button" class="btn m-1 btn-info"> Show alert with count-down timer </button>
+<button type="button" class="btn m-1 btn-info"> Show dismissible alert (hidden) </button>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-alert</span> <span class="hljs-attr">show</span>&gt;</span>Default Alert<span class="hljs-tag">&lt;/<span class="hljs-name">b-alert</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-alert</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"success"</span> <span class="hljs-attr">show</span>&gt;</span>Success Alert<span class="hljs-tag">&lt;/<span class="hljs-name">b-alert</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-alert</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">"showDismissibleAlert"</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"danger"</span> <span class="hljs-attr">dismissible</span>&gt;</span>
+      Dismissible Alert!
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-alert</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-alert</span>
+      <span class="hljs-attr">:show</span>=<span class="hljs-string">"dismissCountDown"</span>
+      <span class="hljs-attr">dismissible</span>
+      <span class="hljs-attr">variant</span>=<span class="hljs-string">"warning"</span>
+      @<span class="hljs-attr">dismissed</span>=<span class="hljs-string">"dismissCountDown=0"</span>
+      @<span class="hljs-attr">dismiss-count-down</span>=<span class="hljs-string">"countDownChanged"</span>
+    &gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>This alert will dismiss after {{ dismissCountDown }} seconds...<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-progress</span>
+        <span class="hljs-attr">variant</span>=<span class="hljs-string">"warning"</span>
+        <span class="hljs-attr">:max</span>=<span class="hljs-string">"dismissSecs"</span>
+        <span class="hljs-attr">:value</span>=<span class="hljs-string">"dismissCountDown"</span>
+        <span class="hljs-attr">height</span>=<span class="hljs-string">"4px"</span>
+      &gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-progress</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-alert</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"showAlert"</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"info"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"m-1"</span>&gt;</span>
+      Show alert with count-down timer
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"showDismissibleAlert=true"</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"info"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"m-1"</span>&gt;</span>
+      Show dismissible alert ({{ showDismissibleAlert ? 'visible' : 'hidden' }})
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    data() {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">dismissSecs</span>: <span class="hljs-number">10</span>,
+        <span class="hljs-attr">dismissCountDown</span>: <span class="hljs-number">0</span>,
+        <span class="hljs-attr">showDismissibleAlert</span>: <span class="hljs-literal">false</span>
+      }
+    },
+    <span class="hljs-attr">methods</span>: {
+      countDownChanged(dismissCountDown) {
+        <span class="hljs-keyword">this</span>.dismissCountDown = dismissCountDown
+      },
+      showAlert() {
+        <span class="hljs-keyword">this</span>.dismissCountDown = <span class="hljs-keyword">this</span>.dismissSecs
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+<h2 id="visible-state" class="bv-no-focus-ring"><span class="bd-content-title">可见状态<a class="anchorjs-link" href="#visible-state" aria-labelledby="visible-state"></a></span></h2>
+<p>使用<code translate="no" class="notranslate text-nowrap">.show</code>方法来控制警告提示框的可见性状态。默认不显示。</p>
+<p>该<code translate="no" class="notranslate text-nowrap">.show</code>方法接受布尔<code translate="no" class="notranslate text-nowrap">true</code> 或 <code translate="no" class="notranslate text-nowrap">false</code>显示和隐藏分别警报。也可以将其设置为正整数（代表秒数）以创建自消灭警报。</p>
+<h3 id="v-model-support" class="bv-no-focus-ring"><span class="bd-content-title"><code translate="no" class="notranslate text-nowrap">v-model</code>支持<a class="anchorjs-link" href="#v-model-support" aria-labelledby="v-model-support"></a></span></h3>
+<p>可以使用<code translate="no" class="notranslate text-nowrap">v-model</code>指令在<code translate="no" class="notranslate text-nowrap">show</code> prop上创建双向数据绑定。使用dismissible时很有用，是因为当用户关闭警告提示框时，变量将被更新。使用<code translate="no" class="notranslate text-nowrap">show</code>时请勿使用<code translate="no" class="notranslate text-nowrap">v-model</code>。</p>
+<h2 id="contextual-variants" class="bv-no-focus-ring"><span class="bd-content-title">上下文变体<a class="anchorjs-link" href="#contextual-variants" aria-labelledby="contextual-variants"></a></span></h2>
+<p>对于适当的造型<code translate="no" class="notranslate text-nowrap">&lt;b-alert&gt;</code>,通过设置四个必需的上下文变种利用一个 <code translate="no" class="notranslate text-nowrap">variant</code>方法，例如以下情况之一: <code translate="no" class="notranslate text-nowrap">info</code>, <code translate="no" class="notranslate text-nowrap">success</code>, <code translate="no" class="notranslate text-nowrap">warning</code> 或 <code translate="no" class="notranslate text-nowrap">danger</code>。默认值为<code translate="no" class="notranslate text-nowrap">info</code>。</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-alert-variants notranslate">
+<div>
+<div role="alert" aria-live="polite" aria-atomic="true" class="alert alert-primary">Primary Alert</div>
+<div role="alert" aria-live="polite" aria-atomic="true" class="alert alert-secondary">Secondary Alert</div>
+<div role="alert" aria-live="polite" aria-atomic="true" class="alert alert-success">Success Alert</div>
+<div role="alert" aria-live="polite" aria-atomic="true" class="alert alert-danger">Danger Alert</div>
+<div role="alert" aria-live="polite" aria-atomic="true" class="alert alert-warning">Warning Alert</div>
+<div role="alert" aria-live="polite" aria-atomic="true" class="alert alert-info">Info Alert</div>
+<div role="alert" aria-live="polite" aria-atomic="true" class="alert alert-light">Light Alert</div>
+<div role="alert" aria-live="polite" aria-atomic="true" class="alert alert-dark">Dark Alert</div>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-alert</span> <span class="hljs-attr">show</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"primary"</span>&gt;</span>Primary Alert<span class="hljs-tag">&lt;/<span class="hljs-name">b-alert</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-alert</span> <span class="hljs-attr">show</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"secondary"</span>&gt;</span>Secondary Alert<span class="hljs-tag">&lt;/<span class="hljs-name">b-alert</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-alert</span> <span class="hljs-attr">show</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"success"</span>&gt;</span>Success Alert<span class="hljs-tag">&lt;/<span class="hljs-name">b-alert</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-alert</span> <span class="hljs-attr">show</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"danger"</span>&gt;</span>Danger Alert<span class="hljs-tag">&lt;/<span class="hljs-name">b-alert</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-alert</span> <span class="hljs-attr">show</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"warning"</span>&gt;</span>Warning Alert<span class="hljs-tag">&lt;/<span class="hljs-name">b-alert</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-alert</span> <span class="hljs-attr">show</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"info"</span>&gt;</span>Info Alert<span class="hljs-tag">&lt;/<span class="hljs-name">b-alert</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-alert</span> <span class="hljs-attr">show</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"light"</span>&gt;</span>Light Alert<span class="hljs-tag">&lt;/<span class="hljs-name">b-alert</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-alert</span> <span class="hljs-attr">show</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"dark"</span>&gt;</span>Dark Alert<span class="hljs-tag">&lt;/<span class="hljs-name">b-alert</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<h3 id="conveying-meaning-to-assistive-technologies" class="bv-no-focus-ring"><span class="bd-content-title">向辅助技术传达意义<a class="anchorjs-link" href="#conveying-meaning-to-assistive-technologies" aria-labelledby="conveying-meaning-to-assistive-technologies"></a></span></h3>
+<p>使用颜色变体添加含义仅提供视觉指示，而不会传达给辅助技术的用户（例如屏幕阅读器）。确保用颜色表示的信息在内容本身（例如可见文本）中是显而易见的，或者通过替代方式包括在该信息中，例如在<code translate="no" class="notranslate text-nowrap">.sr-only</code> 类中隐藏的其他文本。</p>
+<h2 id="additional-content-inside-alerts" class="bv-no-focus-ring"><span class="bd-content-title">警告提示框中的其他内容<a class="anchorjs-link" href="#additional-content-inside-alerts" aria-labelledby="additional-content-inside-alerts"></a></span></h2>
+<p><code translate="no" class="notranslate text-nowrap">&lt;b-alerts&gt;</code> 还可以包含其他HTML元素（例如标题和段落），这些元素将使用与变体匹配的适当颜色进行样式设置。</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-alert-content notranslate">
+<div>
+<div role="alert" aria-live="polite" aria-atomic="true" class="alert alert-success">
+<h4 class="alert-heading">Well done!</h4>
+<p> Aww yeah, you successfully read this important alert message. This example text is going to
+      run a bit longer so that you can see how spacing within an alert works with this kind of
+      content. </p>
+<hr>
+<p class="mb-0"> Whenever you need to, be sure to use margin utilities to keep things nice and tidy. </p>
+</div>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-alert</span> <span class="hljs-attr">show</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"success"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h4</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"alert-heading"</span>&gt;</span>Well done!<span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+      Aww yeah, you successfully read this important alert message. This example text is going to
+      run a bit longer so that you can see how spacing within an alert works with this kind of
+      content.
+    <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">hr</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-0"</span>&gt;</span>
+      Whenever you need to, be sure to use margin utilities to keep things nice and tidy.
+    <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-alert</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<h3 id="color-of-links-within-alerts" class="bv-no-focus-ring"><span class="bd-content-title">警告提示框中链接的颜色<a class="anchorjs-link" href="#color-of-links-within-alerts" aria-labelledby="color-of-links-within-alerts"></a></span></h3>
+<p>使用<code translate="no" class="notranslate text-nowrap">.alert-link</code>实用程序CSS类可在任何警报中快速提供匹配的彩色链接。在<code translate="no" class="notranslate text-nowrap">&lt;a&gt;</code>或<code translate="no" class="notranslate text-nowrap">&lt;b-link&gt;</code>上使用。</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-alert-links notranslate">
+<div>
+<div role="alert" aria-live="polite" aria-atomic="true" class="alert alert-primary"><a href="#" class="alert-link">Primary Alert</a></div>
+<div role="alert" aria-live="polite" aria-atomic="true" class="alert alert-secondary"><a href="#" class="alert-link">Secondary Alert</a></div>
+<div role="alert" aria-live="polite" aria-atomic="true" class="alert alert-success"><a href="#" class="alert-link">Success Alert</a></div>
+<div role="alert" aria-live="polite" aria-atomic="true" class="alert alert-danger"><a href="#" class="alert-link">Danger Alert</a></div>
+<div role="alert" aria-live="polite" aria-atomic="true" class="alert alert-warning"><a href="#" class="alert-link">Warning Alert</a></div>
+<div role="alert" aria-live="polite" aria-atomic="true" class="alert alert-info"><a href="#" class="alert-link">Info Alert</a></div>
+<div role="alert" aria-live="polite" aria-atomic="true" class="alert alert-light"><a href="#" class="alert-link">Light Alert</a></div>
+<div role="alert" aria-live="polite" aria-atomic="true" class="alert alert-dark"><a href="#" class="alert-link">Dark Alert</a></div>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-alert</span> <span class="hljs-attr">show</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"primary"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"alert-link"</span>&gt;</span>Primary Alert<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-alert</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-alert</span> <span class="hljs-attr">show</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"secondary"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"alert-link"</span>&gt;</span>Secondary Alert<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-alert</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-alert</span> <span class="hljs-attr">show</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"success"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"alert-link"</span>&gt;</span>Success Alert<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-alert</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-alert</span> <span class="hljs-attr">show</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"danger"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"alert-link"</span>&gt;</span>Danger Alert<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-alert</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-alert</span> <span class="hljs-attr">show</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"warning"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"alert-link"</span>&gt;</span>Warning Alert<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-alert</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-alert</span> <span class="hljs-attr">show</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"info"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"alert-link"</span>&gt;</span>Info Alert<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-alert</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-alert</span> <span class="hljs-attr">show</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"light"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"alert-link"</span>&gt;</span>Light Alert<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-alert</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-alert</span> <span class="hljs-attr">show</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"dark"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"alert-link"</span>&gt;</span>Dark Alert<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-alert</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<h2 id="dismissible-alerts" class="bv-no-focus-ring"><span class="bd-content-title">可忽略的警告提示框<a class="anchorjs-link" href="#dismissible-alerts" aria-labelledby="dismissible-alerts"></a></span></h2>
+<p>使用<code translate="no" class="notranslate text-nowrap">dismissible</code>方法可以消除任何<code translate="no" class="notranslate text-nowrap">&lt;b-alert&gt;</code>内联。这将添加一个关闭<code translate="no" class="notranslate text-nowrap">X</code>按钮。使用<code translate="no" class="notranslate text-nowrap">dismiss-label</code>方法更改与关闭按钮关联的隐藏标签文本。</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-alert-dismiss notranslate">
+<div>
+<div role="alert" aria-live="polite" aria-atomic="true" class="alert alert-dismissible alert-info">
+<button type="button" aria-label="Close" class="close">×</button>
+Dismissible Alert! Click the close button over there <b>⇒</b></div>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-alert</span> <span class="hljs-attr">show</span> <span class="hljs-attr">dismissible</span>&gt;</span>
+    Dismissible Alert! Click the close button over there <span class="hljs-tag">&lt;<span class="hljs-name">b</span>&gt;</span><span class="hljs-symbol">&amp;rArr;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-alert</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<h3 id="auto-dismissing-alerts" class="bv-no-focus-ring"><span class="bd-content-title">自动关闭警告提示框<a class="anchorjs-link" href="#auto-dismissing-alerts" aria-labelledby="auto-dismissing-alerts"></a></span></h3>
+<p>要创建一个<code translate="no" class="notranslate text-nowrap">&lt;b-alert&gt;</code>会在一段时间后自动关闭的，请将<code translate="no" class="notranslate text-nowrap">show</code> prop (或
+<code translate="no" class="notranslate text-nowrap">v-model</code>)设置为希望其<code translate="no" class="notranslate text-nowrap">&lt;b-alert&gt;</code>可见的秒数。仅支持整数秒数。</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-alert-auto-dismissing notranslate">
+<div>
+<button type="button" class="btn m-1 btn-info"> Show alert with count-down timer </button>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-alert</span>
+      <span class="hljs-attr">:show</span>=<span class="hljs-string">"dismissCountDown"</span>
+      <span class="hljs-attr">dismissible</span>
+      <span class="hljs-attr">variant</span>=<span class="hljs-string">"warning"</span>
+      @<span class="hljs-attr">dismissed</span>=<span class="hljs-string">"dismissCountDown=0"</span>
+      @<span class="hljs-attr">dismiss-count-down</span>=<span class="hljs-string">"countDownChanged"</span>
+    &gt;</span>
+      This alert will dismiss after {{ dismissCountDown }} seconds...
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-alert</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"showAlert"</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"info"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"m-1"</span>&gt;</span>
+      Show alert with count-down timer
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    data() {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">dismissSecs</span>: <span class="hljs-number">5</span>,
+        <span class="hljs-attr">dismissCountDown</span>: <span class="hljs-number">0</span>
+      }
+    },
+    <span class="hljs-attr">methods</span>: {
+      countDownChanged(dismissCountDown) {
+        <span class="hljs-keyword">this</span>.dismissCountDown = dismissCountDown
+      },
+      showAlert() {
+        <span class="hljs-keyword">this</span>.dismissCountDown = <span class="hljs-keyword">this</span>.dismissSecs
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+<h2 id="fading-alerts" class="bv-no-focus-ring"><span class="bd-content-title">褪色警告提示框<a class="anchorjs-link" href="#fading-alerts" aria-labelledby="fading-alerts"></a></span></h2>
+<p>使用<code translate="no" class="notranslate text-nowrap">fade</code>方法启用动画。默认情况下，警报不设置动画。</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-alert-fade notranslate">
+<div>
+<div role="alert" aria-live="polite" aria-atomic="true" class="alert alert-dismissible alert-info">
+<button type="button" aria-label="Close" class="close">×</button>
+Dismissible Alert!</div>
+ 
+<button type="button" class="btn m-1 btn-info"> Show alert with count-down timer </button>
+<button type="button" class="btn m-1 btn-info"> Show dismissible alert (hidden) </button>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-alert</span> <span class="hljs-attr">show</span> <span class="hljs-attr">dismissible</span> <span class="hljs-attr">fade</span>&gt;</span>Dismissible Alert!<span class="hljs-tag">&lt;/<span class="hljs-name">b-alert</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-alert</span>
+      <span class="hljs-attr">variant</span>=<span class="hljs-string">"danger"</span>
+      <span class="hljs-attr">dismissible</span>
+      <span class="hljs-attr">fade</span>
+      <span class="hljs-attr">:show</span>=<span class="hljs-string">"showDismissibleAlert"</span>
+      @<span class="hljs-attr">dismissed</span>=<span class="hljs-string">"showDismissibleAlert=false"</span>
+    &gt;</span>
+      Dismissible Alert!
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-alert</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-alert</span>
+      <span class="hljs-attr">:show</span>=<span class="hljs-string">"dismissCountDown"</span>
+      <span class="hljs-attr">dismissible</span>
+      <span class="hljs-attr">fade</span>
+      <span class="hljs-attr">variant</span>=<span class="hljs-string">"warning"</span>
+      @<span class="hljs-attr">dismiss-count-down</span>=<span class="hljs-string">"countDownChanged"</span>
+    &gt;</span>
+      This alert will dismiss after {{ dismissCountDown }} seconds...
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-alert</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"showAlert"</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"info"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"m-1"</span>&gt;</span>
+      Show alert with count-down timer
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"showDismissibleAlert=true"</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"info"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"m-1"</span>&gt;</span>
+      Show dismissible alert ({{ showDismissibleAlert ? 'visible' : 'hidden' }})
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    data() {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">dismissSecs</span>: <span class="hljs-number">5</span>,
+        <span class="hljs-attr">dismissCountDown</span>: <span class="hljs-number">0</span>,
+        <span class="hljs-attr">showDismissibleAlert</span>: <span class="hljs-literal">false</span>
+      }
+    },
+    <span class="hljs-attr">methods</span>: {
+      countDownChanged(dismissCountDown) {
+        <span class="hljs-keyword">this</span>.dismissCountDown = dismissCountDown
+      },
+      showAlert() {
+        <span class="hljs-keyword">this</span>.dismissCountDown = <span class="hljs-keyword">this</span>.dismissSecs
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+<!-- Component reference added automatically from component package.json --> 
+
+<h2 id="component-reference" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title">组件参考<a href="../../../bootstrap-vue/docs/components/alert#component-reference" class="anchorjs-link" aria-labelledby="component-reference" target="_self"></a></span></h2>
+<section data-v-866a22e8="" class="bd-content">
+<header data-v-866a22e8="" class="row align-items-center">
+<div data-v-866a22e8="" class="col-sm-9">
+<h3 data-v-866a22e8="" id="comp-ref-b-alert" tabindex="-1" class="bv-no-focus-ring"><span data-v-866a22e8="" class="bd-content-title"><code data-v-866a22e8="" translate="translate" class="notranslate bigger">&lt;b-alert&gt;</code><a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/alert#comp-ref-b-alert" class="anchorjs-link" aria-labelledby="comp-ref-b-alert" target="_self"></a></span></h3>
+ </div>
+<div data-v-866a22e8="" class="text-sm-right col-sm-3"><a data-v-866a22e8="" rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev/src/components/alert/alert.js" class="btn btn-outline-secondary btn-sm"> View source </a></div>
+</header>
+<ul data-v-866a22e8="" class="component-ref-mini-toc my-3">
+
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-alert-props"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-alert&gt;</code> Properties </a></li>
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-alert-v-model"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-alert&gt;</code> v-model </a></li>
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-alert-slots"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-alert&gt;</code> Slots </a></li>
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-alert-events"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-alert&gt;</code> Events </a></li>
+
+</ul>
+
+<article data-v-866a22e8="" class="bd-content">
+<h4 data-v-866a22e8="" id="comp-ref-b-alert-props" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> 物产<a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/alert#comp-ref-b-alert-props" class="anchorjs-link" aria-labelledby="comp-ref-b-alert-props" target="_self"></a></span></h4>
+<div data-v-866a22e8="" class="table-responsive-sm">
+<table role="table" aria-busy="false" aria-colcount="4" class="table b-table bv-docs-table table-striped" id="__BVID__1531">
+
+<thead role="rowgroup" class="">
+
+<tr role="row" class="">
+<th role="columnheader" scope="col" aria-colindex="1" class="">属性</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">类型</th>
+<th role="columnheader" scope="col" aria-colindex="3" class="">默认</th>
+<th role="columnheader" scope="col" aria-colindex="4" class="">描述</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+
+<tr role="row" data-pk="variant" class="" id="__BVID__1531__row_variant">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">variant</code>     </td>
+<td aria-colindex="2" role="cell" class="">串</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'info'</code></td>
+<td aria-colindex="4" role="cell" class="">将Bootstrap主题颜色变体之一应用于组件</td>
+</tr>
+
+<tr role="row" data-pk="dismissible" class="" id="__BVID__1531__row_dismissible">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">dismissible</code>     </td>
+<td aria-colindex="2" role="cell" class="">布尔型</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">设置后，启用关闭按钮</td>
+</tr>
+
+<tr role="row" data-pk="dismiss-label" class="" id="__BVID__1531__row_dismiss-label">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">dismiss-label</code>     </td>
+<td aria-colindex="2" role="cell" class="">串</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'Close'</code></td>
+<td aria-colindex="4" role="cell" class="">关闭按钮上“ aria-label”属性的值</td>
+</tr>
+
+<tr role="row" data-pk="show" class="" id="__BVID__1531__row_show">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">show</code>   <span data-v-866a22e8="" class="badge badge-primary">v-model</span>  </td>
+<td aria-colindex="2" role="cell" class="">布尔值或数字或字符串</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">设置后，显示警告提示框。设置为一个数字（秒）以显示并在秒数过去后自动关闭警告提示框</td>
+</tr>
+
+<tr role="row" data-pk="fade" class="" id="__BVID__1531__row_fade">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">fade</code>     </td>
+<td aria-colindex="2" role="cell" class="">布尔型</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">设置为“ true”时，在组件上启用淡入淡出动画/过渡</td>
+</tr>
+
+</tbody>
+
+</table>
+</div>
+ </article>
+<article data-v-866a22e8="" class="bd-content">
+<h4 data-v-866a22e8="" id="comp-ref-b-alert-v-model" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title">模型<a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/alert#comp-ref-b-alert-v-model" class="anchorjs-link" aria-labelledby="comp-ref-b-alert-v-model" target="_self"></a></span></h4>
+<div data-v-866a22e8="" class="table-responsive-sm">
+<table role="table" aria-busy="false" aria-colcount="2" class="table b-table bv-docs-table table-striped" id="__BVID__1546">
+
+<thead role="rowgroup" class="">
+
+<tr role="row" class="">
+<th role="columnheader" scope="col" aria-colindex="1" class="">属性</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">事件</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+
+<tr role="row" class="">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="notranslate">show</code></td>
+<td aria-colindex="2" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="notranslate">input</code></td>
+</tr>
+
+</tbody>
+
+</table>
+</div>
+</article>
+<article data-v-866a22e8="" class="bd-content">
+<h4 data-v-866a22e8="" id="comp-ref-b-alert-slots" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> 插槽 <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/alert#comp-ref-b-alert-slots" class="anchorjs-link" aria-labelledby="comp-ref-b-alert-slots" target="_self"></a></span></h4>
+<div data-v-866a22e8="" class="table-responsive-sm">
+<table role="table" aria-busy="false" aria-colcount="2" class="table b-table bv-docs-table table-striped" id="__BVID__1555">
+
+<thead role="rowgroup" class="">
+
+<tr role="row" class="">
+<th role="columnheader" scope="col" aria-colindex="1" class="">插槽名称</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">描述</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+
+<tr role="row" data-pk="dismiss" class="" id="__BVID__1555__row_dismiss">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">dismiss</code> </td>
+<td aria-colindex="2" role="cell" class="">关闭按钮的内容。</td>
+</tr>
+
+</tbody>
+
+</table>
+</div>
+</article>
+<article data-v-866a22e8="" class="bd-content">
+<h4 data-v-866a22e8="" id="comp-ref-b-alert-events" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> 大事件 <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/alert#comp-ref-b-alert-events" class="anchorjs-link" aria-labelledby="comp-ref-b-alert-events" target="_self"></a></span></h4>
+<div data-v-866a22e8="" class="table-responsive-sm">
+<table role="table" aria-busy="false" aria-colcount="3" class="table b-table bv-docs-table table-striped" id="__BVID__1564">
+
+<thead role="rowgroup" class="">
+
+<tr role="row" class="">
+<th role="columnheader" scope="col" aria-colindex="1" class="">事件</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">争论</th>
+<th role="columnheader" scope="col" aria-colindex="3" class="">描述</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+
+<tr role="row" data-pk="dismissed" class="" id="__BVID__1564__row_dismissed">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="notranslate">dismissed</code> </td>
+<td aria-colindex="2" role="cell" class=""></td>
+<td aria-colindex="3" role="cell" class="">通过“关闭关闭”按钮或在关闭倒计时结束时关闭了警告提示框</td>
+</tr>
+<tr role="row" data-pk="dismiss-count-down" class="" id="__BVID__1564__row_dismiss-count-down">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="notranslate">dismiss-count-down</code> </td>
+<td aria-colindex="2" role="cell" class=""><ol data-v-866a22e8="" class="list-unstyled mb-0">
+<li data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">dismissCountDown</code> - <span data-v-866a22e8="">剩余的解雇时间</span></li>
+</ol></td>
+<td aria-colindex="3" role="cell" class="">当方法展示是一个数字时，此事件将在倒计时时每秒发出一次。</td>
+</tr>
+<tr role="row" data-pk="input" class="" id="__BVID__1564__row_input">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="notranslate">input</code> </td>
+<td aria-colindex="2" role="cell" class=""><ol data-v-866a22e8="" class="list-unstyled mb-0">
+<li data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">show</code> - <span data-v-866a22e8=""> 警告提示框的布尔状态，或数字为当前倒计时值</span></li>
+</ol></td>
+<td aria-colindex="3" role="cell" class="">用于更新v模型的显示值</td>
+</tr>
+
+</tbody>
+
+</table>
+</div>
+</article>
+
+<h3 id="importing-individual-components" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title"> 导入单个组件<a href="../../../bootstrap-vue/docs/components/alert#importing-individual-components" class="anchorjs-link" aria-labelledby="importing-individual-components" target="_self"></a></span></h3>
+<p> 可以通过以下命名的导出将单个组件导入到项目中：</p>
+<div class="table-responsive-sm">
+<table role="table" aria-busy="false" aria-colcount="3" class="table b-table bv-docs-table table-striped" id="__BVID__1577">
+
+<thead role="rowgroup" class="thead-default">
+
+<tr role="row" class="">
+<th role="columnheader" scope="col" aria-colindex="1" class="">零件</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">命名为出口</th>
+<th role="columnheader" scope="col" aria-colindex="3" class="">导入路径</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+
+<tr role="row" class="">
+<td aria-colindex="1" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">&lt;b-alert&gt;</code></td>
+<td aria-colindex="2" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">BAlert</code></td>
+<td aria-colindex="3" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">bootstrap-vue</code></td>
+</tr>
+
+</tbody>
+
+</table>
+</div>
+<p><strong>例:</strong></p>
+<pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { BAlert } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
+Vue.component(<span class="hljs-string">'b-alert'</span>, BAlert)</pre>
+</article>
+
+<article class="bd-content">
+<h3 id="importing-as-a-plugin" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title"> 导入为Vue.js插件<a href="../../../bootstrap-vue/docs/components/alert#importing-as-a-plugin" class="anchorjs-link" aria-labelledby="importing-as-a-plugin" target="_self"></a></span></h3>
+<p> 该插件包括上面列出的所有单个组件。插件还包括任何组件别名。</p>
+<div class="table-responsive-sm">
+<table fileds="namedExport,importPath" role="table" aria-busy="false" aria-colcount="2" class="table b-table bv-docs-table table-striped b-table-caption-top" id="__BVID__1587">
+
+<thead role="rowgroup" class="thead-default">
+
+<tr role="row" class="">
+<th role="columnheader" scope="col" aria-colindex="1" class="">命名为出口</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">导入路径</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+
+<tr role="row" class="">
+<td aria-colindex="1" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">AlertPlugin</code></td>
+<td aria-colindex="2" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">bootstrap-vue</code></td>
+</tr>
+
+</tbody>
+
+</table>
+</div>
+
+<p><strong>例:</strong></p>
+<pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { AlertPlugin } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
+Vue.use(AlertPlugin)</pre>
+</article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</main>
+</div>
+</div>
+
+
+<script src="../../../js/jquery-3.2.1.slim.min.js"></script> 
+<script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery-slim.min.js"><\/script>')</script> 
+<script src="../../../v4/dist/js/popper.min.js"></script> 
+<script src="../../../v4/dist/js/bootstrap.min.js"></script> 
+<script src="../../../v4/assets/js/docs.min.js"></script> 
+<script src="../../../v4/assets/js/ie-emulation-modes-warning.js"></script> 
+<script src="../../../v4/assets/js/docsearch.min.js"></script> 
+<script>
+  docsearch({
+    appId: 'PRR89ISST8',
+    apiKey: '95044d57d4d7bb744f322d1f18ed607f',
+    indexName: 'z01-bootstrapV4',
+    inputSelector: '#search-input',
+    handleSelected: function (input, event, suggestion) {
+      var url = suggestion.url;
+      url = suggestion.isLvl1 ? url.split('#')[0]: url;
+      // If it's a title we remove the anchor so it does not jump.
+      window.location.href = url;
+    },
+    transformData: function (hits) {
+      return hits.map(function (hit) {
+        hit.url = hit.url.replace('https://v4-alpha.getbootstrap.com', '/docs/4.0');
+        return hit;
+      });
+    },
+    debug: false // Set debug to true if you want to inspect the dropdown
+  });
+</script> 
+<script>
+  Holder.addTheme('gray', {
+    bg: '#777',
+    fg: 'rgba(255,255,255,.75)',
+    font: 'Helvetica',
+    fontweight: 'normal'
+  });
+</script>
+</body>
+</html>

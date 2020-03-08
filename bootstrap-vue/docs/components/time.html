@@ -1,0 +1,1867 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Jekyll v3.6.0">
+<title>时间组件 &middot; BootstrapVue</title>
+<!-- Bootstrap 核心CSS -->
+<link href="../../../v4/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- 本文档额外专用css -->
+<link href="../../../v4/assets/css/docsearch.min.css" rel="stylesheet">
+<link href="../../../v4/assets/css/docs.min.css" rel="stylesheet">
+<link href="../../style/bv_path.css" rel="stylesheet">
+
+<!-- Favicons图标定义 -->
+<link data-n-head="ssr" rel="manifest" href="../../manifest.json">
+<link data-n-head="ssr" rel="shortcut icon" href="../../style/icons/icon_64.png">
+<link data-n-head="ssr" rel="apple-touch-icon" href="../../style/icons/icon_512.png" sizes="512x512">
+
+<!-- Meta关键字定义 -->
+<meta name="description" content="The most popular HTML, CSS, and JS library in the world.">
+<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+
+</head>
+<body>
+<a id="skippy" class="sr-only sr-only-focusable" href="#content">
+<div class="container"> <span class="skiplink-text">跳到主体内容</span> </div>
+</a>
+<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar"> <a class="navbar-brand mr-0 mr-md-2" href="../" aria-label="Bootstrap">
+  <svg class="d-block" width="36" height="36" viewbox="0 0 612 612" xmlns="http://www.w3.org/2000/svg" focusable="false">
+    <title>Bootstrap</title>
+    <path fill="currentColor" d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z"/>
+    <path fill="currentColor" d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z"/>
+  </svg>
+  </a>
+  <div class="navbar-nav-scroll">
+    <ul class="navbar-nav bd-navbar-nav flex-row">
+      <li class="nav-item"><a class="nav-link " href="../">首页</a></li>
+      <li class="nav-item"><a class="nav-link active" href="../../v4/docs/">中文手册</a></li>
+      <li class="nav-item"><a class="nav-link " href="../../v4/examples/">实例</a></li>
+      <li class="nav-item dropdown">
+<a class="nav-item nav-link dropdown-toggle mr-md-2" id="bd-versions" aria-expanded="false" aria-haspopup="true" href="#" data-toggle="dropdown"> 主题模板 </a>
+<div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
+<a class="dropdown-item" href="../../V4/themes/" target="_blank">主题门户</a>
+<a class="dropdown-item" href="../../V4/themes/live.html">精选模板</a>
+</div>
+</li>
+      <li class="nav-item"><a class="nav-link" href="//ico.z01.com" target="_blank" rel="noopener">zico图标系统</a></li>
+      <li class="nav-item"><a class="nav-link" href="https://expo.getbootstrap.com" target="_blank" rel="noopener">优站精选</a></li>
+      <li class="nav-item"><a class="nav-link" href="https://blog.getbootstrap.com" target="_blank" rel="noopener">Blog</a></li>
+    </ul>
+  </div>
+  <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="alse"> v2.6.1 </a>
+      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions"> 
+        <a class="dropdown-item active" href="../../../bootstrap-vue/docs/4.0/">Latest (4.3.x)</a>
+        <a class="dropdown-item" href="/Boot/">v3.3.7</a>
+        <a class="dropdown-item" href="/Sass/">Sass语言</a>
+        <a class="dropdown-item" href="/Emmet/">Emmet语法</a>
+        <a class="dropdown-item" href="//www.z01.com/tool/" target="_blank">IIS站长工具</a>
+        <a class="dropdown-item" href="//ad.z01.com/" target="_blank">广告源码</a>
+        <a class="dropdown-item" href="//v.z01.com/mb/" target="_blank">免费模板</a>
+        <a class="dropdown-item" href="//v.z01.com/" target="_blank">H5移动创作</a>
+        <a class="dropdown-item" href="//www.z01.com/help/web/3234.shtml" target="_blank">Flexbox布局</a>
+		<a class="dropdown-item" href="/boot/font.html" target="_blank">Font Awesome</a>
+</div>
+    </li>
+    <li class="nav-item"> <a class="nav-link p-2" href="//zoomla.github.io/bootstrap4-zhcn-documentation" target="_blank" rel="noopener" aria-label="GitHub">
+      <svg class="navbar-nav-svg" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 499.36" focusable="false">
+        <title>GitHub</title>
+        <path d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z" fill="currentColor" fill-rule="evenodd"/>
+      </svg>
+      </a> </li>
+    <li class="nav-item"> <a class="nav-link p-2" href="http://www.z01.com/blog/ren/3214.shtml" target="_blank" rel="noopener" aria-label="Slack">译者说</a></li>
+  </ul>
+  <a class="btn btn-bd-yellow d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="download.html">下载 Bootstrap</a> </header>
+
+<div class="container-fluid">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+      <form class="bd-search d-flex align-items-center">
+        <input type="search" class="form-control" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
+        <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30" focusable="false">
+          <title>Menu</title>
+          <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/>
+        </svg>
+        </button>
+      </form>
+
+
+<nav class="collapse bd-links" id="bd-docs-nav">
+<div class=""><a href="../" class="bd-toc-link">首页</a></div>
+<div class="bd-toc-item nuxt-link-exact-active "><a href="../../../bootstrap-vue/docs/" class="bd-toc-link  "> 起步 </a>
+<ul class="nav bd-sidenav">
+</ul>
+</div>
+<div class="bd-toc-item active"><a href="../../../bootstrap-vue/docs/components/" class="bd-toc-link nuxt-link-exact-active"> 组件 </a>
+<ul class="nav bd-sidenav">
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/index.html" class="nav-link"> 组件目录 </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/alert.html" class="nav-link"> 警告提示框(Alert) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/badge.html" class="nav-link"> 徽章(Badge) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/badge.html" class="nav-link"> 面包屑导航(Breadcrumb) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/button.html" class="nav-link"> 按钮(Button) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/button-group.html" class="nav-link"> 按钮组(Button Group) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/button-toolbar.html" class="nav-link"> 按钮Toolbar(Button Toolbar) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/calendar.html" class="nav-link"> 日历组件(Calendar) <small class="badge text-uppercase badge-success">New</small> </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/card.html" class="nav-link"> 卡片(Card) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/carousel.html" class="nav-link"> 轮播效果(Carousel) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/collapse.html" class="nav-link"> 折叠面板(Collapse) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/dropdown.html" class="nav-link"> 下拉菜单(Dropdown) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/embed.html" class="nav-link"> 嵌入(Embed) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form.html" class="nav-link"> 表单(Form) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-checkbox.html" class="nav-link"> 表单复选框(Form Checkbox) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-datepicker.html" class="nav-link"> 表单时间选择器(Form Datepicker) <small class="badge text-uppercase badge-success">New</small> </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-file.html" class="nav-link"> 文件选择(Form File) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-group.html" class="nav-link"> 表单组合(Form Group) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-input.html" class="nav-link"> 表单输入框(Form Input) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-radio.html" class="nav-link"> 单选择表单Form Radio </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-select.html" class="nav-link"> 下拉式表单(Form Select) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-spinbutton.html" class="nav-link"> 按钮式表单(Form Spinbuttno) <small class="badge text-uppercase badge-success">New</small> </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-tags.html" class="nav-link"> Tags表单选择器(Form Tags) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-textarea.html" class="nav-link"> 文本框(Form Textarea) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-timepicker.html" class="nav-link"> 表单内时间控件(Form Timepicker) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/image.html" class="nav-link"> 图片(Image) </a></li>
+
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/input-group.html" class="nav-link"> 输入框(Input Group) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/jumbotron.html" class="nav-link"> Hero大块屏(Jumbotron) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/layout.html" class="nav-link"> 布局与网络Layout and Grid System </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/link.html" class="nav-link"> 链接(Link)</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/list-group.html" class="nav-link"> 列表组(List group) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/media.html" class="nav-link"> 媒体(Media) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/modal.html" class="nav-link"> 弹出模态框(Modal) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/nav.html" class="nav-link"> 导航(Nav) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/navbar.html" class="nav-link"> 导航栏(Navbar) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/pagination.html" class="nav-link"> 分页(Pagination) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/pagination-nav.html" class="nav-link"> 分页导航(Pagination Nav) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/popover.html" class="nav-link"> 指示备注(Popover) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/progress.html" class="nav-link"> 进度指示器(Progress) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/spinner.html" class="nav-link"> 旋转指示器(Spinner) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/table.html" class="nav-link"> 表格(Table) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/tabs.html" class="nav-link"> 选项卡(Tabs) </a></li>
+<li class="nav-item active"><a href="../../../bootstrap-vue/docs/components/time.html" class="nav-link"> 时间组件(Time) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/toast.html" class="nav-link"> 冒泡推送(Toasts) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/tooltip.html" class="nav-link"> tip提示组件(Tooltip) </a></li>
+</ul>
+</div>
+<div class="bd-toc-item"><a href="../../../bootstrap-vue/docs/directives/" class="bd-toc-link"> 指令 </a>
+<ul class="nav bd-sidenav">
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/directives/index.html" class="nav-link"> 指令目录 </a></li>
+<li class="nav-item active"><a href="../../../bootstrap-vue/docs/directives/hover.html" class="nav-link"> Hover 指令<small class="badge text-uppercase badge-success">New</small> </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/directives/popover.html" class="nav-link"> Popover 提示备注</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/directives/scrollspy.html" class="nav-link"> Scrollspy 滚动监听</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/directives/tooltip.html" class="nav-link"> Tooltip 提示指令</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/directives/visible.html" class="nav-link"> Visible 可见性操作<small class="badge text-uppercase badge-success">New</small> </a></li>
+</ul>
+</div>
+<div class="bd-toc-item"><a href="../../../bootstrap-vue/docs/icons.html" class="bd-toc-link"> Icons图标</a>
+<ul class="nav bd-sidenav">
+</ul>
+</div>
+  
+<div class="bd-toc-item"><a class="bd-toc-link" href="../../../bootstrap-vue/docs/reference">参考</a>
+<ul class="nav bd-sidenav">
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference" class="nav-link.html"> 参考目录 </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/accessibility.html" class="nav-link">友好访问</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/color-variants.html" class="nav-link">Color颜色变量 </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/images.html" class="nav-link"> 组件图像img的src路径解析</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/router-links.html" class="nav-link"> Router路由支持 </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/size-props.html" class="nav-link">大小规格</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/spacing-classes.html" class="nav-link">间距处理</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/starter-templates.html" class="nav-link">开始模板</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/theming.html" class="nav-link">主题色彩</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/utility-classes.html" class="nav-link">通用Class类</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/validation.html" class="nav-link">Form表单验证</a></li>
+</ul>
+</div><div class="bd-toc-item"> <a class="bd-toc-link" href="../components/alerts.html"> 杂项 </a>
+<ul class="nav bd-sidenav">
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/misc/changelog" class="nav-link"> Changelog </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/misc/contributing" class="nav-link"> Contributing </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/misc/settings" class="nav-link"> Settings </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/misc/third-party" class="nav-link"> Third party libraries </a></li>
+</ul>
+</div>
+<div class=""><a href="/play" class="bd-toc-link">在线模拟器</a></div>
+</nav>
+</div>
+
+<div class="d-none d-xl-block col-xl-2 bd-toc">
+<ul class="section-nav">
+<li class="nav-item toc-entry mb-2"><a target="_self" href="#time" class="nav-link font-weight-bold"><span>Time</span></a></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#v-model-return-value" class="nav-link"><span>v-model return value</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#disabled-and-readonly-states" class="nav-link"><span>Disabled and readonly states</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#styling" class="nav-link"><span>Styling</span></a>
+<ul class="nav flex-column">
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#enabling-of-seconds-spinbutton" class="nav-link"><span>Enabling of seconds spinbutton</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#hiding-the-top-selected-time-header" class="nav-link"><span>Hiding the top selected time header</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#border-and-padding" class="nav-link"><span>Border and padding</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#default-slot" class="nav-link"><span>Default slot</span></a></li>
+</ul>
+</li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#events" class="nav-link"><span>Events</span></a>
+<ul class="nav flex-column">
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#input-event" class="nav-link"><span>input event</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#context-event" class="nav-link"><span>context event</span></a></li>
+</ul>
+</li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#internationalization" class="nav-link"><span>Internationalization</span></a>
+<ul class="nav flex-column">
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#understanding-the-hourcycle" class="nav-link"><span>Understanding the hourCycle</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#forcing-12-or-24-hour-interface" class="nav-link"><span>Forcing 12 or 24 hour interface</span></a></li>
+</ul>
+</li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#accessibility" class="nav-link"><span>Accessibility</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#implementation-notes" class="nav-link"><span>Implementation notes</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#see-also" class="nav-link"><span>See also</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#component-reference" class="nav-link"><span>Component reference</span></a>
+<ul class="nav flex-column">
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#comp-ref-b-time" class="nav-link"><span>&lt;b-time&gt;</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#importing-individual-components" class="nav-link"><span>Importing individual components</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#importing-as-a-plugin" class="nav-link"><span>Importing as a Vue.js plugin</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+
+<nav data-v-aafc4aea="" aria-label="Breadcrumbs" class="float-left mt-2 mb-0 mb-lg-2">
+<ol data-v-aafc4aea="" class="breadcrumb d-inline-flex bg-transparent px-2 py-1 my-0">
+<li data-v-aafc4aea="" class="breadcrumb-item"><a data-v-aafc4aea="" href="../../" class="nuxt-link-active" target="_self">首页</a></li>
+<li data-v-aafc4aea="" class="breadcrumb-item"><a data-v-aafc4aea="" href="../../../bootstrap-vue/docs" class="nuxt-link-active" target="_self">中文手册</a></li>
+<li data-v-aafc4aea="" class="breadcrumb-item"><a data-v-aafc4aea="" href="../../../bootstrap-vue/docs/components/" class="nuxt-link-active" target="_self">组件</a></li>
+<li data-v-aafc4aea="" class="breadcrumb-item active"><span data-v-aafc4aea="" aria-current="location">时间组件</span></li>
+</ol>
+</nav>
+<div class="clearfix d-block"></div>
+  <h1 class="bd-title" id="content">时间组件(Time)</h1>
+  <p class="bd-lead">BootstrapVue's custom <code class="text-nowrap" translate="no">&lt;b-time&gt;</code> component generates a WAI-ARIA compliant time selection widget,which can be used to control other components, or can be used to create customized time picker inputs.</p>
+  <script type="text/javascript" src="../../../v4/assets/js/pupCMS.js"></script>
+
+
+
+<nav data-v-4abf2740="" class="bd-quick-links mb-3 d-xl-none" style="">
+<header data-v-4abf2740="">
+<button data-v-4abf2740="" type="button" class="btn font-weight-bold btn-outline-secondary btn-sm btn-block collapsed" aria-controls="bd-quick-links-collapse" aria-expanded="false"> Show page table of contents </button>
+</header>
+<ul data-v-4abf2740="" id="bd-quick-links-collapse" class="collapse" style="display: none;">
+<li data-v-4abf2740=""><a data-v-4abf2740="" target="_self" href="#v-model-return-value" class=""><span data-v-4abf2740="">v-model return value</span></a> </li>
+<li data-v-4abf2740=""><a data-v-4abf2740="" target="_self" href="#disabled-and-readonly-states" class=""><span data-v-4abf2740="">Disabled and readonly states</span></a> </li>
+<li data-v-4abf2740=""><a data-v-4abf2740="" target="_self" href="#styling" class=""><span data-v-4abf2740="">Styling</span></a>
+<ul data-v-4abf2740="">
+<li data-v-4abf2740=""><a data-v-4abf2740="" target="_self" href="#enabling-of-seconds-spinbutton" class=""><span data-v-4abf2740="">Enabling of seconds spinbutton</span></a></li>
+<li data-v-4abf2740=""><a data-v-4abf2740="" target="_self" href="#hiding-the-top-selected-time-header" class=""><span data-v-4abf2740="">Hiding the top selected time header</span></a></li>
+<li data-v-4abf2740=""><a data-v-4abf2740="" target="_self" href="#border-and-padding" class=""><span data-v-4abf2740="">Border and padding</span></a></li>
+<li data-v-4abf2740=""><a data-v-4abf2740="" target="_self" href="#default-slot" class=""><span data-v-4abf2740="">Default slot</span></a></li>
+</ul>
+</li>
+<li data-v-4abf2740=""><a data-v-4abf2740="" target="_self" href="#events" class=""><span data-v-4abf2740="">Events</span></a>
+<ul data-v-4abf2740="">
+<li data-v-4abf2740=""><a data-v-4abf2740="" target="_self" href="#input-event" class=""><span data-v-4abf2740="">input event</span></a></li>
+<li data-v-4abf2740=""><a data-v-4abf2740="" target="_self" href="#context-event" class=""><span data-v-4abf2740="">context event</span></a></li>
+</ul>
+</li>
+<li data-v-4abf2740=""><a data-v-4abf2740="" target="_self" href="#internationalization" class=""><span data-v-4abf2740="">Internationalization</span></a>
+<ul data-v-4abf2740="">
+<li data-v-4abf2740=""><a data-v-4abf2740="" target="_self" href="#understanding-the-hourcycle" class=""><span data-v-4abf2740="">Understanding the hourCycle</span></a></li>
+<li data-v-4abf2740=""><a data-v-4abf2740="" target="_self" href="#forcing-12-or-24-hour-interface" class=""><span data-v-4abf2740="">Forcing 12 or 24 hour interface</span></a></li>
+</ul>
+</li>
+<li data-v-4abf2740=""><a data-v-4abf2740="" target="_self" href="#accessibility" class=""><span data-v-4abf2740="">Accessibility</span></a> </li>
+<li data-v-4abf2740=""><a data-v-4abf2740="" target="_self" href="#implementation-notes" class=""><span data-v-4abf2740="">Implementation notes</span></a> </li>
+<li data-v-4abf2740=""><a data-v-4abf2740="" target="_self" href="#see-also" class=""><span data-v-4abf2740="">See also</span></a> </li>
+<li data-v-4abf2740=""><a data-v-4abf2740="" target="_self" href="#component-reference" class=""><span data-v-4abf2740="">Component reference</span></a>
+<ul data-v-4abf2740="">
+<li data-v-4abf2740=""><a data-v-4abf2740="" target="_self" href="#comp-ref-b-time" class=""><span data-v-4abf2740="">&lt;b-time&gt;</span></a></li>
+<li data-v-4abf2740=""><a data-v-4abf2740="" target="_self" href="#importing-individual-components" class=""><span data-v-4abf2740="">Importing individual components</span></a></li>
+<li data-v-4abf2740=""><a data-v-4abf2740="" target="_self" href="#importing-as-a-plugin" class=""><span data-v-4abf2740="">Importing as a Vue.js plugin</span></a></li>
+</ul>
+</li>
+</ul>
+</nav>
+<p><code class="text-nowrap" translate="no">&lt;b-time&gt;</code> is WAI-ARIA accessibility compliant, optimized for keyboard control (arrow, page up/down,
+home, and end keys). Internationalization is also supported, and default's to the browser's or
+page's locale, if no locale(s) are specified.</p>
+<p>If you need a time picker as a custom form control input, use the <a href="/docs/components/form-timepicker" class="font-weight-bold"><code class="text-nowrap" translate="no">&lt;b-form-timepicker&gt;</code></a> component instead.</p>
+<p>The component <code class="text-nowrap" translate="no">&lt;b-time&gt;</code> was introduced in BootstrapVue <code class="text-nowrap" translate="no">v2.6.0</code>.</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-time">
+<div class="row">
+<div class="col-md-auto">
+<div role="group" lang="en" class="b-time d-inline-flex flex-column text-center" aria-labelledby="__BVID__4660">
+<header class="mb-2">
+<output role="status" tabindex="-1" aria-live="polite" aria-atomic="true" class="border rounded d-block p-1 small text-center" id="__BVID__4660" for="__BVID__4660__spinbutton_hours_ __BVID__4660__spinbutton_minutes_ __BVID__4660__spinbutton_ampm_">
+<bdi>No time selected</bdi>
+</output>
+</header>
+<div role="group" tabindex="-1" class="d-flex align-items-center justify-content-center mx-auto" aria-labelledby="__BVID__4660">
+<div role="group" lang="en" tabindex="-1" title="Hours" class="b-form-spinbutton form-control p-0 d-inline-flex flex-column">
+<button tabindex="-1" type="button" aria-label="Increment" aria-keyshortcuts="ArrowUp" class="btn btn-sm border-0 rounded-0" aria-controls="__BVID__4660__spinbutton_hours_">
+<div>
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-plus b-icon bi">
+<g transform="translate(10 10) scale(1.25 1.25) translate(-10 -10)">
+<path fill-rule="evenodd" d="M10 5.5a.5.5 0 01.5.5v4a.5.5 0 01-.5.5H6a.5.5 0 010-1h3.5V6a.5.5 0 01.5-.5z" clip-rule="evenodd"></path>
+<path fill-rule="evenodd" d="M9.5 10a.5.5 0 01.5-.5h4a.5.5 0 010 1h-3.5V14a.5.5 0 01-1 0v-4z" clip-rule="evenodd"></path>
+</g>
+</svg>
+</div>
+</button>
+
+<output dir="ltr" role="spinbutton" tabindex="0" aria-live="off" aria-label="Hours" aria-invalid="true" aria-required="true" aria-valuemin="0" aria-valuemax="23" class="flex-grow-1 d-flex align-items-center py-1 mx-1 border-top border-bottom" id="__BVID__4660__spinbutton_hours_" aria-controls="__BVID__4660">
+<bdi class="w-100">--</bdi>
+</output>
+<button tabindex="-1" type="button" aria-label="Decrement" aria-keyshortcuts="ArrowDown" class="btn btn-sm border-0 rounded-0" aria-controls="__BVID__4660__spinbutton_hours_">
+<div>
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-dash b-icon bi">
+<g transform="translate(10 10) scale(1.25 1.25) translate(-10 -10)">
+<path fill-rule="evenodd" d="M5.5 10a.5.5 0 01.5-.5h8a.5.5 0 010 1H6a.5.5 0 01-.5-.5z" clip-rule="evenodd"></path>
+</g>
+</svg>
+</div>
+</button>
+</div>
+<div aria-hidden="true" class="d-flex flex-column">
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-circle-fill b-icon bi">
+<g transform="translate(0 -5)">
+<g transform="translate(10 10) scale(0.5 0.5) translate(-10 -10)">
+<circle cx="10" cy="10" r="8"></circle>
+</g>
+</g>
+</svg>
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-circle-fill b-icon bi">
+<g transform="translate(0 5)">
+<g transform="translate(10 10) scale(0.5 0.5) translate(-10 -10)">
+<circle cx="10" cy="10" r="8"></circle>
+</g>
+</g>
+</svg>
+</div>
+<div role="group" lang="en" tabindex="-1" title="Minutes" class="b-form-spinbutton form-control p-0 d-inline-flex flex-column">
+<button tabindex="-1" type="button" aria-label="Increment" aria-keyshortcuts="ArrowUp" class="btn btn-sm border-0 rounded-0" aria-controls="__BVID__4660__spinbutton_minutes_">
+<div>
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-plus b-icon bi">
+<g transform="translate(10 10) scale(1.25 1.25) translate(-10 -10)">
+<path fill-rule="evenodd" d="M10 5.5a.5.5 0 01.5.5v4a.5.5 0 01-.5.5H6a.5.5 0 010-1h3.5V6a.5.5 0 01.5-.5z" clip-rule="evenodd"></path>
+<path fill-rule="evenodd" d="M9.5 10a.5.5 0 01.5-.5h4a.5.5 0 010 1h-3.5V14a.5.5 0 01-1 0v-4z" clip-rule="evenodd"></path>
+</g>
+</svg>
+</div>
+</button>
+
+<output dir="ltr" role="spinbutton" tabindex="0" aria-live="off" aria-label="Minutes" aria-invalid="true" aria-required="true" aria-valuemin="0" aria-valuemax="59" class="flex-grow-1 d-flex align-items-center py-1 mx-1 border-top border-bottom" id="__BVID__4660__spinbutton_minutes_" aria-controls="__BVID__4660">
+<bdi class="w-100">--</bdi>
+</output>
+<button tabindex="-1" type="button" aria-label="Decrement" aria-keyshortcuts="ArrowDown" class="btn btn-sm border-0 rounded-0" aria-controls="__BVID__4660__spinbutton_minutes_">
+<div>
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-dash b-icon bi">
+<g transform="translate(10 10) scale(1.25 1.25) translate(-10 -10)">
+<path fill-rule="evenodd" d="M5.5 10a.5.5 0 01.5-.5h8a.5.5 0 010 1H6a.5.5 0 01-.5-.5z" clip-rule="evenodd"></path>
+</g>
+</svg>
+</div>
+</button>
+</div>
+<div role="group" lang="en" tabindex="-1" title="AM/PM" class="b-form-spinbutton form-control p-0 d-inline-flex flex-column ml-2">
+<button tabindex="-1" type="button" aria-label="Increment" aria-keyshortcuts="ArrowUp" class="btn btn-sm border-0 rounded-0" aria-controls="__BVID__4660__spinbutton_ampm_">
+<div>
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-plus b-icon bi">
+<g transform="translate(10 10) scale(1.25 1.25) translate(-10 -10)">
+<path fill-rule="evenodd" d="M10 5.5a.5.5 0 01.5.5v4a.5.5 0 01-.5.5H6a.5.5 0 010-1h3.5V6a.5.5 0 01.5-.5z" clip-rule="evenodd"></path>
+<path fill-rule="evenodd" d="M9.5 10a.5.5 0 01.5-.5h4a.5.5 0 010 1h-3.5V14a.5.5 0 01-1 0v-4z" clip-rule="evenodd"></path>
+</g>
+</svg>
+</div>
+</button>
+
+<output dir="ltr" role="spinbutton" tabindex="0" aria-live="off" aria-label="AM/PM" aria-valuemin="0" aria-valuemax="1" aria-valuenow="0" aria-valuetext="AM" class="flex-grow-1 d-flex align-items-center py-1 mx-1 border-top border-bottom" id="__BVID__4660__spinbutton_ampm_" aria-controls="__BVID__4660">
+<bdi class="w-100">AM</bdi>
+</output>
+<button tabindex="-1" type="button" aria-label="Decrement" aria-keyshortcuts="ArrowDown" class="btn btn-sm border-0 rounded-0" aria-controls="__BVID__4660__spinbutton_ampm_">
+<div>
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-dash b-icon bi">
+<g transform="translate(10 10) scale(1.25 1.25) translate(-10 -10)">
+<path fill-rule="evenodd" d="M5.5 10a.5.5 0 01.5-.5h8a.5.5 0 010 1H6a.5.5 0 01-.5-.5z" clip-rule="evenodd"></path>
+</g>
+</svg>
+</div>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="col">
+<p>Value: <b>''</b></p>
+<p class="mb-0">Context:</p>
+<pre class="small">{
+  "locale": "en",
+  "isRTL": false,
+  "hourCycle": "h12",
+  "hour12": true,
+  "hours": null,
+  "minutes": null,
+  "seconds": 0,
+  "value": "",
+  "formatted": "No time selected"
+}</pre>
+</div>
+</div>
+</div>
+<div class="bd-code">
+<pre class="hljs html p-2 xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">md</span>=<span class="hljs-string">"auto"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-time</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">"value"</span> <span class="hljs-attr">locale</span>=<span class="hljs-string">"en"</span> @<span class="hljs-attr">context</span>=<span class="hljs-string">"onContext"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-time</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Value: <span class="hljs-tag">&lt;<span class="hljs-name">b</span>&gt;</span>'{{ value }}'<span class="hljs-tag">&lt;/<span class="hljs-name">b</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-0"</span>&gt;</span>Context:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">pre</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"small"</span>&gt;</span>{{ context }}<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    data() {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">value</span>: <span class="hljs-string">''</span>,
+        <span class="hljs-attr">context</span>: <span class="hljs-literal">null</span>
+      }
+    },
+    <span class="hljs-attr">methods</span>: {
+      onContext(ctx) {
+        <span class="hljs-keyword">this</span>.context = ctx
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</div>
+<h2 id="v-model-return-value" class="bv-no-focus-ring"><span class="bd-content-title"><code class="text-nowrap" translate="no">v-model</code> return value<a class="anchorjs-link" href="#v-model-return-value" aria-labelledby="v-model-return-value"></a></span></h2>
+<p><code class="text-nowrap" translate="no">&lt;b-time&gt;</code> always returns a string in the format of <code class="text-nowrap" translate="no">HH:mm:ss</code> which is the same format returned by
+native browser <code class="text-nowrap" translate="no">&lt;input type="time"&gt;</code> controls. The value will be in the range of <code class="text-nowrap" translate="no">'00:00:00'</code> up to <code class="text-nowrap" translate="no">'23:59:59'</code> (24-hour clock using the <code class="text-nowrap" translate="no">'h23'</code> hour cycle syntax)</p>
+<p>If no time is selected, then <code class="text-nowrap" translate="no">&lt;b-time&gt;</code> returns an empty string (<code class="text-nowrap" translate="no">''</code>).</p>
+<h2 id="disabled-and-readonly-states" class="bv-no-focus-ring"><span class="bd-content-title">Disabled and readonly states<a class="anchorjs-link" href="#disabled-and-readonly-states" aria-labelledby="disabled-and-readonly-states"></a></span></h2>
+<p>Setting the <code class="text-nowrap" translate="no">disabled</code> prop will remove all interactivity of the <code class="text-nowrap" translate="no">&lt;b-time&gt;</code> component. Setting the <code class="text-nowrap" translate="no">readonly</code> prop will disable selecting a time, but will keep the spinbuttons focusable.</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-time-disabled-readonly">
+<div>
+<fieldset class="form-group" id="__BVID__4665">
+<legend tabindex="-1" class="bv-no-focus-ring col-form-label pt-0" id="__BVID__4665__BV_label_">Select time interactive state</legend>
+<div tabindex="-1" role="group" class="bv-no-focus-ring">
+<div role="radiogroup" tabindex="-1" class="bv-no-focus-ring" aria-controls="ex-disabled-readonly" id="__BVID__4666">
+<div class="custom-control custom-control-inline custom-radio">
+<input type="radio" autocomplete="off" class="custom-control-input" value="disabled" id="__BVID__4667" name="__BVID__4666">
+<label class="custom-control-label" for="__BVID__4667">Disabled</label>
+</div>
+<div class="custom-control custom-control-inline custom-radio">
+<input type="radio" autocomplete="off" class="custom-control-input" value="readonly" id="__BVID__4668" name="__BVID__4666">
+<label class="custom-control-label" for="__BVID__4668">Readonly</label>
+</div>
+<div class="custom-control custom-control-inline custom-radio">
+<input type="radio" autocomplete="off" class="custom-control-input" value="normal" id="__BVID__4669" name="__BVID__4666">
+<label class="custom-control-label" for="__BVID__4669">Normal</label>
+</div>
+</div>
+</div>
+</fieldset>
+<div role="group" lang="zh-CN" aria-labelledby="ex-disabled-readonly" aria-disabled="true" class="b-time d-inline-flex flex-column text-center">
+<header class="mb-2">
+<output id="ex-disabled-readonly" role="status" for="ex-disabled-readonly__spinbutton_hours_ ex-disabled-readonly__spinbutton_minutes_ ex-disabled-readonly__spinbutton_ampm_" aria-live="polite" aria-atomic="true" class="border rounded d-block p-1 small text-center disabled">
+<bdi>No time selected</bdi>
+</output>
+</header>
+<div role="group" aria-labelledby="ex-disabled-readonly" class="d-flex align-items-center justify-content-center mx-auto">
+<div role="group" lang="zh-CN" title="Hours" class="b-form-spinbutton form-control p-0 disabled d-inline-flex flex-column">
+<button tabindex="-1" type="button" disabled="disabled" aria-disabled="true" aria-controls="ex-disabled-readonly__spinbutton_hours_" aria-label="Increment" aria-keyshortcuts="ArrowUp" class="btn btn-sm border-0 rounded-0">
+<div>
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-plus b-icon bi">
+<g transform="translate(10 10) scale(1.25 1.25) translate(-10 -10)">
+<path fill-rule="evenodd" d="M10 5.5a.5.5 0 01.5.5v4a.5.5 0 01-.5.5H6a.5.5 0 010-1h3.5V6a.5.5 0 01.5-.5z" clip-rule="evenodd"></path>
+<path fill-rule="evenodd" d="M9.5 10a.5.5 0 01.5-.5h4a.5.5 0 010 1h-3.5V14a.5.5 0 01-1 0v-4z" clip-rule="evenodd"></path>
+</g>
+</svg>
+</div>
+</button>
+
+<output dir="ltr" id="ex-disabled-readonly__spinbutton_hours_" role="spinbutton" aria-live="off" aria-label="Hours" aria-controls="ex-disabled-readonly" aria-valuemin="0" aria-valuemax="23" class="flex-grow-1 d-flex align-items-center py-1 mx-1 border-top border-bottom">
+<bdi class="w-100">--</bdi>
+</output>
+<button tabindex="-1" type="button" disabled="disabled" aria-disabled="true" aria-controls="ex-disabled-readonly__spinbutton_hours_" aria-label="Decrement" aria-keyshortcuts="ArrowDown" class="btn btn-sm border-0 rounded-0">
+<div>
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-dash b-icon bi">
+<g transform="translate(10 10) scale(1.25 1.25) translate(-10 -10)">
+<path fill-rule="evenodd" d="M5.5 10a.5.5 0 01.5-.5h8a.5.5 0 010 1H6a.5.5 0 01-.5-.5z" clip-rule="evenodd"></path>
+</g>
+</svg>
+</div>
+</button>
+</div>
+<div aria-hidden="true" class="d-flex flex-column text-muted">
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-circle-fill b-icon bi">
+<g transform="translate(0 -5)">
+<g transform="translate(10 10) scale(0.5 0.5) translate(-10 -10)">
+<circle cx="10" cy="10" r="8"></circle>
+</g>
+</g>
+</svg>
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-circle-fill b-icon bi">
+<g transform="translate(0 5)">
+<g transform="translate(10 10) scale(0.5 0.5) translate(-10 -10)">
+<circle cx="10" cy="10" r="8"></circle>
+</g>
+</g>
+</svg>
+</div>
+<div role="group" lang="zh-CN" title="Minutes" class="b-form-spinbutton form-control p-0 disabled d-inline-flex flex-column">
+<button tabindex="-1" type="button" disabled="disabled" aria-disabled="true" aria-controls="ex-disabled-readonly__spinbutton_minutes_" aria-label="Increment" aria-keyshortcuts="ArrowUp" class="btn btn-sm border-0 rounded-0">
+<div>
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-plus b-icon bi">
+<g transform="translate(10 10) scale(1.25 1.25) translate(-10 -10)">
+<path fill-rule="evenodd" d="M10 5.5a.5.5 0 01.5.5v4a.5.5 0 01-.5.5H6a.5.5 0 010-1h3.5V6a.5.5 0 01.5-.5z" clip-rule="evenodd"></path>
+<path fill-rule="evenodd" d="M9.5 10a.5.5 0 01.5-.5h4a.5.5 0 010 1h-3.5V14a.5.5 0 01-1 0v-4z" clip-rule="evenodd"></path>
+</g>
+</svg>
+</div>
+</button>
+
+<output dir="ltr" id="ex-disabled-readonly__spinbutton_minutes_" role="spinbutton" aria-live="off" aria-label="Minutes" aria-controls="ex-disabled-readonly" aria-valuemin="0" aria-valuemax="59" class="flex-grow-1 d-flex align-items-center py-1 mx-1 border-top border-bottom">
+<bdi class="w-100">--</bdi>
+</output>
+<button tabindex="-1" type="button" disabled="disabled" aria-disabled="true" aria-controls="ex-disabled-readonly__spinbutton_minutes_" aria-label="Decrement" aria-keyshortcuts="ArrowDown" class="btn btn-sm border-0 rounded-0">
+<div>
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-dash b-icon bi">
+<g transform="translate(10 10) scale(1.25 1.25) translate(-10 -10)">
+<path fill-rule="evenodd" d="M5.5 10a.5.5 0 01.5-.5h8a.5.5 0 010 1H6a.5.5 0 01-.5-.5z" clip-rule="evenodd"></path>
+</g>
+</svg>
+</div>
+</button>
+</div>
+<div role="group" lang="zh-CN" title="AM/PM" class="b-form-spinbutton form-control p-0 disabled d-inline-flex flex-column ml-2">
+<button tabindex="-1" type="button" disabled="disabled" aria-disabled="true" aria-controls="ex-disabled-readonly__spinbutton_ampm_" aria-label="Increment" aria-keyshortcuts="ArrowUp" class="btn btn-sm border-0 rounded-0">
+<div>
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-plus b-icon bi">
+<g transform="translate(10 10) scale(1.25 1.25) translate(-10 -10)">
+<path fill-rule="evenodd" d="M10 5.5a.5.5 0 01.5.5v4a.5.5 0 01-.5.5H6a.5.5 0 010-1h3.5V6a.5.5 0 01.5-.5z" clip-rule="evenodd"></path>
+<path fill-rule="evenodd" d="M9.5 10a.5.5 0 01.5-.5h4a.5.5 0 010 1h-3.5V14a.5.5 0 01-1 0v-4z" clip-rule="evenodd"></path>
+</g>
+</svg>
+</div>
+</button>
+
+<output dir="ltr" id="ex-disabled-readonly__spinbutton_ampm_" role="spinbutton" aria-live="off" aria-label="AM/PM" aria-controls="ex-disabled-readonly" aria-valuemin="0" aria-valuemax="1" aria-valuenow="0" aria-valuetext="AM" class="flex-grow-1 d-flex align-items-center py-1 mx-1 border-top border-bottom">
+<bdi class="w-100">AM</bdi>
+</output>
+<button tabindex="-1" type="button" disabled="disabled" aria-disabled="true" aria-controls="ex-disabled-readonly__spinbutton_ampm_" aria-label="Decrement" aria-keyshortcuts="ArrowDown" class="btn btn-sm border-0 rounded-0">
+<div>
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-dash b-icon bi">
+<g transform="translate(10 10) scale(1.25 1.25) translate(-10 -10)">
+<path fill-rule="evenodd" d="M5.5 10a.5.5 0 01.5-.5h8a.5.5 0 010 1H6a.5.5 0 01-.5-.5z" clip-rule="evenodd"></path>
+</g>
+</svg>
+</div>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="bd-code">
+<pre class="hljs html p-2 xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-group</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Select time interactive state"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-form-radio-group</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">"state"</span> <span class="hljs-attr">aria-controls</span>=<span class="hljs-string">"ex-disabled-readonly"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">b-form-radio</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"disabled"</span>&gt;</span>Disabled<span class="hljs-tag">&lt;/<span class="hljs-name">b-form-radio</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">b-form-radio</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"readonly"</span>&gt;</span>Readonly<span class="hljs-tag">&lt;/<span class="hljs-name">b-form-radio</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">b-form-radio</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"normal"</span>&gt;</span>Normal<span class="hljs-tag">&lt;/<span class="hljs-name">b-form-radio</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">b-form-radio-group</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-form-group</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-time</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"ex-disabled-readonly"</span> <span class="hljs-attr">:disabled</span>=<span class="hljs-string">"disabled"</span> <span class="hljs-attr">:readonly</span>=<span class="hljs-string">"readonly"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-time</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    data() {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">state</span>: <span class="hljs-string">'disabled'</span>
+      }
+    },
+    <span class="hljs-attr">computed</span>: {
+      disabled() {
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.state === <span class="hljs-string">'disabled'</span>
+      },
+      readonly() {
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.state === <span class="hljs-string">'readonly'</span>
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</div>
+<h2 id="styling" class="bv-no-focus-ring"><span class="bd-content-title">Styling<a class="anchorjs-link" href="#styling" aria-labelledby="styling"></a></span></h2>
+<h3 id="enabling-of-seconds-spinbutton" class="bv-no-focus-ring"><span class="bd-content-title">Enabling of seconds spinbutton<a class="anchorjs-link" href="#enabling-of-seconds-spinbutton" aria-labelledby="enabling-of-seconds-spinbutton"></a></span></h3>
+<p>By default, the seconds spinbutton is not shown. To enable the section of seconds, set the <code class="text-nowrap" translate="no">show-seconds</code> prop to <code class="text-nowrap" translate="no">true</code> to enable the seconds selection spinbutton. When <code class="text-nowrap" translate="no">show-seconds</code> is <code class="text-nowrap" translate="no">false</code> (or not provided), the returned value will always have the seconds portion of the time
+string set to <code class="text-nowrap" translate="no">00</code>.</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-time-show-seconds">
+<div role="group" lang="en" class="b-time d-inline-flex flex-column text-center" aria-labelledby="__BVID__4675">
+<header class="mb-2">
+<output role="status" tabindex="-1" aria-live="polite" aria-atomic="true" class="border rounded d-block p-1 small text-center" id="__BVID__4675" for="__BVID__4675__spinbutton_hours_ __BVID__4675__spinbutton_minutes_ __BVID__4675__spinbutton_seconds_ __BVID__4675__spinbutton_ampm_">
+<bdi>No time selected</bdi>
+</output>
+</header>
+<div role="group" tabindex="-1" class="d-flex align-items-center justify-content-center mx-auto" aria-labelledby="__BVID__4675">
+<div role="group" lang="en" tabindex="-1" title="Hours" class="b-form-spinbutton form-control p-0 d-inline-flex flex-column">
+<button tabindex="-1" type="button" aria-label="Increment" aria-keyshortcuts="ArrowUp" class="btn btn-sm border-0 rounded-0" aria-controls="__BVID__4675__spinbutton_hours_">
+<div>
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-plus b-icon bi">
+<g transform="translate(10 10) scale(1.25 1.25) translate(-10 -10)">
+<path fill-rule="evenodd" d="M10 5.5a.5.5 0 01.5.5v4a.5.5 0 01-.5.5H6a.5.5 0 010-1h3.5V6a.5.5 0 01.5-.5z" clip-rule="evenodd"></path>
+<path fill-rule="evenodd" d="M9.5 10a.5.5 0 01.5-.5h4a.5.5 0 010 1h-3.5V14a.5.5 0 01-1 0v-4z" clip-rule="evenodd"></path>
+</g>
+</svg>
+</div>
+</button>
+
+<output dir="ltr" role="spinbutton" tabindex="0" aria-live="off" aria-label="Hours" aria-invalid="true" aria-required="true" aria-valuemin="0" aria-valuemax="23" class="flex-grow-1 d-flex align-items-center py-1 mx-1 border-top border-bottom" id="__BVID__4675__spinbutton_hours_" aria-controls="__BVID__4675">
+<bdi class="w-100">--</bdi>
+</output>
+<button tabindex="-1" type="button" aria-label="Decrement" aria-keyshortcuts="ArrowDown" class="btn btn-sm border-0 rounded-0" aria-controls="__BVID__4675__spinbutton_hours_">
+<div>
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-dash b-icon bi">
+<g transform="translate(10 10) scale(1.25 1.25) translate(-10 -10)">
+<path fill-rule="evenodd" d="M5.5 10a.5.5 0 01.5-.5h8a.5.5 0 010 1H6a.5.5 0 01-.5-.5z" clip-rule="evenodd"></path>
+</g>
+</svg>
+</div>
+</button>
+</div>
+<div aria-hidden="true" class="d-flex flex-column">
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-circle-fill b-icon bi">
+<g transform="translate(0 -5)">
+<g transform="translate(10 10) scale(0.5 0.5) translate(-10 -10)">
+<circle cx="10" cy="10" r="8"></circle>
+</g>
+</g>
+</svg>
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-circle-fill b-icon bi">
+<g transform="translate(0 5)">
+<g transform="translate(10 10) scale(0.5 0.5) translate(-10 -10)">
+<circle cx="10" cy="10" r="8"></circle>
+</g>
+</g>
+</svg>
+</div>
+<div role="group" lang="en" tabindex="-1" title="Minutes" class="b-form-spinbutton form-control p-0 d-inline-flex flex-column">
+<button tabindex="-1" type="button" aria-label="Increment" aria-keyshortcuts="ArrowUp" class="btn btn-sm border-0 rounded-0" aria-controls="__BVID__4675__spinbutton_minutes_">
+<div>
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-plus b-icon bi">
+<g transform="translate(10 10) scale(1.25 1.25) translate(-10 -10)">
+<path fill-rule="evenodd" d="M10 5.5a.5.5 0 01.5.5v4a.5.5 0 01-.5.5H6a.5.5 0 010-1h3.5V6a.5.5 0 01.5-.5z" clip-rule="evenodd"></path>
+<path fill-rule="evenodd" d="M9.5 10a.5.5 0 01.5-.5h4a.5.5 0 010 1h-3.5V14a.5.5 0 01-1 0v-4z" clip-rule="evenodd"></path>
+</g>
+</svg>
+</div>
+</button>
+
+<output dir="ltr" role="spinbutton" tabindex="0" aria-live="off" aria-label="Minutes" aria-invalid="true" aria-required="true" aria-valuemin="0" aria-valuemax="59" class="flex-grow-1 d-flex align-items-center py-1 mx-1 border-top border-bottom" id="__BVID__4675__spinbutton_minutes_" aria-controls="__BVID__4675">
+<bdi class="w-100">--</bdi>
+</output>
+<button tabindex="-1" type="button" aria-label="Decrement" aria-keyshortcuts="ArrowDown" class="btn btn-sm border-0 rounded-0" aria-controls="__BVID__4675__spinbutton_minutes_">
+<div>
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-dash b-icon bi">
+<g transform="translate(10 10) scale(1.25 1.25) translate(-10 -10)">
+<path fill-rule="evenodd" d="M5.5 10a.5.5 0 01.5-.5h8a.5.5 0 010 1H6a.5.5 0 01-.5-.5z" clip-rule="evenodd"></path>
+</g>
+</svg>
+</div>
+</button>
+</div>
+<div aria-hidden="true" class="d-flex flex-column">
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-circle-fill b-icon bi">
+<g transform="translate(0 -5)">
+<g transform="translate(10 10) scale(0.5 0.5) translate(-10 -10)">
+<circle cx="10" cy="10" r="8"></circle>
+</g>
+</g>
+</svg>
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-circle-fill b-icon bi">
+<g transform="translate(0 5)">
+<g transform="translate(10 10) scale(0.5 0.5) translate(-10 -10)">
+<circle cx="10" cy="10" r="8"></circle>
+</g>
+</g>
+</svg>
+</div>
+<div role="group" lang="en" tabindex="-1" title="Seconds" class="b-form-spinbutton form-control p-0 d-inline-flex flex-column">
+<button tabindex="-1" type="button" aria-label="Increment" aria-keyshortcuts="ArrowUp" class="btn btn-sm border-0 rounded-0" aria-controls="__BVID__4675__spinbutton_seconds_">
+<div>
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-plus b-icon bi">
+<g transform="translate(10 10) scale(1.25 1.25) translate(-10 -10)">
+<path fill-rule="evenodd" d="M10 5.5a.5.5 0 01.5.5v4a.5.5 0 01-.5.5H6a.5.5 0 010-1h3.5V6a.5.5 0 01.5-.5z" clip-rule="evenodd"></path>
+<path fill-rule="evenodd" d="M9.5 10a.5.5 0 01.5-.5h4a.5.5 0 010 1h-3.5V14a.5.5 0 01-1 0v-4z" clip-rule="evenodd"></path>
+</g>
+</svg>
+</div>
+</button>
+
+<output dir="ltr" role="spinbutton" tabindex="0" aria-live="off" aria-label="Seconds" aria-invalid="true" aria-required="true" aria-valuemin="0" aria-valuemax="59" class="flex-grow-1 d-flex align-items-center py-1 mx-1 border-top border-bottom" id="__BVID__4675__spinbutton_seconds_" aria-controls="__BVID__4675">
+<bdi class="w-100">--</bdi>
+</output>
+<button tabindex="-1" type="button" aria-label="Decrement" aria-keyshortcuts="ArrowDown" class="btn btn-sm border-0 rounded-0" aria-controls="__BVID__4675__spinbutton_seconds_">
+<div>
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-dash b-icon bi">
+<g transform="translate(10 10) scale(1.25 1.25) translate(-10 -10)">
+<path fill-rule="evenodd" d="M5.5 10a.5.5 0 01.5-.5h8a.5.5 0 010 1H6a.5.5 0 01-.5-.5z" clip-rule="evenodd"></path>
+</g>
+</svg>
+</div>
+</button>
+</div>
+<div role="group" lang="en" tabindex="-1" title="AM/PM" class="b-form-spinbutton form-control p-0 d-inline-flex flex-column ml-2">
+<button tabindex="-1" type="button" aria-label="Increment" aria-keyshortcuts="ArrowUp" class="btn btn-sm border-0 rounded-0" aria-controls="__BVID__4675__spinbutton_ampm_">
+<div>
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-plus b-icon bi">
+<g transform="translate(10 10) scale(1.25 1.25) translate(-10 -10)">
+<path fill-rule="evenodd" d="M10 5.5a.5.5 0 01.5.5v4a.5.5 0 01-.5.5H6a.5.5 0 010-1h3.5V6a.5.5 0 01.5-.5z" clip-rule="evenodd"></path>
+<path fill-rule="evenodd" d="M9.5 10a.5.5 0 01.5-.5h4a.5.5 0 010 1h-3.5V14a.5.5 0 01-1 0v-4z" clip-rule="evenodd"></path>
+</g>
+</svg>
+</div>
+</button>
+
+<output dir="ltr" role="spinbutton" tabindex="0" aria-live="off" aria-label="AM/PM" aria-valuemin="0" aria-valuemax="1" aria-valuenow="0" aria-valuetext="AM" class="flex-grow-1 d-flex align-items-center py-1 mx-1 border-top border-bottom" id="__BVID__4675__spinbutton_ampm_" aria-controls="__BVID__4675">
+<bdi class="w-100">AM</bdi>
+</output>
+<button tabindex="-1" type="button" aria-label="Decrement" aria-keyshortcuts="ArrowDown" class="btn btn-sm border-0 rounded-0" aria-controls="__BVID__4675__spinbutton_ampm_">
+<div>
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-dash b-icon bi">
+<g transform="translate(10 10) scale(1.25 1.25) translate(-10 -10)">
+<path fill-rule="evenodd" d="M5.5 10a.5.5 0 01.5-.5h8a.5.5 0 010 1H6a.5.5 0 01-.5-.5z" clip-rule="evenodd"></path>
+</g>
+</svg>
+</div>
+</button>
+</div>
+</div>
+</div>
+<div class="mt-2">Value: ''</div>
+</div>
+<div class="bd-code">
+<pre class="hljs html p-2 xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-time</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">"value"</span> <span class="hljs-attr">show-seconds</span> <span class="hljs-attr">locale</span>=<span class="hljs-string">"en"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-time</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mt-2"</span>&gt;</span>Value: '{{ value }}'<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    data() {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">value</span>: <span class="hljs-string">''</span>
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</div>
+<h3 id="hiding-the-top-selected-time-header" class="bv-no-focus-ring"><span class="bd-content-title">Hiding the top selected time header<a class="anchorjs-link" href="#hiding-the-top-selected-time-header" aria-labelledby="hiding-the-top-selected-time-header"></a></span></h3>
+<p>By default, the current selected time will be displayed at the top of the time component, formatted
+in the locale's language.</p>
+<p>You can hide this header via the <code class="text-nowrap" translate="no">hide-header</code> prop. Note this only visually hides the selected
+time, while keeping it available to screen reader users as an <code class="text-nowrap" translate="no">aria-live</code> region.</p>
+<h3 id="border-and-padding" class="bv-no-focus-ring"><span class="bd-content-title">Border and padding<a class="anchorjs-link" href="#border-and-padding" aria-labelledby="border-and-padding"></a></span></h3>
+<p>Fancy a time control with a border with padding? Use Bootstrap's border and padding utility classes
+to add borders and padding:</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-time-border-padding">
+<div role="group" lang="en" class="b-time d-inline-flex flex-column text-center border rounded p-2" aria-labelledby="__BVID__4681">
+<header class="mb-2">
+<output role="status" tabindex="-1" aria-live="polite" aria-atomic="true" class="border rounded d-block p-1 small text-center" id="__BVID__4681" for="__BVID__4681__spinbutton_hours_ __BVID__4681__spinbutton_minutes_ __BVID__4681__spinbutton_ampm_">
+<bdi>No time selected</bdi>
+</output>
+</header>
+<div role="group" tabindex="-1" class="d-flex align-items-center justify-content-center mx-auto" aria-labelledby="__BVID__4681">
+<div role="group" lang="en" tabindex="-1" title="Hours" class="b-form-spinbutton form-control p-0 d-inline-flex flex-column">
+<button tabindex="-1" type="button" aria-label="Increment" aria-keyshortcuts="ArrowUp" class="btn btn-sm border-0 rounded-0" aria-controls="__BVID__4681__spinbutton_hours_">
+<div>
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-plus b-icon bi">
+<g transform="translate(10 10) scale(1.25 1.25) translate(-10 -10)">
+<path fill-rule="evenodd" d="M10 5.5a.5.5 0 01.5.5v4a.5.5 0 01-.5.5H6a.5.5 0 010-1h3.5V6a.5.5 0 01.5-.5z" clip-rule="evenodd"></path>
+<path fill-rule="evenodd" d="M9.5 10a.5.5 0 01.5-.5h4a.5.5 0 010 1h-3.5V14a.5.5 0 01-1 0v-4z" clip-rule="evenodd"></path>
+</g>
+</svg>
+</div>
+</button>
+
+<output dir="ltr" role="spinbutton" tabindex="0" aria-live="off" aria-label="Hours" aria-invalid="true" aria-required="true" aria-valuemin="0" aria-valuemax="23" class="flex-grow-1 d-flex align-items-center py-1 mx-1 border-top border-bottom" id="__BVID__4681__spinbutton_hours_" aria-controls="__BVID__4681">
+<bdi class="w-100">--</bdi>
+</output>
+<button tabindex="-1" type="button" aria-label="Decrement" aria-keyshortcuts="ArrowDown" class="btn btn-sm border-0 rounded-0" aria-controls="__BVID__4681__spinbutton_hours_">
+<div>
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-dash b-icon bi">
+<g transform="translate(10 10) scale(1.25 1.25) translate(-10 -10)">
+<path fill-rule="evenodd" d="M5.5 10a.5.5 0 01.5-.5h8a.5.5 0 010 1H6a.5.5 0 01-.5-.5z" clip-rule="evenodd"></path>
+</g>
+</svg>
+</div>
+</button>
+</div>
+<div aria-hidden="true" class="d-flex flex-column">
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-circle-fill b-icon bi">
+<g transform="translate(0 -5)">
+<g transform="translate(10 10) scale(0.5 0.5) translate(-10 -10)">
+<circle cx="10" cy="10" r="8"></circle>
+</g>
+</g>
+</svg>
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-circle-fill b-icon bi">
+<g transform="translate(0 5)">
+<g transform="translate(10 10) scale(0.5 0.5) translate(-10 -10)">
+<circle cx="10" cy="10" r="8"></circle>
+</g>
+</g>
+</svg>
+</div>
+<div role="group" lang="en" tabindex="-1" title="Minutes" class="b-form-spinbutton form-control p-0 d-inline-flex flex-column">
+<button tabindex="-1" type="button" aria-label="Increment" aria-keyshortcuts="ArrowUp" class="btn btn-sm border-0 rounded-0" aria-controls="__BVID__4681__spinbutton_minutes_">
+<div>
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-plus b-icon bi">
+<g transform="translate(10 10) scale(1.25 1.25) translate(-10 -10)">
+<path fill-rule="evenodd" d="M10 5.5a.5.5 0 01.5.5v4a.5.5 0 01-.5.5H6a.5.5 0 010-1h3.5V6a.5.5 0 01.5-.5z" clip-rule="evenodd"></path>
+<path fill-rule="evenodd" d="M9.5 10a.5.5 0 01.5-.5h4a.5.5 0 010 1h-3.5V14a.5.5 0 01-1 0v-4z" clip-rule="evenodd"></path>
+</g>
+</svg>
+</div>
+</button>
+
+<output dir="ltr" role="spinbutton" tabindex="0" aria-live="off" aria-label="Minutes" aria-invalid="true" aria-required="true" aria-valuemin="0" aria-valuemax="59" class="flex-grow-1 d-flex align-items-center py-1 mx-1 border-top border-bottom" id="__BVID__4681__spinbutton_minutes_" aria-controls="__BVID__4681">
+<bdi class="w-100">--</bdi>
+</output>
+<button tabindex="-1" type="button" aria-label="Decrement" aria-keyshortcuts="ArrowDown" class="btn btn-sm border-0 rounded-0" aria-controls="__BVID__4681__spinbutton_minutes_">
+<div>
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-dash b-icon bi">
+<g transform="translate(10 10) scale(1.25 1.25) translate(-10 -10)">
+<path fill-rule="evenodd" d="M5.5 10a.5.5 0 01.5-.5h8a.5.5 0 010 1H6a.5.5 0 01-.5-.5z" clip-rule="evenodd"></path>
+</g>
+</svg>
+</div>
+</button>
+</div>
+<div role="group" lang="en" tabindex="-1" title="AM/PM" class="b-form-spinbutton form-control p-0 d-inline-flex flex-column ml-2">
+<button tabindex="-1" type="button" aria-label="Increment" aria-keyshortcuts="ArrowUp" class="btn btn-sm border-0 rounded-0" aria-controls="__BVID__4681__spinbutton_ampm_">
+<div>
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-plus b-icon bi">
+<g transform="translate(10 10) scale(1.25 1.25) translate(-10 -10)">
+<path fill-rule="evenodd" d="M10 5.5a.5.5 0 01.5.5v4a.5.5 0 01-.5.5H6a.5.5 0 010-1h3.5V6a.5.5 0 01.5-.5z" clip-rule="evenodd"></path>
+<path fill-rule="evenodd" d="M9.5 10a.5.5 0 01.5-.5h4a.5.5 0 010 1h-3.5V14a.5.5 0 01-1 0v-4z" clip-rule="evenodd"></path>
+</g>
+</svg>
+</div>
+</button>
+
+<output dir="ltr" role="spinbutton" tabindex="0" aria-live="off" aria-label="AM/PM" aria-valuemin="0" aria-valuemax="1" aria-valuenow="0" aria-valuetext="AM" class="flex-grow-1 d-flex align-items-center py-1 mx-1 border-top border-bottom" id="__BVID__4681__spinbutton_ampm_" aria-controls="__BVID__4681">
+<bdi class="w-100">AM</bdi>
+</output>
+<button tabindex="-1" type="button" aria-label="Decrement" aria-keyshortcuts="ArrowDown" class="btn btn-sm border-0 rounded-0" aria-controls="__BVID__4681__spinbutton_ampm_">
+<div>
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-dash b-icon bi">
+<g transform="translate(10 10) scale(1.25 1.25) translate(-10 -10)">
+<path fill-rule="evenodd" d="M5.5 10a.5.5 0 01.5-.5h8a.5.5 0 010 1H6a.5.5 0 01-.5-.5z" clip-rule="evenodd"></path>
+</g>
+</svg>
+</div>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="bd-code">
+<pre class="hljs html p-2 xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-time</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"border rounded p-2"</span> <span class="hljs-attr">locale</span>=<span class="hljs-string">"en"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-time</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span></pre>
+</div>
+<h3 id="default-slot" class="bv-no-focus-ring"><span class="bd-content-title">Default slot<a class="anchorjs-link" href="#default-slot" aria-labelledby="default-slot"></a></span></h3>
+<p>Provide optional content at the bottom of the time interface via the use of <code class="text-nowrap" translate="no">default</code> slot. The slot
+can be used to add buttons such as Now or Reset, etc.</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-time-default-slot">
+<div role="group" lang="en" class="b-time d-inline-flex flex-column text-center" aria-labelledby="__BVID__4686">
+<header class="mb-2">
+<output role="status" tabindex="-1" aria-live="polite" aria-atomic="true" class="border rounded d-block p-1 small text-center" id="__BVID__4686" for="__BVID__4686__spinbutton_hours_ __BVID__4686__spinbutton_minutes_ __BVID__4686__spinbutton_seconds_ __BVID__4686__spinbutton_ampm_">
+<bdi>No time selected</bdi>
+</output>
+</header>
+<div role="group" tabindex="-1" class="d-flex align-items-center justify-content-center mx-auto" aria-labelledby="__BVID__4686">
+<div role="group" lang="en" tabindex="-1" title="Hours" class="b-form-spinbutton form-control p-0 d-inline-flex flex-column">
+<button tabindex="-1" type="button" aria-label="Increment" aria-keyshortcuts="ArrowUp" class="btn btn-sm border-0 rounded-0" aria-controls="__BVID__4686__spinbutton_hours_">
+<div>
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-plus b-icon bi">
+<g transform="translate(10 10) scale(1.25 1.25) translate(-10 -10)">
+<path fill-rule="evenodd" d="M10 5.5a.5.5 0 01.5.5v4a.5.5 0 01-.5.5H6a.5.5 0 010-1h3.5V6a.5.5 0 01.5-.5z" clip-rule="evenodd"></path>
+<path fill-rule="evenodd" d="M9.5 10a.5.5 0 01.5-.5h4a.5.5 0 010 1h-3.5V14a.5.5 0 01-1 0v-4z" clip-rule="evenodd"></path>
+</g>
+</svg>
+</div>
+</button>
+
+<output dir="ltr" role="spinbutton" tabindex="0" aria-live="off" aria-label="Hours" aria-invalid="true" aria-required="true" aria-valuemin="0" aria-valuemax="23" class="flex-grow-1 d-flex align-items-center py-1 mx-1 border-top border-bottom" id="__BVID__4686__spinbutton_hours_" aria-controls="__BVID__4686">
+<bdi class="w-100">--</bdi>
+</output>
+<button tabindex="-1" type="button" aria-label="Decrement" aria-keyshortcuts="ArrowDown" class="btn btn-sm border-0 rounded-0" aria-controls="__BVID__4686__spinbutton_hours_">
+<div>
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-dash b-icon bi">
+<g transform="translate(10 10) scale(1.25 1.25) translate(-10 -10)">
+<path fill-rule="evenodd" d="M5.5 10a.5.5 0 01.5-.5h8a.5.5 0 010 1H6a.5.5 0 01-.5-.5z" clip-rule="evenodd"></path>
+</g>
+</svg>
+</div>
+</button>
+</div>
+<div aria-hidden="true" class="d-flex flex-column">
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-circle-fill b-icon bi">
+<g transform="translate(0 -5)">
+<g transform="translate(10 10) scale(0.5 0.5) translate(-10 -10)">
+<circle cx="10" cy="10" r="8"></circle>
+</g>
+</g>
+</svg>
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-circle-fill b-icon bi">
+<g transform="translate(0 5)">
+<g transform="translate(10 10) scale(0.5 0.5) translate(-10 -10)">
+<circle cx="10" cy="10" r="8"></circle>
+</g>
+</g>
+</svg>
+</div>
+<div role="group" lang="en" tabindex="-1" title="Minutes" class="b-form-spinbutton form-control p-0 d-inline-flex flex-column">
+<button tabindex="-1" type="button" aria-label="Increment" aria-keyshortcuts="ArrowUp" class="btn btn-sm border-0 rounded-0" aria-controls="__BVID__4686__spinbutton_minutes_">
+<div>
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-plus b-icon bi">
+<g transform="translate(10 10) scale(1.25 1.25) translate(-10 -10)">
+<path fill-rule="evenodd" d="M10 5.5a.5.5 0 01.5.5v4a.5.5 0 01-.5.5H6a.5.5 0 010-1h3.5V6a.5.5 0 01.5-.5z" clip-rule="evenodd"></path>
+<path fill-rule="evenodd" d="M9.5 10a.5.5 0 01.5-.5h4a.5.5 0 010 1h-3.5V14a.5.5 0 01-1 0v-4z" clip-rule="evenodd"></path>
+</g>
+</svg>
+</div>
+</button>
+
+<output dir="ltr" role="spinbutton" tabindex="0" aria-live="off" aria-label="Minutes" aria-invalid="true" aria-required="true" aria-valuemin="0" aria-valuemax="59" class="flex-grow-1 d-flex align-items-center py-1 mx-1 border-top border-bottom" id="__BVID__4686__spinbutton_minutes_" aria-controls="__BVID__4686">
+<bdi class="w-100">--</bdi>
+</output>
+<button tabindex="-1" type="button" aria-label="Decrement" aria-keyshortcuts="ArrowDown" class="btn btn-sm border-0 rounded-0" aria-controls="__BVID__4686__spinbutton_minutes_">
+<div>
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-dash b-icon bi">
+<g transform="translate(10 10) scale(1.25 1.25) translate(-10 -10)">
+<path fill-rule="evenodd" d="M5.5 10a.5.5 0 01.5-.5h8a.5.5 0 010 1H6a.5.5 0 01-.5-.5z" clip-rule="evenodd"></path>
+</g>
+</svg>
+</div>
+</button>
+</div>
+<div aria-hidden="true" class="d-flex flex-column">
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-circle-fill b-icon bi">
+<g transform="translate(0 -5)">
+<g transform="translate(10 10) scale(0.5 0.5) translate(-10 -10)">
+<circle cx="10" cy="10" r="8"></circle>
+</g>
+</g>
+</svg>
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-circle-fill b-icon bi">
+<g transform="translate(0 5)">
+<g transform="translate(10 10) scale(0.5 0.5) translate(-10 -10)">
+<circle cx="10" cy="10" r="8"></circle>
+</g>
+</g>
+</svg>
+</div>
+<div role="group" lang="en" tabindex="-1" title="Seconds" class="b-form-spinbutton form-control p-0 d-inline-flex flex-column">
+<button tabindex="-1" type="button" aria-label="Increment" aria-keyshortcuts="ArrowUp" class="btn btn-sm border-0 rounded-0" aria-controls="__BVID__4686__spinbutton_seconds_">
+<div>
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-plus b-icon bi">
+<g transform="translate(10 10) scale(1.25 1.25) translate(-10 -10)">
+<path fill-rule="evenodd" d="M10 5.5a.5.5 0 01.5.5v4a.5.5 0 01-.5.5H6a.5.5 0 010-1h3.5V6a.5.5 0 01.5-.5z" clip-rule="evenodd"></path>
+<path fill-rule="evenodd" d="M9.5 10a.5.5 0 01.5-.5h4a.5.5 0 010 1h-3.5V14a.5.5 0 01-1 0v-4z" clip-rule="evenodd"></path>
+</g>
+</svg>
+</div>
+</button>
+
+<output dir="ltr" role="spinbutton" tabindex="0" aria-live="off" aria-label="Seconds" aria-invalid="true" aria-required="true" aria-valuemin="0" aria-valuemax="59" class="flex-grow-1 d-flex align-items-center py-1 mx-1 border-top border-bottom" id="__BVID__4686__spinbutton_seconds_" aria-controls="__BVID__4686">
+<bdi class="w-100">--</bdi>
+</output>
+<button tabindex="-1" type="button" aria-label="Decrement" aria-keyshortcuts="ArrowDown" class="btn btn-sm border-0 rounded-0" aria-controls="__BVID__4686__spinbutton_seconds_">
+<div>
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-dash b-icon bi">
+<g transform="translate(10 10) scale(1.25 1.25) translate(-10 -10)">
+<path fill-rule="evenodd" d="M5.5 10a.5.5 0 01.5-.5h8a.5.5 0 010 1H6a.5.5 0 01-.5-.5z" clip-rule="evenodd"></path>
+</g>
+</svg>
+</div>
+</button>
+</div>
+<div role="group" lang="en" tabindex="-1" title="AM/PM" class="b-form-spinbutton form-control p-0 d-inline-flex flex-column ml-2">
+<button tabindex="-1" type="button" aria-label="Increment" aria-keyshortcuts="ArrowUp" class="btn btn-sm border-0 rounded-0" aria-controls="__BVID__4686__spinbutton_ampm_">
+<div>
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-plus b-icon bi">
+<g transform="translate(10 10) scale(1.25 1.25) translate(-10 -10)">
+<path fill-rule="evenodd" d="M10 5.5a.5.5 0 01.5.5v4a.5.5 0 01-.5.5H6a.5.5 0 010-1h3.5V6a.5.5 0 01.5-.5z" clip-rule="evenodd"></path>
+<path fill-rule="evenodd" d="M9.5 10a.5.5 0 01.5-.5h4a.5.5 0 010 1h-3.5V14a.5.5 0 01-1 0v-4z" clip-rule="evenodd"></path>
+</g>
+</svg>
+</div>
+</button>
+
+<output dir="ltr" role="spinbutton" tabindex="0" aria-live="off" aria-label="AM/PM" aria-valuemin="0" aria-valuemax="1" aria-valuenow="0" aria-valuetext="AM" class="flex-grow-1 d-flex align-items-center py-1 mx-1 border-top border-bottom" id="__BVID__4686__spinbutton_ampm_" aria-controls="__BVID__4686">
+<bdi class="w-100">AM</bdi>
+</output>
+<button tabindex="-1" type="button" aria-label="Decrement" aria-keyshortcuts="ArrowDown" class="btn btn-sm border-0 rounded-0" aria-controls="__BVID__4686__spinbutton_ampm_">
+<div>
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-dash b-icon bi">
+<g transform="translate(10 10) scale(1.25 1.25) translate(-10 -10)">
+<path fill-rule="evenodd" d="M5.5 10a.5.5 0 01.5-.5h8a.5.5 0 010 1H6a.5.5 0 01-.5-.5z" clip-rule="evenodd"></path>
+</g>
+</svg>
+</div>
+</button>
+</div>
+</div>
+<footer class="mt-2">
+<div dir="ltr" class="d-flex">
+<button type="button" class="btn ml-auto btn-outline-primary btn-sm"> Set Now </button>
+</div>
+</footer>
+</div>
+</div>
+<div class="bd-code">
+<pre class="hljs html p-2 xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-time</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">"value"</span> <span class="hljs-attr">show-seconds</span> <span class="hljs-attr">locale</span>=<span class="hljs-string">"en"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"d-flex"</span> <span class="hljs-attr">dir</span>=<span class="hljs-string">"ltr"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span>
+        <span class="hljs-attr">size</span>=<span class="hljs-string">"sm"</span>
+        <span class="hljs-attr">variant</span>=<span class="hljs-string">"outline-danger"</span>
+        <span class="hljs-attr">v-if</span>=<span class="hljs-string">"value"</span>
+        @<span class="hljs-attr">click</span>=<span class="hljs-string">"clearTime"</span>
+      &gt;</span>
+        Clear time
+      <span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span>
+        <span class="hljs-attr">size</span>=<span class="hljs-string">"sm"</span>
+        <span class="hljs-attr">variant</span>=<span class="hljs-string">"outline-primary"</span>
+        <span class="hljs-attr">class</span>=<span class="hljs-string">"ml-auto"</span>
+        @<span class="hljs-attr">click</span>=<span class="hljs-string">"setNow"</span>
+      &gt;</span>
+        Set Now
+      <span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-time</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    data() {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">value</span>: <span class="hljs-literal">null</span>
+      }
+    },
+    <span class="hljs-attr">methods</span>: {
+      setNow() {
+        <span class="hljs-keyword">const</span> now = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>()
+        <span class="hljs-comment">// Grab the HH:mm:ss part of the time string</span>
+        <span class="hljs-keyword">this</span>.value = now.toTimeString().slice(<span class="hljs-number">0</span>, <span class="hljs-number">8</span>)
+      },
+      clearTime() {
+        <span class="hljs-keyword">this</span>.value = <span class="hljs-string">''</span>
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</div>
+<h2 id="events" class="bv-no-focus-ring"><span class="bd-content-title">Events<a class="anchorjs-link" href="#events" aria-labelledby="events"></a></span></h2>
+<h3 id="input-event" class="bv-no-focus-ring"><span class="bd-content-title"><code class="text-nowrap" translate="no">input</code> event<a class="anchorjs-link" href="#input-event" aria-labelledby="input-event"></a></span></h3>
+<p>The <code class="text-nowrap" translate="no">'input'</code> event is emitted when updating the <code class="text-nowrap" translate="no">v-model</code>. The event has a single argument which is
+the selected time as a string. The value is a string in the format of <code class="text-nowrap" translate="no">'HH:mm:ss'</code> (or an empty
+string if no time is selected). Valid values are in the range of <code class="text-nowrap" translate="no">'00:00:00'</code> through <code class="text-nowrap" translate="no">23:59:59'</code>.</p>
+<p>If fhe <code class="text-nowrap" translate="no">show-seconds</code> prop is not set, the seconds portion of the time value will always be <code class="text-nowrap" translate="no">'00'</code>.</p>
+<p>If the <code class="text-nowrap" translate="no">disabled</code> or <code class="text-nowrap" translate="no">readonly</code> props are set, the <code class="text-nowrap" translate="no">'input'</code> event will <strong>not</strong> be emitted.</p>
+<h3 id="context-event" class="bv-no-focus-ring"><span class="bd-content-title"><code class="text-nowrap" translate="no">context</code> event<a class="anchorjs-link" href="#context-event" aria-labelledby="context-event"></a></span></h3>
+<p>The <code class="text-nowrap" translate="no">'context'</code> event is emitted whenever a user selects a time, or the user changes a value of one
+of the spinbuttons. It will also be emitted when the component is created (just before insertion
+into the DOM), or when the resolved locale has changed.</p>
+<p>The event will not be emitted when the <code class="text-nowrap" translate="no">disabled</code> or <code class="text-nowrap" translate="no">readonly</code> props are set (except for the
+initial emit when the time component is created).</p>
+<p>The <code class="text-nowrap" translate="no">'context'</code> event is passed a context object as it's only argument, with the following
+properties:</p>
+<div class="table-responsive-sm">
+<table class="b-table table table-bordered table-striped bv-docs-table">
+<thead class="thead-default">
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="text-nowrap" translate="no">value</code></td>
+<td>The current value as an <code class="text-nowrap" translate="no">HH:mm:ss</code> string or an empty string <code class="text-nowrap" translate="no">''</code> if no time selected</td>
+</tr>
+<tr>
+<td><code class="text-nowrap" translate="no">formatted</code></td>
+<td>The current value formatted in the resolved locale, or the <code class="text-nowrap" translate="no">label-no-time</code> prop value if no time selected</td>
+</tr>
+<tr>
+<td><code class="text-nowrap" translate="no">hours</code></td>
+<td>The currently selected hour (always 24 hour, <code class="text-nowrap" translate="no">h23'</code> format) as a number or <code class="text-nowrap" translate="no">null</code> if no hour</td>
+</tr>
+<tr>
+<td><code class="text-nowrap" translate="no">minutes</code></td>
+<td>The currently selected minute value as a number or <code class="text-nowrap" translate="no">null</code> if no minute</td>
+</tr>
+<tr>
+<td><code class="text-nowrap" translate="no">seconds</code></td>
+<td>The currently selected seconds value as a number or <code class="text-nowrap" translate="no">null</code> if no seconds</td>
+</tr>
+<tr>
+<td><code class="text-nowrap" translate="no">locale</code></td>
+<td>The locale resolved by the time picker, this <em>may</em> be different than the requested locale</td>
+</tr>
+<tr>
+<td><code class="text-nowrap" translate="no">isRTL</code></td>
+<td>Will be <code class="text-nowrap" translate="no">true</code> is the locale is RTL (right-to-left)</td>
+</tr>
+<tr>
+<td><code class="text-nowrap" translate="no">hour12</code></td>
+<td>Boolean value indicating if the interface is using 12 hour format</td>
+</tr>
+<tr>
+<td><code class="text-nowrap" translate="no">hourCycle</code></td>
+<td>A string representing the type of hour cycle used for the spinbuttons: <code class="text-nowrap" translate="no">'h11'</code>, <code class="text-nowrap" translate="no">'h12'</code>, <code class="text-nowrap" translate="no">'h23'</code> or <code class="text-nowrap" translate="no">'h24'</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Refer to the <a href="#internationalization" class="font-weight-bold">Internationalization section</a> for information on the context
+properties <code class="text-nowrap" translate="no">locale</code>, <code class="text-nowrap" translate="no">hour12</code> and <code class="text-nowrap" translate="no">hourCycle</code>.</p>
+<h2 id="internationalization" class="bv-no-focus-ring"><span class="bd-content-title">Internationalization<a class="anchorjs-link" href="#internationalization" aria-labelledby="internationalization"></a></span></h2>
+<p>Internationalization of the time interface is provided via <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat" target="_blank" rel="noopener"><code class="text-nowrap" translate="no">Intl.DateTimeFormat</code></a> and <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat" target="_blank" rel="noopener"><code class="text-nowrap" translate="no">Intl.NumberFormat</code></a>,
+except for the labels applied to elements of the time control (aria-labels, selected status, etc).
+You must provide your own translations for these labels. The available locales will be browser
+dependant (not all browsers support all locales).</p>
+<p>By default <code class="text-nowrap" translate="no">&lt;b-time&gt;</code> will use the browser's default locale, but you can specify the locale (or
+locales) to use via the <code class="text-nowrap" translate="no">locale</code> prop. The prop accepts either a single locale string, or an array
+of locale strings (listed in order of most preferred locale to least prefered).</p>
+<p>The emitted <code class="text-nowrap" translate="no">'context'</code> event will include which locale the time control has resolved to (which may
+not be the same locale as requested, depending on the supported locales of <code class="text-nowrap" translate="no">Intl</code>).</p>
+<p>For server side rendering (SSR) when using Node.js, ensure that the Node.js runtime you are using
+supports <code class="text-nowrap" translate="no">Intl</code> and the locales you will be using. Refer to the <a href="https://nodejs.org/api/intl.html" target="_blank" rel="noopener">Node Intl support documentation</a> for details.</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-time-i18n">
+<div class="row">
+<div class="mb-3 col-12">
+<label for="example-locales">Locale:</label>
+<select id="example-locales" class="custom-select">
+<option value="en-US">English US (en-US)</option>
+<option value="de">German (de)</option>
+<option value="ar-EG">Arabic Egyptian (ar-EG)</option>
+<option value="zh">Chinese (zh)</option>
+</select>
+</div>
+<div class="col-md-auto">
+<div role="group" lang="en-US" class="b-time d-inline-flex flex-column text-center" aria-labelledby="__BVID__4693">
+<header class="mb-2">
+<output role="status" tabindex="-1" aria-live="polite" aria-atomic="true" class="border rounded d-block p-1 small text-center" id="__BVID__4693" for="__BVID__4693__spinbutton_hours_ __BVID__4693__spinbutton_minutes_ __BVID__4693__spinbutton_seconds_ __BVID__4693__spinbutton_ampm_">
+<bdi>No time selected</bdi>
+</output>
+</header>
+<div role="group" tabindex="-1" class="d-flex align-items-center justify-content-center mx-auto" aria-labelledby="__BVID__4693">
+<div role="group" lang="en-US" tabindex="-1" title="Hours" class="b-form-spinbutton form-control p-0 d-inline-flex flex-column">
+<button tabindex="-1" type="button" aria-label="Increment" aria-keyshortcuts="ArrowUp" class="btn btn-sm border-0 rounded-0" aria-controls="__BVID__4693__spinbutton_hours_">
+<div>
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-plus b-icon bi">
+<g transform="translate(10 10) scale(1.25 1.25) translate(-10 -10)">
+<path fill-rule="evenodd" d="M10 5.5a.5.5 0 01.5.5v4a.5.5 0 01-.5.5H6a.5.5 0 010-1h3.5V6a.5.5 0 01.5-.5z" clip-rule="evenodd"></path>
+<path fill-rule="evenodd" d="M9.5 10a.5.5 0 01.5-.5h4a.5.5 0 010 1h-3.5V14a.5.5 0 01-1 0v-4z" clip-rule="evenodd"></path>
+</g>
+</svg>
+</div>
+</button>
+
+<output dir="ltr" role="spinbutton" tabindex="0" aria-live="off" aria-label="Hours" aria-invalid="true" aria-required="true" aria-valuemin="0" aria-valuemax="23" class="flex-grow-1 d-flex align-items-center py-1 mx-1 border-top border-bottom" id="__BVID__4693__spinbutton_hours_" aria-controls="__BVID__4693">
+<bdi class="w-100">--</bdi>
+</output>
+<button tabindex="-1" type="button" aria-label="Decrement" aria-keyshortcuts="ArrowDown" class="btn btn-sm border-0 rounded-0" aria-controls="__BVID__4693__spinbutton_hours_">
+<div>
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-dash b-icon bi">
+<g transform="translate(10 10) scale(1.25 1.25) translate(-10 -10)">
+<path fill-rule="evenodd" d="M5.5 10a.5.5 0 01.5-.5h8a.5.5 0 010 1H6a.5.5 0 01-.5-.5z" clip-rule="evenodd"></path>
+</g>
+</svg>
+</div>
+</button>
+</div>
+<div aria-hidden="true" class="d-flex flex-column">
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-circle-fill b-icon bi">
+<g transform="translate(0 -5)">
+<g transform="translate(10 10) scale(0.5 0.5) translate(-10 -10)">
+<circle cx="10" cy="10" r="8"></circle>
+</g>
+</g>
+</svg>
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-circle-fill b-icon bi">
+<g transform="translate(0 5)">
+<g transform="translate(10 10) scale(0.5 0.5) translate(-10 -10)">
+<circle cx="10" cy="10" r="8"></circle>
+</g>
+</g>
+</svg>
+</div>
+<div role="group" lang="en-US" tabindex="-1" title="Minutes" class="b-form-spinbutton form-control p-0 d-inline-flex flex-column">
+<button tabindex="-1" type="button" aria-label="Increment" aria-keyshortcuts="ArrowUp" class="btn btn-sm border-0 rounded-0" aria-controls="__BVID__4693__spinbutton_minutes_">
+<div>
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-plus b-icon bi">
+<g transform="translate(10 10) scale(1.25 1.25) translate(-10 -10)">
+<path fill-rule="evenodd" d="M10 5.5a.5.5 0 01.5.5v4a.5.5 0 01-.5.5H6a.5.5 0 010-1h3.5V6a.5.5 0 01.5-.5z" clip-rule="evenodd"></path>
+<path fill-rule="evenodd" d="M9.5 10a.5.5 0 01.5-.5h4a.5.5 0 010 1h-3.5V14a.5.5 0 01-1 0v-4z" clip-rule="evenodd"></path>
+</g>
+</svg>
+</div>
+</button>
+
+<output dir="ltr" role="spinbutton" tabindex="0" aria-live="off" aria-label="Minutes" aria-invalid="true" aria-required="true" aria-valuemin="0" aria-valuemax="59" class="flex-grow-1 d-flex align-items-center py-1 mx-1 border-top border-bottom" id="__BVID__4693__spinbutton_minutes_" aria-controls="__BVID__4693">
+<bdi class="w-100">--</bdi>
+</output>
+<button tabindex="-1" type="button" aria-label="Decrement" aria-keyshortcuts="ArrowDown" class="btn btn-sm border-0 rounded-0" aria-controls="__BVID__4693__spinbutton_minutes_">
+<div>
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-dash b-icon bi">
+<g transform="translate(10 10) scale(1.25 1.25) translate(-10 -10)">
+<path fill-rule="evenodd" d="M5.5 10a.5.5 0 01.5-.5h8a.5.5 0 010 1H6a.5.5 0 01-.5-.5z" clip-rule="evenodd"></path>
+</g>
+</svg>
+</div>
+</button>
+</div>
+<div aria-hidden="true" class="d-flex flex-column">
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-circle-fill b-icon bi">
+<g transform="translate(0 -5)">
+<g transform="translate(10 10) scale(0.5 0.5) translate(-10 -10)">
+<circle cx="10" cy="10" r="8"></circle>
+</g>
+</g>
+</svg>
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-circle-fill b-icon bi">
+<g transform="translate(0 5)">
+<g transform="translate(10 10) scale(0.5 0.5) translate(-10 -10)">
+<circle cx="10" cy="10" r="8"></circle>
+</g>
+</g>
+</svg>
+</div>
+<div role="group" lang="en-US" tabindex="-1" title="Seconds" class="b-form-spinbutton form-control p-0 d-inline-flex flex-column">
+<button tabindex="-1" type="button" aria-label="Increment" aria-keyshortcuts="ArrowUp" class="btn btn-sm border-0 rounded-0" aria-controls="__BVID__4693__spinbutton_seconds_">
+<div>
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-plus b-icon bi">
+<g transform="translate(10 10) scale(1.25 1.25) translate(-10 -10)">
+<path fill-rule="evenodd" d="M10 5.5a.5.5 0 01.5.5v4a.5.5 0 01-.5.5H6a.5.5 0 010-1h3.5V6a.5.5 0 01.5-.5z" clip-rule="evenodd"></path>
+<path fill-rule="evenodd" d="M9.5 10a.5.5 0 01.5-.5h4a.5.5 0 010 1h-3.5V14a.5.5 0 01-1 0v-4z" clip-rule="evenodd"></path>
+</g>
+</svg>
+</div>
+</button>
+
+<output dir="ltr" role="spinbutton" tabindex="0" aria-live="off" aria-label="Seconds" aria-invalid="true" aria-required="true" aria-valuemin="0" aria-valuemax="59" class="flex-grow-1 d-flex align-items-center py-1 mx-1 border-top border-bottom" id="__BVID__4693__spinbutton_seconds_" aria-controls="__BVID__4693">
+<bdi class="w-100">--</bdi>
+</output>
+<button tabindex="-1" type="button" aria-label="Decrement" aria-keyshortcuts="ArrowDown" class="btn btn-sm border-0 rounded-0" aria-controls="__BVID__4693__spinbutton_seconds_">
+<div>
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-dash b-icon bi">
+<g transform="translate(10 10) scale(1.25 1.25) translate(-10 -10)">
+<path fill-rule="evenodd" d="M5.5 10a.5.5 0 01.5-.5h8a.5.5 0 010 1H6a.5.5 0 01-.5-.5z" clip-rule="evenodd"></path>
+</g>
+</svg>
+</div>
+</button>
+</div>
+<div role="group" lang="en-US" tabindex="-1" title="AM/PM" class="b-form-spinbutton form-control p-0 d-inline-flex flex-column ml-2">
+<button tabindex="-1" type="button" aria-label="Increment" aria-keyshortcuts="ArrowUp" class="btn btn-sm border-0 rounded-0" aria-controls="__BVID__4693__spinbutton_ampm_">
+<div>
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-plus b-icon bi">
+<g transform="translate(10 10) scale(1.25 1.25) translate(-10 -10)">
+<path fill-rule="evenodd" d="M10 5.5a.5.5 0 01.5.5v4a.5.5 0 01-.5.5H6a.5.5 0 010-1h3.5V6a.5.5 0 01.5-.5z" clip-rule="evenodd"></path>
+<path fill-rule="evenodd" d="M9.5 10a.5.5 0 01.5-.5h4a.5.5 0 010 1h-3.5V14a.5.5 0 01-1 0v-4z" clip-rule="evenodd"></path>
+</g>
+</svg>
+</div>
+</button>
+
+<output dir="ltr" role="spinbutton" tabindex="0" aria-live="off" aria-label="AM/PM" aria-valuemin="0" aria-valuemax="1" aria-valuenow="0" aria-valuetext="AM" class="flex-grow-1 d-flex align-items-center py-1 mx-1 border-top border-bottom" id="__BVID__4693__spinbutton_ampm_" aria-controls="__BVID__4693">
+<bdi class="w-100">AM</bdi>
+</output>
+<button tabindex="-1" type="button" aria-label="Decrement" aria-keyshortcuts="ArrowDown" class="btn btn-sm border-0 rounded-0" aria-controls="__BVID__4693__spinbutton_ampm_">
+<div>
+<svg width="1em" height="1em" viewBox="0 0 20 20" focusable="false" role="img" alt="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-dash b-icon bi">
+<g transform="translate(10 10) scale(1.25 1.25) translate(-10 -10)">
+<path fill-rule="evenodd" d="M5.5 10a.5.5 0 01.5-.5h8a.5.5 0 010 1H6a.5.5 0 01-.5-.5z" clip-rule="evenodd"></path>
+</g>
+</svg>
+</div>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="col">
+<p>Value: <b>''</b></p>
+<p class="mb-0">Context:</p>
+<pre class="small">{
+  "locale": "en-US",
+  "isRTL": false,
+  "hourCycle": "h12",
+  "hour12": true,
+  "hours": null,
+  "minutes": null,
+  "seconds": null,
+  "value": "",
+  "formatted": "No time selected"
+}</pre>
+</div>
+</div>
+</div>
+<div class="bd-code">
+<pre class="hljs html p-2 xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"12"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-3"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"example-locales"</span>&gt;</span>Locale:<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-form-select</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"example-locales"</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">"locale"</span> <span class="hljs-attr">:options</span>=<span class="hljs-string">"locales"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-select</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">md</span>=<span class="hljs-string">"auto"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-time</span>
+        <span class="hljs-attr">v-model</span>=<span class="hljs-string">"value"</span>
+        <span class="hljs-attr">v-bind</span>=<span class="hljs-string">"labels[locale] || {}"</span>
+        <span class="hljs-attr">:locale</span>=<span class="hljs-string">"locale"</span>
+        <span class="hljs-attr">show-seconds</span>
+        @<span class="hljs-attr">context</span>=<span class="hljs-string">"onContext"</span>
+      &gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-time</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Value: <span class="hljs-tag">&lt;<span class="hljs-name">b</span>&gt;</span>'{{ value }}'<span class="hljs-tag">&lt;/<span class="hljs-name">b</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-0"</span>&gt;</span>Context:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">pre</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"small"</span>&gt;</span>{{ context }}<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span>
+   <span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    data() {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">value</span>: <span class="hljs-string">''</span>,
+        <span class="hljs-attr">context</span>: <span class="hljs-literal">null</span>,
+        <span class="hljs-attr">locale</span>: <span class="hljs-string">'en-US'</span>,
+        <span class="hljs-attr">locales</span>: [
+          { <span class="hljs-attr">value</span>: <span class="hljs-string">'en-US'</span>, <span class="hljs-attr">text</span>: <span class="hljs-string">'English US (en-US)'</span> },
+          { <span class="hljs-attr">value</span>: <span class="hljs-string">'de'</span>, <span class="hljs-attr">text</span>: <span class="hljs-string">'German (de)'</span> },
+          { <span class="hljs-attr">value</span>: <span class="hljs-string">'ar-EG'</span>, <span class="hljs-attr">text</span>: <span class="hljs-string">'Arabic Egyptian (ar-EG)'</span> },
+          { <span class="hljs-attr">value</span>: <span class="hljs-string">'zh'</span>, <span class="hljs-attr">text</span>: <span class="hljs-string">'Chinese (zh)'</span> }
+        ],
+        <span class="hljs-attr">labels</span>: {
+          <span class="hljs-attr">de</span>: {
+            <span class="hljs-attr">labelHours</span>: <span class="hljs-string">'Stunden'</span>,
+            <span class="hljs-attr">labelMinutes</span>: <span class="hljs-string">'Minuten'</span>,
+            <span class="hljs-attr">labelSeconds</span>: <span class="hljs-string">'Sekunden'</span>,
+            <span class="hljs-attr">labelIncrement</span>: <span class="hljs-string">'Erhöhen'</span>,
+            <span class="hljs-attr">labelDecrement</span>: <span class="hljs-string">'Verringern'</span>,
+            <span class="hljs-attr">labelSelected</span>: <span class="hljs-string">'Ausgewählte Zeit'</span>,
+            <span class="hljs-attr">labelNoTimeSelected</span>: <span class="hljs-string">'Keine Zeit ausgewählt'</span>
+          },
+          <span class="hljs-string">'ar-EG'</span>: {
+            <span class="hljs-attr">labelHours</span>: <span class="hljs-string">'ساعات'</span>,
+            <span class="hljs-attr">labelMinutes</span>: <span class="hljs-string">'الدقائق'</span>,
+            <span class="hljs-attr">labelSeconds</span>: <span class="hljs-string">'ثواني'</span>,
+            <span class="hljs-attr">labelAmpm</span>: <span class="hljs-string">'صباحا مساء'</span>,
+            <span class="hljs-attr">labelAm</span>: <span class="hljs-string">'ص'</span>,
+            <span class="hljs-attr">labelPm</span>: <span class="hljs-string">'م'</span>,
+            <span class="hljs-attr">labelIncrement</span>: <span class="hljs-string">'زيادة'</span>,
+            <span class="hljs-attr">labelDecrement</span>: <span class="hljs-string">'إنقاص'</span>,
+            <span class="hljs-attr">labelSelected</span>: <span class="hljs-string">'الوقت المحدد'</span>,
+            <span class="hljs-attr">labelNoTimeSelected</span>: <span class="hljs-string">'لا وقت المختار'</span>
+          },
+          <span class="hljs-attr">zh</span>: {
+            <span class="hljs-attr">labelHours</span>: <span class="hljs-string">'小时'</span>,
+            <span class="hljs-attr">labelMinutes</span>: <span class="hljs-string">'分钟'</span>,
+            <span class="hljs-attr">labelSeconds</span>: <span class="hljs-string">'秒'</span>,
+            <span class="hljs-attr">labelAmpm</span>: <span class="hljs-string">'上午下午'</span>,
+            <span class="hljs-attr">labelAm</span>: <span class="hljs-string">'上午'</span>,
+            <span class="hljs-attr">labelPm</span>: <span class="hljs-string">'下午'</span>,
+            <span class="hljs-attr">labelIncrement</span>: <span class="hljs-string">'增量'</span>,
+            <span class="hljs-attr">labelDecrement</span>: <span class="hljs-string">'减量'</span>,
+            <span class="hljs-attr">labelSelected</span>: <span class="hljs-string">'选定时间'</span>,
+            <span class="hljs-attr">labelNoTimeSelected</span>: <span class="hljs-string">'没有选择时间'</span>
+          }
+        }
+      }
+    },
+    <span class="hljs-attr">methods</span>: {
+      onContext(ctx) {
+        <span class="hljs-keyword">this</span>.context = ctx
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</div>
+<h3 id="understanding-the-hourcycle" class="bv-no-focus-ring"><span class="bd-content-title">Understanding the <code class="text-nowrap" translate="no">hourCycle</code><a class="anchorjs-link" href="#understanding-the-hourcycle" aria-labelledby="understanding-the-hourcycle"></a></span></h3>
+<p>There are 2 main types of time keeping conventions (clocks) used around the world: the 12-hour clock
+and the 24-hour clock. The <code class="text-nowrap" translate="no">hourCycle</code> property allows you to access the clock type used by a
+particular locale. The hour cycle type can have several different values, which are listed in the
+table below. The <code class="text-nowrap" translate="no">hourCycle</code> signals how the time <code class="text-nowrap" translate="no">'00:00:00'</code> (the start of the day) should be
+presented/formatted to a user of a particular locale. The <a href="#context-event" class="font-weight-bold"><code class="text-nowrap" translate="no">'context'</code> event</a> includes the resolved <code class="text-nowrap" translate="no">hourCycle</code> value.</p>
+<div class="table-responsive-sm">
+<table class="b-table table table-bordered table-striped bv-docs-table">
+<thead class="thead-default">
+<tr>
+<th><code class="text-nowrap" translate="no">hourCycle</code></th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="text-nowrap" translate="no">'h12'</code></td>
+<td>Hour system using <code class="text-nowrap" translate="no">1</code>–<code class="text-nowrap" translate="no">12</code>. The 12 hour clock, with midnight starting at 12:00 am</td>
+</tr>
+<tr>
+<td><code class="text-nowrap" translate="no">'h23'</code></td>
+<td>Hour system using <code class="text-nowrap" translate="no">0</code>–<code class="text-nowrap" translate="no">23</code>. The 24 hour clock, with midnight starting at 0:00</td>
+</tr>
+<tr>
+<td><code class="text-nowrap" translate="no">'h11'</code></td>
+<td>Hour system using <code class="text-nowrap" translate="no">0</code>–<code class="text-nowrap" translate="no">11</code>. The 12 hour clock, with midnight starting at 0:00 am</td>
+</tr>
+<tr>
+<td><code class="text-nowrap" translate="no">'h24'</code></td>
+<td>Hour system using <code class="text-nowrap" translate="no">1</code>–<code class="text-nowrap" translate="no">24</code>. The 24 hour clock, with midnight starting at 24:00</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Native HTML5 <code class="text-nowrap" translate="no">&lt;input type="date"&gt;</code> returns the time value in the <code class="text-nowrap" translate="no">'h23'</code> format, and <code class="text-nowrap" translate="no">&lt;b-time&gt;</code> also
+returns the v-model in the <code class="text-nowrap" translate="no">'h23'</code> format. This value may differ from what is presented to the user
+via the GUI (spin buttons) of the <code class="text-nowrap" translate="no">&lt;b-time&gt;</code> component, dependant upon the <a href="#internationalization" class="font-weight-bold">locale selected</a>.</p>
+<p><strong>Note:</strong> IE 11 <em>does not support</em> resolving the <code class="text-nowrap" translate="no">hourCycle</code> value of a locale, so we assume either <code class="text-nowrap" translate="no">h12</code> or <code class="text-nowrap" translate="no">h23</code> based on the resolved <code class="text-nowrap" translate="no">hour12</code> value.</p>
+<h3 id="forcing-12-or-24-hour-interface" class="bv-no-focus-ring"><span class="bd-content-title">Forcing 12 or 24 hour interface<a class="anchorjs-link" href="#forcing-12-or-24-hour-interface" aria-labelledby="forcing-12-or-24-hour-interface"></a></span></h3>
+<p>12-hour versus 24-hour input is determined by the client browsers default locale (or the locale
+resolved from the <code class="text-nowrap" translate="no">locale</code> prop). To force a 12-hour user interface, set the prop <code class="text-nowrap" translate="no">hour12</code> to <code class="text-nowrap" translate="no">true</code>. To force a 24-hour user interface, set the prop <code class="text-nowrap" translate="no">hour12</code> to <code class="text-nowrap" translate="no">false</code>. The default for prop <code class="text-nowrap" translate="no">hour12</code> is <code class="text-nowrap" translate="no">null</code> which uses the resolved locale to determine which interface to use.</p>
+<p>The setting of the <code class="text-nowrap" translate="no">hour12</code> prop will affect which <a href="#understanding-the-hourcycle" class="font-weight-bold"><code class="text-nowrap" translate="no">hourCycle</code></a> is
+resolved for formatting the hours spinbutton. Note that while this may affect the format of the hour
+spinbutton, but the formatted time string result <em>may</em> show the <code class="text-nowrap" translate="no">'h12</code> or <code class="text-nowrap" translate="no">'h23'</code> format due to
+limitations in the client <code class="text-nowrap" translate="no">Intl.DateTimeFormat</code> support for a particular locale. It is therefore <strong>recommended to leave the <code class="text-nowrap" translate="no">hour12</code> prop set to <code class="text-nowrap" translate="no">null</code> (default)</strong>, so show the locale default
+time/hour formatting.</p>
+<h2 id="accessibility" class="bv-no-focus-ring"><span class="bd-content-title">Accessibility<a class="anchorjs-link" href="#accessibility" aria-labelledby="accessibility"></a></span></h2>
+<p><code class="text-nowrap" translate="no">&lt;b-time&gt;</code> provides many accessibility features, such as <code class="text-nowrap" translate="no">aria-live</code> regions, roles, aria labeling,
+shortcut keys and full keyboard navigation to work with most screen readers.</p>
+<p>Keyboard navigation:</p>
+<ul>
+<li><kbd class="notranslate" translate="no">ArrowUp</kbd> Increments the currently selected spinbutton value</li>
+<li><kbd class="notranslate" translate="no">ArrowDown</kbd> Decrements the currently selected spinbutton value</li>
+<li><kbd class="notranslate" translate="no">Home</kbd> Sets the selected spinbutton to the minimum value</li>
+<li><kbd class="notranslate" translate="no">End</kbd> Sets the selected spinbutton to the maximum value</li>
+<li><kbd class="notranslate" translate="no">PageUp</kbd> Increases the selected spinbutton value by the spinbutton's step by a larger
+value</li>
+<li><kbd class="notranslate" translate="no">PageDown</kbd> Decreases the selected spinbutton value by the spinbutton's step by a larger
+value</li>
+<li><kbd class="notranslate" translate="no">ArrowRight</kbd> Moves focus to the next spin button in the component</li>
+<li><kbd class="notranslate" translate="no">ArrowLeft</kbd> Moves focus to the previous spin button in the component</li>
+</ul>
+<p>Several of the <code class="text-nowrap" translate="no">label-*</code> props are not visible on screen, but are used to label various elements
+within the calendar for screen reader users. e.g. the <code class="text-nowrap" translate="no">label-selected</code> prop is added to the element
+that displays the selected value.</p>
+<p>When internationalizing the datepicker, it is important to also update the <code class="text-nowrap" translate="no">label-*</code> props with
+appropriate translated strings, so that international screen reader users will hear the correct
+prompts and descriptions.</p>
+<h2 id="implementation-notes" class="bv-no-focus-ring"><span class="bd-content-title">Implementation notes<a class="anchorjs-link" href="#implementation-notes" aria-labelledby="implementation-notes"></a></span></h2>
+<p>The <code class="text-nowrap" translate="no">&lt;b-time&gt;</code> component is based upon the custom BootstrapVue component <a href="/docs/components/form-spinbutton" class="font-weight-bold"><code class="text-nowrap" translate="no">&lt;b-form-spinbutton&gt;</code></a>.</p>
+<p><code class="text-nowrap" translate="no">&lt;b-time&gt;</code> uses Bootstrap's margin, padding, border, and flex utility classes, along with button
+(<code class="text-nowrap" translate="no">btn-*</code>) classes and the <code class="text-nowrap" translate="no">form-control</code> class. BootstrapVue's custom SCSS/CSS is also required for
+proper styling.</p>
+<h2 id="see-also" class="bv-no-focus-ring"><span class="bd-content-title">See also<a class="anchorjs-link" href="#see-also" aria-labelledby="see-also"></a></span></h2>
+<ul>
+<li><a href="/docs/components/form-timepicker" class="font-weight-bold"><code class="text-nowrap" translate="no">&lt;b-form-timepicker&gt;</code> Time picker custom form input</a></li>
+<li><a href="/docs/components/calendar" class="font-weight-bold"><code class="text-nowrap" translate="no">&lt;b-calendar&gt;</code> Calendar date selection widget</a></li>
+<li><a href="/docs/components/form-datepicker" class="font-weight-bold"><code class="text-nowrap" translate="no">&lt;b-form-datepicker&gt;</code> Date picker custom form input</a></li>
+</ul>
+
+<h2 id="component-reference" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title">Component reference<a href="/docs/components/time#component-reference" class="anchorjs-link" aria-labelledby="component-reference" target="_self"></a></span></h2>
+<section data-v-3b8b9b4a="" class="bd-content">
+<header data-v-3b8b9b4a="" class="row align-items-center">
+<div data-v-3b8b9b4a="" class="col-sm-9">
+<h3 data-v-3b8b9b4a="" id="comp-ref-b-time" tabindex="-1" class="bv-no-focus-ring"><span data-v-3b8b9b4a="" class="bd-content-title"><code data-v-3b8b9b4a="" translate="translate" class="notranslate bigger">&lt;b-time&gt;</code><a data-v-3b8b9b4a="" href="/docs/components/time#comp-ref-b-time" class="anchorjs-link" aria-labelledby="comp-ref-b-time" target="_self"></a></span></h3>
+<span data-v-3b8b9b4a="" class="badge badge-success">v2.6.0+</span> </div>
+<div data-v-3b8b9b4a="" class="text-sm-right col-sm-3"><a data-v-3b8b9b4a="" rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev/src/components/time/time.js" class="btn btn-outline-secondary btn-sm"> View source </a></div>
+</header>
+<ul data-v-3b8b9b4a="" class="component-ref-mini-toc my-3">
+
+<li data-v-3b8b9b4a=""><a data-v-3b8b9b4a="" href="#comp-ref-b-time-props"><code data-v-3b8b9b4a="" translate="translate" class="notranslate">&lt;b-time&gt;</code> Properties </a></li>
+<li data-v-3b8b9b4a=""><a data-v-3b8b9b4a="" href="#comp-ref-b-time-v-model"><code data-v-3b8b9b4a="" translate="translate" class="notranslate">&lt;b-time&gt;</code> v-model </a></li>
+<li data-v-3b8b9b4a=""><a data-v-3b8b9b4a="" href="#comp-ref-b-time-slots"><code data-v-3b8b9b4a="" translate="translate" class="notranslate">&lt;b-time&gt;</code> Slots </a></li>
+<li data-v-3b8b9b4a=""><a data-v-3b8b9b4a="" href="#comp-ref-b-time-events"><code data-v-3b8b9b4a="" translate="translate" class="notranslate">&lt;b-time&gt;</code> Events </a></li>
+
+</ul>
+
+<article data-v-3b8b9b4a="" class="bd-content">
+<h4 data-v-3b8b9b4a="" id="comp-ref-b-time-props" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-3b8b9b4a="" class="bd-content-title"> Properties <a data-v-3b8b9b4a="" href="/docs/components/time#comp-ref-b-time-props" class="anchorjs-link" aria-labelledby="comp-ref-b-time-props" target="_self"></a></span></h4>
+<div data-v-3b8b9b4a="" class="table-responsive-sm">
+<table role="table" aria-busy="false" aria-colcount="4" class="table b-table bv-docs-table table-striped" id="__BVID__4580">
+
+<thead role="rowgroup" class="">
+
+<tr role="row" class="">
+<th role="columnheader" scope="col" tabindex="0" aria-colindex="1" aria-sort="none" class="b-table-sort-icon-left">Property<span class="sr-only"> (Click to sort Ascending)</span></th>
+<th role="columnheader" scope="col" tabindex="0" aria-colindex="2" class="">Type</th>
+<th role="columnheader" scope="col" tabindex="0" aria-colindex="3" class="">Default</th>
+<th role="columnheader" scope="col" tabindex="0" aria-colindex="4" class="">Description</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+
+<tr role="row" data-pk="id" class="" id="__BVID__4580__row_id">
+<td aria-colindex="1" role="cell" class=""><code data-v-3b8b9b4a="" translate="translate" class="text-nowrap notranslate">id</code>     </td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">Used to set the 'id' attribute on the rendered content, and used as the base to generate any additional element IDs as needed</td>
+</tr>
+
+<tr role="row" data-pk="value" class="" id="__BVID__4580__row_value">
+<td aria-colindex="1" role="cell" class=""><code data-v-3b8b9b4a="" translate="translate" class="text-nowrap notranslate">value</code>   <span data-v-3b8b9b4a="" class="badge badge-primary">v-model</span>  </td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">Initially selected time value. Accepts a `HH:mm:ss` string. Valid value ranges from `00:00:00` to `23:59:59`</td>
+</tr>
+
+<tr role="row" data-pk="show-seconds" class="" id="__BVID__4580__row_show-seconds">
+<td aria-colindex="1" role="cell" class=""><code data-v-3b8b9b4a="" translate="translate" class="text-nowrap notranslate">show-seconds</code>     </td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-3b8b9b4a="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">When true, shows the seconds spinbutton. If `false` the seconds spin button will not be shown and the seconds portion of hte time will always be `0`</td>
+</tr>
+
+<tr role="row" data-pk="hour12" class="" id="__BVID__4580__row_hour12">
+<td aria-colindex="1" role="cell" class=""><code data-v-3b8b9b4a="" translate="translate" class="text-nowrap notranslate">hour12</code>     </td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">Tri-state prop. If `true` forces the interface to 12 hour format. If `false` forces the interface into 24 hour format. If `null` the current locale will determine the 12 or 24 hour interface (default)</td>
+</tr>
+
+<tr role="row" data-pk="locale" class="" id="__BVID__4580__row_locale">
+<td aria-colindex="1" role="cell" class=""><code data-v-3b8b9b4a="" translate="translate" class="text-nowrap notranslate">locale</code>     </td>
+<td aria-colindex="2" role="cell" class="">String or Array</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">Locale (or locales) for the component to use. When passing an array of locales, the order of the locales is from most preferred to least preferred. If not provided, defaults to the clients default locale</td>
+</tr>
+
+<tr role="row" data-pk="aria-labelledby" class="" id="__BVID__4580__row_aria-labelledby">
+<td aria-colindex="1" role="cell" class=""><code data-v-3b8b9b4a="" translate="translate" class="text-nowrap notranslate">aria-labelledby</code>     </td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">The ID of the element that provides a label for this component. Used as the value for the 'aria-labelledby' attribute</td>
+</tr>
+
+<tr role="row" data-pk="seconds-step" class="" id="__BVID__4580__row_seconds-step">
+<td aria-colindex="1" role="cell" class=""><code data-v-3b8b9b4a="" translate="translate" class="text-nowrap notranslate">seconds-step</code>     </td>
+<td aria-colindex="2" role="cell" class="">Number or String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-3b8b9b4a="" translate="translate" class="word-wrap-normal notranslate">1</code></td>
+<td aria-colindex="4" role="cell" class="">Step value for the seconds spinbutton. Should be a value evenly divided into 60</td>
+</tr>
+
+<tr role="row" data-pk="minutes-step" class="" id="__BVID__4580__row_minutes-step">
+<td aria-colindex="1" role="cell" class=""><code data-v-3b8b9b4a="" translate="translate" class="text-nowrap notranslate">minutes-step</code>     </td>
+<td aria-colindex="2" role="cell" class="">Number or String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-3b8b9b4a="" translate="translate" class="word-wrap-normal notranslate">1</code></td>
+<td aria-colindex="4" role="cell" class="">Step value for the minutes spinbutton. Should be a value evenly divided into 60</td>
+</tr>
+
+<tr role="row" data-pk="disabled" class="" id="__BVID__4580__row_disabled">
+<td aria-colindex="1" role="cell" class=""><code data-v-3b8b9b4a="" translate="translate" class="text-nowrap notranslate">disabled</code>     </td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-3b8b9b4a="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">When set to 'true', disables the component's functionality and places it in a disabled state</td>
+</tr>
+
+<tr role="row" data-pk="readonly" class="" id="__BVID__4580__row_readonly">
+<td aria-colindex="1" role="cell" class=""><code data-v-3b8b9b4a="" translate="translate" class="text-nowrap notranslate">readonly</code>     </td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-3b8b9b4a="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">Sets the 'readonly' attribute on the form control</td>
+</tr>
+
+<tr role="row" data-pk="hide-header" class="" id="__BVID__4580__row_hide-header">
+<td aria-colindex="1" role="cell" class=""><code data-v-3b8b9b4a="" translate="translate" class="text-nowrap notranslate">hide-header</code>     </td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-3b8b9b4a="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">When set, visually hides the selected time header</td>
+</tr>
+
+<tr role="row" data-pk="label-no-time-selected" class="" id="__BVID__4580__row_label-no-time-selected">
+<td aria-colindex="1" role="cell" class=""><code data-v-3b8b9b4a="" translate="translate" class="text-nowrap notranslate">label-no-time-selected</code>     </td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-3b8b9b4a="" translate="translate" class="word-wrap-normal notranslate">'No time selected'</code></td>
+<td aria-colindex="4" role="cell" class="">String to show when no time is selected</td>
+</tr>
+
+<tr role="row" data-pk="label-selected" class="" id="__BVID__4580__row_label-selected">
+<td aria-colindex="1" role="cell" class=""><code data-v-3b8b9b4a="" translate="translate" class="text-nowrap notranslate">label-selected</code>     </td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-3b8b9b4a="" translate="translate" class="word-wrap-normal notranslate">'Selected time'</code></td>
+<td aria-colindex="4" role="cell" class="">Hidden sr-only string when a time is selected</td>
+</tr>
+
+<tr role="row" data-pk="label-hours" class="" id="__BVID__4580__row_label-hours">
+<td aria-colindex="1" role="cell" class=""><code data-v-3b8b9b4a="" translate="translate" class="text-nowrap notranslate">label-hours</code>     </td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-3b8b9b4a="" translate="translate" class="word-wrap-normal notranslate">'Hours'</code></td>
+<td aria-colindex="4" role="cell" class="">Value of the `aria-label` attribute on the `Hours` spinbutton</td>
+</tr>
+
+<tr role="row" data-pk="label-minutes" class="" id="__BVID__4580__row_label-minutes">
+<td aria-colindex="1" role="cell" class=""><code data-v-3b8b9b4a="" translate="translate" class="text-nowrap notranslate">label-minutes</code>     </td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-3b8b9b4a="" translate="translate" class="word-wrap-normal notranslate">'Minutes'</code></td>
+<td aria-colindex="4" role="cell" class="">Value of the `aria-label` attribute on the `Minutes` spinbutton</td>
+</tr>
+
+<tr role="row" data-pk="label-seconds" class="" id="__BVID__4580__row_label-seconds">
+<td aria-colindex="1" role="cell" class=""><code data-v-3b8b9b4a="" translate="translate" class="text-nowrap notranslate">label-seconds</code>     </td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-3b8b9b4a="" translate="translate" class="word-wrap-normal notranslate">'Seconds'</code></td>
+<td aria-colindex="4" role="cell" class="">Value of the `aria-label` attribute on the `Seconds` spinbutton</td>
+</tr>
+
+<tr role="row" data-pk="label-ampm" class="" id="__BVID__4580__row_label-ampm">
+<td aria-colindex="1" role="cell" class=""><code data-v-3b8b9b4a="" translate="translate" class="text-nowrap notranslate">label-ampm</code>     </td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-3b8b9b4a="" translate="translate" class="word-wrap-normal notranslate">'AM/PM'</code></td>
+<td aria-colindex="4" role="cell" class="">Value of the `aria-label` attribute on the `AM/PM` spinbutton</td>
+</tr>
+
+<tr role="row" data-pk="label-am" class="" id="__BVID__4580__row_label-am">
+<td aria-colindex="1" role="cell" class=""><code data-v-3b8b9b4a="" translate="translate" class="text-nowrap notranslate">label-am</code>     </td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-3b8b9b4a="" translate="translate" class="word-wrap-normal notranslate">'AM'</code></td>
+<td aria-colindex="4" role="cell" class="">Text to display in the AM/PM spinbutton when 'AM' is selected</td>
+</tr>
+
+<tr role="row" data-pk="label-pm" class="" id="__BVID__4580__row_label-pm">
+<td aria-colindex="1" role="cell" class=""><code data-v-3b8b9b4a="" translate="translate" class="text-nowrap notranslate">label-pm</code>     </td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-3b8b9b4a="" translate="translate" class="word-wrap-normal notranslate">'PM'</code></td>
+<td aria-colindex="4" role="cell" class="">Text to display in the AM/PM spinbutton when 'PM' is selected</td>
+</tr>
+
+<tr role="row" data-pk="label-increment" class="" id="__BVID__4580__row_label-increment">
+<td aria-colindex="1" role="cell" class=""><code data-v-3b8b9b4a="" translate="translate" class="text-nowrap notranslate">label-increment</code>     </td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-3b8b9b4a="" translate="translate" class="word-wrap-normal notranslate">'Increment'</code></td>
+<td aria-colindex="4" role="cell" class="">Value of the `aria-label` attribute on the spinbuttons `+` button</td>
+</tr>
+
+<tr role="row" data-pk="label-decrement" class="" id="__BVID__4580__row_label-decrement">
+<td aria-colindex="1" role="cell" class=""><code data-v-3b8b9b4a="" translate="translate" class="text-nowrap notranslate">label-decrement</code>     </td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-3b8b9b4a="" translate="translate" class="word-wrap-normal notranslate">'Decrement'</code></td>
+<td aria-colindex="4" role="cell" class="">Value of the `aria-label` attribute on the spinbuttons `-` button</td>
+</tr>
+
+<tr role="row" data-pk="hidden" class="" id="__BVID__4580__row_hidden">
+<td aria-colindex="1" role="cell" class=""><code data-v-3b8b9b4a="" translate="translate" class="text-nowrap notranslate">hidden</code>     </td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-3b8b9b4a="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class=""></td>
+</tr>
+
+</tbody>
+
+</table>
+</div>
+ </article>
+<article data-v-3b8b9b4a="" class="bd-content">
+<h4 data-v-3b8b9b4a="" id="comp-ref-b-time-v-model" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-3b8b9b4a="" class="bd-content-title"> v-model <a data-v-3b8b9b4a="" href="/docs/components/time#comp-ref-b-time-v-model" class="anchorjs-link" aria-labelledby="comp-ref-b-time-v-model" target="_self"></a></span></h4>
+<div data-v-3b8b9b4a="" class="table-responsive-sm">
+<table role="table" aria-busy="false" aria-colcount="2" class="table b-table bv-docs-table table-striped" id="__BVID__4612">
+
+<thead role="rowgroup" class="">
+
+<tr role="row" class="">
+<th role="columnheader" scope="col" aria-colindex="1" class="">Property</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">Event</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+
+<tr role="row" class="">
+<td aria-colindex="1" role="cell" class=""><code data-v-3b8b9b4a="" translate="translate" class="notranslate">value</code></td>
+<td aria-colindex="2" role="cell" class=""><code data-v-3b8b9b4a="" translate="translate" class="notranslate">input</code></td>
+</tr>
+
+</tbody>
+
+</table>
+</div>
+</article>
+<article data-v-3b8b9b4a="" class="bd-content">
+<h4 data-v-3b8b9b4a="" id="comp-ref-b-time-slots" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-3b8b9b4a="" class="bd-content-title"> Slots <a data-v-3b8b9b4a="" href="/docs/components/time#comp-ref-b-time-slots" class="anchorjs-link" aria-labelledby="comp-ref-b-time-slots" target="_self"></a></span></h4>
+<div data-v-3b8b9b4a="" class="table-responsive-sm">
+<table role="table" aria-busy="false" aria-colcount="2" class="table b-table bv-docs-table table-striped" id="__BVID__4621">
+
+<thead role="rowgroup" class="">
+
+<tr role="row" class="">
+<th role="columnheader" scope="col" aria-colindex="1" class="">Slot Name</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">Description</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+
+<tr role="row" data-pk="default" class="" id="__BVID__4621__row_default">
+<td aria-colindex="1" role="cell" class=""><code data-v-3b8b9b4a="" translate="translate" class="text-nowrap notranslate">default</code> </td>
+<td aria-colindex="2" role="cell" class="">Used to place custom controls at the bottom of the time component</td>
+</tr>
+
+</tbody>
+
+</table>
+</div>
+</article>
+<article data-v-3b8b9b4a="" class="bd-content">
+<h4 data-v-3b8b9b4a="" id="comp-ref-b-time-events" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-3b8b9b4a="" class="bd-content-title"> Events <a data-v-3b8b9b4a="" href="/docs/components/time#comp-ref-b-time-events" class="anchorjs-link" aria-labelledby="comp-ref-b-time-events" target="_self"></a></span></h4>
+<div data-v-3b8b9b4a="" class="table-responsive-sm">
+<table role="table" aria-busy="false" aria-colcount="3" class="table b-table bv-docs-table table-striped" id="__BVID__4630">
+
+<thead role="rowgroup" class="">
+
+<tr role="row" class="">
+<th role="columnheader" scope="col" aria-colindex="1" class="">Event</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">Arguments</th>
+<th role="columnheader" scope="col" aria-colindex="3" class="">Description</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+
+<tr role="row" data-pk="input" class="" id="__BVID__4630__row_input">
+<td aria-colindex="1" role="cell" class=""><code data-v-3b8b9b4a="" translate="translate" class="notranslate">input</code> </td>
+<td aria-colindex="2" role="cell" class=""><ol data-v-3b8b9b4a="" class="list-unstyled mb-0">
+<li data-v-3b8b9b4a=""><code data-v-3b8b9b4a="" translate="translate" class="notranslate">value</code> - <span data-v-3b8b9b4a="">The selected time as an `HH:mm:ss` string. Will be an empty string if no time selected</span></li>
+</ol></td>
+<td aria-colindex="3" role="cell" class="">Event that updates the v-model</td>
+</tr>
+<tr role="row" data-pk="context" class="" id="__BVID__4630__row_context">
+<td aria-colindex="1" role="cell" class=""><code data-v-3b8b9b4a="" translate="translate" class="notranslate">context</code> </td>
+<td aria-colindex="2" role="cell" class=""><ol data-v-3b8b9b4a="" class="list-unstyled mb-0">
+<li data-v-3b8b9b4a=""><code data-v-3b8b9b4a="" translate="translate" class="notranslate">context</code> - <span data-v-3b8b9b4a="">The context object. Refer to the docs for details</span></li>
+</ol></td>
+<td aria-colindex="3" role="cell" class="">Emitted whenever the internal model state, or locale, updates. Also emitted when the component is initially created</td>
+</tr>
+
+</tbody>
+
+</table>
+</div>
+</article>
+
+<h3 id="importing-individual-components" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title"> Importing individual components <a href="/docs/components/time#importing-individual-components" class="anchorjs-link" aria-labelledby="importing-individual-components" target="_self"></a></span></h3>
+<p> You can import individual components into your project via the following named
+        exports: </p>
+<div class="table-responsive-sm">
+<table role="table" aria-busy="false" aria-colcount="3" class="table b-table bv-docs-table table-striped" id="__BVID__4642">
+
+<thead role="rowgroup" class="thead-default">
+
+<tr role="row" class="">
+<th role="columnheader" scope="col" aria-colindex="1" class="">Component</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">Named Export</th>
+<th role="columnheader" scope="col" aria-colindex="3" class="">Import Path</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+
+<tr role="row" class="">
+<td aria-colindex="1" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">&lt;b-time&gt;</code></td>
+<td aria-colindex="2" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">BTime</code></td>
+<td aria-colindex="3" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">bootstrap-vue</code></td>
+</tr>
+
+</tbody>
+
+</table>
+</div>
+<p><strong>Example:</strong></p>
+<pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { BTime } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
+Vue.component(<span class="hljs-string">'b-time'</span>, BTime)</pre>
+</article>
+
+<article class="bd-content">
+<h3 id="importing-as-a-plugin" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title"> Importing as a Vue.js plugin <a href="/docs/components/time#importing-as-a-plugin" class="anchorjs-link" aria-labelledby="importing-as-a-plugin" target="_self"></a></span></h3>
+<p> This plugin includes all of the above listed individual
+      components.
+      Plugins also include any component aliases. </p>
+<div class="table-responsive-sm">
+<table fileds="namedExport,importPath" role="table" aria-busy="false" aria-colcount="2" class="table b-table bv-docs-table table-striped b-table-caption-top" id="__BVID__4652">
+
+<thead role="rowgroup" class="thead-default">
+
+<tr role="row" class="">
+<th role="columnheader" scope="col" aria-colindex="1" class="">Named Export</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">Import Path</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+
+<tr role="row" class="">
+<td aria-colindex="1" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">TimePlugin</code></td>
+<td aria-colindex="2" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">bootstrap-vue</code></td>
+</tr>
+
+</tbody>
+
+</table>
+</div>
+
+<p><strong>Example:</strong></p>
+<pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { TimePlugin } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
+Vue.use(TimePlugin)</pre>
+</article>
+
+
+
+</main>
+</div>
+</div>
+
+
+<script src="../../../js/jquery-3.2.1.slim.min.js"></script> 
+<script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery-slim.min.js"><\/script>')</script> 
+<script src="../../../v4/dist/js/popper.min.js"></script> 
+<script src="../../../v4/dist/js/bootstrap.min.js"></script> 
+<script src="../../../v4/assets/js/docs.min.js"></script> 
+<script src="../../../v4/assets/js/ie-emulation-modes-warning.js"></script> 
+<script src="../../../v4/assets/js/docsearch.min.js"></script> 
+<script>
+  docsearch({
+    appId: 'PRR89ISST8',
+    apiKey: '95044d57d4d7bb744f322d1f18ed607f',
+    indexName: 'z01-bootstrapV4',
+    inputSelector: '#search-input',
+    handleSelected: function (input, event, suggestion) {
+      var url = suggestion.url;
+      url = suggestion.isLvl1 ? url.split('#')[0]: url;
+      // If it's a title we remove the anchor so it does not jump.
+      window.location.href = url;
+    },
+    transformData: function (hits) {
+      return hits.map(function (hit) {
+        hit.url = hit.url.replace('https://v4-alpha.getbootstrap.com', '/docs/4.0');
+        return hit;
+      });
+    },
+    debug: false // Set debug to true if you want to inspect the dropdown
+  });
+</script> 
+<script>
+  Holder.addTheme('gray', {
+    bg: '#777',
+    fg: 'rgba(255,255,255,.75)',
+    font: 'Helvetica',
+    fontweight: 'normal'
+  });
+</script>
+</body>
+</html>

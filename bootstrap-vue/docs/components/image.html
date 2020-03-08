@@ -1,0 +1,969 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Jekyll v3.6.0">
+<title>图片 &middot; BootstrapVue</title>
+<!-- Bootstrap 核心CSS -->
+<link href="../../../v4/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- 本文档额外专用css -->
+<link href="../../../v4/assets/css/docsearch.min.css" rel="stylesheet">
+<link href="../../../v4/assets/css/docs.min.css" rel="stylesheet">
+<link href="../../style/bv_path.css" rel="stylesheet">
+
+<!-- Favicons图标定义 -->
+<link data-n-head="ssr" rel="manifest" href="../../manifest.json">
+<link data-n-head="ssr" rel="shortcut icon" href="../../style/icons/icon_64.png">
+<link data-n-head="ssr" rel="apple-touch-icon" href="../../style/icons/icon_512.png" sizes="512x512">
+
+<!-- Meta关键字定义 -->
+<meta name="description" content="The most popular HTML, CSS, and JS library in the world.">
+<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+
+</head>
+<body>
+<a id="skippy" class="sr-only sr-only-focusable" href="#content">
+<div class="container"> <span class="skiplink-text">跳到主体内容</span> </div>
+</a>
+<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar"> <a class="navbar-brand mr-0 mr-md-2" href="../" aria-label="Bootstrap">
+  <svg class="d-block" width="36" height="36" viewbox="0 0 612 612" xmlns="http://www.w3.org/2000/svg" focusable="false">
+    <title>Bootstrap</title>
+    <path fill="currentColor" d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z"/>
+    <path fill="currentColor" d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z"/>
+  </svg>
+  </a>
+  <div class="navbar-nav-scroll">
+    <ul class="navbar-nav bd-navbar-nav flex-row">
+      <li class="nav-item"><a class="nav-link " href="../">首页</a></li>
+      <li class="nav-item"><a class="nav-link active" href="../../v4/docs/">中文手册</a></li>
+      <li class="nav-item"><a class="nav-link " href="../../v4/examples/">实例</a></li>
+      <li class="nav-item dropdown">
+<a class="nav-item nav-link dropdown-toggle mr-md-2" id="bd-versions" aria-expanded="false" aria-haspopup="true" href="#" data-toggle="dropdown"> 主题模板 </a>
+<div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
+<a class="dropdown-item" href="../../V4/themes/" target="_blank">主题门户</a>
+<a class="dropdown-item" href="../../V4/themes/live.html">精选模板</a>
+</div>
+</li>
+      <li class="nav-item"><a class="nav-link" href="//ico.z01.com" target="_blank" rel="noopener">zico图标系统</a></li>
+      <li class="nav-item"><a class="nav-link" href="https://expo.getbootstrap.com" target="_blank" rel="noopener">优站精选</a></li>
+      <li class="nav-item"><a class="nav-link" href="https://blog.getbootstrap.com" target="_blank" rel="noopener">Blog</a></li>
+    </ul>
+  </div>
+  <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="alse"> v2.6.1 </a>
+      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions"> 
+        <a class="dropdown-item active" href="../../../bootstrap-vue/docs/4.0/">Latest (4.3.x)</a>
+        <a class="dropdown-item" href="/Boot/">v3.3.7</a>
+        <a class="dropdown-item" href="/Sass/">Sass语言</a>
+        <a class="dropdown-item" href="/Emmet/">Emmet语法</a>
+        <a class="dropdown-item" href="//www.z01.com/tool/" target="_blank">IIS站长工具</a>
+        <a class="dropdown-item" href="//ad.z01.com/" target="_blank">广告源码</a>
+        <a class="dropdown-item" href="//v.z01.com/mb/" target="_blank">免费模板</a>
+        <a class="dropdown-item" href="//v.z01.com/" target="_blank">H5移动创作</a>
+        <a class="dropdown-item" href="//www.z01.com/help/web/3234.shtml" target="_blank">Flexbox布局</a>
+		<a class="dropdown-item" href="/boot/font.html" target="_blank">Font Awesome</a>
+</div>
+    </li>
+    <li class="nav-item"> <a class="nav-link p-2" href="//zoomla.github.io/bootstrap4-zhcn-documentation" target="_blank" rel="noopener" aria-label="GitHub">
+      <svg class="navbar-nav-svg" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 499.36" focusable="false">
+        <title>GitHub</title>
+        <path d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z" fill="currentColor" fill-rule="evenodd"/>
+      </svg>
+      </a> </li>
+    <li class="nav-item"> <a class="nav-link p-2" href="http://www.z01.com/blog/ren/3214.shtml" target="_blank" rel="noopener" aria-label="Slack">译者说</a></li>
+  </ul>
+  <a class="btn btn-bd-yellow d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="download.html">下载 Bootstrap</a> </header>
+
+<div class="container-fluid">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+      <form class="bd-search d-flex align-items-center">
+        <input type="search" class="form-control" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
+        <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30" focusable="false">
+          <title>Menu</title>
+          <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/>
+        </svg>
+        </button>
+      </form>
+
+
+<nav class="collapse bd-links" id="bd-docs-nav">
+<div class=""><a href="../" class="bd-toc-link">首页</a></div>
+<div class="bd-toc-item nuxt-link-exact-active "><a href="../../../bootstrap-vue/docs/" class="bd-toc-link  "> 起步 </a>
+<ul class="nav bd-sidenav">
+</ul>
+</div>
+<div class="bd-toc-item active"><a href="../../../bootstrap-vue/docs/components/" class="bd-toc-link nuxt-link-exact-active"> 组件 </a>
+<ul class="nav bd-sidenav">
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/index.html" class="nav-link"> 组件目录 </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/alert.html" class="nav-link"> 警告提示框(Alert) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/badge.html" class="nav-link"> 徽章(Badge) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/badge.html" class="nav-link"> 面包屑导航(Breadcrumb) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/button.html" class="nav-link"> 按钮(Button) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/button-group.html" class="nav-link"> 按钮组(Button Group) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/button-toolbar.html" class="nav-link"> 按钮Toolbar(Button Toolbar) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/calendar.html" class="nav-link"> 日历组件(Calendar) <small class="badge text-uppercase badge-success">New</small> </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/card.html" class="nav-link"> 卡片(Card) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/carousel.html" class="nav-link"> 轮播效果(Carousel) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/collapse.html" class="nav-link"> 折叠面板(Collapse) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/dropdown.html" class="nav-link"> 下拉菜单(Dropdown) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/embed.html" class="nav-link"> 嵌入(Embed) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form.html" class="nav-link"> 表单(Form) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-checkbox.html" class="nav-link"> 表单复选框(Form Checkbox) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-datepicker.html" class="nav-link"> 表单时间选择器(Form Datepicker) <small class="badge text-uppercase badge-success">New</small> </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-file.html" class="nav-link"> 文件选择(Form File) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-group.html" class="nav-link"> 表单组合(Form Group) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-input.html" class="nav-link"> 表单输入框(Form Input) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-radio.html" class="nav-link"> 单选择表单Form Radio </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-select.html" class="nav-link"> 下拉式表单(Form Select) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-spinbutton.html" class="nav-link"> 按钮式表单(Form Spinbuttno) <small class="badge text-uppercase badge-success">New</small> </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-tags.html" class="nav-link"> Tags表单选择器(Form Tags) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-textarea.html" class="nav-link"> 文本框(Form Textarea) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-timepicker.html" class="nav-link"> 表单内时间控件(Form Timepicker) </a></li>
+<li class="nav-item active"><a href="../../../bootstrap-vue/docs/components/image.html" class="nav-link"> 图片(Image) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/input-group.html" class="nav-link"> 输入框(Input Group) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/jumbotron.html" class="nav-link"> Hero大块屏(Jumbotron) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/layout.html" class="nav-link"> 布局与网络Layout and Grid System </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/link.html" class="nav-link"> 链接(Link)</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/list-group.html" class="nav-link"> 列表组(List group) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/media.html" class="nav-link"> 媒体(Media) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/modal.html" class="nav-link"> 弹出模态框(Modal) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/nav.html" class="nav-link"> 导航(Nav) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/navbar.html" class="nav-link"> 导航栏(Navbar) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/pagination.html" class="nav-link"> 分页(Pagination) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/pagination-nav.html" class="nav-link"> 分页导航(Pagination Nav) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/popover.html" class="nav-link"> 指示备注(Popover) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/progress.html" class="nav-link"> 进度指示器(Progress) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/spinner.html" class="nav-link"> 旋转指示器(Spinner) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/table.html" class="nav-link"> 表格(Table) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/tabs.html" class="nav-link"> 选项卡(Tabs) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/time.html" class="nav-link"> 时间组件(Time) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/toast.html" class="nav-link"> 冒泡推送(Toasts) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/tooltip.html" class="nav-link"> tip提示组件(Tooltip) </a></li>
+</ul>
+</div>
+<div class="bd-toc-item"><a href="../../../bootstrap-vue/docs/directives/" class="bd-toc-link"> 指令 </a>
+<ul class="nav bd-sidenav">
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/directives/index.html" class="nav-link"> 指令目录 </a></li>
+<li class="nav-item active"><a href="../../../bootstrap-vue/docs/directives/hover.html" class="nav-link"> Hover 指令<small class="badge text-uppercase badge-success">New</small> </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/directives/popover.html" class="nav-link"> Popover 提示备注</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/directives/scrollspy.html" class="nav-link"> Scrollspy 滚动监听</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/directives/tooltip.html" class="nav-link"> Tooltip 提示指令</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/directives/visible.html" class="nav-link"> Visible 可见性操作<small class="badge text-uppercase badge-success">New</small> </a></li>
+</ul>
+</div>
+<div class="bd-toc-item"><a href="../../../bootstrap-vue/docs/icons.html" class="bd-toc-link"> Icons图标</a>
+<ul class="nav bd-sidenav">
+</ul>
+</div>
+  
+<div class="bd-toc-item"><a class="bd-toc-link" href="../../../bootstrap-vue/docs/reference">参考</a>
+<ul class="nav bd-sidenav">
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference" class="nav-link.html"> 参考目录 </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/accessibility.html" class="nav-link">友好访问</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/color-variants.html" class="nav-link">Color颜色变量 </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/images.html" class="nav-link"> 组件图像img的src路径解析</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/router-links.html" class="nav-link"> Router路由支持 </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/size-props.html" class="nav-link">大小规格</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/spacing-classes.html" class="nav-link">间距处理</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/starter-templates.html" class="nav-link">开始模板</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/theming.html" class="nav-link">主题色彩</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/utility-classes.html" class="nav-link">通用Class类</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/validation.html" class="nav-link">Form表单验证</a></li>
+</ul>
+</div>
+<div class="bd-toc-item"> <a class="bd-toc-link" href="../components/alerts.html"> 杂项 </a>
+  <ul class="nav bd-sidenav">
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/misc/changelog" class="nav-link"> Changelog </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/misc/contributing" class="nav-link"> Contributing </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/misc/settings" class="nav-link"> Settings </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/misc/third-party" class="nav-link"> Third party libraries </a></li>
+  </ul>
+</div>
+<div class=""><a href="/play" class="bd-toc-link">在线模拟器</a></div>
+</nav>
+</div>
+
+<div class="d-none d-xl-block col-xl-2 bd-toc">
+
+<ul class="section-nav">
+<li class="nav-item toc-entry mb-2"><a target="_self" href="#images" class="nav-link font-weight-bold"><span>Images</span></a></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#image-src-resolving" class="nav-link"><span>Image src resolving</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#styling-images" class="nav-link"><span>Styling images</span></a>
+<ul class="nav flex-column">
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#responsive-images" class="nav-link"><span>Responsive images</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#image-thumbnails" class="nav-link"><span>Image thumbnails</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#rounded-corners" class="nav-link"><span>Rounded corners</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#aligning-images" class="nav-link"><span>Aligning images</span></a></li>
+</ul>
+</li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#blank-or-solid-color-images" class="nav-link"><span>Blank (or solid color) images</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#srcset-support" class="nav-link"><span>srcset support</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#lazy-loaded-images" class="nav-link"><span>Lazy loaded images</span></a>
+<ul class="nav flex-column">
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#usage" class="nav-link"><span>Usage</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#force-show-of-lazy-loaded-image" class="nav-link"><span>Force show of lazy loaded image</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#lazy-loaded-srcset-support" class="nav-link"><span>Lazy loaded srcset support</span></a></li>
+</ul>
+</li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#component-reference" class="nav-link"><span>Component reference</span></a>
+<ul class="nav flex-column">
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#comp-ref-b-img" class="nav-link"><span>&lt;b-img&gt;</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#comp-ref-b-img-lazy" class="nav-link"><span>&lt;b-img-lazy&gt;</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#importing-individual-components" class="nav-link"><span>Importing individual components</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#importing-as-a-plugin" class="nav-link"><span>Importing as a Vue.js plugin</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+
+<nav data-v-aafc4aea="" aria-label="Breadcrumbs" class="float-left mt-2 mb-0 mb-lg-2">
+<ol data-v-aafc4aea="" class="breadcrumb d-inline-flex bg-transparent px-2 py-1 my-0">
+<li data-v-aafc4aea="" class="breadcrumb-item"><a data-v-aafc4aea="" href="../../" class="nuxt-link-active" target="_self">首页</a></li>
+<li data-v-aafc4aea="" class="breadcrumb-item"><a data-v-aafc4aea="" href="../../../bootstrap-vue/docs" class="nuxt-link-active" target="_self">中文手册</a></li>
+<li data-v-aafc4aea="" class="breadcrumb-item"><a data-v-aafc4aea="" href="../../../bootstrap-vue/docs/components/" class="nuxt-link-active" target="_self">组件</a></li>
+<li data-v-aafc4aea="" class="breadcrumb-item active"><span data-v-aafc4aea="" aria-current="location">图片</span></li>
+</ol>
+</nav>
+<div class="clearfix d-block"></div>
+  <h1 class="bd-title" id="content">图片(Images)</h1>
+<p class="bd-lead">Documentation and examples for opting images (via <code translate="no" class="notranslate text-nowrap">&lt;b-img&gt;</code> component) into responsive behavior (so they never become larger than their parent elements), optionally adding lightweight styles to them — all via props.</p>
+  <script type="text/javascript" src="../../../v4/assets/js/pupCMS.js"></script>
+
+
+
+
+<nav class="bd-quick-links mb-3 d-xl-none" data-v-811345e6="">
+<header data-v-811345e6="">
+<button data-v-811345e6="" type="button" class="btn font-weight-bold btn-outline-secondary btn-sm btn-block collapsed" aria-controls="bd-quick-links-collapse" aria-expanded="false"><span data-v-811345e6="">Show</span> page table of contents </button>
+</header>
+<ul data-v-811345e6="" id="bd-quick-links-collapse" class="collapse" style="display: none;">
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#image-src-resolving" class=""><span data-v-811345e6="">Image src resolving</span></a> <!----></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#styling-images" class=""><span data-v-811345e6="">Styling images</span></a>
+<ul data-v-811345e6="">
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#responsive-images" class=""><span data-v-811345e6="">Responsive images</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#image-thumbnails" class=""><span data-v-811345e6="">Image thumbnails</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#rounded-corners" class=""><span data-v-811345e6="">Rounded corners</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#aligning-images" class=""><span data-v-811345e6="">Aligning images</span></a></li>
+</ul>
+</li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#blank-or-solid-color-images" class=""><span data-v-811345e6="">Blank (or solid color) images</span></a> <!----></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#srcset-support" class=""><span data-v-811345e6="">srcset support</span></a> <!----></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#lazy-loaded-images" class=""><span data-v-811345e6="">Lazy loaded images</span></a>
+<ul data-v-811345e6="">
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#usage" class=""><span data-v-811345e6="">Usage</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#force-show-of-lazy-loaded-image" class=""><span data-v-811345e6="">Force show of lazy loaded image</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#lazy-loaded-srcset-support" class=""><span data-v-811345e6="">Lazy loaded srcset support</span></a></li>
+</ul>
+</li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#component-reference" class=""><span data-v-811345e6="">Component reference</span></a>
+<ul data-v-811345e6="">
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#comp-ref-b-img" class=""><span data-v-811345e6="">&lt;b-img&gt;</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#comp-ref-b-img-lazy" class=""><span data-v-811345e6="">&lt;b-img-lazy&gt;</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#importing-individual-components" class=""><span data-v-811345e6="">Importing individual components</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#importing-as-a-plugin" class=""><span data-v-811345e6="">Importing as a Vue.js plugin</span></a></li>
+</ul>
+</li>
+</ul>
+</nav>
+<p>BootstrapVue's image components support rounded images, thumbnail styling, alignment, and even the
+ability to create blank images with an optional solid background color. Support for lazy loaded
+images is available via the <code translate="no" class="notranslate text-nowrap">&lt;b-img-lazy&gt;</code> complimentary component.</p>
+<h2 id="image-src-resolving" class="bv-no-focus-ring"><span class="bd-content-title">Image src resolving<a class="anchorjs-link" href="#image-src-resolving" aria-labelledby="image-src-resolving"></a></span></h2>
+<p>The <code translate="no" class="notranslate text-nowrap">src</code> prop (and <code translate="no" class="notranslate text-nowrap">blank-src</code> prop of <code translate="no" class="notranslate text-nowrap">&lt;b-img-lazy&gt;</code>), out of the box, works only with absolute or
+fully-qualified-domain-name URLs. If you are using project assets as image sources, please refer to <a href="../../../bootstrap-vue/docs/reference/images" class="font-weight-bold">Component img src resolving</a> for configuring <code translate="no" class="notranslate text-nowrap">vue-loader</code> to understand
+custom component props that specify image sources.</p>
+<h2 id="styling-images" class="bv-no-focus-ring"><span class="bd-content-title">Styling images<a class="anchorjs-link" href="#styling-images" aria-labelledby="styling-images"></a></span></h2>
+<p>Several props are available for styling the rendered image element. The following sub-sections cover
+the various options.</p>
+<h3 id="responsive-images" class="bv-no-focus-ring"><span class="bd-content-title">Responsive images<a class="anchorjs-link" href="#responsive-images" aria-labelledby="responsive-images"></a></span></h3>
+<p>Images in BootstrapVue can be made responsive with the <code translate="no" class="notranslate text-nowrap">fluid</code> prop (which sets <code translate="no" class="notranslate text-nowrap">max-width: 100%; height: auto;</code> via CSS classes) so that it scales with the parent element - up to
+the maximum native width of the image.</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-img-fluid notranslate">
+<div><img src="https://picsum.photos/1024/400/?image=41" alt="Responsive image" class="img-fluid"></div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://picsum.photos/1024/400/?image=41"</span> <span class="hljs-attr">fluid</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Responsive image"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-img</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<p>To make a fluid image that will grow to fill the width of its container, use the <code translate="no" class="notranslate text-nowrap">fluid-grow</code> prop.
+Note this may cause blurring on small bitmap images.</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-img-fluid-grow notranslate">
+<div>
+<h5>Small image with <code>fluid</code>:</h5>
+<img src="https://picsum.photos/300/150/?image=41" alt="Fluid image" class="img-fluid">
+<h5 class="my-3">Small image with <code>fluid-grow</code>:</h5>
+<img src="https://picsum.photos/300/150/?image=41" alt="Fluid-grow image" class="img-fluid w-100"></div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">h5</span>&gt;</span>Small image with <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>fluid<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>:<span class="hljs-tag">&lt;/<span class="hljs-name">h5</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://picsum.photos/300/150/?image=41"</span> <span class="hljs-attr">fluid</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Fluid image"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-img</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">h5</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"my-3"</span>&gt;</span>Small image with <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>fluid-grow<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>:<span class="hljs-tag">&lt;/<span class="hljs-name">h5</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://picsum.photos/300/150/?image=41"</span> <span class="hljs-attr">fluid-grow</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Fluid-grow image"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-img</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<p>Use the <code translate="no" class="notranslate text-nowrap">block</code> prop to force the image to display as a block element rather than the browser
+default of inline-block element.</p>
+<p><strong>Note:</strong> <em>In Internet Explorer 10, SVG images with <code translate="no" class="notranslate text-nowrap">fluid</code> are disproportionately sized. To fix
+this, add the style <code translate="no" class="notranslate text-nowrap">width: 100% \9;</code> where necessary. This fix improperly sizes other image
+formats, so Bootstrap v4 doesn't apply it automatically.</em></p>
+<h3 id="image-thumbnails" class="bv-no-focus-ring"><span class="bd-content-title">Image thumbnails<a class="anchorjs-link" href="#image-thumbnails" aria-labelledby="image-thumbnails"></a></span></h3>
+<p>You can use prop <code translate="no" class="notranslate text-nowrap">thumbnail</code> to give an image a rounded light border appearance.</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-img-thumbnail notranslate">
+<div class="p-4 bg-dark container-fluid">
+<div class="row">
+<div class="col"><img src="https://picsum.photos/250/250/?image=54" alt="Image 1" class="img-thumbnail img-fluid"></div>
+<div class="col"><img src="https://picsum.photos/250/250/?image=58" alt="Image 2" class="img-thumbnail img-fluid"></div>
+<div class="col"><img src="https://picsum.photos/250/250/?image=59" alt="Image 3" class="img-thumbnail img-fluid"></div>
+</div>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">fluid</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"p-4 bg-dark"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-img</span> <span class="hljs-attr">thumbnail</span> <span class="hljs-attr">fluid</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://picsum.photos/250/250/?image=54"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Image 1"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-img</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-img</span> <span class="hljs-attr">thumbnail</span> <span class="hljs-attr">fluid</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://picsum.photos/250/250/?image=58"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Image 2"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-img</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-img</span> <span class="hljs-attr">thumbnail</span> <span class="hljs-attr">fluid</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://picsum.photos/250/250/?image=59"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Image 3"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-img</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span></pre>
+<h3 id="rounded-corners" class="bv-no-focus-ring"><span class="bd-content-title">Rounded corners<a class="anchorjs-link" href="#rounded-corners" aria-labelledby="rounded-corners"></a></span></h3>
+<p>You can control which corners are rounded by setting the rounded prop to one of the following
+values:</p>
+<ul>
+<li><code translate="no" class="notranslate text-nowrap">true</code> (or prop present with no value): round all corners</li>
+<li><code translate="no" class="notranslate text-nowrap">false</code> (or prop not present): no explicit rounding or corners (default)</li>
+<li><code translate="no" class="notranslate text-nowrap">'top'</code>: round the top corners</li>
+<li><code translate="no" class="notranslate text-nowrap">'right'</code>: round the right corners</li>
+<li><code translate="no" class="notranslate text-nowrap">'bottom'</code>: round the bottom corners</li>
+<li><code translate="no" class="notranslate text-nowrap">'left'</code>: round the left corners</li>
+<li><code translate="no" class="notranslate text-nowrap">'circle'</code>: make a circle (if square image) or oval (if not square) border</li>
+<li><code translate="no" class="notranslate text-nowrap">'0'</code>: explicitly turn off rounding of corners</li>
+</ul>
+<div translate="translate" class="bd-example vue-example vue-example-b-img-rounded notranslate">
+<div><img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2275%22%20height%3D%2275%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20%25%7Bw%7D%20%25%7Bh%7D%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20style%3D%22fill%3A%23777%3B%22%3E%3C%2Frect%3E%3C%2Fsvg%3E" alt="Rounded image" width="75" height="75" class="rounded m1"> <img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2275%22%20height%3D%2275%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20%25%7Bw%7D%20%25%7Bh%7D%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20style%3D%22fill%3A%23777%3B%22%3E%3C%2Frect%3E%3C%2Fsvg%3E" alt="Top-rounded image" width="75" height="75" class="rounded-top m1"> <img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2275%22%20height%3D%2275%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20%25%7Bw%7D%20%25%7Bh%7D%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20style%3D%22fill%3A%23777%3B%22%3E%3C%2Frect%3E%3C%2Fsvg%3E" alt="Right-rounded image" width="75" height="75" class="rounded-right m1"> <img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2275%22%20height%3D%2275%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20%25%7Bw%7D%20%25%7Bh%7D%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20style%3D%22fill%3A%23777%3B%22%3E%3C%2Frect%3E%3C%2Fsvg%3E" alt="Bottom-rounded image" width="75" height="75" class="rounded-bottom m1"> <img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2275%22%20height%3D%2275%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20%25%7Bw%7D%20%25%7Bh%7D%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20style%3D%22fill%3A%23777%3B%22%3E%3C%2Frect%3E%3C%2Fsvg%3E" alt="Left-rounded image" width="75" height="75" class="rounded-left m1"> <img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2275%22%20height%3D%2275%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20%25%7Bw%7D%20%25%7Bh%7D%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20style%3D%22fill%3A%23777%3B%22%3E%3C%2Frect%3E%3C%2Fsvg%3E" alt="Circle image" width="75" height="75" class="rounded-circle m1"> <img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2275%22%20height%3D%2275%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20%25%7Bw%7D%20%25%7Bh%7D%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20style%3D%22fill%3A%23777%3B%22%3E%3C%2Frect%3E%3C%2Fsvg%3E" alt="Not rounded image" width="75" height="75" class="rounded-0 m1"></div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-img</span> <span class="hljs-attr">v-bind</span>=<span class="hljs-string">"mainProps"</span> <span class="hljs-attr">rounded</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Rounded image"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-img</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-img</span> <span class="hljs-attr">v-bind</span>=<span class="hljs-string">"mainProps"</span> <span class="hljs-attr">rounded</span>=<span class="hljs-string">"top"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Top-rounded image"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-img</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-img</span> <span class="hljs-attr">v-bind</span>=<span class="hljs-string">"mainProps"</span> <span class="hljs-attr">rounded</span>=<span class="hljs-string">"right"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Right-rounded image"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-img</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-img</span> <span class="hljs-attr">v-bind</span>=<span class="hljs-string">"mainProps"</span> <span class="hljs-attr">rounded</span>=<span class="hljs-string">"bottom"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Bottom-rounded image"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-img</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-img</span> <span class="hljs-attr">v-bind</span>=<span class="hljs-string">"mainProps"</span> <span class="hljs-attr">rounded</span>=<span class="hljs-string">"left"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Left-rounded image"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-img</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-img</span> <span class="hljs-attr">v-bind</span>=<span class="hljs-string">"mainProps"</span> <span class="hljs-attr">rounded</span>=<span class="hljs-string">"circle"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Circle image"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-img</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-img</span> <span class="hljs-attr">v-bind</span>=<span class="hljs-string">"mainProps"</span> <span class="hljs-attr">rounded</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Not rounded image"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-img</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    data() {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">mainProps</span>: { <span class="hljs-attr">blank</span>: <span class="hljs-literal">true</span>, <span class="hljs-attr">blankColor</span>: <span class="hljs-string">'#777'</span>, <span class="hljs-attr">width</span>: <span class="hljs-number">75</span>, <span class="hljs-attr">height</span>: <span class="hljs-number">75</span>, <span class="hljs-attr">class</span>: <span class="hljs-string">'m1'</span> }
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+<h3 id="aligning-images" class="bv-no-focus-ring"><span class="bd-content-title">Aligning images<a class="anchorjs-link" href="#aligning-images" aria-labelledby="aligning-images"></a></span></h3>
+<p>Align images with the boolean props <code translate="no" class="notranslate text-nowrap">left</code> (floats left) <code translate="no" class="notranslate text-nowrap">right</code>(floats right), and <code translate="no" class="notranslate text-nowrap">center</code> (auto
+left+right margins). You can also center images by placing them in a container that has the class <code translate="no" class="notranslate text-nowrap">text-center</code>.</p>
+<p><strong>Left an Right aligned (float):</strong></p>
+<div translate="translate" class="bd-example vue-example vue-example-b-img-left-right notranslate">
+<div class="clearfix"><img src="https://picsum.photos/125/125/?image=58" alt="Left image" class="float-left"> <img src="https://picsum.photos/125/125/?image=58" alt="Right image" class="float-right"></div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"clearfix"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-img</span> <span class="hljs-attr">left</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://picsum.photos/125/125/?image=58"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Left image"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-img</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-img</span> <span class="hljs-attr">right</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://picsum.photos/125/125/?image=58"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Right image"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-img</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<p><strong>Center aligned (block):</strong></p>
+<div translate="translate" class="bd-example vue-example vue-example-b-img-center notranslate">
+<div><img src="https://picsum.photos/125/125/?image=58" alt="Center image" class="mx-auto d-block"></div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-img</span> <span class="hljs-attr">center</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://picsum.photos/125/125/?image=58"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Center image"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-img</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<p>Note: <code translate="no" class="notranslate text-nowrap">left</code> takes precedence over <code translate="no" class="notranslate text-nowrap">right</code> which takes precedence over <code translate="no" class="notranslate text-nowrap">center</code>.</p>
+<h2 id="blank-or-solid-color-images" class="bv-no-focus-ring"><span class="bd-content-title">Blank (or solid color) images<a class="anchorjs-link" href="#blank-or-solid-color-images" aria-labelledby="blank-or-solid-color-images"></a></span></h2>
+<p><code translate="no" class="notranslate text-nowrap">&lt;b-img&gt;</code> provides built-in support for generating blank images (transparent by default) of any
+width and height, by setting the <code translate="no" class="notranslate text-nowrap">blank</code> prop, and specifying <code translate="no" class="notranslate text-nowrap">width</code> and <code translate="no" class="notranslate text-nowrap">height</code> values (in
+pixels). You can apply any of the other <code translate="no" class="notranslate text-nowrap">&lt;b-img&gt;</code> props to change the style/behavior of the
+generated image.</p>
+<p>Use the <code translate="no" class="notranslate text-nowrap">blank-color</code> prop to set the blank image color. The <code translate="no" class="notranslate text-nowrap">blank-color</code>prop can accept any CSS
+color value:</p>
+<ul>
+<li>Named colors — i.e. <code translate="no" class="notranslate text-nowrap">orange</code> or <code translate="no" class="notranslate text-nowrap">blue</code></li>
+<li>Hex colors — i.e. <code translate="no" class="notranslate text-nowrap">#FF9E2C</code></li>
+<li>RGB and RGBa colors — i.e. <code translate="no" class="notranslate text-nowrap">rgb(255, 158, 44)</code> and <code translate="no" class="notranslate text-nowrap">rgba(255, 158, 44, .5)</code></li>
+<li>HSL and HSLa colors — i.e. <code translate="no" class="notranslate text-nowrap">hsl(32, 100%, 59%)</code> and <code translate="no" class="notranslate text-nowrap">hsla(32, 100%, 59%, .5)</code></li>
+</ul>
+<p>The default <code translate="no" class="notranslate text-nowrap">blank-color</code> is <code translate="no" class="notranslate text-nowrap">transparent</code>.</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-img-blank notranslate">
+<div><img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2275%22%20height%3D%2275%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20%25%7Bw%7D%20%25%7Bh%7D%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20style%3D%22fill%3Atransparent%3B%22%3E%3C%2Frect%3E%3C%2Fsvg%3E" alt="Transparent image" width="75" height="75" class="m1"> <img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2275%22%20height%3D%2275%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20%25%7Bw%7D%20%25%7Bh%7D%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20style%3D%22fill%3A%23777%3B%22%3E%3C%2Frect%3E%3C%2Fsvg%3E" alt="HEX shorthand color image (#777)" width="75" height="75" class="m1"> <img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2275%22%20height%3D%2275%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20%25%7Bw%7D%20%25%7Bh%7D%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20style%3D%22fill%3Ared%3B%22%3E%3C%2Frect%3E%3C%2Fsvg%3E" alt="Named color image (red)" width="75" height="75" class="m1"> <img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2275%22%20height%3D%2275%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20%25%7Bw%7D%20%25%7Bh%7D%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20style%3D%22fill%3Ablack%3B%22%3E%3C%2Frect%3E%3C%2Fsvg%3E" alt="Named color image (black)" width="75" height="75" class="m1"> <img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2275%22%20height%3D%2275%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20%25%7Bw%7D%20%25%7Bh%7D%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20style%3D%22fill%3A%23338833%3B%22%3E%3C%2Frect%3E%3C%2Fsvg%3E" alt="HEX color image" width="75" height="75" class="m1"> <img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2275%22%20height%3D%2275%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20%25%7Bw%7D%20%25%7Bh%7D%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20style%3D%22fill%3Argba(128%2C%20255%2C%20255%2C%200.5)%3B%22%3E%3C%2Frect%3E%3C%2Fsvg%3E" alt="RGBa color image" width="75" height="75" class="m1"> <img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2275%22%20height%3D%2275%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20%25%7Bw%7D%20%25%7Bh%7D%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20style%3D%22fill%3A%2388f%3B%22%3E%3C%2Frect%3E%3C%2Fsvg%3E" alt="HEX shorthand color (#88f)" width="75" height="75" class="m1"></div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-img</span> <span class="hljs-attr">v-bind</span>=<span class="hljs-string">"mainProps"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Transparent image"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-img</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-img</span> <span class="hljs-attr">v-bind</span>=<span class="hljs-string">"mainProps"</span> <span class="hljs-attr">blank-color</span>=<span class="hljs-string">"#777"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"HEX shorthand color image (#777)"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-img</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-img</span> <span class="hljs-attr">v-bind</span>=<span class="hljs-string">"mainProps"</span> <span class="hljs-attr">blank-color</span>=<span class="hljs-string">"red"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Named color image (red)"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-img</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-img</span> <span class="hljs-attr">v-bind</span>=<span class="hljs-string">"mainProps"</span> <span class="hljs-attr">blank-color</span>=<span class="hljs-string">"black"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Named color image (black)"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-img</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-img</span> <span class="hljs-attr">v-bind</span>=<span class="hljs-string">"mainProps"</span> <span class="hljs-attr">blank-color</span>=<span class="hljs-string">"#338833"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"HEX color image"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-img</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-img</span> <span class="hljs-attr">v-bind</span>=<span class="hljs-string">"mainProps"</span> <span class="hljs-attr">blank-color</span>=<span class="hljs-string">"rgba(128, 255, 255, 0.5)"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"RGBa color image"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-img</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-img</span> <span class="hljs-attr">v-bind</span>=<span class="hljs-string">"mainProps"</span> <span class="hljs-attr">blank-color</span>=<span class="hljs-string">"#88f"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"HEX shorthand color (#88f)"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-img</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    data() {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">mainProps</span>: { <span class="hljs-attr">blank</span>: <span class="hljs-literal">true</span>, <span class="hljs-attr">width</span>: <span class="hljs-number">75</span>, <span class="hljs-attr">height</span>: <span class="hljs-number">75</span>, <span class="hljs-attr">class</span>: <span class="hljs-string">'m1'</span> }
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+<p><strong>Notes:</strong></p>
+<ul>
+<li>In blank image mode, if only one of width or height is set, the image will be have both width and
+height set to the same value.</li>
+<li>In blank image mode, if width and height are not set, both width and height will internally be set
+to 1.</li>
+<li>The <code translate="no" class="notranslate text-nowrap">blank</code> prop takes precedence over the <code translate="no" class="notranslate text-nowrap">src</code> prop. If you set both and later set <code translate="no" class="notranslate text-nowrap">blank</code> to <code translate="no" class="notranslate text-nowrap">false</code> the image specified in <code translate="no" class="notranslate text-nowrap">src</code> will then be displayed.</li>
+<li>Blank images are rendered using SVG image data URLs.</li>
+<li>The <code translate="no" class="notranslate text-nowrap">width</code> and <code translate="no" class="notranslate text-nowrap">height</code> props will also apply the <code translate="no" class="notranslate text-nowrap">width</code> and <code translate="no" class="notranslate text-nowrap">height</code> attributes to the rendered <code translate="no" class="notranslate text-nowrap">&lt;img&gt;</code> tag, even if <code translate="no" class="notranslate text-nowrap">blank</code> is not set.</li>
+</ul>
+<h2 id="srcset-support" class="bv-no-focus-ring"><span class="bd-content-title"><code translate="no" class="notranslate text-nowrap">srcset</code> support<a class="anchorjs-link" href="#srcset-support" aria-labelledby="srcset-support"></a></span></h2>
+<p><code translate="no" class="notranslate text-nowrap">&lt;b-img&gt;</code> supports the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-srcset" target="_blank" rel="noopener"><code translate="no" class="notranslate text-nowrap">srcset</code> and <code translate="no" class="notranslate text-nowrap">sizes</code> attributes</a> on images. The props accept either a string value, or an array of strings (the array of strings will
+be converted into a single string separated by commas).</p>
+<p>For details on usage of these attributes, refer to <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images" target="_blank" rel="noopener">MDN's Responsive Images</a> guide.</p>
+<p><strong>Notes:</strong></p>
+<ul>
+<li>If the <code translate="no" class="notranslate text-nowrap">blank</code> prop is set, then <code translate="no" class="notranslate text-nowrap">srcset</code> and <code translate="no" class="notranslate text-nowrap">sizes</code> props are ignored</li>
+<li>IE 11 does not support <code translate="no" class="notranslate text-nowrap">srcset</code> and <code translate="no" class="notranslate text-nowrap">sizes</code>, so ensure you have a value for the <code translate="no" class="notranslate text-nowrap">src</code> prop</li>
+<li>Vue-loader does not support project relative URLs (asset URLs) on the <code translate="no" class="notranslate text-nowrap">srcset</code> attribute. Instead
+use <code translate="no" class="notranslate text-nowrap">require(...)</code> to resolve the individual URL paths. Be cautious of creating a string of data
+URI's longer than supported by the maximum attribute value length of the browser. If your webpack
+config has a limit for the <code translate="no" class="notranslate text-nowrap">url-loader</code> and you want to prevent inline data-urls, you may have to
+overwrite the loader limits: <code translate="no" class="notranslate text-nowrap">require('!!url-loader?limit=0!./assets/photo.jpg')</code></li>
+<li>Support for <code translate="no" class="notranslate text-nowrap">srcset</code> and <code translate="no" class="notranslate text-nowrap">sizes</code> was added in release <code translate="no" class="notranslate text-nowrap">2.1.0</code></li>
+</ul>
+<h2 id="lazy-loaded-images" class="bv-no-focus-ring"><span class="bd-content-title">Lazy loaded images<a class="anchorjs-link" href="#lazy-loaded-images" aria-labelledby="lazy-loaded-images"></a></span></h2>
+<p class="bd-lead">Use our complementary <code translate="no" class="notranslate text-nowrap">&lt;b-img-lazy&gt;</code> image component (based on <code translate="no" class="notranslate text-nowrap">&lt;b-img&gt;</code>) to lazy load images as
+they are scrolled into view (or within <code translate="no" class="notranslate text-nowrap">offset</code> pixels of the viewport).</p>
+<p>Lazy loading images uses <a href="https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API" target="_blank" rel="noopener"><code translate="no" class="notranslate text-nowrap">IntersectionObserver</code></a> if supported by the browser (or via a polyfill) to detect with the image should be shown. If <code translate="no" class="notranslate text-nowrap">IntersectionObserver</code> support is <em>not detected</em>, then the image will <em>always</em> be shown.</p>
+<h3 id="usage" class="bv-no-focus-ring"><span class="bd-content-title">Usage<a class="anchorjs-link" href="#usage" aria-labelledby="usage"></a></span></h3>
+<p>Set the <code translate="no" class="notranslate text-nowrap">src</code> prop to the URL of the image you want loaded lazily, and either specify a placeholder
+image URL via the prop <code translate="no" class="notranslate text-nowrap">blank-src</code>, or have a blank placeholder image generated for you by leaving <code translate="no" class="notranslate text-nowrap">blank-src</code> as <code translate="no" class="notranslate text-nowrap">null</code>.</p>
+<p>Specify the width and height of the placeholder via the <code translate="no" class="notranslate text-nowrap">blank-width</code> and <code translate="no" class="notranslate text-nowrap">blank-height</code> props. If
+these props are not set, then they will fall back to the <code translate="no" class="notranslate text-nowrap">width</code> and <code translate="no" class="notranslate text-nowrap">height</code> props (which are
+applied to the image specified via <code translate="no" class="notranslate text-nowrap">src</code>).</p>
+<p>Control the generated blank image color by setting the prop <code translate="no" class="notranslate text-nowrap">blank-color</code>.</p>
+<p>Placeholder images (either explicitly provided, or dynamically generated) should have the same width
+and height values, or at least the same aspect ratio, as the <code translate="no" class="notranslate text-nowrap">src</code> image.</p>
+<p>Feel free to use the <code translate="no" class="notranslate text-nowrap">fluid</code>, <code translate="no" class="notranslate text-nowrap">fluid-grow</code>, <code translate="no" class="notranslate text-nowrap">thumbnail</code>, and <code translate="no" class="notranslate text-nowrap">rounded</code> props of <code translate="no" class="notranslate text-nowrap">&lt;b-img&gt;</code>.</p>
+<p>The <code translate="no" class="notranslate text-nowrap">offset</code> prop specifies the number of pixels that an image needs to be near to the viewport to
+trigger it to be shown. The default value is <code translate="no" class="notranslate text-nowrap">360</code>.</p>
+<p>The <code translate="no" class="notranslate text-nowrap">throttle</code> prop controls how long (in ms) after a <code translate="no" class="notranslate text-nowrap">scroll</code> (or <code translate="no" class="notranslate text-nowrap">resize</code>, or <code translate="no" class="notranslate text-nowrap">orientationchange</code>,
+or <code translate="no" class="notranslate text-nowrap">transitionend</code>) event happens before checking if the image has come within view (or within <code translate="no" class="notranslate text-nowrap">offset</code> of view). The default is <code translate="no" class="notranslate text-nowrap">100</code> (ms). <code translate="no" class="notranslate text-nowrap">throttle</code> has no effect if IntersectionObserver
+support is detected.</p>
+<p>Once an image has come into view and is shown, the event listeners and/or Intersection Observer are
+removed.</p>
+<p><strong>Example usage:</strong></p>
+<div translate="translate" class="bd-example vue-example vue-example-b-img-lazy notranslate">
+<div><img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22600%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20%25%7Bw%7D%20%25%7Bh%7D%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20style%3D%22fill%3A%23bbb%3B%22%3E%3C%2Frect%3E%3C%2Fsvg%3E" alt="Image 1" width="600" height="400" class="img-fluid w-100 mx-auto d-block my-5" blank="true"> <img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22600%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20%25%7Bw%7D%20%25%7Bh%7D%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20style%3D%22fill%3A%23bbb%3B%22%3E%3C%2Frect%3E%3C%2Fsvg%3E" alt="Image 2" width="600" height="400" class="img-fluid w-100 mx-auto d-block my-5" blank="true"> <img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22600%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20%25%7Bw%7D%20%25%7Bh%7D%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20style%3D%22fill%3A%23bbb%3B%22%3E%3C%2Frect%3E%3C%2Fsvg%3E" alt="Image 3" width="600" height="400" class="img-fluid w-100 mx-auto d-block my-5" blank="true"> <img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22600%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20%25%7Bw%7D%20%25%7Bh%7D%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20style%3D%22fill%3A%23bbb%3B%22%3E%3C%2Frect%3E%3C%2Fsvg%3E" alt="Image 4" width="600" height="400" class="img-fluid w-100 mx-auto d-block my-5" blank="true"> <img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22600%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20%25%7Bw%7D%20%25%7Bh%7D%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20style%3D%22fill%3A%23bbb%3B%22%3E%3C%2Frect%3E%3C%2Fsvg%3E" alt="Image 5" width="600" height="400" class="img-fluid w-100 mx-auto d-block my-5" blank="true"> <img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22600%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20%25%7Bw%7D%20%25%7Bh%7D%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20style%3D%22fill%3A%23bbb%3B%22%3E%3C%2Frect%3E%3C%2Fsvg%3E" alt="Image 6" width="600" height="400" class="img-fluid w-100 mx-auto d-block my-5" blank="true"> <img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22600%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20%25%7Bw%7D%20%25%7Bh%7D%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20style%3D%22fill%3A%23bbb%3B%22%3E%3C%2Frect%3E%3C%2Fsvg%3E" alt="Image 7" width="600" height="400" class="img-fluid w-100 mx-auto d-block my-5" blank="true"> <img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22600%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20%25%7Bw%7D%20%25%7Bh%7D%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20style%3D%22fill%3A%23bbb%3B%22%3E%3C%2Frect%3E%3C%2Fsvg%3E" alt="Image 8" width="600" height="400" class="img-fluid w-100 mx-auto d-block my-5" blank="true"></div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-img-lazy</span> <span class="hljs-attr">v-bind</span>=<span class="hljs-string">"mainProps"</span> <span class="hljs-attr">:src</span>=<span class="hljs-string">"getImageUrl(80)"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Image 1"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-img-lazy</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-img-lazy</span> <span class="hljs-attr">v-bind</span>=<span class="hljs-string">"mainProps"</span> <span class="hljs-attr">:src</span>=<span class="hljs-string">"getImageUrl(82)"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Image 2"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-img-lazy</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-img-lazy</span> <span class="hljs-attr">v-bind</span>=<span class="hljs-string">"mainProps"</span> <span class="hljs-attr">:src</span>=<span class="hljs-string">"getImageUrl(84)"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Image 3"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-img-lazy</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-img-lazy</span> <span class="hljs-attr">v-bind</span>=<span class="hljs-string">"mainProps"</span> <span class="hljs-attr">:src</span>=<span class="hljs-string">"getImageUrl(85)"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Image 4"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-img-lazy</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-img-lazy</span> <span class="hljs-attr">v-bind</span>=<span class="hljs-string">"mainProps"</span> <span class="hljs-attr">:src</span>=<span class="hljs-string">"getImageUrl(88)"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Image 5"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-img-lazy</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-img-lazy</span> <span class="hljs-attr">v-bind</span>=<span class="hljs-string">"mainProps"</span> <span class="hljs-attr">:src</span>=<span class="hljs-string">"getImageUrl(90)"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Image 6"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-img-lazy</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-img-lazy</span> <span class="hljs-attr">v-bind</span>=<span class="hljs-string">"mainProps"</span> <span class="hljs-attr">:src</span>=<span class="hljs-string">"getImageUrl(92)"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Image 7"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-img-lazy</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-img-lazy</span> <span class="hljs-attr">v-bind</span>=<span class="hljs-string">"mainProps"</span> <span class="hljs-attr">:src</span>=<span class="hljs-string">"getImageUrl(94)"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Image 8"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-img-lazy</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    data() {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">mainProps</span>: {
+          <span class="hljs-attr">center</span>: <span class="hljs-literal">true</span>,
+          <span class="hljs-attr">fluidGrow</span>: <span class="hljs-literal">true</span>,
+          <span class="hljs-attr">blank</span>: <span class="hljs-literal">true</span>,
+          <span class="hljs-attr">blankColor</span>: <span class="hljs-string">'#bbb'</span>,
+          <span class="hljs-attr">width</span>: <span class="hljs-number">600</span>,
+          <span class="hljs-attr">height</span>: <span class="hljs-number">400</span>,
+          <span class="hljs-attr">class</span>: <span class="hljs-string">'my-5'</span>
+        }
+      }
+    },
+    <span class="hljs-attr">methods</span>: {
+      getImageUrl(imageId) {
+        <span class="hljs-keyword">const</span> { width, height } = <span class="hljs-keyword">this</span>.mainProps
+        <span class="hljs-keyword">return</span> <span class="hljs-string">`https://picsum.photos/<span class="hljs-subst">${width}</span>/<span class="hljs-subst">${height}</span>/?image=<span class="hljs-subst">${imageId}</span>`</span>
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+<h3 id="force-show-of-lazy-loaded-image" class="bv-no-focus-ring"><span class="bd-content-title">Force show of lazy loaded image<a class="anchorjs-link" href="#force-show-of-lazy-loaded-image" aria-labelledby="force-show-of-lazy-loaded-image"></a></span></h3>
+<p>To force the final image to be shown, set the <code translate="no" class="notranslate text-nowrap">show</code> prop to <code translate="no" class="notranslate text-nowrap">true</code>. The <code translate="no" class="notranslate text-nowrap">show</code> prop supports the
+Vue <code translate="no" class="notranslate text-nowrap">.sync</code> modifier, and will be updated to <code translate="no" class="notranslate text-nowrap">true</code> when the final image is shown.</p>
+<h3 id="lazy-loaded-srcset-support" class="bv-no-focus-ring"><span class="bd-content-title">Lazy loaded <code translate="no" class="notranslate text-nowrap">srcset</code> support<a class="anchorjs-link" href="#lazy-loaded-srcset-support" aria-labelledby="lazy-loaded-srcset-support"></a></span></h3>
+<p><code translate="no" class="notranslate text-nowrap">&lt;b-img-lazy&gt;</code> supports setting the <a href="#srcset-support" class="font-weight-bold"><code translate="no" class="notranslate text-nowrap">srcset</code> and <code translate="no" class="notranslate text-nowrap">sizes</code></a> attributes on the
+rendered <code translate="no" class="notranslate text-nowrap">&lt;img&gt;</code> element. These props will only be applied to the image once it has come into view.</p>
+<p>See <a href="#srcset-support" class="font-weight-bold"><code translate="no" class="notranslate text-nowrap">srcset</code> support</a> above for prop usage details and limitations.</p>
+<p>Support for <code translate="no" class="notranslate text-nowrap">srcset</code> and <code translate="no" class="notranslate text-nowrap">sizes</code> was added in release <code translate="no" class="notranslate text-nowrap">2.1.0</code>.</p>
+<!-- Component reference added automatically from component package.json --> 
+</section>
+<section class="bd-content bd-component-reference">
+<h2 id="component-reference" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title">Component reference<a href="../../../bootstrap-vue/docs/components/image#component-reference" class="anchorjs-link" aria-labelledby="component-reference" target="_self"></a></span></h2>
+<section data-v-866a22e8="" class="bd-content">
+<header data-v-866a22e8="" class="row align-items-center">
+<div data-v-866a22e8="" class="col-sm-9">
+<h3 data-v-866a22e8="" id="comp-ref-b-img" tabindex="-1" class="bv-no-focus-ring"><span data-v-866a22e8="" class="bd-content-title"><code data-v-866a22e8="" translate="translate" class="notranslate bigger">&lt;b-img&gt;</code><a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/image#comp-ref-b-img" class="anchorjs-link" aria-labelledby="comp-ref-b-img" target="_self"></a></span></h3>
+<!----> <a data-v-866a22e8="" rel="noopener" target="_blank" href="https://vuejs.org/v2/guide/render-function.html#Functional-Components" class="badge badge-secondary"> Functional Component </a></div>
+<div data-v-866a22e8="" class="text-sm-right col-sm-3"><a data-v-866a22e8="" rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev/src/components/image/img.js" class="btn btn-outline-secondary btn-sm"> View source </a></div>
+</header>
+<ul data-v-866a22e8="" class="component-ref-mini-toc my-3">
+<!---->
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-img-props"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-img&gt;</code> Properties </a></li>
+<!----> <!----> <!----> <!---->
+</ul>
+<!---->
+<article data-v-866a22e8="" class="bd-content">
+<h4 data-v-866a22e8="" id="comp-ref-b-img-props" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> Properties <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/image#comp-ref-b-img-props" class="anchorjs-link" aria-labelledby="comp-ref-b-img-props" target="_self"></a></span></h4>
+<div data-v-866a22e8="" class="table-responsive-sm">
+<table role="table" aria-busy="false" aria-colcount="4" class="table b-table bv-docs-table table-striped" id="__BVID__1406">
+<!----><!---->
+<thead role="rowgroup" class="">
+<!---->
+<tr role="row" class="">
+<th role="columnheader" scope="col" tabindex="0" aria-colindex="1" aria-sort="none" class="b-table-sort-icon-left">Property<span class="sr-only"> (Click to sort Ascending)</span></th>
+<th role="columnheader" scope="col" tabindex="0" aria-colindex="2" class="">Type</th>
+<th role="columnheader" scope="col" tabindex="0" aria-colindex="3" class="">Default</th>
+<th role="columnheader" scope="col" tabindex="0" aria-colindex="4" class="">Description</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+<!---->
+<tr role="row" data-pk="src" class="" id="__BVID__1406__row_src">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">src</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">URL to set for the 'src' attribute</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="srcset" class="" id="__BVID__1406__row_srcset">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">srcset</code> <!----> <span data-v-866a22e8="" class="badge badge-secondary">v2.1.0+</span> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">String or Array</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">One or more strings separated by commas (or an array of strings), indicating possible image sources for the user agent to use</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="sizes" class="" id="__BVID__1406__row_sizes">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">sizes</code> <!----> <span data-v-866a22e8="" class="badge badge-secondary">v2.1.0+</span> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">String or Array</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">One or more strings separated by commas (or an array of strings), indicating a set of source sizes. Optionally used in combination with the srcset prop</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="alt" class="" id="__BVID__1406__row_alt">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">alt</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">Value to set for the 'alt' attribute</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="width" class="" id="__BVID__1406__row_width">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">width</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">Number or String</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">The value to set on the image's 'width' attribute</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="height" class="" id="__BVID__1406__row_height">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">height</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">Number or String</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">The value to set on the image's 'height' attribute</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="block" class="" id="__BVID__1406__row_block">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">block</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">Forces the image to display as a block element rather than the browser default of inline-block element</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="fluid" class="" id="__BVID__1406__row_fluid">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">fluid</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">Makes the image responsive. The image will shrink as needed or grow up the the image's native width</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="fluid-grow" class="" id="__BVID__1406__row_fluid-grow">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">fluid-grow</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">Similar to the 'fluid' prop, but allows the image to scale up past its native width</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="rounded" class="" id="__BVID__1406__row_rounded">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">rounded</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">Boolean or String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">When set to 'true', makes the image corners slightly rounded. Can also be used to disable rounded corners or make the image a circle/oval. See docs for details</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="thumbnail" class="" id="__BVID__1406__row_thumbnail">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">thumbnail</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">Adds a thumbnail border around the image</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="left" class="" id="__BVID__1406__row_left">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">left</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">Floats the image to the left when set</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="right" class="" id="__BVID__1406__row_right">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">right</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">Floats the image to the right when set</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="center" class="" id="__BVID__1406__row_center">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">center</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">Centers the image horizontally</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="blank" class="" id="__BVID__1406__row_blank">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">blank</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">Creates a blank/transparent image via an SVG data URI</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="blank-color" class="" id="__BVID__1406__row_blank-color">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">blank-color</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'transparent'</code></td>
+<td aria-colindex="4" role="cell" class="">Sets the color of the blank image to the CSS color value specified</td>
+</tr>
+<!----><!----><!----><!---->
+</tbody>
+<!---->
+</table>
+</div>
+<!----> <!----></article>
+<!----> <!----> <!----> <!----></section>
+<section data-v-866a22e8="" class="bd-content">
+<header data-v-866a22e8="" class="row align-items-center">
+<div data-v-866a22e8="" class="col-sm-9">
+<h3 data-v-866a22e8="" id="comp-ref-b-img-lazy" tabindex="-1" class="bv-no-focus-ring"><span data-v-866a22e8="" class="bd-content-title"><code data-v-866a22e8="" translate="translate" class="notranslate bigger">&lt;b-img-lazy&gt;</code><a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/image#comp-ref-b-img-lazy" class="anchorjs-link" aria-labelledby="comp-ref-b-img-lazy" target="_self"></a></span></h3>
+<!----> <!----></div>
+<div data-v-866a22e8="" class="text-sm-right col-sm-3"><a data-v-866a22e8="" rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev/src/components/image/img-lazy.js" class="btn btn-outline-secondary btn-sm"> View source </a></div>
+</header>
+<ul data-v-866a22e8="" class="component-ref-mini-toc my-3">
+<!---->
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-img-lazy-props"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-img-lazy&gt;</code> Properties </a></li>
+<!----> <!----> <!----> <!---->
+</ul>
+<!---->
+<article data-v-866a22e8="" class="bd-content">
+<h4 data-v-866a22e8="" id="comp-ref-b-img-lazy-props" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> Properties <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/image#comp-ref-b-img-lazy-props" class="anchorjs-link" aria-labelledby="comp-ref-b-img-lazy-props" target="_self"></a></span></h4>
+<div data-v-866a22e8="" class="table-responsive-sm">
+<table role="table" aria-busy="false" aria-colcount="4" class="table b-table bv-docs-table table-striped" id="__BVID__1436">
+<!----><!---->
+<thead role="rowgroup" class="">
+<!---->
+<tr role="row" class="">
+<th role="columnheader" scope="col" tabindex="0" aria-colindex="1" aria-sort="none" class="b-table-sort-icon-left">Property<span class="sr-only"> (Click to sort Ascending)</span></th>
+<th role="columnheader" scope="col" tabindex="0" aria-colindex="2" class="">Type</th>
+<th role="columnheader" scope="col" tabindex="0" aria-colindex="3" class="">Default</th>
+<th role="columnheader" scope="col" tabindex="0" aria-colindex="4" class="">Description</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+<!---->
+<tr role="row" data-pk="src" class="" id="__BVID__1436__row_src">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">src</code> <span data-v-866a22e8="" class="badge badge-info">Required</span> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">URL to set for the 'src' attribute</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="srcset" class="" id="__BVID__1436__row_srcset">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">srcset</code> <!----> <span data-v-866a22e8="" class="badge badge-secondary">v2.1.0+</span> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">String or Array</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">One or more strings separated by commas (or an array of strings), indicating possible image sources for the user agent to use</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="sizes" class="" id="__BVID__1436__row_sizes">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">sizes</code> <!----> <span data-v-866a22e8="" class="badge badge-secondary">v2.1.0+</span> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">String or Array</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">One or more strings separated by commas (or an array of strings), indicating a set of source sizes. Optionally used in combination with the srcset prop</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="alt" class="" id="__BVID__1436__row_alt">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">alt</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">Value to set for the 'alt' attribute</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="width" class="" id="__BVID__1436__row_width">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">width</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">Number or String</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">The value to set on the image's 'width' attribute</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="height" class="" id="__BVID__1436__row_height">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">height</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">Number or String</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">The value to set on the image's 'height' attribute</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="blank-src" class="" id="__BVID__1436__row_blank-src">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">blank-src</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">Placeholder image instead of a blank image</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="blank-color" class="" id="__BVID__1436__row_blank-color">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">blank-color</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'transparent'</code></td>
+<td aria-colindex="4" role="cell" class="">Sets the color of the blank placeholder image to the CSS color value specified</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="blank-width" class="" id="__BVID__1436__row_blank-width">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">blank-width</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">Number or String</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">The value to set on the placeholder image's 'width' attribute. Defaults to value of the 'width' prop</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="blank-height" class="" id="__BVID__1436__row_blank-height">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">blank-height</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">Number or String</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">The value to set on the placeholder image's 'height' attribute. Defaults to value of the 'height' prop</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="show" class="" id="__BVID__1436__row_show">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">show</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">If set to true, will force show the image specified via the 'src' prop</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="fluid" class="" id="__BVID__1436__row_fluid">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">fluid</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">Makes the image responsive. The image will shrink as needed or grow up the the image's native width</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="fluid-grow" class="" id="__BVID__1436__row_fluid-grow">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">fluid-grow</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">Similar to the 'fluid' prop, but allows the image to scale up past its native width</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="block" class="" id="__BVID__1436__row_block">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">block</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">Forces the image to display as a block element rather than the browser default of inline-block element</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="thumbnail" class="" id="__BVID__1436__row_thumbnail">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">thumbnail</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">Adds a thumbnail border around the image</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="rounded" class="" id="__BVID__1436__row_rounded">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">rounded</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">Boolean or String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">When set to 'true', makes the image corners slightly rounded. Can also be used to disable rounded corners or make the image a circle/oval. See docs for details</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="left" class="" id="__BVID__1436__row_left">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">left</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">Floats the image to the left when set</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="right" class="" id="__BVID__1436__row_right">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">right</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">Floats the image to the right when set</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="center" class="" id="__BVID__1436__row_center">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">center</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">Centers the image horizontally</td>
+</tr>
+<!----><!---->
+<tr role="row" data-pk="offset" class="" id="__BVID__1436__row_offset">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">offset</code> <!----> <!----> <!----> <!----> <!----></td>
+<td aria-colindex="2" role="cell" class="">Number or String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">360</code></td>
+<td aria-colindex="4" role="cell" class="">Number of pixels away from the viewport edge before the lazy image is loaded</td>
+</tr>
+<!----><!----><!----><!---->
+</tbody>
+<!---->
+</table>
+</div>
+<!----> <!----></article>
+
+
+<article class="bd-content">
+<h3 id="importing-individual-components" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title"> Importing individual components <a href="../../../bootstrap-vue/docs/components/image#importing-individual-components" class="anchorjs-link" aria-labelledby="importing-individual-components" target="_self"></a></span></h3>
+<p> You can import individual components into your project via the following named
+        exports: </p>
+<div class="table-responsive-sm">
+<table role="table" aria-busy="false" aria-colcount="3" class="table b-table bv-docs-table table-striped" id="__BVID__1467">
+<!----><!---->
+<thead role="rowgroup" class="thead-default">
+<!---->
+<tr role="row" class="">
+<th role="columnheader" scope="col" aria-colindex="1" class="">Component</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">Named Export</th>
+<th role="columnheader" scope="col" aria-colindex="3" class="">Import Path</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+<!---->
+<tr role="row" class="">
+<td aria-colindex="1" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">&lt;b-img&gt;</code></td>
+<td aria-colindex="2" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">BImg</code></td>
+<td aria-colindex="3" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">bootstrap-vue</code></td>
+</tr>
+<tr role="row" class="">
+<td aria-colindex="1" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">&lt;b-img-lazy&gt;</code></td>
+<td aria-colindex="2" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">BImgLazy</code></td>
+<td aria-colindex="3" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">bootstrap-vue</code></td>
+</tr>
+<!----><!---->
+</tbody>
+<!---->
+</table>
+</div>
+<p><strong>Example:</strong></p>
+<pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { BImg } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
+Vue.component(<span class="hljs-string">'b-img'</span>, BImg)</pre>
+</article>
+<!---->
+<article class="bd-content">
+<h3 id="importing-as-a-plugin" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title"> Importing as a Vue.js plugin <a href="../../../bootstrap-vue/docs/components/image#importing-as-a-plugin" class="anchorjs-link" aria-labelledby="importing-as-a-plugin" target="_self"></a></span></h3>
+<p> This plugin includes all of the above listed individual
+      components<!---->.
+      Plugins also include any component aliases. </p>
+<div class="table-responsive-sm">
+<table fileds="namedExport,importPath" role="table" aria-busy="false" aria-colcount="2" class="table b-table bv-docs-table table-striped b-table-caption-top" id="__BVID__1478">
+<!----><!---->
+<thead role="rowgroup" class="thead-default">
+<!---->
+<tr role="row" class="">
+<th role="columnheader" scope="col" aria-colindex="1" class="">Named Export</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">Import Path</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+<!---->
+<tr role="row" class="">
+<td aria-colindex="1" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">ImagePlugin</code></td>
+<td aria-colindex="2" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">bootstrap-vue</code></td>
+</tr>
+<!----><!---->
+</tbody>
+<!---->
+</table>
+</div>
+<!---->
+<p><strong>Example:</strong></p>
+<pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { ImagePlugin } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
+Vue.use(ImagePlugin)</pre>
+</article>
+
+
+
+
+
+
+
+</main>
+</div>
+</div>
+
+
+<script src="../../../js/jquery-3.2.1.slim.min.js"></script> 
+<script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery-slim.min.js"><\/script>')</script> 
+<script src="../../../v4/dist/js/popper.min.js"></script> 
+<script src="../../../v4/dist/js/bootstrap.min.js"></script> 
+<script src="../../../v4/assets/js/docs.min.js"></script> 
+<script src="../../../v4/assets/js/ie-emulation-modes-warning.js"></script> 
+<script src="../../../v4/assets/js/docsearch.min.js"></script> 
+<script>
+  docsearch({
+    appId: 'PRR89ISST8',
+    apiKey: '95044d57d4d7bb744f322d1f18ed607f',
+    indexName: 'z01-bootstrapV4',
+    inputSelector: '#search-input',
+    handleSelected: function (input, event, suggestion) {
+      var url = suggestion.url;
+      url = suggestion.isLvl1 ? url.split('#')[0]: url;
+      // If it's a title we remove the anchor so it does not jump.
+      window.location.href = url;
+    },
+    transformData: function (hits) {
+      return hits.map(function (hit) {
+        hit.url = hit.url.replace('https://v4-alpha.getbootstrap.com', '/docs/4.0');
+        return hit;
+      });
+    },
+    debug: false // Set debug to true if you want to inspect the dropdown
+  });
+</script> 
+<script>
+  Holder.addTheme('gray', {
+    bg: '#777',
+    fg: 'rgba(255,255,255,.75)',
+    font: 'Helvetica',
+    fontweight: 'normal'
+  });
+</script>
+</body>
+</html>

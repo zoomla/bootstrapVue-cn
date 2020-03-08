@@ -1,0 +1,418 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Jekyll v3.6.0">
+<title>开始模板 &middot; BootstrapVue</title>
+<!-- Bootstrap 核心CSS -->
+<link href="../../../v4/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- 本文档额外专用css -->
+<link href="../../../v4/assets/css/docsearch.min.css" rel="stylesheet">
+<link href="../../../v4/assets/css/docs.min.css" rel="stylesheet">
+<link href="../../style/bv_path.css" rel="stylesheet">
+
+<!-- Favicons图标定义 -->
+<link data-n-head="ssr" rel="manifest" href="../../manifest.json">
+<link data-n-head="ssr" rel="shortcut icon" href="../../style/icons/icon_64.png">
+<link data-n-head="ssr" rel="apple-touch-icon" href="../../style/icons/icon_512.png" sizes="512x512">
+
+<!-- Meta关键字定义 -->
+<meta name="description" content="The most popular HTML, CSS, and JS library in the world.">
+<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+
+</head>
+<body>
+<a id="skippy" class="sr-only sr-only-focusable" href="#content">
+<div class="container"> <span class="skiplink-text">跳到主体内容</span> </div>
+</a>
+<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar"> <a class="navbar-brand mr-0 mr-md-2" href="../" aria-label="Bootstrap">
+  <svg class="d-block" width="36" height="36" viewbox="0 0 612 612" xmlns="http://www.w3.org/2000/svg" focusable="false">
+    <title>Bootstrap</title>
+    <path fill="currentColor" d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z"/>
+    <path fill="currentColor" d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z"/>
+  </svg>
+  </a>
+  <div class="navbar-nav-scroll">
+    <ul class="navbar-nav bd-navbar-nav flex-row">
+      <li class="nav-item"><a class="nav-link " href="../">首页</a></li>
+      <li class="nav-item"><a class="nav-link active" href="../../v4/docs/">中文手册</a></li>
+      <li class="nav-item"><a class="nav-link " href="../../v4/examples/">实例</a></li>
+      <li class="nav-item dropdown">
+<a class="nav-item nav-link dropdown-toggle mr-md-2" id="bd-versions" aria-expanded="false" aria-haspopup="true" href="#" data-toggle="dropdown"> 主题模板 </a>
+<div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
+<a class="dropdown-item" href="../../V4/themes/" target="_blank">主题门户</a>
+<a class="dropdown-item" href="../../V4/themes/live.html">精选模板</a>
+</div>
+</li>
+      <li class="nav-item"><a class="nav-link" href="//ico.z01.com" target="_blank" rel="noopener">zico图标系统</a></li>
+      <li class="nav-item"><a class="nav-link" href="https://expo.getbootstrap.com" target="_blank" rel="noopener">优站精选</a></li>
+      <li class="nav-item"><a class="nav-link" href="https://blog.getbootstrap.com" target="_blank" rel="noopener">Blog</a></li>
+    </ul>
+  </div>
+  <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="alse"> v2.6.1 </a>
+      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions"> 
+        <a class="dropdown-item active" href="../../../bootstrap-vue/docs/4.0/">Latest (4.3.x)</a>
+        <a class="dropdown-item" href="/Boot/">v3.3.7</a>
+        <a class="dropdown-item" href="/Sass/">Sass语言</a>
+        <a class="dropdown-item" href="/Emmet/">Emmet语法</a>
+        <a class="dropdown-item" href="//www.z01.com/tool/" target="_blank">IIS站长工具</a>
+        <a class="dropdown-item" href="//ad.z01.com/" target="_blank">广告源码</a>
+        <a class="dropdown-item" href="//v.z01.com/mb/" target="_blank">免费模板</a>
+        <a class="dropdown-item" href="//v.z01.com/" target="_blank">H5移动创作</a>
+        <a class="dropdown-item" href="//www.z01.com/help/web/3234.shtml" target="_blank">Flexbox布局</a>
+		<a class="dropdown-item" href="/boot/font.html" target="_blank">Font Awesome</a>
+</div>
+    </li>
+    <li class="nav-item"> <a class="nav-link p-2" href="//zoomla.github.io/bootstrap4-zhcn-documentation" target="_blank" rel="noopener" aria-label="GitHub">
+      <svg class="navbar-nav-svg" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 499.36" focusable="false">
+        <title>GitHub</title>
+        <path d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z" fill="currentColor" fill-rule="evenodd"/>
+      </svg>
+      </a> </li>
+    <li class="nav-item"> <a class="nav-link p-2" href="http://www.z01.com/blog/ren/3214.shtml" target="_blank" rel="noopener" aria-label="Slack">译者说</a></li>
+  </ul>
+  <a class="btn btn-bd-yellow d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="download.html">下载 Bootstrap</a> </header>
+
+<div class="container-fluid">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+      <form class="bd-search d-flex align-items-center">
+        <input type="search" class="form-control" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
+        <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30" focusable="false">
+          <title>Menu</title>
+          <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/>
+        </svg>
+        </button>
+      </form>
+
+
+<nav class="collapse bd-links" id="bd-docs-nav">
+<div class=""><a href="../" class="bd-toc-link">首页</a></div>
+<div class="bd-toc-item nuxt-link-exact-active "><a href="../../../bootstrap-vue/docs/" class="bd-toc-link  "> 起步 </a>
+<ul class="nav bd-sidenav">
+</ul>
+</div>
+<div class="bd-toc-item"><a href="../../../bootstrap-vue/docs/components/" class="bd-toc-link nuxt-link-exact-active"> 组件 </a>
+<ul class="nav bd-sidenav">
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/index.html" class="nav-link"> 组件目录 </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/alert.html" class="nav-link"> 警告提示框(Alert) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/badge.html" class="nav-link"> 徽章(Badge) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/badge.html" class="nav-link"> 面包屑导航(Breadcrumb) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/button.html" class="nav-link"> 按钮(Button) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/button-group.html" class="nav-link"> 按钮组(Button Group) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/button-toolbar.html" class="nav-link"> 按钮Toolbar(Button Toolbar) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/calendar.html" class="nav-link"> 日历组件(Calendar) <small class="badge text-uppercase badge-success">New</small> </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/card.html" class="nav-link"> 卡片(Card) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/carousel.html" class="nav-link"> 轮播效果(Carousel) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/collapse.html" class="nav-link"> 折叠面板(Collapse) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/dropdown.html" class="nav-link"> 下拉菜单(Dropdown) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/embed.html" class="nav-link"> 嵌入(Embed) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form.html" class="nav-link"> 表单(Form) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-checkbox.html" class="nav-link"> 表单复选框(Form Checkbox) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-datepicker.html" class="nav-link"> 表单时间选择器(Form Datepicker) <small class="badge text-uppercase badge-success">New</small> </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-file.html" class="nav-link"> 文件选择(Form File) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-group.html" class="nav-link"> 表单组合(Form Group) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-input.html" class="nav-link"> 表单输入框(Form Input) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-radio.html" class="nav-link"> 单选择表单Form Radio </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-select.html" class="nav-link"> 下拉式表单(Form Select) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-spinbutton.html" class="nav-link"> 按钮式表单(Form Spinbuttno) <small class="badge text-uppercase badge-success">New</small> </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-tags.html" class="nav-link"> Tags表单选择器(Form Tags) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-textarea.html" class="nav-link"> 文本框(Form Textarea) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-timepicker.html" class="nav-link"> 表单内时间控件(Form Timepicker) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/image.html" class="nav-link"> 图片(Image) </a></li>
+
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/input-group.html" class="nav-link"> 输入框(Input Group) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/jumbotron.html" class="nav-link"> Hero大块屏(Jumbotron) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/layout.html" class="nav-link"> 布局与网络Layout and Grid System </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/link.html" class="nav-link"> 链接(Link)</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/list-group.html" class="nav-link"> 列表组(List group) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/media.html" class="nav-link"> 媒体(Media) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/modal.html" class="nav-link"> 弹出模态框(Modal) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/nav.html" class="nav-link"> 导航(Nav) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/navbar.html" class="nav-link"> 导航栏(Navbar) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/pagination.html" class="nav-link"> 分页(Pagination) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/pagination-nav.html" class="nav-link"> 分页导航(Pagination Nav) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/popover.html" class="nav-link"> 指示备注(Popover) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/progress.html" class="nav-link"> 进度指示器(Progress) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/spinner.html" class="nav-link"> 旋转指示器(Spinner) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/table.html" class="nav-link"> 表格(Table) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/tabs.html" class="nav-link"> 选项卡(Tabs) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/time.html" class="nav-link"> 时间组件(Time) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/toast.html" class="nav-link"> 冒泡推送(Toasts) </a></li>
+<li class="nav-item active"><a href="../../../bootstrap-vue/docs/components/tooltip.html" class="nav-link"> tip提示组件(Tooltip) </a></li>
+</ul>
+</div>
+<div class="bd-toc-item"><a href="../../../bootstrap-vue/docs/directives/" class="bd-toc-link"> 指令 </a>
+<ul class="nav bd-sidenav">
+<li class="nav-item active"><a href="../../../bootstrap-vue/docs/directives/index.html" class="nav-link"> 指令目录 </a></li>
+<li class="nav-item active"><a href="../../../bootstrap-vue/docs/directives/hover.html" class="nav-link"> Hover 指令<small class="badge text-uppercase badge-success">New</small> </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/directives/popover.html" class="nav-link"> Popover 提示备注</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/directives/scrollspy.html" class="nav-link"> Scrollspy 滚动监听</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/directives/tooltip.html" class="nav-link"> Tooltip 提示指令</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/directives/visible.html" class="nav-link"> Visible 可见性操作<small class="badge text-uppercase badge-success">New</small> </a></li>
+</ul>
+</div>
+<div class="bd-toc-item"><a href="../../../bootstrap-vue/docs/icons.html" class="bd-toc-link"> Icons图标</a>
+<ul class="nav bd-sidenav">
+</ul>
+</div>
+  
+<div class="bd-toc-item active"> <a class="bd-toc-link" href="../../../bootstrap-vue/docs/reference">参考 </a>
+<ul class="nav bd-sidenav">
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference" class="nav-link"> 参考目录 </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/accessibility.html" class="nav-link">友好访问</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/color-variants.html" class="nav-link">Color颜色变量 </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/images.html" class="nav-link"> 组件图像img的src路径解析</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/router-links.html" class="nav-link"> Router路由支持 </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/size-props.html" class="nav-link">大小规格</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/spacing-classes.html" class="nav-link">间距处理</a></li>
+<li class="nav-item active"><a href="../../../bootstrap-vue/docs/reference/starter-templates.html" class="nav-link">开始模板</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/theming.html" class="nav-link">主题色彩</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/utility-classes.html" class="nav-link">通用Class类</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/validation.html" class="nav-link">Form表单验证</a></li>
+</ul>
+</div>
+<div class="bd-toc-item"> <a class="bd-toc-link" href="../components/alerts.html"> 杂项 </a>
+<ul class="nav bd-sidenav">
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/misc/changelog.html" class="nav-link"> Changelog </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/misc/contributing.html" class="nav-link"> Contributing </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/misc/settings.html" class="nav-link"> Settings </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/misc/third-party.html" class="nav-link"> Third party libraries </a></li>
+</ul>
+</div>
+<div class=""><a href="/play" class="bd-toc-link">在线模拟器</a></div>
+</nav>
+</div>
+
+<div class="d-none d-xl-block col-xl-2 bd-toc">
+<ul class="section-nav">
+<li class="nav-item toc-entry mb-2"><a target="_self" href="#starter-templates" class="nav-link font-weight-bold"><span>Starter Templates</span></a></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#basic-example" class="nav-link"><span>Basic example</span></a> </li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#vue-cli-3" class="nav-link"><span>Vue CLI 3</span></a> </li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#building-with-customized-bootstrap-v4-css" class="nav-link"><span>Building with customized Bootstrap v4 CSS</span></a> </li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#individual-component-import" class="nav-link"><span>Individual component import</span></a>
+<ul class="nav flex-column">
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#importing-individual-components-and-directives" class="nav-link"><span>Importing individual components and directives</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#importing-component-groups-and-directives-as-vue-plugins" class="nav-link"><span>Importing component groups and directives as Vue plugins</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+
+<nav data-v-aafc4aea="" aria-label="Breadcrumbs" class="float-left mt-2 mb-0 mb-lg-2">
+<ol data-v-aafc4aea="" class="breadcrumb d-inline-flex bg-transparent px-2 py-1 my-0">
+<li data-v-aafc4aea="" class="breadcrumb-item"><a data-v-aafc4aea="" href="../../" class="nuxt-link-active" target="_self">首页</a></li>
+<li data-v-aafc4aea="" class="breadcrumb-item"><a data-v-aafc4aea="" href="../../../bootstrap-vue/docs" class="nuxt-link-active" target="_self">中文手册</a></li>
+<li data-v-aafc4aea="" class="breadcrumb-item"><a data-v-aafc4aea="" href="../../../bootstrap-vue/docs/reference/" class="nuxt-link-active" target="_self">参考</a></li>
+<li data-v-aafc4aea="" class="breadcrumb-item active"><span data-v-aafc4aea="" aria-current="location">开始模板</span></li>
+</ol>
+</nav>
+<div class="clearfix d-block"></div>
+  <h1 class="bd-title" id="content">开始模板</h1>
+  <p class="bd-lead">一套基本的BoostrapVue模板，并支持多种方式引用。</p>
+  <script type="text/javascript" src="../../../v4/assets/js/pupCMS.js"></script>
+
+
+
+<nav class="bd-quick-links mb-3 d-xl-none" style="" data-v-4abf2740="">
+<header data-v-4abf2740="">
+<button data-v-4abf2740="" type="button" class="btn font-weight-bold btn-outline-secondary btn-sm btn-block collapsed" aria-controls="bd-quick-links-collapse" aria-expanded="false"> Show page table of contents </button>
+</header>
+<ul data-v-4abf2740="" id="bd-quick-links-collapse" class="collapse" style="display: none;">
+<li data-v-4abf2740=""><a data-v-4abf2740="" target="_self" href="#basic-example" class=""><span data-v-4abf2740="">Basic example</span></a> <!----></li>
+<li data-v-4abf2740=""><a data-v-4abf2740="" target="_self" href="#vue-cli-3" class=""><span data-v-4abf2740="">Vue CLI 3</span></a> <!----></li>
+<li data-v-4abf2740=""><a data-v-4abf2740="" target="_self" href="#building-with-customized-bootstrap-v4-css" class=""><span data-v-4abf2740="">Building with customized Bootstrap v4 CSS</span></a> <!----></li>
+<li data-v-4abf2740=""><a data-v-4abf2740="" target="_self" href="#individual-component-import" class=""><span data-v-4abf2740="">Individual component import</span></a>
+<ul data-v-4abf2740="">
+<li data-v-4abf2740=""><a data-v-4abf2740="" target="_self" href="#importing-individual-components-and-directives" class=""><span data-v-4abf2740="">Importing individual components and directives</span></a></li>
+<li data-v-4abf2740=""><a data-v-4abf2740="" target="_self" href="#importing-component-groups-and-directives-as-vue-plugins" class=""><span data-v-4abf2740="">Importing component groups and directives as Vue plugins</span></a></li>
+</ul>
+</li>
+</ul>
+</nav>
+<p>In all cases, you should have familiarity with using <a href="https://vuejs.org" target="_blank" rel="noopener">Vue</a>. A good resource for
+Vue tutorials is <a href="https://laracasts.com/search?q=vue" target="_blank" rel="noopener">Laracasts</a>.</p>
+<h2 id="basic-example" class="bv-no-focus-ring"><span class="bd-content-title">Basic example<a class="anchorjs-link" href="#basic-example" aria-labelledby="basic-example"></a></span></h2>
+<p>Get started quickly without the need for a build system, by using standard <code class="text-nowrap" translate="no">&lt;script&gt;</code> and <code class="text-nowrap" translate="no">&lt;link&gt;</code> tags to load the required JavaScript and CSS in your page.</p>
+<div class="bd-code">
+<pre class="hljs html p-2" translate="no"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"en"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- Required meta tags --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"utf-8"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"viewport"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"width=device-width, initial-scale=1, shrink-to-fit=no"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">http-equiv</span>=<span class="hljs-string">"content-type"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"text/html; charset=UTF-8"</span> /&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>My first BootstrapVue app<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+
+    <span class="hljs-comment">&lt;!-- Required Stylesheets --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">link</span>
+      <span class="hljs-attr">type</span>=<span class="hljs-string">"text/css"</span>
+      <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span>
+      <span class="hljs-attr">href</span>=<span class="hljs-string">"https://unpkg.com/bootstrap/dist/css/bootstrap.min.css"</span>
+    /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">link</span>
+      <span class="hljs-attr">type</span>=<span class="hljs-string">"text/css"</span>
+      <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span>
+      <span class="hljs-attr">href</span>=<span class="hljs-string">"https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.css"</span>
+    /&gt;</span>
+
+    <span class="hljs-comment">&lt;!-- Load polyfills to support older browsers --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://polyfill.io/v3/polyfill.min.js?features=es2015%2CIntersectionObserver"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+    <span class="hljs-comment">&lt;!-- Required scripts --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://unpkg.com/vue@latest/dist/vue.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- Our application root element --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"app"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-container</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">b-jumbotron</span> <span class="hljs-attr">header</span>=<span class="hljs-string">"BootstrapVue"</span> <span class="hljs-attr">lead</span>=<span class="hljs-string">"Bootstrap v4 Components for Vue.js 2"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>For more information visit our website<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">b-btn</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"primary"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://bootstrap-vue.js.org/"</span>&gt;</span>More Info<span class="hljs-tag">&lt;/<span class="hljs-name">b-btn</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">b-jumbotron</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">b-form-group</span>
+          <span class="hljs-attr">horizontal</span>
+          <span class="hljs-attr">:label-cols</span>=<span class="hljs-string">"4"</span>
+          <span class="hljs-attr">description</span>=<span class="hljs-string">"Let us know your name."</span>
+          <span class="hljs-attr">label</span>=<span class="hljs-string">"Enter your name"</span>
+        &gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">b-form-input</span> <span class="hljs-attr">v-model.trim</span>=<span class="hljs-string">"name"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-input</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">b-form-group</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">b-alert</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"success"</span> <span class="hljs-attr">:show</span>=<span class="hljs-string">"showAlert"</span>&gt;</span>Hello {{ name }}<span class="hljs-tag">&lt;/<span class="hljs-name">b-alert</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+    <span class="hljs-comment">&lt;!-- Start running your app --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+      <span class="hljs-built_in">window</span>.app = <span class="hljs-keyword">new</span> Vue({
+        <span class="hljs-attr">el</span>: <span class="hljs-string">'#app'</span>,
+        <span class="hljs-attr">data</span>: {
+          <span class="hljs-attr">name</span>: <span class="hljs-string">''</span>
+        },
+        <span class="hljs-attr">computed</span>: {
+          showAlert() {
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.name.length &gt; <span class="hljs-number">4</span> ? <span class="hljs-literal">true</span> : <span class="hljs-literal">false</span>
+          }
+        }
+      })
+    </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></pre>
+</div>
+<h2 id="vue-cli-3" class="bv-no-focus-ring"><span class="bd-content-title">Vue CLI 3<a class="anchorjs-link" href="#vue-cli-3" aria-labelledby="vue-cli-3"></a></span></h2>
+<p>Vue CLI 3 is the newest way to create Vue apps.</p>
+<p>A Vue CLI 3 BootStrapVue plugin is available for setting up a basic app. refer to the <a href="/docs/#vue-cli-3-plugin" class="font-weight-bold">Getting Started</a> docs page for more details.</p>
+<h2 id="building-with-customized-bootstrap-v4-css" class="bv-no-focus-ring"><span class="bd-content-title">Building with customized Bootstrap v4 CSS<a class="anchorjs-link" href="#building-with-customized-bootstrap-v4-css" aria-labelledby="building-with-customized-bootstrap-v4-css"></a></span></h2>
+<p>If you are using a build system, and would like to customize the Bootstrap v4 CSS, the following
+references will be handy starting points:</p>
+<ul>
+<li>BootstrapVue's <a href="/docs/reference/theming" class="font-weight-bold">Theming</a> reference section</li>
+<li>Official Bootstrap <a href="https://getbootstrap.com/docs/4.3/getting-started/theming/" target="_blank" rel="noopener">Theming Bootstrap </a> guide</li>
+</ul>
+<h2 id="individual-component-import" class="bv-no-focus-ring"><span class="bd-content-title">Individual component import<a class="anchorjs-link" href="#individual-component-import" aria-labelledby="individual-component-import"></a></span></h2>
+<p>There are a few methods that you can use to import individual components and directives.</p>
+<p>You will need <code class="text-nowrap" translate="no">vue-loader</code> configured to handle the compiling any components that are internally
+single file <code class="text-nowrap" translate="no">.vue</code> components.</p>
+<p>The BootstrapVue distribution now includes <code class="text-nowrap" translate="no">ES</code> modules for all components and directives. These are
+located in the <code class="text-nowrap" translate="no">bootstrap-vue/es/components/</code> and <code class="text-nowrap" translate="no">bootstrap-vue/es/directives/</code> directories, when
+using the NPM bundle. When building from the BootstrapVue repo source the directories will be
+created when you run <code class="text-nowrap" translate="no">yarn build</code>.</p>
+<h3 id="importing-individual-components-and-directives" class="bv-no-focus-ring"><span class="bd-content-title">Importing individual components and directives<a class="anchorjs-link" href="#importing-individual-components-and-directives" aria-labelledby="importing-individual-components-and-directives"></a></span></h3>
+<p>As an example, you can import <code class="text-nowrap" translate="no">&lt;b-card&gt;</code> (plus some of its sub components) and <code class="text-nowrap" translate="no">&lt;b-table&gt;</code> as
+follows:</p>
+<div class="bd-code">
+<pre class="hljs js p-2" translate="no"><span class="hljs-comment">// Import the individual components</span>
+<span class="hljs-keyword">import</span> { BCard, BCardBody, BCardFooter, BCardHeader, BCardImg, BTable } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
+
+<span class="hljs-comment">// Add components globally</span>
+Vue.component(<span class="hljs-string">'b-card'</span>, BCard)
+Vue.component(<span class="hljs-string">'b-card-body'</span>, BCardBody)
+Vue.component(<span class="hljs-string">'b-card-footer'</span>, BCardFooter)
+Vue.component(<span class="hljs-string">'b-card-header'</span>, BCardHeader)
+Vue.component(<span class="hljs-string">'b-card-img'</span>, BCardImg)
+Vue.component(<span class="hljs-string">'b-table'</span>, BTable)
+
+<span class="hljs-comment">// Or make available locally to your component or app</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+  <span class="hljs-attr">components</span>: {
+    BCard,
+    BCardBody,
+    BCardFooter,
+    BCardHeader,
+    BCardImg,
+    BTable
+  }
+  <span class="hljs-comment">// ...</span>
+}</pre>
+</div>
+<h3 id="importing-component-groups-and-directives-as-vue-plugins" class="bv-no-focus-ring"><span class="bd-content-title">Importing component groups and directives as Vue plugins<a class="anchorjs-link" href="#importing-component-groups-and-directives-as-vue-plugins" aria-labelledby="importing-component-groups-and-directives-as-vue-plugins"></a></span></h3>
+<p>A component group and/or directive can be imported as a Vue plugin by importing the component group
+or directive directory. Importing <code class="text-nowrap" translate="no">&lt;b-card&gt;</code> (and related sub-components) and <code class="text-nowrap" translate="no">&lt;b-table&gt;</code> can be
+done with:</p>
+<div class="bd-code">
+<pre class="hljs js p-2" translate="no"><span class="hljs-comment">// Import the components as Vue plugins</span>
+<span class="hljs-keyword">import</span> { CardPlugin, TablePlugin } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
+
+<span class="hljs-comment">// Add the plugins to Vue</span>
+Vue.use(CardPlugin)
+Vue.use(TablePlugin)</pre>
+</div>
+<p>Now you can use the <code class="text-nowrap" translate="no">&lt;b-card&gt;</code> (including the <code class="text-nowrap" translate="no">&lt;b-card-*&gt;</code> sub-components) and <code class="text-nowrap" translate="no">&lt;b-table&gt;</code> components in your project templates.</p>
+<p>Note that some component plugins automatically import other directives and components (i.e. the <code class="text-nowrap" translate="no">modal</code> plugin also imports the <code class="text-nowrap" translate="no">v-b-modal</code> directive, and <code class="text-nowrap" translate="no">nav</code> plugin automatically imports all <code class="text-nowrap" translate="no">nav-*</code> sub-components and the dropdown sub-components). Refer to the component reference or
+directive reference at the bottom of each documentation page for details.</p>
+
+
+
+
+</main>
+</div>
+</div>
+
+
+<script src="../../../js/jquery-3.2.1.slim.min.js"></script> 
+<script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery-slim.min.js"><\/script>')</script> 
+<script src="../../../v4/dist/js/popper.min.js"></script> 
+<script src="../../../v4/dist/js/bootstrap.min.js"></script> 
+<script src="../../../v4/assets/js/docs.min.js"></script> 
+<script src="../../../v4/assets/js/ie-emulation-modes-warning.js"></script> 
+<script src="../../../v4/assets/js/docsearch.min.js"></script> 
+<script>
+  docsearch({
+    appId: 'PRR89ISST8',
+    apiKey: '95044d57d4d7bb744f322d1f18ed607f',
+    indexName: 'z01-bootstrapV4',
+    inputSelector: '#search-input',
+    handleSelected: function (input, event, suggestion) {
+      var url = suggestion.url;
+      url = suggestion.isLvl1 ? url.split('#')[0]: url;
+      // If it's a title we remove the anchor so it does not jump.
+      window.location.href = url;
+    },
+    transformData: function (hits) {
+      return hits.map(function (hit) {
+        hit.url = hit.url.replace('https://v4-alpha.getbootstrap.com', '/docs/4.0');
+        return hit;
+      });
+    },
+    debug: false // Set debug to true if you want to inspect the dropdown
+  });
+</script> 
+<script>
+  Holder.addTheme('gray', {
+    bg: '#777',
+    fg: 'rgba(255,255,255,.75)',
+    font: 'Helvetica',
+    fontweight: 'normal'
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,1256 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Jekyll v3.6.0">
+<title>输入框 &middot; BootstrapVue</title>
+<!-- Bootstrap 核心CSS -->
+<link href="../../../v4/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- 本文档额外专用css -->
+<link href="../../../v4/assets/css/docsearch.min.css" rel="stylesheet">
+<link href="../../../v4/assets/css/docs.min.css" rel="stylesheet">
+<link href="../../style/bv_path.css" rel="stylesheet">
+
+<!-- Favicons图标定义 -->
+<link data-n-head="ssr" rel="manifest" href="../../manifest.json">
+<link data-n-head="ssr" rel="shortcut icon" href="../../style/icons/icon_64.png">
+<link data-n-head="ssr" rel="apple-touch-icon" href="../../style/icons/icon_512.png" sizes="512x512">
+
+<!-- Meta关键字定义 -->
+<meta name="description" content="The most popular HTML, CSS, and JS library in the world.">
+<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+
+</head>
+<body>
+<a id="skippy" class="sr-only sr-only-focusable" href="#content">
+<div class="container"> <span class="skiplink-text">跳到主体内容</span> </div>
+</a>
+<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar"> <a class="navbar-brand mr-0 mr-md-2" href="../" aria-label="Bootstrap">
+  <svg class="d-block" width="36" height="36" viewbox="0 0 612 612" xmlns="http://www.w3.org/2000/svg" focusable="false">
+    <title>Bootstrap</title>
+    <path fill="currentColor" d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z"/>
+    <path fill="currentColor" d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z"/>
+  </svg>
+  </a>
+  <div class="navbar-nav-scroll">
+    <ul class="navbar-nav bd-navbar-nav flex-row">
+      <li class="nav-item"><a class="nav-link " href="../">首页</a></li>
+      <li class="nav-item"><a class="nav-link active" href="../../v4/docs/">中文手册</a></li>
+      <li class="nav-item"><a class="nav-link " href="../../v4/examples/">实例</a></li>
+      <li class="nav-item dropdown">
+<a class="nav-item nav-link dropdown-toggle mr-md-2" id="bd-versions" aria-expanded="false" aria-haspopup="true" href="#" data-toggle="dropdown"> 主题模板 </a>
+<div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
+<a class="dropdown-item" href="../../V4/themes/" target="_blank">主题门户</a>
+<a class="dropdown-item" href="../../V4/themes/live.html">精选模板</a>
+</div>
+</li>
+      <li class="nav-item"><a class="nav-link" href="//ico.z01.com" target="_blank" rel="noopener">zico图标系统</a></li>
+      <li class="nav-item"><a class="nav-link" href="https://expo.getbootstrap.com" target="_blank" rel="noopener">优站精选</a></li>
+      <li class="nav-item"><a class="nav-link" href="https://blog.getbootstrap.com" target="_blank" rel="noopener">Blog</a></li>
+    </ul>
+  </div>
+  <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="alse"> v2.6.1 </a>
+      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions"> 
+        <a class="dropdown-item active" href="../../../bootstrap-vue/docs/4.0/">Latest (4.3.x)</a>
+        <a class="dropdown-item" href="/Boot/">v3.3.7</a>
+        <a class="dropdown-item" href="/Sass/">Sass语言</a>
+        <a class="dropdown-item" href="/Emmet/">Emmet语法</a>
+        <a class="dropdown-item" href="//www.z01.com/tool/" target="_blank">IIS站长工具</a>
+        <a class="dropdown-item" href="//ad.z01.com/" target="_blank">广告源码</a>
+        <a class="dropdown-item" href="//v.z01.com/mb/" target="_blank">免费模板</a>
+        <a class="dropdown-item" href="//v.z01.com/" target="_blank">H5移动创作</a>
+        <a class="dropdown-item" href="//www.z01.com/help/web/3234.shtml" target="_blank">Flexbox布局</a>
+		<a class="dropdown-item" href="/boot/font.html" target="_blank">Font Awesome</a>
+</div>
+    </li>
+    <li class="nav-item"> <a class="nav-link p-2" href="//zoomla.github.io/bootstrap4-zhcn-documentation" target="_blank" rel="noopener" aria-label="GitHub">
+      <svg class="navbar-nav-svg" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 499.36" focusable="false">
+        <title>GitHub</title>
+        <path d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z" fill="currentColor" fill-rule="evenodd"/>
+      </svg>
+      </a> </li>
+    <li class="nav-item"> <a class="nav-link p-2" href="http://www.z01.com/blog/ren/3214.shtml" target="_blank" rel="noopener" aria-label="Slack">译者说</a></li>
+  </ul>
+  <a class="btn btn-bd-yellow d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="download.html">下载 Bootstrap</a> </header>
+
+<div class="container-fluid">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+      <form class="bd-search d-flex align-items-center">
+        <input type="search" class="form-control" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
+        <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30" focusable="false">
+          <title>Menu</title>
+          <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/>
+        </svg>
+        </button>
+      </form>
+
+
+<nav class="collapse bd-links" id="bd-docs-nav">
+<div class=""><a href="../" class="bd-toc-link">首页</a></div>
+<div class="bd-toc-item nuxt-link-exact-active "><a href="../../../bootstrap-vue/docs/" class="bd-toc-link  "> 起步 </a>
+<ul class="nav bd-sidenav">
+</ul>
+</div>
+<div class="bd-toc-item active"><a href="../../../bootstrap-vue/docs/components/" class="bd-toc-link nuxt-link-exact-active"> 组件 </a>
+<ul class="nav bd-sidenav">
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/index.html" class="nav-link"> 组件目录 </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/alert.html" class="nav-link"> 警告提示框(Alert) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/badge.html" class="nav-link"> 徽章(Badge) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/badge.html" class="nav-link"> 面包屑导航(Breadcrumb) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/button.html" class="nav-link"> 按钮(Button) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/button-group.html" class="nav-link"> 按钮组(Button Group) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/button-toolbar.html" class="nav-link"> 按钮Toolbar(Button Toolbar) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/calendar.html" class="nav-link"> 日历组件(Calendar) <small class="badge text-uppercase badge-success">New</small> </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/card.html" class="nav-link"> 卡片(Card) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/carousel.html" class="nav-link"> 轮播效果(Carousel) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/collapse.html" class="nav-link"> 折叠面板(Collapse) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/dropdown.html" class="nav-link"> 下拉菜单(Dropdown) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/embed.html" class="nav-link"> 嵌入(Embed) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form.html" class="nav-link"> 表单(Form) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-checkbox.html" class="nav-link"> 表单复选框(Form Checkbox) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-datepicker.html" class="nav-link"> 表单时间选择器(Form Datepicker) <small class="badge text-uppercase badge-success">New</small> </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-file.html" class="nav-link"> 文件选择(Form File) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-group.html" class="nav-link"> 表单组合(Form Group) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-input.html" class="nav-link"> 表单输入框(Form Input) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-radio.html" class="nav-link"> 单选择表单Form Radio </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-select.html" class="nav-link"> 下拉式表单(Form Select) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-spinbutton.html" class="nav-link"> 按钮式表单(Form Spinbuttno) <small class="badge text-uppercase badge-success">New</small> </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-tags.html" class="nav-link"> Tags表单选择器(Form Tags) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-textarea.html" class="nav-link"> 文本框(Form Textarea) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/form-timepicker.html" class="nav-link"> 表单内时间控件(Form Timepicker) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/image.html" class="nav-link"> 图片(Image) </a></li>
+
+<li class="nav-item active"><a href="../../../bootstrap-vue/docs/components/input-group.html" class="nav-link"> 输入框(Input Group) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/jumbotron.html" class="nav-link"> Hero大块屏(Jumbotron) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/layout.html" class="nav-link"> 布局与网络Layout and Grid System </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/link.html" class="nav-link"> 链接(Link)</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/list-group.html" class="nav-link"> 列表组(List group) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/media.html" class="nav-link"> 媒体(Media) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/modal.html" class="nav-link"> 弹出模态框(Modal) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/nav.html" class="nav-link"> 导航(Nav) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/navbar.html" class="nav-link"> 导航栏(Navbar) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/pagination.html" class="nav-link"> 分页(Pagination) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/pagination-nav.html" class="nav-link"> 分页导航(Pagination Nav) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/popover.html" class="nav-link"> 指示备注(Popover) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/progress.html" class="nav-link"> 进度指示器(Progress) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/spinner.html" class="nav-link"> 旋转指示器(Spinner) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/table.html" class="nav-link"> 表格(Table) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/tabs.html" class="nav-link"> 选项卡(Tabs) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/time.html" class="nav-link"> 时间组件(Time) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/toast.html" class="nav-link"> 冒泡推送(Toasts) </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/components/tooltip.html" class="nav-link"> tip提示组件(Tooltip) </a></li>
+</ul>
+</div>
+<div class="bd-toc-item"><a href="../../../bootstrap-vue/docs/directives/" class="bd-toc-link"> 指令 </a>
+<ul class="nav bd-sidenav">
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/directives/index.html" class="nav-link"> 指令目录 </a></li>
+<li class="nav-item active"><a href="../../../bootstrap-vue/docs/directives/hover.html" class="nav-link"> Hover 指令<small class="badge text-uppercase badge-success">New</small> </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/directives/popover.html" class="nav-link"> Popover 提示备注</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/directives/scrollspy.html" class="nav-link"> Scrollspy 滚动监听</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/directives/tooltip.html" class="nav-link"> Tooltip 提示指令</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/directives/visible.html" class="nav-link"> Visible 可见性操作<small class="badge text-uppercase badge-success">New</small> </a></li>
+</ul>
+</div>
+<div class="bd-toc-item"><a href="../../../bootstrap-vue/docs/icons.html" class="bd-toc-link"> Icons图标</a>
+<ul class="nav bd-sidenav">
+</ul>
+</div>
+  
+<div class="bd-toc-item"><a class="bd-toc-link" href="../../../bootstrap-vue/docs/reference">参考</a>
+<ul class="nav bd-sidenav">
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference" class="nav-link.html"> 参考目录 </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/accessibility.html" class="nav-link">友好访问</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/color-variants.html" class="nav-link">Color颜色变量 </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/images.html" class="nav-link"> 组件图像img的src路径解析</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/router-links.html" class="nav-link"> Router路由支持 </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/size-props.html" class="nav-link">大小规格</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/spacing-classes.html" class="nav-link">间距处理</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/starter-templates.html" class="nav-link">开始模板</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/theming.html" class="nav-link">主题色彩</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/utility-classes.html" class="nav-link">通用Class类</a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/validation.html" class="nav-link">Form表单验证</a></li>
+</ul>
+</div>
+<div class="bd-toc-item"> <a class="bd-toc-link" href="../components/alerts.html"> 杂项 </a>
+  <ul class="nav bd-sidenav">
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/misc/changelog" class="nav-link"> Changelog </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/misc/contributing" class="nav-link"> Contributing </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/misc/settings" class="nav-link"> Settings </a></li>
+<li class="nav-item"><a href="../../../bootstrap-vue/docs/misc/third-party" class="nav-link"> Third party libraries </a></li>
+  </ul>
+</div>
+<div class=""><a href="/play" class="bd-toc-link">在线模拟器</a></div>
+</nav>
+</div>
+
+<div class="d-none d-xl-block col-xl-2 bd-toc">
+<ul class="section-nav">
+<li class="nav-item toc-entry mb-2"><a target="_self" href="#input-groups" class="nav-link font-weight-bold"><span>Input Groups</span></a></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#usage" class="nav-link"><span>Usage</span></a>
+<ul class="nav flex-column">
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#using-prepend-and-append-props" class="nav-link"><span>Using prepend and append props</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#using-named-slots" class="nav-link"><span>Using named slots</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#using-sub-components" class="nav-link"><span>Using sub-components</span></a></li>
+</ul>
+</li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#supported-form-controls" class="nav-link"><span>Supported form-controls</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#checkbox-and-radio-addons" class="nav-link"><span>Checkbox and radio addons</span></a>
+<ul class="nav flex-column">
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#native-checkbox-and-radio-addons" class="nav-link"><span>Native checkbox and radio addons</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#custom-radio-checkbox-and-switch-addons" class="nav-link"><span>Custom radio, checkbox, and switch addons</span></a></li>
+</ul>
+</li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#multiple-inputs" class="nav-link"><span>Multiple inputs</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#multiple-addons" class="nav-link"><span>Multiple addons</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#dropdown-addons" class="nav-link"><span>Dropdown addons</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#control-sizing" class="nav-link"><span>Control sizing</span></a>
+<ul class="nav flex-column">
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#sizing-custom-radio-checkbox-and-switch-addons" class="nav-link"><span>Sizing custom radio, checkbox and switch addons</span></a></li>
+</ul>
+</li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#contextual-states" class="nav-link"><span>Contextual states</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#component-reference" class="nav-link"><span>Component reference</span></a>
+<ul class="nav flex-column">
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#comp-ref-b-input-group" class="nav-link"><span>&lt;b-input-group&gt;</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#comp-ref-b-input-group-prepend" class="nav-link"><span>&lt;b-input-group-prepend&gt;</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#comp-ref-b-input-group-append" class="nav-link"><span>&lt;b-input-group-append&gt;</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#comp-ref-b-input-group-text" class="nav-link"><span>&lt;b-input-group-text&gt;</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#comp-ref-b-input-group-addon" class="nav-link"><span>&lt;b-input-group-addon&gt;</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#importing-individual-components" class="nav-link"><span>Importing individual components</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#importing-as-a-plugin" class="nav-link"><span>Importing as a Vue.js plugin</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+
+<nav data-v-aafc4aea="" aria-label="Breadcrumbs" class="float-left mt-2 mb-0 mb-lg-2">
+<ol data-v-aafc4aea="" class="breadcrumb d-inline-flex bg-transparent px-2 py-1 my-0">
+<li data-v-aafc4aea="" class="breadcrumb-item"><a data-v-aafc4aea="" href="../../" class="nuxt-link-active" target="_self">首页</a></li>
+<li data-v-aafc4aea="" class="breadcrumb-item"><a data-v-aafc4aea="" href="../../../bootstrap-vue/docs" class="nuxt-link-active" target="_self">中文手册</a></li>
+<li data-v-aafc4aea="" class="breadcrumb-item"><a data-v-aafc4aea="" href="../../../bootstrap-vue/docs/components/" class="nuxt-link-active" target="_self">组件</a></li>
+<li data-v-aafc4aea="" class="breadcrumb-item active"><span data-v-aafc4aea="" aria-current="location">输入框</span></li>
+</ol>
+</nav>
+<div class="clearfix d-block"></div>
+  <h1 class="bd-title" id="content">输入框(Alert)</h1>
+<p class="bd-lead">Easily extend form controls by adding text, buttons, or button groups on either side of textual inputs.</p>
+  <script type="text/javascript" src="../../../v4/assets/js/pupCMS.js"></script>
+
+
+
+
+
+
+<nav class="bd-quick-links mb-3 d-xl-none" data-v-811345e6="">
+<header data-v-811345e6="">
+<button data-v-811345e6="" type="button" class="btn font-weight-bold btn-outline-secondary btn-sm btn-block collapsed" aria-controls="bd-quick-links-collapse" aria-expanded="false"><span data-v-811345e6="">Show</span> page table of contents </button>
+</header>
+<ul data-v-811345e6="" id="bd-quick-links-collapse" class="collapse" style="display: none;">
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#usage" class=""><span data-v-811345e6="">Usage</span></a>
+<ul data-v-811345e6="">
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#using-prepend-and-append-props" class=""><span data-v-811345e6="">Using prepend and append props</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#using-named-slots" class=""><span data-v-811345e6="">Using named slots</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#using-sub-components" class=""><span data-v-811345e6="">Using sub-components</span></a></li>
+</ul>
+</li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#supported-form-controls" class=""><span data-v-811345e6="">Supported form-controls</span></a> </li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#checkbox-and-radio-addons" class=""><span data-v-811345e6="">Checkbox and radio addons</span></a>
+<ul data-v-811345e6="">
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#native-checkbox-and-radio-addons" class=""><span data-v-811345e6="">Native checkbox and radio addons</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#custom-radio-checkbox-and-switch-addons" class=""><span data-v-811345e6="">Custom radio, checkbox, and switch addons</span></a></li>
+</ul>
+</li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#multiple-inputs" class=""><span data-v-811345e6="">Multiple inputs</span></a> </li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#multiple-addons" class=""><span data-v-811345e6="">Multiple addons</span></a> </li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#dropdown-addons" class=""><span data-v-811345e6="">Dropdown addons</span></a> </li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#control-sizing" class=""><span data-v-811345e6="">Control sizing</span></a>
+<ul data-v-811345e6="">
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#sizing-custom-radio-checkbox-and-switch-addons" class=""><span data-v-811345e6="">Sizing custom radio, checkbox and switch addons</span></a></li>
+</ul>
+</li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#contextual-states" class=""><span data-v-811345e6="">Contextual states</span></a> </li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#component-reference" class=""><span data-v-811345e6="">Component reference</span></a>
+<ul data-v-811345e6="">
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#comp-ref-b-input-group" class=""><span data-v-811345e6="">&lt;b-input-group&gt;</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#comp-ref-b-input-group-prepend" class=""><span data-v-811345e6="">&lt;b-input-group-prepend&gt;</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#comp-ref-b-input-group-append" class=""><span data-v-811345e6="">&lt;b-input-group-append&gt;</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#comp-ref-b-input-group-text" class=""><span data-v-811345e6="">&lt;b-input-group-text&gt;</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#comp-ref-b-input-group-addon" class=""><span data-v-811345e6="">&lt;b-input-group-addon&gt;</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#importing-individual-components" class=""><span data-v-811345e6="">Importing individual components</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#importing-as-a-plugin" class=""><span data-v-811345e6="">Importing as a Vue.js plugin</span></a></li>
+</ul>
+</li>
+</ul>
+</nav>
+<div translate="translate" class="bd-example vue-example vue-example-b-input-group notranslate">
+<div>
+<div role="group" class="input-group input-group-lg">
+<div class="input-group-prepend">
+<div class="input-group-text">$</div>
+</div>
+<input type="text" class="form-control" id="__BVID__1671">
+<div class="input-group-append">
+<div class="input-group-text">.00</div>
+</div>
+</div>
+<div role="group" class="input-group mt-3">
+<input type="text" class="form-control" id="__BVID__1672">
+<div class="input-group-append">
+<div class="input-group-text"><strong class="text-danger">!</strong></div>
+</div>
+</div>
+<div role="group" class="input-group mt-3">
+<div class="input-group-prepend">
+<div class="input-group-text">Username</div>
+</div>
+<input type="text" class="form-control" id="__BVID__1673">
+<div class="input-group-append">
+<button type="button" class="btn btn-outline-success">Button</button>
+<button type="button" class="btn btn-info">Button</button>
+</div>
+</div>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- Using props --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-input-group</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"lg"</span> <span class="hljs-attr">prepend</span>=<span class="hljs-string">"$"</span> <span class="hljs-attr">append</span>=<span class="hljs-string">".00"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-input</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-input</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-input-group</span>&gt;</span>
+
+  <span class="hljs-comment">&lt;!-- Using slots --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-input-group</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mt-3"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">template</span> <span class="hljs-attr">v-slot:append</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-input-group-text</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">strong</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-danger"</span>&gt;</span>!<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-input-group-text</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-input</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-input</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-input-group</span>&gt;</span>
+
+  <span class="hljs-comment">&lt;!-- Using components --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-input-group</span> <span class="hljs-attr">prepend</span>=<span class="hljs-string">"Username"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mt-3"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-input</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-input</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-input-group-append</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"outline-success"</span>&gt;</span>Button<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"info"</span>&gt;</span>Button<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-input-group-append</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-input-group</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<h2 id="usage" class="bv-no-focus-ring"><span class="bd-content-title">Usage<a class="anchorjs-link" href="#usage" aria-labelledby="usage"></a></span></h2>
+<p>You can attach addons using either props, named slots and/or sub-components.</p>
+<h3 id="using-prepend-and-append-props" class="bv-no-focus-ring"><span class="bd-content-title">Using <code translate="no" class="notranslate text-nowrap">prepend</code> and <code translate="no" class="notranslate text-nowrap">append</code> props<a class="anchorjs-link" href="#using-prepend-and-append-props" aria-labelledby="using-prepend-and-append-props"></a></span></h3>
+<p>Values will be internally wrapped by a <code translate="no" class="notranslate text-nowrap">&lt;b-input-group-text&gt;</code> to display correctly.</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-input-group-using-props notranslate">
+<div>
+<div role="group" class="input-group">
+<div class="input-group-prepend">
+<div class="input-group-text">$</div>
+</div>
+<input type="text" class="form-control" id="__BVID__1675">
+<div class="input-group-append">
+<div class="input-group-text">.00</div>
+</div>
+</div>
+<div role="group" class="input-group mt-3">
+<div class="input-group-prepend">
+<div class="input-group-text">0</div>
+</div>
+<input type="range" min="0" max="100" class="custom-range" id="__BVID__1676">
+<div class="input-group-append">
+<div class="input-group-text">100</div>
+</div>
+</div>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-input-group</span> <span class="hljs-attr">prepend</span>=<span class="hljs-string">"$"</span> <span class="hljs-attr">append</span>=<span class="hljs-string">".00"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-input</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-input</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-input-group</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-input-group</span> <span class="hljs-attr">prepend</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">append</span>=<span class="hljs-string">"100"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mt-3"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"range"</span> <span class="hljs-attr">min</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">max</span>=<span class="hljs-string">"100"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-input</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-input-group</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<h3 id="using-named-slots" class="bv-no-focus-ring"><span class="bd-content-title">Using named slots<a class="anchorjs-link" href="#using-named-slots" aria-labelledby="using-named-slots"></a></span></h3>
+<p>if you want better control over addons, you can use <code translate="no" class="notranslate text-nowrap">prepend</code> and <code translate="no" class="notranslate text-nowrap">append</code> slots instead.</p>
+<p>The slot content will automatically be wrapped by <a href="#using-sub-components" class="font-weight-bold"><code translate="no" class="notranslate text-nowrap">&lt;b-input-group-prepend&gt;</code> or <code translate="no" class="notranslate text-nowrap">&lt;b-input-group-append&gt;</code></a> to display correctly.</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-input-group-using-slots notranslate">
+<div>
+<div role="group" class="input-group">
+<div class="input-group-prepend">
+<div class="input-group-text">Username</div>
+</div>
+<input type="text" class="form-control" id="__BVID__1678">
+<div class="input-group-append">
+<div class="dropdown b-dropdown btn-group" id="__BVID__1679">
+<button aria-haspopup="true" aria-expanded="false" type="button" class="btn dropdown-toggle btn-success" id="__BVID__1679__BV_toggle_">Dropdown</button>
+<ul role="menu" tabindex="-1" class="dropdown-menu" aria-labelledby="__BVID__1679__BV_toggle_">
+<li role="presentation"><a role="menuitem" target="_self" href="#" class="dropdown-item">Action A</a></li>
+<li role="presentation"><a role="menuitem" target="_self" href="#" class="dropdown-item">Action B</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-input-group</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">template</span> <span class="hljs-attr">v-slot:prepend</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-input-group-text</span> &gt;</span>Username<span class="hljs-tag">&lt;/<span class="hljs-name">b-input-group-text</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-input</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-input</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">template</span> <span class="hljs-attr">v-slot:append</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-dropdown</span> <span class="hljs-attr">text</span>=<span class="hljs-string">"Dropdown"</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"success"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">b-dropdown-item</span>&gt;</span>Action A<span class="hljs-tag">&lt;/<span class="hljs-name">b-dropdown-item</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">b-dropdown-item</span>&gt;</span>Action B<span class="hljs-tag">&lt;/<span class="hljs-name">b-dropdown-item</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">b-dropdown</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-input-group</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<h3 id="using-sub-components" class="bv-no-focus-ring"><span class="bd-content-title">Using sub-components<a class="anchorjs-link" href="#using-sub-components" aria-labelledby="using-sub-components"></a></span></h3>
+<p>Use the <code translate="no" class="notranslate text-nowrap">&lt;b-input-group-prepend&gt;</code> or <code translate="no" class="notranslate text-nowrap">&lt;b-input-group-append&gt;</code> to add arbitrary addons wherever you
+like, and use these components to group buttons in your input group. Single buttons must always be
+wrapped in these components for proper styling.</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-input-group-addons-placement notranslate">
+<div>
+<div role="group" class="input-group">
+<div class="input-group-prepend">
+<button type="button" class="btn btn-outline-info">Button</button>
+</div>
+<input type="number" min="0.00" class="form-control" id="__BVID__1685">
+<div class="input-group-append">
+<button type="button" class="btn btn-outline-secondary">Button</button>
+<button type="button" class="btn btn-outline-secondary">Button</button>
+</div>
+</div>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-input-group</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-input-group-prepend</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"outline-info"</span>&gt;</span>Button<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-input-group-prepend</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"number"</span> <span class="hljs-attr">min</span>=<span class="hljs-string">"0.00"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-input</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-input-group-append</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"outline-secondary"</span>&gt;</span>Button<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"outline-secondary"</span>&gt;</span>Button<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-input-group-append</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-input-group</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<p>Set the <code translate="no" class="notranslate text-nowrap">is-text</code> prop on <code translate="no" class="notranslate text-nowrap">&lt;b-input-group-prepend&gt;</code> or <code translate="no" class="notranslate text-nowrap">&lt;b-input-group-append&gt;</code> if the content is
+textual in nature to apply proper styling. Alternatively, place the <code translate="no" class="notranslate text-nowrap">&lt;b-input-group-text&gt;</code> subcomponent inside of the <code translate="no" class="notranslate text-nowrap">&lt;b-input-group-prepend&gt;</code> or <code translate="no" class="notranslate text-nowrap">&lt;b-input-group-append&gt;</code>.</p>
+<h2 id="supported-form-controls" class="bv-no-focus-ring"><span class="bd-content-title">Supported form-controls<a class="anchorjs-link" href="#supported-form-controls" aria-labelledby="supported-form-controls"></a></span></h2>
+<p>The following are the form controls supported as the input-group's <em>main</em> input element:</p>
+<ul>
+<li><code translate="no" class="notranslate text-nowrap">&lt;b-form-input&gt;</code></li>
+<li><code translate="no" class="notranslate text-nowrap">&lt;b-form-textarea&gt;</code></li>
+<li><code translate="no" class="notranslate text-nowrap">&lt;b-form-select&gt;</code></li>
+<li><code translate="no" class="notranslate text-nowrap">&lt;b-form-file&gt;</code></li>
+</ul>
+<p><strong>Notes:</strong></p>
+<ul>
+<li>BootstrapVue uses custom SCSS/CSS to handling sizing the <code translate="no" class="notranslate text-nowrap">&lt;b-form-file&gt;</code> input when it is placed
+in a <code translate="no" class="notranslate text-nowrap">&lt;b-input-group&gt;</code> which has a <a href="#control-sizing" class="font-weight-bold"><code translate="no" class="notranslate text-nowrap">size</code></a> specified.</li>
+<li>BootstrapVue uses custom SCSS/CSS when <code translate="no" class="notranslate text-nowrap">&lt;b-form-input type="range"&gt;</code> is placed in a <code translate="no" class="notranslate text-nowrap">&lt;b-input-group&gt;</code>.</li>
+</ul>
+<h2 id="checkbox-and-radio-addons" class="bv-no-focus-ring"><span class="bd-content-title">Checkbox and radio addons<a class="anchorjs-link" href="#checkbox-and-radio-addons" aria-labelledby="checkbox-and-radio-addons"></a></span></h2>
+<p>Place any checkbox or radio within an input group's addon instead of text.</p>
+<p><strong>Note:</strong> Bootstrap v4.x recommends using native radio and checkbox inputs over custom radios and
+checkboxes, but it is possible to use as <code translate="no" class="notranslate text-nowrap">&lt;b-form-radio&gt;</code> and <code translate="no" class="notranslate text-nowrap">&lt;b-form-checkbox&gt;</code> with a few utility
+classes applied.</p>
+<h3 id="native-checkbox-and-radio-addons" class="bv-no-focus-ring"><span class="bd-content-title">Native checkbox and radio addons<a class="anchorjs-link" href="#native-checkbox-and-radio-addons" aria-labelledby="native-checkbox-and-radio-addons"></a></span></h3>
+<div translate="translate" class="bd-example vue-example vue-example-b-input-group-checks-radios notranslate">
+<div>
+<div role="group" class="input-group mb-2">
+<div class="input-group-prepend">
+<div class="input-group-text">
+<input type="checkbox" aria-label="Checkbox for following text input">
+</div>
+</div>
+<input type="text" class="form-control" aria-label="Text input with checkbox" id="__BVID__1687">
+</div>
+<div role="group" class="input-group">
+<div class="input-group-prepend">
+<div class="input-group-text">
+<input type="radio" aria-label="Radio for following text input">
+</div>
+</div>
+<input type="text" class="form-control" aria-label="Text input with radio input" id="__BVID__1688">
+</div>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-input-group</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-2"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-input-group-prepend</span> <span class="hljs-attr">is-text</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Checkbox for following text input"</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-input-group-prepend</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-input</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Text input with checkbox"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-input</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-input-group</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-input-group</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-input-group-prepend</span> <span class="hljs-attr">is-text</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Radio for following text input"</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-input-group-prepend</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-input</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Text input with radio input"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-input</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-input-group</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<h3 id="custom-radio-checkbox-and-switch-addons" class="bv-no-focus-ring"><span class="bd-content-title">Custom radio, checkbox, and switch addons<a class="anchorjs-link" href="#custom-radio-checkbox-and-switch-addons" aria-labelledby="custom-radio-checkbox-and-switch-addons"></a></span></h3>
+<p>Using <code translate="no" class="notranslate text-nowrap">&lt;b-form-checkbox&gt;</code> and <code translate="no" class="notranslate text-nowrap">&lt;b-form-radio&gt;</code> components as addons, using Bootstrap <a href="../../../bootstrap-vue/docs/reference/utility-classes" class="font-weight-bold">utility classes</a> for additional styling to get them to "fit" in
+the addon:</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-input-group-custom-checks-radios notranslate">
+<div>
+<div role="group" class="input-group mb-2">
+<div class="input-group-prepend">
+<div class="input-group-text">
+<div class="mr-n2 custom-control custom-checkbox">
+<input type="checkbox" autocomplete="off" class="custom-control-input" value="true" id="__BVID__1690">
+<label class="custom-control-label" for="__BVID__1690"><span class="sr-only">Checkbox for following text input</span></label>
+</div>
+</div>
+</div>
+<input type="text" class="form-control" aria-label="Text input with checkbox" id="__BVID__1691">
+</div>
+<div role="group" class="input-group mb-2">
+<div class="input-group-prepend">
+<div class="input-group-text">
+<div class="mr-n2 custom-control custom-radio">
+<input type="radio" autocomplete="off" class="custom-control-input" value="" id="__BVID__1692">
+<label class="custom-control-label" for="__BVID__1692"><span class="sr-only">Radio for following text input</span></label>
+</div>
+</div>
+</div>
+<input type="text" class="form-control" aria-label="Text input with radio input" id="__BVID__1693">
+</div>
+<div role="group" class="input-group">
+<div class="input-group-prepend">
+<div class="input-group-text">
+<div class="mr-n2 custom-control custom-switch">
+<input type="checkbox" autocomplete="off" class="custom-control-input" value="true" id="__BVID__1694">
+<label class="custom-control-label" for="__BVID__1694"><span class="sr-only">Switch for following text input</span></label>
+</div>
+</div>
+</div>
+<input type="text" class="form-control" aria-label="Text input with switch" id="__BVID__1695">
+</div>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-input-group</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-2"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-input-group-prepend</span> <span class="hljs-attr">is-text</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-form-checkbox</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mr-n2"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"sr-only"</span>&gt;</span>Checkbox for following text input<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">b-form-checkbox</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-input-group-prepend</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-input</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Text input with checkbox"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-input</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-input-group</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-input-group</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-2"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-input-group-prepend</span> <span class="hljs-attr">is-text</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-form-radio</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mr-n2"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"sr-only"</span>&gt;</span>Radio for following text input<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">b-form-radio</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-input-group-prepend</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-input</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Text input with radio input"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-input</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-input-group</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-input-group</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-input-group-prepend</span> <span class="hljs-attr">is-text</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-form-checkbox</span> <span class="hljs-attr">switch</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mr-n2"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"sr-only"</span>&gt;</span>Switch for following text input<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">b-form-checkbox</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-input-group-prepend</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-input</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Text input with switch"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-input</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-input-group</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<p>In the above example, we have use the <code translate="no" class="notranslate text-nowrap">.sr-only</code> class on a <code translate="no" class="notranslate text-nowrap">&lt;span&gt;</code> to visually hide the custom
+control's label content (while making them still accessible to screen reader users), and used the
+utility class <code translate="no" class="notranslate text-nowrap">.mr-n2</code> to add a negative right margin to compensate for the "gutter" space between
+the control and the hidden label.</p>
+<h2 id="multiple-inputs" class="bv-no-focus-ring"><span class="bd-content-title">Multiple inputs<a class="anchorjs-link" href="#multiple-inputs" aria-labelledby="multiple-inputs"></a></span></h2>
+<div translate="translate" class="bd-example vue-example vue-example-input-group-multiple-inputs notranslate">
+<div>
+<div role="group" class="input-group mb-2">
+<div class="input-group-prepend">
+<div class="input-group-text">First and last name</div>
+</div>
+<input type="text" class="form-control" aria-label="First name" id="__BVID__1697">
+<input type="text" class="form-control" aria-label="Last name" id="__BVID__1698">
+</div>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-input-group</span> <span class="hljs-attr">prepend</span>=<span class="hljs-string">"First and last name"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-2"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-input</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"First name"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-input</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-input</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Last name"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-input</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-input-group</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<h2 id="multiple-addons" class="bv-no-focus-ring"><span class="bd-content-title">Multiple addons<a class="anchorjs-link" href="#multiple-addons" aria-labelledby="multiple-addons"></a></span></h2>
+<p>Multiple add-ons are supported and can be mixed with checkbox and radio input versions.</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-input-group-multiple-addons notranslate">
+<div>
+<div role="group" class="input-group">
+<div class="input-group-prepend">
+<div class="input-group-text">Item</div>
+</div>
+<div class="input-group-prepend">
+<div class="input-group-text">
+<input type="checkbox" aria-label="Checkbox for following text input">
+</div>
+</div>
+<div class="input-group-prepend">
+<div class="input-group-text"><b>$</b></div>
+</div>
+<input type="number" class="form-control" aria-label="Text input with checkbox" id="__BVID__1700">
+</div>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-input-group</span> <span class="hljs-attr">prepend</span>=<span class="hljs-string">"Item"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-input-group-prepend</span> <span class="hljs-attr">is-text</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Checkbox for following text input"</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-input-group-prepend</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-input-group-prepend</span> <span class="hljs-attr">is-text</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">b</span>&gt;</span>$<span class="hljs-tag">&lt;/<span class="hljs-name">b</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-input-group-prepend</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"number"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Text input with checkbox"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-input</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-input-group</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<h2 id="dropdown-addons" class="bv-no-focus-ring"><span class="bd-content-title">Dropdown addons<a class="anchorjs-link" href="#dropdown-addons" aria-labelledby="dropdown-addons"></a></span></h2>
+<div translate="translate" class="bd-example vue-example vue-example-b-input-group-dropdown notranslate">
+<div>
+<div role="group" class="input-group">
+<div class="input-group-prepend">
+<div class="dropdown b-dropdown btn-group" id="__BVID__1702">
+<button aria-haspopup="true" aria-expanded="false" type="button" class="btn dropdown-toggle btn-info" id="__BVID__1702__BV_toggle_">Dropdown</button>
+<ul role="menu" tabindex="-1" class="dropdown-menu" aria-labelledby="__BVID__1702__BV_toggle_">
+<li role="presentation"><a role="menuitem" target="_self" href="#" class="dropdown-item">Action A</a></li>
+<li role="presentation"><a role="menuitem" target="_self" href="#" class="dropdown-item">Action B</a></li>
+</ul>
+</div>
+</div>
+<input type="text" class="form-control" id="__BVID__1707">
+<div class="input-group-append">
+<div class="dropdown b-dropdown btn-group" id="__BVID__1708">
+<button aria-haspopup="true" aria-expanded="false" type="button" class="btn dropdown-toggle btn-outline-secondary" id="__BVID__1708__BV_toggle_">Dropdown</button>
+<ul role="menu" tabindex="-1" class="dropdown-menu" aria-labelledby="__BVID__1708__BV_toggle_">
+<li role="presentation"><a role="menuitem" target="_self" href="#" class="dropdown-item">Action C</a></li>
+<li role="presentation"><a role="menuitem" target="_self" href="#" class="dropdown-item">Action D</a></li>
+</ul>
+</div>
+<div class="dropdown b-dropdown btn-group" id="__BVID__1713">
+<button aria-haspopup="true" aria-expanded="false" type="button" class="btn dropdown-toggle btn-outline-secondary" id="__BVID__1713__BV_toggle_">Dropdown</button>
+<ul role="menu" tabindex="-1" class="dropdown-menu" aria-labelledby="__BVID__1713__BV_toggle_">
+<li role="presentation"><a role="menuitem" target="_self" href="#" class="dropdown-item">Action C</a></li>
+<li role="presentation"><a role="menuitem" target="_self" href="#" class="dropdown-item">Action D</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-input-group</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">template</span> <span class="hljs-attr">v-slot:prepend</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-dropdown</span> <span class="hljs-attr">text</span>=<span class="hljs-string">"Dropdown"</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"info"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">b-dropdown-item</span>&gt;</span>Action A<span class="hljs-tag">&lt;/<span class="hljs-name">b-dropdown-item</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">b-dropdown-item</span>&gt;</span>Action B<span class="hljs-tag">&lt;/<span class="hljs-name">b-dropdown-item</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">b-dropdown</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-input</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-input</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">template</span> <span class="hljs-attr">v-slot:append</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-dropdown</span> <span class="hljs-attr">text</span>=<span class="hljs-string">"Dropdown"</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"outline-secondary"</span> <span class="hljs-attr">v-for</span>=<span class="hljs-string">"i in 2"</span> <span class="hljs-attr">:key</span>=<span class="hljs-string">"i"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">b-dropdown-item</span>&gt;</span>Action C<span class="hljs-tag">&lt;/<span class="hljs-name">b-dropdown-item</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">b-dropdown-item</span>&gt;</span>Action D<span class="hljs-tag">&lt;/<span class="hljs-name">b-dropdown-item</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">b-dropdown</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-input-group</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<h2 id="control-sizing" class="bv-no-focus-ring"><span class="bd-content-title">Control sizing<a class="anchorjs-link" href="#control-sizing" aria-labelledby="control-sizing"></a></span></h2>
+<p>Set height using the <code translate="no" class="notranslate text-nowrap">size</code> prop to <code translate="no" class="notranslate text-nowrap">sm</code> or <code translate="no" class="notranslate text-nowrap">lg</code> for small or large respectively. There is no need
+to set size on the individual inputs or buttons. Note however, you <em>will be required</em> to also set
+the size on dropdowns.</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-input-group-size notranslate">
+<div>
+<div role="group" class="input-group mb-3 input-group-sm">
+<div class="input-group-prepend">
+<div class="input-group-text">Label</div>
+</div>
+<input type="text" class="form-control" id="__BVID__1719">
+<div class="input-group-append">
+<button text="Button" type="button" class="btn btn-success btn-sm">Button</button>
+</div>
+</div>
+<div role="group" class="input-group mb-3">
+<div class="input-group-prepend">
+<div class="input-group-text">Label</div>
+</div>
+<input type="text" class="form-control" id="__BVID__1720">
+<div class="input-group-append">
+<button text="Button" type="button" class="btn btn-success btn-sm">Button</button>
+</div>
+</div>
+<div role="group" class="input-group mb-3 input-group-lg">
+<div class="input-group-prepend">
+<div class="input-group-text">Label</div>
+</div>
+<input type="text" class="form-control" id="__BVID__1721">
+<div class="input-group-append">
+<button text="Button" type="button" class="btn btn-success btn-sm">Button</button>
+</div>
+</div>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-input-group</span>
+    <span class="hljs-attr">v-for</span>=<span class="hljs-string">"size in ['sm','','lg']"</span>
+    <span class="hljs-attr">:key</span>=<span class="hljs-string">"size"</span>
+    <span class="hljs-attr">:size</span>=<span class="hljs-string">"size"</span>
+    <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-3"</span>
+    <span class="hljs-attr">prepend</span>=<span class="hljs-string">"Label"</span>
+  &gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-input</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-input</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-input-group-append</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"sm"</span> <span class="hljs-attr">text</span>=<span class="hljs-string">"Button"</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"success"</span>&gt;</span>Button<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-input-group-append</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-input-group</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<p>To control width, place the input inside standard Bootstrap grid column.</p>
+<h3 id="sizing-custom-radio-checkbox-and-switch-addons" class="bv-no-focus-ring"><span class="bd-content-title">Sizing custom radio, checkbox and switch addons<a class="anchorjs-link" href="#sizing-custom-radio-checkbox-and-switch-addons" aria-labelledby="sizing-custom-radio-checkbox-and-switch-addons"></a></span></h3>
+<p>If using <code translate="no" class="notranslate text-nowrap">&lt;b-form-radio&gt;</code> or <code translate="no" class="notranslate text-nowrap">&lt;b-form-checkbox&gt;</code> as addons, additional utility classes may be
+required to make everything fit correctly, depending on the size chosen:</p>
+<div translate="translate" class="bd-example vue-example vue-example-b-input-group-custom-checks-radios-sizing notranslate">
+<div>
+<div role="group" class="input-group mb-2 input-group-sm">
+<div class="input-group-prepend">
+<div class="input-group-text">Small</div>
+</div>
+<input type="text" class="form-control" aria-label="Small text input with custom switch" id="__BVID__1723">
+<div class="input-group-append">
+<div class="input-group-text">
+<div class="mr-n2 mb-n1 custom-control custom-switch">
+<input type="checkbox" autocomplete="off" class="custom-control-input" value="true" id="__BVID__1724">
+<label class="custom-control-label" for="__BVID__1724"><span class="sr-only">Checkbox for previous text input</span></label>
+</div>
+</div>
+</div>
+</div>
+<div role="group" class="input-group mb-2 input-group-lg">
+<div class="input-group-prepend">
+<div class="input-group-text">Large</div>
+</div>
+<input type="text" class="form-control" aria-label="Large text input with switch" id="__BVID__1725">
+<div class="input-group-append">
+<div class="input-group-text">
+<div class="mr-n2 custom-control custom-switch">
+<input type="checkbox" autocomplete="off" class="custom-control-input" value="true" id="__BVID__1726">
+<label class="custom-control-label" for="__BVID__1726"><span class="sr-only">Switch for previous text input</span></label>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-input-group</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"sm"</span> <span class="hljs-attr">prepend</span>=<span class="hljs-string">"Small"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-2"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-input</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Small text input with custom switch"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-input</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-input-group-append</span> <span class="hljs-attr">is-text</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-form-checkbox</span> <span class="hljs-attr">switch</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mr-n2 mb-n1"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"sr-only"</span>&gt;</span>Checkbox for previous text input<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">b-form-checkbox</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-input-group-append</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-input-group</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">b-input-group</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"lg"</span> <span class="hljs-attr">prepend</span>=<span class="hljs-string">"Large"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-2"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-form-input</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Large text input with switch"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-input</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b-input-group-append</span> <span class="hljs-attr">is-text</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b-form-checkbox</span> <span class="hljs-attr">switch</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mr-n2"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"sr-only"</span>&gt;</span>Switch for previous text input<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">b-form-checkbox</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">b-input-group-append</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">b-input-group</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<p>Specifically, when using the <code translate="no" class="notranslate text-nowrap">sm</code> size on <code translate="no" class="notranslate text-nowrap">&lt;b-input-group&gt;</code> you will need to add a negative bottom
+margin, via the use of the <code translate="no" class="notranslate text-nowrap">.mb-n1</code> <a href="../../../bootstrap-vue/docs/reference/utility-classes" class="font-weight-bold">utility class</a>.</p>
+<h2 id="contextual-states" class="bv-no-focus-ring"><span class="bd-content-title">Contextual states<a class="anchorjs-link" href="#contextual-states" aria-labelledby="contextual-states"></a></span></h2>
+<p>Bootstrap v4 currently <strong>does not</strong> support contextual state styling (i.e. valid or invalid) of
+input groups. However, the inputs inside the input group do support contextual state.</p>
+<!-- Component reference added automatically from component package.json --> 
+
+<h2 id="component-reference" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title">Component reference<a href="../../../bootstrap-vue/docs/components/input-group#component-reference" class="anchorjs-link" aria-labelledby="component-reference" target="_self"></a></span></h2>
+<section data-v-866a22e8="" class="bd-content">
+<header data-v-866a22e8="" class="row align-items-center">
+<div data-v-866a22e8="" class="col-sm-9">
+<h3 data-v-866a22e8="" id="comp-ref-b-input-group" tabindex="-1" class="bv-no-focus-ring"><span data-v-866a22e8="" class="bd-content-title"><code data-v-866a22e8="" translate="translate" class="notranslate bigger">&lt;b-input-group&gt;</code><a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/input-group#comp-ref-b-input-group" class="anchorjs-link" aria-labelledby="comp-ref-b-input-group" target="_self"></a></span></h3>
+ <a data-v-866a22e8="" rel="noopener" target="_blank" href="https://vuejs.org/v2/guide/render-function.html#Functional-Components" class="badge badge-secondary"> Functional Component </a></div>
+<div data-v-866a22e8="" class="text-sm-right col-sm-3"><a data-v-866a22e8="" rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev/src/components/input-group/input-group.js" class="btn btn-outline-secondary btn-sm"> View source </a></div>
+</header>
+<ul data-v-866a22e8="" class="component-ref-mini-toc my-3">
+
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-input-group-props"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-input-group&gt;</code> Properties </a></li>
+
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-input-group-slots"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-input-group&gt;</code> Slots </a></li>
+ 
+</ul>
+
+<article data-v-866a22e8="" class="bd-content">
+<h4 data-v-866a22e8="" id="comp-ref-b-input-group-props" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> Properties <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/input-group#comp-ref-b-input-group-props" class="anchorjs-link" aria-labelledby="comp-ref-b-input-group-props" target="_self"></a></span></h4>
+<div data-v-866a22e8="" class="table-responsive-sm">
+<table role="table" aria-busy="false" aria-colcount="4" class="table b-table bv-docs-table table-striped" id="__BVID__1548">
+
+<thead role="rowgroup" class="">
+
+<tr role="row" class="">
+<th role="columnheader" scope="col" aria-colindex="1" class="">Property</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">Type</th>
+<th role="columnheader" scope="col" aria-colindex="3" class="">Default</th>
+<th role="columnheader" scope="col" aria-colindex="4" class="">Description</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+
+<tr role="row" data-pk="id" class="" id="__BVID__1548__row_id">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">id</code>     </td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">Used to set the 'id' attribute on the rendered content, and used as the base to generate any additional element IDs as needed</td>
+</tr>
+
+<tr role="row" data-pk="size" class="" id="__BVID__1548__row_size">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">size</code>     </td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">Set the size of the component's appearance. 'sm', 'md' (default), or 'lg'</td>
+</tr>
+
+<tr role="row" data-pk="prepend" class="" id="__BVID__1548__row_prepend">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">prepend</code>     </td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">Text to prepend to the input group</td>
+</tr>
+
+<tr role="row" data-pk="prepend-html" class="" id="__BVID__1548__row_prepend-html">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">prepend-html</code>    <span data-v-866a22e8="" class="badge badge-warning">Use with caution</span> </td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">HTML string to prepend to the input group. Has precedence over 'prepend' prop. Use with caution</td>
+</tr>
+
+<tr role="row" data-pk="append" class="" id="__BVID__1548__row_append">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">append</code>     </td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">Text to append to the input group</td>
+</tr>
+
+<tr role="row" data-pk="append-html" class="" id="__BVID__1548__row_append-html">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">append-html</code>    <span data-v-866a22e8="" class="badge badge-warning">Use with caution</span> </td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">HTML string to append to the input group. Has precedence over 'append' prop. Use with caution</td>
+</tr>
+
+<tr role="row" data-pk="tag" class="" id="__BVID__1548__row_tag">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">tag</code>     </td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'div'</code></td>
+<td aria-colindex="4" role="cell" class="">Specify the HTML tag to render instead of the default tag</td>
+</tr>
+
+</tbody>
+
+</table>
+</div>
+
+<div data-v-866a22e8="" class="alert alert-warning">
+<p data-v-866a22e8="" class="mb-0 small"><strong data-v-866a22e8="">Caution:</strong> Props that support HTML strings
+        (<code data-v-866a22e8="" translate="translate" class="notranslate">*-html</code>) can be vulnerable to <a data-v-866a22e8="" rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/Cross-site_scripting" class="alert-link"> Cross Site Scripting (XSS) attacks </a> when passed raw user supplied values. You must properly <a data-v-866a22e8="" rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/HTML_sanitization" class="alert-link"> sanitize </a> the user input first! </p>
+</div>
+</article>
+
+<article data-v-866a22e8="" class="bd-content">
+<h4 data-v-866a22e8="" id="comp-ref-b-input-group-slots" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> Slots <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/input-group#comp-ref-b-input-group-slots" class="anchorjs-link" aria-labelledby="comp-ref-b-input-group-slots" target="_self"></a></span></h4>
+<div data-v-866a22e8="" class="table-responsive-sm">
+<table role="table" aria-busy="false" aria-colcount="2" class="table b-table bv-docs-table table-striped" id="__BVID__1567">
+
+<thead role="rowgroup" class="">
+
+<tr role="row" class="">
+<th role="columnheader" scope="col" aria-colindex="1" class="">Slot Name</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">Description</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+
+<tr role="row" data-pk="prepend" class="" id="__BVID__1567__row_prepend">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">prepend</code> </td>
+<td aria-colindex="2" role="cell" class="">Prepend attachment</td>
+</tr>
+
+<tr role="row" data-pk="append" class="" id="__BVID__1567__row_append">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">append</code> </td>
+<td aria-colindex="2" role="cell" class="">Append attachment</td>
+</tr>
+
+</tbody>
+
+</table>
+</div>
+</article>
+ </section>
+<section data-v-866a22e8="" class="bd-content">
+<header data-v-866a22e8="" class="row align-items-center">
+<div data-v-866a22e8="" class="col-sm-9">
+<h3 data-v-866a22e8="" id="comp-ref-b-input-group-prepend" tabindex="-1" class="bv-no-focus-ring"><span data-v-866a22e8="" class="bd-content-title"><code data-v-866a22e8="" translate="translate" class="notranslate bigger">&lt;b-input-group-prepend&gt;</code><a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/input-group#comp-ref-b-input-group-prepend" class="anchorjs-link" aria-labelledby="comp-ref-b-input-group-prepend" target="_self"></a></span></h3>
+ <a data-v-866a22e8="" rel="noopener" target="_blank" href="https://vuejs.org/v2/guide/render-function.html#Functional-Components" class="badge badge-secondary"> Functional Component </a></div>
+<div data-v-866a22e8="" class="text-sm-right col-sm-3"><a data-v-866a22e8="" rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev/src/components/input-group/input-group-prepend.js" class="btn btn-outline-secondary btn-sm"> View source </a></div>
+</header>
+<ul data-v-866a22e8="" class="component-ref-mini-toc my-3">
+
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-input-group-prepend-props"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-input-group-prepend&gt;</code> Properties </a></li>
+   
+</ul>
+
+<article data-v-866a22e8="" class="bd-content">
+<h4 data-v-866a22e8="" id="comp-ref-b-input-group-prepend-props" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> Properties <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/input-group#comp-ref-b-input-group-prepend-props" class="anchorjs-link" aria-labelledby="comp-ref-b-input-group-prepend-props" target="_self"></a></span></h4>
+<div data-v-866a22e8="" class="table-responsive-sm">
+<table role="table" aria-busy="false" aria-colcount="4" class="table b-table bv-docs-table table-striped" id="__BVID__1582">
+
+<thead role="rowgroup" class="">
+
+<tr role="row" class="">
+<th role="columnheader" scope="col" aria-colindex="1" class="">Property</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">Type</th>
+<th role="columnheader" scope="col" aria-colindex="3" class="">Default</th>
+<th role="columnheader" scope="col" aria-colindex="4" class="">Description</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+
+<tr role="row" data-pk="id" class="" id="__BVID__1582__row_id">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">id</code>     </td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">Used to set the 'id' attribute on the rendered content, and used as the base to generate any additional element IDs as needed</td>
+</tr>
+
+<tr role="row" data-pk="tag" class="" id="__BVID__1582__row_tag">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">tag</code>     </td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'div'</code></td>
+<td aria-colindex="4" role="cell" class="">Specify the HTML tag to render instead of the default tag</td>
+</tr>
+
+<tr role="row" data-pk="is-text" class="" id="__BVID__1582__row_is-text">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">is-text</code>     </td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">When 'true', wraps the content in a b-input-group-text component</td>
+</tr>
+
+</tbody>
+
+</table>
+</div>
+ </article>
+   </section>
+<section data-v-866a22e8="" class="bd-content">
+<header data-v-866a22e8="" class="row align-items-center">
+<div data-v-866a22e8="" class="col-sm-9">
+<h3 data-v-866a22e8="" id="comp-ref-b-input-group-append" tabindex="-1" class="bv-no-focus-ring"><span data-v-866a22e8="" class="bd-content-title"><code data-v-866a22e8="" translate="translate" class="notranslate bigger">&lt;b-input-group-append&gt;</code><a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/input-group#comp-ref-b-input-group-append" class="anchorjs-link" aria-labelledby="comp-ref-b-input-group-append" target="_self"></a></span></h3>
+ <a data-v-866a22e8="" rel="noopener" target="_blank" href="https://vuejs.org/v2/guide/render-function.html#Functional-Components" class="badge badge-secondary"> Functional Component </a></div>
+<div data-v-866a22e8="" class="text-sm-right col-sm-3"><a data-v-866a22e8="" rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev/src/components/input-group/input-group-append.js" class="btn btn-outline-secondary btn-sm"> View source </a></div>
+</header>
+<ul data-v-866a22e8="" class="component-ref-mini-toc my-3">
+
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-input-group-append-props"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-input-group-append&gt;</code> Properties </a></li>
+   
+</ul>
+
+<article data-v-866a22e8="" class="bd-content">
+<h4 data-v-866a22e8="" id="comp-ref-b-input-group-append-props" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> Properties <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/input-group#comp-ref-b-input-group-append-props" class="anchorjs-link" aria-labelledby="comp-ref-b-input-group-append-props" target="_self"></a></span></h4>
+<div data-v-866a22e8="" class="table-responsive-sm">
+<table role="table" aria-busy="false" aria-colcount="4" class="table b-table bv-docs-table table-striped" id="__BVID__1600">
+
+<thead role="rowgroup" class="">
+
+<tr role="row" class="">
+<th role="columnheader" scope="col" aria-colindex="1" class="">Property</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">Type</th>
+<th role="columnheader" scope="col" aria-colindex="3" class="">Default</th>
+<th role="columnheader" scope="col" aria-colindex="4" class="">Description</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+
+<tr role="row" data-pk="id" class="" id="__BVID__1600__row_id">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">id</code>     </td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">Used to set the 'id' attribute on the rendered content, and used as the base to generate any additional element IDs as needed</td>
+</tr>
+
+<tr role="row" data-pk="tag" class="" id="__BVID__1600__row_tag">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">tag</code>     </td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'div'</code></td>
+<td aria-colindex="4" role="cell" class="">Specify the HTML tag to render instead of the default tag</td>
+</tr>
+
+<tr role="row" data-pk="is-text" class="" id="__BVID__1600__row_is-text">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">is-text</code>     </td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">When 'true', wraps the content in a b-input-group-text component</td>
+</tr>
+
+</tbody>
+
+</table>
+</div>
+ </article>
+   </section>
+<section data-v-866a22e8="" class="bd-content">
+<header data-v-866a22e8="" class="row align-items-center">
+<div data-v-866a22e8="" class="col-sm-9">
+<h3 data-v-866a22e8="" id="comp-ref-b-input-group-text" tabindex="-1" class="bv-no-focus-ring"><span data-v-866a22e8="" class="bd-content-title"><code data-v-866a22e8="" translate="translate" class="notranslate bigger">&lt;b-input-group-text&gt;</code><a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/input-group#comp-ref-b-input-group-text" class="anchorjs-link" aria-labelledby="comp-ref-b-input-group-text" target="_self"></a></span></h3>
+ <a data-v-866a22e8="" rel="noopener" target="_blank" href="https://vuejs.org/v2/guide/render-function.html#Functional-Components" class="badge badge-secondary"> Functional Component </a></div>
+<div data-v-866a22e8="" class="text-sm-right col-sm-3"><a data-v-866a22e8="" rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev/src/components/input-group/input-group-text.js" class="btn btn-outline-secondary btn-sm"> View source </a></div>
+</header>
+<ul data-v-866a22e8="" class="component-ref-mini-toc my-3">
+
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-input-group-text-props"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-input-group-text&gt;</code> Properties </a></li>
+   
+</ul>
+
+<article data-v-866a22e8="" class="bd-content">
+<h4 data-v-866a22e8="" id="comp-ref-b-input-group-text-props" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> Properties <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/input-group#comp-ref-b-input-group-text-props" class="anchorjs-link" aria-labelledby="comp-ref-b-input-group-text-props" target="_self"></a></span></h4>
+<div data-v-866a22e8="" class="table-responsive-sm">
+<table role="table" aria-busy="false" aria-colcount="4" class="table b-table bv-docs-table table-striped" id="__BVID__1618">
+
+<thead role="rowgroup" class="">
+
+<tr role="row" class="">
+<th role="columnheader" scope="col" aria-colindex="1" class="">Property</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">Type</th>
+<th role="columnheader" scope="col" aria-colindex="3" class="">Default</th>
+<th role="columnheader" scope="col" aria-colindex="4" class="">Description</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+
+<tr role="row" data-pk="tag" class="" id="__BVID__1618__row_tag">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">tag</code>     </td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'div'</code></td>
+<td aria-colindex="4" role="cell" class="">Specify the HTML tag to render instead of the default tag</td>
+</tr>
+
+</tbody>
+
+</table>
+</div>
+ </article>
+   </section>
+<section data-v-866a22e8="" class="bd-content">
+<header data-v-866a22e8="" class="row align-items-center">
+<div data-v-866a22e8="" class="col-sm-9">
+<h3 data-v-866a22e8="" id="comp-ref-b-input-group-addon" tabindex="-1" class="bv-no-focus-ring"><span data-v-866a22e8="" class="bd-content-title"><code data-v-866a22e8="" translate="translate" class="notranslate bigger">&lt;b-input-group-addon&gt;</code><a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/input-group#comp-ref-b-input-group-addon" class="anchorjs-link" aria-labelledby="comp-ref-b-input-group-addon" target="_self"></a></span></h3>
+ <a data-v-866a22e8="" rel="noopener" target="_blank" href="https://vuejs.org/v2/guide/render-function.html#Functional-Components" class="badge badge-secondary"> Functional Component </a></div>
+<div data-v-866a22e8="" class="text-sm-right col-sm-3"><a data-v-866a22e8="" rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev/src/components/input-group/input-group-addon.js" class="btn btn-outline-secondary btn-sm"> View source </a></div>
+</header>
+<ul data-v-866a22e8="" class="component-ref-mini-toc my-3">
+
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-input-group-addon-props"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-input-group-addon&gt;</code> Properties </a></li>
+   
+</ul>
+
+<article data-v-866a22e8="" class="bd-content">
+<h4 data-v-866a22e8="" id="comp-ref-b-input-group-addon-props" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> Properties <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/input-group#comp-ref-b-input-group-addon-props" class="anchorjs-link" aria-labelledby="comp-ref-b-input-group-addon-props" target="_self"></a></span></h4>
+<div data-v-866a22e8="" class="table-responsive-sm">
+<table role="table" aria-busy="false" aria-colcount="4" class="table b-table bv-docs-table table-striped" id="__BVID__1634">
+
+<thead role="rowgroup" class="">
+
+<tr role="row" class="">
+<th role="columnheader" scope="col" aria-colindex="1" class="">Property</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">Type</th>
+<th role="columnheader" scope="col" aria-colindex="3" class="">Default</th>
+<th role="columnheader" scope="col" aria-colindex="4" class="">Description</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+
+<tr role="row" data-pk="id" class="" id="__BVID__1634__row_id">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">id</code>     </td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""></td>
+<td aria-colindex="4" role="cell" class="">Used to set the 'id' attribute on the rendered content, and used as the base to generate any additional element IDs as needed</td>
+</tr>
+
+<tr role="row" data-pk="tag" class="" id="__BVID__1634__row_tag">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">tag</code>     </td>
+<td aria-colindex="2" role="cell" class="">String</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'div'</code></td>
+<td aria-colindex="4" role="cell" class="">Specify the HTML tag to render instead of the default tag</td>
+</tr>
+
+<tr role="row" data-pk="is-text" class="" id="__BVID__1634__row_is-text">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">is-text</code>     </td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">When 'true', wraps the content in a b-input-group-text component</td>
+</tr>
+
+<tr role="row" data-pk="append" class="" id="__BVID__1634__row_append">
+<td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">append</code>     </td>
+<td aria-colindex="2" role="cell" class="">Boolean</td>
+<td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
+<td aria-colindex="4" role="cell" class="">When set to 'true' sets the addon as being appended. defaults to 'false' which is prepended</td>
+</tr>
+
+</tbody>
+
+</table>
+</div>
+ </article>
+   </section>
+<h3 id="importing-individual-components" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title"> Importing individual components <a href="../../../bootstrap-vue/docs/components/input-group#importing-individual-components" class="anchorjs-link" aria-labelledby="importing-individual-components" target="_self"></a></span></h3>
+<p> You can import individual components into your project via the following named
+        exports: </p>
+<div class="table-responsive-sm">
+<table role="table" aria-busy="false" aria-colcount="3" class="table b-table bv-docs-table table-striped" id="__BVID__1649">
+
+<thead role="rowgroup" class="thead-default">
+
+<tr role="row" class="">
+<th role="columnheader" scope="col" aria-colindex="1" class="">Component</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">Named Export</th>
+<th role="columnheader" scope="col" aria-colindex="3" class="">Import Path</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+
+<tr role="row" class="">
+<td aria-colindex="1" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">&lt;b-input-group&gt;</code></td>
+<td aria-colindex="2" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">BInputGroup</code></td>
+<td aria-colindex="3" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">bootstrap-vue</code></td>
+</tr>
+<tr role="row" class="">
+<td aria-colindex="1" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">&lt;b-input-group-prepend&gt;</code></td>
+<td aria-colindex="2" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">BInputGroupPrepend</code></td>
+<td aria-colindex="3" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">bootstrap-vue</code></td>
+</tr>
+<tr role="row" class="">
+<td aria-colindex="1" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">&lt;b-input-group-append&gt;</code></td>
+<td aria-colindex="2" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">BInputGroupAppend</code></td>
+<td aria-colindex="3" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">bootstrap-vue</code></td>
+</tr>
+<tr role="row" class="">
+<td aria-colindex="1" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">&lt;b-input-group-text&gt;</code></td>
+<td aria-colindex="2" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">BInputGroupText</code></td>
+<td aria-colindex="3" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">bootstrap-vue</code></td>
+</tr>
+<tr role="row" class="">
+<td aria-colindex="1" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">&lt;b-input-group-addon&gt;</code></td>
+<td aria-colindex="2" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">BInputGroupAddon</code></td>
+<td aria-colindex="3" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">bootstrap-vue</code></td>
+</tr>
+
+</tbody>
+
+</table>
+</div>
+<p><strong>Example:</strong></p>
+<pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { BInputGroup } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
+Vue.component(<span class="hljs-string">'b-input-group'</span>, BInputGroup)</pre>
+
+<h3 id="importing-as-a-plugin" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title"> Importing as a Vue.js plugin <a href="../../../bootstrap-vue/docs/components/input-group#importing-as-a-plugin" class="anchorjs-link" aria-labelledby="importing-as-a-plugin" target="_self"></a></span></h3>
+<p> This plugin includes all of the above listed individual
+      components.
+      Plugins also include any component aliases. </p>
+<div class="table-responsive-sm">
+<table fileds="namedExport,importPath" role="table" aria-busy="false" aria-colcount="2" class="table b-table bv-docs-table table-striped b-table-caption-top" id="__BVID__1663">
+
+<thead role="rowgroup" class="thead-default">
+
+<tr role="row" class="">
+<th role="columnheader" scope="col" aria-colindex="1" class="">Named Export</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">Import Path</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+
+<tr role="row" class="">
+<td aria-colindex="1" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">InputGroupPlugin</code></td>
+<td aria-colindex="2" role="cell" class=""><code translate="translate" class="text-nowrap notranslate">bootstrap-vue</code></td>
+</tr>
+
+</tbody>
+
+</table>
+</div>
+
+<p><strong>Example:</strong></p>
+<pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { InputGroupPlugin } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
+Vue.use(InputGroupPlugin)</pre>
+
+
+
+
+
+
+
+
+
+
+</main>
+</div>
+</div>
+
+
+<script src="../../../js/jquery-3.2.1.slim.min.js"></script> 
+<script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery-slim.min.js"><\/script>')</script> 
+<script src="../../../v4/dist/js/popper.min.js"></script> 
+<script src="../../../v4/dist/js/bootstrap.min.js"></script> 
+<script src="../../../v4/assets/js/docs.min.js"></script> 
+<script src="../../../v4/assets/js/ie-emulation-modes-warning.js"></script> 
+<script src="../../../v4/assets/js/docsearch.min.js"></script> 
+<script>
+  docsearch({
+    appId: 'PRR89ISST8',
+    apiKey: '95044d57d4d7bb744f322d1f18ed607f',
+    indexName: 'z01-bootstrapV4',
+    inputSelector: '#search-input',
+    handleSelected: function (input, event, suggestion) {
+      var url = suggestion.url;
+      url = suggestion.isLvl1 ? url.split('#')[0]: url;
+      // If it's a title we remove the anchor so it does not jump.
+      window.location.href = url;
+    },
+    transformData: function (hits) {
+      return hits.map(function (hit) {
+        hit.url = hit.url.replace('https://v4-alpha.getbootstrap.com', '/docs/4.0');
+        return hit;
+      });
+    },
+    debug: false // Set debug to true if you want to inspect the dropdown
+  });
+</script> 
+<script>
+  Holder.addTheme('gray', {
+    bg: '#777',
+    fg: 'rgba(255,255,255,.75)',
+    font: 'Helvetica',
+    fontweight: 'normal'
+  });
+</script>
+</body>
+</html>
