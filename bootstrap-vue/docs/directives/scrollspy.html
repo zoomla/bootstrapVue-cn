@@ -37,7 +37,7 @@
   <div class="navbar-nav-scroll">
     <ul class="navbar-nav bd-navbar-nav flex-row">
       <li class="nav-item"><a class="nav-link " href="../">首页</a></li>
-      <li class="nav-item"><a class="nav-link active" href="../../v4/docs/">中文手册</a></li>
+      <li class="nav-item"><a class="nav-link active" href="../../docs/">中文手册</a></li>
       <li class="nav-item"><a class="nav-link " href="../../v4/examples/">实例</a></li>
       <li class="nav-item dropdown">
 <a class="nav-item nav-link dropdown-toggle mr-md-2" id="bd-versions" aria-expanded="false" aria-haspopup="true" href="#" data-toggle="dropdown"> 主题模板 </a>
@@ -189,27 +189,27 @@
 
 <div class="d-none d-xl-block col-xl-2 bd-toc">
 <ul class="section-nav">
-<li class="nav-item toc-entry mb-2"><a target="_self" href="#scrollspy" class="nav-link font-weight-bold"><span>ScrollSpy</span></a></li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#how-it-works" class="nav-link"><span>How it works</span></a>
+<li class="nav-item toc-entry mb-2"><a target="_self" href="#scrollspy" class="nav-link font-weight-bold"><span>Scrollspy 滚动监听</span></a></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#how-it-works" class="nav-link"><span>运行原理</span></a>
 <ul class="nav flex-column">
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#example-using-navs" class="nav-link"><span>Example using navs</span></a></li>
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#example-using-nested-navs" class="nav-link"><span>Example using nested navs</span></a></li>
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#example-using-list-group" class="nav-link"><span>Example using list group</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#example-using-navs" class="nav-link"><span>使用导航的示例</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#example-using-nested-navs" class="nav-link"><span>使用嵌套导航的示例</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#example-using-list-group" class="nav-link"><span>使用列表组的示例</span></a></li>
 </ul>
 </li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#using-scrollspy-on-components-with-the-to-prop" class="nav-link"><span>Using scrollspy on components with the to prop</span></a> </li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#directive-syntax-and-usage" class="nav-link"><span>Directive syntax and usage</span></a>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#using-scrollspy-on-components-with-the-to-prop" class="nav-link"><span>在带有 prop在组件上使用scrollspy</span></a> </li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#directive-syntax-and-usage" class="nav-link"><span>指令语法和用法</span></a>
 <ul class="nav flex-column">
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#config-object-properties" class="nav-link"><span>Config object properties</span></a></li>
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#config-notes" class="nav-link"><span>Config notes</span></a></li>
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#directive-use-examples" class="nav-link"><span>Directive use examples</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#config-object-properties" class="nav-link"><span>配置对象属性</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#config-notes" class="nav-link"><span>配置说明</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#directive-use-examples" class="nav-link"><span>指令使用示例</span></a></li>
 </ul>
 </li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#events" class="nav-link"><span>Events</span></a> </li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#directive-reference" class="nav-link"><span>Directive reference</span></a>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#events" class="nav-link"><span>事件用例</span></a> </li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#directive-reference" class="nav-link"><span>指令参考</span></a>
 <ul class="nav flex-column">
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#importing-individual-directives" class="nav-link"><span>Importing individual directives</span></a></li>
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#importing-as-a-plugin" class="nav-link"><span>Importing as a Vue.js plugin</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#importing-individual-directives" class="nav-link"><span>导入单个指令</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#importing-as-a-plugin" class="nav-link"><span>导入为Vue.js插件</span></a></li>
 </ul>
 </li>
 </ul>
@@ -227,7 +227,7 @@
 </nav>
 <div class="clearfix d-block"></div>
   <h1 class="bd-title" id="content">Scrollspy 滚动监听</h1>
-  <p class="bd-lead">Automatically update Bootstrap navigation or list group components based on scroll position to indicate which link is currently active in the viewport.</p>
+  <p class="bd-lead">根据滚动位置自动更新Bootstrap导航或列表组组件，用于指示可视窗口视口中当前处于活动状态的链接。</p>
   <script type="text/javascript" src="../../../v4/assets/js/pupCMS.js"></script>
 
 
@@ -260,21 +260,18 @@
 </li>
 </ul>
 </nav>
-<h2 id="how-it-works" class="bv-no-focus-ring"><span class="bd-content-title">How it works<a class="anchorjs-link" href="#how-it-works" aria-labelledby="how-it-works"></a></span></h2>
-<p>The <code class="text-nowrap" translate="no">v-b-scrollspy</code> directive has a few requirements to function properly:</p>
+<h2 id="how-it-works" class="bv-no-focus-ring"><span class="bd-content-title">运行原理<a class="anchorjs-link" href="#how-it-works" aria-labelledby="how-it-works"></a></span></h2>
+<p> <code class="text-nowrap" translate="no">v-b-scrollspy</code> 指令对正常运行有一些要求：</p>
 <ul>
-<li>It must be applied on the element/component containing the <code class="text-nowrap" translate="no">&lt;b-nav&gt;</code> or <code class="text-nowrap" translate="no">&lt;b-list-group&gt;</code> component(s) where you want to indicate which link is currently active.</li>
-<li>Scrollspy requires <code class="text-nowrap" translate="no">position: relative;</code> on the element you're spying on, usually the <code class="text-nowrap" translate="no">&lt;body&gt;</code>.</li>
-<li>When spying on elements other than the <code class="text-nowrap" translate="no">&lt;body&gt;</code>, be sure to have a <code class="text-nowrap" translate="no">height</code> set and <code class="text-nowrap" translate="no">overflow-y: scroll;</code> applied.</li>
-<li>Anchors (<code class="text-nowrap" translate="no">&lt;a&gt;</code>, <code class="text-nowrap" translate="no">&lt;b-nav-item&gt;</code>, <code class="text-nowrap" translate="no">&lt;b-dropdown-item&gt;</code>, <code class="text-nowrap" translate="no">&lt;b-list-group-item&gt;</code>) are required and must
-have an <code class="text-nowrap" translate="no">href</code> (either via the <code class="text-nowrap" translate="no">href</code> or <code class="text-nowrap" translate="no">to</code> props) that points to an element with that <code class="text-nowrap" translate="no">id</code> in
-the container you are spying on. When using the <code class="text-nowrap" translate="no">to</code> prop, either set the <code class="text-nowrap" translate="no">path</code> ending with <code class="text-nowrap" translate="no">#id-of-element</code>, or set the location property <code class="text-nowrap" translate="no">hash</code> to <code class="text-nowrap" translate="no">#id-of-element</code>.</li>
+<li>必须将其应用于包含 <code class="text-nowrap" translate="no">&lt;b-nav&gt;</code> 或 <code class="text-nowrap" translate="no">&lt;b-list-group&gt;</code> 组件的元素/组件，您要在其中指示当前处于活动状态的链接。</li>
+<li>Scrollspy 需要 <code class="text-nowrap" translate="no">位置: 相对;</code>相对 在您监视的元素上，通常是 <code class="text-nowrap" translate="no">&lt;body&gt;</code>.</li>
+<li>监视除 <code class="text-nowrap" translate="no">&lt;body&gt;</code>以外的元素时, 请确保已 <code class="text-nowrap" translate="no">设置</code> 高度并 <code class="text-nowrap" translate="no">溢出-y: scroll;</code> 应用.</li>
+<li>锚点 (<code class="text-nowrap" translate="no">&lt;a&gt;</code>, <code class="text-nowrap" translate="no">&lt;b-nav-item&gt;</code>, <code class="text-nowrap" translate="no">&lt;b-dropdown-item&gt;</code>, <code class="text-nowrap" translate="no">&lt;b-list-group-item&gt;</code>) 是必需的，并且必须具有指向的 <code class="text-nowrap" translate="no">href</code> (通过 <code class="text-nowrap" translate="no">href</code> 或 <code class="text-nowrap" translate="no"></code> props) 到您正在监视的容器中具有该 <code class="text-nowrap" translate="no">id</code> 的元素. 使用 <code class="text-nowrap" translate="no"></code> prop时, 要么将 <code class="text-nowrap" translate="no">路径</code> 设置为已 <code class="text-nowrap" translate="no">#id-of-element</code>结尾, 要么将位置属性<code class="text-nowrap" translate="no">hash</code> 设置为 <code class="text-nowrap" translate="no">#id-of-element</code>.</li>
 </ul>
-<p>When successfully implemented, your nav or list group will update accordingly, moving the <code class="text-nowrap" translate="no">active</code> state from one item to the next based on their associated targets.</p>
-<h3 id="example-using-navs" class="bv-no-focus-ring"><span class="bd-content-title">Example using navs<a class="anchorjs-link" href="#example-using-navs" aria-labelledby="example-using-navs"></a></span></h3>
-<p>Using <code class="text-nowrap" translate="no">v-b-scrollspy</code> on a <code class="text-nowrap" translate="no">&lt;b-nav&gt;</code> component to monitor the scrolling on <code class="text-nowrap" translate="no">&lt;b-card-body&gt;</code>. Scroll
-the area below the navbar and watch the active class change. The dropdown items will be highlighted
-as well.</p>
+<p>成功实施后, 您的导航或列表组将进行相应的更新, 根据其关联的 <code class="text-nowrap" translate="no">目标</code> 将活动状态从一项移至下一项.</p>
+<h3 id="example-using-navs" class="bv-no-focus-ring"><span class="bd-content-title">使用导航的示例<a class="anchorjs-link" href="#example-using-navs" aria-labelledby="example-using-navs"></a></span></h3>
+<p>在 <code class="text-nowrap" translate="no">&lt;b-nav&gt;</code>组件上使用<code class="text-nowrap" translate="no">v-b-scrollspy</code> 监视<code class="text-nowrap" translate="no">&lt;b-card-body&gt;</code>上的滚动. 滚动导航栏下方的区域，并查看活动的班级更改. 下拉项也会突出显示
+</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-scrollspy-nav">
 <div>
 <div class="card">
@@ -496,9 +493,8 @@ as well.</p>
   }
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
 </div>
-<h3 id="example-using-nested-navs" class="bv-no-focus-ring"><span class="bd-content-title">Example using nested navs<a class="anchorjs-link" href="#example-using-nested-navs" aria-labelledby="example-using-nested-navs"></a></span></h3>
-<p>Scrollspy also works with nested <code class="text-nowrap" translate="no">&lt;b-nav&gt;</code>. If a nested <code class="text-nowrap" translate="no">&lt;b-nav-item&gt;</code> is active, its parent()s will
-also be active. Scroll the area next to the navbar and watch the active class change.</p>
+<h3 id="example-using-nested-navs" class="bv-no-focus-ring"><span class="bd-content-title">使用嵌套导航的示例<a class="anchorjs-link" href="#example-using-nested-navs" aria-labelledby="example-using-nested-navs"></a></span></h3>
+<p>Scrollspy 还可以与嵌套<code class="text-nowrap" translate="no">&lt;b-nav&gt;</code>一起使用. 如果嵌套的 <code class="text-nowrap" translate="no">&lt;b-nav-item&gt;</code> 是活动的, 则其 parent()s 也将是活动的. 滚动导航栏旁边的区域，然后查看活动的班级更改.</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-scrollspy-nested">
 <div class="container-fluid">
 <div class="row">
@@ -653,8 +649,8 @@ also be active. Scroll the area next to the navbar and watch the active class ch
   }
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
 </div>
-<h3 id="example-using-list-group" class="bv-no-focus-ring"><span class="bd-content-title">Example using list group<a class="anchorjs-link" href="#example-using-list-group" aria-labelledby="example-using-list-group"></a></span></h3>
-<p>Scrollspy also works with <code class="text-nowrap" translate="no">&lt;b-list-group&gt;</code> when it contains <code class="text-nowrap" translate="no">&lt;b-list-group-item&gt;</code>s that have a <em>local</em> <code class="text-nowrap" translate="no">href</code> or <code class="text-nowrap" translate="no">to</code>. Scroll the area next to the list group and watch the active state change.</p>
+<h3 id="example-using-list-group" class="bv-no-focus-ring"><span class="bd-content-title">使用列表组的示例<a class="anchorjs-link" href="#example-using-list-group" aria-labelledby="example-using-list-group"></a></span></h3>
+<p>当Scrollspy包含具有本地<code class="text-nowrap" translate="no">href</code> 或 <code class="text-nowrap" translate="no">to</code>的<code class="text-nowrap" translate="no">&lt;b-list-group&gt;</code>时，它可以与 <code class="text-nowrap" translate="no">&lt;b-list-group-item&gt;</code>一起使用. 滚动列表组旁边的区域，并观察活动状态的变化.</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-scrollspy-listgroup">
 <div class="container-fluid">
 <div class="row">
@@ -764,9 +760,8 @@ also be active. Scroll the area next to the navbar and watch the active class ch
   }
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
 </div>
-<h2 id="using-scrollspy-on-components-with-the-to-prop" class="bv-no-focus-ring"><span class="bd-content-title">Using scrollspy on components with the <code class="text-nowrap" translate="no">to</code> prop<a class="anchorjs-link" href="#using-scrollspy-on-components-with-the-to-prop" aria-labelledby="using-scrollspy-on-components-with-the-to-prop"></a></span></h2>
-<p>When Vue Router (or Nuxt.js) is used, and you are generating your links with the <code class="text-nowrap" translate="no">to</code> prop, use one
-of the following methods to generate the appropriate <code class="text-nowrap" translate="no">href</code> on the rendered link:</p>
+<h2 id="using-scrollspy-on-components-with-the-to-prop" class="bv-no-focus-ring"><span class="bd-content-title">在带有 <code class="text-nowrap" translate="no"></code> prop在组件上使用scrollspy<a class="anchorjs-link" href="#using-scrollspy-on-components-with-the-to-prop" aria-labelledby="using-scrollspy-on-components-with-the-to-prop"></a></span></h2>
+<p>当使用 Vue Router (或 Nuxt.js) 时, 并且您正在使用 <code class="text-nowrap" translate="no">to</code> prop生成链接时,请使用以下方法之一在渲染的链接上生成适当的 <code class="text-nowrap" translate="no">href</code>： </p>
 <div class="bd-code">
 <pre class="hljs html p-2" translate="no"><span class="hljs-comment">&lt;!-- using a string path --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">b-nav-item</span> <span class="hljs-attr">to</span>=<span class="hljs-string">"#id-of-element"</span>&gt;</span>link text<span class="hljs-tag">&lt;/<span class="hljs-name">b-nav-item</span>&gt;</span>
@@ -774,25 +769,21 @@ of the following methods to generate the appropriate <code class="text-nowrap" t
 <span class="hljs-comment">&lt;!-- using a router `to` location object --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">b-nav-item</span> <span class="hljs-attr">:to</span>=<span class="hljs-string">"{ hash: '#id-of-element' }"</span>&gt;</span>link text<span class="hljs-tag">&lt;/<span class="hljs-name">b-nav-item</span>&gt;</span></pre>
 </div>
-<p>Scrollspy works with both <code class="text-nowrap" translate="no">history</code> and <code class="text-nowrap" translate="no">hash</code> routing modes, as long as the generated URL ends with <code class="text-nowrap" translate="no">#id-of-element</code>.</p>
-<h2 id="directive-syntax-and-usage" class="bv-no-focus-ring"><span class="bd-content-title">Directive syntax and usage<a class="anchorjs-link" href="#directive-syntax-and-usage" aria-labelledby="directive-syntax-and-usage"></a></span></h2>
+<p>Scrollspy 可同时使用 <code class="text-nowrap" translate="no">历史记录</code> 和 <code class="text-nowrap" translate="no">哈希</code>路由模式 ，只要生成的URL以 <code class="text-nowrap" translate="no">#id-of-element</code>结尾即可.</p>
+<h2 id="directive-syntax-and-usage" class="bv-no-focus-ring"><span class="bd-content-title">指令语法和用法<a class="anchorjs-link" href="#directive-syntax-and-usage" aria-labelledby="directive-syntax-and-usage"></a></span></h2>
 <div class="bd-code">
 <pre class="hljs  p-2" translate="no">v-b-scrollspy:arg.mod1.mod2="option"</pre>
 </div>
-<p>Where:</p>
+<p>哪里:</p>
 <ul>
-<li><code class="text-nowrap" translate="no">arg</code> is the ID (minus the <code class="text-nowrap" translate="no">#</code>) of the element to monitor scrolling on. Optional (defaults to <code class="text-nowrap" translate="no">body</code>. Can be overridden by <code class="text-nowrap" translate="no">option</code>)</li>
-<li><code class="text-nowrap" translate="no">mod1</code> &amp; <code class="text-nowrap" translate="no">mod2</code> can be an <code class="text-nowrap" translate="no">offset</code> number or string <code class="text-nowrap" translate="no">method</code> (see config object below). Order of
-the modifiers is not important. Both are optional</li>
-<li><code class="text-nowrap" translate="no">option</code> can be a string identifying the <code class="text-nowrap" translate="no">element</code> to monitor scrolling on, a numeric <code class="text-nowrap" translate="no">offset</code>, or
-a configuration object (see below). Optional</li>
+<li><code class="text-nowrap" translate="no">arg</code> 是要监视滚动的元素的 ID (减去 <code class="text-nowrap" translate="no">#</code>) .可选 (默认为 <code class="text-nowrap" translate="no">body</code>. 可以被选项 <code class="text-nowrap" translate="no">覆盖</code>)</li>
+<li><code class="text-nowrap" translate="no">mod1</code> 和 <code class="text-nowrap" translate="no">mod2</code> 可以是<code class="text-nowrap" translate="no"></code>移偏号或字符串 <code class="text-nowrap" translate="no">方法</code> (请参见下面的配置对象). 修饰符的顺序并不重要. 两者都是可选的</li>
+<li><code class="text-nowrap" translate="no">option</code> 可以是标识要监视 <code class="text-nowrap" translate="no">滚动的</code> 元素的字符串, 数字<code class="text-nowrap" translate="no">偏移量</code>或配置对象(请参见下文). 可选在</li>
 </ul>
-<p><strong>Note:</strong> The directive is applied backwards compared to native Bootstrap v4. In <strong>BootstrapVue</strong> the <code class="text-nowrap" translate="no">v-b-scrollspy</code> directive is applied to the target element that has the links to be activated,
-and the arg or option specifies which element to monitor (spy) scrolling on.</p>
-<p>The directive an be applied to any containing element or component that has <code class="text-nowrap" translate="no">&lt;nav-item&gt;</code>, <code class="text-nowrap" translate="no">&lt;b-dropdown-item&gt;</code>, <code class="text-nowrap" translate="no">&lt;b-list-group-item&gt;</code> (or <code class="text-nowrap" translate="no">&lt;a&gt;</code> tags with the appropriate classes), a long as
-they have rendered <code class="text-nowrap" translate="no">href</code> attributes that point to elements with the respective <code class="text-nowrap" translate="no">id</code>s in the
-scrolling element.</p>
-<h3 id="config-object-properties" class="bv-no-focus-ring"><span class="bd-content-title">Config object properties<a class="anchorjs-link" href="#config-object-properties" aria-labelledby="config-object-properties"></a></span></h3>
+<p><strong>注意:</strong> 与本机 Bootstrap v4 相比. 在 <strong>BootstrapVue中</strong> 将 <code class="text-nowrap" translate="no">v-b-scrollspy</code> 伪指令应用于具有要激活的链接的目标元素,
+ 而arg 或 option 指定要监视 (间谍)滚动在元素.</p>
+<p>指令a可以应用于任何包含 <code class="text-nowrap" translate="no">&lt;nav-item&gt;</code>, <code class="text-nowrap" translate="no">&lt;b-dropdown-item&gt;</code>, <code class="text-nowrap" translate="no">&lt;b-list-group-item&gt;</code> (或带有适当类的 <code class="text-nowrap" translate="no">&lt;a&gt;</code> 标签), 的包含元素或组件 因为它们已经呈现了 <code class="text-nowrap" translate="no">href</code> 属性，该属性指向滚动元素中具有相应 <code class="text-nowrap" translate="no">id</code>的元素.</p>
+<h3 id="config-object-properties" class="bv-no-focus-ring"><span class="bd-content-title">配置对象属性<a class="anchorjs-link" href="#config-object-properties" aria-labelledby="config-object-properties"></a></span></h3>
 <!-- eslint-disable no-unused-vars -->
 
 <div class="bd-code">
@@ -807,54 +798,51 @@ scrolling element.</p>
 <table class="b-table table table-bordered table-striped bv-docs-table">
 <thead class="thead-default">
 <tr>
-<th>Property</th>
-<th>Type</th>
-<th>Default</th>
-<th>Description</th>
+<th>属性</th>
+<th>类型</th>
+<th>默认</th>
+<th>描述</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code class="text-nowrap" translate="no">element</code></td>
-<td>String or Reference</td>
+<td>字符串或引用</td>
 <td><code class="text-nowrap" translate="no">'body'</code></td>
-<td>Element to be monitored for scrolling. Can be an ID (<code class="text-nowrap" translate="no">#foo</code>), a css Selector (<code class="text-nowrap" translate="no">#foo div</code>), or a reference to an element/component node. If a CSS string, then the first matching element is used. If an ID is used it must start with <code class="text-nowrap" translate="no">#</code>.</td>
+<td>要监视滚动的元素. 可以是 ID (<code class="text-nowrap" translate="no">#foo</code>), css 选择器 (<code class="text-nowrap" translate="no">#foo div</code>), 或对元素/组件节点的引用.如果是 CSS 字符串, 则使用第一个匹配元素. 如果使用 ID 则必须以 <code class="text-nowrap" translate="no">#</code>开头.</td>
 </tr>
 <tr>
 <td><code class="text-nowrap" translate="no">offset</code></td>
-<td>Number</td>
+<td>数</td>
 <td><code class="text-nowrap" translate="no">10</code></td>
-<td>offset (in pixels) from top of scrolling viewport before triggering active state.</td>
+<td>在触发活动状态之前，从滚动视口顶部开始的偏移量（以像素为单位）.</td>
 </tr>
 <tr>
 <td><code class="text-nowrap" translate="no">method</code></td>
-<td>String</td>
+<td>串</td>
 <td><code class="text-nowrap" translate="no">'auto'</code></td>
-<td><code class="text-nowrap" translate="no">position</code> will calculate target offsets relative to the scroll container. <code class="text-nowrap" translate="no">offset</code> will calculate the target offsets relative to the top of the window/viewport. <code class="text-nowrap" translate="no">auto</code> will choose <code class="text-nowrap" translate="no">offset</code> if scroll element is <code class="text-nowrap" translate="no">body</code>, else the method is <code class="text-nowrap" translate="no">position</code>.</td>
+<td><code class="text-nowrap" translate="no">position</code> 将计算相对于滚动容器的目标偏移量. <code class="text-nowrap" translate="no">offset</code> 将计算相对于窗口/视口顶部的目标偏移量. <code class="text-nowrap" translate="no">如果</code> 滚动<code class="text-nowrap" translate="no"></code> 元素为 <code class="text-nowrap" translate="no">body</code>, 则auto将选择offset <code class="text-nowrap" translate="no">否则为position</code>.</td>
 </tr>
 <tr>
 <td><code class="text-nowrap" translate="no">throttle</code></td>
-<td>Number</td>
+<td>数</td>
 <td><code class="text-nowrap" translate="no">100</code></td>
-<td>Timeout in <code class="text-nowrap" translate="no">ms</code> for resize events to stop firing before recalculating offsets.</td>
+<td>调整大小 <code class="text-nowrap" translate="no">事件</code> 在重新计算偏移之前停止触发的超时（以毫秒为单位）.</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p>If args/modifiers and a value (object or number) is passed, the value takes precedence over the arg
-and modifiers.</p>
-<p>If any of the options are invalid types, then an error is written to the console.</p>
-<h3 id="config-notes" class="bv-no-focus-ring"><span class="bd-content-title">Config notes<a class="anchorjs-link" href="#config-notes" aria-labelledby="config-notes"></a></span></h3>
+<p>如果参数/修饰符和值（对象或数字）被传递，则该值优先于参数arg和修饰符.</p>
+<p>如果任何选项的类型无效，那么会将错误写入控制台.</p>
+<h3 id="config-notes" class="bv-no-focus-ring"><span class="bd-content-title">配置说明<a class="anchorjs-link" href="#config-notes" aria-labelledby="config-notes"></a></span></h3>
 <ul>
-<li>If scroll element is not present, then we assume scrolling on <code class="text-nowrap" translate="no">&lt;body&gt;</code></li>
-<li>If scroll element is a CSS selector, the first found element is chosen</li>
-<li>If scroll element is not found, then ScrollSpy silently does nothing</li>
+<li>如果没有scroll元素，则假定在<code class="text-nowrap" translate="no">&lt;body&gt;</code>上滚动</li>
+<li>如果scroll元素是CSS选择器，则选择第一个找到的元素</li>
+<li>如果找不到滚动元素，则ScrollSpy会静默不执行任何操作</li>
 </ul>
-<p><strong>Important! Requires relative positioning</strong> No matter the implementation method, scrollspy requires
-the use of <code class="text-nowrap" translate="no">position: relative;</code> on the element you're scrolling on. In most cases this is the <code class="text-nowrap" translate="no">&lt;body&gt;</code>. When scrollspying on elements other than the <code class="text-nowrap" translate="no">&lt;body&gt;</code>, be sure to have a CSS <code class="text-nowrap" translate="no">height</code> set
-and <code class="text-nowrap" translate="no">overflow-y: scroll;</code> applied.</p>
-<h3 id="directive-use-examples" class="bv-no-focus-ring"><span class="bd-content-title">Directive use examples<a class="anchorjs-link" href="#directive-use-examples" aria-labelledby="directive-use-examples"></a></span></h3>
-<p>Assume <code class="text-nowrap" translate="no">&lt;body&gt;</code> is the scroll element, and use default offset of 10 pixels</p>
+<p><strong>重要! 需要相对定位</strong> 无论实现方法如何, scrollspy 都需要使用 <code class="text-nowrap" translate="no">position: relative;</code> 在要滚动的元素上.在大多数情况下，这是<body> <code class="text-nowrap" translate="no">&lt;body&gt;</code>.在 <code class="text-nowrap" translate="no">&lt;body&gt;</code>以外的元素上滚动查看时, 请确保已设置 CSS <code class="text-nowrap" translate="no">高度</code> 并 <code class="text-nowrap" translate="no">溢出-y: scroll;</code> 应用.</p>
+<h3 id="directive-use-examples" class="bv-no-focus-ring"><span class="bd-content-title">指令使用示例<a class="anchorjs-link" href="#directive-use-examples" aria-labelledby="directive-use-examples"></a></span></h3>
+<p>假设 <code class="text-nowrap" translate="no">&lt;body&gt;</code> 是滚动元素，并使用默认偏移量10像素</p>
 <div class="bd-code">
 <pre class="hljs html p-2" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-nav</span> <span class="hljs-attr">v-b-scrollspy</span>&gt;</span>
@@ -919,9 +907,8 @@ node reference</p>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-nav</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
 </div>
-<h2 id="events" class="bv-no-focus-ring"><span class="bd-content-title">Events<a class="anchorjs-link" href="#events" aria-labelledby="events"></a></span></h2>
-<p>Whenever a target is activated, the event <code class="text-nowrap" translate="no">bv:scrollspy::activate</code> is emitted on <code class="text-nowrap" translate="no">$root</code> with the
-target's ID as the argument (i.e. <code class="text-nowrap" translate="no">#bar</code>)</p>
+<h2 id="events" class="bv-no-focus-ring"><span class="bd-content-title">事件用例<a class="anchorjs-link" href="#events" aria-labelledby="events"></a></span></h2>
+<p>每当激活目标时，都会在$ root上发出 <code class="text-nowrap" translate="no">bv:scrollspy::activate</code> 事件<code class="text-nowrap" translate="no"></code> 并以目标在 ID 作为参数 (即 <code class="text-nowrap" translate="no">#bar</code>)</p>
 <!-- eslint-disable no-unused-vars -->
 
 <div class="bd-code">
@@ -940,17 +927,16 @@ target's ID as the argument (i.e. <code class="text-nowrap" translate="no">#bar<
 <!-- Directive reference section auto generated from directive package.json --> 
 </section>
 <section class="bd-content bd-component-reference">
-<h2 id="directive-reference" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title">Directive reference<a href="/docs/directives/scrollspy#directive-reference" class="anchorjs-link" aria-labelledby="directive-reference" target="_self"></a></span></h2>
-<h3 id="importing-individual-directives" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title"> Importing individual directives <a href="/docs/directives/scrollspy#importing-individual-directives" class="anchorjs-link" aria-labelledby="importing-individual-directives" target="_self"></a></span></h3>
-<p> You can import individual directives into your project via the following named
-        exports: </p>
+<h2 id="directive-reference" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title">指令参考<a href="/docs/directives/scrollspy#directive-reference" class="anchorjs-link" aria-labelledby="directive-reference" target="_self"></a></span></h2>
+<h3 id="importing-individual-directives" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title"> 导入单个指令 <a href="/docs/directives/scrollspy#importing-individual-directives" class="anchorjs-link" aria-labelledby="importing-individual-directives" target="_self"></a></span></h3>
+<p> 您可以通过以下命名的导出将单个指令导入到您的项目中： </p>
 <div class="table-responsive-sm">
 <table role="table" aria-busy="false" aria-colcount="3" class="table b-table bv-docs-table table-striped" id="__BVID__643">
 <thead role="rowgroup" class="thead-default">
 <tr role="row" class="">
-<th role="columnheader" scope="col" aria-colindex="1" class="">Directive</th>
-<th role="columnheader" scope="col" aria-colindex="2" class="">Named Export</th>
-<th role="columnheader" scope="col" aria-colindex="3" class="">Import Path</th>
+<th role="columnheader" scope="col" aria-colindex="1" class="">指示</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">命名为出口</th>
+<th role="columnheader" scope="col" aria-colindex="3" class="">导入路径</th>
 </tr>
 </thead>
 <tbody role="rowgroup">
@@ -962,20 +948,20 @@ target's ID as the argument (i.e. <code class="text-nowrap" translate="no">#bar<
 </tbody>
 </table>
 </div>
-<p><strong>Example:</strong></p>
+<p><strong>例：</strong></p>
 <pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { VBScrollspy } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
 <span class="hljs-comment">// Note: Vue automatically prefixes the directive name with 'v-'</span>
 Vue.directive(<span class="hljs-string">'b-scrollspy'</span>, VBScrollspy)</pre>
 </article>
 <article class="bd-content">
-<h3 id="importing-as-a-plugin" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title"> Importing as a Vue.js plugin <a href="/docs/directives/scrollspy#importing-as-a-plugin" class="anchorjs-link" aria-labelledby="importing-as-a-plugin" target="_self"></a></span></h3>
-<p> This plugin includes all of the above listed individual directives. </p>
+<h3 id="importing-as-a-plugin" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title"> 导入为Vue.js插件 <a href="/docs/directives/scrollspy#importing-as-a-plugin" class="anchorjs-link" aria-labelledby="importing-as-a-plugin" target="_self"></a></span></h3>
+<p> 该插件包括上面列出的所有单个指令. </p>
 <div class="table-responsive-sm">
 <table fileds="namedExport,importPath" role="table" aria-busy="false" aria-colcount="2" class="table b-table bv-docs-table table-striped b-table-caption-top" id="__BVID__653">
 <thead role="rowgroup" class="thead-default">
 <tr role="row" class="">
-<th role="columnheader" scope="col" aria-colindex="1" class="">Named Export</th>
-<th role="columnheader" scope="col" aria-colindex="2" class="">Import Path</th>
+<th role="columnheader" scope="col" aria-colindex="1" class="">命名为出口</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">导入路径</th>
 </tr>
 </thead>
 <tbody role="rowgroup">
@@ -986,7 +972,7 @@ Vue.directive(<span class="hljs-string">'b-scrollspy'</span>, VBScrollspy)</pre>
 </tbody>
 </table>
 </div>
-<p><strong>Example:</strong></p>
+<p><strong>例：</strong></p>
 <pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { VBScrollspyPlugin } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
 Vue.use(VBScrollspyPlugin)</pre>
 

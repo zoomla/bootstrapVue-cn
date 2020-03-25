@@ -37,7 +37,7 @@
   <div class="navbar-nav-scroll">
     <ul class="navbar-nav bd-navbar-nav flex-row">
       <li class="nav-item"><a class="nav-link " href="../">首页</a></li>
-      <li class="nav-item"><a class="nav-link active" href="../../v4/docs/">中文手册</a></li>
+      <li class="nav-item"><a class="nav-link active" href="../../docs/">中文手册</a></li>
       <li class="nav-item"><a class="nav-link " href="../../v4/examples/">实例</a></li>
       <li class="nav-item dropdown">
 <a class="nav-item nav-link dropdown-toggle mr-md-2" id="bd-versions" aria-expanded="false" aria-haspopup="true" href="#" data-toggle="dropdown"> 主题模板 </a>
@@ -190,18 +190,18 @@
 <div class="d-none d-xl-block col-xl-2 bd-toc">
 <ul class="section-nav">
 <li class="nav-item toc-entry mb-2"><a target="_self" href="#hover" class="nav-link font-weight-bold"><span>Hover</span></a></li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#overview" class="nav-link"><span>Overview</span></a> <!----></li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#directive-syntax-and-usage" class="nav-link"><span>Directive syntax and usage</span></a>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#overview" class="nav-link"><span>总览</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#directive-syntax-and-usage" class="nav-link"><span>指令语法和用法</span></a>
 <ul class="nav flex-column">
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#usage-example" class="nav-link"><span>Usage example</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#usage-example" class="nav-link"><span>使用范例</span></a></li>
 </ul>
 </li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#live-example" class="nav-link"><span>Live example</span></a> <!----></li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#accessibility-concerns" class="nav-link"><span>Accessibility concerns</span></a> <!----></li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#directive-reference" class="nav-link"><span>Directive reference</span></a>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#live-example" class="nav-link"><span>现场列子</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#accessibility-concerns" class="nav-link"><span>无障碍问题</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#directive-reference" class="nav-link"><span>指令参考</span></a>
 <ul class="nav flex-column">
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#importing-individual-directives" class="nav-link"><span>Importing individual directives</span></a></li>
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#importing-as-a-plugin" class="nav-link"><span>Importing as a Vue.js plugin</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#importing-individual-directives" class="nav-link"><span>导入单个指令</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#importing-as-a-plugin" class="nav-link"><span>导入为Vue.js插件</span></a></li>
 </ul>
 </li>
 </ul>
@@ -219,7 +219,7 @@
 </nav>
 <div class="clearfix d-block"></div>
   <h1 class="bd-title" id="content">hover指令</h1>
-  <p class="bd-lead"><code class="text-nowrap" translate="no">v-b-hover</code> is a lightweight directive that allows you to react when an element either becomes hovered or unhovered.</p>
+  <p class="bd-lead"><code class="text-nowrap" translate="no">v-b-hover</code>是一种轻量型指令，它使您可以在元素悬停或取消悬停时做出反应。</p>
   <script type="text/javascript" src="../../../v4/assets/js/pupCMS.js"></script>
 
 
@@ -244,27 +244,24 @@
 </li>
 </ul>
 </nav>
-<p>The <code class="text-nowrap" translate="no">v-b-hover</code> directive can be used as an alternative to using custom CSS to handle hover states.</p>
-<p>The <code class="text-nowrap" translate="no">v-b-hover</code> directive was added in version <code class="text-nowrap" translate="no">2.5.0</code>.</p>
-<h2 id="overview" class="bv-no-focus-ring"><span class="bd-content-title">Overview<a class="anchorjs-link" href="#overview" aria-labelledby="overview"></a></span></h2>
+<p>The <code class="text-nowrap" translate="no">v-b-hover</code> 可以将指令用作使用自定义CSS处理悬停状态的替代方法。</p>
+<p>The <code class="text-nowrap" translate="no">v-b-hover</code> v-b-hover指令已在 <code class="text-nowrap" translate="no">2.5.0</code>版本添加。</p>
+<h2 id="overview" class="bv-no-focus-ring"><span class="bd-content-title">总览<a class="anchorjs-link" href="#overview" aria-labelledby="overview"></a></span></h2>
 <ul>
-<li><code class="text-nowrap" translate="no">v-b-hover</code> will call your callback method with a boolean value indicating if the element is
-hovered or not.</li>
-<li>The directive can be placed on almost any element or component.</li>
-<li>Internally, BootstrapVue uses this directive in several components.</li>
+<li><code class="text-nowrap" translate="no">v-b-hover</code> 将使用一个布尔值调用您的回调方法，该值指示元素是否悬停。</li>
+<li>该指令可以放在几乎任何元素或组件上。</li>
+<li>在内部，BootstrapVue在多个组件中使用此伪指令。</li>
 </ul>
-<h2 id="directive-syntax-and-usage" class="bv-no-focus-ring"><span class="bd-content-title">Directive syntax and usage<a class="anchorjs-link" href="#directive-syntax-and-usage" aria-labelledby="directive-syntax-and-usage"></a></span></h2>
+<h2 id="directive-syntax-and-usage" class="bv-no-focus-ring"><span class="bd-content-title">指令语法和用法<a class="anchorjs-link" href="#directive-syntax-and-usage" aria-labelledby="directive-syntax-and-usage"></a></span></h2>
 <div class="bd-code">
 <pre class="hljs html p-2" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">v-b-hover</span>=<span class="hljs-string">"callback"</span>&gt;</span>content<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
 </div>
-<p>Where callback is required:</p>
+<p>需要回调的地方：</p>
 <ul>
-<li>A function reference that will be called whenever hover state changes. The callback is passed a
-single boolean argument. <code class="text-nowrap" translate="no">true</code> indicates that the element (or component) is hovered by the users
-pointing device, or <code class="text-nowrap" translate="no">false</code> if the element is not hovered.</li>
+<li>悬停状态更改时将调用的函数引用。 回调传递一个布尔参数。 <code class="text-nowrap" translate="no">true</code> true表示元素（或组件）已被用户指示设备悬停， 或者如果该元素未悬停，则返回 <code class="text-nowrap" translate="no">false</code> 。</li>
 </ul>
-<p>The directive has no modifiers.</p>
-<h3 id="usage-example" class="bv-no-focus-ring"><span class="bd-content-title">Usage example<a class="anchorjs-link" href="#usage-example" aria-labelledby="usage-example"></a></span></h3>
+<p>该指令没有修饰符。</p>
+<h3 id="usage-example" class="bv-no-focus-ring"><span class="bd-content-title">使用范例<a class="anchorjs-link" href="#usage-example" aria-labelledby="usage-example"></a></span></h3>
 <div class="bd-code">
 <pre class="hljs html p-2" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">v-b-hover</span>=<span class="hljs-string">"hoverHandler"</span>&gt;</span> ... <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -284,8 +281,8 @@ pointing device, or <code class="text-nowrap" translate="no">false</code> if the
   }
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
 </div>
-<h2 id="live-example" class="bv-no-focus-ring"><span class="bd-content-title">Live example<a class="anchorjs-link" href="#live-example" aria-labelledby="live-example"></a></span></h2>
-<p>In the following, we are swapping icons and tet color depending on the hover state of the element:</p>
+<h2 id="live-example" class="bv-no-focus-ring"><span class="bd-content-title">现场例子<a class="anchorjs-link" href="#live-example" aria-labelledby="live-example"></a></span></h2>
+<p>在下面的内容中，我们将根据元素的悬停状态交换图标和文本颜色：</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-v-hover-example">
 <div>
 <div class="border rounded py-3 px-4">
@@ -295,7 +292,7 @@ pointing device, or <code class="text-nowrap" translate="no">false</code> if the
 <path d="M16.5 11.5a1.5 1.5 0 000-3v3z"></path>
 </g>
 </svg>
-<span class="ml-2">Hover this area</span></div>
+<span class="ml-2">悬停此区域</span></div>
 </div>
 </div>
 <div class="bd-code">
@@ -324,16 +321,14 @@ pointing device, or <code class="text-nowrap" translate="no">false</code> if the
   }
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
 </div>
-<h2 id="accessibility-concerns" class="bv-no-focus-ring"><span class="bd-content-title">Accessibility concerns<a class="anchorjs-link" href="#accessibility-concerns" aria-labelledby="accessibility-concerns"></a></span></h2>
-<p>Hover state should not be used to convey special meaning, as screen reader users and keyboard only
-users typically ac not typically trigger hover state on elements.</p>
+<h2 id="accessibility-concerns" class="bv-no-focus-ring"><span class="bd-content-title">无障碍问题<a class="anchorjs-link" href="#accessibility-concerns" aria-labelledby="accessibility-concerns"></a></span></h2>
+<p>悬停状态不应用于传达特殊含义，因为屏幕阅读器用户和仅键盘用户通常不会在元素上触发悬停状态。</p>
 </section>
 <section class="bd-content bd-component-reference">
-<h2 id="directive-reference" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title">Directive reference<a href="/docs/directives/hover#directive-reference" class="anchorjs-link" aria-labelledby="directive-reference" target="_self"></a></span></h2>
+<h2 id="directive-reference" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title">指令参考<a href="/docs/directives/hover#directive-reference" class="anchorjs-link" aria-labelledby="directive-reference" target="_self"></a></span></h2>
 
-<h3 id="importing-individual-directives" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title"> Importing individual directives <a href="/docs/directives/hover#importing-individual-directives" class="anchorjs-link" aria-labelledby="importing-individual-directives" target="_self"></a></span></h3>
-<p> You can import individual directives into your project via the following named
-        exports: </p>
+<h3 id="importing-individual-directives" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title"> 导入单个指令 <a href="/docs/directives/hover#importing-individual-directives" class="anchorjs-link" aria-labelledby="importing-individual-directives" target="_self"></a></span></h3>
+<p> 您可以通过以下命名的导出将单个指令导入到您的项目中： </p>
 <div class="table-responsive-sm">
 <table role="table" aria-busy="false" aria-colcount="3" class="table b-table bv-docs-table table-striped" id="__BVID__371">
 
@@ -357,14 +352,14 @@ users typically ac not typically trigger hover state on elements.</p>
 
 </table>
 </div>
-<p><strong>Example:</strong></p>
+<p><strong>列如:</strong></p>
 <pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { VBHover } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
 <span class="hljs-comment">// Note: Vue automatically prefixes the directive name with 'v-'</span>
 Vue.directive(<span class="hljs-string">'b-hover'</span>, VBHover)</pre>
 </article>
 <article class="bd-content">
-<h3 id="importing-as-a-plugin" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title"> Importing as a Vue.js plugin <a href="/docs/directives/hover#importing-as-a-plugin" class="anchorjs-link" aria-labelledby="importing-as-a-plugin" target="_self"></a></span></h3>
-<p> This plugin includes all of the above listed individual directives. </p>
+<h3 id="importing-as-a-plugin" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title"> 导入为Vue.js插件 <a href="/docs/directives/hover#importing-as-a-plugin" class="anchorjs-link" aria-labelledby="importing-as-a-plugin" target="_self"></a></span></h3>
+<p>该插件包括上面列出的所有单个指令。</p>
 <div class="table-responsive-sm">
 <table fileds="namedExport,importPath" role="table" aria-busy="false" aria-colcount="2" class="table b-table bv-docs-table table-striped b-table-caption-top" id="__BVID__381">
 
@@ -387,7 +382,7 @@ Vue.directive(<span class="hljs-string">'b-hover'</span>, VBHover)</pre>
 </table>
 </div>
 
-<p><strong>Example:</strong></p>
+<p><strong>列如:</strong></p>
 <pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { VBHoverPlugin } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
 Vue.use(VBHoverPlugin)</pre>
 </article>

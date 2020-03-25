@@ -36,7 +36,7 @@
   <div class="navbar-nav-scroll">
     <ul class="navbar-nav bd-navbar-nav flex-row">
       <li class="nav-item"><a class="nav-link " href="../">首页</a></li>
-      <li class="nav-item"><a class="nav-link active" href="../../v4/docs/">中文手册</a></li>
+      <li class="nav-item"><a class="nav-link active" href="../../docs/">中文手册</a></li>
       <li class="nav-item"><a class="nav-link " href="../../v4/examples/">实例</a></li>
       <li class="nav-item dropdown">
 <a class="nav-item nav-link dropdown-toggle mr-md-2" id="bd-versions" aria-expanded="false" aria-haspopup="true" href="#" data-toggle="dropdown"> 主题模板 </a>
@@ -190,27 +190,27 @@
 <div class="d-none d-xl-block col-xl-2 bd-toc">
 
 <ul class="section-nav">
-<li class="nav-item toc-entry mb-2"><a target="_self" href="#collapse" class="nav-link font-weight-bold"><span>Collapse</span></a></li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#usage" class="nav-link"><span>Usage</span></a> <!----></li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#initial-visibility-start-expanded" class="nav-link"><span>Initial visibility (start expanded)</span></a> <!----></li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#v-model-support" class="nav-link"><span>v-model support</span></a> <!----></li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#trigger-multiple-collapse-elements" class="nav-link"><span>Trigger multiple collapse elements</span></a> <!----></li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#accordion-support" class="nav-link"><span>Accordion support</span></a> <!----></li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#hiding-and-showing-content-in-the-toggle-button-based-on-collapse-state" class="nav-link"><span>Hiding and showing content in the toggle button based on collapse state</span></a> <!----></li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#global-root-instance-events" class="nav-link"><span>'Global' $root instance events</span></a>
+<li class="nav-item toc-entry mb-2"><a target="_self" href="#collapse" class="nav-link font-weight-bold"><span>折叠面板(Collapse)</span></a></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#usage" class="nav-link"><span>用法</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#initial-visibility-start-expanded" class="nav-link"><span>初始可见性（开始扩展）</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#v-model-support" class="nav-link"><span>v-model 支持</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#trigger-multiple-collapse-elements" class="nav-link"><span>触发多个折叠元素</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#accordion-support" class="nav-link"><span>手风琴支持</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#hiding-and-showing-content-in-the-toggle-button-based-on-collapse-state" class="nav-link"><span>根据折叠状态在切换按钮中隐藏和显示内容</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#global-root-instance-events" class="nav-link"><span>'Global' $root 实例事件</span></a>
 <ul class="nav flex-column">
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#listening-to-collapses-state-changes-via-root-events" class="nav-link"><span>Listening to collapses state changes via $root events</span></a></li>
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#toggling-collapses-via-root-events" class="nav-link"><span>Toggling collapses via $root events</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#listening-to-collapses-state-changes-via-root-events" class="nav-link"><span>通过 $root 事件监听折叠状态更改</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#toggling-collapses-via-root-events" class="nav-link"><span>通过 $root 事件切换折叠</span></a></li>
 </ul>
 </li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#optionally-scoped-default-slot" class="nav-link"><span>Optionally scoped default slot</span></a> <!----></li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#accessibility" class="nav-link"><span>Accessibility</span></a> <!----></li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#component-reference" class="nav-link"><span>Component reference</span></a>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#optionally-scoped-default-slot" class="nav-link"><span>可选范围的默认插槽</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#accessibility" class="nav-link"><span>辅助功能</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#component-reference" class="nav-link"><span>组件参考</span></a>
 <ul class="nav flex-column">
 <li class="nav-item toc-entry toc-h3"><a target="_self" href="#comp-ref-b-collapse" class="nav-link"><span>&lt;b-collapse&gt;</span></a></li>
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#importing-individual-components" class="nav-link"><span>Importing individual components</span></a></li>
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#importing-individual-directives" class="nav-link"><span>Importing individual directives</span></a></li>
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#importing-as-a-plugin" class="nav-link"><span>Importing as a Vue.js plugin</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#importing-individual-components" class="nav-link"><span>导入单个组件</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#importing-individual-directives" class="nav-link"><span>导入单个指令</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#importing-as-a-plugin" class="nav-link"><span>作为Vue.js插件导入</span></a></li>
 </ul>
 </li>
 </ul>
@@ -228,7 +228,7 @@
 </nav>
 <div class="clearfix d-block"></div>
   <h1 class="bd-title" id="content">折叠面板(Collapse)</h1>
-  <p class="bd-lead">Easily toggle visibility of almost any content on your pages. Includes support for making accordions.</p>
+  <p class="bd-lead">轻松切换页面上几乎所有内容的可见性。 包括对制作手风琴的支持。</p>
   <script type="text/javascript" src="../../../v4/assets/js/pupCMS.js"></script>
 
 
@@ -247,8 +247,8 @@
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>></span>
 
 <span class="hljs-comment">&lt;!-- b-collapse.vue --></span></pre>
-<h2 id="usage" class="bv-no-focus-ring"><span class="bd-content-title">Usage<a class="anchorjs-link" href="#usage" aria-labelledby="usage"></a></span></h2>
-<p>Other elements can easily toggle <code translate="no" class="notranslate text-nowrap">&lt;b-collapse></code> components using the <code translate="no" class="notranslate text-nowrap">v-b-toggle</code> directive.</p>
+<h2 id="usage" class="bv-no-focus-ring"><span class="bd-content-title">用法<a class="anchorjs-link" href="#usage" aria-labelledby="usage"></a></span></h2>
+<p>其他元素可以使用 <code translate="no" class="notranslate text-nowrap">v-b-toggle</code> 指令轻松切 <code translate="no" class="notranslate text-nowrap">&lt;b-collapse></code> 组件。</p>
 <pre class="hljs html text-monospace p-2 notranslate" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>></span>
   <span class="hljs-comment">&lt;!-- Using modifiers --></span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">v-b-toggle.collapse-2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"m-1"</span>></span>Toggle Collapse<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>></span>
@@ -263,8 +263,8 @@
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>></span>
 
 <span class="hljs-comment">&lt;!-- b-collapse-usage.vue --></span></pre>
-<h2 id="initial-visibility-start-expanded" class="bv-no-focus-ring"><span class="bd-content-title">Initial visibility (start expanded)<a class="anchorjs-link" href="#initial-visibility-start-expanded" aria-labelledby="initial-visibility-start-expanded"></a></span></h2>
-<p>To make the <code translate="no" class="notranslate text-nowrap">&lt;b-collapse></code> show initially, set the <code translate="no" class="notranslate text-nowrap">visible</code> prop:</p>
+<h2 id="initial-visibility-start-expanded" class="bv-no-focus-ring"><span class="bd-content-title">初始可见性（开始扩展）<a class="anchorjs-link" href="#initial-visibility-start-expanded" aria-labelledby="initial-visibility-start-expanded"></a></span></h2>
+<p>要使 <code translate="no" class="notranslate text-nowrap">&lt;b-collapse></code> 最初显示，请设置 <code translate="no" class="notranslate text-nowrap">visible</code> 属性：</p>
 <pre class="hljs html text-monospace p-2 notranslate" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>></span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">v-b-toggle.collapse-3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"m-1"</span>></span>Toggle Collapse<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>></span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-collapse</span> <span class="hljs-attr">visible</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"collapse-3"</span>></span>
@@ -273,13 +273,10 @@
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>></span>
 
 <span class="hljs-comment">&lt;!-- b-collapse-visible.vue --></span></pre>
-<p>By default, an initially visible collapse will not animate on mount. To enable the collapse
-expanding animation on mount (when <code translate="no" class="notranslate text-nowrap">visible</code> or <code translate="no" class="notranslate text-nowrap">v-model</code> is <code translate="no" class="notranslate text-nowrap">true</code>), set the <code translate="no" class="notranslate text-nowrap">appear</code> prop on <code translate="no" class="notranslate text-nowrap">&lt;b-collapse></code>.</p>
-<h2 id="v-model-support" class="bv-no-focus-ring"><span class="bd-content-title"><code translate="no" class="notranslate text-nowrap">v-model</code> support<a class="anchorjs-link" href="#v-model-support" aria-labelledby="v-model-support"></a></span></h2>
-<p>The component's collapsed (visible) state can also be set with <code translate="no" class="notranslate text-nowrap">v-model</code> which binds internally to
-the <code translate="no" class="notranslate text-nowrap">visible</code> prop.</p>
-<p>Note, when using <code translate="no" class="notranslate text-nowrap">v-model</code> to control <code translate="no" class="notranslate text-nowrap">&lt;b-collapse></code>, the <code translate="no" class="notranslate text-nowrap">aria-*</code> attributes and class <code translate="no" class="notranslate text-nowrap">collapsed</code> are not automatically placed on the trigger button (as is the case when using the <code translate="no" class="notranslate text-nowrap">v-b-toggle</code> directive). In this example we <strong>must control the attributes ourselves</strong> for proper accessibility
-support.</p>
+<p>默认情况下，初始可见的塌陷不会在安装时进行动画处理。要在挂载上启用折叠展开动画（<code translate="no" class="notranslate text-nowrap">visible</code> 或 <code translate="no" class="notranslate text-nowrap">v-model</code> 为 <code translate="no" class="notranslate text-nowrap">true</code> 时），请将 <code translate="no" class="notranslate text-nowrap">appear</code> 道具设置为 <code translate="no" class="notranslate text-nowrap">&lt;b-collapse></code> 。</p>
+<h2 id="v-model-support" class="bv-no-focus-ring"><span class="bd-content-title"><code translate="no" class="notranslate text-nowrap">v-model</code> 支持<a class="anchorjs-link" href="#v-model-support" aria-labelledby="v-model-support"></a></span></h2>
+<p>组件的折叠（可见）状态也可以使用 <code translate="no" class="notranslate text-nowrap">v-model</code> 设置，该 v-model 在内部绑定到 <code translate="no" class="notranslate text-nowrap">visible</code> 属性。</p>
+<p>请注意，使用 <code translate="no" class="notranslate text-nowrap">v-model</code> 控制 <code translate="no" class="notranslate text-nowrap">&lt;b-collapse></code> 时，不会自动将 <code translate="no" class="notranslate text-nowrap">aria-*</code> 属性和 <code translate="no" class="notranslate text-nowrap">collapsed</code> 类自动放置在触发按钮上（使用 <code translate="no" class="notranslate text-nowrap">v-b-toggle</code> 指令时就是这种情况）。在此示例中，我们 <strong>必须自己控制属性</strong> 以获得适当的可访问性支持。</p>
 <pre class="hljs html text-monospace p-2 notranslate" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>></span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>></span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span>
@@ -307,9 +304,8 @@ support.</p>
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>></span>
 
 <span class="hljs-comment">&lt;!-- b-collapse-v-model.vue --></span></pre>
-<h2 id="trigger-multiple-collapse-elements" class="bv-no-focus-ring"><span class="bd-content-title">Trigger multiple collapse elements<a class="anchorjs-link" href="#trigger-multiple-collapse-elements" aria-labelledby="trigger-multiple-collapse-elements"></a></span></h2>
-<p>You can even collapse multiple <code translate="no" class="notranslate text-nowrap">&lt;b-collapse></code> components via a single <code translate="no" class="notranslate text-nowrap">v-b-toggle</code> by providing
-multiple target IDs using modifiers:</p>
+<h2 id="trigger-multiple-collapse-elements" class="bv-no-focus-ring"><span class="bd-content-title">触发多个折叠元素<a class="anchorjs-link" href="#trigger-multiple-collapse-elements" aria-labelledby="trigger-multiple-collapse-elements"></a></span></h2>
+<p>您甚至可以通过使用修饰符提供多个目标ID，通过单个 <code translate="no" class="notranslate text-nowrap">v-b-toggle</code> 来折叠多个 <code translate="no" class="notranslate text-nowrap">&lt;b-collapse></code> 组件：</p>
 <pre class="hljs html text-monospace p-2 notranslate" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>></span>
   <span class="hljs-comment">&lt;!-- Single button triggers two "&lt;b-collapse>" components --></span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">v-b-toggle.collapse-a.collapse-b</span>></span>Toggle Both Collapse A and B<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>></span>
@@ -324,10 +320,8 @@ multiple target IDs using modifiers:</p>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>></span>
 
 <span class="hljs-comment">&lt;!-- b-collapse-trigger-multiple.vue --></span></pre>
-<h2 id="accordion-support" class="bv-no-focus-ring"><span class="bd-content-title">Accordion support<a class="anchorjs-link" href="#accordion-support" aria-labelledby="accordion-support"></a></span></h2>
-<p>Turn a group of <code translate="no" class="notranslate text-nowrap">&lt;b-collapse></code> components into an accordion by supplying an accordion group
-identifier via the <code translate="no" class="notranslate text-nowrap">accordion</code> prop. Note that only one collapse in an accordion group can be open
-at a time.</p>
+<h2 id="accordion-support" class="bv-no-focus-ring"><span class="bd-content-title">手风琴支持<a class="anchorjs-link" href="#accordion-support" aria-labelledby="accordion-support"></a></span></h2>
+<p>通过 <code translate="no" class="notranslate text-nowrap">accordion</code> 属性提供手风琴组标识符，将一组 <code translate="no" class="notranslate text-nowrap">&lt;b-collapse></code> 组件转变为手风琴。请注意，一次手风琴组中只有一个折叠可以打开。</p>
 <pre class="hljs html text-monospace p-2 notranslate" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>></span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"tablist"</span>></span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-card</span> <span class="hljs-attr">no-body</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-1"</span>></span>
@@ -386,20 +380,15 @@ at a time.</p>
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>></span>
 
 <span class="hljs-comment">&lt;!-- b-accordion.vue --></span></pre>
-<p><strong>Notes:</strong></p>
+<p><strong>注意：</strong></p>
 <ul>
-<li>When using accordion mode, make sure you place the trigger elements and <code translate="no" class="notranslate text-nowrap">&lt;b-collapse></code> components
-inside an element with <code translate="no" class="notranslate text-nowrap">role="tablist"</code> and set <code translate="no" class="notranslate text-nowrap">role="tab"</code> on each trigger element's container
-(each trigger element should be wrapped) in order to help screen reader users navigate the
-accordion group.</li>
-<li>If using the <code translate="no" class="notranslate text-nowrap">v-model</code> feature of <code translate="no" class="notranslate text-nowrap">&lt;b-collapse></code> in accordion mode, do not bind the <code translate="no" class="notranslate text-nowrap">v-model</code> or <code translate="no" class="notranslate text-nowrap">visible</code> prop of all the collapses in the accordion group to the same variable!</li>
-<li>Ensure, at most, only one <code translate="no" class="notranslate text-nowrap">&lt;b-collapse></code> in the accordion group has the <code translate="no" class="notranslate text-nowrap">visible</code> prop and/or <code translate="no" class="notranslate text-nowrap">v-model</code> set to <code translate="no" class="notranslate text-nowrap">true</code>. Only one collapse in an accordion group can be open at a time.</li>
+<li>使用手风琴模式时，请确保将触发元素和 <code translate="no" class="notranslate text-nowrap">&lt;b-collapse></code> 组件放置在具有 <code translate="no" class="notranslate text-nowrap">role="tablist"</code> 的元素内，并按顺序在每个触发元素的容器上设置 <code translate="no" class="notranslate text-nowrap">role="tab"</code> （每个触发元素都应包装） 帮助屏幕阅读器用户浏览手风琴组。</li>
+<li>如果在手风琴模式下使用 <code translate="no" class="notranslate text-nowrap">v-model</code> 的功能，请勿将手风琴组中所有折叠的 <code translate="no" class="notranslate text-nowrap">v-model</code> 或 <code translate="no" class="notranslate text-nowrap">visible</code> 属性绑定到同一变量！</li>
+<li>确保在手风琴组中最多只有一个 <code translate="no" class="notranslate text-nowrap">&lt;b-collapse></code> 将 <code translate="no" class="notranslate text-nowrap">visible</code> 属性和/或 <code translate="no" class="notranslate text-nowrap">v-model</code> 设置为 <code translate="no" class="notranslate text-nowrap">true</code>。一次只能打开手风琴组中的一个折叠。</li>
 </ul>
-<h2 id="hiding-and-showing-content-in-the-toggle-button-based-on-collapse-state" class="bv-no-focus-ring"><span class="bd-content-title">Hiding and showing content in the toggle button based on collapse state<a class="anchorjs-link" href="#hiding-and-showing-content-in-the-toggle-button-based-on-collapse-state" aria-labelledby="hiding-and-showing-content-in-the-toggle-button-based-on-collapse-state"></a></span></h2>
-<p>When using the <code translate="no" class="notranslate text-nowrap">v-b-toggle</code> directive, the class <code translate="no" class="notranslate text-nowrap">collapsed</code> will automatically be placed on the
-trigger element when the collapse is closed, and removed when open. You can use this class to
-display or hide content within the toggle via custom CSS:</p>
-<p><strong>Example HTML markup:</strong></p>
+<h2 id="hiding-and-showing-content-in-the-toggle-button-based-on-collapse-state" class="bv-no-focus-ring"><span class="bd-content-title">根据折叠状态在切换按钮中隐藏和显示内容<a class="anchorjs-link" href="#hiding-and-showing-content-in-the-toggle-button-based-on-collapse-state" aria-labelledby="hiding-and-showing-content-in-the-toggle-button-based-on-collapse-state"></a></span></h2>
+<p>当使用 <code translate="no" class="notranslate text-nowrap">v-b-toggle</code> 指令时，<code translate="no" class="notranslate text-nowrap">collapsed</code> 类将在折叠关闭时自动放置在触发元素上，并在打开时自动删除。 您可以使用此类通过自定义CSS在切换中显示或隐藏内容：</p>
+<p><strong>HTML标记示例：</strong></p>
 <pre class="hljs html text-monospace p-2 notranslate" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>></span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">v-b-toggle.my-collapse</span>></span>
     <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"when-opened"</span>></span>Close<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>></span> <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"when-closed"</span>></span>Open<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>></span> My Collapse
@@ -408,16 +397,15 @@ display or hide content within the toggle via custom CSS:</p>
     <span class="hljs-comment">&lt;!-- Content here --></span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-collapse</span>></span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>></span></pre>
-<p><strong>Example Custom CSS:</strong></p>
+<p><strong>自定义CSS示例：</strong></p>
 <pre class="hljs css text-monospace p-2 notranslate" translate="no"><span class="hljs-selector-class">.collapsed</span> > <span class="hljs-selector-class">.when-opened</span>,
 <span class="hljs-selector-pseudo">:not(.collapsed)</span> > <span class="hljs-selector-class">.when-closed</span> {
   <span class="hljs-attribute">display</span>: none;
 }</pre>
-<h2 id="global-root-instance-events" class="bv-no-focus-ring"><span class="bd-content-title">'Global' $root instance events<a class="anchorjs-link" href="#global-root-instance-events" aria-labelledby="global-root-instance-events"></a></span></h2>
-<p>Using <code translate="no" class="notranslate text-nowrap">$root</code> instance it is possible to emit and listen events somewhere out of a component, where <code translate="no" class="notranslate text-nowrap">&lt;b-collapse></code> is used. In short, <code translate="no" class="notranslate text-nowrap">$root</code> behaves like a global event emitters and listener. Details
-about <code translate="no" class="notranslate text-nowrap">$root</code> instance can be found in <a href="https://vuejs.org/v2/guide/components-edge-cases.html#Accessing-the-Root-Instance" target="_blank" rel="noopener">the official Vue docs</a>.</p>
-<h3 id="listening-to-collapses-state-changes-via-root-events" class="bv-no-focus-ring"><span class="bd-content-title">Listening to collapses state changes via $root events<a class="anchorjs-link" href="#listening-to-collapses-state-changes-via-root-events" aria-labelledby="listening-to-collapses-state-changes-via-root-events"></a></span></h3>
-<p>To listen to any collapse state changes, use:</p>
+<h2 id="global-root-instance-events" class="bv-no-focus-ring"><span class="bd-content-title">'Global' $root 实例事件<a class="anchorjs-link" href="#global-root-instance-events" aria-labelledby="global-root-instance-events"></a></span></h2>
+<p>使用 <code translate="no" class="notranslate text-nowrap">$root</code> 实例可以在使用 <code translate="no" class="notranslate text-nowrap">&lt;b-collapse></code> 的组件之外的某个地方发出和监听事件。 简而言之，<code translate="no" class="notranslate text-nowrap">$root</code> 的行为类似于全局事件的发射器和侦听器。 有关 <code translate="no" class="notranslate text-nowrap">$root</code> 实例的详细信息可以在 <a href="https://vuejs.org/v2/guide/components-edge-cases.html#Accessing-the-Root-Instance" target="_blank" rel="noopener">Vue官方文档</a> 中找到。</p>
+<h3 id="listening-to-collapses-state-changes-via-root-events" class="bv-no-focus-ring"><span class="bd-content-title">通过 $root 事件监听折叠状态更改<a class="anchorjs-link" href="#listening-to-collapses-state-changes-via-root-events" aria-labelledby="listening-to-collapses-state-changes-via-root-events"></a></span></h3>
+<p>要监听任何折叠状态更改，请使用：</p>
 <pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
   mounted() {
     <span class="hljs-keyword">this</span>.$root.$on(<span class="hljs-string">'bv::collapse::state'</span>, (collapseId, isJustShown) => {
@@ -426,55 +414,44 @@ about <code translate="no" class="notranslate text-nowrap">$root</code> instance
     })
   }
 }</pre>
-<p>where <code translate="no" class="notranslate text-nowrap">collapseId</code> is collapse id which changed its state; <code translate="no" class="notranslate text-nowrap">isJustShown</code> is true/false, i.e.
-shown/hidden collapse.</p>
-<h3 id="toggling-collapses-via-root-events" class="bv-no-focus-ring"><span class="bd-content-title">Toggling collapses via $root events<a class="anchorjs-link" href="#toggling-collapses-via-root-events" aria-labelledby="toggling-collapses-via-root-events"></a></span></h3>
-<p>To toggle (open/close) a <strong>specific collapse</strong>, pass the collapse <code translate="no" class="notranslate text-nowrap">id</code>:</p>
+<p>其中 <code translate="no" class="notranslate text-nowrap">collapseId</code> 是折叠ID，它更改了状态；<code translate="no" class="notranslate text-nowrap">isJustShown</code> 为 true / false，即显示/隐藏的折叠。</p>
+<h3 id="toggling-collapses-via-root-events" class="bv-no-focus-ring"><span class="bd-content-title">通过 $root 事件切换折叠<a class="anchorjs-link" href="#toggling-collapses-via-root-events" aria-labelledby="toggling-collapses-via-root-events"></a></span></h3>
+<p>要切换（打开/关闭）<strong>特定的折叠</strong>，请传递折叠 <code translate="no" class="notranslate text-nowrap">id</code>： </p>
 <pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-keyword">this</span>.$root.$emit(<span class="hljs-string">'bv::toggle::collapse'</span>, <span class="hljs-string">'my-collapse-id'</span>)</pre>
-<h2 id="optionally-scoped-default-slot" class="bv-no-focus-ring"><span class="bd-content-title">Optionally scoped default slot<a class="anchorjs-link" href="#optionally-scoped-default-slot" aria-labelledby="optionally-scoped-default-slot"></a></span></h2>
+<h2 id="optionally-scoped-default-slot" class="bv-no-focus-ring"><span class="bd-content-title">可选范围的默认插槽<a class="anchorjs-link" href="#optionally-scoped-default-slot" aria-labelledby="optionally-scoped-default-slot"></a></span></h2>
 <p><span class="badge badge-info small">New in v2.2.0</span></p>
-<p>The default slot can be optionally scoped. The following scope properties are available:</p>
+<p>默认插槽可以选择范围。 以下作用域属性可用：</p>
 <div class="table-responsive-sm">
 <table class="b-table table table-bordered table-striped bv-docs-table">
 <thead class="thead-default">
 <tr>
-<th>Property</th>
-<th>Type</th>
-<th>Description</th>
+<th>属性</th>
+<th>类型</th>
+<th>描述</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code translate="no" class="notranslate text-nowrap">visible</code></td>
 <td>Boolean</td>
-<td>Visible state of the collapse</td>
+<td>可见的折叠状态</td>
 </tr>
 <tr>
 <td><code translate="no" class="notranslate text-nowrap">close</code></td>
 <td>Function</td>
-<td>When called, will close the collapse</td>
+<td>当被调用时，将关闭折叠</td>
 </tr>
 </tbody>
 </table>
 </div>
-<h2 id="accessibility" class="bv-no-focus-ring"><span class="bd-content-title">Accessibility<a class="anchorjs-link" href="#accessibility" aria-labelledby="accessibility"></a></span></h2>
-<p>The <code translate="no" class="notranslate text-nowrap">v-b-toggle</code> directive will automatically add the ARIA attributes <code translate="no" class="notranslate text-nowrap">aria-controls</code> and <code translate="no" class="notranslate text-nowrap">aria-expanded</code> to the component that the directive appears on (as well as add the class <code translate="no" class="notranslate text-nowrap">collapsed</code> when not expanded). <code translate="no" class="notranslate text-nowrap">aria-expanded</code> will reflect the state of the target <code translate="no" class="notranslate text-nowrap">&lt;b-collapse></code> component,
-while <code translate="no" class="notranslate text-nowrap">aria-controls</code> will be set to the ID(s) of the target <code translate="no" class="notranslate text-nowrap">&lt;b-collapse></code> component(s).</p>
-<p>If using <code translate="no" class="notranslate text-nowrap">v-model</code> to set the visible state instead of the directive <code translate="no" class="notranslate text-nowrap">v-b-toggle</code>, you will be
-required to, on the toggle element, add the <code translate="no" class="notranslate text-nowrap">aria-controls</code> and other appropriate attributes and
-classes yourself.</p>
-<p>While the <code translate="no" class="notranslate text-nowrap">v-b-toggle</code> directive can be placed on almost any HTML element or Vue component, it is
-recommended to use a button or link (or similar component) to act as your toggler. Otherwise your
-trigger elements may be inaccessible to keyboard or screen reader users. If you do place them on
-something other than a button or link (or similar component), you should add the attributes <code translate="no" class="notranslate text-nowrap">tabindex="0"</code> and <code translate="no" class="notranslate text-nowrap">role="button"</code> to allow users of assistive technology to reach your trigger
-element.</p>
-<p>When using accordion mode, make sure you place the trigger elements and <code translate="no" class="notranslate text-nowrap">&lt;b-collapse></code> components
-inside an element with <code translate="no" class="notranslate text-nowrap">role="tablist"</code> and set <code translate="no" class="notranslate text-nowrap">role="tab"</code> on each trigger element's container in
-order to help screen reader users navigate the accordion group. Unfortunately, BootstrapVue cannot
-apply those roles for you automatically, as it depends on your final document markup.</p>
+<h2 id="accessibility" class="bv-no-focus-ring"><span class="bd-content-title">辅助功能<a class="anchorjs-link" href="#accessibility" aria-labelledby="accessibility"></a></span></h2>
+<p><code translate="no" class="notranslate text-nowrap">v-b-toggle</code> 指令将自动将ARIA属性 <code translate="no" class="notranslate text-nowrap">aria-controls</code> 和 <code translate="no" class="notranslate text-nowrap">aria-expanded</code> 添加到该指令出现的组件上（以及添加未扩展时 <code translate="no" class="notranslate text-nowrap">collapsed</code> 类）。<code translate="no" class="notranslate text-nowrap">aria-expanded</code> 将反映目标 <code translate="no" class="notranslate text-nowrap">&lt;b-collapse></code> 组件的状态，而 <code translate="no" class="notranslate text-nowrap">aria-controls</code> 将设置为目标 <code translate="no" class="notranslate text-nowrap">&lt;b-collapse></code> 组件的ID。</p>
+<p>如果使用 <code translate="no" class="notranslate text-nowrap">v-model</code> 而不是指令 <code translate="no" class="notranslate text-nowrap">v-b-toggle</code> 来设置可见状态，则需要在 toggle 元素上自己添加 <code translate="no" class="notranslate text-nowrap">aria-controls</code> 和其他适当的属性和类。</p>
+<p>尽管 <code translate="no" class="notranslate text-nowrap">v-b-toggle</code> 指令几乎可以放置在任何HTML元素或Vue组件上，但建议使用按钮或链接（或类似组件）作为切换器。 否则，键盘或屏幕阅读器用户可能无法访问触发器元素。 如果确实将它们放置在按钮或链接（或类似组件）以外的其他物体上，则应添加属性 <code translate="no" class="notranslate text-nowrap">tabindex="0"</code> 和 <code translate="no" class="notranslate text-nowrap">role="button"</code> 以允许辅助技术的用户使用触发元素。</p>
+<p>使用手风琴模式时，请确保将触发元素和 <code translate="no" class="notranslate text-nowrap">&lt;b-collapse></code> 组件放置在具有 <code translate="no" class="notranslate text-nowrap">role="tablist"</code> 的元素内，并在每个触发元素的容器上设置 <code translate="no" class="notranslate text-nowrap">role="tab"</code> ，以帮助屏幕阅读器用户浏览手风琴组。不幸的是，BootstrapVue无法自动为您应用这些角色，因为这取决于您的最终文档标记。</p>
 <!-- Component reference added automatically from component package.json -->
 
-<h2 id="component-reference" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title">Component reference<a href="../../../bootstrap-vue/docs/components/collapse#component-reference" aria-labelledby="component-reference" target="_self" class="anchorjs-link"></a></span></h2>
+<h2 id="component-reference" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title">组件参考<a href="../../../bootstrap-vue/docs/components/collapse#component-reference" aria-labelledby="component-reference" target="_self" class="anchorjs-link"></a></span></h2>
 <header class="row align-items-center" data-v-866a22e8 data-v-866a22e8>
 <div class="col-sm-9" data-v-866a22e8 data-v-866a22e8>
 <h3 id="comp-ref-b-collapse" tabindex="-1" class="bv-no-focus-ring" data-v-866a22e8 data-v-866a22e8>
@@ -482,28 +459,28 @@ apply those roles for you automatically, as it depends on your final document ma
 </h3>
 </div>
 <div class="text-sm-right col-sm-3" data-v-866a22e8 data-v-866a22e8>
-<a rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev/src/components/collapse/collapse.js" class="btn btn-outline-secondary btn-sm" data-v-866a22e8> View source </a>
+<a rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev/src/components/collapse/collapse.js" class="btn btn-outline-secondary btn-sm" data-v-866a22e8> 查看源代码 </a>
 </div>
 </header>
 <ul class="component-ref-mini-toc my-3" data-v-866a22e8>
-<li data-v-866a22e8><a href="#comp-ref-b-collapse-props" data-v-866a22e8><code translate="translate" class="notranslate" data-v-866a22e8>&lt;b-collapse></code> Properties </a></li>
+<li data-v-866a22e8><a href="#comp-ref-b-collapse-props" data-v-866a22e8><code translate="translate" class="notranslate" data-v-866a22e8>&lt;b-collapse></code> 属性 </a></li>
 <li data-v-866a22e8><a href="#comp-ref-b-collapse-v-model" data-v-866a22e8><code translate="translate" class="notranslate" data-v-866a22e8>&lt;b-collapse></code> v-model </a></li>
-<li data-v-866a22e8><a href="#comp-ref-b-collapse-slots" data-v-866a22e8><code translate="translate" class="notranslate" data-v-866a22e8>&lt;b-collapse></code> Slots </a></li>
-<li data-v-866a22e8><a href="#comp-ref-b-collapse-events" data-v-866a22e8><code translate="translate" class="notranslate" data-v-866a22e8>&lt;b-collapse></code> Events </a></li>
-<li data-v-866a22e8><a href="#comp-ref-b-collapse-rootEventListeners" data-v-866a22e8><code translate="translate" class="notranslate" data-v-866a22e8>&lt;b-collapse></code> <code translate="translate" class="notranslate" data-v-866a22e8>$root</code> Event Listeners </a></li>
+<li data-v-866a22e8><a href="#comp-ref-b-collapse-slots" data-v-866a22e8><code translate="translate" class="notranslate" data-v-866a22e8>&lt;b-collapse></code> 插槽 </a></li>
+<li data-v-866a22e8><a href="#comp-ref-b-collapse-events" data-v-866a22e8><code translate="translate" class="notranslate" data-v-866a22e8>&lt;b-collapse></code> 事件 </a></li>
+<li data-v-866a22e8><a href="#comp-ref-b-collapse-rootEventListeners" data-v-866a22e8><code translate="translate" class="notranslate" data-v-866a22e8>&lt;b-collapse></code> <code translate="translate" class="notranslate" data-v-866a22e8>$root</code> 事件监听器 </a></li>
 </ul>
 <article class="bd-content" data-v-866a22e8>
 <h4 id="comp-ref-b-collapse-props" tabindex="-1" class="bv-no-focus-ring mb-3" data-v-866a22e8 data-v-866a22e8>
-<span class="bd-content-title" data-v-866a22e8 data-v-866a22e8> Properties <a href="../../../bootstrap-vue/docs/components/collapse#comp-ref-b-collapse-props" aria-labelledby="comp-ref-b-collapse-props" target="_self" class="anchorjs-link" data-v-866a22e8></a></span>
+<span class="bd-content-title" data-v-866a22e8 data-v-866a22e8> 属性 <a href="../../../bootstrap-vue/docs/components/collapse#comp-ref-b-collapse-props" aria-labelledby="comp-ref-b-collapse-props" target="_self" class="anchorjs-link" data-v-866a22e8></a></span>
 </h4>
 <div class="table-responsive-sm" data-v-866a22e8>
 <table role="table" aria-busy="false" aria-colcount="4" class="table b-table bv-docs-table table-striped">
 <thead role="rowgroup">
 <tr role="row">
-<th role="columnheader" scope="col" aria-colindex="1">Property</th>
-<th role="columnheader" scope="col" aria-colindex="2">Type</th>
-<th role="columnheader" scope="col" aria-colindex="3">Default</th>
-<th role="columnheader" scope="col" aria-colindex="4">Description</th>
+<th role="columnheader" scope="col" aria-colindex="1">属性</th>
+<th role="columnheader" scope="col" aria-colindex="2">类型</th>
+<th role="columnheader" scope="col" aria-colindex="3">默认值</th>
+<th role="columnheader" scope="col" aria-colindex="4">描述</th>
 </tr>
 </thead>
 <tbody role="rowgroup">
@@ -511,37 +488,37 @@ apply those roles for you automatically, as it depends on your final document ma
 <td aria-colindex="1" role="cell"><code translate="translate" class="text-nowrap notranslate" data-v-866a22e8>id</code></td>
 <td aria-colindex="2" role="cell">String</td>
 <td aria-colindex="3" role="cell"></td>
-<td aria-colindex="4" role="cell">Used to set the 'id' attribute on the rendered content, and used as the base to generate any additional element IDs as needed</td>
+<td aria-colindex="4" role="cell">用于在呈现的内容上设置“ id”属性，并用作根据需要生成任何其他元素ID的基础</td>
 </tr>
 <tr role="row" data-pk="is-nav">
 <td aria-colindex="1" role="cell"><code translate="translate" class="text-nowrap notranslate" data-v-866a22e8>is-nav</code></td>
 <td aria-colindex="2" role="cell">Boolean</td>
 <td aria-colindex="3" role="cell"><code translate="translate" class="word-wrap-normal notranslate" data-v-866a22e8>false</code></td>
-<td aria-colindex="4" role="cell">When set, signifies that the collapse is bart of a navbar, enabling certain features for navbar support</td>
+<td aria-colindex="4" role="cell">设置时，表示折叠是导航栏的顶部，启用某些功能以支持导航栏</td>
 </tr>
 <tr role="row" data-pk="accordion">
 <td aria-colindex="1" role="cell"><code translate="translate" class="text-nowrap notranslate" data-v-866a22e8>accordion</code></td>
 <td aria-colindex="2" role="cell">String</td>
 <td aria-colindex="3" role="cell"></td>
-<td aria-colindex="4" role="cell">The name of the accordion group that this collapse belongs to</td>
+<td aria-colindex="4" role="cell">该折叠所属的手风琴组的名称</td>
 </tr>
 <tr role="row" data-pk="visible">
 <td aria-colindex="1" role="cell"><code translate="translate" class="text-nowrap notranslate" data-v-866a22e8>visible</code> <span class="badge badge-primary" data-v-866a22e8>v-model</span></td>
 <td aria-colindex="2" role="cell">Boolean</td>
 <td aria-colindex="3" role="cell"><code translate="translate" class="word-wrap-normal notranslate" data-v-866a22e8>false</code></td>
-<td aria-colindex="4" role="cell">When 'true', expands the collapse</td>
+<td aria-colindex="4" role="cell">当为“ true”时，扩展折叠</td>
 </tr>
 <tr role="row" data-pk="tag">
 <td aria-colindex="1" role="cell"><code translate="translate" class="text-nowrap notranslate" data-v-866a22e8>tag</code></td>
 <td aria-colindex="2" role="cell">String</td>
 <td aria-colindex="3" role="cell"><code translate="translate" class="word-wrap-normal notranslate" data-v-866a22e8>'div'</code></td>
-<td aria-colindex="4" role="cell">Specify the HTML tag to render instead of the default tag</td>
+<td aria-colindex="4" role="cell">指定要呈现的HTML标签，而不是默认标签</td>
 </tr>
 <tr role="row" data-pk="appear">
 <td aria-colindex="1" role="cell"><code translate="translate" class="text-nowrap notranslate" data-v-866a22e8>appear</code> <span class="badge badge-secondary" data-v-866a22e8>v2.2.0+</span></td>
 <td aria-colindex="2" role="cell">Boolean</td>
 <td aria-colindex="3" role="cell"><code translate="translate" class="word-wrap-normal notranslate" data-v-866a22e8>false</code></td>
-<td aria-colindex="4" role="cell">When set, and prop 'visible' is true on mount, will animate on initial mount</td>
+<td aria-colindex="4" role="cell">设置后，'visible' 属性在挂载时为 true ，将在初始挂载时设置动画</td>
 </tr>
 </tbody>
 </table>
@@ -555,8 +532,8 @@ apply those roles for you automatically, as it depends on your final document ma
 <table role="table" aria-busy="false" aria-colcount="2" class="table b-table bv-docs-table table-striped">
 <thead role="rowgroup">
 <tr role="row">
-<th role="columnheader" scope="col" aria-colindex="1">Property</th>
-<th role="columnheader" scope="col" aria-colindex="2">Event</th>
+<th role="columnheader" scope="col" aria-colindex="1">属性</th>
+<th role="columnheader" scope="col" aria-colindex="2">事件</th>
 </tr>
 </thead>
 <tbody role="rowgroup">
@@ -570,15 +547,15 @@ apply those roles for you automatically, as it depends on your final document ma
 </article>
 <article class="bd-content" data-v-866a22e8>
 <h4 id="comp-ref-b-collapse-slots" tabindex="-1" class="bv-no-focus-ring mb-3" data-v-866a22e8 data-v-866a22e8>
-<span class="bd-content-title" data-v-866a22e8 data-v-866a22e8> Slots <a href="../../../bootstrap-vue/docs/components/collapse#comp-ref-b-collapse-slots" aria-labelledby="comp-ref-b-collapse-slots" target="_self" class="anchorjs-link" data-v-866a22e8></a></span>
+<span class="bd-content-title" data-v-866a22e8 data-v-866a22e8> 插槽 <a href="../../../bootstrap-vue/docs/components/collapse#comp-ref-b-collapse-slots" aria-labelledby="comp-ref-b-collapse-slots" target="_self" class="anchorjs-link" data-v-866a22e8></a></span>
 </h4>
 <div class="table-responsive-sm" data-v-866a22e8>
 <table role="table" aria-busy="false" aria-colcount="3" class="table b-table bv-docs-table table-striped">
 <thead role="rowgroup">
 <tr role="row">
-<th role="columnheader" scope="col" aria-colindex="1">Slot Name</th>
-<th role="columnheader" scope="col" aria-colindex="2">Description</th>
-<th role="columnheader" scope="col" aria-colindex="3">Scoped</th>
+<th role="columnheader" scope="col" aria-colindex="1">插槽名称</th>
+<th role="columnheader" scope="col" aria-colindex="2">描述</th>
+<th role="columnheader" scope="col" aria-colindex="3">范围</th>
 </tr>
 </thead>
 <tbody role="rowgroup">
@@ -599,46 +576,46 @@ apply those roles for you automatically, as it depends on your final document ma
 <table role="table" aria-busy="false" aria-colcount="3" class="table b-table bv-docs-table table-striped">
 <thead role="rowgroup">
 <tr role="row">
-<th role="columnheader" scope="col" aria-colindex="1">Event</th>
-<th role="columnheader" scope="col" aria-colindex="2">Arguments</th>
-<th role="columnheader" scope="col" aria-colindex="3">Description</th>
+<th role="columnheader" scope="col" aria-colindex="1">事件</th>
+<th role="columnheader" scope="col" aria-colindex="2">参数</th>
+<th role="columnheader" scope="col" aria-colindex="3">描述</th>
 </tr>
 </thead>
 <tbody role="rowgroup">
 <tr role="row" data-pk="input">
 <td aria-colindex="1" role="cell"><code translate="translate" class="notranslate" data-v-866a22e8>input</code></td>
 <td aria-colindex="2" role="cell"><ol class="list-unstyled mb-0" data-v-866a22e8>
-<li data-v-866a22e8><code translate="translate" class="notranslate" data-v-866a22e8>visible</code> - <span data-v-866a22e8>Will be true if the collapse is visible</span></li>
+<li data-v-866a22e8><code translate="translate" class="notranslate" data-v-866a22e8>visible</code> - <span data-v-866a22e8>如果折叠可见，则为 true</span></li>
 </ol></td>
-<td aria-colindex="3" role="cell">Used to update the v-model</td>
+<td aria-colindex="3" role="cell">用于更新 v-model</td>
 </tr>
 <tr role="row" data-pk="show">
 <td aria-colindex="1" role="cell"><code translate="translate" class="notranslate" data-v-866a22e8>show</code></td>
 <td aria-colindex="2" role="cell"></td>
-<td aria-colindex="3" role="cell">Emitted when collapse has started to open</td>
+<td aria-colindex="3" role="cell">折叠开始打开时发出</td>
 </tr>
 <tr role="row" data-pk="shown">
 <td aria-colindex="1" role="cell"><code translate="translate" class="notranslate" data-v-866a22e8>shown</code></td>
 <td aria-colindex="2" role="cell"></td>
-<td aria-colindex="3" role="cell">Emitted when collapse has finished opening</td>
+<td aria-colindex="3" role="cell">折叠完成打开时发出</td>
 </tr>
 <tr role="row" data-pk="hide">
 <td aria-colindex="1" role="cell"><code translate="translate" class="notranslate" data-v-866a22e8>hide</code></td>
 <td aria-colindex="2" role="cell"></td>
-<td aria-colindex="3" role="cell">Emitted when collapse has started to close</td>
+<td aria-colindex="3" role="cell">折叠开始关闭时发出</td>
 </tr>
 <tr role="row" data-pk="hidden">
 <td aria-colindex="1" role="cell"><code translate="translate" class="notranslate" data-v-866a22e8>hidden</code></td>
 <td aria-colindex="2" role="cell"></td>
-<td aria-colindex="3" role="cell">Emitted when collapse has finished closing</td>
+<td aria-colindex="3" role="cell">折叠完成关闭时发出</td>
 </tr>
 <tr role="row" data-pk="bv::collapse::state">
 <td aria-colindex="1" role="cell"><code translate="translate" class="notranslate" data-v-866a22e8>bv::collapse::state</code></td>
 <td aria-colindex="2" role="cell"><ol class="list-unstyled mb-0" data-v-866a22e8>
-<li data-v-866a22e8><code translate="translate" class="notranslate" data-v-866a22e8>id</code> - <span data-v-866a22e8>changed state collapse id</span></li>
-<li data-v-866a22e8><code translate="translate" class="notranslate" data-v-866a22e8>state</code> - <span data-v-866a22e8>true or false, i.e. opened or closed</span></li>
+<li data-v-866a22e8><code translate="translate" class="notranslate" data-v-866a22e8>id</code> - <span data-v-866a22e8>更改状态折叠ID</span></li>
+<li data-v-866a22e8><code translate="translate" class="notranslate" data-v-866a22e8>state</code> - <span data-v-866a22e8>true 或 false，即打开或关闭</span></li>
 </ol></td>
-<td aria-colindex="3" role="cell">Emitted on $root when collapse has changed its state</td>
+<td aria-colindex="3" role="cell">折叠更改其状态时在 $root 上发出</td>
 </tr>
 </tbody>
 </table>
@@ -646,40 +623,38 @@ apply those roles for you automatically, as it depends on your final document ma
 </article>
 <article class="bd-content" data-v-866a22e8>
 <h4 id="comp-ref-b-collapse-rootEventListeners" tabindex="-1" class="bv-no-focus-ring mb-3" data-v-866a22e8 data-v-866a22e8>
-<span class="bd-content-title" data-v-866a22e8 data-v-866a22e8><code translate="translate" class="notranslate" data-v-866a22e8>$root</code> Event Listeners <a href="../../../bootstrap-vue/docs/components/collapse#comp-ref-b-collapse-rootEventListeners" aria-labelledby="comp-ref-b-collapse-rootEventListeners" target="_self" class="anchorjs-link" data-v-866a22e8></a></span>
+<span class="bd-content-title" data-v-866a22e8 data-v-866a22e8><code translate="translate" class="notranslate" data-v-866a22e8>$root</code> 事件监听器 <a href="../../../bootstrap-vue/docs/components/collapse#comp-ref-b-collapse-rootEventListeners" aria-labelledby="comp-ref-b-collapse-rootEventListeners" target="_self" class="anchorjs-link" data-v-866a22e8></a></span>
 </h4>
-<p data-v-866a22e8> You can control <code translate="translate" class="notranslate" data-v-866a22e8>&lt;b-collapse></code> by emitting the
-      following events on <samp translate="translate" class="notranslate" data-v-866a22e8>$root</samp>: </p>
+<p data-v-866a22e8> 您可以通过在 <samp translate="translate" class="notranslate" data-v-866a22e8>$root</samp> 上发出以下事件来控制 <code translate="translate" class="notranslate" data-v-866a22e8>&lt;b-collapse></code> ：</p>
 <div class="table-responsive-sm" data-v-866a22e8>
 <table role="table" aria-busy="false" aria-colcount="3" class="table b-table bv-docs-table table-striped">
 <thead role="rowgroup">
 <tr role="row">
-<th role="columnheader" scope="col" aria-colindex="1">Event</th>
-<th role="columnheader" scope="col" aria-colindex="2">Arguments</th>
-<th role="columnheader" scope="col" aria-colindex="3">Description</th>
+<th role="columnheader" scope="col" aria-colindex="1">事件</th>
+<th role="columnheader" scope="col" aria-colindex="2">参数</th>
+<th role="columnheader" scope="col" aria-colindex="3">描述</th>
 </tr>
 </thead>
 <tbody role="rowgroup">
 <tr role="row" data-pk="bv::toggle::collapse">
 <td aria-colindex="1" role="cell"><code translate="translate" class="text-nowrap notranslate" data-v-866a22e8>bv::toggle::collapse</code></td>
-<td aria-colindex="2" role="cell"><p class="mb-1" data-v-866a22e8><code translate="translate" class="text-nowrap notranslate" data-v-866a22e8>id</code> <span data-v-866a22e8> - collapse id to toggle</span></p></td>
-<td aria-colindex="3" role="cell">Toggles visible state of collapse with specified id when this event is emitted on $root</td>
+<td aria-colindex="2" role="cell"><p class="mb-1" data-v-866a22e8><code translate="translate" class="text-nowrap notranslate" data-v-866a22e8>id</code> <span data-v-866a22e8> - 折叠ID进行切换</span></p></td>
+<td aria-colindex="3" role="cell">在$root上发出此事件时，以指定的ID切换可见的折叠状态</td>
 </tr>
 </tbody>
 </table>
 </div>
 </article>
 <article class="bd-content">
-<h3 id="importing-individual-components" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title"> Importing individual components <a href="../../../bootstrap-vue/docs/components/collapse#importing-individual-components" aria-labelledby="importing-individual-components" target="_self" class="anchorjs-link"></a></span></h3>
-<p> You can import individual components into your project via the following named
-        exports: </p>
+<h3 id="importing-individual-components" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title"> 导入单个组件 <a href="../../../bootstrap-vue/docs/components/collapse#importing-individual-components" aria-labelledby="importing-individual-components" target="_self" class="anchorjs-link"></a></span></h3>
+<p> 您可以通过以下指定的导出将各个组件导入到您的项目中：</p>
 <div class="table-responsive-sm">
 <table role="table" aria-busy="false" aria-colcount="3" class="table b-table bv-docs-table table-striped">
 <thead role="rowgroup" class="thead-default">
 <tr role="row">
-<th role="columnheader" scope="col" aria-colindex="1">Component</th>
-<th role="columnheader" scope="col" aria-colindex="2">Named Export</th>
-<th role="columnheader" scope="col" aria-colindex="3">Import Path</th>
+<th role="columnheader" scope="col" aria-colindex="1">组件</th>
+<th role="columnheader" scope="col" aria-colindex="2">命名输出</th>
+<th role="columnheader" scope="col" aria-colindex="3">导入路径</th>
 </tr>
 </thead>
 <tbody role="rowgroup">
@@ -691,21 +666,20 @@ apply those roles for you automatically, as it depends on your final document ma
 </tbody>
 </table>
 </div>
-<p><strong>Example:</strong></p>
+<p><strong>示例：</strong></p>
 <pre translate="translate" class="hljs language-js text-monospace p-2 notranslate">import { BCollapse } from 'bootstrap-vue'
 Vue.component('b-collapse', BCollapse)</pre>
 </article>
 <article class="bd-content">
-<h3 id="importing-individual-directives" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title"> Importing individual directives <a href="../../../bootstrap-vue/docs/components/collapse#importing-individual-directives" aria-labelledby="importing-individual-directives" target="_self" class="anchorjs-link"></a></span></h3>
-<p> You can import individual directives into your project via the following named
-        exports: </p>
+<h3 id="importing-individual-directives" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title"> 导入单个指令 <a href="../../../bootstrap-vue/docs/components/collapse#importing-individual-directives" aria-labelledby="importing-individual-directives" target="_self" class="anchorjs-link"></a></span></h3>
+<p> 您可以通过以下命名的导出将单个指令导入到您的项目中：</p>
 <div class="table-responsive-sm">
 <table role="table" aria-busy="false" aria-colcount="3" class="table b-table bv-docs-table table-striped">
 <thead role="rowgroup" class="thead-default">
 <tr role="row">
-<th role="columnheader" scope="col" aria-colindex="1">Directive</th>
-<th role="columnheader" scope="col" aria-colindex="2">Named Export</th>
-<th role="columnheader" scope="col" aria-colindex="3">Import Path</th>
+<th role="columnheader" scope="col" aria-colindex="1">指令</th>
+<th role="columnheader" scope="col" aria-colindex="2">命名输出</th>
+<th role="columnheader" scope="col" aria-colindex="3">导入路径</th>
 </tr>
 </thead>
 <tbody role="rowgroup">
@@ -717,22 +691,20 @@ Vue.component('b-collapse', BCollapse)</pre>
 </tbody>
 </table>
 </div>
-<p><strong>Example:</strong></p>
+<p><strong>示例：</strong></p>
 <pre translate="translate" class="hljs language-js text-monospace p-2 notranslate">import { VBToggle } from 'bootstrap-vue'
 // Note: Vue automatically prefixes the directive name with 'v-'
 Vue.directive('b-toggle', VBToggle)</pre>
 </article>
 <article class="bd-content">
-<h3 id="importing-as-a-plugin" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title"> Importing as a Vue.js plugin <a href="../../../bootstrap-vue/docs/components/collapse#importing-as-a-plugin" aria-labelledby="importing-as-a-plugin" target="_self" class="anchorjs-link"></a></span></h3>
-<p> This plugin includes all of the above listed individual
-      components<span> and directives</span>.
-      Plugins also include any component aliases. </p>
+<h3 id="importing-as-a-plugin" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title"> 作为Vue.js插件导入 <a href="../../../bootstrap-vue/docs/components/collapse#importing-as-a-plugin" aria-labelledby="importing-as-a-plugin" target="_self" class="anchorjs-link"></a></span></h3>
+<p>该插件包括上面列出的所有单个组件和<span>指令</span>。插件还包括任何组件别名。</p>
 <div class="table-responsive-sm">
 <table fileds="namedExport,importPath" role="table" aria-busy="false" aria-colcount="2" class="table b-table bv-docs-table table-striped b-table-caption-top">
 <thead role="rowgroup" class="thead-default">
 <tr role="row">
-<th role="columnheader" scope="col" aria-colindex="1">Named Export</th>
-<th role="columnheader" scope="col" aria-colindex="2">Import Path</th>
+<th role="columnheader" scope="col" aria-colindex="1">命名输出</th>
+<th role="columnheader" scope="col" aria-colindex="2">导入路径</th>
 </tr>
 </thead>
 <tbody role="rowgroup">
@@ -743,7 +715,7 @@ Vue.directive('b-toggle', VBToggle)</pre>
 </tbody>
 </table>
 </div>
-<p><strong>Example:</strong></p>
+<p><strong>示例：</strong></p>
 <pre translate="translate" class="hljs language-js text-monospace p-2 notranslate">import { CollapsePlugin } from 'bootstrap-vue'
 Vue.use(CollapsePlugin)</pre>
 </article>

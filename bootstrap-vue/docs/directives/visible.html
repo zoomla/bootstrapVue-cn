@@ -37,7 +37,7 @@
   <div class="navbar-nav-scroll">
     <ul class="navbar-nav bd-navbar-nav flex-row">
       <li class="nav-item"><a class="nav-link " href="../">首页</a></li>
-      <li class="nav-item"><a class="nav-link active" href="../../v4/docs/">中文手册</a></li>
+      <li class="nav-item"><a class="nav-link active" href="../../docs/">中文手册</a></li>
       <li class="nav-item"><a class="nav-link " href="../../v4/examples/">实例</a></li>
       <li class="nav-item dropdown">
 <a class="nav-item nav-link dropdown-toggle mr-md-2" id="bd-versions" aria-expanded="false" aria-haspopup="true" href="#" data-toggle="dropdown"> 主题模板 </a>
@@ -189,31 +189,30 @@
 
 <div class="d-none d-xl-block col-xl-2 bd-toc">
 <ul class="section-nav">
-<li class="nav-item toc-entry mb-2"><a target="_self" href="#tooltips" class="nav-link font-weight-bold"><span>Tooltips</span></a></li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#overview" class="nav-link"><span>Overview</span></a> <!----></li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#positioning" class="nav-link"><span>Positioning</span></a> <!----></li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#triggers" class="nav-link"><span>Triggers</span></a>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#overview" class="nav-link"><span>概览</span></a> </li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#positioning" class="nav-link"><span>定位</span></a> </li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#triggers" class="nav-link"><span>触发器</span></a>
 <ul class="nav flex-column">
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#making-tooltips-work-for-keyboard-and-assistive-technology-users" class="nav-link"><span>Making tooltips work for keyboard and assistive technology users</span></a></li>
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#disabled-elements" class="nav-link"><span>Disabled elements</span></a></li>
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#caveats-with-focus-trigger-on-button-elements" class="nav-link"><span>Caveats with focus trigger on &lt;button&gt; elements</span></a></li>
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#dismiss-on-next-click" class="nav-link"><span>Dismiss on next click</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#making-tooltips-work-for-keyboard-and-assistive-technology-users" class="nav-link"><span>键盘提示以及辅助用户使用</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#disabled-elements" class="nav-link"><span>禁用元素</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#caveats-with-focus-trigger-on-button-elements" class="nav-link"><span>注意事项 focus 触发button 元素</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#dismiss-on-next-click" class="nav-link"><span>下次点击时关闭</span></a></li>
 </ul>
 </li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#title-content" class="nav-link"><span>Title content</span></a> <!----></li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#variants-and-custom-class" class="nav-link"><span>Variants and custom class</span></a> <!----></li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#directive-syntax-and-usage" class="nav-link"><span>Directive syntax and usage</span></a>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#title-content" class="nav-link"><span>标题内容</span></a> </li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#variants-and-custom-class" class="nav-link"><span>变体和自定义类</span></a> </li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#directive-syntax-and-usage" class="nav-link"><span>指令语法和用法</span></a>
 <ul class="nav flex-column">
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#usage" class="nav-link"><span>Usage</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#usage" class="nav-link"><span>用例</span></a></li>
 </ul>
 </li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#hiding-and-showing-tooltips-via-root-events" class="nav-link"><span>Hiding and showing tooltips via $root events</span></a> <!----></li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#disabling-and-enabling-tooltips-via-root-events" class="nav-link"><span>Disabling and enabling tooltips via $root events</span></a> <!----></li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#see-also" class="nav-link"><span>See also</span></a> <!----></li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#directive-reference" class="nav-link"><span>Directive reference</span></a>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#hiding-and-showing-tooltips-via-root-events" class="nav-link"><span>通过$ root事件隐藏和显示工具提示</span></a> </li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#disabling-and-enabling-tooltips-via-root-events" class="nav-link"><span>通过$ root事件禁用和启用工具提示</span></a> </li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#see-also" class="nav-link"><span>参阅</span></a> </li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#directive-reference" class="nav-link"><span>指令参考</span></a>
 <ul class="nav flex-column">
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#importing-individual-directives" class="nav-link"><span>Importing individual directives</span></a></li>
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#importing-as-a-plugin" class="nav-link"><span>Importing as a Vue.js plugin</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#importing-individual-directives" class="nav-link"><span>导入单个指令</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#importing-as-a-plugin" class="nav-link"><span>作为Vue.js插件导入</span></a></li>
 </ul>
 </li>
 </ul>
@@ -231,46 +230,14 @@
 </nav>
 <div class="clearfix d-block"></div>
   <h1 class="bd-title" id="content">Visible 可见性操作</h1>
-  <p class="bd-lead">Documentation and examples for adding custom BootstrapVue tooltips, using Bootstrap v4 CSS for styling and animations. Tooltips can be triggered by hovering, focusing, or clicking an element</p>
+  <p class="bd-lead">使用Bootstrap v4 默认CSS样式和动画，添加自定义BootstrapVue工具提示的文档和示例，包括鼠标悬停、聚焦或单击元素来触发工具提示等效果。</p>
   <script type="text/javascript" src="../../../v4/assets/js/pupCMS.js"></script>
 
 
 
 
-<nav class="bd-quick-links mb-3 d-xl-none" style="" data-v-4abf2740="">
-<header data-v-4abf2740="">
-<button data-v-4abf2740="" type="button" class="btn font-weight-bold btn-outline-secondary btn-sm btn-block collapsed" aria-controls="bd-quick-links-collapse" aria-expanded="false"> Show page table of contents </button>
-</header>
-<ul data-v-4abf2740="" id="bd-quick-links-collapse" class="collapse" style="display: none;">
-<li data-v-4abf2740=""><a data-v-4abf2740="" target="_self" href="#overview" class=""><span data-v-4abf2740="">Overview</span></a> </li>
-<li data-v-4abf2740=""><a data-v-4abf2740="" target="_self" href="#positioning" class=""><span data-v-4abf2740="">Positioning</span></a> </li>
-<li data-v-4abf2740=""><a data-v-4abf2740="" target="_self" href="#triggers" class=""><span data-v-4abf2740="">Triggers</span></a>
-<ul data-v-4abf2740="">
-<li data-v-4abf2740=""><a data-v-4abf2740="" target="_self" href="#making-tooltips-work-for-keyboard-and-assistive-technology-users" class=""><span data-v-4abf2740="">Making tooltips work for keyboard and assistive technology users</span></a></li>
-<li data-v-4abf2740=""><a data-v-4abf2740="" target="_self" href="#disabled-elements" class=""><span data-v-4abf2740="">Disabled elements</span></a></li>
-<li data-v-4abf2740=""><a data-v-4abf2740="" target="_self" href="#caveats-with-focus-trigger-on-button-elements" class=""><span data-v-4abf2740="">Caveats with focus trigger on &lt;button&gt; elements</span></a></li>
-<li data-v-4abf2740=""><a data-v-4abf2740="" target="_self" href="#dismiss-on-next-click" class=""><span data-v-4abf2740="">Dismiss on next click</span></a></li>
-</ul>
-</li>
-<li data-v-4abf2740=""><a data-v-4abf2740="" target="_self" href="#title-content" class=""><span data-v-4abf2740="">Title content</span></a> </li>
-<li data-v-4abf2740=""><a data-v-4abf2740="" target="_self" href="#variants-and-custom-class" class=""><span data-v-4abf2740="">Variants and custom class</span></a> </li>
-<li data-v-4abf2740=""><a data-v-4abf2740="" target="_self" href="#directive-syntax-and-usage" class=""><span data-v-4abf2740="">Directive syntax and usage</span></a>
-<ul data-v-4abf2740="">
-<li data-v-4abf2740=""><a data-v-4abf2740="" target="_self" href="#usage" class=""><span data-v-4abf2740="">Usage</span></a></li>
-</ul>
-</li>
-<li data-v-4abf2740=""><a data-v-4abf2740="" target="_self" href="#hiding-and-showing-tooltips-via-root-events" class=""><span data-v-4abf2740="">Hiding and showing tooltips via $root events</span></a> </li>
-<li data-v-4abf2740=""><a data-v-4abf2740="" target="_self" href="#disabling-and-enabling-tooltips-via-root-events" class=""><span data-v-4abf2740="">Disabling and enabling tooltips via $root events</span></a> </li>
-<li data-v-4abf2740=""><a data-v-4abf2740="" target="_self" href="#see-also" class=""><span data-v-4abf2740="">See also</span></a> </li>
-<li data-v-4abf2740=""><a data-v-4abf2740="" target="_self" href="#directive-reference" class=""><span data-v-4abf2740="">Directive reference</span></a>
-<ul data-v-4abf2740="">
-<li data-v-4abf2740=""><a data-v-4abf2740="" target="_self" href="#importing-individual-directives" class=""><span data-v-4abf2740="">Importing individual directives</span></a></li>
-<li data-v-4abf2740=""><a data-v-4abf2740="" target="_self" href="#importing-as-a-plugin" class=""><span data-v-4abf2740="">Importing as a Vue.js plugin</span></a></li>
-</ul>
-</li>
-</ul>
-</nav>
-<p>Use the <code class="text-nowrap" translate="no">v-b-tooltip</code> directive on any element or component where you would like a tooltip to
+
+<p> <code class="text-nowrap" translate="no">v-b-tooltip</code> 组件能够实现tooltip的提示效果。
 appear.</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-tooltip">
 <div class="text-center my-3">
@@ -282,23 +249,22 @@ appear.</p>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">v-b-tooltip.hover</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Tooltip content"</span>&gt;</span>Hover Me<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
 </div>
-<h2 id="overview" class="bv-no-focus-ring"><span class="bd-content-title">Overview<a class="anchorjs-link" href="#overview" aria-labelledby="overview"></a></span></h2>
-<p>Things to know when using the tooltip directive:</p>
+<h2 id="overview" class="bv-no-focus-ring"><span class="bd-content-title">概览<a class="anchorjs-link" href="#overview" aria-labelledby="overview"></a></span></h2>
+<p>使用tooltip指令时要了解的事项：</p>
 <ul>
-<li>Tooltips rely on the 3rd party library <a href="https://popper.js.org/" target="_blank" rel="noopener">Popper.js</a> for positioning.</li>
-<li>Tooltips require BootstrapVue's custom SCSS/CSS in order to function correctly, and for variants.</li>
-<li>If a title is not provided (or is an empty string), the tooltip will not show.</li>
-<li>Specify container: 'body' (the default) to avoid rendering problems in more complex components
-(like input groups, button groups, etc).</li>
-<li>Triggering tooltips on hidden elements will not work.</li>
-<li>Tooltips for <code class="text-nowrap" translate="no">disabled</code> elements must be triggered on a wrapper element.</li>
-<li>When triggered from hyperlinks that span multiple lines, tooltips will be centered. Use
-white-space: nowrap; on your <code class="text-nowrap" translate="no">&lt;a&gt;</code>s, <code class="text-nowrap" translate="no">&lt;b-link&gt;</code>s and <code class="text-nowrap" translate="no">&lt;router-link&gt;</code>s to avoid this behavior.</li>
-<li>Tooltips must be hidden before their corresponding elements have been removed from the DOM.</li>
+<li>工具提示依赖于第三方库<a href="https://popper.js.org/" target="_blank" rel="noopener">Popper.js</a> 进行定位。</li>
+<li>工具提示需要BootstrapVue的自定义SCSS / CSS才能正常运行，并提供变体。</li>
+<li>如果未提供标题（或为空字符串），则不会提示。</li>
+<li>指定容器：“ body”（默认），以避免在更复杂的组件（如输入组，按钮组等）中出现渲染问题。</li>
+<li>在隐藏元素上触发工具提示将无效</li>
+<li><code class="text-nowrap" translate="no">disabled</code> 必须在包装器元素上触发禁用元素的工具提示。</li>
+<li>从跨越多行的超链接触发时，工具提示将居中。 在你使用
+white-space: nowrap; <code class="text-nowrap" translate="no">&lt;a&gt;</code>s、 <code class="text-nowrap" translate="no">&lt;b-link&gt;</code>s、 <code class="text-nowrap" translate="no">&lt;router-link&gt;</code>s, 必须避免这个操作。</li>
+<li>在从DOM中删除其相应元素之前，必须先隐藏工具提示。</li>
 </ul>
-<h2 id="positioning" class="bv-no-focus-ring"><span class="bd-content-title">Positioning<a class="anchorjs-link" href="#positioning" aria-labelledby="positioning"></a></span></h2>
-<p>Twelve options are available for positioning: <code class="text-nowrap" translate="no">top</code>, <code class="text-nowrap" translate="no">topleft</code>, <code class="text-nowrap" translate="no">topright</code>, <code class="text-nowrap" translate="no">right</code>, <code class="text-nowrap" translate="no">righttop</code>, <code class="text-nowrap" translate="no">rightbottom</code>, <code class="text-nowrap" translate="no">bottom</code>, <code class="text-nowrap" translate="no">bottomleft</code>, <code class="text-nowrap" translate="no">bottomright</code>, <code class="text-nowrap" translate="no">left</code>, <code class="text-nowrap" translate="no">lefttop</code>, and <code class="text-nowrap" translate="no">leftbottom</code> aligned.
-The default position is <code class="text-nowrap" translate="no">top</code>. Positioning is relative to the trigger element.</p>
+<h2 id="positioning" class="bv-no-focus-ring"><span class="bd-content-title">定位<a class="anchorjs-link" href="#positioning" aria-labelledby="positioning"></a></span></h2>
+<p>以下十二个选项可用于定位：<code class="text-nowrap" translate="no">top</code>、<code class="text-nowrap" translate="no">topleft</code>、<code class="text-nowrap" translate="no">topright</code>、 <code class="text-nowrap" translate="no">right</code>、<code class="text-nowrap" translate="no">righttop</code>、<code class="text-nowrap" translate="no">rightbottom</code>、 <code class="text-nowrap" translate="no">bottom</code>、 <code class="text-nowrap" translate="no">bottomleft</code>、 <code class="text-nowrap" translate="no">bottomright</code>、 <code class="text-nowrap" translate="no">left</code>、 <code class="text-nowrap" translate="no">lefttop</code>、 <code class="text-nowrap" translate="no">leftbottom</code>
+默认位置是 <code class="text-nowrap" translate="no">top</code>，相对于触发的元素进行定位。</p>
 <div class="bd-example bd-example-tooltip-static">
 <div class="tooltip b-tooltip bs-tooltip-top bs-tooltip-top-docs" role="tooltip">
 <div class="arrow" style="left: calc(50% - 6px)"></div>
@@ -349,7 +315,7 @@ The default position is <code class="text-nowrap" translate="no">top</code>. Pos
 <div class="tooltip-inner">Tooltip on the leftbottom</div>
 </div>
 </div>
-<p><strong>Live example</strong></p>
+<p><strong>示例如下</strong></p>
 <div translate="translate" class="bd-example vue-example vue-example-b-tooltip-positioning">
 <div>
 <div class="container-fluid">
@@ -438,13 +404,12 @@ The default position is <code class="text-nowrap" translate="no">top</code>. Pos
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
 </div>
-<h2 id="triggers" class="bv-no-focus-ring"><span class="bd-content-title">Triggers<a class="anchorjs-link" href="#triggers" aria-labelledby="triggers"></a></span></h2>
-<p>Tooltips can be triggered (opened/closed) via any combination of <code class="text-nowrap" translate="no">click</code>, <code class="text-nowrap" translate="no">hover</code> and <code class="text-nowrap" translate="no">focus</code>. The
-default trigger is <code class="text-nowrap" translate="no">hover focus</code>. Or a trigger of manual can be specified, where the popover can
-only be opened or closed <a href="#hiding-and-showing-tooltips-via-root-events" class="font-weight-bold">programmatically</a>.</p>
-<p>If a tooltip has more than one trigger, then all triggers must be cleared before the tooltip will
-close. I.e. if a tooltip has the trigger <code class="text-nowrap" translate="no">focus click</code>, and it was opened by <code class="text-nowrap" translate="no">focus</code>, and the user
-then clicks the trigger element, they must click it again <strong>and</strong> move focus to close the tooltip.</p>
+<h2 id="triggers" class="bv-no-focus-ring"><span class="bd-content-title">触发器<a class="anchorjs-link" href="#triggers" aria-labelledby="triggers"></a></span></h2>
+<p>可以通过以下任意组合来触发（打开/关闭）工具提示： <code class="text-nowrap" translate="no">click</code>、 <code class="text-nowrap" translate="no">hover</code>、 <code class="text-nowrap" translate="no">focus</code>。
+默认的触发器是 <code class="text-nowrap" translate="no">hover focus</code>。 或者可以指定一个手动触发器，其中只能以 <a href="#hiding-and-showing-tooltips-via-root-events" class="font-weight-bold">programmatically</a>打开或关闭弹窗。</p>
+<p>如果工具提示中有多个触发器，则必须先清除所有触发器，然后工具提示才会
+  关。 即 如果工具提示具有触发器 <code class="text-nowrap" translate="no">focus click</code>, 被打开 <code class="text-nowrap" translate="no">focus</code>,
+然后单击触发元素, 那就必须再次触发 click <strong>和</strong> 移动焦点以关闭工具提示。</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-tooltip-triggers">
 <div>
 <div class="container">
@@ -485,18 +450,15 @@ then clicks the trigger element, they must click it again <strong>and</strong> m
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
 </div>
-<h3 id="making-tooltips-work-for-keyboard-and-assistive-technology-users" class="bv-no-focus-ring"><span class="bd-content-title">Making tooltips work for keyboard and assistive technology users<a class="anchorjs-link" href="#making-tooltips-work-for-keyboard-and-assistive-technology-users" aria-labelledby="making-tooltips-work-for-keyboard-and-assistive-technology-users"></a></span></h3>
-<p>You should only add tooltips to HTML elements that are traditionally keyboard-focusable and
-interactive (such as links, buttons, or form controls). Although arbitrary HTML elements (such as <code class="text-nowrap" translate="no">&lt;span&gt;</code>s) can be made focusable by adding the <code class="text-nowrap" translate="no">tabindex="0"</code> attribute, this will add potentially
-annoying and confusing tab stops on non-interactive elements for keyboard users. In addition, most
-assistive technologies currently do not announce the tooltip in this situation.</p>
-<p>Additionally, do not rely solely on <code class="text-nowrap" translate="no">hover</code> as the trigger for your tooltip, as this will make your
-tooltips <em>impossible to trigger for keyboard-only users</em>.</p>
-<h3 id="disabled-elements" class="bv-no-focus-ring"><span class="bd-content-title">Disabled elements<a class="anchorjs-link" href="#disabled-elements" aria-labelledby="disabled-elements"></a></span></h3>
-<p>Elements with the <code class="text-nowrap" translate="no">disabled</code> attribute aren’t interactive, meaning users cannot focus, hover, or
-click them to trigger a tooltip (or popover). As a workaround, you’ll want to trigger the tooltip
-from a wrapper <code class="text-nowrap" translate="no">&lt;div&gt;</code> or <code class="text-nowrap" translate="no">&lt;span&gt;</code>, ideally made keyboard-focusable using <code class="text-nowrap" translate="no">tabindex="0"</code>, and
-override the <code class="text-nowrap" translate="no">pointer-events</code> on the disabled element.</p>
+<h3 id="making-tooltips-work-for-keyboard-and-assistive-technology-users" class="bv-no-focus-ring"><span class="bd-content-title">键盘提示以及辅助用户使用<a class="anchorjs-link" href="#making-tooltips-work-for-keyboard-and-assistive-technology-users" aria-labelledby="making-tooltips-work-for-keyboard-and-assistive-technology-users"></a></span></h3>
+<p>您只需在传统键盘上为焦点的HTML元素添加工具提示，
+  互动式（例如链接，按钮或表单控件）。 尽管任意HTML元素（例如 <code class="text-nowrap" translate="no">&lt;span&gt;</code>s) 可以通过添加<code class="text-nowrap" translate="no">tabindex="0"</code> 属性, 这会让使用键盘的用户在非交互式元素上增加潜在的令人讨厌和混乱的制表位。 此外，在这种情况下，目前大多数辅助技术都不会公布工具提示。</p>
+<p>此外，不要仅仅依靠 <code class="text-nowrap" translate="no">hover</code> 作为工具提示的触发器, <em>因为这将使键盘用户无法触发您的工具提示。</em>.</p>
+<h3 id="disabled-elements" class="bv-no-focus-ring"><span class="bd-content-title">禁用元素<a class="anchorjs-link" href="#disabled-elements" aria-labelledby="disabled-elements"></a></span></h3>
+<p>具有 <code class="text-nowrap" translate="no">disabled</code> 属性的元素不是交互式的, 表示用户无法专注，悬停或
+  单击它们以触发工具提示（或弹出窗口）。 解决方法是，您需要从wrapper上触发工具提示
+   <code class="text-nowrap" translate="no">&lt;div&gt;</code> or <code class="text-nowrap" translate="no">&lt;span&gt;</code>, 理想地使键盘聚焦使用 <code class="text-nowrap" translate="no">tabindex="0"</code>,
+   覆盖禁用元素上的 <code class="text-nowrap" translate="no">pointer-events</code>。</p>
 <div translate="translate" class="bd-example vue-example vue-example-disabled-trigger-element">
 <div><span tabindex="0" title="Disabled tooltip" class="d-inline-block">
 <button type="button" disabled="disabled" class="btn btn-primary disabled" style="pointer-events: none;">Disabled button</button>
@@ -509,10 +471,10 @@ override the <code class="text-nowrap" translate="no">pointer-events</code> on t
   <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
 </div>
-<h3 id="caveats-with-focus-trigger-on-button-elements" class="bv-no-focus-ring"><span class="bd-content-title">Caveats with <code class="text-nowrap" translate="no">focus</code> trigger on <code class="text-nowrap" translate="no">&lt;button&gt;</code> elements<a class="anchorjs-link" href="#caveats-with-focus-trigger-on-button-elements" aria-labelledby="caveats-with-focus-trigger-on-button-elements"></a></span></h3>
-<p>For proper cross-browser and cross-platform behavior when using only the <code class="text-nowrap" translate="no">focus</code> trigger, you must
-use an element that renders the <code class="text-nowrap" translate="no">&lt;a&gt;</code> tag, not the <code class="text-nowrap" translate="no">&lt;button&gt;</code> tag, and you also must include a <code class="text-nowrap" translate="no">tabindex="0"</code> attribute.</p>
-<p>The following will generate an <code class="text-nowrap" translate="no">&lt;a&gt;</code> that looks like a button:</p>
+<h3 id="caveats-with-focus-trigger-on-button-elements" class="bv-no-focus-ring"><span class="bd-content-title">注意事项 <code class="text-nowrap" translate="no">focus</code> 触发 <code class="text-nowrap" translate="no">&lt;button&gt;</code> 元素<a class="anchorjs-link" href="#caveats-with-focus-trigger-on-button-elements" aria-labelledby="caveats-with-focus-trigger-on-button-elements"></a></span></h3>
+<p>仅使用以下选项时，为了实现正确的跨浏览器和跨平台行为 <code class="text-nowrap" translate="no">focus</code> 触发器, 你必须
+  使用可呈现的 <code class="text-nowrap" translate="no">&lt;a&gt;</code> 标签, 不能没有 <code class="text-nowrap" translate="no">&lt;button&gt;</code> 标签, 并且还必须要包含<code class="text-nowrap" translate="no">tabindex="0"</code> 属性.</p>
+<p>下面生成一个看起来像 <code class="text-nowrap" translate="no">&lt;a&gt;</code> 标签的按钮</p>
 <div class="bd-code">
 <pre class="hljs html p-2" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-button</span>
   <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>
@@ -523,15 +485,13 @@ use an element that renders the <code class="text-nowrap" translate="no">&lt;a&g
   Link button with tooltip directive
 <span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span></pre>
 </div>
-<h3 id="dismiss-on-next-click" class="bv-no-focus-ring"><span class="bd-content-title">Dismiss on next click<a class="anchorjs-link" href="#dismiss-on-next-click" aria-labelledby="dismiss-on-next-click"></a></span></h3>
-<p>Use both <code class="text-nowrap" translate="no">click</code> and <code class="text-nowrap" translate="no">blur</code> if you would like a tooltip that opens only on click of the element, but
-will close when anything else in the document is clicked or receives focus.</p>
-<p>Note that your element <strong>must</strong> be in the document tab sequence for this to work. If your element is
-not tabbable, add the <code class="text-nowrap" translate="no">tabindex="0"</code> attribute to the element.</p>
-<h2 id="title-content" class="bv-no-focus-ring"><span class="bd-content-title">Title content<a class="anchorjs-link" href="#title-content" aria-labelledby="title-content"></a></span></h2>
-<p>There are several options for providing the title of a tooltip.</p>
-<p>By default, tooltip will use the <code class="text-nowrap" translate="no">title</code> attribute of the element as the tooltip content. The title
-can also be passed as an object to <code class="text-nowrap" translate="no">v-b-tooltip</code> in the form of</p>
+<h3 id="dismiss-on-next-click" class="bv-no-focus-ring"><span class="bd-content-title">下次点击时关闭<a class="anchorjs-link" href="#dismiss-on-next-click" aria-labelledby="dismiss-on-next-click"></a></span></h3>
+<p>选择<code class="text-nowrap" translate="no">click</code> 和 <code class="text-nowrap" translate="no">blur</code>时， 如果您希望仅在单击元素时打开工具提示，但是
+  单击文档中的其他任何内容或获得焦点时，它将关闭。</p>
+<p>请注意，您的元素 <strong>必须</strong> 在文档选项卡序列中才能起作用。 如果您的元素不可标签，则将 <code class="text-nowrap" translate="no">tabindex="0"</code> 属性添加到该元素。</p>
+<h2 id="title-content" class="bv-no-focus-ring"><span class="bd-content-title">标题内容<a class="anchorjs-link" href="#title-content" aria-labelledby="title-content"></a></span></h2>
+<p>有几个选项可提供工具提示的标题。</p>
+<p>默认情况下，工具提示将使用 <code class="text-nowrap" translate="no">title</code> 属性作为工具提示内容。 标题也可以以对象的形式传递给 <code class="text-nowrap" translate="no">v-b-tooltip</code>。</p>
 <!-- eslint-disable no-unused-vars -->
 
 <div class="bd-code">
@@ -539,8 +499,7 @@ can also be passed as an object to <code class="text-nowrap" translate="no">v-b-
   <span class="hljs-attr">title</span>: <span class="hljs-string">'This is the title'</span>
 }</pre>
 </div>
-<p>If your title content has basic HTML markup, then you will also need to set the <code class="text-nowrap" translate="no">html</code> property to
-true, or use the directive modifier <code class="text-nowrap" translate="no">html</code></p>
+<p>如果标题内容具有基本的HTML标记，则还需要将 <code class="text-nowrap" translate="no">html</code> 属性设置为true，或使用指令修饰符 <code class="text-nowrap" translate="no">html</code></p>
 <!-- eslint-disable no-unused-vars -->
 
 <div class="bd-code">
@@ -550,9 +509,7 @@ true, or use the directive modifier <code class="text-nowrap" translate="no">htm
   <span class="hljs-attr">html</span>: <span class="hljs-literal">true</span>
 }</pre>
 </div>
-<p>Title can also be a function reference, which is called each time the tooltip is opened. To make the
-title returned by a function reactive while open, set the title to a <em>new</em> function reference
-whenever the content changes.</p>
+<p>标题也可以是一个函数引用，每次打开工具提示时都会调用它。 要使打开的函数返回的标题具有反应性，请在内容更改时将标题设置为 <em>new</em> 函数引用。</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-tooltip-content">
 <div class="container">
 <div class="row text-center">
@@ -617,9 +574,8 @@ whenever the content changes.</p>
   }
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
 </div>
-<h2 id="variants-and-custom-class" class="bv-no-focus-ring"><span class="bd-content-title">Variants and custom class<a class="anchorjs-link" href="#variants-and-custom-class" aria-labelledby="variants-and-custom-class"></a></span></h2>
-<p>BootstrapVue's tooltips support contextual color variants via our custom CSS, either by using
-directive modifiers or config options:</p>
+<h2 id="variants-and-custom-class" class="bv-no-focus-ring"><span class="bd-content-title">变体和自定义类<a class="anchorjs-link" href="#variants-and-custom-class" aria-labelledby="variants-and-custom-class"></a></span></h2>
+<p>BootstrapVue的工具提示通过我们的自定义CSS支持上下文颜色变量，可以使用指令修饰符或配置选项：</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-tooltip-variants">
 <div class="container-fluid">
 <div class="row text-center">
@@ -646,57 +602,53 @@ directive modifiers or config options:</p>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span></pre>
 </div>
-<p>Bootstrap default theme variants are: <code class="text-nowrap" translate="no">danger</code>, <code class="text-nowrap" translate="no">warning</code>, <code class="text-nowrap" translate="no">success</code>, <code class="text-nowrap" translate="no">primary</code>, <code class="text-nowrap" translate="no">secondary</code>, <code class="text-nowrap" translate="no">info</code>, <code class="text-nowrap" translate="no">light</code>, and <code class="text-nowrap" translate="no">dark</code>. You can change or add additional variants via Bootstrap <a href="/docs/reference/theming" class="font-weight-bold">SCSS variables</a></p>
-<p>A custom class can be applied to the tooltip outer wrapper <code class="text-nowrap" translate="no">&lt;div&gt;</code> by using the <code class="text-nowrap" translate="no">customClass</code> option
-property:</p>
+<p>Bootstrap默认主题变体是： <code class="text-nowrap" translate="no">danger</code>、 <code class="text-nowrap" translate="no">warning</code>、 <code class="text-nowrap" translate="no">success</code>、 <code class="text-nowrap" translate="no">primary</code>、 <code class="text-nowrap" translate="no">secondary</code>、 <code class="text-nowrap" translate="no">info</code>、 <code class="text-nowrap" translate="no">light</code>、 and <code class="text-nowrap" translate="no">dark</code>。 您可以通过Bootstrap更改或添加其他SCSS变体 <a href="/docs/reference/theming" class="font-weight-bold">。</a></p>
+<p>可以将自定义类应用于工具提示wrapper <code class="text-nowrap" translate="no">&lt;div&gt;</code> 通过使用 <code class="text-nowrap" translate="no">customClass</code> 其它选项属性:</p>
 <div class="bd-code">
 <pre class="hljs html p-2" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">v-b-tooltip.hover</span>=<span class="hljs-string">"{ customClass: 'my-tooltip-class' }"</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Tooltip"</span>&gt;</span>Button<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span></pre>
 </div>
-<h2 id="directive-syntax-and-usage" class="bv-no-focus-ring"><span class="bd-content-title">Directive syntax and usage<a class="anchorjs-link" href="#directive-syntax-and-usage" aria-labelledby="directive-syntax-and-usage"></a></span></h2>
+<h2 id="directive-syntax-and-usage" class="bv-no-focus-ring"><span class="bd-content-title">指令语法和用法<a class="anchorjs-link" href="#directive-syntax-and-usage" aria-labelledby="directive-syntax-and-usage"></a></span></h2>
 <div class="bd-code">
 <pre class="hljs html p-2" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">v-b-tooltip:</span>[<span class="hljs-attr">container</span>]<span class="hljs-attr">.</span>[<span class="hljs-attr">mod1</span>]<span class="hljs-attr">.</span>[<span class="hljs-attr">mod2</span>]<span class="hljs-attr">.</span>[<span class="hljs-attr">...</span>]<span class="hljs-attr">.</span>[<span class="hljs-attr">modN</span>]=<span class="hljs-string">"&lt;value&gt;"</span>&gt;</span>Button<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span></pre>
 </div>
-<p>Where <code class="text-nowrap" translate="no">[container]</code> can be (optional):</p>
+<p>其中 <code class="text-nowrap" translate="no">[container]</code> 可以是 (可选的):</p>
 <ul>
-<li>An element ID (minus the #) to place the tooltip markup in</li>
-<li>If not provided, tooltips are appended to the <code class="text-nowrap" translate="no">body</code>. If the trigger element is inside a modal,
-the tooltip will be appended to the modal's container</li>
+<li>元素ID（减去＃），用于在其中放置工具提示标记</li>
+<li>如果未提供，则工具提示将附加到 <code class="text-nowrap" translate="no">body</code>. 如果触发元素在模式内部，
+  工具提示将附加到模态的容器</li>
 </ul>
-<p>Where <code class="text-nowrap" translate="no">[modX]</code> can be (all optional):</p>
+<p>其中 <code class="text-nowrap" translate="no">[modX]</code> 可以是（所有可选）：</p>
 <ul>
-<li>Positioning: <code class="text-nowrap" translate="no">top</code>, <code class="text-nowrap" translate="no">bottom</code>, <code class="text-nowrap" translate="no">left</code>, <code class="text-nowrap" translate="no">right</code>, <code class="text-nowrap" translate="no">auto</code>, <code class="text-nowrap" translate="no">topleft</code>, <code class="text-nowrap" translate="no">topright</code>, <code class="text-nowrap" translate="no">bottomleft</code>, <code class="text-nowrap" translate="no">bottomright</code>, <code class="text-nowrap" translate="no">lefttop</code>, <code class="text-nowrap" translate="no">leftbottom</code>, <code class="text-nowrap" translate="no">righttop</code>, or <code class="text-nowrap" translate="no">rightbottom</code> (last one found wins,
-defaults to <code class="text-nowrap" translate="no">top</code>).</li>
-<li>Event trigger: <code class="text-nowrap" translate="no">click</code>, <code class="text-nowrap" translate="no">hover</code>, <code class="text-nowrap" translate="no">focus</code>, <code class="text-nowrap" translate="no">blur</code> (if none specified, defaults to <code class="text-nowrap" translate="no">focus</code> and <code class="text-nowrap" translate="no">hover</code>. <code class="text-nowrap" translate="no">blur</code> is a close handler only, and if specified by itself, will be converted to <code class="text-nowrap" translate="no">focus</code>). Use <code class="text-nowrap" translate="no">manual</code> if you only want to control the visibility manually.</li>
-<li><code class="text-nowrap" translate="no">nofade</code> to turn off animation.</li>
-<li><code class="text-nowrap" translate="no">html</code> to enable rendering raw HTML. By default HTML is escaped and converted to text.</li>
-<li>A delay value in the format of <code class="text-nowrap" translate="no">d###</code> (where <code class="text-nowrap" translate="no">###</code> is in ms, defaults to <code class="text-nowrap" translate="no">50</code>), applied to both <code class="text-nowrap" translate="no">hide</code> and <code class="text-nowrap" translate="no">show</code>.</li>
-<li>A show delay value in the format of <code class="text-nowrap" translate="no">ds###</code> (where <code class="text-nowrap" translate="no">###</code> is in ms, defaults to <code class="text-nowrap" translate="no">50</code>), applied to <code class="text-nowrap" translate="no">show</code> trigger only.</li>
-<li>A hide delay value in the format of <code class="text-nowrap" translate="no">dh###</code> (where <code class="text-nowrap" translate="no">###</code> is in ms, defaults to <code class="text-nowrap" translate="no">50</code>), applied to <code class="text-nowrap" translate="no">hide</code> trigger only.</li>
-<li>An offset value in pixels in the format of <code class="text-nowrap" translate="no">o###</code> (where <code class="text-nowrap" translate="no">###</code> is the number of pixels, defaults
-to <code class="text-nowrap" translate="no">0</code>. Negative values allowed).</li>
-<li>A boundary setting of <code class="text-nowrap" translate="no">window</code> or <code class="text-nowrap" translate="no">viewport</code>. The element to constrain the visual placement of the
-tooltip. If not specified, the boundary defaults to the trigger element's scroll parent (in most
-cases this will suffice).</li>
-<li>A contextual variant in the form of <code class="text-nowrap" translate="no">v-XXX</code> (where <code class="text-nowrap" translate="no">XXX</code> is the color variant name).</li>
-<li><code class="text-nowrap" translate="no">noninteractive</code> to make the tooltip not user-interactive.</li>
+<li>定位: <code class="text-nowrap" translate="no">top</code>、 <code class="text-nowrap" translate="no">bottom</code>、 <code class="text-nowrap" translate="no">left</code>、 <code class="text-nowrap" translate="no">right</code>、 <code class="text-nowrap" translate="no">auto</code>、 <code class="text-nowrap" translate="no">topleft</code>、 <code class="text-nowrap" translate="no">topright</code>、 <code class="text-nowrap" translate="no">bottomleft</code>、 <code class="text-nowrap" translate="no">bottomright</code>、 <code class="text-nowrap" translate="no">lefttop</code>、 <code class="text-nowrap" translate="no">leftbottom</code>、 <code class="text-nowrap" translate="no">righttop</code>、 或 <code class="text-nowrap" translate="no">rightbottom</code> (最后一个 wins,
+默认为<code class="text-nowrap" translate="no">top</code>).</li>
+<li>触发事件: <code class="text-nowrap" translate="no">click</code>, <code class="text-nowrap" translate="no">hover</code>, <code class="text-nowrap" translate="no">focus</code>, <code class="text-nowrap" translate="no">blur</code> (如果为指定, 则默认为 <code class="text-nowrap" translate="no">focus</code> and <code class="text-nowrap" translate="no">hover</code>. <code class="text-nowrap" translate="no">blur</code> 仅仅是一个关闭处理程序, 并且如果由其自身指定，将被转换为 <code class="text-nowrap" translate="no">focus</code>)。 用 <code class="text-nowrap" translate="no">manual</code> 如果您只想手动控制可见性。</li>
+<li><code class="text-nowrap" translate="no">nofade</code> 关闭动画</li>
+<li><code class="text-nowrap" translate="no">html</code> 以启用呈现原始HTML。 默认情况下，HTML被转义并转换为文本。</li>
+<li>格式为 <code class="text-nowrap" translate="no">d###</code> (其中 <code class="text-nowrap" translate="no">###</code> 的延迟值, 默认值为  <code class="text-nowrap" translate="no">50</code>), 应用于 <code class="text-nowrap" translate="no">hide</code> and <code class="text-nowrap" translate="no">show</code>.</li>
+<li>显示延迟值，格式为 <code class="text-nowrap" translate="no">ds###</code> (其中 <code class="text-nowrap" translate="no">###</code> 以毫秒为单位, 默认值为<code class="text-nowrap" translate="no">50</code>), 仅用于 <code class="text-nowrap" translate="no">show</code> 触发器</li>
+<li>隐藏延迟值，格式为 <code class="text-nowrap" translate="no">dh###</code> (where <code class="text-nowrap" translate="no">###</code> 以毫秒为单位, 默认值为 <code class="text-nowrap" translate="no">50</code>), 仅用于 <code class="text-nowrap" translate="no">hide</code> 触发器</li>
+<li>以像素为单位的偏移值，格式为<code class="text-nowrap" translate="no">o###</code> (其中 <code class="text-nowrap" translate="no">###</code> 是像素数，默认为，
+   <code class="text-nowrap" translate="no">0</code>。 允许负值)。</li>
+<li>边界设置 <code class="text-nowrap" translate="no">window</code> or <code class="text-nowrap" translate="no">viewport</code>。 限制工具提示的视觉位置的元素。 如果未指定，则边界默认为触发器元素的滚动父级（在大多数情况下就足够了）。</li>
+<li>以下形式的上下文变体 <code class="text-nowrap" translate="no">v-XXX</code> (其中 <code class="text-nowrap" translate="no">XXX</code> 是颜色变体的名称)。</li>
+<li><code class="text-nowrap" translate="no">noninteractive</code> 可以使工具提示不与用户交互。</li>
 </ul>
-<p>Where <code class="text-nowrap" translate="no">&lt;value&gt;</code> can be (optional):</p>
+<p>其中 <code class="text-nowrap" translate="no">&lt;value&gt;</code> 是（可选的）：</p>
 <ul>
-<li>A string containing the title of the tooltip</li>
-<li>A function reference to generate the title of the tooltip (receives one arg which is a reference
-to the DOM element triggering the tooltip)</li>
-<li>An object containing more complex configuration of tooltip. See below for accepted object
-properties:</li>
+<li>包含工具提示标题的字符串</li>
+<li>用于生成工具提示标题的函数引用（接收一个arg，该arg是对触发工具提示的DOM元素的引用）</li>
+<li>包含工具提示的更复杂配置的对象。 接受对象见下文
+  特性：</li>
 </ul>
-<p><strong>Options configuration object properties:</strong></p>
+<p><strong>选项配置对象属性：</strong></p>
 <div class="table-responsive-sm">
 <table class="b-table table table-bordered table-striped bv-docs-table">
 <thead class="thead-default">
 <tr>
-<th>Property</th>
-<th>Type</th>
-<th>Default</th>
-<th>Description</th>
+<th>属性</th>
+<th>类型</th>
+<th>默认值</th>
+<th>描述</th>
 </tr>
 </thead>
 <tbody>
@@ -704,175 +656,174 @@ properties:</li>
 <td><code class="text-nowrap" translate="no">animation</code></td>
 <td>Boolean</td>
 <td><code class="text-nowrap" translate="no">true</code></td>
-<td>Apply a CSS fade transition to the tooltip</td>
+<td>将CSS淡入淡出过渡应用于工具提示</td>
 </tr>
 <tr>
 <td><code class="text-nowrap" translate="no">container</code></td>
 <td>String ID or HTMLElement or <code class="text-nowrap" translate="no">false</code></td>
 <td><code class="text-nowrap" translate="no">false</code></td>
-<td>Appends the tooltip to a specific element. Example: <code class="text-nowrap" translate="no">container: '#body'</code>. This option is particularly useful in that it allows you to position the tooltip in the flow of the document near the triggering element - which will prevent the tooltip from floating away from the triggering element during a window resize. When set to <code class="text-nowrap" translate="no">false</code> the tooltip will be appended to <code class="text-nowrap" translate="no">body</code>, or if the trigger element is inside a modal it will append to the modal's container</td>
+<td>将工具提示附加到特定元素。 例：<code class="text-nowrap" translate="no">container: '#body'</code>。 此选项特别有用，因为它允许您将工具提示放置在文档流中靠近触发元素的位置-这样可以防止在调整窗口大小时工具提示从触发元素上浮走。当设置为<code class="text-nowrap" translate="no">false</code> 时，工具提示将附加到 <code class="text-nowrap" translate="no">body</code>,或者，如果触发器元素在模式内部，则它将附加到模式的容器中。</td>
 </tr>
 <tr>
 <td><code class="text-nowrap" translate="no">delay</code></td>
 <td>Number or Object</td>
 <td><code class="text-nowrap" translate="no">50</code></td>
-<td>Delay showing and hiding the tooltip (ms). If a number is supplied, delay is applied to both hide/show. Object structure is: <code class="text-nowrap" translate="no">delay: { "show": 500, "hide": 100 }</code></td>
+<td>延迟显示和隐藏工具提示（毫秒）。如果提供了编号，则延迟将同时应用于隐藏/显示。 对象结构是：<code class="text-nowrap" translate="no">delay: { "show": 500, "hide": 100 }</code></td>
 </tr>
 <tr>
 <td><code class="text-nowrap" translate="no">html</code></td>
 <td>Boolean</td>
 <td><code class="text-nowrap" translate="no">false</code></td>
-<td>Allow HTML in the tooltip. If true, HTML tags in the tooltip's title will be rendered in the tooltip. If false, the title will be inserted as plain text. Use text if you're worried about XSS attacks</td>
+<td>在工具提示中允许HTML。 如果为true，则将在工具提示中呈现工具提示标题中的HTML标签。 如果为false，则标题将作为纯文本插入。 如果您担心XSS攻击，请使用文字。</td>
 </tr>
 <tr>
 <td><code class="text-nowrap" translate="no">placement</code></td>
 <td>String or Function</td>
 <td><code class="text-nowrap" translate="no">'top'</code></td>
-<td>How to position the tooltip - <code class="text-nowrap" translate="no">auto</code>, <code class="text-nowrap" translate="no">top</code>, <code class="text-nowrap" translate="no">bottom</code>, <code class="text-nowrap" translate="no">left</code>, <code class="text-nowrap" translate="no">right</code>, <code class="text-nowrap" translate="no">topleft</code>, <code class="text-nowrap" translate="no">topright</code>, <code class="text-nowrap" translate="no">bottomleft</code>, <code class="text-nowrap" translate="no">bottomright</code>, <code class="text-nowrap" translate="no">lefttop</code>, <code class="text-nowrap" translate="no">leftbottom</code>, <code class="text-nowrap" translate="no">righttop</code>, or <code class="text-nowrap" translate="no">rightbottom</code>. When <code class="text-nowrap" translate="no">auto</code> is specified, it will dynamically reorient the tooltip</td>
+<td>如何放置工具提示 - <code class="text-nowrap" translate="no">auto</code>, <code class="text-nowrap" translate="no">top</code>、 <code class="text-nowrap" translate="no">bottom</code>, <code class="text-nowrap" translate="no">left</code>、 <code class="text-nowrap" translate="no">right</code>、 <code class="text-nowrap" translate="no">topleft</code>、 <code class="text-nowrap" translate="no">topright</code>、 <code class="text-nowrap" translate="no">bottomleft</code>、 <code class="text-nowrap" translate="no">bottomright</code>、 <code class="text-nowrap" translate="no">lefttop</code>、 <code class="text-nowrap" translate="no">leftbottom</code>、 <code class="text-nowrap" translate="no">righttop</code>、<code class="text-nowrap" translate="no">rightbottom</code>。 指定 <code class="text-nowrap" translate="no">auto</code> 时，它将动态调整工具提示的方向。</td>
 </tr>
 <tr>
 <td><code class="text-nowrap" translate="no">title</code></td>
 <td>String or Element or Function</td>
 <td><code class="text-nowrap" translate="no">''</code></td>
-<td>Default title value if title attribute isn't present. If a function is given, it must return a string</td>
+<td>如果没有标题属性，则为默认标题值。 如果给出了一个函数，它必须返回一个字符串。</td>
 </tr>
 <tr>
 <td><code class="text-nowrap" translate="no">trigger</code></td>
 <td>String</td>
 <td><code class="text-nowrap" translate="no">'hover focus'</code></td>
-<td>How tooltip is triggered: <code class="text-nowrap" translate="no">click</code>, <code class="text-nowrap" translate="no">hover</code>, <code class="text-nowrap" translate="no">focus</code>. You may pass multiple triggers; separate them with a space</td>
+<td>工具提示的触发方式： <code class="text-nowrap" translate="no">click</code>、 <code class="text-nowrap" translate="no">hover</code>、 <code class="text-nowrap" translate="no">focus</code>。 可以传递多个触发器；用空格分隔它们。</td>
 </tr>
 <tr>
 <td><code class="text-nowrap" translate="no">offset</code></td>
 <td>Number or String</td>
 <td><code class="text-nowrap" translate="no">0</code></td>
-<td>Offset of the tooltip relative to its target. For more information refer to Popper.js's offset docs</td>
+<td>工具提示相对于其目标的偏移量。 有关更多信息，请参阅Popper.js的offsets文档。</td>
 </tr>
 <tr>
 <td><code class="text-nowrap" translate="no">fallbackPlacement</code></td>
 <td>String or Array</td>
 <td><code class="text-nowrap" translate="no">'flip'</code></td>
-<td>Allow to specify which position Popper will use on fallback. Can be <code class="text-nowrap" translate="no">flip</code>, <code class="text-nowrap" translate="no">clockwise</code>, <code class="text-nowrap" translate="no">counterclockwise</code> or an array of placements. For more information refer to Popper.js's behavior docs</td>
+<td>允许指定Popper在回退时将使用的位置。使用 <code class="text-nowrap" translate="no">flip</code>, <code class="text-nowrap" translate="no">clockwise</code>, <code class="text-nowrap" translate="no">counterclockwise</code> 可以进行翻转，顺时针，逆时针或一系列放置。 有关更多信息，请参阅Popper.js的行为文档。</td>
 </tr>
 <tr>
 <td><code class="text-nowrap" translate="no">boundary</code></td>
 <td>String ID or HTMLElement</td>
 <td><code class="text-nowrap" translate="no">'scrollParent'</code></td>
-<td>The container that the tooltip will be constrained visually. The default should suffice in most cases, but you may need to change this if your target element is in a small container with overflow scroll. Supported values: <code class="text-nowrap" translate="no">'scrollParent'</code> (default), <code class="text-nowrap" translate="no">'viewport'</code>, <code class="text-nowrap" translate="no">'window'</code>, or a reference to an HTML element</td>
+<td>工具提示将在视觉上受到约束的容器。 在大多数情况下，默认值就足够了，但是如果目标元素位于带有溢出滚动的小容器中，则可能需要更改此设置。 支持的值： <code class="text-nowrap" translate="no">'scrollParent'</code> (默认值), <code class="text-nowrap" translate="no">'viewport'</code>, <code class="text-nowrap" translate="no">'window'</code>, 或引用HTML元素。</td>
 </tr>
 <tr>
 <td><code class="text-nowrap" translate="no">boundaryPadding</code></td>
 <td>Number</td>
 <td><code class="text-nowrap" translate="no">5</code></td>
-<td>Amount of pixel used to define a minimum distance between the boundaries and the tooltip. This makes sure the tooltip always has a little padding between the edges of its container</td>
+<td>用于定义边界和工具提示之间的最小距离的像素数量。 这样可以确保工具提示在其容器的边缘之间始终有少许填充物。</td>
 </tr>
 <tr>
 <td><code class="text-nowrap" translate="no">interactive</code></td>
 <td>Boolean</td>
 <td><code class="text-nowrap" translate="no">true</code></td>
-<td>Wether the tooltip should be user-interactive</td>
+<td>工具提示是否应与用户互动。</td>
 </tr>
 <tr>
 <td><code class="text-nowrap" translate="no">variant</code></td>
 <td>String</td>
 <td><code class="text-nowrap" translate="no">null</code></td>
-<td>Contextual color variant for the tooltip</td>
+<td>工具提示的上下文颜色变体。</td>
 </tr>
 <tr>
 <td><code class="text-nowrap" translate="no">customClass</code></td>
 <td>String</td>
 <td><code class="text-nowrap" translate="no">null</code></td>
-<td>A custom classname to apply to the tooltip outer wrapper element</td>
+<td>应用于工具提示外部包装器元素的自定义类名。</td>
 </tr>
 <tr>
 <td><code class="text-nowrap" translate="no">id</code></td>
 <td>String</td>
 <td><code class="text-nowrap" translate="no">null</code></td>
-<td>An ID to use on the tooltip root element. If none is provided, one will automatically be generated. If you do provide an ID, it <em>must</em> be guaranteed to be unique on the rendered page</td>
+<td>在工具提示根元素上使用的ID。 如果没有提供，将自动生成一个。 如果确实提供ID，则 <em>必须</em> 确保该ID在呈现的页面上是唯一的。</td>
 </tr>
 <tr>
 <td><code class="text-nowrap" translate="no">disabled</code></td>
 <td>Boolean</td>
 <td><code class="text-nowrap" translate="no">false</code></td>
-<td>Set to <code class="text-nowrap" translate="no">true</code> to disable the tooltip</td>
+<td>设置 <code class="text-nowrap" translate="no">true</code> 禁用工具提示。</td>
 </tr>
 </tbody>
 </table>
 </div>
-<h3 id="usage" class="bv-no-focus-ring"><span class="bd-content-title">Usage<a class="anchorjs-link" href="#usage" aria-labelledby="usage"></a></span></h3>
-<p><strong>Simplest usage:</strong></p>
+<h3 id="usage" class="bv-no-focus-ring"><span class="bd-content-title">用例<a class="anchorjs-link" href="#usage" aria-labelledby="usage"></a></span></h3>
+<p><strong>最简单的用法：</strong></p>
 <div class="bd-code">
 <pre class="hljs  p-2" translate="no">v-b-tooltip="'This is a Tooltip!'"</pre>
 </div>
-<p>or use the element's <code class="text-nowrap" translate="no">title</code> attribute for the tooltip content:</p>
+<p>或使用元素的 <code class="text-nowrap" translate="no">title</code>属性作为工具提示内容：</p>
 <div class="bd-code">
 <pre class="hljs  p-2" translate="no">v-b-tooltip title="This is a title Tooltip"</pre>
 </div>
-<p><strong>Placement examples:</strong></p>
+<p><strong>展示位置示例：</strong></p>
 <div class="bd-code">
 <pre class="hljs  p-2" translate="no">v-b-tooltip.bottom
 v-b-tooltip.right</pre>
 </div>
-<p><strong>Variant examples:</strong></p>
+<p><strong>变体示例：
+</strong></p>
 <div class="bd-code">
 <pre class="hljs  p-2" translate="no">v-b-tooltip.v-primary =&gt; `primary` variant
 v-b-tooltip.v-danger =&gt; `danger` variant</pre>
 </div>
-<p><strong>Trigger examples:</strong></p>
+<p><strong>触发示例：</strong></p>
 <div class="bd-code">
 <pre class="hljs  p-2" translate="no">v-b-tooltip.hover =&gt; Hover only
 v-b-tooltip.click =&gt; Click only
 v-b-tooltip.hover.focus =&gt; Both hover and focus</pre>
 </div>
-<p><strong>Combo:</strong></p>
+<p><strong>组合：</strong></p>
 <div class="bd-code">
 <pre class="hljs  p-2" translate="no">v-b-tooltip.hover.bottom =&gt; Show on hover and place at bottom
 v-b-tooltip.bottom.hover =&gt; Same as above
 v-b-tooltip.bottom.hover.v-danger =&gt; Same as above, but with variant</pre>
 </div>
-<p><strong>Object:</strong></p>
+<p><strong>对象：</strong></p>
 <div class="bd-code">
 <pre class="hljs  p-2" translate="no">v-b-tooltip="{ title: 'Title', placement: 'bottom', variant: 'danger' }"</pre>
 </div>
-<h2 id="hiding-and-showing-tooltips-via-root-events" class="bv-no-focus-ring"><span class="bd-content-title">Hiding and showing tooltips via $root events<a class="anchorjs-link" href="#hiding-and-showing-tooltips-via-root-events" aria-labelledby="hiding-and-showing-tooltips-via-root-events"></a></span></h2>
-<p>You can close (hide) <strong>all open tooltips</strong> by emitting the <code class="text-nowrap" translate="no">bv::hide::tooltip</code> event on $root:</p>
+<h2 id="hiding-and-showing-tooltips-via-root-events" class="bv-no-focus-ring"><span class="bd-content-title">通过$ root事件隐藏和显示工具提示<a class="anchorjs-link" href="#hiding-and-showing-tooltips-via-root-events" aria-labelledby="hiding-and-showing-tooltips-via-root-events"></a></span></h2>
+<p>您可以关闭（隐藏） <strong>所有打开的工具提示</strong> 通过<code class="text-nowrap" translate="no"> bv::hide::tooltip</code> 发射 $ root上的事件：</p>
 <div class="bd-code">
 <pre class="hljs js p-2" translate="no"><span class="hljs-keyword">this</span>.$root.$emit(<span class="hljs-string">'bv::hide::tooltip'</span>)</pre>
 </div>
-<p>To close a <strong>specific tooltip</strong>, pass the trigger element's <code class="text-nowrap" translate="no">id</code>, or the <code class="text-nowrap" translate="no">id</code> of the tooltip (if one
-was provided in the config object) as the first argument:</p>
+<p>要关闭<strong> specific tooltip，</strong>,请将触发器元素的 <code class="text-nowrap" translate="no">id</code>,或 <code class="text-nowrap" translate="no">id</code> 作为工具提示的（如果config对象中提供了该工具的ID）作为第一个参数传递： </p>
 <div class="bd-code">
 <pre class="hljs js p-2" translate="no"><span class="hljs-keyword">this</span>.$root.$emit(<span class="hljs-string">'bv::show::tooltip'</span>, <span class="hljs-string">'my-trigger-button-id'</span>)</pre>
 </div>
-<p>To open a <strong>specific tooltip</strong>, pass the trigger element's <code class="text-nowrap" translate="no">id</code>, or the <code class="text-nowrap" translate="no">id</code> of the tooltip (if one
-was provided in the config object) as the first argument when emitting the <code class="text-nowrap" translate="no">bv::show::tooltip</code> $root event:</p>
+<p>要打开 <strong>specific tooltip</strong>, 请将触发器元素的 <code class="text-nowrap" translate="no">id</code>, 或 <code class="text-nowrap" translate="no">id</code> 作为工具提示（如果有的话
+  是在config对象中提供的）作为发出时的第一个参数 <code class="text-nowrap" translate="no">bv::show::tooltip</code> $root event:</p>
 <div class="bd-code">
 <pre class="hljs js p-2" translate="no"><span class="hljs-keyword">this</span>.$root.$emit(<span class="hljs-string">'bv::show::tooltip'</span>, <span class="hljs-string">'my-trigger-button-id'</span>)</pre>
 </div>
-<p>To open all popovers simultaneously, omit the <code class="text-nowrap" translate="no">id</code> argument when emitting the <code class="text-nowrap" translate="no">bv::show::tooltip</code> event.</p>
-<p>These events work for both the component <strong>and</strong> directive versions of tooltip.</p>
-<p>Note the <strong>trigger element</strong> must exist in the DOM and be in a visible state in order for the
-tooltip to show.</p>
-<h2 id="disabling-and-enabling-tooltips-via-root-events" class="bv-no-focus-ring"><span class="bd-content-title">Disabling and enabling tooltips via $root events<a class="anchorjs-link" href="#disabling-and-enabling-tooltips-via-root-events" aria-labelledby="disabling-and-enabling-tooltips-via-root-events"></a></span></h2>
-<p>You can disable <strong>all open tooltips</strong> by emitting the <code class="text-nowrap" translate="no">bv::disable::tooltip</code> event on $root:</p>
+<p>要同时打开所有弹出窗口，请省略 <code class="text-nowrap" translate="no">id</code> 发出时的参数 <code class="text-nowrap" translate="no">bv::show::tooltip</code> 事件</p>
+<p>这些事件对两个组件均有效 <strong>and</strong>工具提示的指令版本。</p>
+<p>请注意 <strong>trigger 元素</strong> 必须存在于DOM中并且处于可见状态，以便显示工具提示。</p>
+<h2 id="disabling-and-enabling-tooltips-via-root-events" class="bv-no-focus-ring"><span class="bd-content-title">通过$ root事件禁用和启用工具提示<a class="anchorjs-link" href="#disabling-and-enabling-tooltips-via-root-events" aria-labelledby="disabling-and-enabling-tooltips-via-root-events"></a></span></h2>
+<p>你可以通过<strong>所有打开的工具提示</strong>通过发射<code class="text-nowrap" translate="no">bv::disable::tooltip</code> $ root上的事件：</p>
 <div class="bd-code">
 <pre class="hljs js p-2" translate="no"><span class="hljs-keyword">this</span>.$root.$emit(<span class="hljs-string">'bv::disable::tooltip'</span>)</pre>
 </div>
-<p>To disable a <strong>specific tooltip</strong>, pass the trigger element's <code class="text-nowrap" translate="no">id</code>, or the <code class="text-nowrap" translate="no">id</code> of the tooltip (if
-one was provided in the config object) as the first argument:</p>
+<p>禁用 <strong>specific tooltip</strong>, 触发元素的 <code class="text-nowrap" translate="no">id</code>, or the <code class="text-nowrap" translate="no">id</code> 工具提示的（如果
+  config对象中提供了一个）作为第一个参数：</p>
 <div class="bd-code">
 <pre class="hljs js p-2" translate="no"><span class="hljs-keyword">this</span>.$root.$emit(<span class="hljs-string">'bv::disable::tooltip'</span>, <span class="hljs-string">'my-trigger-button-id'</span>)</pre>
 </div>
-<p>To enable a <strong>specific tooltip</strong>, pass the trigger element's <code class="text-nowrap" translate="no">id</code>, or the <code class="text-nowrap" translate="no">id</code> of the tooltip (if
-one was provided in the config object) as the first argument when emitting the <code class="text-nowrap" translate="no">bv::enable::tooltip</code> $root event:</p>
+<p>启用 <strong>specific tooltip</strong>, 通过触发元素的 <code class="text-nowrap" translate="no">id</code>, or the <code class="text-nowrap" translate="no">id</code> 工具提示的（如果
+  发出config对象时提供的第一个参数） <code class="text-nowrap" translate="no">bv::enable::tooltip</code> $root 事件：</p>
 <div class="bd-code">
 <pre class="hljs js p-2" translate="no"><span class="hljs-keyword">this</span>.$root.$emit(<span class="hljs-string">'bv::enable::tooltip'</span>, <span class="hljs-string">'my-trigger-button-id'</span>)</pre>
 </div>
-<p>To enable all popovers simultaneously, omit the <code class="text-nowrap" translate="no">id</code> argument when emitting the <code class="text-nowrap" translate="no">bv::enable::tooltip</code> event.</p>
-<p>These events work for both the component <strong>and</strong> directive versions of tooltip.</p>
-<p>Note the <strong>trigger element</strong> must exist in the DOM in order for the tooltip to be enabled or
-disabled.</p>
-<h2 id="see-also" class="bv-no-focus-ring"><span class="bd-content-title">See also<a class="anchorjs-link" href="#see-also" aria-labelledby="see-also"></a></span></h2>
+<p>要同时启用所有弹出窗口，请省略 <code class="text-nowrap" translate="no">id</code> 发出时的参数 <code class="text-nowrap" translate="no">bv::enable::tooltip</code> 事件。</p>
+<p>这些事件适用于工具提示的组件版本 <strong>和</strong> 指令版本。</p>
+<p>注意<strong> trigger element</strong> 必须在DOM中存在才能启用或禁用工具提示。
+  残障人士。</p>
+<h2 id="see-also" class="bv-no-focus-ring"><span class="bd-content-title">参阅<a class="anchorjs-link" href="#see-also" aria-labelledby="see-also"></a></span></h2>
 <ul>
 <li><a href="/docs/directives/popover" class="font-weight-bold"><code class="text-nowrap" translate="no">v-b-popover</code> directive</a></li>
 <li><a href="/docs/components/tooltip" class="font-weight-bold"><code class="text-nowrap" translate="no">&lt;b-tooltip&gt;</code> component</a></li>
@@ -880,17 +831,16 @@ disabled.</p>
 </ul>
 <!-- Directive reference section auto generated from directive package.json -->
 
-<h2 id="directive-reference" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title">Directive reference<a href="/docs/directives/tooltip#directive-reference" class="anchorjs-link" aria-labelledby="directive-reference" target="_self"></a></span></h2>
-<h3 id="importing-individual-directives" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title"> Importing individual directives <a href="/docs/directives/tooltip#importing-individual-directives" class="anchorjs-link" aria-labelledby="importing-individual-directives" target="_self"></a></span></h3>
-<p> You can import individual directives into your project via the following named
-        exports: </p>
+<h2 id="directive-reference" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title">指令参考<a href="/docs/directives/tooltip#directive-reference" class="anchorjs-link" aria-labelledby="directive-reference" target="_self"></a></span></h2>
+<h3 id="importing-individual-directives" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title"> 导入单个指令 <a href="/docs/directives/tooltip#importing-individual-directives" class="anchorjs-link" aria-labelledby="importing-individual-directives" target="_self"></a></span></h3>
+<p> 您可以通过以下命名的导出将单个指令导入到您的项目中： </p>
 <div class="table-responsive-sm">
 <table role="table" aria-busy="false" aria-colcount="3" class="table b-table bv-docs-table table-striped" id="__BVID__724">
 <thead role="rowgroup" class="thead-default">
 <tr role="row" class="">
-<th role="columnheader" scope="col" aria-colindex="1" class="">Directive</th>
-<th role="columnheader" scope="col" aria-colindex="2" class="">Named Export</th>
-<th role="columnheader" scope="col" aria-colindex="3" class="">Import Path</th>
+<th role="columnheader" scope="col" aria-colindex="1" class="">指令参考</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">命名为 Export</th>
+<th role="columnheader" scope="col" aria-colindex="3" class="">导入路径</th>
 </tr>
 </thead>
 <tbody role="rowgroup">
@@ -902,20 +852,20 @@ disabled.</p>
 </tbody>
 </table>
 </div>
-<p><strong>Example:</strong></p>
+<p><strong>例如：</strong></p>
 <pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { VBTooltip } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
 <span class="hljs-comment">// Note: Vue automatically prefixes the directive name with 'v-'</span>
 Vue.directive(<span class="hljs-string">'b-tooltip'</span>, VBTooltip)</pre>
 </article>
 <article class="bd-content">
-<h3 id="importing-as-a-plugin" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title"> Importing as a Vue.js plugin <a href="/docs/directives/tooltip#importing-as-a-plugin" class="anchorjs-link" aria-labelledby="importing-as-a-plugin" target="_self"></a></span></h3>
-<p> This plugin includes all of the above listed individual directives. </p>
+<h3 id="importing-as-a-plugin" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title">作为Vue.js插件导入 <a href="/docs/directives/tooltip#importing-as-a-plugin" class="anchorjs-link" aria-labelledby="importing-as-a-plugin" target="_self"></a></span></h3>
+<p> 该插件包括上面列出的所有单个指令。 </p>
 <div class="table-responsive-sm">
 <table fileds="namedExport,importPath" role="table" aria-busy="false" aria-colcount="2" class="table b-table bv-docs-table table-striped b-table-caption-top" id="__BVID__734">
 <thead role="rowgroup" class="thead-default">
 <tr role="row" class="">
-<th role="columnheader" scope="col" aria-colindex="1" class="">Named Export</th>
-<th role="columnheader" scope="col" aria-colindex="2" class="">Import Path</th>
+<th role="columnheader" scope="col" aria-colindex="1" class="">命名为 Export</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">导入路径</th>
 </tr>
 </thead>
 <tbody role="rowgroup">
@@ -926,7 +876,7 @@ Vue.directive(<span class="hljs-string">'b-tooltip'</span>, VBTooltip)</pre>
 </tbody>
 </table>
 </div>
-<p><strong>Example:</strong></p>
+<p><strong>列如：</strong></p>
 <pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { VBTooltipPlugin } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
 Vue.use(VBTooltipPlugin)</pre>
 

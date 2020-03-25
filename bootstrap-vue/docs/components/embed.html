@@ -36,7 +36,7 @@
   <div class="navbar-nav-scroll">
     <ul class="navbar-nav bd-navbar-nav flex-row">
       <li class="nav-item"><a class="nav-link " href="../">首页</a></li>
-      <li class="nav-item"><a class="nav-link active" href="../../v4/docs/">中文手册</a></li>
+      <li class="nav-item"><a class="nav-link active" href="../../docs/">中文手册</a></li>
       <li class="nav-item"><a class="nav-link " href="../../v4/examples/">实例</a></li>
       <li class="nav-item dropdown">
 <a class="nav-item nav-link dropdown-toggle mr-md-2" id="bd-versions" aria-expanded="false" aria-haspopup="true" href="#" data-toggle="dropdown"> 主题模板 </a>
@@ -189,16 +189,16 @@
 
 <div class="d-none d-xl-block col-xl-2 bd-toc">
 <ul class="section-nav">
-<li class="nav-item toc-entry mb-2"><a target="_self" href="#responsive-embeds" class="nav-link font-weight-bold"><span>Responsive Embeds</span></a></li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#embed-types" class="nav-link"><span>Embed types</span></a> <!----></li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#aspect-ratios" class="nav-link"><span>Aspect ratios</span></a> <!----></li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#wrapper-element" class="nav-link"><span>Wrapper element</span></a> <!----></li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#attributes-and-child-elements" class="nav-link"><span>Attributes and child elements</span></a> <!----></li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#component-reference" class="nav-link"><span>Component reference</span></a>
+<li class="nav-item toc-entry mb-2"><a target="_self" href="#responsive-embeds" class="nav-link font-weight-bold"><span>嵌入(Responsive Embeds)</span></a></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#embed-types" class="nav-link"><span>嵌入类型</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#aspect-ratios" class="nav-link"><span>宽高比</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#wrapper-element" class="nav-link"><span>包装元素</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#attributes-and-child-elements" class="nav-link"><span>属性和子元素</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#component-reference" class="nav-link"><span>组件引用</span></a>
 <ul class="nav flex-column">
 <li class="nav-item toc-entry toc-h3"><a target="_self" href="#comp-ref-b-embed" class="nav-link"><span>&lt;b-embed&gt;</span></a></li>
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#importing-individual-components" class="nav-link"><span>Importing individual components</span></a></li>
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#importing-as-a-plugin" class="nav-link"><span>Importing as a Vue.js plugin</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#importing-individual-components" class="nav-link"><span>导入单个组件</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#importing-as-a-plugin" class="nav-link"><span>作为Vue.js插件导入</span></a></li>
 </ul>
 </li>
 </ul>
@@ -216,7 +216,7 @@
 </nav>
 <div class="clearfix d-block"></div>
   <h1 class="bd-title" id="content">嵌入(Responsive Embeds)</h1>
-<p class="bd-lead">Create responsive video or slideshow embeds based on the width of the parent by creating an intrinsic ratio that scales on any device.</p>
+<p class="bd-lead">通过创建可在任何设备上缩放的内在比率，根据父对象的宽度创建自适应视频或幻灯片嵌入。</p>
   <script type="text/javascript" src="../../../v4/assets/js/pupCMS.js"></script>
 
 
@@ -239,7 +239,7 @@
 </li>
 </ul>
 </nav>
-<p>Rules are directly applied to <code translate="no" class="notranslate text-nowrap">&lt;iframe&gt;</code>, <code translate="no" class="notranslate text-nowrap">&lt;embed&gt;</code>, <code translate="no" class="notranslate text-nowrap">&lt;video&gt;</code>, and <code translate="no" class="notranslate text-nowrap">&lt;object&gt;</code> elements</p>
+<p>规则直接应用于 <code translate="no" class="notranslate text-nowrap">&lt;iframe&gt;</code> ，<code translate="no" class="notranslate text-nowrap">&lt;embed&gt;</code> ，<code translate="no" class="notranslate text-nowrap">&lt;video&gt;</code> ，和 <code translate="no" class="notranslate text-nowrap">&lt;object&gt;</code> 元素</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-embed notranslate">
 <div>
 <div class="embed-responsive embed-responsive-16by9">
@@ -255,21 +255,17 @@
     <span class="hljs-attr">allowfullscreen</span>
   &gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-embed</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
-<h2 id="embed-types" class="bv-no-focus-ring"><span class="bd-content-title">Embed types<a class="anchorjs-link" href="#embed-types" aria-labelledby="embed-types"></a></span></h2>
-<p>Supported embed types are <code translate="no" class="notranslate text-nowrap">iframe</code> (default), <code translate="no" class="notranslate text-nowrap">video</code>, <code translate="no" class="notranslate text-nowrap">embed</code> and <code translate="no" class="notranslate text-nowrap">object</code>, which translate to the
-standard HTML <code translate="no" class="notranslate text-nowrap">&lt;iframe&gt;</code>, <code translate="no" class="notranslate text-nowrap">&lt;video&gt;</code>, <code translate="no" class="notranslate text-nowrap">&lt;embed&gt;</code> and <code translate="no" class="notranslate text-nowrap">&lt;object&gt;</code> elements.</p>
-<p>Set the type of embed you would like via the <code translate="no" class="notranslate text-nowrap">type</code> prop.</p>
-<h2 id="aspect-ratios" class="bv-no-focus-ring"><span class="bd-content-title">Aspect ratios<a class="anchorjs-link" href="#aspect-ratios" aria-labelledby="aspect-ratios"></a></span></h2>
-<p>Aspect ratios can be set via the <code translate="no" class="notranslate text-nowrap">aspect</code> prop. Supported aspect ratios are: <code translate="no" class="notranslate text-nowrap">21by9</code> (21:9), <code translate="no" class="notranslate text-nowrap">16by9</code> (16:9), <code translate="no" class="notranslate text-nowrap">4by3</code> (4:3) and <code translate="no" class="notranslate text-nowrap">1by1</code> (1:1). The default aspect is <code translate="no" class="notranslate text-nowrap">16by9</code>. Aspect ratios are defined in
-Bootstrap's SCSS and translate to the classname <code translate="no" class="notranslate text-nowrap">embed-responsive-{aspect}</code> (i.e. <code translate="no" class="notranslate text-nowrap">embed-responsive-16by9</code>, <code translate="no" class="notranslate text-nowrap">embed-responsive-4by3</code>, etc.).</p>
-<h2 id="wrapper-element" class="bv-no-focus-ring"><span class="bd-content-title">Wrapper element<a class="anchorjs-link" href="#wrapper-element" aria-labelledby="wrapper-element"></a></span></h2>
-<p>The Responsive embed is wrapped in an outer element (default is <code translate="no" class="notranslate text-nowrap">div</code>) to enforce the responsive
-aspect ratio. You can change this tag via the <code translate="no" class="notranslate text-nowrap">tag</code> prop.</p>
-<h2 id="attributes-and-child-elements" class="bv-no-focus-ring"><span class="bd-content-title">Attributes and child elements<a class="anchorjs-link" href="#attributes-and-child-elements" aria-labelledby="attributes-and-child-elements"></a></span></h2>
-<p>Any additional attributes provided to <code translate="no" class="notranslate text-nowrap">&lt;b-embed&gt;</code> (other than the above <code translate="no" class="notranslate text-nowrap">type</code>, <code translate="no" class="notranslate text-nowrap">aspect</code> and <code translate="no" class="notranslate text-nowrap">tag</code> props) are applied to the inner embedded element (i.e. the <code translate="no" class="notranslate text-nowrap">iframe</code>, <code translate="no" class="notranslate text-nowrap">video</code>, <code translate="no" class="notranslate text-nowrap">embed</code> or <code translate="no" class="notranslate text-nowrap">object</code>).</p>
-<p>Any children elements between the opening and closing <code translate="no" class="notranslate text-nowrap">&lt;b-embed&gt;</code> will be placed inside the inner
-embedded element. Note that the type <code translate="no" class="notranslate text-nowrap">iframe</code> does not support any children.</p>
-<p><strong>Example: Responsive embedding of an HTML5 <code translate="no" class="notranslate text-nowrap">&lt;video&gt;</code></strong></p>
+<h2 id="embed-types" class="bv-no-focus-ring"><span class="bd-content-title">嵌入类型<a class="anchorjs-link" href="#embed-types" aria-labelledby="embed-types"></a></span></h2>
+<p>支持的嵌入类型为 <code translate="no" class="notranslate text-nowrap">iframe</code>（默认），<code translate="no" class="notranslate text-nowrap">video</code>（视频），<code translate="no" class="notranslate text-nowrap">embed</code>（嵌入）和 <code translate="no" class="notranslate text-nowrap">object</code>（对象），它们可以转换为标准 HTML <code translate="no" class="notranslate text-nowrap">&lt;iframe&gt;</code> ，<code translate="no" class="notranslate text-nowrap">&lt;video&gt;</code> ，<code translate="no" class="notranslate text-nowrap">&lt;embed&gt;</code> 和 <code translate="no" class="notranslate text-nowrap">&lt;object&gt;</code> 元素。</p>
+<p>通过 <code translate="no" class="notranslate text-nowrap">type</code> 属性设置您想要的嵌入类型，</p>
+<h2 id="aspect-ratios" class="bv-no-focus-ring"><span class="bd-content-title">宽高比<a class="anchorjs-link" href="#aspect-ratios" aria-labelledby="aspect-ratios"></a></span></h2>
+<p>纵横比可以通过 <code translate="no" class="notranslate text-nowrap">aspect</code> 属性来设置。支持的宽高比为：<code translate="no" class="notranslate text-nowrap">21by9</code> (21:9), <code translate="no" class="notranslate text-nowrap">16by9</code> (16:9), <code translate="no" class="notranslate text-nowrap">4by3</code> (4:3) 和 <code translate="no" class="notranslate text-nowrap">1by1</code> (1:1)。默认方面是 <code translate="no" class="notranslate text-nowrap">16by9</code> 。长宽比是在 Bootstrap 的 SCSS 中定义的，并转换为类名 <code translate="no" class="notranslate text-nowrap">embed-responsive-{aspect}</code>（即 <code translate="no" class="notranslate text-nowrap">embed-responsive-16by9</code>，<code translate="no" class="notranslate text-nowrap">embed-responsive-4by3</code> 等）。</p>
+<h2 id="wrapper-element" class="bv-no-focus-ring"><span class="bd-content-title">包装元素<a class="anchorjs-link" href="#wrapper-element" aria-labelledby="wrapper-element"></a></span></h2>
+<p>响应式嵌入被包装在外部元素中（默认值为 <code translate="no" class="notranslate text-nowrap">div</code> ），以强制执行响应式宽高比。您可以通过 <code translate="no" class="notranslate text-nowrap">tag</code> 属性更改此标签。</p>
+<h2 id="attributes-and-child-elements" class="bv-no-focus-ring"><span class="bd-content-title">属性和子元素<a class="anchorjs-link" href="#attributes-and-child-elements" aria-labelledby="attributes-and-child-elements"></a></span></h2>
+<p>提供给 <code translate="no" class="notranslate text-nowrap">&lt;b-embed&gt;</code>的任何其他属性（上述 <code translate="no" class="notranslate text-nowrap">type</code>，<code translate="no" class="notranslate text-nowrap">aspect</code> 和 <code translate="no" class="notranslate text-nowrap">tag</code> 属性除外）都将应用于内部嵌入元素（即 <code translate="no" class="notranslate text-nowrap">iframe</code>, <code translate="no" class="notranslate text-nowrap">video</code>，<code translate="no" class="notranslate text-nowrap">embed</code> 或 <code translate="no" class="notranslate text-nowrap">object</code> ）。</p>
+<p>在开始和结束 <code translate="no" class="notranslate text-nowrap">&lt;b-embed&gt;</code> 之间的所有子元素都将放置在内部嵌入的元素内。请注意，<code translate="no" class="notranslate text-nowrap">iframe</code> 类型不支持任何子级。</p>
+<p><strong>示例：HTML5 <code translate="no" class="notranslate text-nowrap">&lt;video&gt;</code> 的自适应嵌入</strong></p>
 <pre class="hljs html text-monospace p-2 notranslate" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-embed</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"video"</span> <span class="hljs-attr">aspect</span>=<span class="hljs-string">"4by3"</span> <span class="hljs-attr">controls</span> <span class="hljs-attr">poster</span>=<span class="hljs-string">"poster.png"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">source</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"dev-stories.webm"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"video/webm"</span>&gt;</span>
@@ -278,26 +274,26 @@ embedded element. Note that the type <code translate="no" class="notranslate tex
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
 <!-- Component reference added automatically from component package.json -->
 
-<h2 id="component-reference" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title">Component reference<a href="../../../bootstrap-vue/docs/components/embed#component-reference" class="anchorjs-link" aria-labelledby="component-reference" target="_self"></a></span></h2>
+<h2 id="component-reference" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title">组件引用<a href="../../../bootstrap-vue/docs/components/embed#component-reference" class="anchorjs-link" aria-labelledby="component-reference" target="_self"></a></span></h2>
 <header data-v-866a22e8="" class="row align-items-center">
 <div data-v-866a22e8="" class="col-sm-9">
 <h3 data-v-866a22e8="" id="comp-ref-b-embed" tabindex="-1" class="bv-no-focus-ring"><span data-v-866a22e8="" class="bd-content-title"><code data-v-866a22e8="" translate="translate" class="notranslate bigger">&lt;b-embed&gt;</code><a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/embed#comp-ref-b-embed" class="anchorjs-link" aria-labelledby="comp-ref-b-embed" target="_self"></a></span></h3>
-<a data-v-866a22e8="" rel="noopener" target="_blank" href="https://vuejs.org/v2/guide/render-function.html#Functional-Components" class="badge badge-secondary"> Functional Component </a></div>
-<div data-v-866a22e8="" class="text-sm-right col-sm-3"><a data-v-866a22e8="" rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev/src/components/embed/embed.js" class="btn btn-outline-secondary btn-sm"> View source </a></div>
+<a data-v-866a22e8="" rel="noopener" target="_blank" href="https://vuejs.org/v2/guide/render-function.html#Functional-Components" class="badge badge-secondary"> 功能组件 </a></div>
+<div data-v-866a22e8="" class="text-sm-right col-sm-3"><a data-v-866a22e8="" rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev/src/components/embed/embed.js" class="btn btn-outline-secondary btn-sm"> 查看源代码 </a></div>
 </header>
 <ul data-v-866a22e8="" class="component-ref-mini-toc my-3">
-<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-embed-props"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-embed&gt;</code> Properties </a></li>
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-embed-props"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-embed&gt;</code> 属性 </a></li>
 </ul>
 <article data-v-866a22e8="" class="bd-content">
-<h4 data-v-866a22e8="" id="comp-ref-b-embed-props" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> Properties <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/embed#comp-ref-b-embed-props" class="anchorjs-link" aria-labelledby="comp-ref-b-embed-props" target="_self"></a></span></h4>
+<h4 data-v-866a22e8="" id="comp-ref-b-embed-props" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> 属性 <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/embed#comp-ref-b-embed-props" class="anchorjs-link" aria-labelledby="comp-ref-b-embed-props" target="_self"></a></span></h4>
 <div data-v-866a22e8="" class="table-responsive-sm">
 <table role="table" aria-busy="false" aria-colcount="4" class="table b-table bv-docs-table table-striped" id="__BVID__2710">
 <thead role="rowgroup" class="">
 <tr role="row" class="">
-<th role="columnheader" scope="col" aria-colindex="1" class="">Property</th>
-<th role="columnheader" scope="col" aria-colindex="2" class="">Type</th>
-<th role="columnheader" scope="col" aria-colindex="3" class="">Default</th>
-<th role="columnheader" scope="col" aria-colindex="4" class="">Description</th>
+<th role="columnheader" scope="col" aria-colindex="1" class="">属性</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">类型</th>
+<th role="columnheader" scope="col" aria-colindex="3" class="">默认值</th>
+<th role="columnheader" scope="col" aria-colindex="4" class="">描述</th>
 </tr>
 </thead>
 <tbody role="rowgroup">
@@ -305,35 +301,34 @@ embedded element. Note that the type <code translate="no" class="notranslate tex
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">type</code></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'iframe'</code></td>
-<td aria-colindex="4" role="cell" class="">Type of embed. Possible values are 'iframe', 'video', 'embed' and 'object'</td>
+<td aria-colindex="4" role="cell" class="">嵌入类型。可能的值为 'iframe', 'video', 'embed' 和 'object'</td>
 </tr>
 <tr role="row" data-pk="tag" class="" id="__BVID__2710__row_tag">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">tag</code></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'div'</code></td>
-<td aria-colindex="4" role="cell" class="">Specify the HTML tag to render instead of the default tag</td>
+<td aria-colindex="4" role="cell" class="">指定要渲染的 HTML 标记，而不是默认标记</td>
 </tr>
 <tr role="row" data-pk="aspect" class="" id="__BVID__2710__row_aspect">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">aspect</code></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'16by9'</code></td>
-<td aria-colindex="4" role="cell" class="">Aspect ratio of the embed. Supported values are '16by9', '21by9', '4by3', and '1by1' and are translated to CSS classes. Refer to the docs for more details</td>
+<td aria-colindex="4" role="cell" class="">嵌入的长宽比。支持的值是'16：9', '21：9', '4：3', 和 '1：1' 并被转换为 CSS 类。更多细节请参考文档</td>
 </tr>
 </tbody>
 </table>
 </div>
 </article>
 <article class="bd-content">
-<h3 id="importing-individual-components" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title"> Importing individual components <a href="../../../bootstrap-vue/docs/components/embed#importing-individual-components" class="anchorjs-link" aria-labelledby="importing-individual-components" target="_self"></a></span></h3>
-<p> You can import individual components into your project via the following named
-        exports: </p>
+<h3 id="importing-individual-components" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title"> 导入单个组件 <a href="../../../bootstrap-vue/docs/components/embed#importing-individual-components" class="anchorjs-link" aria-labelledby="importing-individual-components" target="_self"></a></span></h3>
+<p>您可以通过以下命名的导出将单个指令导入到您的项目中：</p>
 <div class="table-responsive-sm">
 <table role="table" aria-busy="false" aria-colcount="3" class="table b-table bv-docs-table table-striped" id="__BVID__2724">
 <thead role="rowgroup" class="thead-default">
 <tr role="row" class="">
-<th role="columnheader" scope="col" aria-colindex="1" class="">Component</th>
-<th role="columnheader" scope="col" aria-colindex="2" class="">Named Export</th>
-<th role="columnheader" scope="col" aria-colindex="3" class="">Import Path</th>
+<th role="columnheader" scope="col" aria-colindex="1" class="">组件</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">命名输出</th>
+<th role="columnheader" scope="col" aria-colindex="3" class="">导入路径</th>
 </tr>
 </thead>
 <tbody role="rowgroup">
@@ -345,21 +340,19 @@ embedded element. Note that the type <code translate="no" class="notranslate tex
 </tbody>
 </table>
 </div>
-<p><strong>Example:</strong></p>
+<p><strong>示例：</strong></p>
 <pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { BEmbed } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
 Vue.component(<span class="hljs-string">'b-embed'</span>, BEmbed)</pre>
 </article>
 <article class="bd-content">
-<h3 id="importing-as-a-plugin" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title"> Importing as a Vue.js plugin <a href="../../../bootstrap-vue/docs/components/embed#importing-as-a-plugin" class="anchorjs-link" aria-labelledby="importing-as-a-plugin" target="_self"></a></span></h3>
-<p> This plugin includes all of the above listed individual
-      components.
-      Plugins also include any component aliases. </p>
+<h3 id="importing-as-a-plugin" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title"> 作为Vue.js插件导入 <a href="../../../bootstrap-vue/docs/components/embed#importing-as-a-plugin" class="anchorjs-link" aria-labelledby="importing-as-a-plugin" target="_self"></a></span></h3>
+<p> 该插件包括上面列出的所有单个组件和指令。插件还包括任何组件别名。 </p>
 <div class="table-responsive-sm">
 <table fileds="namedExport,importPath" role="table" aria-busy="false" aria-colcount="2" class="table b-table bv-docs-table table-striped b-table-caption-top" id="__BVID__2734">
 <thead role="rowgroup" class="thead-default">
 <tr role="row" class="">
-<th role="columnheader" scope="col" aria-colindex="1" class="">Named Export</th>
-<th role="columnheader" scope="col" aria-colindex="2" class="">Import Path</th>
+<th role="columnheader" scope="col" aria-colindex="1" class="">命名输出</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">导入路径</th>
 </tr>
 </thead>
 <tbody role="rowgroup">
@@ -370,7 +363,7 @@ Vue.component(<span class="hljs-string">'b-embed'</span>, BEmbed)</pre>
 </tbody>
 </table>
 </div>
-<p><strong>Example:</strong></p>
+<p><strong>示例：</strong></p>
 <pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { EmbedPlugin } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
 Vue.use(EmbedPlugin)</pre>
 </article>

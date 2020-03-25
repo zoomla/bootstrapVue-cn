@@ -36,7 +36,7 @@
   <div class="navbar-nav-scroll">
     <ul class="navbar-nav bd-navbar-nav flex-row">
       <li class="nav-item"><a class="nav-link " href="../">首页</a></li>
-      <li class="nav-item"><a class="nav-link active" href="../../v4/docs/">中文手册</a></li>
+      <li class="nav-item"><a class="nav-link active" href="../../docs/">中文手册</a></li>
       <li class="nav-item"><a class="nav-link " href="../../v4/examples/">实例</a></li>
       <li class="nav-item dropdown">
 <a class="nav-item nav-link dropdown-toggle mr-md-2" id="bd-versions" aria-expanded="false" aria-haspopup="true" href="#" data-toggle="dropdown"> 主题模板 </a>
@@ -323,7 +323,8 @@
 </nav>
 <div class="clearfix d-block"></div>
   <h1 class="bd-title" id="content">表格(Tables)</h1>
-  <p class="bd-lead">For displaying tabular data, <code translate="no" class="notranslate text-nowrap">&lt;b-table&gt;</code> supports pagination, filtering, sorting, custom rendering, various style options, events, and asynchronous data. For simple display of tabular data without all the fancy features, BootstrapVue provides two lightweight alternative components <a href="#light-weight-tables" class="font-weight-bold"><code translate="no" class="notranslate text-nowrap">&lt;b-table-lite&gt;</code></a> and <a href="#simple-tables" class="font-weight-bold"><code translate="no" class="notranslate text-nowrap">&lt;b-table-simple&gt;</code></a>.</p>
+  <p class="bd-lead">使用<code translate="no" class="notranslate text-nowrap">&lt;b-table&gt;</code>输出表格，并支持分页、过滤、排序、自定义呈现，各种样式选项，事件和异步数据。 为支持在不具备所有高级功能的情况下简单地显示表格数据，BootstrapVue提供了两个轻巧的替代组件，
+  <a href="#light-weight-tables" class="font-weight-bold"><code translate="no" class="notranslate text-nowrap">&lt;b-table-lite&gt;</code></a> and <a href="#simple-tables" class="font-weight-bold"><code translate="no" class="notranslate text-nowrap">&lt;b-table-simple&gt;</code></a>.</p>
   <script type="text/javascript" src="../../../v4/assets/js/pupCMS.js"></script>
 
 
@@ -459,15 +460,15 @@
 </li>
 </ul>
 </nav>
-<p><strong>Example: Basic usage</strong></p>
+<p><strong>示例：基本用法</strong></p>
 <div translate="translate" class="bd-example vue-example vue-example-b-table notranslate">
 <div>
 <table role="table" aria-busy="false" aria-colcount="3" class="table b-table table-striped table-hover" id="__BVID__841">
 <thead role="rowgroup" class="">
 <tr role="row" class="">
-<th role="columnheader" scope="col" aria-colindex="1" class="">Age</th>
-<th role="columnheader" scope="col" aria-colindex="2" class="">First Name</th>
-<th role="columnheader" scope="col" aria-colindex="3" class="">Last Name</th>
+<th role="columnheader" scope="col" aria-colindex="1" class="">年龄</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">姓氏<th>
+<th role="columnheader" scope="col" aria-colindex="3" class="">名字</th>
 </tr>
 </thead>
 <tbody role="rowgroup">
@@ -515,9 +516,8 @@
     }
   }
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
-<h2 id="items-record-data" class="bv-no-focus-ring"><span class="bd-content-title">Items (record data)<a class="anchorjs-link" href="#items-record-data" aria-labelledby="items-record-data"></a></span></h2>
-<p><code translate="no" class="notranslate text-nowrap">items</code> is the table data in array format, where each record (row) data are keyed objects. Example
-format:</p>
+<h2 id="items-record-data" class="bv-no-focus-ring"><span class="bd-content-title">项目（记录数据）<a class="anchorjs-link" href="#items-record-data" aria-labelledby="items-record-data"></a></span></h2>
+<p><code translate="no" class="notranslate text-nowrap">items</code> items是数组格式的表数据，其中每个记录（行）数据都是键对象。 示例格式：</p>
 <!-- eslint-disable no-unused-vars -->
 
 <pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-keyword">const</span> items = [
@@ -525,32 +525,27 @@ format:</p>
   { <span class="hljs-attr">age</span>: <span class="hljs-number">27</span>, <span class="hljs-attr">first_name</span>: <span class="hljs-string">'Havij'</span> },
   { <span class="hljs-attr">age</span>: <span class="hljs-number">42</span>, <span class="hljs-attr">first_name</span>: <span class="hljs-string">'Robert'</span> }
 ]</pre>
-<p><code translate="no" class="notranslate text-nowrap">&lt;b-table&gt;</code> automatically samples the first row to extract field names (the keys in the record
-data). Field names are automatically "humanized" by converting <code translate="no" class="notranslate text-nowrap">kebab-case</code>, <code translate="no" class="notranslate text-nowrap">snake_case</code>, and <code translate="no" class="notranslate text-nowrap">camelCase</code> to individual words and capitalizes each word. Example conversions:</p>
+<p><code translate="no" class="notranslate text-nowrap">&lt;b-table&gt;</code> 自动对第一行进行采样以提取字段名称（记录数据中的键）。 字段名称是自动的 
+<code translate="no" class="notranslate text-nowrap">kebab-case</code>, <code translate="no" class="notranslate text-nowrap">snake_case</code>, and
+ <code translate="no" class="notranslate text-nowrap">camelCase</code> kebab-case，snake_case和camel对单个单词进行大写并为每个单词大写。 转换示例:</p>
 <ul>
-<li><code translate="no" class="notranslate text-nowrap">first_name</code> becomes <code translate="no" class="notranslate text-nowrap">First Name</code></li>
-<li><code translate="no" class="notranslate text-nowrap">last-name</code> becomes <code translate="no" class="notranslate text-nowrap">Last Name</code></li>
-<li><code translate="no" class="notranslate text-nowrap">age</code> becomes <code translate="no" class="notranslate text-nowrap">Age</code></li>
-<li><code translate="no" class="notranslate text-nowrap">YEAR</code> remains <code translate="no" class="notranslate text-nowrap">YEAR</code></li>
-<li><code translate="no" class="notranslate text-nowrap">isActive</code> becomes <code translate="no" class="notranslate text-nowrap">Is Active</code></li>
+<li><code translate="no" class="notranslate text-nowrap">first_name</code> 成为 <code translate="no" class="notranslate text-nowrap">first name</code></li>
+<li><code translate="no" class="notranslate text-nowrap">last-name</code> 成为<code translate="no" class="notranslate text-nowrap">last name </code></li>
+<li><code translate="no" class="notranslate text-nowrap">age</code> 成为 <code translate="no" class="notranslate text-nowrap">Age</code></li>
+<li><code translate="no" class="notranslate text-nowrap">YEAR</code> 代替 <code translate="no" class="notranslate text-nowrap">YEAR</code></li>
+<li><code translate="no" class="notranslate text-nowrap">isActive</code> 成为 <code translate="no" class="notranslate text-nowrap">Is Active</code></li>
 </ul>
-<p>These titles will be displayed in the table header, in the order they appear in the <strong>first</strong> record
-of data. See the <a href="#fields-column-definitions" class="font-weight-bold">Fields</a> section below for customizing how field
-headings appear.</p>
-<p><strong>Note:</strong> Field order is not guaranteed. Fields will typically appear in the order they were defined
-in the first row, but this may not always be the case depending on the version of browser in use.
-See section <a href="#fields-column-definitions" class="font-weight-bold">Fields (column definitions)</a> below to see how to guarantee
-the order of fields, and to override the headings generated.</p>
-<p>Record data may also have additional special reserved name keys for colorizing rows and individual
-cells (variants), and for triggering additional row detail. The supported optional item record
-modifier properties (make sure your field keys do not conflict with these names):</p>
+<p>这些标题将按照它们在<strong>第一</strong>条数据记录中出现的顺序显示在表标题中。 请参阅下面的“字段”部分，以自定义字段标题的显示方式。</p>
+<p><strong>注意:</strong> 无法保证现场订购。 字段通常会按照它们在第一行中定义的顺序出现，但是根据所使用的浏览器版本的不同，情况并非总是如此。 请参阅<a href="#fields-column-definitions" class="font-weight-bold">字段（列定义）</a> 下面的部分，以了解如何保证字段的顺序以及如何覆盖生成的标题。 
+  .</p>
+<p>记录数据可能还具有其他特殊的保留名称键，用于为行和单个单元格（变体）着色，以及触发其他行详细信息。 受支持的可选项目记录修改器属性（确保您的字段键与这些名称不冲突）：</p>
 <div class="table-responsive-sm">
 <table class="b-table table table-bordered table-striped bv-docs-table">
 <thead class="thead-default">
 <tr>
-<th>Property</th>
-<th>Type</th>
-<th>Description</th>
+<th>财产</th>
+<th>类型</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
@@ -572,15 +567,15 @@ modifier properties (make sure your field keys do not conflict with these names)
 </tbody>
 </table>
 </div>
-<p><strong>Example: Using variants for table cells</strong></p>
+<p><strong>示例：对表单元格使用变体</strong></p>
 <div translate="translate" class="bd-example vue-example vue-example-b-table-variants notranslate">
 <div>
 <table role="table" aria-busy="false" aria-colcount="3" class="table b-table table-hover" id="__BVID__853">
 <thead role="rowgroup" class="">
 <tr role="row" class="">
-<th role="columnheader" scope="col" aria-colindex="1" class="">Age</th>
-<th role="columnheader" scope="col" aria-colindex="2" class="">First Name</th>
-<th role="columnheader" scope="col" aria-colindex="3" class="">Last Name</th>
+<th role="columnheader" scope="col" aria-colindex="1" class="">年龄</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">姓氏</th>
+<th role="columnheader" scope="col" aria-colindex="3" class="">名字</th>
 </tr>
 </thead>
 <tbody role="rowgroup">
@@ -644,43 +639,36 @@ modifier properties (make sure your field keys do not conflict with these names)
     }
   }
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
-<p><code translate="no" class="notranslate text-nowrap">items</code> can also be a reference to a <em>provider</em> function, which returns an <code translate="no" class="notranslate text-nowrap">Array</code> of items data.
-Provider functions can also be asynchronous:</p>
+<p><code translate="no" class="notranslate text-nowrap">items</code> 也可以是对提供程序函数的引用，该函数将返回一个Array of items数据。 提供程序功能也可以是异步的：</p>
 <ul>
-<li>By returning <code translate="no" class="notranslate text-nowrap">null</code> (or <code translate="no" class="notranslate text-nowrap">undefined</code>) and calling a callback, when the data is ready, with the data
-array as the only argument to the callback,</li>
-<li>By returning a <code translate="no" class="notranslate text-nowrap">Promise</code> that resolves to an array.</li>
+<li>在数据准备好后，以数据组作为回调的唯一参数，通过返回 <code translate="no" class="notranslate text-nowrap">null</code> (或 <code translate="no" class="notranslate text-nowrap">
+  未定义</code>) 并调用回调</li>
+<li>通过返回解析为数组的<code translate="no" class="notranslate text-nowrap">Promise</code></li>
 </ul>
-<p>See the <a href="#using-items-provider-functions" class="font-weight-bold">"Using Items Provider functions"</a> section below for more
-details.</p>
-<h3 id="table-item-notes-and-warnings" class="bv-no-focus-ring"><span class="bd-content-title">Table item notes and warnings<a class="anchorjs-link" href="#table-item-notes-and-warnings" aria-labelledby="table-item-notes-and-warnings"></a></span></h3>
+<p>有关更多的消息 <a href="#using-items-provider-functions" class="font-weight-bold"></a> 请参见下面的“使用项目提供程序功能”部分</p>
+<h3 id="table-item-notes-and-warnings" class="bv-no-focus-ring"><span class="bd-content-title">表项目注释和警告<a class="anchorjs-link" href="#table-item-notes-and-warnings" aria-labelledby="table-item-notes-and-warnings"></a></span></h3>
 <ul>
-<li>Avoid manipulating record data in place, as changes to the underlying items data will cause either
-the row or entire table to be re-rendered. See <a href="#primary-key" class="font-weight-bold">Primary Key</a>, below, for ways to
-minimize Vue's re-rendering of rows.</li>
-<li><code translate="no" class="notranslate text-nowrap">items</code> array records should be a simple object and <strong>must</strong> avoid placing data that may have
-circular references in the values within a row. <code translate="no" class="notranslate text-nowrap">&lt;b-table&gt;</code> serializes the row data into strings
-for sorting and filtering, and circular references will cause stack overflows to occur and your
-app to crash!</li>
+<li>避免就地操作记录数据，因为对基础项数据的更改将导致重新呈现行或整个表。请参阅下面的 <a href="#primary-key" class="font-weight-bold">主键</a>以了解最小化Vue重新呈现行的方法。</li>
+<li><code translate="no" class="notranslate text-nowrap">items</code> items数组记录应该是一个简单的对象，并且 <strong>必须</strong> 必须避免将可能具有循环引用的数据放在行中的值中。
+   <code translate="no" class="notranslate text-nowrap">&lt;b-table&gt;</code> 将行数据序列化为字符串以进行排序和筛选，循环引用将导致堆栈溢出和应用程序崩溃！</li>
 </ul>
-<h2 id="fields-column-definitions" class="bv-no-focus-ring"><span class="bd-content-title">Fields (column definitions)<a class="anchorjs-link" href="#fields-column-definitions" aria-labelledby="fields-column-definitions"></a></span></h2>
-<p>The <code translate="no" class="notranslate text-nowrap">fields</code> prop is used to customize the table columns headings, and in which order the columns of
-data are displayed. The field object keys (i.e. <code translate="no" class="notranslate text-nowrap">age</code> or <code translate="no" class="notranslate text-nowrap">first_name</code> as shown below) are used to
-extract the value from each item (record) row, and to provide additional features such as enabling <a href="#sorting" class="font-weight-bold">sorting</a> on the column, etc.</p>
-<p>Fields can be provided as a <em>simple array</em> or an <em>array of objects</em>. <strong>Internally the fields data
-will be normalized into the <em>array of objects</em> format</strong>. Events or slots that include the column <code translate="no" class="notranslate text-nowrap">field</code> data will be in the normalized field object format (array of objects for <code translate="no" class="notranslate text-nowrap">fields</code>, or an
-object for an individual <code translate="no" class="notranslate text-nowrap">field</code>).</p>
-<h3 id="fields-as-a-simple-array" class="bv-no-focus-ring"><span class="bd-content-title">Fields as a simple array<a class="anchorjs-link" href="#fields-as-a-simple-array" aria-labelledby="fields-as-a-simple-array"></a></span></h3>
-<p>Fields can be a simple array, for defining the order of the columns, and which columns to display:</p>
-<p><strong>Example: Using <code translate="no" class="notranslate text-nowrap">array</code> fields definition</strong></p>
+<h2 id="fields-column-definitions" class="bv-no-focus-ring"><span class="bd-content-title">字段（列定义）<a class="anchorjs-link" href="#fields-column-definitions" aria-labelledby="fields-column-definitions"></a></span></h2>
+<p>The <code translate="no" class="notranslate text-nowrap">fields</code>属性用于自定义表列标题，以及数据列的显示顺序。字段对象键 (i.e. <code translate="no" class="notranslate text-nowrap">age</code> or <code translate="no" class="notranslate text-nowrap">first_name</code> as shown below) are used to
+  如下图所示，年龄或名字）用于从每个项目（记录）行中提取值，并提供其他功能，如对列启用排序等。 <a href="#sorting" class="font-weight-bold">sorting</a> on the column, etc.</p>
+<p>Fields can be provided as a <em>simple array</em> 字段可以作为简单数组或对象数组提供。<strong>字段数据内部将规范化为 <em>包含列字段数据的事件或槽位将采用规范化字段对象格式（字段的对象数组或单个字段的对象数组）。
+</em> format</strong>. 包含该列的事件或广告位<code translate="no" class="notranslate text-nowrap">field</code>字段可以是一个简单的数组，用于定义列的顺序以及要显示的列：<code translate="no" class="notranslate text-nowrap">fields</code>
+字段或单个字段的对象</p>
+<h3 id="fields-as-a-simple-array" class="bv-no-focus-ring"><span class="bd-content-title">字段作为简单数组<a class="anchorjs-link" href="#fields-as-a-simple-array" aria-labelledby="fields-as-a-simple-array"></a></span></h3>
+<p>字段可以是一个简单的数组，用于定义列的顺序以及要显示的列：</p>
+<p><strong>列如: 使用 <code translate="no" class="notranslate text-nowrap">数字段</code> 定义组</strong></p>
 <div translate="translate" class="bd-example vue-example vue-example-b-table-fields-array notranslate">
 <div>
 <table role="table" aria-busy="false" aria-colcount="3" class="table b-table table-striped table-hover" id="__BVID__866">
 <thead role="rowgroup" class="">
 <tr role="row" class="">
-<th role="columnheader" scope="col" aria-colindex="1" class="">First Name</th>
-<th role="columnheader" scope="col" aria-colindex="2" class="">Last Name</th>
-<th role="columnheader" scope="col" aria-colindex="3" class="">Age</th>
+<th role="columnheader" scope="col" aria-colindex="1" class="">姓氏</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">名字</th>
+<th role="columnheader" scope="col" aria-colindex="3" class="">年纪</th>
 </tr>
 </thead>
 <tbody role="rowgroup">
@@ -730,10 +718,9 @@ object for an individual <code translate="no" class="notranslate text-nowrap">fi
     }
   }
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
-<h3 id="fields-as-an-array-of-objects" class="bv-no-focus-ring"><span class="bd-content-title">Fields as an array of objects<a class="anchorjs-link" href="#fields-as-an-array-of-objects" aria-labelledby="fields-as-an-array-of-objects"></a></span></h3>
-<p>Fields can be a an array of objects, providing additional control over the fields (such as sorting,
-formatting, etc). Only columns (keys) that appear in the fields array will be shown:</p>
-<p><strong>Example: Using array of objects fields definition</strong></p>
+<h3 id="fields-as-an-array-of-objects" class="bv-no-focus-ring"><span class="bd-content-title">字段作为对象数组<a class="anchorjs-link" href="#fields-as-an-array-of-objects" aria-labelledby="fields-as-an-array-of-objects"></a></span></h3>
+<p>字段可以是对象数组，可以对字段进行其他控制（例如排序，格式化等）。 仅显示出现在字段数组中的列（键）：</p>
+<p><strong>示例：使用对象数组字段定义</strong></p>
 <div translate="translate" class="bd-example vue-example vue-example-b-table-fields-array-of-objects notranslate">
 <div>
 <table role="table" aria-busy="false" aria-colcount="3" class="table b-table table-striped table-hover" id="__BVID__878">
@@ -808,15 +795,15 @@ formatting, etc). Only columns (keys) that appear in the fields array will be sh
     }
   }
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
-<h3 id="field-definition-reference" class="bv-no-focus-ring"><span class="bd-content-title">Field definition reference<a class="anchorjs-link" href="#field-definition-reference" aria-labelledby="field-definition-reference"></a></span></h3>
-<p>The following field properties are recognized:</p>
+<h3 id="field-definition-reference" class="bv-no-focus-ring"><span class="bd-content-title">字段定义参考<a class="anchorjs-link" href="#field-definition-reference" aria-labelledby="field-definition-reference"></a></span></h3>
+<p>可以识别以下字段属性：</p>
 <div class="table-responsive-sm">
 <table class="b-table table table-bordered table-striped bv-docs-table">
 <thead class="thead-default">
 <tr>
-<th>Property</th>
-<th>Type</th>
-<th>Description</th>
+<th>属性</th>
+<th>类型</th>
+<th>描述</th>
 </tr>
 </thead>
 <tbody>
@@ -913,17 +900,18 @@ formatting, etc). Only columns (keys) that appear in the fields array will be sh
 </tbody>
 </table>
 </div>
-<p><strong>Notes:</strong></p>
+<p><strong>注意:</strong></p>
 <ul>
-<li>Field properties, if not present, default to <code translate="no" class="notranslate text-nowrap">null</code> (falsey) unless otherwise stated above.</li>
-<li><code translate="no" class="notranslate text-nowrap">class</code>, <code translate="no" class="notranslate text-nowrap">thClass</code>, <code translate="no" class="notranslate text-nowrap">tdClass</code> etc. will not work with classes that are defined in scoped CSS,
-unless you are using VueLoader's <a href="https://vue-loader.vuejs.org/guide/scoped-css.html#child-component-root-elements" target="_blank" rel="noopener">Deep selector</a>.</li>
-<li>For information on the syntax supported by <code translate="no" class="notranslate text-nowrap">thStyle</code>, see <a href="https://vuejs.org/v2/guide/class-and-style.html#Binding-Inline-Styles" target="_blank" rel="noopener">Class and Style Bindings</a> in the Vue.js guide.</li>
-<li>Any additional properties added to the field definition objects will be left intact - so you can
-access them via the named scoped slots for custom data, header, and footer rendering.</li>
+<li>除非上面另有说明，否则字段属性（如果不存在）默认为 <code translate="no" class="notranslate text-nowrap">空</code> </li>
+<li><code translate="no" class="notranslate text-nowrap">class</code>, <code translate="no" class="notranslate text-nowrap">thClass</code>, 
+  <code translate="no" class="notranslate text-nowrap">tdClass</code> 不能与在作用域CSS中定义的类一起使用，除非您使用VueLoader的
+   <a href="https://vue-loader.vuejs.org/guide/scoped-css.html#child-component-root-elements" target="_blank" rel="noopener">深度选择器</a>.</li>
+<li>有关 <code translate="no" class="notranslate text-nowrap">thStyle</code>支持的语法的信息，请参见Vue.js指南中的类和样式绑定。
+   <a href="https://vuejs.org/v2/guide/class-and-style.html#Binding-Inline-Styles" target="_blank" rel="noopener"></a> .</li>
+<li>添加到字段定义对象的所有其他属性将保持不变-因此您可以通过命名作用域的插槽访问它们，以用于自定义数据，页眉和页脚呈现。</li>
 </ul>
-<p>For information and usage about scoped slots and formatters, refer to the <a href="#custom-data-rendering" class="font-weight-bold">Custom Data Rendering</a> section below.</p>
-<p>Feel free to mix and match simple array and object array together:</p>
+<p>有关作用域插槽和格式化程序的信息和用法，请参阅下面的自定义 <a href="#custom-data-rendering" class="font-weight-bold">数据呈现</a> 部分</p>
+<p></p>随意混合和匹配简单数组和对象数组：</p>
 <!-- eslint-disable no-unused-vars -->
 
 <pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-keyword">const</span> fields = [
@@ -932,25 +920,23 @@ access them via the named scoped slots for custom data, header, and footer rende
   <span class="hljs-string">'age'</span>,
   <span class="hljs-string">'sex'</span>
 ]</pre>
-<h2 id="primary-key" class="bv-no-focus-ring"><span class="bd-content-title">Primary key<a class="anchorjs-link" href="#primary-key" aria-labelledby="primary-key"></a></span></h2>
-<p><code translate="no" class="notranslate text-nowrap">&lt;b-table&gt;</code> provides an additional prop <code translate="no" class="notranslate text-nowrap">primary-key</code>, which you can use to identify the <em>name</em> of
-the field key that <em>uniquely</em> identifies the row.</p>
-<p>The value specified by the primary column key <strong>must be</strong> either a <code translate="no" class="notranslate text-nowrap">string</code> or <code translate="no" class="notranslate text-nowrap">number</code>, and <strong>must
-be unique</strong> across all rows in the table.</p>
-<p>The primary key column does not need to appear in the displayed fields.</p>
-<h3 id="table-row-id-generation" class="bv-no-focus-ring"><span class="bd-content-title">Table row ID generation<a class="anchorjs-link" href="#table-row-id-generation" aria-labelledby="table-row-id-generation"></a></span></h3>
-<p>When provided, the <code translate="no" class="notranslate text-nowrap">primary-key</code> will generate a unique ID for each item row <code translate="no" class="notranslate text-nowrap">&lt;tr&gt;</code> element. The ID
-will be in the format of <code translate="no" class="notranslate text-nowrap">{table-id}__row_{primary-key-value}</code>, where <code translate="no" class="notranslate text-nowrap">{table-id}</code> is the unique ID
-of the <code translate="no" class="notranslate text-nowrap">&lt;b-table&gt;</code> and <code translate="no" class="notranslate text-nowrap">{primary-key-value}</code> is the value of the item's field value for the field
-specified by <code translate="no" class="notranslate text-nowrap">primary-key</code>.</p>
-<h3 id="table-render-and-transition-optimization" class="bv-no-focus-ring"><span class="bd-content-title">Table render and transition optimization<a class="anchorjs-link" href="#table-render-and-transition-optimization" aria-labelledby="table-render-and-transition-optimization"></a></span></h3>
-<p>The <code translate="no" class="notranslate text-nowrap">primary-key</code> is also used by <code translate="no" class="notranslate text-nowrap">&lt;b-table&gt;</code> to help Vue optimize the rendering of table rows.
-Internally, the value of the field key specified by the <code translate="no" class="notranslate text-nowrap">primary-key</code> prop is used as the Vue <code translate="no" class="notranslate text-nowrap">:key</code> value for each rendered item row <code translate="no" class="notranslate text-nowrap">&lt;tr&gt;</code> element.</p>
-<p>If you are seeing rendering issue (i.e. tooltips hiding or unexpected subcomponent re-usage when
-item data changes or data is sorted/filtered/edited) or table row transitions are not working,
-setting the <code translate="no" class="notranslate text-nowrap">primary-key</code> prop (if you have a unique identifier per row) can alleviate these issues.</p>
-<p>Specifying the <code translate="no" class="notranslate text-nowrap">primary-key</code> column is handy if you are using 3rd party table transitions or drag
-and drop plugins, as they rely on having a consistent and unique per row <code translate="no" class="notranslate text-nowrap">:key</code> value.</p>
+<h2 id="primary-key" class="bv-no-focus-ring"><span class="bd-content-title">主键<a class="anchorjs-link" href="#primary-key" aria-labelledby="primary-key"></a></span></h2>
+<p><code translate="no" class="notranslate text-nowrap">&lt;b-table&gt;</code> 提供而外的道具给<code translate="no" class="notranslate text-nowrap">primary-key</code>您可以使用它来标识唯一标识行的字段键的名称。
+</p>
+<p>主列键指定的值<strong>必须是</strong> either a <code translate="no" class="notranslate text-nowrap">字串符</code> 或者 <code translate="no" class="notranslate text-nowrap">数字</code>, 并且 <strong>是唯一的</strong> 跨表中的所有行。
+</p>
+<p>主键列不需要出现在显示的字段中。</p>
+<h3 id="table-row-id-generation" class="bv-no-focus-ring"><span class="bd-content-title">表格行ID生成<a class="anchorjs-link" href="#table-row-id-generation" aria-labelledby="table-row-id-generation"></a></span></h3>
+<p>提供时， <code translate="no" class="notranslate text-nowrap">主键</code> 将为每个项目行<tr>元素生成唯一的ID。
+  <code translate="no" class="notranslate text-nowrap">&lt;tr&gt;</code>  该ID的格式为<code translate="no" class="notranslate text-nowrap">{table-id}__row_{primary-key-value}</code>
+  ,其中 <code translate="no" class="notranslate text-nowrap">{table-id}</code> 是<code translate="no" class="notranslate text-nowrap">&lt;b-table&gt;</code>的唯一ID 并且<code translate="no" class="notranslate text-nowrap">主键</code>指定的字段的项目字段值的最大值。
+<h3 id="table-render-and-transition-optimization" class="bv-no-focus-ring"><span class="bd-content-title">表渲染和过渡优化<a class="anchorjs-link" href="#table-render-and-transition-optimization" aria-labelledby="table-render-and-transition-optimization"></a></span></h3>
+<p><b-table> <code translate="no" class="notranslate text-nowrap">&lt;b-table&gt;</code>还使用 <code translate="no" class="notranslate text-nowrap">主键</code>帮助Vue优化表行的呈现。 在内部，由主键prop指定的字段键的值用作每个渲染的项目行<tr>元素的Vue：key值。 <code translate="no" class="notranslate text-nowrap">primary-key</code>  <code translate="no" class="notranslate text-nowrap"></code> <code translate="no" class="notranslate text-nowrap"></code></p>
+<p>如果您看到渲染问题（例如，工具提示隐藏或子组件意外重用，
+  项目数据更改或数据已排序/过滤/编辑）或表格行转换无效，
+ <code translate="no" class="notranslate text-nowrap">主键</code> 道具（如果每行具有唯一的标识符）可以缓解这些问题。</p>
+<p>如果您使用的是第三方表转换或拖放插件，则指定主键列很方便，因为它们依赖于每行：key值的一致性和唯一性。
+a和拖放插件，因为它们依赖于每行：key值的一致性和唯一性。<code translate="no" class="notranslate text-nowrap">:key</code> value.</p>
 <p>If <code translate="no" class="notranslate text-nowrap">primary-key</code> is not provided, <code translate="no" class="notranslate text-nowrap">&lt;b-table&gt;</code> will auto-generate keys based on the displayed row's
 index number (i.e. position in the <em>displayed</em> table rows). This may cause GUI issues such as sub
 components/elements that are rendering with previous results (i.e. being re-used by Vue's render

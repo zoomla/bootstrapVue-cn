@@ -36,7 +36,7 @@
   <div class="navbar-nav-scroll">
     <ul class="navbar-nav bd-navbar-nav flex-row">
       <li class="nav-item"><a class="nav-link " href="../">首页</a></li>
-      <li class="nav-item"><a class="nav-link active" href="../../v4/docs/">中文手册</a></li>
+      <li class="nav-item"><a class="nav-link active" href="../../docs/">中文手册</a></li>
       <li class="nav-item"><a class="nav-link " href="../../v4/examples/">实例</a></li>
       <li class="nav-item dropdown">
 <a class="nav-item nav-link dropdown-toggle mr-md-2" id="bd-versions" aria-expanded="false" aria-haspopup="true" href="#" data-toggle="dropdown"> 主题模板 </a>
@@ -240,7 +240,7 @@
 </nav>
 <div class="clearfix d-block"></div>
   <h1 class="bd-title" id="content">表单输入框(Textual and Value inputs)</h1>
-<p class="bd-lead">Create various type inputs such as: <code translate="no" class="notranslate text-nowrap">text</code>, <code translate="no" class="notranslate text-nowrap">password</code>, <code translate="no" class="notranslate text-nowrap">number</code>, <code translate="no" class="notranslate text-nowrap">url</code>, <code translate="no" class="notranslate text-nowrap">email</code>, <code translate="no" class="notranslate text-nowrap">search</code>, <code translate="no" class="notranslate text-nowrap">range</code>, <code translate="no" class="notranslate text-nowrap">date</code> and more.</p>
+<p class="bd-lead">创建各种类型的输入，例如： <code translate="no" class="notranslate text-nowrap">text</code> ，<code translate="no" class="notranslate text-nowrap">password</code> ，<code translate="no" class="notranslate text-nowrap">number</code> ，<code translate="no" class="notranslate text-nowrap">url</code> ，<code translate="no" class="notranslate text-nowrap">email</code> ，<code translate="no" class="notranslate text-nowrap">search</code> ，<code translate="no" class="notranslate text-nowrap">range</code> ， <code translate="no" class="notranslate text-nowrap">date</code> 等</p>
   <script type="text/javascript" src="../../../v4/assets/js/pupCMS.js"></script>
 
 
@@ -309,9 +309,8 @@
     }
   }
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
-<h2 id="input-type" class="bv-no-focus-ring"><span class="bd-content-title">Input type<a class="anchorjs-link" href="#input-type" aria-labelledby="input-type"></a></span></h2>
-<p><code translate="no" class="notranslate text-nowrap">&lt;b-form-input&gt;</code> defaults to a <code translate="no" class="notranslate text-nowrap">text</code> input, but you can set the <code translate="no" class="notranslate text-nowrap">type</code> prop to one of the supported
-native browser HTML5 types: <code translate="no" class="notranslate text-nowrap">text</code>, <code translate="no" class="notranslate text-nowrap">password</code>, <code translate="no" class="notranslate text-nowrap">email</code>, <code translate="no" class="notranslate text-nowrap">number</code>, <code translate="no" class="notranslate text-nowrap">url</code>, <code translate="no" class="notranslate text-nowrap">tel</code>, <code translate="no" class="notranslate text-nowrap">search</code>, <code translate="no" class="notranslate text-nowrap">date</code>, <code translate="no" class="notranslate text-nowrap">datetime</code>, <code translate="no" class="notranslate text-nowrap">datetime-local</code>, <code translate="no" class="notranslate text-nowrap">month</code>, <code translate="no" class="notranslate text-nowrap">week</code>, <code translate="no" class="notranslate text-nowrap">time</code>, <code translate="no" class="notranslate text-nowrap">range</code>, or <code translate="no" class="notranslate text-nowrap">color</code>.</p>
+<h2 id="input-type" class="bv-no-focus-ring"><span class="bd-content-title">输入类型<a class="anchorjs-link" href="#input-type" aria-labelledby="input-type"></a></span></h2>
+<p><code translate="no" class="notranslate text-nowrap">&lt;b-form-input&gt;</code> 默认为 <code translate="no" class="notranslate text-nowrap">text</code> 输入，但是您可以将 <code translate="no" class="notranslate text-nowrap">type</code> 属性设置为受支持的本机浏览器 HTML5 类型之一： <code translate="no" class="notranslate text-nowrap">text</code>, <code translate="no" class="notranslate text-nowrap">password</code> ，<code translate="no" class="notranslate text-nowrap">email</code> ，<code translate="no" class="notranslate text-nowrap">number</code> ，<code translate="no" class="notranslate text-nowrap">url</code> ，<code translate="no" class="notranslate text-nowrap">tel</code> ，<code translate="no" class="notranslate text-nowrap">search</code> ，<code translate="no" class="notranslate text-nowrap">date</code> ，<code translate="no" class="notranslate text-nowrap">datetime</code> ，<code translate="no" class="notranslate text-nowrap">datetime-local</code> ，<code translate="no" class="notranslate text-nowrap">month</code> ，<code translate="no" class="notranslate text-nowrap">week</code> ，<code translate="no" class="notranslate text-nowrap">time</code> ，<code translate="no" class="notranslate text-nowrap">range</code> ，或 <code translate="no" class="notranslate text-nowrap">color</code> 。</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-form-input-types notranslate">
 <div class="container-fluid">
 <div class="row my-1">
@@ -438,43 +437,29 @@ native browser HTML5 types: <code translate="no" class="notranslate text-nowrap"
     }
   }
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
-<p>If the <code translate="no" class="notranslate text-nowrap">type</code> prop is set to an input type that is not supported (see above), a <code translate="no" class="notranslate text-nowrap">text</code> input will be
-rendered and a console warning will be issued.</p>
-<p><strong>Caveats with input types:</strong></p>
+<p>如果将 <code translate="no" class="notranslate text-nowrap">type</code> 属性设置为不支持的输入类型（请参见上文），则将呈现 <code translate="no" class="notranslate text-nowrap">text</code> 输入并发出控制台警告。</p>
+<p><strong>输入类型的警告：</strong></p>
 <ul>
-<li>Not all browsers support all input types, nor do some types render in the same format across
-browser types/versions. Refer to <a href="https://caniuse.com/#search=input" target="_blank" rel="noopener">caniuse.com</a>.</li>
-<li>Browsers that do not support a particular type will fall back to a <code translate="no" class="notranslate text-nowrap">text</code> input type (even though
-the rendered <code translate="no" class="notranslate text-nowrap">type</code> attribute markup shows the requested type).</li>
-<li>No testing is performed to see if the requested input type is supported by the browser.</li>
-<li>Chrome lost support for <code translate="no" class="notranslate text-nowrap">datetime</code> in version 26, Opera in version 15, and Safari in iOS 7.
-Instead of using <code translate="no" class="notranslate text-nowrap">datetime</code>, since support should be deprecated, use <code translate="no" class="notranslate text-nowrap">date</code> and <code translate="no" class="notranslate text-nowrap">time</code> as two
-separate inputs.</li>
-<li><code translate="no" class="notranslate text-nowrap">date</code> and <code translate="no" class="notranslate text-nowrap">time</code> inputs are native browser types, and are not a custom date/time picker.</li>
-<li>For date and time style inputs, where supported, the displayed value in the GUI may be different
-than what is returned by its value (i.e. ordering of year-month-date).</li>
-<li>Regardless of input type, the value is <strong>always</strong> returned as a string representation.</li>
-<li><code translate="no" class="notranslate text-nowrap">v-model.lazy</code> is not supported by <code translate="no" class="notranslate text-nowrap">&lt;b-form-input&gt;</code> (nor any custom Vue component). Use the <code translate="no" class="notranslate text-nowrap">lazy</code> prop instead.</li>
-<li><code translate="no" class="notranslate text-nowrap">v-model</code> modifiers <code translate="no" class="notranslate text-nowrap">.number</code> and <code translate="no" class="notranslate text-nowrap">.trim</code> can cause unexpected cursor jumps when the user is
-typing (this is a Vue issue with <code translate="no" class="notranslate text-nowrap">v-model</code> on custom components). <em>Avoid using these modifiers</em>.
-Use the <code translate="no" class="notranslate text-nowrap">number</code> or <code translate="no" class="notranslate text-nowrap">trim</code> props instead.</li>
-<li>Older version of Firefox may not support <code translate="no" class="notranslate text-nowrap">readonly</code> for <code translate="no" class="notranslate text-nowrap">range</code> type inputs.</li>
-<li>Input types that do not support <code translate="no" class="notranslate text-nowrap">min</code>, <code translate="no" class="notranslate text-nowrap">max</code> and <code translate="no" class="notranslate text-nowrap">step</code> (i.e. <code translate="no" class="notranslate text-nowrap">text</code>, <code translate="no" class="notranslate text-nowrap">password</code>, <code translate="no" class="notranslate text-nowrap">tel</code>, <code translate="no" class="notranslate text-nowrap">email</code>, <code translate="no" class="notranslate text-nowrap">url</code>, etc) will silently ignore these values (although they will still be rendered on the input
-markup) if values are provided.</li>
+<li>不是所有的浏览器都支持所有的输入类型，也不是所有的类型在不同的浏览器类型/版本中以相同的格式呈现。参考 <a href="https://caniuse.com/#search=input" target="_blank" rel="noopener">caniuse.com</a> 。</li>
+<li>不支持特定类型的浏览器将退回到 <code translate="no" class="notranslate text-nowrap">text</code> 输入类型（即使呈现的 <code translate="no" class="notranslate text-nowrap">type</code> 属性标记显示了请求的类型）。</li>
+<li>不执行测试以查看浏览器是否支持请求的输入类型。</li>
+<li>Chrome 在版本 26 中失去了对 <code translate="no" class="notranslate text-nowrap">datetime</code> 的支持，在版本 15 中失去了 Opera 的功能，而在 iOS 7 中失去了对 Safari 的支持。由于不赞成使用 <code translate="no" class="notranslate text-nowrap">datetime</code> ，因此应弃用该支持，因此请使用 <code translate="no" class="notranslate text-nowrap">date</code> 和 <code translate="no" class="notranslate text-nowrap">time</code> 作为两个单独的输入。</li>
+<li><code translate="no" class="notranslate text-nowrap">date</code> 和 <code translate="no" class="notranslate text-nowrap">time</code> 输入是本机浏览器类型，而不是自定义日期/时间选择器。</li>
+<li>对于 date 和 time 样式输入（如果支持），GUI 中显示的值可能不同于其值返回的值（即，年-月-日的排序）。</li>
+<li>无论输入类型如何，该值 <strong>始终</strong> 以字符串表示形式返回。</li>
+<li><code translate="no" class="notranslate text-nowrap">&lt;b-form-input&gt;</code>（也不包含任何自定义 Vue 组件）不支持 <code translate="no" class="notranslate text-nowrap">v-model.lazy</code> 。 改用 <code translate="no" class="notranslate text-nowrap">lazy</code> 属性。</li>
+<li><code translate="no" class="notranslate text-nowrap">v-model</code> 修饰符 <code translate="no" class="notranslate text-nowrap">.number</code> 和 <code translate="no" class="notranslate text-nowrap">.trim</code> 在用户键入时可能会导致意外的光标跳转（这是自定义组件上 <code translate="no" class="notranslate text-nowrap">v-model</code> 的 Vue 问题）。<em>避免使用这些修饰符</em> 。请改用 <code translate="no" class="notranslate text-nowrap">number</code> 或 <code translate="no" class="notranslate text-nowrap">trim</code> 属性。</li>
+<li>较旧版本的 Firefox 可能不支持 <code translate="no" class="notranslate text-nowrap">range</code> 类型输入的 <code translate="no" class="notranslate text-nowrap">readonly</code>【只读】。</li>
+<li>如果提供了值，则不支持 <code translate="no" class="notranslate text-nowrap">min</code> ，<code translate="no" class="notranslate text-nowrap">max</code> 和 <code translate="no" class="notranslate text-nowrap">step</code>【步长】的输入类型（即 <code translate="no" class="notranslate text-nowrap">text</code> ，<code translate="no" class="notranslate text-nowrap">password</code> ，<code translate="no" class="notranslate text-nowrap">tel</code> ，<code translate="no" class="notranslate text-nowrap">email</code> ，<code translate="no" class="notranslate text-nowrap">url</code> 等）将无提示地忽略这些值（尽管它们仍将呈现在输入标记上）。</li>
 </ul>
-<p><strong>Caveats with predictive text entry and IME composition entry:</strong></p>
+<p><strong>预测性文本输入和IME构成输入的警告：</strong></p>
 <ul>
-<li>When using predictive text auto-suggested words, the <code translate="no" class="notranslate text-nowrap">v-model</code> will not update until the
-auto-suggested word is selected (or a space is typed). If an auto suggested word is not selected,
-the v-model will update with the current <em>displayed text</em> of the input when the input is blurred.</li>
-<li>When using IME composition (ie. Chinese, Japanese, etc), the <code translate="no" class="notranslate text-nowrap">v-model</code> will not update until the
-IME composition is completed.</li>
+<li>当使用预测性文本自动建议的单词时，在选择自动建议的单词（或键入空格）之前，<code translate="no" class="notranslate text-nowrap">v-model</code> 不会更新。如果未选择自动建议的单词，则输入模糊时，v-model 将使用输入的当前 <em>显示文本</em> 进行更新。</li>
+<li>当使用IME合成（即中文，日语等）时，在完成IME合成之前，<code translate="no" class="notranslate text-nowrap">v-model</code> 不会更新。</li>
 </ul>
-<h3 id="range-type-input" class="bv-no-focus-ring"><span class="bd-content-title">Range type input<a class="anchorjs-link" href="#range-type-input" aria-labelledby="range-type-input"></a></span></h3>
-<p>Inputs with type <code translate="no" class="notranslate text-nowrap">range</code> render using Bootstrap v4's <code translate="no" class="notranslate text-nowrap">.custom-range</code> class. The track (the
-background) and thumb (the value) are both styled to appear the same across browsers.</p>
-<p>Range inputs have implicit values for <code translate="no" class="notranslate text-nowrap">min</code> and <code translate="no" class="notranslate text-nowrap">max</code> of <code translate="no" class="notranslate text-nowrap">0</code> and <code translate="no" class="notranslate text-nowrap">100</code> respectively. You may specify
-new values for those using the <code translate="no" class="notranslate text-nowrap">min</code> and <code translate="no" class="notranslate text-nowrap">max</code> props.</p>
+<h3 id="range-type-input" class="bv-no-focus-ring"><span class="bd-content-title">范围类型输入<a class="anchorjs-link" href="#range-type-input" aria-labelledby="range-type-input"></a></span></h3>
+<p>使用 Bootstrap v4 的 <code translate="no" class="notranslate text-nowrap">.custom-range</code> 类进行类型 <code translate="no" class="notranslate text-nowrap">range</code>【范围】呈示的输入。轨道（背景）和拇指（值）的样式都在浏览器中显示为相同。</p>
+<p>范围输入的 <code translate="no" class="notranslate text-nowrap">min</code> 和 <code translate="no" class="notranslate text-nowrap">max</code> 隐式值分别为 <code translate="no" class="notranslate text-nowrap">0</code> 和 <code translate="no" class="notranslate text-nowrap">100</code> 。 您可以为使用 <code translate="no" class="notranslate text-nowrap">min</code> 和 <code translate="no" class="notranslate text-nowrap">max</code> 道具的人指定新值。</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-form-input-range notranslate">
 <div>
 <label for="range-1">Example range with min and max</label>
@@ -499,8 +484,7 @@ new values for those using the <code translate="no" class="notranslate text-nowr
     }
   }
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
-<p>By default, range inputs "snap" to integer values. To change this, you can specify a <code translate="no" class="notranslate text-nowrap">step</code> value.
-In the example below, we double the number of steps by using step="0.5".</p>
+<p>默认情况下，范围输入“snap”【捕捉】为整数值。要更改此设置，可以指定一个 <code translate="no" class="notranslate text-nowrap">step</code>【步长】值。在下面的示例中，我们使用 step =“0.5” 将步骤数加倍。</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-form-input-range-step notranslate">
 <div>
 <label for="range-2">Example range with step value</label>
@@ -525,14 +509,11 @@ In the example below, we double the number of steps by using step="0.5".</p>
     }
   }
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
-<p><strong>Note:</strong> Range inputs (as do all input types) return their value as a string. You may need to
-convert the value to a native number by using <code translate="no" class="notranslate text-nowrap">Number(value)</code>, <code translate="no" class="notranslate text-nowrap">parseInt(value, 10)</code>, <code translate="no" class="notranslate text-nowrap">parseFloat(value)</code>, or use the <code translate="no" class="notranslate text-nowrap">number</code> prop.</p>
-<p><strong>Note:</strong> Bootstrap v4 CSS does not include styling for range inputs inside input groups, nor
-validation styling on range inputs. However, BootstrapVue includes custom styling to handle these
-situations until styling is included in Bootstrap v4.</p>
-<h2 id="control-sizing" class="bv-no-focus-ring"><span class="bd-content-title">Control sizing<a class="anchorjs-link" href="#control-sizing" aria-labelledby="control-sizing"></a></span></h2>
-<p>Set heights using the <code translate="no" class="notranslate text-nowrap">size</code> prop to <code translate="no" class="notranslate text-nowrap">sm</code> or <code translate="no" class="notranslate text-nowrap">lg</code> for small or large respectively.</p>
-<p>To control width, place the input inside standard Bootstrap grid column.</p>
+<p><strong>注意：</strong> 范围输入（与所有输入类型一样）以字符串形式返回其值。您可能需要通过使用 <code translate="no" class="notranslate text-nowrap">Number(value)</code> ，<code translate="no" class="notranslate text-nowrap">parseInt(value ，10)</code> ，<code translate="no" class="notranslate text-nowrap">parseFloat(value)</code> ，或使用 <code translate="no" class="notranslate text-nowrap">number</code> 属性将值转换为本地数字。</p>
+<p><strong>注意：</strong> Bootstrap v4 CSS 不包括输入组内范围输入的样式，也不包括范围输入上的验证样式。但是，BootstrapVue 包含自定义样式来处理这些情况，直到 Bootstrap v4 中包含样式为止。</p>
+<h2 id="control-sizing" class="bv-no-focus-ring"><span class="bd-content-title">控制尺寸<a class="anchorjs-link" href="#control-sizing" aria-labelledby="control-sizing"></a></span></h2>
+<p>分别使用 <code translate="no" class="notranslate text-nowrap">size</code> 属性将高度设置为 <code translate="no" class="notranslate text-nowrap">sm</code> 或 <code translate="no" class="notranslate text-nowrap">lg</code> ，分别将大小设置为小。</p>
+<p>要控制宽度，请将输入放置在标准 Bootstrap 网格列内。</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-form-input-size notranslate">
 <div class="container-fluid">
 <div class="row my-1">
@@ -589,21 +570,17 @@ situations until styling is included in Bootstrap v4.</p>
     <span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span></pre>
-<p><strong>Note:</strong> Input type <code translate="no" class="notranslate text-nowrap">range</code> currently does not support control sizing unless it is placed inside a <code translate="no" class="notranslate text-nowrap">&lt;b-input-group&gt;</code> which has its <code translate="no" class="notranslate text-nowrap">size</code> prop set.</p>
-<p><strong>Note:</strong> The native HTML <code translate="no" class="notranslate text-nowrap">&lt;input&gt;</code> attribute <code translate="no" class="notranslate text-nowrap">size</code> (which sets a horizontal width on the <code translate="no" class="notranslate text-nowrap">&lt;input&gt;</code> in characters) is not supported. Use styling, utility classes, or the layout rows (<code translate="no" class="notranslate text-nowrap">&lt;b-row&gt;</code>) and
-columns (<code translate="no" class="notranslate text-nowrap">&lt;b-col&gt;</code>) to set the desired width.</p>
-<h2 id="contextual-states" class="bv-no-focus-ring"><span class="bd-content-title">Contextual states<a class="anchorjs-link" href="#contextual-states" aria-labelledby="contextual-states"></a></span></h2>
-<p>Bootstrap includes validation styles for <code translate="no" class="notranslate text-nowrap">valid</code> and <code translate="no" class="notranslate text-nowrap">invalid</code> states on most form controls.</p>
-<p>Generally speaking, you'll want to use a particular state for specific types of feedback:</p>
+<p><strong>注意：</strong> 输入类型 <code translate="no" class="notranslate text-nowrap">range</code>【范围】当前不支持控件大小调整，除非将其放置在具有其 <code translate="no" class="notranslate text-nowrap">size</code> 属性设置的 <code translate="no" class="notranslate text-nowrap">&lt;b-input-group&gt;</code> 内。</p>
+<p><strong>注意：</strong> 不支持本机 HTML <code translate="no" class="notranslate text-nowrap">&lt;input&gt;</code> 属性的 <code translate="no" class="notranslate text-nowrap">size</code>（以字符为单位设置 <code translate="no" class="notranslate text-nowrap">&lt;input&gt;</code> 的水平宽度）。 使用样式，实用程序类或布局行（<code translate="no" class="notranslate text-nowrap">&lt;b-row&gt;</code>）和列（<code translate="no" class="notranslate text-nowrap">&lt;b-col&gt;</code>）设置所需的宽度。</p>
+<h2 id="contextual-states" class="bv-no-focus-ring"><span class="bd-content-title">上下文状态<a class="anchorjs-link" href="#contextual-states" aria-labelledby="contextual-states"></a></span></h2>
+<p>Bootstrap 包括大多数表单控件上 <code translate="no" class="notranslate text-nowrap">valid</code>【有效】和 <code translate="no" class="notranslate text-nowrap">invalid</code>【状态】的验证样式。</p>
+<p>一般来说，您需要针对特定类型的反馈使用特定状态：</p>
 <ul>
-<li><code translate="no" class="notranslate text-nowrap">false</code> (denotes invalid state) is great for when there's a blocking or required field. A user
-must fill in this field properly to submit the form.</li>
-<li><code translate="no" class="notranslate text-nowrap">true</code> (denotes valid state) is ideal for situations when you have per-field validation throughout
-a form and want to encourage a user through the rest of the fields.</li>
-<li><code translate="no" class="notranslate text-nowrap">null</code> Displays no validation state (neither valid nor invalid)</li>
+<li><code translate="no" class="notranslate text-nowrap">false</code>（表示无效状态）非常适合存在阻塞或必填字段的情况。 用户必须正确填写此字段才能提交表单。</li>
+<li><code translate="no" class="notranslate text-nowrap">true</code>（表示有效状态）非常适合在整个表单中都进行逐字段验证并希望鼓励用户遍历其余字段的情况。</li>
+<li><code translate="no" class="notranslate text-nowrap">null</code> 不显示验证状态（既不有效也不无效）</li>
 </ul>
-<p>To apply one of the contextual state icons on <code translate="no" class="notranslate text-nowrap">&lt;b-form-input&gt;</code>, set the <code translate="no" class="notranslate text-nowrap">state</code> prop to <code translate="no" class="notranslate text-nowrap">false</code> (for
-invalid), <code translate="no" class="notranslate text-nowrap">true</code> (for valid), or <code translate="no" class="notranslate text-nowrap">null</code> (no validation state).</p>
+<p>要在 <code translate="no" class="notranslate text-nowrap">&lt;b-form-input&gt;</code> 上应用上下文状态图标之一，请将 <code translate="no" class="notranslate text-nowrap">state</code>【状态】属性设置为 <code translate="no" class="notranslate text-nowrap">false</code>（对于无效），<code translate="no" class="notranslate text-nowrap">true</code>（对于有效）或 <code translate="no" class="notranslate text-nowrap">null</code>（无验证状态）。</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-form-input-states notranslate">
 <div class="container-fluid">
 <div class="row my-1">
@@ -660,7 +637,7 @@ invalid), <code translate="no" class="notranslate text-nowrap">true</code> (for 
     <span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span></pre>
-<p><strong>Live Example</strong></p>
+<p><strong>实例</strong></p>
 <div translate="translate" class="bd-example vue-example vue-example-b-form-input-states-feedback notranslate">
 <div role="group">
 <label for="input-live">Name:</label>
@@ -704,22 +681,16 @@ invalid), <code translate="no" class="notranslate text-nowrap">true</code> (for 
     }
   }
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
-<p class="bd-lead"><strong>Tip:</strong> Use the <a href="../../../bootstrap-vue/docs/components/form-group" class="font-weight-bold"><code translate="no" class="notranslate text-nowrap">&lt;b-form-group&gt;</code></a> component to automatically
-generate markup similar to above.</p>
-<h3 id="conveying-contextual-state-to-assistive-technologies-and-colorblind-users" class="bv-no-focus-ring"><span class="bd-content-title">Conveying contextual state to assistive technologies and colorblind users<a class="anchorjs-link" href="#conveying-contextual-state-to-assistive-technologies-and-colorblind-users" aria-labelledby="conveying-contextual-state-to-assistive-technologies-and-colorblind-users"></a></span></h3>
-<p>Using these contextual states to denote the state of a form control only provides a visual,
-color-based indication, which will not be conveyed to users of assistive technologies - such as
-screen readers - or to colorblind users.</p>
-<p>Ensure that an alternative indication of state is also provided. For instance, you could include a
-hint about state in the form control's <code translate="no" class="notranslate text-nowrap">&lt;label&gt;</code> text itself, or by providing an additional help
-text block.</p>
-<h3 id="aria-aria-invalid-attribute" class="bv-no-focus-ring"><span class="bd-content-title">ARIA <code translate="no" class="notranslate text-nowrap">aria-invalid</code> attribute<a class="anchorjs-link" href="#aria-aria-invalid-attribute" aria-labelledby="aria-aria-invalid-attribute"></a></span></h3>
-<p>Specifically for assistive technologies, invalid form controls can also be assigned an <code translate="no" class="notranslate text-nowrap">aria-invalid="true"</code> attribute.</p>
-<p>When <code translate="no" class="notranslate text-nowrap">&lt;b-form-input&gt;</code> has an invalid contextual state (i.e. state is <code translate="no" class="notranslate text-nowrap">false</code>) you may also want to
-set the <code translate="no" class="notranslate text-nowrap">&lt;b-form-input&gt;</code> prop <code translate="no" class="notranslate text-nowrap">aria-invalid</code> to <code translate="no" class="notranslate text-nowrap">true</code>, or to one of the supported values:</p>
+<p class="bd-lead"><strong>提示：</strong> 使用 <a href="../../../bootstrap-vue/docs/components/form-group" class="font-weight-bold"><code translate="no" class="notranslate text-nowrap">&lt;b-form-group&gt;</code></a> 组件可以自动生成类似于上面的标记。</p>
+<h3 id="conveying-contextual-state-to-assistive-technologies-and-colorblind-users" class="bv-no-focus-ring"><span class="bd-content-title">向辅助技术和色盲用户传达上下文状态<a class="anchorjs-link" href="#conveying-contextual-state-to-assistive-technologies-and-colorblind-users" aria-labelledby="conveying-contextual-state-to-assistive-technologies-and-colorblind-users"></a></span></h3>
+<p>使用这些上下文状态来表示表单控件的状态仅提供基于颜色的可视指示，而不会将其传达给辅助技术的用户（例如屏幕阅读器）或色盲用户。</p>
+<p>确保还提供了备用状态指示。 例如，您可以在表单控件的 <code translate="no" class="notranslate text-nowrap">&lt;label&gt;</code> 文本本身中包含有关状态的提示，或者通过提供其他帮助文本块来提供提示。</p>
+<h3 id="aria-aria-invalid-attribute" class="bv-no-focus-ring"><span class="bd-content-title">ARIA <code translate="no" class="notranslate text-nowrap">aria-invalid</code> 属性<a class="anchorjs-link" href="#aria-aria-invalid-attribute" aria-labelledby="aria-aria-invalid-attribute"></a></span></h3>
+<p>专门针对辅助技术，还可以为无效的表单控件分配一个 <code translate="no" class="notranslate text-nowrap">aria-invalid="true"</code> 属性。</p>
+<p>当 <code translate="no" class="notranslate text-nowrap">&lt;b-form-input&gt;</code> 具有无效的上下文状态（即状态为 <code translate="no" class="notranslate text-nowrap">false</code> ）时，您可能还希望将 <code translate="no" class="notranslate text-nowrap">&lt;b-form-input&gt;</code> 属性 <code translate="no" class="notranslate text-nowrap">aria-invalid</code> 设置为 <code translate="no" class="notranslate text-nowrap">true</code> 或支持的值之一：</p>
 <ul>
-<li><code translate="no" class="notranslate text-nowrap">false</code>: Convey no errors detected (default)</li>
-<li><code translate="no" class="notranslate text-nowrap">true</code> (or <code translate="no" class="notranslate text-nowrap">'true'</code>): Convey that the value has failed validation.</li>
+<li><code translate="no" class="notranslate text-nowrap">false</code>: 传送未检测到的错误（默认）</li>
+<li><code translate="no" class="notranslate text-nowrap">true</code>（或<code translate="no" class="notranslate text-nowrap">'true'</code>）：表示该值验证失败</li>
 <li><code translate="no" class="notranslate text-nowrap">'grammar'</code> Convey that a grammatical error has been detected.</li>
 <li><code translate="no" class="notranslate text-nowrap">'spelling'</code> Convey that a spelling error has been detected.</li>
 </ul>
@@ -800,10 +771,10 @@ native <code translate="no" class="notranslate text-nowrap">event</code> object 
     }
   }
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
-<p><strong>Note:</strong> When using a non-text-like input (i.e. <code translate="no" class="notranslate text-nowrap">color</code>, <code translate="no" class="notranslate text-nowrap">range</code>, <code translate="no" class="notranslate text-nowrap">date</code>, <code translate="no" class="notranslate text-nowrap">number</code>, <code translate="no" class="notranslate text-nowrap">email</code> etc),
+<p><strong>注意：</strong> When using a non-text-like input (i.e. <code translate="no" class="notranslate text-nowrap">color</code>, <code translate="no" class="notranslate text-nowrap">range</code>, <code translate="no" class="notranslate text-nowrap">date</code>, <code translate="no" class="notranslate text-nowrap">number</code>, <code translate="no" class="notranslate text-nowrap">email</code> etc),
 ensure that your formatter function returns the value in the expected format for the input type. The
 formatter <strong>must</strong> return the value as a <em>string</em>.</p>
-<p><strong>Note:</strong> With non-lazy formatting, if the cursor is not at the end of the input value, the cursor
+<p><strong>注意：</strong> With non-lazy formatting, if the cursor is not at the end of the input value, the cursor
 may jump to the end <em>after</em> a character is typed. You can use the provided event object and the <code translate="no" class="notranslate text-nowrap">event.target</code> to access the native input's selection methods and properties to control where the
 insertion point is. This is left as an exercise for the reader.</p>
 <h2 id="readonly-plain-text" class="bv-no-focus-ring"><span class="bd-content-title">Readonly plain text<a class="anchorjs-link" href="#readonly-plain-text" aria-labelledby="readonly-plain-text"></a></span></h2>
@@ -877,7 +848,7 @@ by the user (or a <code translate="no" class="notranslate text-nowrap">change</c
 before the idle timeout expires, the timeout is re-started.</p>
 <p>To enable debouncing, set the prop <code translate="no" class="notranslate text-nowrap">debounce</code> to any integer greater than zero. The value is
 specified in milliseconds. Setting <code translate="no" class="notranslate text-nowrap">debounce</code> to <code translate="no" class="notranslate text-nowrap">0</code> will disable debouncing.</p>
-<p>Note: debouncing will <em>not</em> occur if the <code translate="no" class="notranslate text-nowrap">lazy</code> prop is set.</p>
+<p>注意： debouncing will <em>not</em> occur if the <code translate="no" class="notranslate text-nowrap">lazy</code> prop is set.</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-form-input-debounce notranslate">
 <div>
 <input type="text" class="form-control" id="__BVID__4207">
@@ -1047,7 +1018,7 @@ these methods and properties. Support will vary based on input type.</p>
 <li data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-input&gt;</code></li>
 </ul>
 <div data-v-866a22e8="" class="alert alert-info">
-<p data-v-866a22e8="" class="mb-0 small"> Note: component aliases are only available when importing all of BootstrapVue or using
+<p data-v-866a22e8="" class="mb-0 small"> 注意： component aliases are only available when importing all of BootstrapVue or using
         the component group plugin. </p>
 </div>
 </article>

@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="generator" content="Jekyll v3.6.0">
 <title>下拉菜单 &middot; BootstrapVue</title>
-<!-- Bootstrap 核心CSS -->
+<!-- Bootstrap 核心CSS --> 
 <link href="../../../v4/dist/css/bootstrap.min.css" rel="stylesheet">
 <!-- 本文档额外专用css -->
 <link href="../../../v4/assets/css/docsearch.min.css" rel="stylesheet">
@@ -36,7 +36,7 @@
   <div class="navbar-nav-scroll">
     <ul class="navbar-nav bd-navbar-nav flex-row">
       <li class="nav-item"><a class="nav-link " href="../">首页</a></li>
-      <li class="nav-item"><a class="nav-link active" href="../../v4/docs/">中文手册</a></li>
+      <li class="nav-item"><a class="nav-link active" href="../../docs/">中文手册</a></li>
       <li class="nav-item"><a class="nav-link " href="../../v4/examples/">实例</a></li>
       <li class="nav-item dropdown">
 <a class="nav-item nav-link dropdown-toggle mr-md-2" id="bd-versions" aria-expanded="false" aria-haspopup="true" href="#" data-toggle="dropdown"> 主题模板 </a>
@@ -189,36 +189,36 @@
 
 <div class="d-none d-xl-block col-xl-2 bd-toc">
 <ul class="section-nav">
-<li class="nav-item toc-entry mb-2"><a target="_self" href="#dropdowns" class="nav-link font-weight-bold"><span>Dropdowns</span></a></li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#button-content" class="nav-link"><span>Button content</span></a> <!----></li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#positioning" class="nav-link"><span>Positioning</span></a>
+<li class="nav-item toc-entry mb-2"><a target="_self" href="#dropdowns" class="nav-link font-weight-bold"><span>下拉菜单(Dropdowns)</span></a></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#button-content" class="nav-link"><span>按钮内容</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#positioning" class="nav-link"><span>定位</span></a>
 <ul class="nav flex-column">
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#menu-alignment" class="nav-link"><span>Menu alignment</span></a></li>
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#dropup" class="nav-link"><span>Dropup</span></a></li>
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#drop-right-or-left" class="nav-link"><span>Drop right or left</span></a></li>
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#auto-flipping" class="nav-link"><span>Auto "flipping"</span></a></li>
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#menu-offset" class="nav-link"><span>Menu offset</span></a></li>
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#boundary-constraint" class="nav-link"><span>Boundary constraint</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#menu-alignment" class="nav-link"><span>菜单对齐</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#dropup" class="nav-link"><span>上拉菜单</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#drop-right-or-left" class="nav-link"><span>向左或向右</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#auto-flipping" class="nav-link"><span>自动“翻转”</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#menu-offset" class="nav-link"><span>菜单偏移</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#boundary-constraint" class="nav-link"><span>边界约束</span></a></li>
 </ul>
 </li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#split-button-support" class="nav-link"><span>Split button support</span></a>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#split-button-support" class="nav-link"><span>分体式按钮支持</span></a>
 <ul class="nav flex-column">
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#split-button-link-support" class="nav-link"><span>Split button link support</span></a></li>
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#split-button-type" class="nav-link"><span>Split button type</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#split-button-link-support" class="nav-link"><span>分体式按钮链接支持</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#split-button-type" class="nav-link"><span>拆分按钮类型</span></a></li>
 </ul>
 </li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#styling-options" class="nav-link"><span>Styling options</span></a>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#styling-options" class="nav-link"><span>样式选项</span></a>
 <ul class="nav flex-column">
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#sizing" class="nav-link"><span>Sizing</span></a></li>
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#dropdown-color-variants" class="nav-link"><span>Dropdown color variants</span></a></li>
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#split-button-color-variant" class="nav-link"><span>Split button color variant</span></a></li>
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#block-level-dropdowns" class="nav-link"><span>Block level dropdowns</span></a></li>
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#dropdown-sub-component-color-variants" class="nav-link"><span>Dropdown sub-component color variants</span></a></li>
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#hidden-caret" class="nav-link"><span>Hidden caret</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#sizing" class="nav-link"><span>尺寸</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#dropdown-color-variants" class="nav-link"><span>下拉颜色变量</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#split-button-color-variant" class="nav-link"><span>拆分按钮颜色变量</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#block-level-dropdowns" class="nav-link"><span>块级下拉菜单</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#dropdown-sub-component-color-variants" class="nav-link"><span>下拉子组件颜色变量</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#hidden-caret" class="nav-link"><span>隐藏的插入符</span></a></li>
 </ul>
 </li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#lazy-dropdown" class="nav-link"><span>Lazy dropdown</span></a> <!----></li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#dropdown-supported-sub-components" class="nav-link"><span>Dropdown supported sub-components</span></a>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#lazy-dropdown" class="nav-link"><span>慢速下拉菜单</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#dropdown-supported-sub-components" class="nav-link"><span>下拉菜单支持的子组件</span></a>
 <ul class="nav flex-column">
 <li class="nav-item toc-entry toc-h3"><a target="_self" href="#b-dropdown-item" class="nav-link"><span>&lt;b-dropdown-item&gt;</span></a></li>
 <li class="nav-item toc-entry toc-h3"><a target="_self" href="#b-dropdown-item-button" class="nav-link"><span>&lt;b-dropdown-item-button&gt;</span></a></li>
@@ -229,17 +229,17 @@
 <li class="nav-item toc-entry toc-h3"><a target="_self" href="#b-dropdown-item-header" class="nav-link"><span>&lt;b-dropdown-item-header&gt;</span></a></li>
 </ul>
 </li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#listening-to-dropdown-changes-via-root-events" class="nav-link"><span>Listening to dropdown changes via $root events</span></a> <!----></li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#optionally-scoped-default-slot" class="nav-link"><span>Optionally scoped default slot</span></a> <!----></li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#accessibility" class="nav-link"><span>Accessibility</span></a>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#listening-to-dropdown-changes-via-root-events" class="nav-link"><span>通过 $root 事件监听下拉更改</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#optionally-scoped-default-slot" class="nav-link"><span>可选范围的默认插槽</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#accessibility" class="nav-link"><span>可访问性</span></a>
 <ul class="nav flex-column">
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#headers-and-accessibility" class="nav-link"><span>Headers and accessibility</span></a></li>
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#keyboard-navigation" class="nav-link"><span>Keyboard navigation</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#headers-and-accessibility" class="nav-link"><span>标题和可访问性</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#keyboard-navigation" class="nav-link"><span>键盘导航</span></a></li>
 </ul>
 </li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#implementation-notes" class="nav-link"><span>Implementation notes</span></a> <!----></li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#see-also" class="nav-link"><span>See also</span></a> <!----></li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#component-reference" class="nav-link"><span>Component reference</span></a>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#implementation-notes" class="nav-link"><span>实施说明</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#see-also" class="nav-link"><span>另请参阅</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#component-reference" class="nav-link"><span>组件参考</span></a>
 <ul class="nav flex-column">
 <li class="nav-item toc-entry toc-h3"><a target="_self" href="#comp-ref-b-dropdown" class="nav-link"><span>&lt;b-dropdown&gt;</span></a></li>
 <li class="nav-item toc-entry toc-h3"><a target="_self" href="#comp-ref-b-dropdown-item" class="nav-link"><span>&lt;b-dropdown-item&gt;</span></a></li>
@@ -249,8 +249,8 @@
 <li class="nav-item toc-entry toc-h3"><a target="_self" href="#comp-ref-b-dropdown-text" class="nav-link"><span>&lt;b-dropdown-text&gt;</span></a></li>
 <li class="nav-item toc-entry toc-h3"><a target="_self" href="#comp-ref-b-dropdown-group" class="nav-link"><span>&lt;b-dropdown-group&gt;</span></a></li>
 <li class="nav-item toc-entry toc-h3"><a target="_self" href="#comp-ref-b-dropdown-header" class="nav-link"><span>&lt;b-dropdown-header&gt;</span></a></li>
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#importing-individual-components" class="nav-link"><span>Importing individual components</span></a></li>
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#importing-as-a-plugin" class="nav-link"><span>Importing as a Vue.js plugin</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#importing-individual-components" class="nav-link"><span>导入单个组件</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#importing-as-a-plugin" class="nav-link"><span>导入为Vue.js插件</span></a></li>
 </ul>
 </li>
 </ul>
@@ -268,7 +268,7 @@
 </nav>
 <div class="clearfix d-block"></div>
   <h1 class="bd-title" id="content">下拉菜单(Dropdowns)</h1>
-<p class="bd-lead">Dropdowns are toggleable, contextual overlays for displaying lists of links and actions in a dropdown menu format.</p>
+<p class="bd-lead">下拉菜单是可切换的上下文覆盖，用于以下拉菜单格式显示链接和操作列表。</p>
   <script type="text/javascript" src="../../../v4/assets/js/pupCMS.js"></script>
 
 
@@ -344,9 +344,7 @@
 </li>
 </ul>
 </nav>
-<p><code translate="no" class="notranslate text-nowrap">&lt;b-dropdown&gt;</code> (or known by its shorter alias of <code translate="no" class="notranslate text-nowrap">&lt;b-dd&gt;</code>) components are toggleable, contextual
-overlays for displaying lists of links and more. They're toggled by clicking (or pressing space or
-enter when focused), not by hovering; this is an <a href="http://markdotto.com/2012/02/27/bootstrap-explained-dropdowns/" target="_blank" rel="noopener">intentional design decision</a>.</p>
+<p><code translate="no" class="notranslate text-nowrap">&lt;b-dropdown&gt;</code>（或简称为 <code translate="no" class="notranslate text-nowrap">&lt;b-dd&gt;</code>的别名）组件是可切换的上下文覆盖，用于显示链接列表等。 它们是通过单击（或按空格键或在焦点对准时进入）而不是悬停来切换的； 这是一个 <a href="http://markdotto.com/2012/02/27/bootstrap-explained-dropdowns/" target="_blank" rel="noopener">有意的设计决定</a> 。</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-dropdown notranslate">
 <div>
 <div id="dropdown-1" class="dropdown b-dropdown m-md-2 btn-group">
@@ -374,12 +372,9 @@ enter when focused), not by hovering; this is an <a href="http://markdotto.com/2
     <span class="hljs-tag">&lt;<span class="hljs-name">b-dropdown-item</span> <span class="hljs-attr">disabled</span>&gt;</span>Disabled action<span class="hljs-tag">&lt;/<span class="hljs-name">b-dropdown-item</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-dropdown</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
-<h2 id="button-content" class="bv-no-focus-ring"><span class="bd-content-title">Button content<a class="anchorjs-link" href="#button-content" aria-labelledby="button-content"></a></span></h2>
-<p>You can customize the text of the dropdown button by using either the <code translate="no" class="notranslate text-nowrap">text</code> prop (shown in previous
-examples), or use the <code translate="no" class="notranslate text-nowrap">button-content</code> slot instead of the <code translate="no" class="notranslate text-nowrap">text</code> prop. The <code translate="no" class="notranslate text-nowrap">button-content</code> slot
-allows you to use basic HTML and icons in the button content.</p>
-<p>If both the prop <code translate="no" class="notranslate text-nowrap">text</code> and slot <code translate="no" class="notranslate text-nowrap">button-content</code> are present, the slot <code translate="no" class="notranslate text-nowrap">button-content</code> will take
-precedence.</p>
+<h2 id="button-content" class="bv-no-focus-ring"><span class="bd-content-title">按钮内容<a class="anchorjs-link" href="#button-content" aria-labelledby="button-content"></a></span></h2>
+<p>您可以使用 <code translate="no" class="notranslate text-nowrap">text</code> 属性（如前例所示）自定义下拉按钮的文本，也可以使用 <code translate="no" class="notranslate text-nowrap">button-content</code> 插槽而不是 <code translate="no" class="notranslate text-nowrap">text</code> 属性，<code translate="no" class="notranslate text-nowrap">button-content</code> 槽允许您在按钮内容中使用基本的HTML和图标。</p>
+<p>如果 <code translate="no" class="notranslate text-nowrap">text</code> 属性和 <code translate="no" class="notranslate text-nowrap">button-content</code> 插槽同时存在，则 <code translate="no" class="notranslate text-nowrap">button-content</code> 插槽将优先</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-dropdown-button-content notranslate">
 <div>
 <div class="dropdown b-dropdown btn-group" id="__BVID__2413">
@@ -412,13 +407,10 @@ precedence.</p>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-dropdown-item</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Another item<span class="hljs-tag">&lt;/<span class="hljs-name">b-dropdown-item</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-dropdown</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
-<h2 id="positioning" class="bv-no-focus-ring"><span class="bd-content-title">Positioning<a class="anchorjs-link" href="#positioning" aria-labelledby="positioning"></a></span></h2>
-<p>Dropdown supports various positioning such as left and right aligned, dropdown and dropup, and
-supports auto-flipping (dropdown to dropup, and vice-versa) when the menu would overflow off of the
-visible screen area.</p>
-<h3 id="menu-alignment" class="bv-no-focus-ring"><span class="bd-content-title">Menu alignment<a class="anchorjs-link" href="#menu-alignment" aria-labelledby="menu-alignment"></a></span></h3>
-<p>The dropdown menu can either be left aligned (default) or right aligned with respect to the button
-above it. To have the dropdown aligned on the right, set the <code translate="no" class="notranslate text-nowrap">right</code> prop.</p>
+<h2 id="positioning" class="bv-no-focus-ring"><span class="bd-content-title">定位<a class="anchorjs-link" href="#positioning" aria-labelledby="positioning"></a></span></h2>
+<p>下拉菜单支持各种位置，例如左右对齐，下拉菜单和下拉菜单，并在菜单从可见屏幕区域溢出时支持自动翻转（下拉菜单到下拉菜单，反之亦然）。</p>
+<h3 id="menu-alignment" class="bv-no-focus-ring"><span class="bd-content-title">菜单对齐<a class="anchorjs-link" href="#menu-alignment" aria-labelledby="menu-alignment"></a></span></h3>
+<p>下拉菜单可以左对齐（默认），也可以相对于其上方的按钮右对齐。要使下拉列表在右侧对齐，请设置 <code translate="no" class="notranslate text-nowrap">right</code> 属性。</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-dropdown-right notranslate">
 <div>
 <div id="dropdown-left" class="dropdown b-dropdown m-2 btn-group">
@@ -452,8 +444,8 @@ above it. To have the dropdown aligned on the right, set the <code translate="no
     <span class="hljs-tag">&lt;<span class="hljs-name">b-dropdown-item</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Something else here<span class="hljs-tag">&lt;/<span class="hljs-name">b-dropdown-item</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-dropdown</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
-<h3 id="dropup" class="bv-no-focus-ring"><span class="bd-content-title">Dropup<a class="anchorjs-link" href="#dropup" aria-labelledby="dropup"></a></span></h3>
-<p>Turn your dropdown menu into a drop-up menu by setting the <code translate="no" class="notranslate text-nowrap">dropup</code> prop.</p>
+<h3 id="dropup" class="bv-no-focus-ring"><span class="bd-content-title">上拉菜单<a class="anchorjs-link" href="#dropup" aria-labelledby="dropup"></a></span></h3>
+<p>通过设置 <code translate="no" class="notranslate text-nowrap">dropup</code> 属性，将您的 dropdown 菜单变成为 drop-up 菜单</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-dropdown-dropup notranslate">
 <div>
 <div id="dropdown-dropup" class="dropdown b-dropdown m-2 dropup btn-group">
@@ -473,10 +465,9 @@ above it. To have the dropdown aligned on the right, set the <code translate="no
     <span class="hljs-tag">&lt;<span class="hljs-name">b-dropdown-item</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Something else here<span class="hljs-tag">&lt;/<span class="hljs-name">b-dropdown-item</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-dropdown</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
-<h3 id="drop-right-or-left" class="bv-no-focus-ring"><span class="bd-content-title">Drop right or left<a class="anchorjs-link" href="#drop-right-or-left" aria-labelledby="drop-right-or-left"></a></span></h3>
-<p>Turn your dropdown menu into a drop-right menu by setting the <code translate="no" class="notranslate text-nowrap">dropright</code> prop. Or, turn it into a
-drop-left menu by setting the <code translate="no" class="notranslate text-nowrap">dropleft</code> right prop to true.</p>
-<p><code translate="no" class="notranslate text-nowrap">dropright</code> takes precedence over <code translate="no" class="notranslate text-nowrap">dropleft</code>. Neither <code translate="no" class="notranslate text-nowrap">dropright</code> or <code translate="no" class="notranslate text-nowrap">dropleft</code> have any effect if <code translate="no" class="notranslate text-nowrap">dropup</code> is set.</p>
+<h3 id="drop-right-or-left" class="bv-no-focus-ring"><span class="bd-content-title">向左或向右<a class="anchorjs-link" href="#drop-right-or-left" aria-labelledby="drop-right-or-left"></a></span></h3>
+<p>设置 <code translate="no" class="notranslate text-nowrap">dropright</code> 属性将下拉菜单变成右下拉菜单。或者，通过将 <code translate="no" class="notranslate text-nowrap">dropleft</code> 右道具设置为 true ，</p>
+<p><code translate="no" class="notranslate text-nowrap">dropright</code> 优先于 <code translate="no" class="notranslate text-nowrap">dropleft</code>。如果设置了 <code translate="no" class="notranslate text-nowrap">dropup</code> ，则 <code translate="no" class="notranslate text-nowrap">dropright</code> 或 <code translate="no" class="notranslate text-nowrap">dropleft</code> 均无效。</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-dropdown-dropright-dropleft notranslate">
 <div>
 <div id="dropdown-dropright" class="dropdown b-dropdown m-2 dropright btn-group">
@@ -510,15 +501,13 @@ drop-left menu by setting the <code translate="no" class="notranslate text-nowra
     <span class="hljs-tag">&lt;<span class="hljs-name">b-dropdown-item</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Something else here<span class="hljs-tag">&lt;/<span class="hljs-name">b-dropdown-item</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-dropdown</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
-<h3 id="auto-flipping" class="bv-no-focus-ring"><span class="bd-content-title">Auto "flipping"<a class="anchorjs-link" href="#auto-flipping" aria-labelledby="auto-flipping"></a></span></h3>
-<p>By default, dropdowns may flip to the top, or to the bottom, based on their current position in the
-viewport. To disable this auto-flip feature, set the <code translate="no" class="notranslate text-nowrap">no-flip</code> prop.</p>
-<h3 id="menu-offset" class="bv-no-focus-ring"><span class="bd-content-title">Menu offset<a class="anchorjs-link" href="#menu-offset" aria-labelledby="menu-offset"></a></span></h3>
-<p>Like to move your menu away from the toggle buttons a bit? Then use the <code translate="no" class="notranslate text-nowrap">offset</code> prop to specify the
-number of pixels to push right (or left when negative) from the toggle button:</p>
+<h3 id="auto-flipping" class="bv-no-focus-ring"><span class="bd-content-title">自动“翻转”<a class="anchorjs-link" href="#auto-flipping" aria-labelledby="auto-flipping"></a></span></h3>
+<p>默认情况下，下拉菜单可能会根据其在视口中的当前位置翻转到顶部或底部。 要禁用此自动翻转功能，请设置 <code translate="no" class="notranslate text-nowrap">no-flip</code> 属性。</p>
+<h3 id="menu-offset" class="bv-no-focus-ring"><span class="bd-content-title">菜单偏移<a class="anchorjs-link" href="#menu-offset" aria-labelledby="menu-offset"></a></span></h3>
+<p>想将菜单从切换按钮稍微移开吗？ 然后使用 <code translate="no" class="notranslate text-nowrap">offset</code> 属性指定从切换按钮向右（或在负数时向左）推像素的数量：</p>
 <ul>
-<li>Specified as a number of pixels: positive for right shift, negative for left shift.</li>
-<li>Specify the distance in CSS units (i.e. <code translate="no" class="notranslate text-nowrap">0.3rem</code>, <code translate="no" class="notranslate text-nowrap">4px</code>, <code translate="no" class="notranslate text-nowrap">1.2em</code>, etc) passed as a string.</li>
+<li>指定为多个像素：正向表示右移，负向表示左移。</li>
+<li>指定以字符串形式传递的CSS单位（即 <code translate="no" class="notranslate text-nowrap">0.3rem</code>，<code translate="no" class="notranslate text-nowrap">4px</code>，<code translate="no" class="notranslate text-nowrap">1.2em</code>，等等）的距离。</li>
 </ul>
 <div translate="translate" class="bd-example vue-example vue-example-b-dropdown-offset notranslate">
 <div>
@@ -539,20 +528,11 @@ number of pixels to push right (or left when negative) from the toggle button:</
     <span class="hljs-tag">&lt;<span class="hljs-name">b-dropdown-item</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Something else here<span class="hljs-tag">&lt;/<span class="hljs-name">b-dropdown-item</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-dropdown</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
-<h3 id="boundary-constraint" class="bv-no-focus-ring"><span class="bd-content-title">Boundary constraint<a class="anchorjs-link" href="#boundary-constraint" aria-labelledby="boundary-constraint"></a></span></h3>
-<p>By default, dropdowns are visually constrained to its scroll parent, which will suffice in most
-situations. However, if you place a dropdown inside an element that has <code translate="no" class="notranslate text-nowrap">overflow: scroll</code> (or
-similar) set, the dropdown menu may - in some situations - get cut off. To get around this, you can
-specify a boundary element via the <code translate="no" class="notranslate text-nowrap">boundary</code> prop. Supported values are <code translate="no" class="notranslate text-nowrap">'scrollParent'</code> (the
-default), <code translate="no" class="notranslate text-nowrap">'viewport'</code>, <code translate="no" class="notranslate text-nowrap">'window'</code> or a reference to an HTML element. The boundary value is passed
-directly to Popper.js's <code translate="no" class="notranslate text-nowrap">boundariesElement</code> configuration option.</p>
-<p><strong>Note:</strong> when <code translate="no" class="notranslate text-nowrap">boundary</code> is any value other than the default of <code translate="no" class="notranslate text-nowrap">'scrollParent'</code>, the style <code translate="no" class="notranslate text-nowrap">position: static</code> is applied to to the dropdown component's root element in order to allow the menu
-to "break-out" of its scroll container. In some situations this may affect your layout or
-positioning of the dropdown trigger button. In these cases you may need to wrap your dropdown inside
-another element.</p>
-<h2 id="split-button-support" class="bv-no-focus-ring"><span class="bd-content-title">Split button support<a class="anchorjs-link" href="#split-button-support" aria-labelledby="split-button-support"></a></span></h2>
-<p>Create a split dropdown button, where the left button provides standard <code translate="no" class="notranslate text-nowrap">click</code> event and link
-support, while the right hand side is the dropdown menu toggle button.</p>
+<h3 id="boundary-constraint" class="bv-no-focus-ring"><span class="bd-content-title">边界约束<a class="anchorjs-link" href="#boundary-constraint" aria-labelledby="boundary-constraint"></a></span></h3>
+<p>默认情况下，下拉列表在视觉上被限制为其滚动父级，这在大多数情况下都足够了。但是，如果将下拉菜单放在设置了 <code translate="no" class="notranslate text-nowrap">overflow: scroll</code>（或类似）的元素中，下拉菜单在某些情况下可能会被截断。要解决此问题，可以通过边界支柱指定 <code translate="no" class="notranslate text-nowrap">boundary</code> 属性。支持的值为 <code translate="no" class="notranslate text-nowrap">'scrollParent'</code> （默认值），<code translate="no" class="notranslate text-nowrap">'viewport'</code>，<code translate="no" class="notranslate text-nowrap">'window'</code> 或对HTML元素的引用。边界值直接传递到 Popper.js 的 <code translate="no" class="notranslate text-nowrap">boundariesElement</code> 配置选项。</p>
+<p><strong>注意：</strong> 当 <code translate="no" class="notranslate text-nowrap">boundary</code> 不是默认的 <code translate="no" class="notranslate text-nowrap">'scrollParent'</code> 值时，样式 <code translate="no" class="notranslate text-nowrap">position: static</code> 将应用于下拉组件的根元素，以便允许菜单从其滚动容器中“跳出”。在某些情况下，这可能会影响下拉式触发器按钮的布局或位置。在这些情况下，您可能需要将下拉列表包装到另一个元素中。</p>
+<h2 id="split-button-support" class="bv-no-focus-ring"><span class="bd-content-title">分体式按钮支持<a class="anchorjs-link" href="#split-button-support" aria-labelledby="split-button-support"></a></span></h2>
+<p>创建一个拆分下拉按钮，其中左侧按钮提供标准的 <code translate="no" class="notranslate text-nowrap">click</code> 事件和链接支持，而右侧则是下拉菜单切换按钮。</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-dropdown-split notranslate">
 <div>
 <div class="dropdown b-dropdown m-2 btn-group" id="__BVID__2470">
@@ -573,10 +553,8 @@ support, while the right hand side is the dropdown menu toggle button.</p>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-dropdown-item</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Something else here...<span class="hljs-tag">&lt;/<span class="hljs-name">b-dropdown-item</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-dropdown</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
-<h3 id="split-button-link-support" class="bv-no-focus-ring"><span class="bd-content-title">Split button link support<a class="anchorjs-link" href="#split-button-link-support" aria-labelledby="split-button-link-support"></a></span></h3>
-<p>The left split button defaults to an element of type <code translate="no" class="notranslate text-nowrap">&lt;button&gt;</code> (a <code translate="no" class="notranslate text-nowrap">&lt;b-button&gt;</code> to be exact). To
-convert this button into a link or <code translate="no" class="notranslate text-nowrap">&lt;router-link&gt;</code>, specify the href via the <code translate="no" class="notranslate text-nowrap">split-href</code> prop or a
-router link <code translate="no" class="notranslate text-nowrap">to</code> value via the <code translate="no" class="notranslate text-nowrap">split-to</code> prop, while maintaining the look of a button.</p>
+<h3 id="split-button-link-support" class="bv-no-focus-ring"><span class="bd-content-title">分体式按钮链接支持<a class="anchorjs-link" href="#split-button-link-support" aria-labelledby="split-button-link-support"></a></span></h3>
+<p>左拆分按钮默认为 <code translate="no" class="notranslate text-nowrap">&lt;button&gt;</code>（确切地说是 <code translate="no" class="notranslate text-nowrap">&lt;b-button&gt;</code> ）。要将此按钮转换为 link 或 <code translate="no" class="notranslate text-nowrap">&lt;router-link&gt;</code>，请在保持按钮外观的同时，通过 <code translate="no" class="notranslate text-nowrap">split-href</code> 属性指定或通过 <code translate="no" class="notranslate text-nowrap">split-to</code> 属性 <code translate="no" class="notranslate text-nowrap">to</code> （指定）一个路由器值。</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-dropdown-split-link notranslate">
 <div>
 <div class="dropdown b-dropdown m-2 btn-group" id="__BVID__2478"><a target="_self" href="#foo/bar" class="btn btn-secondary" id="__BVID__2478__BV_button_">Split Link</a>
@@ -596,15 +574,14 @@ router link <code translate="no" class="notranslate text-nowrap">to</code> value
     <span class="hljs-tag">&lt;<span class="hljs-name">b-dropdown-item</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Something else here...<span class="hljs-tag">&lt;/<span class="hljs-name">b-dropdown-item</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-dropdown</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
-<h3 id="split-button-type" class="bv-no-focus-ring"><span class="bd-content-title">Split button type<a class="anchorjs-link" href="#split-button-type" aria-labelledby="split-button-type"></a></span></h3>
-<p>The split button defaults to a button <code translate="no" class="notranslate text-nowrap">type</code> of <code translate="no" class="notranslate text-nowrap">'button'</code>. You can specify an alternate type via
-the <code translate="no" class="notranslate text-nowrap">split-button-type</code> prop. Supported values are: <code translate="no" class="notranslate text-nowrap">'button'</code>, <code translate="no" class="notranslate text-nowrap">'submit'</code> and <code translate="no" class="notranslate text-nowrap">'reset'</code>.</p>
-<p>If props <code translate="no" class="notranslate text-nowrap">split-to</code> or <code translate="no" class="notranslate text-nowrap">split-href</code> are set, the <code translate="no" class="notranslate text-nowrap">split-button-type</code> prop will be ignored.</p>
-<h2 id="styling-options" class="bv-no-focus-ring"><span class="bd-content-title">Styling options<a class="anchorjs-link" href="#styling-options" aria-labelledby="styling-options"></a></span></h2>
-<p>Dropdowns support various props for styling the dropdown trigger button.</p>
-<h3 id="sizing" class="bv-no-focus-ring"><span class="bd-content-title">Sizing<a class="anchorjs-link" href="#sizing" aria-labelledby="sizing"></a></span></h3>
-<p>Dropdowns work with trigger buttons of all sizes, including default and split dropdown buttons.</p>
-<p>Set the <code translate="no" class="notranslate text-nowrap">size</code> prop to either <code translate="no" class="notranslate text-nowrap">sm</code> for small button(s), or <code translate="no" class="notranslate text-nowrap">lg</code> for large button(s).</p>
+<h3 id="split-button-type" class="bv-no-focus-ring"><span class="bd-content-title">拆分按钮类型<a class="anchorjs-link" href="#split-button-type" aria-labelledby="split-button-type"></a></span></h3>
+<p>拆分按钮默认为 <code translate="no" class="notranslate text-nowrap">'button'</code> 按钮 <code translate="no" class="notranslate text-nowrap">type</code>（类型）。您可以通过 <code translate="no" class="notranslate text-nowrap">split-button-type</code> 道具指定其他类型。支持的值包括：<code translate="no" class="notranslate text-nowrap">'button'</code>，<code translate="no" class="notranslate text-nowrap">'submit'</code> 和 <code translate="no" class="notranslate text-nowrap">'reset'</code>。</p>
+<p>如果设置了 <code translate="no" class="notranslate text-nowrap">split-to</code> 或 <code translate="no" class="notranslate text-nowrap">split-href</code> 属性，则将忽略 <code translate="no" class="notranslate text-nowrap">split-button-type</code> 属性。</p>
+<h2 id="styling-options" class="bv-no-focus-ring"><span class="bd-content-title">样式选项<a class="anchorjs-link" href="#styling-options" aria-labelledby="styling-options"></a></span></h2>
+<p>下拉菜单支持用于设置下拉触发按钮样式的各种道具。</p>
+<h3 id="sizing" class="bv-no-focus-ring"><span class="bd-content-title">尺寸<a class="anchorjs-link" href="#sizing" aria-labelledby="sizing"></a></span></h3>
+<p>下拉菜单可使用各种尺寸的触发按钮，包括默认和拆分下拉按钮。</p>
+<p>将 <code translate="no" class="notranslate text-nowrap">size</code> 属性设置为 <code translate="no" class="notranslate text-nowrap">sm</code> （较小按钮）或 <code translate="no" class="notranslate text-nowrap">lg</code> （较大按钮）。</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-dropdown-sizes notranslate">
 <div>
 <div>
@@ -699,13 +676,10 @@ the <code translate="no" class="notranslate text-nowrap">split-button-type</code
     <span class="hljs-tag">&lt;/<span class="hljs-name">b-dropdown</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
-<p><strong>Note:</strong> <em>changing the size of the button(s) does not affect the size of the menu items!</em></p>
-<h3 id="dropdown-color-variants" class="bv-no-focus-ring"><span class="bd-content-title">Dropdown color variants<a class="anchorjs-link" href="#dropdown-color-variants" aria-labelledby="dropdown-color-variants"></a></span></h3>
-<p>The dropdown toggle button can have one of the standard Bootstrap contextual variants applied by
-setting the prop <code translate="no" class="notranslate text-nowrap">variant</code> to <code translate="no" class="notranslate text-nowrap">success</code>, <code translate="no" class="notranslate text-nowrap">primary</code>, <code translate="no" class="notranslate text-nowrap">info</code>, <code translate="no" class="notranslate text-nowrap">danger</code>, <code translate="no" class="notranslate text-nowrap">link</code>, <code translate="no" class="notranslate text-nowrap">outline-dark</code>, etc.
-(or custom variants, if defined). The default variant is <code translate="no" class="notranslate text-nowrap">secondary</code>.</p>
-<p>See the <a href="../../../bootstrap-vue/docs/reference/color-variants" class="font-weight-bold">Variant Reference</a> for a full list of built-in contextual
-variants.</p>
+<p><strong>注意：</strong> <em>更改按钮的大小不会影响菜单项的大小！</em></p>
+<h3 id="dropdown-color-variants" class="bv-no-focus-ring"><span class="bd-content-title">下拉颜色变量<a class="anchorjs-link" href="#dropdown-color-variants" aria-labelledby="dropdown-color-variants"></a></span></h3>
+<p>下拉切换按钮可以通过将 <code translate="no" class="notranslate text-nowrap">variant</code> 属性设置为 <code translate="no" class="notranslate text-nowrap">success</code>，<code translate="no" class="notranslate text-nowrap">primary</code>，<code translate="no" class="notranslate text-nowrap">info</code>，<code translate="no" class="notranslate text-nowrap">danger</code>，<code translate="no" class="notranslate text-nowrap">link</code>，<code translate="no" class="notranslate text-nowrap">outline-dark</code>，等等。（或自定义变量，如果已定义）来应用标准的 Bootstrap 上下文变量之一。 默认变量是 <code translate="no" class="notranslate text-nowrap">secondary</code> 变量。</p>
+<p>有关内置上下文变量的完整列表，请参见 <a href="../../../bootstrap-vue/docs/reference/color-variants" class="font-weight-bold">Variant Reference</a> 。</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-dropdown-variants notranslate">
 <div>
 <div class="dropdown b-dropdown m-2 btn-group" id="__BVID__2504">
@@ -753,11 +727,9 @@ variants.</p>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-dropdown-item</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Something else here<span class="hljs-tag">&lt;/<span class="hljs-name">b-dropdown-item</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-dropdown</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
-<p>You can also apply arbitrary classes to the toggle button via the <code translate="no" class="notranslate text-nowrap">toggle-class</code> prop. This prop
-accepts either a string or array of strings.</p>
-<h3 id="split-button-color-variant" class="bv-no-focus-ring"><span class="bd-content-title">Split button color variant<a class="anchorjs-link" href="#split-button-color-variant" aria-labelledby="split-button-color-variant"></a></span></h3>
-<p>By default the left split button uses the same <code translate="no" class="notranslate text-nowrap">variant</code> as the <code translate="no" class="notranslate text-nowrap">toggle</code> button. You can give the
-split button its own variant via the <code translate="no" class="notranslate text-nowrap">split-variant</code> prop.</p>
+<p>您还可以通过 <code translate="no" class="notranslate text-nowrap">toggle-class</code> 属性将任意类应用于切换按钮。该属性接受一个字符串或字符串数组。</p>
+<h3 id="split-button-color-variant" class="bv-no-focus-ring"><span class="bd-content-title">拆分按钮颜色变量<a class="anchorjs-link" href="#split-button-color-variant" aria-labelledby="split-button-color-variant"></a></span></h3>
+<p>默认情况下，left split button（左拆分按钮）使用与 <code translate="no" class="notranslate text-nowrap">toggle</code> button（切换按钮）相同的 <code translate="no" class="notranslate text-nowrap">variant</code>（变体）。 您可以通过 <code translate="no" class="notranslate text-nowrap">split-variant</code> 属性为 split button（拆分按钮）提供自己的变量。</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-dropdown-split-variant notranslate">
 <div>
 <div class="dropdown b-dropdown m-2 btn-group" id="__BVID__2526">
@@ -784,10 +756,8 @@ split button its own variant via the <code translate="no" class="notranslate tex
     <span class="hljs-tag">&lt;<span class="hljs-name">b-dropdown-item</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Something else here...<span class="hljs-tag">&lt;/<span class="hljs-name">b-dropdown-item</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-dropdown</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
-<h3 id="block-level-dropdowns" class="bv-no-focus-ring"><span class="bd-content-title">Block level dropdowns<a class="anchorjs-link" href="#block-level-dropdowns" aria-labelledby="block-level-dropdowns"></a></span></h3>
-<p>By default dropdowns act like buttons and are displayed inline. To create block level dropdowns
-(that span to the full width of a parent) set the <code translate="no" class="notranslate text-nowrap">block</code> prop. Both, regular and split button
-dropdowns are supported.</p>
+<h3 id="block-level-dropdowns" class="bv-no-focus-ring"><span class="bd-content-title">块级下拉菜单<a class="anchorjs-link" href="#block-level-dropdowns" aria-labelledby="block-level-dropdowns"></a></span></h3>
+<p>默认情况下，下拉菜单的作用类似于按钮，并以嵌入式方式显示。 要创建块级下拉菜单（跨到父级的整个宽度），请设置 <code translate="no" class="notranslate text-nowrap">block</code> 属性。 同时支持常规和拆分按钮下拉菜单。</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-dropdown-block notranslate">
 <div>
 <div class="dropdown b-dropdown m-2" id="__BVID__2534">
@@ -829,7 +799,7 @@ dropdowns are supported.</p>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-dropdown-item</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Something else here...<span class="hljs-tag">&lt;/<span class="hljs-name">b-dropdown-item</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-dropdown</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
-<p>If you want the dropdown menu to span to the full width of the parent container too, add the <code translate="no" class="notranslate text-nowrap">w-100</code> utility class to the <code translate="no" class="notranslate text-nowrap">menu-class</code> prop.</p>
+<p>如果您也希望下拉菜单也跨过父容器的整个宽度，请将 <code translate="no" class="notranslate text-nowrap">w-100</code> 实用程序类添加到 <code translate="no" class="notranslate text-nowrap">menu-class</code> 属性中。</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-dropdown-block-menu notranslate">
 <div>
 <div class="dropdown b-dropdown m-2" id="__BVID__2549">
@@ -855,11 +825,10 @@ dropdowns are supported.</p>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-dropdown-item</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Something else here<span class="hljs-tag">&lt;/<span class="hljs-name">b-dropdown-item</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-dropdown</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
-<h3 id="dropdown-sub-component-color-variants" class="bv-no-focus-ring"><span class="bd-content-title">Dropdown sub-component color variants<a class="anchorjs-link" href="#dropdown-sub-component-color-variants" aria-labelledby="dropdown-sub-component-color-variants"></a></span></h3>
-<p>Many of the supported dropdown <a href="#dropdown-supported-sub-components" class="font-weight-bold">sub-components</a> provide a <code translate="no" class="notranslate text-nowrap">variant</code> prop for controlling their text color.</p>
-<h3 id="hidden-caret" class="bv-no-focus-ring"><span class="bd-content-title">Hidden caret<a class="anchorjs-link" href="#hidden-caret" aria-labelledby="hidden-caret"></a></span></h3>
-<p>The dropdown can be created with the toggle's caret visually hidden by setting the <code translate="no" class="notranslate text-nowrap">no-caret</code> prop
-to <code translate="no" class="notranslate text-nowrap">true</code>. This is useful when the dropdown is to be displayed as an icon.</p>
+<h3 id="dropdown-sub-component-color-variants" class="bv-no-focus-ring"><span class="bd-content-title">下拉子组件颜色变量<a class="anchorjs-link" href="#dropdown-sub-component-color-variants" aria-labelledby="dropdown-sub-component-color-variants"></a></span></h3>
+<p>许多受支持的下拉 <a href="#dropdown-supported-sub-components" class="font-weight-bold">sub-components</a>（子组件）都提供了用于控制其文本颜色的 <code translate="no" class="notranslate text-nowrap">variant</code> 属性。</p>
+<h3 id="hidden-caret" class="bv-no-focus-ring"><span class="bd-content-title">隐藏的插入符<a class="anchorjs-link" href="#hidden-caret" aria-labelledby="hidden-caret"></a></span></h3>
+<p>通过将 <code translate="no" class="notranslate text-nowrap">no-caret</code> 属性设置为 <code translate="no" class="notranslate text-nowrap">true</code>。可以在视觉上隐藏切换器的插入符号的情况下创建下拉列表。当下拉菜单显示为图标时，这很有用。</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-dropdown-hidden-caret notranslate">
 <div>
 <div class="dropdown b-dropdown btn-group" id="__BVID__2557">
@@ -882,75 +851,66 @@ to <code translate="no" class="notranslate text-nowrap">true</code>. This is use
     <span class="hljs-tag">&lt;<span class="hljs-name">b-dropdown-item</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Something else here...<span class="hljs-tag">&lt;/<span class="hljs-name">b-dropdown-item</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-dropdown</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
-<p><strong>Note:</strong> The caret will always be shown when using <code translate="no" class="notranslate text-nowrap">split</code> mode.</p>
-<h2 id="lazy-dropdown" class="bv-no-focus-ring"><span class="bd-content-title">Lazy dropdown<a class="anchorjs-link" href="#lazy-dropdown" aria-labelledby="lazy-dropdown"></a></span></h2>
-<p>By default, <code translate="no" class="notranslate text-nowrap">&lt;b-dropdown&gt;</code> renders the menu contents in the DOM even when the menu is not shown.
-When there are a large number of dropdowns rendered on the same page, performance could be impacted
-due to larger overall memory utilization. You can instruct <code translate="no" class="notranslate text-nowrap">&lt;b-dropdown&gt;</code> to render the menu
-contents only when it is shown by setting the <code translate="no" class="notranslate text-nowrap">lazy</code> prop to true.</p>
-<h2 id="dropdown-supported-sub-components" class="bv-no-focus-ring"><span class="bd-content-title">Dropdown supported sub-components<a class="anchorjs-link" href="#dropdown-supported-sub-components" aria-labelledby="dropdown-supported-sub-components"></a></span></h2>
-<p>The following components can be placed inside of your dropdowns. Using any other component or markup
-may break layout and/or keyboard navigation.</p>
+<p><strong>注意：</strong> 使用 <code translate="no" class="notranslate text-nowrap">split</code> mode（分割模式）时。插入符号将始终显示。</p>
+<h2 id="lazy-dropdown" class="bv-no-focus-ring"><span class="bd-content-title">慢速下拉菜单<a class="anchorjs-link" href="#lazy-dropdown" aria-labelledby="lazy-dropdown"></a></span></h2>
+<p>默认情况下，即使未显示菜单，<code translate="no" class="notranslate text-nowrap">&lt;b-dropdown&gt;</code> 也会在 DOM 中呈现菜单内容。当在同一页面上呈现大量下拉菜单时，由于总体内存利用率较高，因此性能可能会受到影响。通过将 <code translate="no" class="notranslate text-nowrap">lazy</code> 属性设置为 true ，可以指示 <code translate="no" class="notranslate text-nowrap">&lt;b-dropdown&gt;</code> 仅在显示菜单内容时渲染菜单内容。</p>
+<h2 id="dropdown-supported-sub-components" class="bv-no-focus-ring"><span class="bd-content-title">下拉菜单支持的子组件<a class="anchorjs-link" href="#dropdown-supported-sub-components" aria-labelledby="dropdown-supported-sub-components"></a></span></h2>
+<p>以下组件可以放置在下拉列表中。使用任何其他组件或标记可能会中断布局和/或键盘导航。</p>
 <div class="table-responsive-sm">
 <table class="b-table table table-bordered table-striped bv-docs-table">
 <thead class="thead-default">
 <tr>
-<th>Sub-component</th>
-<th>Description</th>
-<th>Aliases</th>
+<th>子组件</th>
+<th>描述</th>
+<th>别名</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code translate="no" class="notranslate text-nowrap">&lt;b-dropdown-item&gt;</code></td>
-<td>Action items that provide click, link, and <code translate="no" class="notranslate text-nowrap">&lt;router-link&gt;</code>/<code translate="no" class="notranslate text-nowrap">&lt;nuxt-link&gt;</code> functionality. Renders as an <code translate="no" class="notranslate text-nowrap">&lt;a&gt;</code> element by default.</td>
+<td>提供 click，link，and <code translate="no" class="notranslate text-nowrap">&lt;router-link&gt;</code>/<code translate="no" class="notranslate text-nowrap">&lt;nuxt-link&gt;</code>  默认情况下渲染为 <code translate="no" class="notranslate text-nowrap">&lt;a&gt;</code> 元素。</td>
 <td><code translate="no" class="notranslate text-nowrap">&lt;b-dd-item&gt;</code></td>
 </tr>
 <tr>
 <td><code translate="no" class="notranslate text-nowrap">&lt;b-dropdown-item-button&gt;</code></td>
-<td>An alternative to <code translate="no" class="notranslate text-nowrap">&lt;b-dropdown-item&gt;</code> that renders a menu item using a <code translate="no" class="notranslate text-nowrap">&lt;button&gt;</code> element.</td>
+<td>使用 <code translate="no" class="notranslate text-nowrap">&lt;button&gt;</code> 元素渲染菜单项的 <code translate="no" class="notranslate text-nowrap">&lt;b-dropdown-item&gt;</code> 的替代方法。</td>
 <td><code translate="no" class="notranslate text-nowrap">&lt;b-dropdown-item-btn&gt;</code>, <code translate="no" class="notranslate text-nowrap">&lt;b-dd-item-button&gt;</code>, <code translate="no" class="notranslate text-nowrap">&lt;b-dd-item-btn&gt;</code></td>
 </tr>
 <tr>
 <td><code translate="no" class="notranslate text-nowrap">&lt;b-dropdown-divider&gt;</code></td>
-<td>A divider / spacer which can be used to separate dropdown items.</td>
+<td>可用于分离下拉项的分隔线/间隔线。</td>
 <td><code translate="no" class="notranslate text-nowrap">&lt;b-dd-divider&gt;</code></td>
 </tr>
 <tr>
 <td><code translate="no" class="notranslate text-nowrap">&lt;b-dropdown-text&gt;</code></td>
-<td>Free flowing text content in a menu.</td>
+<td>菜单中自由流动的文本内容。</td>
 <td><code translate="no" class="notranslate text-nowrap">&lt;b-dd-text&gt;</code></td>
 </tr>
 <tr>
 <td><code translate="no" class="notranslate text-nowrap">&lt;b-dropdown-form&gt;</code></td>
-<td>For placing form controls within a dropdown menu.</td>
+<td>用于在下拉菜单中放置表单控件。</td>
 <td><code translate="no" class="notranslate text-nowrap">&lt;b-dd-form&gt;</code></td>
 </tr>
 <tr>
 <td><code translate="no" class="notranslate text-nowrap">&lt;b-dropdown-group&gt;</code></td>
-<td>For grouping dropdown sub components with an optional header.</td>
+<td>用于将下拉式子组件与可选标头分组。</td>
 <td><code translate="no" class="notranslate text-nowrap">&lt;b-dd-group&gt;</code></td>
 </tr>
 <tr>
 <td><code translate="no" class="notranslate text-nowrap">&lt;b-dropdown-header&gt;</code></td>
-<td>A header item, used to help identify a group of dropdown items.</td>
+<td>标题项，用于帮助标识一组下拉项。</td>
 <td><code translate="no" class="notranslate text-nowrap">&lt;b-dd-header&gt;</code></td>
 </tr>
 </tbody>
 </table>
 </div>
-<p><strong>Note:</strong> <em>Nested sub-menus are <strong>not</strong> supported.</em></p>
+<p><strong>注意：</strong> <em> <strong>不</strong> 支持嵌套子菜单。</em></p>
 <h3 id="b-dropdown-item" class="bv-no-focus-ring"><span class="bd-content-title"><code translate="no" class="notranslate text-nowrap">&lt;b-dropdown-item&gt;</code><a class="anchorjs-link" href="#b-dropdown-item" aria-labelledby="b-dropdown-item"></a></span></h3>
-<p>The <code translate="no" class="notranslate text-nowrap">&lt;b-dropdown-item&gt;</code> is typically used to create a navigation link inside your menu. Use either
-the <code translate="no" class="notranslate text-nowrap">href</code> prop or the <code translate="no" class="notranslate text-nowrap">to</code> prop (for router link support) to generate the appropriate navigation
-link. If neither <code translate="no" class="notranslate text-nowrap">href</code> nor <code translate="no" class="notranslate text-nowrap">to</code> are provided, a standard <code translate="no" class="notranslate text-nowrap">&lt;a&gt;</code> link will be generated with an <code translate="no" class="notranslate text-nowrap">href</code> of <code translate="no" class="notranslate text-nowrap">#</code> (with an event handler that will prevent scroll to top behaviour by preventing the
-default link action).</p>
-<p>Disabled the dropdown item by setting the <code translate="no" class="notranslate text-nowrap">disabled</code> prop.</p>
+<p><code translate="no" class="notranslate text-nowrap">&lt;b-dropdown-item&gt;</code> 通常用于在菜单内创建导航链接。 使用 <code translate="no" class="notranslate text-nowrap">href</code> 属性或 <code translate="no" class="notranslate text-nowrap">to</code> 属性（用于路由器链接支持）来生成适当的导航链接。 如果既不提供 <code translate="no" class="notranslate text-nowrap">href</code> 也不提供 <code translate="no" class="notranslate text-nowrap">to</code> ，则将使用 <code translate="no" class="notranslate text-nowrap">href</code> 为 <code translate="no" class="notranslate text-nowrap">#</code> 的标准<code translate="no" class="notranslate text-nowrap">&lt;a&gt;</code> 链接生成（带有事件处理程序，该事件处理程序将通过阻止默认链接操作来防止滚动到顶部行为）。</p>
+<p>通过设置 <code translate="no" class="notranslate text-nowrap">disabled</code> 属性来禁用下拉菜单项。</p>
 <h3 id="b-dropdown-item-button" class="bv-no-focus-ring"><span class="bd-content-title"><code translate="no" class="notranslate text-nowrap">&lt;b-dropdown-item-button&gt;</code><a class="anchorjs-link" href="#b-dropdown-item-button" aria-labelledby="b-dropdown-item-button"></a></span></h3>
-<p>Historically dropdown menu contents had to be links (<code translate="no" class="notranslate text-nowrap">&lt;b-dropdown-item&gt;</code>), but that's no longer the
-case with Bootstrap v4. Now you can optionally create <code translate="no" class="notranslate text-nowrap">&lt;button&gt;</code> elements in your dropdowns by using
-the <code translate="no" class="notranslate text-nowrap">&lt;b-dropdown-item-button&gt;</code> sub-component. <code translate="no" class="notranslate text-nowrap">&lt;b-dropdown-item-button&gt;</code> does not support the <code translate="no" class="notranslate text-nowrap">href</code> or <code translate="no" class="notranslate text-nowrap">to</code> props.</p>
-<p>Disabled the dropdown item button by setting the <code translate="no" class="notranslate text-nowrap">disabled</code> prop.</p>
+<p>历史上下拉菜单的内容必须是链接（<code translate="no" class="notranslate text-nowrap">&lt;b-dropdown-item&gt;</code>），但是Bootstrap v4不再是这种情况。 现在，您可以选择使用<code translate="no" class="notranslate text-nowrap">&lt;b-dropdown-item-button&gt;</code> 子组件在下拉菜单中创建 <code translate="no" class="notranslate text-nowrap">&lt;button&gt;</code> 元素。<code translate="no" class="notranslate text-nowrap">&lt;b-dropdown-item-button&gt;</code>不支持 <code translate="no" class="notranslate text-nowrap">href</code> 或 <code translate="no" class="notranslate text-nowrap">to</code> 属性。</p>
+<p>通过设置 <code translate="no" class="notranslate text-nowrap">disabled</code> 属性来禁用下拉项按钮。</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-dropdown-item-buttons notranslate">
 <div>
 <div id="dropdown-buttons" class="dropdown b-dropdown m-2 btn-group">
@@ -980,9 +940,9 @@ the <code translate="no" class="notranslate text-nowrap">&lt;b-dropdown-item-but
     <span class="hljs-tag">&lt;<span class="hljs-name">b-dropdown-item-button</span>&gt;</span>I don't look like a button, but I am!<span class="hljs-tag">&lt;/<span class="hljs-name">b-dropdown-item-button</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-dropdown</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
-<p>When the menu item doesn't trigger navigation, it is recommended to use the <code translate="no" class="notranslate text-nowrap">&lt;b-dropdown-item-button&gt;</code> sub-component.</p>
+<p>当菜单项不触发导航时，建议使用 <code translate="no" class="notranslate text-nowrap">&lt;b-dropdown-item-button&gt;</code> 子组件。</p>
 <h3 id="b-dropdown-item-divider" class="bv-no-focus-ring"><span class="bd-content-title"><code translate="no" class="notranslate text-nowrap">&lt;b-dropdown-item-divider&gt;</code><a class="anchorjs-link" href="#b-dropdown-item-divider" aria-labelledby="b-dropdown-item-divider"></a></span></h3>
-<p>Separate groups of related menu items with <code translate="no" class="notranslate text-nowrap">&lt;b-dropdown-divider&gt;</code>.</p>
+<p>用 <code translate="no" class="notranslate text-nowrap">&lt;b-dropdown-divider&gt;</code> 分开相关菜单项组。</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-dropdown-item-divider notranslate">
 <div>
 <div id="dropdown-divider" class="dropdown b-dropdown m-2 btn-group">
@@ -1013,9 +973,7 @@ the <code translate="no" class="notranslate text-nowrap">&lt;b-dropdown-item-but
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-dropdown</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
 <h3 id="b-dropdown-text" class="bv-no-focus-ring"><span class="bd-content-title"><code translate="no" class="notranslate text-nowrap">&lt;b-dropdown-text&gt;</code><a class="anchorjs-link" href="#b-dropdown-text" aria-labelledby="b-dropdown-text"></a></span></h3>
-<p>Place any freeform text within a dropdown menu using the <code translate="no" class="notranslate text-nowrap">&lt;b-dropdown-text&gt;</code> sub component or use
-text and use spacing utilities. Note that you'll likely need additional sizing styles to
-constrain/set the menu width.</p>
+<p>使用 <code translate="no" class="notranslate text-nowrap">&lt;b-dropdown-text&gt;</code> 子组件将任意格式的文本放在下拉菜单中，或者使用文本并使用间距实用程序。 请注意，您可能需要其他大小调整样式来约束/设置菜单宽度。</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-dropdown-text notranslate">
 <div>
 <div id="dropdown-text" class="dropdown b-dropdown m-2 btn-group">
@@ -1052,16 +1010,10 @@ constrain/set the menu width.</p>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-dropdown-item-button</span>&gt;</span>Second Item<span class="hljs-tag">&lt;/<span class="hljs-name">b-dropdown-item-button</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-dropdown</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
-<p><code translate="no" class="notranslate text-nowrap">&lt;b-dropdown-text&gt;</code> has the BootstrapVue custom class <code translate="no" class="notranslate text-nowrap">.b-dropdown-text</code> applied to it which sets
-some basic styles which are suitable in most situations. By default its width will be the same as
-the widest <code translate="no" class="notranslate text-nowrap">&lt;b-dropdown-item&gt;</code> content. You may need to place additional styles or helper classes on
-the component.</p>
-<p>By default <code translate="no" class="notranslate text-nowrap">&lt;b-dropdown-text&gt;</code> renders using tag <code translate="no" class="notranslate text-nowrap">&lt;p&gt;</code>. You can change the rendered tag by setting
-the <code translate="no" class="notranslate text-nowrap">tag</code> prop to any valid HTML5 tag on the <code translate="no" class="notranslate text-nowrap">&lt;b-dropdown-text&gt;</code> sub-component.</p>
+<p><code translate="no" class="notranslate text-nowrap">&lt;b-dropdown-text&gt;</code> 已应用了BootstrapVue定制类 <code translate="no" class="notranslate text-nowrap">.b-dropdown-text</code> ，该类设置了一些适用于大多数情况的基本样式。 默认情况下，其宽度将与最宽的 <code translate="no" class="notranslate text-nowrap">&lt;b-dropdown-item&gt;</code> 内容相同。 您可能需要在组件上放置其他样式或帮助程序类。</p>
+<p>默认情况下， <code translate="no" class="notranslate text-nowrap">&lt;b-dropdown-text&gt;</code> 使用标记 <code translate="no" class="notranslate text-nowrap">&lt;p&gt;</code> 进行渲染。您可以通过将 <code translate="no" class="notranslate text-nowrap">tag</code> 属性设置为 <code translate="no" class="notranslate text-nowrap">&lt;b-dropdown-text&gt;</code> 子组件上的任何有效 HTML5 标签来更改渲染的标签。</p>
 <h3 id="b-dropdown-form" class="bv-no-focus-ring"><span class="bd-content-title"><code translate="no" class="notranslate text-nowrap">&lt;b-dropdown-form&gt;</code><a class="anchorjs-link" href="#b-dropdown-form" aria-labelledby="b-dropdown-form"></a></span></h3>
-<p>Dropdowns support basic forms. Put a <code translate="no" class="notranslate text-nowrap">&lt;b-dropdown-form&gt;</code> within a dropdown menu and place form
-controls within the <code translate="no" class="notranslate text-nowrap">&lt;b-dropdown-form&gt;</code>. The <code translate="no" class="notranslate text-nowrap">&lt;b-dropdown-form&gt;</code> is based on the <a href="../../../bootstrap-vue/docs/components/form" class="font-weight-bold"><code translate="no" class="notranslate text-nowrap">&lt;b-form&gt;</code></a> component, and supports the same props and attributes as a
-regular form.</p>
+<p>下拉菜单支持基本形式。 将 <code translate="no" class="notranslate text-nowrap">&lt;b-dropdown-form&gt;</code> 放在下拉菜单中，然后将表单控件放在 <code translate="no" class="notranslate text-nowrap">&lt;b-dropdown-form&gt;</code> 中。<code translate="no" class="notranslate text-nowrap">&lt;b-dropdown-form&gt;</code> 基于 <a href="../../../bootstrap-vue/docs/components/form" class="font-weight-bold"><code translate="no" class="notranslate text-nowrap">&lt;b-form&gt;</code></a> 组件，并支持与常规形式相同的道具和属性。</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-dropdown-form notranslate">
 <div>
 <div id="dropdown-form" class="dropdown b-dropdown m-2 btn-group">
@@ -1142,13 +1094,9 @@ regular form.</p>
     }
   }
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
-<p><code translate="no" class="notranslate text-nowrap">&lt;b-dropdown-form&gt;</code> has the BootstrapVue custom class <code translate="no" class="notranslate text-nowrap">.b-dropdown-form</code> applied to it which sets
-some basic styles which are suitable in most situations. By default its width will be the same as
-the widest <code translate="no" class="notranslate text-nowrap">&lt;b-dropdown-item&gt;</code> content. You may need to place additional styles or helper classes on
-the component.</p>
+<p><code translate="no" class="notranslate text-nowrap">&lt;b-dropdown-form&gt;</code> 已应用 BootstrapVue 定制类 <code translate="no" class="notranslate text-nowrap">.b-dropdown-form</code> ，它设置了一些适用于大多数情况的基本样式。默认情况下，其宽度将与最宽的 <code translate="no" class="notranslate text-nowrap">&lt;b-dropdown-item&gt;</code> 内容相同。您可能需要在组件上放置其他样式或帮助程序类。</p>
 <h3 id="b-dropdown-item-group" class="bv-no-focus-ring"><span class="bd-content-title"><code translate="no" class="notranslate text-nowrap">&lt;b-dropdown-item-group&gt;</code><a class="anchorjs-link" href="#b-dropdown-item-group" aria-labelledby="b-dropdown-item-group"></a></span></h3>
-<p>Group a set of dropdown sub components with an optional associated header. Place a <code translate="no" class="notranslate text-nowrap">&lt;b-dropdown-divider&gt;</code> between your <code translate="no" class="notranslate text-nowrap">&lt;b-dropdown-group&gt;</code> and other groups or non-grouped dropdown
-contents</p>
+<p>将一组下拉子组件与一个可选的关联标头分组。 在您的 <code translate="no" class="notranslate text-nowrap">&lt;b-dropdown-group&gt;</code>  与 other groups（其他组）或 non-grouped（未分组）的下拉内容之间放置一个 <code translate="no" class="notranslate text-nowrap">&lt;b-dropdown-divider&gt;</code></p>
 <div translate="translate" class="bd-example vue-example vue-example-b-dropdown-item-group notranslate">
 <div>
 <div id="dropdown-grouped" class="dropdown b-dropdown m-2 btn-group">
@@ -1212,10 +1160,9 @@ contents</p>
     <span class="hljs-tag">&lt;/<span class="hljs-name">b-dropdown-item-button</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-dropdown</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
-<p>Using <code translate="no" class="notranslate text-nowrap">&lt;b-dropdown-group&gt;</code> instead of <code translate="no" class="notranslate text-nowrap">&lt;b-dropdown-header&gt;</code> is the recommended method for providing
-accessible grouped items with a header.</p>
+<p>建议使用 <code translate="no" class="notranslate text-nowrap">&lt;b-dropdown-group&gt;</code> 代替 <code translate="no" class="notranslate text-nowrap">&lt;b-dropdown-header&gt;</code> 为标题提供可访问的分组项目。</p>
 <h3 id="b-dropdown-item-header" class="bv-no-focus-ring"><span class="bd-content-title"><code translate="no" class="notranslate text-nowrap">&lt;b-dropdown-item-header&gt;</code><a class="anchorjs-link" href="#b-dropdown-item-header" aria-labelledby="b-dropdown-item-header"></a></span></h3>
-<p>Add a header to label sections of actions in any dropdown menu.</p>
+<p>在任何下拉菜单中添加标题以标记操作部分。</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-dropdown-item-header notranslate">
 <div>
 <div id="dropdown-header" class="dropdown b-dropdown m-2 btn-group">
@@ -1247,18 +1194,13 @@ accessible grouped items with a header.</p>
     <span class="hljs-tag">&lt;/<span class="hljs-name">b-dropdown-item-button</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-dropdown</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
-<p>See Section <a href="#dropdown-headers-and-accessibility" class="font-weight-bold">Dropdown headers and accessibility</a> for details on
-making headers more accessible for users of assistive technologies.</p>
-<p>Using the <code translate="no" class="notranslate text-nowrap">&lt;b-dropdown-group&gt;</code> sub-component simplifies creating accessible grouped dropdown items
-with an associated header.</p>
-<h4 id="closing-the-menu-via-form-interaction" class="bv-no-focus-ring"><span class="bd-content-title">Closing the menu via form interaction<a class="anchorjs-link" href="#closing-the-menu-via-form-interaction" aria-labelledby="closing-the-menu-via-form-interaction"></a></span></h4>
-<p>Clicking buttons inside of a <code translate="no" class="notranslate text-nowrap">&lt;b-dropdown-form&gt;</code> will not automatically close the menu. If you need
-to close the menu using a button (or via the form submit event), call the <code translate="no" class="notranslate text-nowrap">hide()</code> method on the <code translate="no" class="notranslate text-nowrap">&lt;b-dropdown&gt;</code> instance, as is shown in the above example.</p>
-<p>The <code translate="no" class="notranslate text-nowrap">hide()</code> method accepts a single boolean argument. If the argument is <code translate="no" class="notranslate text-nowrap">true</code>, then focus will be
-returned to the dropdown toggle button after the menu has closed. Otherwise the document will gain
-focus once the menu is closed.</p>
-<h2 id="listening-to-dropdown-changes-via-root-events" class="bv-no-focus-ring"><span class="bd-content-title">Listening to dropdown changes via $root events<a class="anchorjs-link" href="#listening-to-dropdown-changes-via-root-events" aria-labelledby="listening-to-dropdown-changes-via-root-events"></a></span></h2>
-<p>To listen to any dropdown opening, use:</p>
+<p>有关使辅助技术用户更容易访问标题的详细信息，请参见 <a href="#dropdown-headers-and-accessibility" class="font-weight-bold">Dropdown headers and accessibility</a> （下拉标题和可访问性）部分。</p>
+<p>使用 <code translate="no" class="notranslate text-nowrap">&lt;b-dropdown-group&gt;</code> 子组件可简化创建具有关联标头的可访问的分组下拉项的过程。</p>
+<h4 id="closing-the-menu-via-form-interaction" class="bv-no-focus-ring"><span class="bd-content-title">通过表单交互关闭菜单<a class="anchorjs-link" href="#closing-the-menu-via-form-interaction" aria-labelledby="closing-the-menu-via-form-interaction"></a></span></h4>
+<p>点击 <code translate="no" class="notranslate text-nowrap">&lt;b-dropdown-form&gt;</code> 内的按钮将不会自动关闭菜单。 如果需要使用按钮（或通过表单提交事件）关闭菜单，请在  <code translate="no" class="notranslate text-nowrap">&lt;b-dropdown&gt;</code> 实例上调用 <code translate="no" class="notranslate text-nowrap">hide()</code> 方法，如上例所示。</p>
+<p><code translate="no" class="notranslate text-nowrap">hide()</code> 方法接受单个布尔参数。如果参数为 <code translate="no" class="notranslate text-nowrap">true</code> ，则菜单关闭后，焦点将返回到下拉切换按钮。 否则，一旦关闭菜单，文档将获得焦点。</p>
+<h2 id="listening-to-dropdown-changes-via-root-events" class="bv-no-focus-ring"><span class="bd-content-title">通过 $root 事件监听下拉更改<a class="anchorjs-link" href="#listening-to-dropdown-changes-via-root-events" aria-labelledby="listening-to-dropdown-changes-via-root-events"></a></span></h2>
+<p>要监听任何下拉窗口，请使用：</p>
 <pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
   mounted() {
     <span class="hljs-keyword">this</span>.$root.$on(<span class="hljs-string">'bv::dropdown::show'</span>, bvEvent =&gt; {
@@ -1266,34 +1208,31 @@ focus once the menu is closed.</p>
     })
   }
 }</pre>
-<p>Refer to the <a href="#component-reference" class="font-weight-bold">Events</a> section of documentation for the full list of events.</p>
-<h2 id="optionally-scoped-default-slot" class="bv-no-focus-ring"><span class="bd-content-title">Optionally scoped default slot<a class="anchorjs-link" href="#optionally-scoped-default-slot" aria-labelledby="optionally-scoped-default-slot"></a></span></h2>
-<p>The default slot is optionally scoped with the following scope available:</p>
+<p>有关事件的完整列表，请参阅文档的 <a href="#component-reference" class="font-weight-bold">Events</a>（事件）部分。</p>
+<h2 id="optionally-scoped-default-slot" class="bv-no-focus-ring"><span class="bd-content-title">可选范围的默认插槽<a class="anchorjs-link" href="#optionally-scoped-default-slot" aria-labelledby="optionally-scoped-default-slot"></a></span></h2>
+<p>默认插槽的范围可以选择为以下范围：</p>
 <div class="table-responsive-sm">
 <table class="b-table table table-bordered table-striped bv-docs-table">
 <thead class="thead-default">
 <tr>
-<th>Property or Method</th>
-<th>Description</th>
+<th>属性或方法</th>
+<th>描述</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code translate="no" class="notranslate text-nowrap">hide()</code></td>
-<td>Can be used to close the dropdown menu. Accepts an optional boolean argument, which if <code translate="no" class="notranslate text-nowrap">true</code> returns focus to the toggle button</td>
+<td>可用于关闭下拉菜单。接受可选的布尔参数，如果为 <code translate="no" class="notranslate text-nowrap">true</code> ，则将焦点返回到切换按钮</td>
 </tr>
 </tbody>
 </table>
 </div>
-<h2 id="accessibility" class="bv-no-focus-ring"><span class="bd-content-title">Accessibility<a class="anchorjs-link" href="#accessibility" aria-labelledby="accessibility"></a></span></h2>
-<p>Providing a unique <code translate="no" class="notranslate text-nowrap">id</code> prop ensures ARIA compliance by automatically adding the appropriate <code translate="no" class="notranslate text-nowrap">aria-*</code> attributes in the rendered markup.</p>
-<p>The default ARIA role is set to <code translate="no" class="notranslate text-nowrap">menu</code>, but you can change this default to another role (such as <code translate="no" class="notranslate text-nowrap">navigation</code>) via the <code translate="no" class="notranslate text-nowrap">role</code> prop, depending on your user case.</p>
-<p>When a menu item doesn't trigger navigation, it is recommended to use the <code translate="no" class="notranslate text-nowrap">&lt;b-dropdown-item-button&gt;</code> sub-component (which is not announced as a link) instead of <code translate="no" class="notranslate text-nowrap">&lt;b-dropdown-item&gt;</code> (which is presented
-as a link to the user).</p>
-<h3 id="headers-and-accessibility" class="bv-no-focus-ring"><span class="bd-content-title">Headers and accessibility<a class="anchorjs-link" href="#headers-and-accessibility" aria-labelledby="headers-and-accessibility"></a></span></h3>
-<p>When using <code translate="no" class="notranslate text-nowrap">&lt;b-dropdown-header&gt;</code> components in the dropdown menu, it is recommended to add an <code translate="no" class="notranslate text-nowrap">id</code> attribute to each of the headers, and then set the <code translate="no" class="notranslate text-nowrap">aria-describedby</code> attribute (set to the <code translate="no" class="notranslate text-nowrap">id</code> value of the associated header) on each following dropdown items under that header. This will
-provide users of assistive technologies (i.e. sight-impaired users) additional context about the
-dropdown item:</p>
+<h2 id="accessibility" class="bv-no-focus-ring"><span class="bd-content-title">可访问性<a class="anchorjs-link" href="#accessibility" aria-labelledby="accessibility"></a></span></h2>
+<p>提供一个唯一的 <code translate="no" class="notranslate text-nowrap">id</code> 属性可通过在渲染的标记中自动添加适当的 <code translate="no" class="notranslate text-nowrap">aria-*</code> 属性来确保ARIA的合规性。</p>
+<p>默认的 ARIA 角色设置为 <code translate="no" class="notranslate text-nowrap">menu</code> ，但是您可以根据您的用户情况，通过 <code translate="no" class="notranslate text-nowrap">role</code> 属性将此默认角色更改为另一个角色（例如 <code translate="no" class="notranslate text-nowrap">navigation</code>【导航】）。</p>
+<p>当菜单项不触发导航时，建议使用 <code translate="no" class="notranslate text-nowrap">&lt;b-dropdown-item-button&gt;</code> 子组件（不作为链接公布）而不是 <code translate="no" class="notranslate text-nowrap">&lt;b-dropdown-item&gt;</code>（已提供）作为指向用户的链接）。</p>
+<h3 id="headers-and-accessibility" class="bv-no-focus-ring"><span class="bd-content-title">标题和可访问性<a class="anchorjs-link" href="#headers-and-accessibility" aria-labelledby="headers-and-accessibility"></a></span></h3>
+<p>在下拉菜单中使用 <code translate="no" class="notranslate text-nowrap">&lt;b-dropdown-header&gt;</code> 组件时，建议为每个标题添加一个 <code translate="no" class="notranslate text-nowrap">id</code> 属性，然后在每个标题上设置 <code translate="no" class="notranslate text-nowrap">aria-describedby</code> 性（设置为相关标题的 <code translate="no" class="notranslate text-nowrap">id</code> 值） 在该标题下的下拉菜单项之后。 这将为辅助技术的用户（即视障用户）提供有关下拉项的其他上下文：</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-dropdown-aria notranslate">
 <div>
 <div id="dropdown-aria" class="dropdown b-dropdown m-2 btn-group">
@@ -1345,60 +1284,52 @@ dropdown item:</p>
 
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-dropdown</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
-<p>As a simplified alternative, use the <code translate="no" class="notranslate text-nowrap">&lt;b-dropdown-group&gt;</code> instead to easily associate header text to
-the contained dropdown sub-components.</p>
-<h3 id="keyboard-navigation" class="bv-no-focus-ring"><span class="bd-content-title">Keyboard navigation<a class="anchorjs-link" href="#keyboard-navigation" aria-labelledby="keyboard-navigation"></a></span></h3>
-<p>Dropdowns support keyboard navigation, emulating native <code translate="no" class="notranslate text-nowrap">&lt;select&gt;</code> behaviour.</p>
-<p>Note that <kbd class="notranslate" translate="no">DOWN</kbd> and <kbd class="notranslate" translate="no">UP</kbd> will not move focus into <code translate="no" class="notranslate text-nowrap">&lt;b-dropdown-form&gt;</code> sub
-components, but users can still use <kbd class="notranslate" translate="no">TAB</kbd> or <kbd class="notranslate" translate="no">SHIFT</kbd>+<kbd class="notranslate" translate="no">TAB</kbd> to move into
-form controls within the menu.</p>
-<h2 id="implementation-notes" class="bv-no-focus-ring"><span class="bd-content-title">Implementation notes<a class="anchorjs-link" href="#implementation-notes" aria-labelledby="implementation-notes"></a></span></h2>
-<p>The dropdown menu is rendered with semantic <code translate="no" class="notranslate text-nowrap">&lt;ul&gt;</code> and <code translate="no" class="notranslate text-nowrap">&lt;li&gt;</code> elements for accessibility reasons.
-The <code translate="no" class="notranslate text-nowrap">.dropdown-menu</code> is the <code translate="no" class="notranslate text-nowrap">&lt;ul&gt;</code> element, while dropdown items (items, buttons, text, form,
-headers, and dividers) are wrapped in an <code translate="no" class="notranslate text-nowrap">&lt;li&gt;</code> element. If creating custom items to place inside
-the dropdown menu, ensure they are wrapped with a plain <code translate="no" class="notranslate text-nowrap">&lt;li&gt;</code>.</p>
-<h2 id="see-also" class="bv-no-focus-ring"><span class="bd-content-title">See also<a class="anchorjs-link" href="#see-also" aria-labelledby="see-also"></a></span></h2>
+<p>作为简化的替代方法，可以使用 <code translate="no" class="notranslate text-nowrap">&lt;b-dropdown-group&gt;</code> 轻松地将标题文本与所包含的下拉子组件相关联。</p>
+<h3 id="keyboard-navigation" class="bv-no-focus-ring"><span class="bd-content-title">键盘导航<a class="anchorjs-link" href="#keyboard-navigation" aria-labelledby="keyboard-navigation"></a></span></h3>
+<p>下拉菜单支持键盘导航，可模拟本地 <code translate="no" class="notranslate text-nowrap">&lt;select&gt;</code> 行为。</p>
+<p>注意，<kbd class="notranslate" translate="no">DOWN</kbd> 和 <kbd class="notranslate" translate="no">UP</kbd> 不会将焦点移到 <code translate="no" class="notranslate text-nowrap">&lt;b-dropdown-form&gt;</code> 子组件中，但是用户仍然可以使用 <kbd class="notranslate" translate="no">TAB</kbd> 或 <kbd class="notranslate" translate="no">SHIFT</kbd>+<kbd class="notranslate" translate="no">TAB</kbd> 移入菜单内的表单控件。</p>
+<h2 id="implementation-notes" class="bv-no-focus-ring"><span class="bd-content-title">实施说明<a class="anchorjs-link" href="#implementation-notes" aria-labelledby="implementation-notes"></a></span></h2>
+<p>出于可访问性的原因，下拉菜单使用语义 <code translate="no" class="notranslate text-nowrap">&lt;ul&gt;</code> 和 <code translate="no" class="notranslate text-nowrap">&lt;li&gt;</code> 元素渲染。<code translate="no" class="notranslate text-nowrap">.dropdown-menu</code> 菜单是 <code translate="no" class="notranslate text-nowrap">&lt;ul&gt;</code> 元素，而下拉菜单项（items【项目】, buttons【按钮】, text【文本】, form【表单】, headers【标题】, 和 dividers【分隔符】）则包装在 <code translate="no" class="notranslate text-nowrap">&lt;li&gt;</code> 素中。如果创建自定义项目以放置在下拉菜单中，请确保将它们包装为普通的 <code translate="no" class="notranslate text-nowrap">&lt;li&gt;</code> 。</p>
+<h2 id="see-also" class="bv-no-focus-ring"><span class="bd-content-title">另请参阅<a class="anchorjs-link" href="#see-also" aria-labelledby="see-also"></a></span></h2>
 <ul>
-<li><a href="../../../bootstrap-vue/docs/components/nav#dropdown-support" class="font-weight-bold"><code translate="no" class="notranslate text-nowrap">&lt;b-nav-item-dropdown&gt;</code></a> for dropdown support inside <code translate="no" class="notranslate text-nowrap">&lt;b-nav&gt;</code> and <code translate="no" class="notranslate text-nowrap">&lt;n-navbar&gt;</code></li>
-<li><a href="../../../bootstrap-vue/docs/reference/router-links" class="font-weight-bold">Router Link Support</a> reference for information about router-link
-specific props available on <code translate="no" class="notranslate text-nowrap">&lt;b-dropdown-item&gt;</code></li>
+<li><a href="../../../bootstrap-vue/docs/components/nav#dropdown-support" class="font-weight-bold"><code translate="no" class="notranslate text-nowrap">&lt;b-nav-item-dropdown&gt;</code></a> 用于 <code translate="no" class="notranslate text-nowrap">&lt;b-nav&gt;</code> 和 <code translate="no" class="notranslate text-nowrap">&lt;n-navbar&gt;</code> 内部的下拉菜单支持</li>
+<li><a href="../../../bootstrap-vue/docs/reference/router-links" class="font-weight-bold">Router Link Support</a> 参考，有关 <code translate="no" class="notranslate text-nowrap">&lt;b-dropdown-item&gt;</code> 上特定于 router-link（路由链接）属性的信息</li>
 </ul>
 <!-- Component reference added automatically from component package.json -->
 
-<h2 id="component-reference" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title">Component reference<a href="../../../bootstrap-vue/docs/components/dropdown#component-reference" class="anchorjs-link" aria-labelledby="component-reference" target="_self"></a></span></h2>
+<h2 id="component-reference" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title">组件参考<a href="../../../bootstrap-vue/docs/components/dropdown#component-reference" class="anchorjs-link" aria-labelledby="component-reference" target="_self"></a></span></h2>
 <header data-v-866a22e8="" class="row align-items-center">
 <div data-v-866a22e8="" class="col-sm-9">
 <h3 data-v-866a22e8="" id="comp-ref-b-dropdown" tabindex="-1" class="bv-no-focus-ring"><span data-v-866a22e8="" class="bd-content-title"><code data-v-866a22e8="" translate="translate" class="notranslate bigger">&lt;b-dropdown&gt;</code><a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/dropdown#comp-ref-b-dropdown" class="anchorjs-link" aria-labelledby="comp-ref-b-dropdown" target="_self"></a></span></h3>
 </div>
-<div data-v-866a22e8="" class="text-sm-right col-sm-3"><a data-v-866a22e8="" rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev/src/components/dropdown/dropdown.js" class="btn btn-outline-secondary btn-sm"> View source </a></div>
+<div data-v-866a22e8="" class="text-sm-right col-sm-3"><a data-v-866a22e8="" rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev/src/components/dropdown/dropdown.js" class="btn btn-outline-secondary btn-sm"> 查看源代码 </a></div>
 </header>
 <ul data-v-866a22e8="" class="component-ref-mini-toc my-3">
-<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-dropdown-aliases"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-dropdown&gt;</code> Component aliases </a></li>
-<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-dropdown-props"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-dropdown&gt;</code> Properties </a></li>
-<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-dropdown-slots"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-dropdown&gt;</code> Slots </a></li>
-<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-dropdown-events"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-dropdown&gt;</code> Events </a></li>
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-dropdown-aliases"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-dropdown&gt;</code> 组件别名 </a></li>
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-dropdown-props"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-dropdown&gt;</code> 属性 </a></li>
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-dropdown-slots"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-dropdown&gt;</code> 插槽 </a></li>
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-dropdown-events"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-dropdown&gt;</code> 事件 </a></li>
 </ul>
 <article data-v-866a22e8="" class="bd-content">
-<h4 data-v-866a22e8="" id="comp-ref-b-dropdown-aliases" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> Component aliases <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/dropdown#comp-ref-b-dropdown-aliases" class="anchorjs-link" aria-labelledby="comp-ref-b-dropdown-aliases" target="_self"></a></span></h4>
-<p data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-dropdown&gt;</code> can also be used via the following aliases:</p>
+<h4 data-v-866a22e8="" id="comp-ref-b-dropdown-aliases" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> 组件别名 <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/dropdown#comp-ref-b-dropdown-aliases" class="anchorjs-link" aria-labelledby="comp-ref-b-dropdown-aliases" target="_self"></a></span></h4>
+<p data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-dropdown&gt;</code> 也可以通过以下别名使用：</p>
 <ul data-v-866a22e8="">
 <li data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-dd&gt;</code></li>
 </ul>
 <div data-v-866a22e8="" class="alert alert-info">
-<p data-v-866a22e8="" class="mb-0 small"> Note: component aliases are only available when importing all of BootstrapVue or using
-        the component group plugin. </p>
+<p data-v-866a22e8="" class="mb-0 small"> 注意：组件别名仅在导入所有BootstrapVue或使用组件组插件时可用。 </p>
 </div>
 </article>
 <article data-v-866a22e8="" class="bd-content">
-<h4 data-v-866a22e8="" id="comp-ref-b-dropdown-props" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> Properties <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/dropdown#comp-ref-b-dropdown-props" class="anchorjs-link" aria-labelledby="comp-ref-b-dropdown-props" target="_self"></a></span></h4>
+<h4 data-v-866a22e8="" id="comp-ref-b-dropdown-props" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> 属性 <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/dropdown#comp-ref-b-dropdown-props" class="anchorjs-link" aria-labelledby="comp-ref-b-dropdown-props" target="_self"></a></span></h4>
 <div data-v-866a22e8="" class="table-responsive-sm">
 <table role="table" aria-busy="false" aria-colcount="4" class="table b-table bv-docs-table table-striped" id="__BVID__2122">
 <thead role="rowgroup" class="">
 <tr role="row" class="">
-<th role="columnheader" scope="col" tabindex="0" aria-colindex="1" aria-sort="none" class="b-table-sort-icon-left">Property<span class="sr-only"> (Click to sort Ascending)</span></th>
-<th role="columnheader" scope="col" tabindex="0" aria-colindex="2" class="">Type</th>
-<th role="columnheader" scope="col" tabindex="0" aria-colindex="3" class="">Default</th>
-<th role="columnheader" scope="col" tabindex="0" aria-colindex="4" class="">Description</th>
+<th role="columnheader" scope="col" tabindex="0" aria-colindex="1" aria-sort="none" class="b-table-sort-icon-left">属性<span class="sr-only"> (Click to sort Ascending)</span></th>
+<th role="columnheader" scope="col" tabindex="0" aria-colindex="2" class="">类型</th>
+<th role="columnheader" scope="col" tabindex="0" aria-colindex="3" class="">默认值</th>
+<th role="columnheader" scope="col" tabindex="0" aria-colindex="4" class="">描述</th>
 </tr>
 </thead>
 <tbody role="rowgroup">
@@ -1406,199 +1337,198 @@ specific props available on <code translate="no" class="notranslate text-nowrap"
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">id</code></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">Used to set the 'id' attribute on the rendered content, and used as the base to generate any additional element IDs as needed</td>
+<td aria-colindex="4" role="cell" class="">用于在渲染的内容上设置“ id”属性，并用作根据需要生成任何其他元素ID的基础</td>
 </tr>
 <tr role="row" data-pk="disabled" class="" id="__BVID__2122__row_disabled">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">disabled</code></td>
 <td aria-colindex="2" role="cell" class="">Boolean</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
-<td aria-colindex="4" role="cell" class="">When set to 'true', disables the component's functionality and places it in a disabled state</td>
+<td aria-colindex="4" role="cell" class="">设置为 “true” 时，禁用组件的功能并将其置于禁用状态</td>
 </tr>
 <tr role="row" data-pk="dropup" class="" id="__BVID__2122__row_dropup">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">dropup</code></td>
 <td aria-colindex="2" role="cell" class="">Boolean</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
-<td aria-colindex="4" role="cell" class="">When set, positions the menu on the top of the button</td>
+<td aria-colindex="4" role="cell" class="">设置后，将菜单置于按钮顶部</td>
 </tr>
 <tr role="row" data-pk="dropright" class="" id="__BVID__2122__row_dropright">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">dropright</code></td>
 <td aria-colindex="2" role="cell" class="">Boolean</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
-<td aria-colindex="4" role="cell" class="">When set, positions the menu to the right of the button</td>
+<td aria-colindex="4" role="cell" class="">设置后，将菜单置于按钮右侧</td>
 </tr>
 <tr role="row" data-pk="dropleft" class="" id="__BVID__2122__row_dropleft">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">dropleft</code></td>
 <td aria-colindex="2" role="cell" class="">Boolean</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
-<td aria-colindex="4" role="cell" class="">When set, positions the menu to the left of the button</td>
+<td aria-colindex="4" role="cell" class="">设置后，将菜单置于按钮左侧</td>
 </tr>
 <tr role="row" data-pk="right" class="" id="__BVID__2122__row_right">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">right</code></td>
 <td aria-colindex="2" role="cell" class="">Boolean</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
-<td aria-colindex="4" role="cell" class="">Align the right edge of the menu with the right of the button</td>
+<td aria-colindex="4" role="cell" class="">将菜单的右边与按钮的右边对齐</td>
 </tr>
 <tr role="row" data-pk="offset" class="" id="__BVID__2122__row_offset">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">offset</code></td>
 <td aria-colindex="2" role="cell" class="">Number or String</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">0</code></td>
-<td aria-colindex="4" role="cell" class="">Specify the number of pixels to shift the menu by. Negative values supported</td>
+<td aria-colindex="4" role="cell" class="">指定要移动菜单的像素数。 支持负值</td>
 </tr>
 <tr role="row" data-pk="no-flip" class="" id="__BVID__2122__row_no-flip">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">no-flip</code></td>
 <td aria-colindex="2" role="cell" class="">Boolean</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
-<td aria-colindex="4" role="cell" class="">Prevent the menu from auto flipping positions</td>
+<td aria-colindex="4" role="cell" class="">防止菜单自动翻转位置</td>
 </tr>
 <tr role="row" data-pk="popper-opts" class="" id="__BVID__2122__row_popper-opts">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">popper-opts</code></td>
 <td aria-colindex="2" role="cell" class="">Any</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">Additional configuration to pass to Popper.js</td>
+<td aria-colindex="4" role="cell" class="">传递给 Popper.js 的其他配置</td>
 </tr>
 <tr role="row" data-pk="boundary" class="" id="__BVID__2122__row_boundary">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">boundary</code></td>
 <td aria-colindex="2" role="cell" class="">String or HTMLElement</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'scrollParent'</code></td>
-<td aria-colindex="4" role="cell" class="">The boundary constraint of the menu: 'scrollParent', 'window', 'viewport', or a reference to an HTMLElement</td>
+<td aria-colindex="4" role="cell" class="">菜单的边界约束：'scrollParent'，'window'，'viewport'或对 HTMLElement 的引用</td>
 </tr>
 <tr role="row" data-pk="text" class="" id="__BVID__2122__row_text">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">text</code></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">Text to place in the toggle button, or in the split button is split mode</td>
+<td aria-colindex="4" role="cell" class="">放置在切换按钮或拆分按钮中的文本为拆分模式</td>
 </tr>
 <tr role="row" data-pk="html" class="" id="__BVID__2122__row_html">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">html</code></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">HTML string to place in the toggle button, or in the split button is split mode. Use with caution</td>
+<td aria-colindex="4" role="cell" class="">将 HTML字 符串放置在切换按钮或拆分按钮中的是拆分模式。谨慎使用</td>
 </tr>
 <tr role="row" data-pk="size" class="" id="__BVID__2122__row_size">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">size</code></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">Set the size of the component's appearance. 'sm', 'md' (default), or 'lg'</td>
+<td aria-colindex="4" role="cell" class="">设置组件外观的大小。 'sm'，'md'（默认）或'lg'</td>
 </tr>
 <tr role="row" data-pk="variant" class="" id="__BVID__2122__row_variant">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">variant</code></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'secondary'</code></td>
-<td aria-colindex="4" role="cell" class="">Applies one of the Bootstrap theme color variants to the component</td>
+<td aria-colindex="4" role="cell" class="">将 Bootstrap 主题颜色变量之一应用于组件</td>
 </tr>
 <tr role="row" data-pk="block" class="" id="__BVID__2122__row_block">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">block</code> <span data-v-866a22e8="" class="badge badge-secondary">v2.1.0+</span></td>
 <td aria-colindex="2" role="cell" class="">Boolean</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
-<td aria-colindex="4" role="cell" class="">Renders a 100% width toggle button (expands to the width of its parent container)</td>
+<td aria-colindex="4" role="cell" class="">渲染一个100％宽度的切换按钮（扩展到其父容器的宽度）</td>
 </tr>
 <tr role="row" data-pk="menu-class" class="" id="__BVID__2122__row_menu-class">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">menu-class</code></td>
 <td aria-colindex="2" role="cell" class="">String or Array or Object</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">CSS class (or classes) to add to the menu container</td>
+<td aria-colindex="4" role="cell" class="">CSS类（或多个类）添加到菜单容器</td>
 </tr>
 <tr role="row" data-pk="toggle-tag" class="" id="__BVID__2122__row_toggle-tag">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">toggle-tag</code></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'button'</code></td>
-<td aria-colindex="4" role="cell" class="">Specify the HTML tag to render instead of the default tag. Use with caution</td>
+<td aria-colindex="4" role="cell" class="">指定要渲染的 HTML 标签，而不是默认标签。 谨慎使用</td>
 </tr>
 <tr role="row" data-pk="toggle-text" class="" id="__BVID__2122__row_toggle-text">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">toggle-text</code></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'Toggle Dropdown'</code></td>
-<td aria-colindex="4" role="cell" class="">ARIA label (sr-only) to set on the toggle when in split mode</td>
+<td aria-colindex="4" role="cell" class="">在拆分模式下，要在切换上设置的 ARIA 标签（sr-only）</td>
 </tr>
 <tr role="row" data-pk="toggle-class" class="" id="__BVID__2122__row_toggle-class">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">toggle-class</code></td>
 <td aria-colindex="2" role="cell" class="">String or Array or Object</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">CSS class (or classes) to add to the toggle button</td>
+<td aria-colindex="4" role="cell" class="">CSS类（或多个类）添加到切换按钮</td>
 </tr>
 <tr role="row" data-pk="no-caret" class="" id="__BVID__2122__row_no-caret">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">no-caret</code></td>
 <td aria-colindex="2" role="cell" class="">Boolean</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
-<td aria-colindex="4" role="cell" class="">Hide the caret indicator on the toggle button</td>
+<td aria-colindex="4" role="cell" class="">隐藏切换按钮上的插入符号</td>
 </tr>
 <tr role="row" data-pk="split" class="" id="__BVID__2122__row_split">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">split</code></td>
 <td aria-colindex="2" role="cell" class="">Boolean</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
-<td aria-colindex="4" role="cell" class="">When set, renders a split button dropdown</td>
+<td aria-colindex="4" role="cell" class="">设置后，渲染拆分按钮下拉列表</td>
 </tr>
 <tr role="row" data-pk="split-href" class="" id="__BVID__2122__row_split-href">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">split-href</code></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">Denotes the target URL of the link for the split button</td>
+<td aria-colindex="4" role="cell" class="">表示拆分按钮的链接的目标 URL</td>
 </tr>
 <tr role="row" data-pk="split-to" class="" id="__BVID__2122__row_split-to">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">split-to</code></td>
 <td aria-colindex="2" role="cell" class="">String or Object</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">router-link prop: Denotes the target route of the split button. When clicked, the value of the to prop will be passed to router.push() internally, so the value can be either a string or a Location descriptor object</td>
+<td aria-colindex="4" role="cell" class="">router-link 属性：表示拆分按钮的目标路由。单击时，to 属性的值将在内部传递到 router.push（），因此该值可以是字符串或位置描述符对象</td>
 </tr>
 <tr role="row" data-pk="split-variant" class="" id="__BVID__2122__row_split-variant">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">split-variant</code></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""></td>
 
-<td aria-colindex="4" role="cell" class="">Applies one of the Bootstrap theme color variants to the split button. Defaults to the 'variant' prop value</td>
+<td aria-colindex="4" role="cell" class="">将 Bootstrap 主题颜色变量之一应用于拆分按钮。 默认为 'variant' 属性值</td>
 </tr>
 <tr role="row" data-pk="split-class" class="" id="__BVID__2122__row_split-class">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">split-class</code> <span data-v-866a22e8="" class="badge badge-secondary">v2.2.0+</span></td>
 <td aria-colindex="2" role="cell" class="">String or Array or Object</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">CSS class (or classes) to add to the split button</td>
+<td aria-colindex="4" role="cell" class="">CSS类（或多个类）添加到拆分按钮</td>
 </tr>
 <tr role="row" data-pk="split-button-type" class="" id="__BVID__2122__row_split-button-type">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">split-button-type</code></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'button'</code></td>
-<td aria-colindex="4" role="cell" class="">Value to place in the 'type' attribute on the split button: 'button', 'submit', 'reset'</td>
+<td aria-colindex="4" role="cell" class="">在拆分按钮的 “类型” 属性中放置的值：'button'【按钮】, 'submit'【提交】, 'reset'【重置】</td>
 </tr>
 <tr role="row" data-pk="lazy" class="" id="__BVID__2122__row_lazy">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">lazy</code></td>
 <td aria-colindex="2" role="cell" class="">Boolean</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
-<td aria-colindex="4" role="cell" class="">When set, will only mount the menu content into the DOM when the menu is open</td>
+<td aria-colindex="4" role="cell" class="">设置后，仅在打开菜单时将菜单内容安装到 DOM 中</td>
 </tr>
 <tr role="row" data-pk="role" class="" id="__BVID__2122__row_role">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">role</code></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'menu'</code></td>
-<td aria-colindex="4" role="cell" class="">Sets the ARIA attribute 'role' to a specific value</td>
+<td aria-colindex="4" role="cell" class="">将 ARIA 属性“role”【角色】设置为特定值</td>
 </tr>
 </tbody>
 </table>
 </div>
 <div data-v-866a22e8="" class="alert alert-info">
-<p data-v-866a22e8="" class="mb-0 small"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-dropdown&gt;</code> supports generating <code data-v-866a22e8="" translate="translate" class="notranslate">&lt;router-link&gt;</code> or <code data-v-866a22e8="" translate="translate" class="notranslate">&lt;nuxt-link&gt;</code> component (if using Nuxt.js).
-        For more details on the router link (or nuxt link) specific props, see the <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/reference/router-links" class="alert-link" target="_self">Router support</a> reference section. </p>
+<p data-v-866a22e8="" class="mb-0 small"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-dropdown&gt;</code> 支持生成 <code data-v-866a22e8="" translate="translate" class="notranslate">&lt;router-link&gt;</code> 或 <code data-v-866a22e8="" translate="translate" class="notranslate">&lt;nuxt-link&gt;</code> 组件（如果使用Nuxt.js）。有关路由器链接（或nuxt链接）特定道具的更多详细信息，请参阅 <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/reference/router-links" class="alert-link" target="_self">Router support</a>（路由支持）参考部分。</p>
 </div>
 </article>
 <article data-v-866a22e8="" class="bd-content">
-<h4 data-v-866a22e8="" id="comp-ref-b-dropdown-slots" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> Slots <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/dropdown#comp-ref-b-dropdown-slots" class="anchorjs-link" aria-labelledby="comp-ref-b-dropdown-slots" target="_self"></a></span></h4>
+<h4 data-v-866a22e8="" id="comp-ref-b-dropdown-slots" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title">插槽<a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/dropdown#comp-ref-b-dropdown-slots" class="anchorjs-link" aria-labelledby="comp-ref-b-dropdown-slots" target="_self"></a></span></h4>
 <div data-v-866a22e8="" class="table-responsive-sm">
 <table role="table" aria-busy="false" aria-colcount="3" class="table b-table bv-docs-table table-striped" id="__BVID__2162">
 <thead role="rowgroup" class="">
 <tr role="row" class="">
-<th role="columnheader" scope="col" aria-colindex="1" class="">Slot Name</th>
-<th role="columnheader" scope="col" aria-colindex="2" class="">Description</th>
-<th role="columnheader" scope="col" aria-colindex="3" class="">Scoped</th>
+<th role="columnheader" scope="col" aria-colindex="1" class="">插槽名称</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">描述</th>
+<th role="columnheader" scope="col" aria-colindex="3" class="">范围</th>
 </tr>
 </thead>
 <tbody role="rowgroup">
 <tr role="row" data-pk="button-content" class="" id="__BVID__2162__row_button-content">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">button-content</code></td>
-<td aria-colindex="2" role="cell" class="">Can be used to implement custom text with icons and more styling.</td>
+<td aria-colindex="2" role="cell" class="">可用于实现带有图标和更多样式的自定义文本。</td>
 <td aria-colindex="3" role="cell" class=""></td>
 </tr>
 <tr role="row" data-pk="default" class="" id="__BVID__2162__row_default">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">default</code></td>
-<td aria-colindex="2" role="cell" class="">Optionally scoped default slot for dropdown menu content</td>
+<td aria-colindex="2" role="cell" class="">下拉菜单内容的可选范围可选的默认插槽</td>
 <td aria-colindex="3" role="cell" class=""><button data-v-866a22e8="" type="button" class="btn py-0 btn-info btn-sm"> Scope </button></td>
 </tr>
 </tbody>
@@ -1606,66 +1536,66 @@ specific props available on <code translate="no" class="notranslate text-nowrap"
 </div>
 </article>
 <article data-v-866a22e8="" class="bd-content">
-<h4 data-v-866a22e8="" id="comp-ref-b-dropdown-events" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> Events <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/dropdown#comp-ref-b-dropdown-events" class="anchorjs-link" aria-labelledby="comp-ref-b-dropdown-events" target="_self"></a></span></h4>
+<h4 data-v-866a22e8="" id="comp-ref-b-dropdown-events" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> 事件 <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/dropdown#comp-ref-b-dropdown-events" class="anchorjs-link" aria-labelledby="comp-ref-b-dropdown-events" target="_self"></a></span></h4>
 <div data-v-866a22e8="" class="table-responsive-sm">
 <table role="table" aria-busy="false" aria-colcount="3" class="table b-table bv-docs-table table-striped" id="__BVID__2173">
 <thead role="rowgroup" class="">
 <tr role="row" class="">
-<th role="columnheader" scope="col" aria-colindex="1" class="">Event</th>
-<th role="columnheader" scope="col" aria-colindex="2" class="">Arguments</th>
-<th role="columnheader" scope="col" aria-colindex="3" class="">Description</th>
+<th role="columnheader" scope="col" aria-colindex="1" class="">事件</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">参数</th>
+<th role="columnheader" scope="col" aria-colindex="3" class="">描述</th>
 </tr>
 </thead>
 <tbody role="rowgroup">
 <tr role="row" data-pk="show" class="" id="__BVID__2173__row_show">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="notranslate">show</code></td>
 <td aria-colindex="2" role="cell" class=""><ol data-v-866a22e8="" class="list-unstyled mb-0">
-<li data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">bvEvt</code> - <span data-v-866a22e8="">BvEvent object. Call bvEvt.preventDefault() to cancel show.</span></li>
+<li data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">bvEvt</code> - <span data-v-866a22e8="">BvEvent对象。调用 bvEvt.preventDefault（）取消显示。</span></li>
 </ol></td>
-<td aria-colindex="3" role="cell" class="">Emitted just before dropdown is shown. Cancelable.</td>
+<td aria-colindex="3" role="cell" class="">在显示下拉菜单之前发出。可取消</td>
 </tr>
 <tr role="row" data-pk="shown" class="" id="__BVID__2173__row_shown">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="notranslate">shown</code></td>
 <td aria-colindex="2" role="cell" class=""></td>
-<td aria-colindex="3" role="cell" class="">Emitted when dropdown is shown.</td>
+<td aria-colindex="3" role="cell" class="">显示下拉列表时发出。</td>
 </tr>
 <tr role="row" data-pk="hide" class="" id="__BVID__2173__row_hide">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="notranslate">hide</code></td>
 <td aria-colindex="2" role="cell" class=""><ol data-v-866a22e8="" class="list-unstyled mb-0">
-<li data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">bvEvt</code> - <span data-v-866a22e8="">BvEvent object. Call bvEvt.preventDefault() to cancel hide.</span></li>
+<li data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">bvEvt</code> - <span data-v-866a22e8="">BvEvent对象。调用 bvEvt.preventDefault（）取消隐藏。</span></li>
 </ol></td>
-<td aria-colindex="3" role="cell" class="">Emitted just before dropdown is hidden. Cancelable.</td>
+<td aria-colindex="3" role="cell" class="">在隐藏下拉列表之前发出。可取消。</td>
 </tr>
 <tr role="row" data-pk="hidden" class="" id="__BVID__2173__row_hidden">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="notranslate">hidden</code></td>
 <td aria-colindex="2" role="cell" class=""></td>
-<td aria-colindex="3" role="cell" class="">Emitted when dropdown is hidden.</td>
+<td aria-colindex="3" role="cell" class="">隐藏下拉列表时发出。</td>
 </tr>
 <tr role="row" data-pk="toggle" class="" id="__BVID__2173__row_toggle">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="notranslate">toggle</code></td>
 <td aria-colindex="2" role="cell" class=""></td>
-<td aria-colindex="3" role="cell" class="">Emitted when toggle button is clicked.</td>
+<td aria-colindex="3" role="cell" class="">单击切换按钮时发出。</td>
 </tr>
 <tr role="row" data-pk="click" class="" id="__BVID__2173__row_click">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="notranslate">click</code></td>
 <td aria-colindex="2" role="cell" class=""><ol data-v-866a22e8="" class="list-unstyled mb-0">
-<li data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">event</code> - <span data-v-866a22e8="">Native click event object</span></li>
+<li data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">event</code> - <span data-v-866a22e8="">Native click event object（本机单击事件对象）</span></li>
 </ol></td>
-<td aria-colindex="3" role="cell" class="">Emitted when split button is clicked in split mode.</td>
+<td aria-colindex="3" role="cell" class="">在拆分模式下单击拆分按钮时发出。</td>
 </tr>
 <tr role="row" data-pk="bv::dropdown::show" class="" id="__BVID__2173__row_bv::dropdown::show">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="notranslate">bv::dropdown::show</code></td>
 <td aria-colindex="2" role="cell" class=""><ol data-v-866a22e8="" class="list-unstyled mb-0">
-<li data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">bvEvt</code> - <span data-v-866a22e8="">BvEvent object. Call bvEvt.preventDefault() to cancel show.</span></li>
+<li data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">bvEvt</code> - <span data-v-866a22e8="">BvEvent对象。调用 bvEvt.preventDefault（）取消显示。</span></li>
 </ol></td>
-<td aria-colindex="3" role="cell" class="">Emitted on $root just before dropdown is shown. Cancelable.</td>
+<td aria-colindex="3" role="cell" class="">在显示下拉列表之前在 $root 上发出。可取消。</td>
 </tr>
 <tr role="row" data-pk="bv::dropdown::hide" class="" id="__BVID__2173__row_bv::dropdown::hide">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="notranslate">bv::dropdown::hide</code></td>
 <td aria-colindex="2" role="cell" class=""><ol data-v-866a22e8="" class="list-unstyled mb-0">
-<li data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">bvEvt</code> - <span data-v-866a22e8="">BvEvent object. Call bvEvt.preventDefault() to cancel hide.</span></li>
+<li data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">bvEvt</code> - <span data-v-866a22e8="">BvEvent对象。调用 bvEvt.preventDefault（）取消隐藏。</span></li>
 </ol></td>
-<td aria-colindex="3" role="cell" class="">Emitted on $root just before dropdown is hidden. Cancelable.</td>
+<td aria-colindex="3" role="cell" class="">在隐藏下拉列表之前在 $root 上发出。可取消。</td>
 </tr>
 </tbody>
 </table>
@@ -1675,34 +1605,33 @@ specific props available on <code translate="no" class="notranslate text-nowrap"
 <div data-v-866a22e8="" class="col-sm-9">
 <h3 data-v-866a22e8="" id="comp-ref-b-dropdown-item" tabindex="-1" class="bv-no-focus-ring"><span data-v-866a22e8="" class="bd-content-title"><code data-v-866a22e8="" translate="translate" class="notranslate bigger">&lt;b-dropdown-item&gt;</code><a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/dropdown#comp-ref-b-dropdown-item" class="anchorjs-link" aria-labelledby="comp-ref-b-dropdown-item" target="_self"></a></span></h3>
 </div>
-<div data-v-866a22e8="" class="text-sm-right col-sm-3"><a data-v-866a22e8="" rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev/src/components/dropdown/dropdown-item.js" class="btn btn-outline-secondary btn-sm"> View source </a></div>
+<div data-v-866a22e8="" class="text-sm-right col-sm-3"><a data-v-866a22e8="" rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev/src/components/dropdown/dropdown-item.js" class="btn btn-outline-secondary btn-sm"> 查看源代码 </a></div>
 </header>
 <ul data-v-866a22e8="" class="component-ref-mini-toc my-3">
-<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-dropdown-item-aliases"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-dropdown-item&gt;</code> Component aliases </a></li>
-<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-dropdown-item-props"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-dropdown-item&gt;</code> Properties </a></li>
-<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-dropdown-item-events"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-dropdown-item&gt;</code> Events </a></li>
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-dropdown-item-aliases"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-dropdown-item&gt;</code> 组件别名 </a></li>
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-dropdown-item-props"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-dropdown-item&gt;</code> 属性 </a></li>
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-dropdown-item-events"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-dropdown-item&gt;</code> 事件 </a></li>
 </ul>
 <article data-v-866a22e8="" class="bd-content">
-<h4 data-v-866a22e8="" id="comp-ref-b-dropdown-item-aliases" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> Component aliases <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/dropdown#comp-ref-b-dropdown-item-aliases" class="anchorjs-link" aria-labelledby="comp-ref-b-dropdown-item-aliases" target="_self"></a></span></h4>
-<p data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-dropdown-item&gt;</code> can also be used via the following aliases:</p>
+<h4 data-v-866a22e8="" id="comp-ref-b-dropdown-item-aliases" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> 组件别名 <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/dropdown#comp-ref-b-dropdown-item-aliases" class="anchorjs-link" aria-labelledby="comp-ref-b-dropdown-item-aliases" target="_self"></a></span></h4>
+<p data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-dropdown-item&gt;</code> 也可以通过以下别名使用：</p>
 <ul data-v-866a22e8="">
 <li data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-dd-item&gt;</code></li>
 </ul>
 <div data-v-866a22e8="" class="alert alert-info">
-<p data-v-866a22e8="" class="mb-0 small"> Note: component aliases are only available when importing all of BootstrapVue or using
-        the component group plugin. </p>
+<p data-v-866a22e8="" class="mb-0 small">注意：组件别名仅在导入所有 BootstrapVue 或使用组件组插件时可用。 </p>
 </div>
 </article>
 <article data-v-866a22e8="" class="bd-content">
-<h4 data-v-866a22e8="" id="comp-ref-b-dropdown-item-props" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> Properties <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/dropdown#comp-ref-b-dropdown-item-props" class="anchorjs-link" aria-labelledby="comp-ref-b-dropdown-item-props" target="_self"></a></span></h4>
+<h4 data-v-866a22e8="" id="comp-ref-b-dropdown-item-props" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> 属性 <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/dropdown#comp-ref-b-dropdown-item-props" class="anchorjs-link" aria-labelledby="comp-ref-b-dropdown-item-props" target="_self"></a></span></h4>
 <div data-v-866a22e8="" class="table-responsive-sm">
 <table role="table" aria-busy="false" aria-colcount="4" class="table b-table bv-docs-table table-striped" id="__BVID__2196">
 <thead role="rowgroup" class="">
 <tr role="row" class="">
-<th role="columnheader" scope="col" tabindex="0" aria-colindex="1" aria-sort="none" class="b-table-sort-icon-left">Property<span class="sr-only"> (Click to sort Ascending)</span></th>
-<th role="columnheader" scope="col" tabindex="0" aria-colindex="2" class="">Type</th>
-<th role="columnheader" scope="col" tabindex="0" aria-colindex="3" class="">Default</th>
-<th role="columnheader" scope="col" tabindex="0" aria-colindex="4" class="">Description</th>
+<th role="columnheader" scope="col" tabindex="0" aria-colindex="1" aria-sort="none" class="b-table-sort-icon-left">属性<span class="sr-only"> (Click to sort Ascending)</span></th>
+<th role="columnheader" scope="col" tabindex="0" aria-colindex="2" class="">类型</th>
+<th role="columnheader" scope="col" tabindex="0" aria-colindex="3" class="">默认值</th>
+<th role="columnheader" scope="col" tabindex="0" aria-colindex="4" class="">描述</th>
 </tr>
 </thead>
 <tbody role="rowgroup">
@@ -1710,118 +1639,117 @@ specific props available on <code translate="no" class="notranslate text-nowrap"
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">href</code></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">Denotes the target URL of the link for standard a links</td>
+<td aria-colindex="4" role="cell" class="">表示标准 a 链接的链接目标 URL</td>
 </tr>
 <tr role="row" data-pk="rel" class="" id="__BVID__2196__row_rel">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">rel</code></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">Sets the 'rel' attribute on the rendered link</td>
+<td aria-colindex="4" role="cell" class="">在渲染的链接上设置'rel'属性</td>
 </tr>
 <tr role="row" data-pk="target" class="" id="__BVID__2196__row_target">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">target</code></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'_self'</code></td>
-<td aria-colindex="4" role="cell" class="">Sets the 'target' attribute on the rendered link</td>
+<td aria-colindex="4" role="cell" class="">在渲染的链接上设置 'target' 属性</td>
 </tr>
 <tr role="row" data-pk="active" class="" id="__BVID__2196__row_active">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">active</code></td>
 <td aria-colindex="2" role="cell" class="">Boolean</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
-<td aria-colindex="4" role="cell" class="">When set to 'true', places the component in the active state with active styling</td>
+<td aria-colindex="4" role="cell" class="">设置为“ true”时，使用有效样式将组件置于活动状态</td>
 </tr>
 <tr role="row" data-pk="disabled" class="" id="__BVID__2196__row_disabled">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">disabled</code></td>
 <td aria-colindex="2" role="cell" class="">Boolean</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
-<td aria-colindex="4" role="cell" class="">When set to 'true', disables the component's functionality and places it in a disabled state</td>
+<td aria-colindex="4" role="cell" class="">设置为“ true”时，禁用组件的功能并将其置于禁用状态</td>
 </tr>
 <tr role="row" data-pk="to" class="" id="__BVID__2196__row_to">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">to</code></td>
 <td aria-colindex="2" role="cell" class="">String or Object</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">router-link prop: Denotes the target route of the link. When clicked, the value of the to prop will be passed to router.push() internally, so the value can be either a string or a Location descriptor object</td>
+<td aria-colindex="4" role="cell" class="">router-link属性：表示链接的目标路由。单击时，to 属性的值将在内部传递到 router.push（），因此该值可以是字符串或位置描述符对象</td>
 </tr>
 <tr role="row" data-pk="append" class="" id="__BVID__2196__row_append">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">append</code></td>
 <td aria-colindex="2" role="cell" class="">Boolean</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
-<td aria-colindex="4" role="cell" class="">router-link prop: Setting append prop always appends the relative path to the current path</td>
+<td aria-colindex="4" role="cell" class="">router-link属性：设置附加属性总是将相对路径附加到当前路径</td>
 </tr>
 <tr role="row" data-pk="replace" class="" id="__BVID__2196__row_replace">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">replace</code></td>
 <td aria-colindex="2" role="cell" class="">Boolean</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
-<td aria-colindex="4" role="cell" class="">router-link prop: Setting the replace prop will call 'router.replace()' instead of 'router.push()' when clicked, so the navigation will not leave a history record</td>
+<td aria-colindex="4" role="cell" class="">router-link属性：设置替换属性将在单击时调用“ router.replace（）”而不是“ router.push（）”，因此导航不会留下历史记录</td>
 </tr>
 <tr role="row" data-pk="event" class="" id="__BVID__2196__row_event">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">event</code></td>
 <td aria-colindex="2" role="cell" class="">String or Array</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'click'</code></td>
-<td aria-colindex="4" role="cell" class="">router-link prop: Specify the event that triggers the link. In most cases you should leave this as the default</td>
+<td aria-colindex="4" role="cell" class="">router-link属性：指定触发链接的事件。 在大多数情况下，应将其保留为默认值</td>
 </tr>
 <tr role="row" data-pk="active-class" class="" id="__BVID__2196__row_active-class">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">active-class</code></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">router-link prop: Configure the active CSS class applied when the link is active. Typically you will want to set this to class name 'active'</td>
+<td aria-colindex="4" role="cell" class="">router-link属性：配置在链接处于活动状态时应用的活动CSS类。通常，您将需要将此设置为类名称“ active”</td>
 </tr>
 <tr role="row" data-pk="exact" class="" id="__BVID__2196__row_exact">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">exact</code></td>
 <td aria-colindex="2" role="cell" class="">Boolean</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
-<td aria-colindex="4" role="cell" class="">router-link prop: The default active class matching behavior is inclusive match. Setting this prop forces the mode to exactly match the route</td>
+<td aria-colindex="4" role="cell" class="">router-link属性：默认的活动类匹配行为是包含匹配。 设置此道具将强制模式与路线完全匹配</td>
 </tr>
 <tr role="row" data-pk="exact-active-class" class="" id="__BVID__2196__row_exact-active-class">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">exact-active-class</code></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">router-link prop: Configure the active CSS class applied when the link is active with exact match. Typically you will want to set this to class name 'active'</td>
+<td aria-colindex="4" role="cell" class="">router-link属性：配置当链接处于完全匹配状态时应用的活动CSS类。 通常，您将需要将此设置为类名称“active”</td>
 </tr>
 <tr role="row" data-pk="router-tag" class="" id="__BVID__2196__row_router-tag">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">router-tag</code></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'a'</code></td>
-<td aria-colindex="4" role="cell" class="">router-link prop: Specify which tag to render, and it will still listen to click events for navigation. 'router-tag' translates to the tag prop on the final rendered router-link. Typically you should use the default value</td>
+<td aria-colindex="4" role="cell" class="">router-link属性：指定要呈现的标签，它仍将监听单击事件以进行导航。“ router-tag”转换为最终渲染的路由器链接上的 tag 属性。通常，您应该使用默认值</td>
 </tr>
 <tr role="row" data-pk="no-prefetch" class="" id="__BVID__2196__row_no-prefetch">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">no-prefetch</code></td>
 <td aria-colindex="2" role="cell" class="">Boolean</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
-<td aria-colindex="4" role="cell" class="">nuxt-link prop: To improve the responsiveness of your Nuxt.js applications, when the link will be displayed within the viewport, Nuxt.js will automatically prefetch the code splitted page. Setting 'no-prefetch' will disabled this feature for the specific link</td>
+<td aria-colindex="4" role="cell" class="">nuxt-link属性：为了提高 Nuxt.js 应用程序的响应速度，当链接将显示在视口中时，Nuxt.js 将自动预取代码拆分页面。设置“不预取”将禁用特定链接的此功能</td>
 </tr>
 <tr role="row" data-pk="variant" class="" id="__BVID__2196__row_variant">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">variant</code></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">Applies one of the Bootstrap theme color variants to the component</td>
+<td aria-colindex="4" role="cell" class="">将 Bootstrap 主题颜色变量之一应用于组件</td>
 </tr>
 </tbody>
 </table>
 </div>
 <div data-v-866a22e8="" class="alert alert-info">
-<p data-v-866a22e8="" class="mb-0 small"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-dropdown-item&gt;</code> supports generating <code data-v-866a22e8="" translate="translate" class="notranslate">&lt;router-link&gt;</code> or <code data-v-866a22e8="" translate="translate" class="notranslate">&lt;nuxt-link&gt;</code> component (if using Nuxt.js).
-        For more details on the router link (or nuxt link) specific props, see the <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/reference/router-links" class="alert-link" target="_self">Router support</a> reference section. </p>
+<p data-v-866a22e8="" class="mb-0 small"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-dropdown-item&gt;</code> 支持生成 <code data-v-866a22e8="" translate="translate" class="notranslate">&lt;router-link&gt;</code> 或 <code data-v-866a22e8="" translate="translate" class="notranslate">&lt;nuxt-link&gt;</code> 组件（如果使用Nuxt.js）。 有关路由器链接（或nuxt链接）特定道具的更多详细信息，请参阅 <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/reference/router-links" class="alert-link" target="_self">Router support</a>（路由支持）参考部分。 </p>
 </div>
 </article>
 <article data-v-866a22e8="" class="bd-content">
-<h4 data-v-866a22e8="" id="comp-ref-b-dropdown-item-events" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> Events <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/dropdown#comp-ref-b-dropdown-item-events" class="anchorjs-link" aria-labelledby="comp-ref-b-dropdown-item-events" target="_self"></a></span></h4>
+<h4 data-v-866a22e8="" id="comp-ref-b-dropdown-item-events" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> 事件 <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/dropdown#comp-ref-b-dropdown-item-events" class="anchorjs-link" aria-labelledby="comp-ref-b-dropdown-item-events" target="_self"></a></span></h4>
 <div data-v-866a22e8="" class="table-responsive-sm">
 <table role="table" aria-busy="false" aria-colcount="3" class="table b-table bv-docs-table table-striped" id="__BVID__2223">
 <thead role="rowgroup" class="">
 <tr role="row" class="">
-<th role="columnheader" scope="col" aria-colindex="1" class="">Event</th>
-<th role="columnheader" scope="col" aria-colindex="2" class="">Arguments</th>
-<th role="columnheader" scope="col" aria-colindex="3" class="">Description</th>
+<th role="columnheader" scope="col" aria-colindex="1" class="">事件</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">参数</th>
+<th role="columnheader" scope="col" aria-colindex="3" class="">描述</th>
 </tr>
 </thead>
 <tbody role="rowgroup">
 <tr role="row" data-pk="click" class="" id="__BVID__2223__row_click">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="notranslate">click</code></td>
 <td aria-colindex="2" role="cell" class=""><ol data-v-866a22e8="" class="list-unstyled mb-0">
-<li data-v-866a22e8=""> <span data-v-866a22e8="">Native click event object</span></li>
+<li data-v-866a22e8=""> <span data-v-866a22e8="">Native click event object（本机点击事件对象）</span></li>
 </ol></td>
-<td aria-colindex="3" role="cell" class="">Emitted when item is clicked.</td>
+<td aria-colindex="3" role="cell" class="">单击项目时发出。</td>
 </tr>
 </tbody>
 </table>
@@ -1831,36 +1759,35 @@ specific props available on <code translate="no" class="notranslate text-nowrap"
 <div data-v-866a22e8="" class="col-sm-9">
 <h3 data-v-866a22e8="" id="comp-ref-b-dropdown-item-button" tabindex="-1" class="bv-no-focus-ring"><span data-v-866a22e8="" class="bd-content-title"><code data-v-866a22e8="" translate="translate" class="notranslate bigger">&lt;b-dropdown-item-button&gt;</code><a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/dropdown#comp-ref-b-dropdown-item-button" class="anchorjs-link" aria-labelledby="comp-ref-b-dropdown-item-button" target="_self"></a></span></h3>
 </div>
-<div data-v-866a22e8="" class="text-sm-right col-sm-3"><a data-v-866a22e8="" rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev/src/components/dropdown/dropdown-item-button.js" class="btn btn-outline-secondary btn-sm"> View source </a></div>
+<div data-v-866a22e8="" class="text-sm-right col-sm-3"><a data-v-866a22e8="" rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev/src/components/dropdown/dropdown-item-button.js" class="btn btn-outline-secondary btn-sm"> 查看源代码 </a></div>
 </header>
 <ul data-v-866a22e8="" class="component-ref-mini-toc my-3">
-<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-dropdown-item-button-aliases"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-dropdown-item-button&gt;</code> Component aliases </a></li>
-<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-dropdown-item-button-props"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-dropdown-item-button&gt;</code> Properties </a></li>
-<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-dropdown-item-button-events"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-dropdown-item-button&gt;</code> Events </a></li>
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-dropdown-item-button-aliases"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-dropdown-item-button&gt;</code> 组件别名 </a></li>
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-dropdown-item-button-props"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-dropdown-item-button&gt;</code> 属性 </a></li>
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-dropdown-item-button-events"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-dropdown-item-button&gt;</code> 事件 </a></li>
 </ul>
 <article data-v-866a22e8="" class="bd-content">
-<h4 data-v-866a22e8="" id="comp-ref-b-dropdown-item-button-aliases" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> Component aliases <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/dropdown#comp-ref-b-dropdown-item-button-aliases" class="anchorjs-link" aria-labelledby="comp-ref-b-dropdown-item-button-aliases" target="_self"></a></span></h4>
-<p data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-dropdown-item-button&gt;</code> can also be used via the following aliases:</p>
+<h4 data-v-866a22e8="" id="comp-ref-b-dropdown-item-button-aliases" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> 组件别名 <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/dropdown#comp-ref-b-dropdown-item-button-aliases" class="anchorjs-link" aria-labelledby="comp-ref-b-dropdown-item-button-aliases" target="_self"></a></span></h4>
+<p data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-dropdown-item-button&gt;</code> 也可以通过以下别名使用：</p>
 <ul data-v-866a22e8="">
 <li data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-dropdown-item-btn&gt;</code></li>
 <li data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-dd-item-button&gt;</code></li>
 <li data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-dd-item-btn&gt;</code></li>
 </ul>
 <div data-v-866a22e8="" class="alert alert-info">
-<p data-v-866a22e8="" class="mb-0 small"> Note: component aliases are only available when importing all of BootstrapVue or using
-        the component group plugin. </p>
+<p data-v-866a22e8="" class="mb-0 small"> 注意：组件别名仅在导入所有 BootstrapVue 或使用组件组插件时可用。</p>
 </div>
 </article>
 <article data-v-866a22e8="" class="bd-content">
-<h4 data-v-866a22e8="" id="comp-ref-b-dropdown-item-button-props" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> Properties <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/dropdown#comp-ref-b-dropdown-item-button-props" class="anchorjs-link" aria-labelledby="comp-ref-b-dropdown-item-button-props" target="_self"></a></span></h4>
+<h4 data-v-866a22e8="" id="comp-ref-b-dropdown-item-button-props" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> 属性 <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/dropdown#comp-ref-b-dropdown-item-button-props" class="anchorjs-link" aria-labelledby="comp-ref-b-dropdown-item-button-props" target="_self"></a></span></h4>
 <div data-v-866a22e8="" class="table-responsive-sm">
 <table role="table" aria-busy="false" aria-colcount="4" class="table b-table bv-docs-table table-striped" id="__BVID__2239">
 <thead role="rowgroup" class="">
 <tr role="row" class="">
-<th role="columnheader" scope="col" aria-colindex="1" class="">Property</th>
-<th role="columnheader" scope="col" aria-colindex="2" class="">Type</th>
-<th role="columnheader" scope="col" aria-colindex="3" class="">Default</th>
-<th role="columnheader" scope="col" aria-colindex="4" class="">Description</th>
+<th role="columnheader" scope="col" aria-colindex="1" class="">属性</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">类型</th>
+<th role="columnheader" scope="col" aria-colindex="3" class="">默认值</th>
+<th role="columnheader" scope="col" aria-colindex="4" class="">描述</th>
 </tr>
 </thead>
 <tbody role="rowgroup">
@@ -1868,48 +1795,48 @@ specific props available on <code translate="no" class="notranslate text-nowrap"
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">active</code></td>
 <td aria-colindex="2" role="cell" class="">Boolean</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
-<td aria-colindex="4" role="cell" class="">When set to 'true', places the component in the active state with active styling</td>
+<td aria-colindex="4" role="cell" class="">设置为“ true”时，使用有效样式将组件置于活动状态</td>
 </tr>
 <tr role="row" data-pk="active-class" class="" id="__BVID__2239__row_active-class">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">active-class</code></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'active'</code></td>
-<td aria-colindex="4" role="cell" class="">router-link prop: Configure the active CSS class applied when the link is active. Typically you will want to set this to class name 'active'</td>
+<td aria-colindex="4" role="cell" class="">router-link属性：配置在链接处于活动状态时应用的活动CSS类。 通常，您将需要将此设置为类名称“active”</td>
 </tr>
 <tr role="row" data-pk="disabled" class="" id="__BVID__2239__row_disabled">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">disabled</code></td>
 <td aria-colindex="2" role="cell" class="">Boolean</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
-<td aria-colindex="4" role="cell" class="">When set to 'true', disables the component's functionality and places it in a disabled state</td>
+<td aria-colindex="4" role="cell" class="">设置为“ true”时，禁用组件的功能并将其置于禁用状态</td>
 </tr>
 <tr role="row" data-pk="variant" class="" id="__BVID__2239__row_variant">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">variant</code></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">Applies one of the Bootstrap theme color variants to the component</td>
+<td aria-colindex="4" role="cell" class="">将 Bootstrap 主题颜色变量之一应用于组件</td>
 </tr>
 </tbody>
 </table>
 </div>
 </article>
 <article data-v-866a22e8="" class="bd-content">
-<h4 data-v-866a22e8="" id="comp-ref-b-dropdown-item-button-events" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> Events <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/dropdown#comp-ref-b-dropdown-item-button-events" class="anchorjs-link" aria-labelledby="comp-ref-b-dropdown-item-button-events" target="_self"></a></span></h4>
+<h4 data-v-866a22e8="" id="comp-ref-b-dropdown-item-button-events" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> 事件 <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/dropdown#comp-ref-b-dropdown-item-button-events" class="anchorjs-link" aria-labelledby="comp-ref-b-dropdown-item-button-events" target="_self"></a></span></h4>
 <div data-v-866a22e8="" class="table-responsive-sm">
 <table role="table" aria-busy="false" aria-colcount="3" class="table b-table bv-docs-table table-striped" id="__BVID__2253">
 <thead role="rowgroup" class="">
 <tr role="row" class="">
-<th role="columnheader" scope="col" aria-colindex="1" class="">Event</th>
-<th role="columnheader" scope="col" aria-colindex="2" class="">Arguments</th>
-<th role="columnheader" scope="col" aria-colindex="3" class="">Description</th>
+<th role="columnheader" scope="col" aria-colindex="1" class="">事件</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">参数</th>
+<th role="columnheader" scope="col" aria-colindex="3" class="">描述</th>
 </tr>
 </thead>
 <tbody role="rowgroup">
 <tr role="row" data-pk="click" class="" id="__BVID__2253__row_click">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="notranslate">click</code></td>
 <td aria-colindex="2" role="cell" class=""><ol data-v-866a22e8="" class="list-unstyled mb-0">
-<li data-v-866a22e8=""> <span data-v-866a22e8="">Native click event object</span></li>
+<li data-v-866a22e8=""> <span data-v-866a22e8="">Native click event object（本机点击事件对象）</span></li>
 </ol></td>
-<td aria-colindex="3" role="cell" class="">Emitted when button item is clicked.</td>
+<td aria-colindex="3" role="cell" class="">单击按钮项时发出。</td>
 </tr>
 </tbody>
 </table>
@@ -1918,34 +1845,33 @@ specific props available on <code translate="no" class="notranslate text-nowrap"
 <header data-v-866a22e8="" class="row align-items-center">
 <div data-v-866a22e8="" class="col-sm-9">
 <h3 data-v-866a22e8="" id="comp-ref-b-dropdown-divider" tabindex="-1" class="bv-no-focus-ring"><span data-v-866a22e8="" class="bd-content-title"><code data-v-866a22e8="" translate="translate" class="notranslate bigger">&lt;b-dropdown-divider&gt;</code><a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/dropdown#comp-ref-b-dropdown-divider" class="anchorjs-link" aria-labelledby="comp-ref-b-dropdown-divider" target="_self"></a></span></h3>
-<a data-v-866a22e8="" rel="noopener" target="_blank" href="https://vuejs.org/v2/guide/render-function.html#Functional-Components" class="badge badge-secondary"> Functional Component </a></div>
-<div data-v-866a22e8="" class="text-sm-right col-sm-3"><a data-v-866a22e8="" rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev/src/components/dropdown/dropdown-divider.js" class="btn btn-outline-secondary btn-sm"> View source </a></div>
+<a data-v-866a22e8="" rel="noopener" target="_blank" href="https://vuejs.org/v2/guide/render-function.html#Functional-Components" class="badge badge-secondary"> 功能组件 </a></div>
+<div data-v-866a22e8="" class="text-sm-right col-sm-3"><a data-v-866a22e8="" rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev/src/components/dropdown/dropdown-divider.js" class="btn btn-outline-secondary btn-sm"> 查看源代码 </a></div>
 </header>
 <ul data-v-866a22e8="" class="component-ref-mini-toc my-3">
-<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-dropdown-divider-aliases"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-dropdown-divider&gt;</code> Component aliases </a></li>
-<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-dropdown-divider-props"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-dropdown-divider&gt;</code> Properties </a></li>
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-dropdown-divider-aliases"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-dropdown-divider&gt;</code> 组件别名 </a></li>
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-dropdown-divider-props"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-dropdown-divider&gt;</code> 属性 </a></li>
 </ul>
 <article data-v-866a22e8="" class="bd-content">
-<h4 data-v-866a22e8="" id="comp-ref-b-dropdown-divider-aliases" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> Component aliases <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/dropdown#comp-ref-b-dropdown-divider-aliases" class="anchorjs-link" aria-labelledby="comp-ref-b-dropdown-divider-aliases" target="_self"></a></span></h4>
-<p data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-dropdown-divider&gt;</code> can also be used via the following aliases:</p>
+<h4 data-v-866a22e8="" id="comp-ref-b-dropdown-divider-aliases" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> 组件别名 <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/dropdown#comp-ref-b-dropdown-divider-aliases" class="anchorjs-link" aria-labelledby="comp-ref-b-dropdown-divider-aliases" target="_self"></a></span></h4>
+<p data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-dropdown-divider&gt;</code> 也可以通过以下别名使用：</p>
 <ul data-v-866a22e8="">
 <li data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-dd-divider&gt;</code></li>
 </ul>
 <div data-v-866a22e8="" class="alert alert-info">
-<p data-v-866a22e8="" class="mb-0 small"> Note: component aliases are only available when importing all of BootstrapVue or using
-        the component group plugin. </p>
+<p data-v-866a22e8="" class="mb-0 small"> 注意：组件别名仅在导入所有 BootstrapVue 或使用组件组插件时可用。 </p>
 </div>
 </article>
 <article data-v-866a22e8="" class="bd-content">
-<h4 data-v-866a22e8="" id="comp-ref-b-dropdown-divider-props" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> Properties <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/dropdown#comp-ref-b-dropdown-divider-props" class="anchorjs-link" aria-labelledby="comp-ref-b-dropdown-divider-props" target="_self"></a></span></h4>
+<h4 data-v-866a22e8="" id="comp-ref-b-dropdown-divider-props" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> 属性 <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/dropdown#comp-ref-b-dropdown-divider-props" class="anchorjs-link" aria-labelledby="comp-ref-b-dropdown-divider-props" target="_self"></a></span></h4>
 <div data-v-866a22e8="" class="table-responsive-sm">
 <table role="table" aria-busy="false" aria-colcount="4" class="table b-table bv-docs-table table-striped" id="__BVID__2270">
 <thead role="rowgroup" class="">
 <tr role="row" class="">
-<th role="columnheader" scope="col" aria-colindex="1" class="">Property</th>
-<th role="columnheader" scope="col" aria-colindex="2" class="">Type</th>
-<th role="columnheader" scope="col" aria-colindex="3" class="">Default</th>
-<th role="columnheader" scope="col" aria-colindex="4" class="">Description</th>
+<th role="columnheader" scope="col" aria-colindex="1" class="">属性</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">类型</th>
+<th role="columnheader" scope="col" aria-colindex="3" class="">默认值</th>
+<th role="columnheader" scope="col" aria-colindex="4" class="">描述</th>
 </tr>
 </thead>
 <tbody role="rowgroup">
@@ -1953,7 +1879,7 @@ specific props available on <code translate="no" class="notranslate text-nowrap"
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">tag</code></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'hr'</code></td>
-<td aria-colindex="4" role="cell" class="">Specify the HTML tag to render instead of the default tag</td>
+<td aria-colindex="4" role="cell" class="">指定要渲染的HTML标签，而不是默认标签</td>
 </tr>
 </tbody>
 </table>
@@ -1962,34 +1888,33 @@ specific props available on <code translate="no" class="notranslate text-nowrap"
 <header data-v-866a22e8="" class="row align-items-center">
 <div data-v-866a22e8="" class="col-sm-9">
 <h3 data-v-866a22e8="" id="comp-ref-b-dropdown-form" tabindex="-1" class="bv-no-focus-ring"><span data-v-866a22e8="" class="bd-content-title"><code data-v-866a22e8="" translate="translate" class="notranslate bigger">&lt;b-dropdown-form&gt;</code><a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/dropdown#comp-ref-b-dropdown-form" class="anchorjs-link" aria-labelledby="comp-ref-b-dropdown-form" target="_self"></a></span></h3>
-<a data-v-866a22e8="" rel="noopener" target="_blank" href="https://vuejs.org/v2/guide/render-function.html#Functional-Components" class="badge badge-secondary"> Functional Component </a></div>
-<div data-v-866a22e8="" class="text-sm-right col-sm-3"><a data-v-866a22e8="" rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev/src/components/dropdown/dropdown-form.js" class="btn btn-outline-secondary btn-sm"> View source </a></div>
+<a data-v-866a22e8="" rel="noopener" target="_blank" href="https://vuejs.org/v2/guide/render-function.html#Functional-Components" class="badge badge-secondary"> 功能组件 </a></div>
+<div data-v-866a22e8="" class="text-sm-right col-sm-3"><a data-v-866a22e8="" rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev/src/components/dropdown/dropdown-form.js" class="btn btn-outline-secondary btn-sm"> 查看源代码 </a></div>
 </header>
 <ul data-v-866a22e8="" class="component-ref-mini-toc my-3">
-<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-dropdown-form-aliases"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-dropdown-form&gt;</code> Component aliases </a></li>
-<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-dropdown-form-props"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-dropdown-form&gt;</code> Properties </a></li>
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-dropdown-form-aliases"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-dropdown-form&gt;</code> 组件别名 </a></li>
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-dropdown-form-props"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-dropdown-form&gt;</code> 属性 </a></li>
 </ul>
 <article data-v-866a22e8="" class="bd-content">
-<h4 data-v-866a22e8="" id="comp-ref-b-dropdown-form-aliases" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> Component aliases <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/dropdown#comp-ref-b-dropdown-form-aliases" class="anchorjs-link" aria-labelledby="comp-ref-b-dropdown-form-aliases" target="_self"></a></span></h4>
-<p data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-dropdown-form&gt;</code> can also be used via the following aliases:</p>
+<h4 data-v-866a22e8="" id="comp-ref-b-dropdown-form-aliases" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> 组件别名 <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/dropdown#comp-ref-b-dropdown-form-aliases" class="anchorjs-link" aria-labelledby="comp-ref-b-dropdown-form-aliases" target="_self"></a></span></h4>
+<p data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-dropdown-form&gt;</code> 也可以通过以下别名使用：</p>
 <ul data-v-866a22e8="">
 <li data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-dd-form&gt;</code></li>
 </ul>
 <div data-v-866a22e8="" class="alert alert-info">
-<p data-v-866a22e8="" class="mb-0 small"> Note: component aliases are only available when importing all of BootstrapVue or using
-        the component group plugin. </p>
+<p data-v-866a22e8="" class="mb-0 small"> 注意：组件别名仅在导入所有 BootstrapVue 或使用组件组插件时可用。 </p>
 </div>
 </article>
 <article data-v-866a22e8="" class="bd-content">
-<h4 data-v-866a22e8="" id="comp-ref-b-dropdown-form-props" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> Properties <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/dropdown#comp-ref-b-dropdown-form-props" class="anchorjs-link" aria-labelledby="comp-ref-b-dropdown-form-props" target="_self"></a></span></h4>
+<h4 data-v-866a22e8="" id="comp-ref-b-dropdown-form-props" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> 属性 <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/dropdown#comp-ref-b-dropdown-form-props" class="anchorjs-link" aria-labelledby="comp-ref-b-dropdown-form-props" target="_self"></a></span></h4>
 <div data-v-866a22e8="" class="table-responsive-sm">
 <table role="table" aria-busy="false" aria-colcount="4" class="table b-table bv-docs-table table-striped" id="__BVID__2288">
 <thead role="rowgroup" class="">
 <tr role="row" class="">
-<th role="columnheader" scope="col" aria-colindex="1" class="">Property</th>
-<th role="columnheader" scope="col" aria-colindex="2" class="">Type</th>
-<th role="columnheader" scope="col" aria-colindex="3" class="">Default</th>
-<th role="columnheader" scope="col" aria-colindex="4" class="">Description</th>
+<th role="columnheader" scope="col" aria-colindex="1" class="">属性</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">类型</th>
+<th role="columnheader" scope="col" aria-colindex="3" class="">默认值</th>
+<th role="columnheader" scope="col" aria-colindex="4" class="">描述</th>
 </tr>
 </thead>
 <tbody role="rowgroup">
@@ -1997,37 +1922,37 @@ specific props available on <code translate="no" class="notranslate text-nowrap"
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">id</code></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">Used to set the 'id' attribute on the rendered content, and used as the base to generate any additional element IDs as needed</td>
+<td aria-colindex="4" role="cell" class="">用于在渲染的内容上设置“ id”属性，并用作根据需要生成任何其他元素ID的基础</td>
 </tr>
 <tr role="row" data-pk="inline" class="" id="__BVID__2288__row_inline">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">inline</code></td>
 <td aria-colindex="2" role="cell" class="">Boolean</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
-<td aria-colindex="4" role="cell" class="">When set, the form will be in inline mode which display labels, form controls, and buttons on a single horizontal row</td>
+<td aria-colindex="4" role="cell" class="">设置后，表单将处于内联模式，在单个水平行上显示标签，表单控件和按钮</td>
 </tr>
 <tr role="row" data-pk="novalidate" class="" id="__BVID__2288__row_novalidate">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">novalidate</code></td>
 <td aria-colindex="2" role="cell" class="">Boolean</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
-<td aria-colindex="4" role="cell" class="">When set, disables browser native HTML5 validation on controls in the form</td>
+<td aria-colindex="4" role="cell" class="">设置后，将禁用表单中控件上的浏览器本机 HTML5 验证</td>
 </tr>
 <tr role="row" data-pk="validated" class="" id="__BVID__2288__row_validated">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">validated</code></td>
 <td aria-colindex="2" role="cell" class="">Boolean</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
-<td aria-colindex="4" role="cell" class="">When set, adds the Bootstrap class 'was-validated' on the form, triggering the native browser validation states</td>
+<td aria-colindex="4" role="cell" class="">设置后，在表单上添加 Bootstrap 类“已验证”，触发本机浏览器验证状态</td>
 </tr>
 <tr role="row" data-pk="disabled" class="" id="__BVID__2288__row_disabled">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">disabled</code></td>
 <td aria-colindex="2" role="cell" class="">Boolean</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
-<td aria-colindex="4" role="cell" class="">When set to 'true', disables the component's functionality and places it in a disabled state</td>
+<td aria-colindex="4" role="cell" class="">设置为“ true”时，禁用组件的功能并将其置于禁用状态</td>
 </tr>
 <tr role="row" data-pk="form-class" class="" id="__BVID__2288__row_form-class">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">form-class</code> <span data-v-866a22e8="" class="badge badge-secondary">v2.2.0+</span></td>
-<td aria-colindex="2" role="cell" class="">String or Object or Array</td>
+<td aria-colindex="2" role="cell" class="">String 或 Object 或 Array</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">CSS class (or classes) to add to the form</td>
+<td aria-colindex="4" role="cell" class="">CSS类（或多个类）添加到表单</td>
 </tr>
 </tbody>
 </table>
@@ -2036,34 +1961,33 @@ specific props available on <code translate="no" class="notranslate text-nowrap"
 <header data-v-866a22e8="" class="row align-items-center">
 <div data-v-866a22e8="" class="col-sm-9">
 <h3 data-v-866a22e8="" id="comp-ref-b-dropdown-text" tabindex="-1" class="bv-no-focus-ring"><span data-v-866a22e8="" class="bd-content-title"><code data-v-866a22e8="" translate="translate" class="notranslate bigger">&lt;b-dropdown-text&gt;</code><a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/dropdown#comp-ref-b-dropdown-text" class="anchorjs-link" aria-labelledby="comp-ref-b-dropdown-text" target="_self"></a></span></h3>
-<a data-v-866a22e8="" rel="noopener" target="_blank" href="https://vuejs.org/v2/guide/render-function.html#Functional-Components" class="badge badge-secondary"> Functional Component </a></div>
-<div data-v-866a22e8="" class="text-sm-right col-sm-3"><a data-v-866a22e8="" rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev/src/components/dropdown/dropdown-text.js" class="btn btn-outline-secondary btn-sm"> View source </a></div>
+<a data-v-866a22e8="" rel="noopener" target="_blank" href="https://vuejs.org/v2/guide/render-function.html#Functional-Components" class="badge badge-secondary"> 功能组件 </a></div>
+<div data-v-866a22e8="" class="text-sm-right col-sm-3"><a data-v-866a22e8="" rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev/src/components/dropdown/dropdown-text.js" class="btn btn-outline-secondary btn-sm"> 查看源代码 </a></div>
 </header>
 <ul data-v-866a22e8="" class="component-ref-mini-toc my-3">
-<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-dropdown-text-aliases"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-dropdown-text&gt;</code> Component aliases </a></li>
-<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-dropdown-text-props"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-dropdown-text&gt;</code> Properties </a></li>
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-dropdown-text-aliases"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-dropdown-text&gt;</code> 组件别名 </a></li>
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-dropdown-text-props"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-dropdown-text&gt;</code> 属性 </a></li>
 </ul>
 <article data-v-866a22e8="" class="bd-content">
-<h4 data-v-866a22e8="" id="comp-ref-b-dropdown-text-aliases" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> Component aliases <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/dropdown#comp-ref-b-dropdown-text-aliases" class="anchorjs-link" aria-labelledby="comp-ref-b-dropdown-text-aliases" target="_self"></a></span></h4>
-<p data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-dropdown-text&gt;</code> can also be used via the following aliases:</p>
+<h4 data-v-866a22e8="" id="comp-ref-b-dropdown-text-aliases" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> 组件别名 <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/dropdown#comp-ref-b-dropdown-text-aliases" class="anchorjs-link" aria-labelledby="comp-ref-b-dropdown-text-aliases" target="_self"></a></span></h4>
+<p data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-dropdown-text&gt;</code> 也可以通过以下别名使用：</p>
 <ul data-v-866a22e8="">
 <li data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-dd-text&gt;</code></li>
 </ul>
 <div data-v-866a22e8="" class="alert alert-info">
-<p data-v-866a22e8="" class="mb-0 small"> Note: component aliases are only available when importing all of BootstrapVue or using
-        the component group plugin. </p>
+<p data-v-866a22e8="" class="mb-0 small"> 注意：组件别名仅在导入所有 BootstrapVue 或使用组件组插件时可用。 </p>
 </div>
 </article>
 <article data-v-866a22e8="" class="bd-content">
-<h4 data-v-866a22e8="" id="comp-ref-b-dropdown-text-props" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> Properties <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/dropdown#comp-ref-b-dropdown-text-props" class="anchorjs-link" aria-labelledby="comp-ref-b-dropdown-text-props" target="_self"></a></span></h4>
+<h4 data-v-866a22e8="" id="comp-ref-b-dropdown-text-props" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> 属性 <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/dropdown#comp-ref-b-dropdown-text-props" class="anchorjs-link" aria-labelledby="comp-ref-b-dropdown-text-props" target="_self"></a></span></h4>
 <div data-v-866a22e8="" class="table-responsive-sm">
 <table role="table" aria-busy="false" aria-colcount="4" class="table b-table bv-docs-table table-striped" id="__BVID__2311">
 <thead role="rowgroup" class="">
 <tr role="row" class="">
-<th role="columnheader" scope="col" aria-colindex="1" class="">Property</th>
-<th role="columnheader" scope="col" aria-colindex="2" class="">Type</th>
-<th role="columnheader" scope="col" aria-colindex="3" class="">Default</th>
-<th role="columnheader" scope="col" aria-colindex="4" class="">Description</th>
+<th role="columnheader" scope="col" aria-colindex="1" class="">属性</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">类型</th>
+<th role="columnheader" scope="col" aria-colindex="3" class="">默认值</th>
+<th role="columnheader" scope="col" aria-colindex="4" class="">描述</th>
 </tr>
 </thead>
 <tbody role="rowgroup">
@@ -2071,13 +1995,13 @@ specific props available on <code translate="no" class="notranslate text-nowrap"
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">tag</code></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'p'</code></td>
-<td aria-colindex="4" role="cell" class="">Specify the HTML tag to render instead of the default tag</td>
+<td aria-colindex="4" role="cell" class="">指定要渲染的 HTML 标签，而不是默认标签</td>
 </tr>
 <tr role="row" data-pk="variant" class="" id="__BVID__2311__row_variant">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">variant</code></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">Applies one of the Bootstrap theme color variants to the component</td>
+<td aria-colindex="4" role="cell" class="">将 Bootstrap 主题颜色变量之一应用于组件</td>
 </tr>
 </tbody>
 </table>
@@ -2086,35 +2010,34 @@ specific props available on <code translate="no" class="notranslate text-nowrap"
 <header data-v-866a22e8="" class="row align-items-center">
 <div data-v-866a22e8="" class="col-sm-9">
 <h3 data-v-866a22e8="" id="comp-ref-b-dropdown-group" tabindex="-1" class="bv-no-focus-ring"><span data-v-866a22e8="" class="bd-content-title"><code data-v-866a22e8="" translate="translate" class="notranslate bigger">&lt;b-dropdown-group&gt;</code><a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/dropdown#comp-ref-b-dropdown-group" class="anchorjs-link" aria-labelledby="comp-ref-b-dropdown-group" target="_self"></a></span></h3>
-<a data-v-866a22e8="" rel="noopener" target="_blank" href="https://vuejs.org/v2/guide/render-function.html#Functional-Components" class="badge badge-secondary"> Functional Component </a></div>
-<div data-v-866a22e8="" class="text-sm-right col-sm-3"><a data-v-866a22e8="" rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev/src/components/dropdown/dropdown-group.js" class="btn btn-outline-secondary btn-sm"> View source </a></div>
+<a data-v-866a22e8="" rel="noopener" target="_blank" href="https://vuejs.org/v2/guide/render-function.html#Functional-Components" class="badge badge-secondary"> 功能组件 </a></div>
+<div data-v-866a22e8="" class="text-sm-right col-sm-3"><a data-v-866a22e8="" rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev/src/components/dropdown/dropdown-group.js" class="btn btn-outline-secondary btn-sm"> 查看源代码 </a></div>
 </header>
 <ul data-v-866a22e8="" class="component-ref-mini-toc my-3">
-<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-dropdown-group-aliases"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-dropdown-group&gt;</code> Component aliases </a></li>
-<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-dropdown-group-props"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-dropdown-group&gt;</code> Properties </a></li>
-<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-dropdown-group-slots"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-dropdown-group&gt;</code> Slots </a></li>
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-dropdown-group-aliases"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-dropdown-group&gt;</code> 组件别名 </a></li>
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-dropdown-group-props"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-dropdown-group&gt;</code> 属性 </a></li>
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-dropdown-group-slots"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-dropdown-group&gt;</code> 插槽 </a></li>
 </ul>
 <article data-v-866a22e8="" class="bd-content">
-<h4 data-v-866a22e8="" id="comp-ref-b-dropdown-group-aliases" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> Component aliases <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/dropdown#comp-ref-b-dropdown-group-aliases" class="anchorjs-link" aria-labelledby="comp-ref-b-dropdown-group-aliases" target="_self"></a></span></h4>
-<p data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-dropdown-group&gt;</code> can also be used via the following aliases:</p>
+<h4 data-v-866a22e8="" id="comp-ref-b-dropdown-group-aliases" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> 组件别名 <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/dropdown#comp-ref-b-dropdown-group-aliases" class="anchorjs-link" aria-labelledby="comp-ref-b-dropdown-group-aliases" target="_self"></a></span></h4>
+<p data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-dropdown-group&gt;</code> 也可以通过以下别名使用：</p>
 <ul data-v-866a22e8="">
 <li data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-dd-group&gt;</code></li>
 </ul>
 <div data-v-866a22e8="" class="alert alert-info">
-<p data-v-866a22e8="" class="mb-0 small"> Note: component aliases are only available when importing all of BootstrapVue or using
-        the component group plugin. </p>
+<p data-v-866a22e8="" class="mb-0 small"> 注意：组件别名仅在导入所有 BootstrapVue 或使用组件组插件时可用。 </p>
 </div>
 </article>
 <article data-v-866a22e8="" class="bd-content">
-<h4 data-v-866a22e8="" id="comp-ref-b-dropdown-group-props" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> Properties <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/dropdown#comp-ref-b-dropdown-group-props" class="anchorjs-link" aria-labelledby="comp-ref-b-dropdown-group-props" target="_self"></a></span></h4>
+<h4 data-v-866a22e8="" id="comp-ref-b-dropdown-group-props" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> 属性 <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/dropdown#comp-ref-b-dropdown-group-props" class="anchorjs-link" aria-labelledby="comp-ref-b-dropdown-group-props" target="_self"></a></span></h4>
 <div data-v-866a22e8="" class="table-responsive-sm">
 <table role="table" aria-busy="false" aria-colcount="4" class="table b-table bv-docs-table table-striped" id="__BVID__2330">
 <thead role="rowgroup" class="">
 <tr role="row" class="">
-<th role="columnheader" scope="col" aria-colindex="1" class="">Property</th>
-<th role="columnheader" scope="col" aria-colindex="2" class="">Type</th>
-<th role="columnheader" scope="col" aria-colindex="3" class="">Default</th>
-<th role="columnheader" scope="col" aria-colindex="4" class="">Description</th>
+<th role="columnheader" scope="col" aria-colindex="1" class="">属性</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">类型</th>
+<th role="columnheader" scope="col" aria-colindex="3" class="">默认值</th>
+<th role="columnheader" scope="col" aria-colindex="4" class="">描述</th>
 </tr>
 </thead>
 <tbody role="rowgroup">
@@ -2122,56 +2045,56 @@ specific props available on <code translate="no" class="notranslate text-nowrap"
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">id</code></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">Used to set the 'id' attribute on the rendered content, and used as the base to generate any additional element IDs as needed</td>
+<td aria-colindex="4" role="cell" class="">用于在渲染的内容上设置“ id”属性，并用作根据需要生成任何其他元素ID的基础</td>
 </tr>
 <tr role="row" data-pk="header" class="" id="__BVID__2330__row_header">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">header</code></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">Text content to place in the header</td>
+<td aria-colindex="4" role="cell" class="">放置在标题中的文本内容</td>
 </tr>
 <tr role="row" data-pk="header-tag" class="" id="__BVID__2330__row_header-tag">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">header-tag</code></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'header'</code></td>
-<td aria-colindex="4" role="cell" class="">Specify the HTML tag to render instead of the default tag for the header</td>
+<td aria-colindex="4" role="cell" class="">指定要渲染的HTML标签，而不是标头的默认标签</td>
 </tr>
 <tr role="row" data-pk="header-variant" class="" id="__BVID__2330__row_header-variant">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">header-variant</code></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">Applies one of the Bootstrap theme color variants to the header</td>
+<td aria-colindex="4" role="cell" class="">将 Bootstrap 主题颜色变量之一应用于标头</td>
 </tr>
 <tr role="row" data-pk="header-classes" class="" id="__BVID__2330__row_header-classes">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">header-classes</code></td>
 <td aria-colindex="2" role="cell" class="">String or Array or Object</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">CSS class (or classes) to add to the header</td>
+<td aria-colindex="4" role="cell" class="">CSS类（或多个类）添加到标题</td>
 </tr>
 <tr role="row" data-pk="aria-describedby" class="" id="__BVID__2330__row_aria-describedby">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">aria-describedby</code></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">The ID of the element that provides additional context for this component. Used as the value for the 'aria-describedby' attribute</td>
+<td aria-colindex="4" role="cell" class="">为该组件提供其他上下文的元素的 ID 。 用作“aria- describeby”属性的值</td>
 </tr>
 </tbody>
 </table>
 </div>
 </article>
 <article data-v-866a22e8="" class="bd-content">
-<h4 data-v-866a22e8="" id="comp-ref-b-dropdown-group-slots" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> Slots <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/dropdown#comp-ref-b-dropdown-group-slots" class="anchorjs-link" aria-labelledby="comp-ref-b-dropdown-group-slots" target="_self"></a></span></h4>
+<h4 data-v-866a22e8="" id="comp-ref-b-dropdown-group-slots" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> 插槽 <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/dropdown#comp-ref-b-dropdown-group-slots" class="anchorjs-link" aria-labelledby="comp-ref-b-dropdown-group-slots" target="_self"></a></span></h4>
 <div data-v-866a22e8="" class="table-responsive-sm">
 <table role="table" aria-busy="false" aria-colcount="2" class="table b-table bv-docs-table table-striped" id="__BVID__2346">
 <thead role="rowgroup" class="">
 <tr role="row" class="">
-<th role="columnheader" scope="col" aria-colindex="1" class="">Slot Name</th>
-<th role="columnheader" scope="col" aria-colindex="2" class="">Description</th>
+<th role="columnheader" scope="col" aria-colindex="1" class="">插槽名称</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">描述</th>
 </tr>
 </thead>
 <tbody role="rowgroup">
 <tr role="row" data-pk="header" class="" id="__BVID__2346__row_header">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">header</code></td>
-<td aria-colindex="2" role="cell" class="">Optional header content for the dropdown group.</td>
+<td aria-colindex="2" role="cell" class="">下拉组的可选标题内容。</td>
 </tr>
 </tbody>
 </table>
@@ -2180,34 +2103,33 @@ specific props available on <code translate="no" class="notranslate text-nowrap"
 <header data-v-866a22e8="" class="row align-items-center">
 <div data-v-866a22e8="" class="col-sm-9">
 <h3 data-v-866a22e8="" id="comp-ref-b-dropdown-header" tabindex="-1" class="bv-no-focus-ring"><span data-v-866a22e8="" class="bd-content-title"><code data-v-866a22e8="" translate="translate" class="notranslate bigger">&lt;b-dropdown-header&gt;</code><a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/dropdown#comp-ref-b-dropdown-header" class="anchorjs-link" aria-labelledby="comp-ref-b-dropdown-header" target="_self"></a></span></h3>
-<a data-v-866a22e8="" rel="noopener" target="_blank" href="https://vuejs.org/v2/guide/render-function.html#Functional-Components" class="badge badge-secondary"> Functional Component </a></div>
-<div data-v-866a22e8="" class="text-sm-right col-sm-3"><a data-v-866a22e8="" rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev/src/components/dropdown/dropdown-header.js" class="btn btn-outline-secondary btn-sm"> View source </a></div>
+<a data-v-866a22e8="" rel="noopener" target="_blank" href="https://vuejs.org/v2/guide/render-function.html#Functional-Components" class="badge badge-secondary"> 功能组件 </a></div>
+<div data-v-866a22e8="" class="text-sm-right col-sm-3"><a data-v-866a22e8="" rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev/src/components/dropdown/dropdown-header.js" class="btn btn-outline-secondary btn-sm"> 查看源代码 </a></div>
 </header>
 <ul data-v-866a22e8="" class="component-ref-mini-toc my-3">
-<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-dropdown-header-aliases"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-dropdown-header&gt;</code> Component aliases </a></li>
-<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-dropdown-header-props"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-dropdown-header&gt;</code> Properties </a></li>
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-dropdown-header-aliases"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-dropdown-header&gt;</code> 组件别名 </a></li>
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-dropdown-header-props"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-dropdown-header&gt;</code> 属性 </a></li>
 </ul>
 <article data-v-866a22e8="" class="bd-content">
-<h4 data-v-866a22e8="" id="comp-ref-b-dropdown-header-aliases" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> Component aliases <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/dropdown#comp-ref-b-dropdown-header-aliases" class="anchorjs-link" aria-labelledby="comp-ref-b-dropdown-header-aliases" target="_self"></a></span></h4>
-<p data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-dropdown-header&gt;</code> can also be used via the following aliases:</p>
+<h4 data-v-866a22e8="" id="comp-ref-b-dropdown-header-aliases" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> 组件别名 <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/dropdown#comp-ref-b-dropdown-header-aliases" class="anchorjs-link" aria-labelledby="comp-ref-b-dropdown-header-aliases" target="_self"></a></span></h4>
+<p data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-dropdown-header&gt;</code> 也可以通过以下别名使用：</p>
 <ul data-v-866a22e8="">
 <li data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-dd-header&gt;</code></li>
 </ul>
 <div data-v-866a22e8="" class="alert alert-info">
-<p data-v-866a22e8="" class="mb-0 small"> Note: component aliases are only available when importing all of BootstrapVue or using
-        the component group plugin. </p>
+<p data-v-866a22e8="" class="mb-0 small"> 注意：组件别名仅在导入所有 BootstrapVue 或使用组件组插件时可用。 </p>
 </div>
 </article>
 <article data-v-866a22e8="" class="bd-content">
-<h4 data-v-866a22e8="" id="comp-ref-b-dropdown-header-props" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> Properties <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/dropdown#comp-ref-b-dropdown-header-props" class="anchorjs-link" aria-labelledby="comp-ref-b-dropdown-header-props" target="_self"></a></span></h4>
+<h4 data-v-866a22e8="" id="comp-ref-b-dropdown-header-props" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> 属性 <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/dropdown#comp-ref-b-dropdown-header-props" class="anchorjs-link" aria-labelledby="comp-ref-b-dropdown-header-props" target="_self"></a></span></h4>
 <div data-v-866a22e8="" class="table-responsive-sm">
 <table role="table" aria-busy="false" aria-colcount="4" class="table b-table bv-docs-table table-striped" id="__BVID__2362">
 <thead role="rowgroup" class="">
 <tr role="row" class="">
-<th role="columnheader" scope="col" aria-colindex="1" class="">Property</th>
-<th role="columnheader" scope="col" aria-colindex="2" class="">Type</th>
-<th role="columnheader" scope="col" aria-colindex="3" class="">Default</th>
-<th role="columnheader" scope="col" aria-colindex="4" class="">Description</th>
+<th role="columnheader" scope="col" aria-colindex="1" class="">属性</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">类型</th>
+<th role="columnheader" scope="col" aria-colindex="3" class="">默认值</th>
+<th role="columnheader" scope="col" aria-colindex="4" class="">描述</th>
 </tr>
 </thead>
 <tbody role="rowgroup">
@@ -2215,35 +2137,34 @@ specific props available on <code translate="no" class="notranslate text-nowrap"
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">id</code></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">Used to set the 'id' attribute on the rendered content, and used as the base to generate any additional element IDs as needed</td>
+<td aria-colindex="4" role="cell" class="">用于在渲染的内容上设置“ id”属性，并用作根据需要生成任何其他元素ID的基础</td>
 </tr>
 <tr role="row" data-pk="tag" class="" id="__BVID__2362__row_tag">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">tag</code></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'header'</code></td>
-<td aria-colindex="4" role="cell" class="">Specify the HTML tag to render instead of the default tag</td>
+<td aria-colindex="4" role="cell" class="">指定要渲染的HTML标签，而不是默认标签</td>
 </tr>
 <tr role="row" data-pk="variant" class="" id="__BVID__2362__row_variant">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">variant</code></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">Applies one of the Bootstrap theme color variants to the component</td>
+<td aria-colindex="4" role="cell" class="">将 Bootstrap 主题颜色变量之一应用于组件</td>
 </tr>
 </tbody>
 </table>
 </div>
 </article>
 <article class="bd-content">
-<h3 id="importing-individual-components" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title"> Importing individual components <a href="../../../bootstrap-vue/docs/components/dropdown#importing-individual-components" class="anchorjs-link" aria-labelledby="importing-individual-components" target="_self"></a></span></h3>
-<p> You can import individual components into your project via the following named
-        exports: </p>
+<h3 id="importing-individual-components" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title"> 导入单个组件 <a href="../../../bootstrap-vue/docs/components/dropdown#importing-individual-components" class="anchorjs-link" aria-labelledby="importing-individual-components" target="_self"></a></span></h3>
+<p> 您可以通过以下命名的导出将单个组件导入到项目中： </p>
 <div class="table-responsive-sm">
 <table role="table" aria-busy="false" aria-colcount="3" class="table b-table bv-docs-table table-striped" id="__BVID__2376">
 <thead role="rowgroup" class="thead-default">
 <tr role="row" class="">
-<th role="columnheader" scope="col" aria-colindex="1" class="">Component</th>
-<th role="columnheader" scope="col" aria-colindex="2" class="">Named Export</th>
-<th role="columnheader" scope="col" aria-colindex="3" class="">Import Path</th>
+<th role="columnheader" scope="col" aria-colindex="1" class="">组件</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">命名输出</th>
+<th role="columnheader" scope="col" aria-colindex="3" class="">导入路径</th>
 </tr>
 </thead>
 <tbody role="rowgroup">
@@ -2290,21 +2211,19 @@ specific props available on <code translate="no" class="notranslate text-nowrap"
 </tbody>
 </table>
 </div>
-<p><strong>Example:</strong></p>
+<p><strong>示例：</strong></p>
 <pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { BDropdown } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
 Vue.component(<span class="hljs-string">'b-dropdown'</span>, BDropdown)</pre>
 </article>
 <article class="bd-content">
-<h3 id="importing-as-a-plugin" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title"> Importing as a Vue.js plugin <a href="../../../bootstrap-vue/docs/components/dropdown#importing-as-a-plugin" class="anchorjs-link" aria-labelledby="importing-as-a-plugin" target="_self"></a></span></h3>
-<p> This plugin includes all of the above listed individual
-      components.
-      Plugins also include any component aliases. </p>
+<h3 id="importing-as-a-plugin" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title"> 导入为Vue.js插件 <a href="../../../bootstrap-vue/docs/components/dropdown#importing-as-a-plugin" class="anchorjs-link" aria-labelledby="importing-as-a-plugin" target="_self"></a></span></h3>
+<p> 该插件包括上面列出的所有单个组件。插件还包括任何组件别名。 </p>
 <div class="table-responsive-sm">
 <table fileds="namedExport,importPath" role="table" aria-busy="false" aria-colcount="2" class="table b-table bv-docs-table table-striped b-table-caption-top" id="__BVID__2393">
 <thead role="rowgroup" class="thead-default">
 <tr role="row" class="">
-<th role="columnheader" scope="col" aria-colindex="1" class="">Named Export</th>
-<th role="columnheader" scope="col" aria-colindex="2" class="">Import Path</th>
+<th role="columnheader" scope="col" aria-colindex="1" class="">命名输出</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">导入路径</th>
 </tr>
 </thead>
 <tbody role="rowgroup">
@@ -2315,7 +2234,7 @@ Vue.component(<span class="hljs-string">'b-dropdown'</span>, BDropdown)</pre>
 </tbody>
 </table>
 </div>
-<p><strong>Example:</strong></p>
+<p><strong>示例：</strong></p>
 <pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { DropdownPlugin } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
 Vue.use(DropdownPlugin)</pre>
 </article>
