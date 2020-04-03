@@ -240,12 +240,12 @@
 <li class="nav-item toc-entry toc-h3"><a target="_self" href="#v-b-modal-directive-accessibility" class="nav-link"><span>v-b-modal directive accessibility</span></a></li>
 </ul>
 </li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#component-reference" class="nav-link"><span>Component reference</span></a>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#component-reference" class="nav-link"><span>组件引用</span></a>
 <ul class="nav flex-column">
 <li class="nav-item toc-entry toc-h3"><a target="_self" href="#comp-ref-b-modal" class="nav-link"><span>&lt;b-modal&gt;</span></a></li>
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#importing-individual-components" class="nav-link"><span>Importing individual components</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#importing-individual-components" class="nav-link"><span>导入单个组件</span></a></li>
 <li class="nav-item toc-entry toc-h3"><a target="_self" href="#importing-individual-directives" class="nav-link"><span>Importing individual directives</span></a></li>
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#importing-as-a-plugin" class="nav-link"><span>Importing as a Vue.js plugin</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#importing-as-a-plugin" class="nav-link"><span>导入为Vue.js插件</span></a></li>
 </ul>
 </li>
 </ul>
@@ -326,12 +326,12 @@
 <li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#v-b-modal-directive-accessibility" class=""><span data-v-811345e6="">v-b-modal directive accessibility</span></a></li>
 </ul>
 </li>
-<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#component-reference" class=""><span data-v-811345e6="">Component reference</span></a>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#component-reference" class=""><span data-v-811345e6="">组件引用</span></a>
 <ul data-v-811345e6="">
 <li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#comp-ref-b-modal" class=""><span data-v-811345e6="">&lt;b-modal&gt;</span></a></li>
-<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#importing-individual-components" class=""><span data-v-811345e6="">Importing individual components</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#importing-individual-components" class=""><span data-v-811345e6="">导入单个组件</span></a></li>
 <li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#importing-individual-directives" class=""><span data-v-811345e6="">Importing individual directives</span></a></li>
-<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#importing-as-a-plugin" class=""><span data-v-811345e6="">Importing as a Vue.js plugin</span></a></li>
+<li data-v-811345e6=""><a data-v-811345e6="" target="_self" href="#importing-as-a-plugin" class=""><span data-v-811345e6="">导入为Vue.js插件</span></a></li>
 </ul>
 </li>
 </ul>
@@ -477,7 +477,7 @@ several methods, of which two are for showing and hiding modals:</p>
 modal to close. See section <a href="#prevent-closing" class="font-weight-bold">Prevent Closing</a> below for details.</p>
 <p><strong>Note:</strong> It is recommended to use the <code translate="no" class="notranslate text-nowrap">this.$bvModal.show()</code> and <code translate="no" class="notranslate text-nowrap">this.$bvModal.hide()</code> methods
 (mentioned in the previous section) instead of using <code translate="no" class="notranslate text-nowrap">$ref</code> methods.</p>
-<h3 id="using-v-model-property" class="bv-no-focus-ring"><span class="bd-content-title">Using <code translate="no" class="notranslate text-nowrap">v-model</code> property<a class="anchorjs-link" href="#using-v-model-property" aria-labelledby="using-v-model-property"></a></span></h3>
+<h3 id="using-v-model-property" class="bv-no-focus-ring"><span class="bd-content-title">Using <code translate="no" class="notranslate text-nowrap">v-model</code> 属性<a class="anchorjs-link" href="#using-v-model-property" aria-labelledby="using-v-model-property"></a></span></h3>
 <p><code translate="no" class="notranslate text-nowrap">v-model</code> property is always automatically synced with <code translate="no" class="notranslate text-nowrap">&lt;b-modal&gt;</code> visible state and you can
 show/hide using <code translate="no" class="notranslate text-nowrap">v-model</code>.</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-modal-v-model notranslate">
@@ -647,22 +647,22 @@ methods:</p>
 </tr>
 <tr>
 <td><code translate="no" class="notranslate text-nowrap">trigger</code></td>
-<td>Property</td>
+<td>属性</td>
 <td>Will be one of: <code translate="no" class="notranslate text-nowrap">ok</code> (Default <strong>OK</strong> Clicked), <code translate="no" class="notranslate text-nowrap">cancel</code> (Default <strong>Cancel</strong> clicked), <code translate="no" class="notranslate text-nowrap">esc</code> (if the <kbd class="notranslate" translate="no">ESC</kbd> key was pressed), <code translate="no" class="notranslate text-nowrap">backdrop</code> (if the backdrop was clicked), <code translate="no" class="notranslate text-nowrap">headerclose</code> (if the header X button was clicked), the first argument provided to the <code translate="no" class="notranslate text-nowrap">hide()</code> method, or <code translate="no" class="notranslate text-nowrap">null</code> otherwise.</td>
 </tr>
 <tr>
 <td><code translate="no" class="notranslate text-nowrap">target</code></td>
-<td>Property</td>
+<td>属性</td>
 <td>A reference to the modal element</td>
 </tr>
 <tr>
 <td><code translate="no" class="notranslate text-nowrap">vueTarget</code></td>
-<td>property</td>
+<td>属性</td>
 <td>A reference to the modal's Vue VM instance</td>
 </tr>
 <tr>
 <td><code translate="no" class="notranslate text-nowrap">componentId</code></td>
-<td>property</td>
+<td>属性</td>
 <td>The modal's ID</td>
 </tr>
 </tbody>
@@ -1462,31 +1462,31 @@ already a <code translate="no" class="notranslate text-nowrap">tabindex</code> s
 </ul>
 <!-- Component reference added automatically from component package.json -->
 
-<h2 id="component-reference" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title">Component reference<a href="../../../bootstrap-vue/docs/components/modal#component-reference" class="anchorjs-link" aria-labelledby="component-reference" target="_self"></a></span></h2>
+<h2 id="component-reference" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title">组件引用<a href="../../../bootstrap-vue/docs/components/modal#component-reference" class="anchorjs-link" aria-labelledby="component-reference" target="_self"></a></span></h2>
 <section data-v-866a22e8="" class="bd-content">
 <header data-v-866a22e8="" class="row align-items-center">
 <div data-v-866a22e8="" class="col-sm-9">
 <h3 data-v-866a22e8="" id="comp-ref-b-modal" tabindex="-1" class="bv-no-focus-ring"><span data-v-866a22e8="" class="bd-content-title"><code data-v-866a22e8="" translate="translate" class="notranslate bigger">&lt;b-modal&gt;</code><a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/modal#comp-ref-b-modal" class="anchorjs-link" aria-labelledby="comp-ref-b-modal" target="_self"></a></span></h3>
 </div>
-<div data-v-866a22e8="" class="text-sm-right col-sm-3"><a data-v-866a22e8="" rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev/src/components/modal/modal.js" class="btn btn-outline-secondary btn-sm"> View source </a></div>
+<div data-v-866a22e8="" class="text-sm-right col-sm-3"><a data-v-866a22e8="" rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev/src/components/modal/modal.js" class="btn btn-outline-secondary btn-sm"> 查看源代码 </a></div>
 </header>
 <ul data-v-866a22e8="" class="component-ref-mini-toc my-3">
-<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-modal-props"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-modal&gt;</code> Properties </a></li>
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-modal-props"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-modal&gt;</code> 属性 </a></li>
 <li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-modal-v-model"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-modal&gt;</code> v-model </a></li>
-<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-modal-slots"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-modal&gt;</code> Slots </a></li>
-<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-modal-events"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-modal&gt;</code> Events </a></li>
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-modal-slots"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-modal&gt;</code> 插槽 </a></li>
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-modal-events"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-modal&gt;</code> 事件 </a></li>
 <li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-modal-rootEventListeners"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-modal&gt;</code> <code data-v-866a22e8="" translate="translate" class="notranslate">$root</code> Event Listeners </a></li>
 </ul>
 <article data-v-866a22e8="" class="bd-content">
-<h4 data-v-866a22e8="" id="comp-ref-b-modal-props" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> Properties <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/modal#comp-ref-b-modal-props" class="anchorjs-link" aria-labelledby="comp-ref-b-modal-props" target="_self"></a></span></h4>
+<h4 data-v-866a22e8="" id="comp-ref-b-modal-props" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> 属性 <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/modal#comp-ref-b-modal-props" class="anchorjs-link" aria-labelledby="comp-ref-b-modal-props" target="_self"></a></span></h4>
 <div data-v-866a22e8="" class="table-responsive-sm">
 <table role="table" aria-busy="false" aria-colcount="4" class="table b-table bv-docs-table table-striped" id="__BVID__2718">
 <thead role="rowgroup" class="">
 <tr role="row" class="">
-<th role="columnheader" scope="col" tabindex="0" aria-colindex="1" aria-sort="none" class="b-table-sort-icon-left">Property<span class="sr-only"> (Click to sort Ascending)</span></th>
-<th role="columnheader" scope="col" tabindex="0" aria-colindex="2" class="">Type</th>
-<th role="columnheader" scope="col" tabindex="0" aria-colindex="3" class="">Default</th>
-<th role="columnheader" scope="col" tabindex="0" aria-colindex="4" class="">Description</th>
+<th role="columnheader" scope="col" tabindex="0" aria-colindex="1" aria-sort="none" class="b-table-sort-icon-left">属性<span class="sr-only"> (Click to sort Ascending)</span></th>
+<th role="columnheader" scope="col" tabindex="0" aria-colindex="2" class="">类型</th>
+<th role="columnheader" scope="col" tabindex="0" aria-colindex="3" class="">默认值</th>
+<th role="columnheader" scope="col" tabindex="0" aria-colindex="4" class="">描述</th>
 </tr>
 </thead>
 <tbody role="rowgroup">
@@ -1494,7 +1494,7 @@ already a <code translate="no" class="notranslate text-nowrap">tabindex</code> s
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">id</code></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">Used to set the 'id' attribute on the rendered content, and used as the base to generate any additional element IDs as needed</td>
+<td aria-colindex="4" role="cell" class="">用于在渲染的内容上设置“id”属性，并用作根据需要生成任何其他元素ID的基础</td>
 </tr>
 <tr role="row" data-pk="size" class="" id="__BVID__2718__row_size">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">size</code></td>
@@ -1822,8 +1822,8 @@ already a <code translate="no" class="notranslate text-nowrap">tabindex</code> s
 <table role="table" aria-busy="false" aria-colcount="2" class="table b-table bv-docs-table table-striped" id="__BVID__2783">
 <thead role="rowgroup" class="">
 <tr role="row" class="">
-<th role="columnheader" scope="col" aria-colindex="1" class="">Property</th>
-<th role="columnheader" scope="col" aria-colindex="2" class="">Event</th>
+<th role="columnheader" scope="col" aria-colindex="1" class="">属性</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">事件</th>
 </tr>
 </thead>
 <tbody role="rowgroup">
@@ -1836,14 +1836,14 @@ already a <code translate="no" class="notranslate text-nowrap">tabindex</code> s
 </div>
 </article>
 <article data-v-866a22e8="" class="bd-content">
-<h4 data-v-866a22e8="" id="comp-ref-b-modal-slots" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> Slots <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/modal#comp-ref-b-modal-slots" class="anchorjs-link" aria-labelledby="comp-ref-b-modal-slots" target="_self"></a></span></h4>
+<h4 data-v-866a22e8="" id="comp-ref-b-modal-slots" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> 插槽 <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/modal#comp-ref-b-modal-slots" class="anchorjs-link" aria-labelledby="comp-ref-b-modal-slots" target="_self"></a></span></h4>
 <div data-v-866a22e8="" class="table-responsive-sm">
 <table role="table" aria-busy="false" aria-colcount="3" class="table b-table bv-docs-table table-striped" id="__BVID__2792">
 <thead role="rowgroup" class="">
 <tr role="row" class="">
-<th role="columnheader" scope="col" aria-colindex="1" class="">Slot Name</th>
-<th role="columnheader" scope="col" aria-colindex="2" class="">Description</th>
-<th role="columnheader" scope="col" aria-colindex="3" class="">Scoped</th>
+<th role="columnheader" scope="col" aria-colindex="1" class="">插槽名称</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">描述</th>
+<th role="columnheader" scope="col" aria-colindex="3" class="">范围</th>
 </tr>
 </thead>
 <tbody role="rowgroup">
@@ -1892,14 +1892,14 @@ already a <code translate="no" class="notranslate text-nowrap">tabindex</code> s
 </div>
 </article>
 <article data-v-866a22e8="" class="bd-content">
-<h4 data-v-866a22e8="" id="comp-ref-b-modal-events" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> Events <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/modal#comp-ref-b-modal-events" class="anchorjs-link" aria-labelledby="comp-ref-b-modal-events" target="_self"></a></span></h4>
+<h4 data-v-866a22e8="" id="comp-ref-b-modal-events" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> 事件 <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/modal#comp-ref-b-modal-events" class="anchorjs-link" aria-labelledby="comp-ref-b-modal-events" target="_self"></a></span></h4>
 <div data-v-866a22e8="" class="table-responsive-sm">
 <table role="table" aria-busy="false" aria-colcount="3" class="table b-table bv-docs-table table-striped" id="__BVID__2809">
 <thead role="rowgroup" class="">
 <tr role="row" class="">
-<th role="columnheader" scope="col" aria-colindex="1" class="">Event</th>
-<th role="columnheader" scope="col" aria-colindex="2" class="">Arguments</th>
-<th role="columnheader" scope="col" aria-colindex="3" class="">Description</th>
+<th role="columnheader" scope="col" aria-colindex="1" class="">事件</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">参数</th>
+<th role="columnheader" scope="col" aria-colindex="3" class="">描述</th>
 </tr>
 </thead>
 <tbody role="rowgroup">
@@ -2003,9 +2003,9 @@ already a <code translate="no" class="notranslate text-nowrap">tabindex</code> s
 <table role="table" aria-busy="false" aria-colcount="3" class="table b-table bv-docs-table table-striped" id="__BVID__2830">
 <thead role="rowgroup" class="">
 <tr role="row" class="">
-<th role="columnheader" scope="col" aria-colindex="1" class="">Event</th>
-<th role="columnheader" scope="col" aria-colindex="2" class="">Arguments</th>
-<th role="columnheader" scope="col" aria-colindex="3" class="">Description</th>
+<th role="columnheader" scope="col" aria-colindex="1" class="">事件</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">参数</th>
+<th role="columnheader" scope="col" aria-colindex="3" class="">描述</th>
 </tr>
 </thead>
 <tbody role="rowgroup">
@@ -2030,16 +2030,15 @@ already a <code translate="no" class="notranslate text-nowrap">tabindex</code> s
 </table>
 </div>
 </article>
-<h3 id="importing-individual-components" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title"> Importing individual components <a href="../../../bootstrap-vue/docs/components/modal#importing-individual-components" class="anchorjs-link" aria-labelledby="importing-individual-components" target="_self"></a></span></h3>
-<p> You can import individual components into your project via the following named
-        exports: </p>
+<h3 id="importing-individual-components" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title"> 导入单个组件 <a href="../../../bootstrap-vue/docs/components/modal#importing-individual-components" class="anchorjs-link" aria-labelledby="importing-individual-components" target="_self"></a></span></h3>
+<p> 您可以通过以下命名的导出将单个组件导入到项目中： </p>
 <div class="table-responsive-sm">
 <table role="table" aria-busy="false" aria-colcount="3" class="table b-table bv-docs-table table-striped" id="__BVID__2843">
 <thead role="rowgroup" class="thead-default">
 <tr role="row" class="">
-<th role="columnheader" scope="col" aria-colindex="1" class="">Component</th>
-<th role="columnheader" scope="col" aria-colindex="2" class="">Named Export</th>
-<th role="columnheader" scope="col" aria-colindex="3" class="">Import Path</th>
+<th role="columnheader" scope="col" aria-colindex="1" class="">组件</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">命名输出</th>
+<th role="columnheader" scope="col" aria-colindex="3" class="">导入路径</th>
 </tr>
 </thead>
 <tbody role="rowgroup">
@@ -2051,7 +2050,7 @@ already a <code translate="no" class="notranslate text-nowrap">tabindex</code> s
 </tbody>
 </table>
 </div>
-<p><strong>Example:</strong></p>
+<p><strong>示例：</strong></p>
 <pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { BModal } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
 Vue.component(<span class="hljs-string">'b-modal'</span>, BModal)</pre>
 </article>
@@ -2077,13 +2076,13 @@ Vue.component(<span class="hljs-string">'b-modal'</span>, BModal)</pre>
 </tbody>
 </table>
 </div>
-<p><strong>Example:</strong></p>
+<p><strong>示例：</strong></p>
 <pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { VBModal } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
 <span class="hljs-comment">// Note: Vue automatically prefixes the directive name with 'v-'</span>
 Vue.directive(<span class="hljs-string">'b-modal'</span>, VBModal)</pre>
 </article>
 <article class="bd-content">
-<h3 id="importing-as-a-plugin" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title"> Importing as a Vue.js plugin <a href="../../../bootstrap-vue/docs/components/modal#importing-as-a-plugin" class="anchorjs-link" aria-labelledby="importing-as-a-plugin" target="_self"></a></span></h3>
+<h3 id="importing-as-a-plugin" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title"> 导入为Vue.js插件 <a href="../../../bootstrap-vue/docs/components/modal#importing-as-a-plugin" class="anchorjs-link" aria-labelledby="importing-as-a-plugin" target="_self"></a></span></h3>
 <p> This plugin includes all of the above listed individual
       components<span> and directives</span>.
       Plugins also include any component aliases. </p>
@@ -2091,8 +2090,8 @@ Vue.directive(<span class="hljs-string">'b-modal'</span>, VBModal)</pre>
 <table fileds="namedExport,importPath" role="table" aria-busy="false" aria-colcount="2" class="table b-table bv-docs-table table-striped b-table-caption-top" id="__BVID__2863">
 <thead role="rowgroup" class="thead-default">
 <tr role="row" class="">
-<th role="columnheader" scope="col" aria-colindex="1" class="">Named Export</th>
-<th role="columnheader" scope="col" aria-colindex="2" class="">Import Path</th>
+<th role="columnheader" scope="col" aria-colindex="1" class="">命名输出</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">导入路径</th>
 </tr>
 </thead>
 <tbody role="rowgroup">
@@ -2107,7 +2106,7 @@ Vue.directive(<span class="hljs-string">'b-modal'</span>, VBModal)</pre>
 <ul>
 <li><code translate="translate" class="notranslate">BVModalPlugin</code></li>
 </ul>
-<p><strong>Example:</strong></p>
+<p><strong>示例：</strong></p>
 <pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { ModalPlugin } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
 Vue.use(ModalPlugin)</pre>
 

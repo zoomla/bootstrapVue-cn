@@ -188,28 +188,28 @@
 
 <div class="d-none d-xl-block col-xl-2 bd-toc">
 <ul class="section-nav">
-<li class="nav-item toc-entry mb-2"><a target="_self" href="#progress" class="nav-link font-weight-bold"><span>Progress</span></a></li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#value" class="nav-link"><span>Value</span></a> <!----></li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#labels" class="nav-link"><span>Labels</span></a>
+<li class="nav-item toc-entry mb-2"><a target="_self" href="#progress" class="nav-link font-weight-bold"><span>进度指示器(Progress)</span></a></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#value" class="nav-link"><span>值</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#labels" class="nav-link"><span>标签</span></a>
 <ul class="nav flex-column">
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#custom-progress-label" class="nav-link"><span>Custom progress label</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#custom-progress-label" class="nav-link"><span>自定义进度标签</span></a></li>
 </ul>
 </li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#width-and-height" class="nav-link"><span>Width and height</span></a> <!----></li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#backgrounds" class="nav-link"><span>Backgrounds</span></a>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#width-and-height" class="nav-link"><span>宽高</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#backgrounds" class="nav-link"><span>背景</span></a>
 <ul class="nav flex-column">
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#solid-background-variants" class="nav-link"><span>Solid background variants</span></a></li>
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#striped-backgrounds" class="nav-link"><span>Striped backgrounds</span></a></li>
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#animated-backgrounds" class="nav-link"><span>Animated backgrounds</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#solid-background-variants" class="nav-link"><span>实体背景变量</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#striped-backgrounds" class="nav-link"><span>条纹背景</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#animated-backgrounds" class="nav-link"><span>动画背景</span></a></li>
 </ul>
 </li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#multiple-bars" class="nav-link"><span>Multiple bars</span></a> <!----></li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#component-reference" class="nav-link"><span>Component reference</span></a>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#multiple-bars" class="nav-link"><span>多条</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#component-reference" class="nav-link"><span>组件参考</span></a>
 <ul class="nav flex-column">
 <li class="nav-item toc-entry toc-h3"><a target="_self" href="#comp-ref-b-progress" class="nav-link"><span>&lt;b-progress&gt;</span></a></li>
 <li class="nav-item toc-entry toc-h3"><a target="_self" href="#comp-ref-b-progress-bar" class="nav-link"><span>&lt;b-progress-bar&gt;</span></a></li>
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#importing-individual-components" class="nav-link"><span>Importing individual components</span></a></li>
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#importing-as-a-plugin" class="nav-link"><span>Importing as a Vue.js plugin</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#importing-individual-components" class="nav-link"><span>导入单个组件/span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#importing-as-a-plugin" class="nav-link"><span>作为Vue.js插件导入</span></a></li>
 </ul>
 </li>
 </ul>
@@ -227,7 +227,9 @@
 </nav>
 <div class="clearfix d-block"></div>
   <h1 class="bd-title" id="content">进度指示器(Progress)</h1>
-  <p class="bd-lead">Use our custom progress component for displaying simple or complex progress bars, featuring support for horizontally stacked bars, animated backgrounds, and text labels.</p>
+  <p class="bd-lead">
+    使用我们的自定义进度组件来显示简单或复杂的进度条，并支持水平堆叠的条，动画背景和文本标签。
+  </p>
   <script type="text/javascript" src="../../../v4/assets/js/pupCMS.js"></script>
 
 
@@ -310,12 +312,20 @@
     }
   }
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
-<h2 id="value" class="bv-no-focus-ring"><span class="bd-content-title">Value<a class="anchorjs-link" href="#value" aria-labelledby="value"></a></span></h2>
-<p>Set the maximum value with the <code translate="no" class="notranslate text-nowrap">max</code> prop (default is <code translate="no" class="notranslate text-nowrap">100</code>), and the current value via the <code translate="no" class="notranslate text-nowrap">value</code> prop (default <code translate="no" class="notranslate text-nowrap">0</code>).</p>
-<p>When creating multiple bars in a single process, place the value prop on the individual <code translate="no" class="notranslate text-nowrap">&lt;b-progress-bar&gt;</code> sub components (see the <strong>Multiple Bars</strong> section below for more details)</p>
-<h2 id="labels" class="bv-no-focus-ring"><span class="bd-content-title">Labels<a class="anchorjs-link" href="#labels" aria-labelledby="labels"></a></span></h2>
-<p>Add labels to your progress bars by either enabling <code translate="no" class="notranslate text-nowrap">show-progress</code> (percentage of max) or <code translate="no" class="notranslate text-nowrap">show-value</code>for the current absolute value. You may also set the precision (number of digits after
-the decimal) via the <code translate="no" class="notranslate text-nowrap">precision</code> prop (default is <code translate="no" class="notranslate text-nowrap">0</code>digits after the decimal).</p>
+<h2 id="value" class="bv-no-focus-ring"><span class="bd-content-title">值<a class="anchorjs-link" href="#value" aria-labelledby="value"></a></span></h2>
+<p>
+  使用<code translate="no" class="notranslate text-nowrap">max</code>属性（默认值为<code translate="no" class="notranslate text-nowrap">100</code>）设置最大值，
+  并通过属性（值<code translate="no" class="notranslate text-nowrap">0</code>）设置当前<code translate="no" class="notranslate text-nowrap">value</code>。
+</p>
+<p>
+  在单个过程中创建多个条形时，将值属性放置在各个 <code translate="no" class="notranslate text-nowrap">&lt;b-progress-bar&gt;</code>子组件上（有关更多详细信息，请参见下面的<strong>"多个条形"</strong>”部分）
+</p>
+<h2 id="labels" class="bv-no-focus-ring"><span class="bd-content-title">标签<a class="anchorjs-link" href="#labels" aria-labelledby="labels"></a></span></h2>
+<p>
+  通过为当前绝对值启用<code translate="no" class="notranslate text-nowrap">show-progress</code>（最大值的百分比）或
+  <code translate="no" class="notranslate text-nowrap">show-value</code>，将标签添加到进度条。
+  您还可以通过<code translate="no" class="notranslate text-nowrap">precision</code>属性设置精度（小数点后的位数）（默认为小数点后的<code translate="no" class="notranslate text-nowrap">0</code>位）。
+</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-progress-labels notranslate">
 <div>
 <h5>No label</h5>
@@ -369,8 +379,13 @@ the decimal) via the <code translate="no" class="notranslate text-nowrap">precis
     }
   }
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
-<h3 id="custom-progress-label" class="bv-no-focus-ring"><span class="bd-content-title">Custom progress label<a class="anchorjs-link" href="#custom-progress-label" aria-labelledby="custom-progress-label"></a></span></h3>
-<p>Need more control over the label? Provide your own label by using the default slot within a <code translate="no" class="notranslate text-nowrap">&lt;b-progress-bar&gt;</code> sub-component, or by using the <code translate="no" class="notranslate text-nowrap">label</code> or <code translate="no" class="notranslate text-nowrap">label-html</code> property on <code translate="no" class="notranslate text-nowrap">&lt;b-progress-bar&gt;</code>:</p>
+<h3 id="custom-progress-label" class="bv-no-focus-ring"><span class="bd-content-title">自定义进度标签<a class="anchorjs-link" href="#custom-progress-label" aria-labelledby="custom-progress-label"></a></span></h3>
+<p>
+  需要对标签进行更多控制吗？ 通过使用<code translate="no" class="notranslate text-nowrap">&lt;b-progress-bar&gt;</code>子组件中的默认插槽，
+  或使用<code translate="no" class="notranslate text-nowrap">&lt;b-progress-bar&gt;</code>上的
+  <code translate="no" class="notranslate text-nowrap">label</code>或 
+  <code translate="no" class="notranslate text-nowrap">label-html</code>属性，提供您自己的标签：
+</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-progress-custom-labels notranslate">
 <div>
 <h5>Custom label via default slot</h5>
@@ -418,20 +433,20 @@ the decimal) via the <code translate="no" class="notranslate text-nowrap">precis
     }
   }
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
-<p>Precedence order for label methods (top-most has precedence):</p>
+<p>标签方法的优先顺序（最高优先级）：</p>
 <ul>
-<li>default slot of <code translate="no" class="notranslate text-nowrap">&lt;b-progress-bar&gt;</code></li>
-<li><code translate="no" class="notranslate text-nowrap">label</code> prop of <code translate="no" class="notranslate text-nowrap">&lt;b-progress-bar&gt;</code></li>
-<li><code translate="no" class="notranslate text-nowrap">show-progress</code> prop of <code translate="no" class="notranslate text-nowrap">&lt;b-progress-bar&gt;</code></li>
-<li><code translate="no" class="notranslate text-nowrap">show-value</code> prop of <code translate="no" class="notranslate text-nowrap">&lt;b-progress-bar&gt;</code></li>
-<li><code translate="no" class="notranslate text-nowrap">show-progress</code> prop of <code translate="no" class="notranslate text-nowrap">&lt;b-progress&gt;</code></li>
-<li><code translate="no" class="notranslate text-nowrap">show-value</code> prop of <code translate="no" class="notranslate text-nowrap">&lt;b-progress&gt;</code></li>
-<li>no label</li>
+<li><code translate="no" class="notranslate text-nowrap">&lt;b-progress-bar&gt;</code>的默认插槽</li>
+<li><code translate="no" class="notranslate text-nowrap">&lt;b-progress-bar&gt;</code>的<code translate="no" class="notranslate text-nowrap">label</code>属性</li>
+<li><code translate="no" class="notranslate text-nowrap">&lt;b-progress-bar&gt;</code>的<code translate="no" class="notranslate text-nowrap">show-progress</code>属性</li>
+<li><code translate="no" class="notranslate text-nowrap">&lt;b-progress-bar&gt;</code>的<code translate="no" class="notranslate text-nowrap">show-value</code>属性</li>
+<li><code translate="no" class="notranslate text-nowrap">&lt;b-progress&gt;</code>的<code translate="no" class="notranslate text-nowrap">show-progress</code>属性</li>
+<li><code translate="no" class="notranslate text-nowrap">&lt;b-progress&gt;</code>的<code translate="no" class="notranslate text-nowrap">show-value</code>属性</li>
+<li>无标签</li>
 </ul>
-<h2 id="width-and-height" class="bv-no-focus-ring"><span class="bd-content-title">Width and height<a class="anchorjs-link" href="#width-and-height" aria-labelledby="width-and-height"></a></span></h2>
-<p><code translate="no" class="notranslate text-nowrap">&lt;b-progress&gt;</code> will always expand to the maximum with of its parent container. To change the width,
-place <code translate="no" class="notranslate text-nowrap">&lt;b-progress&gt;</code> in a standard Bootstrap column or apply one of the standard Bootstrap width
-classes.</p>
+<h2 id="width-and-height" class="bv-no-focus-ring"><span class="bd-content-title">宽高<a class="anchorjs-link" href="#width-and-height" aria-labelledby="width-and-height"></a></span></h2>
+<p>
+  <code translate="no" class="notranslate text-nowrap">&lt;b-progress&gt;</code>始终使用其父容器扩展到最大。要更改宽度,请将<code translate="no" class="notranslate text-nowrap">&lt;b-progress&gt;</code>放在标准Bootstrap列中，或应用标准Bootstrap宽度类之一。
+</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-progress-width notranslate">
 <div>
 <h5>Default width</h5>
@@ -471,15 +486,18 @@ classes.</p>
     }
   }
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
-<p>The height of the progress bar can be controlled with the <code translate="no" class="notranslate text-nowrap">height</code> prop. The height value should be
-a standard CSS dimension (<code translate="no" class="notranslate text-nowrap">px</code>, <code translate="no" class="notranslate text-nowrap">rem</code>, <code translate="no" class="notranslate text-nowrap">em</code>, etc). The default height is <code translate="no" class="notranslate text-nowrap">1rem</code>.</p>
+<p>
+  进度条的高度可以通过<code translate="no" class="notranslate text-nowrap">height</code>属性来控制。高度值应为标准CSS尺寸（<code translate="no" class="notranslate text-nowrap">px</code>,
+  <code translate="no" class="notranslate text-nowrap">rem</code>,
+   <code translate="no" class="notranslate text-nowrap">em</code>等）。默认高度为<code translate="no" class="notranslate text-nowrap">1rem</code>。
+  </p>
 <div translate="translate" class="bd-example vue-example vue-example-b-progress-height notranslate">
 <div>
-<h5>Default height</h5>
+<h5>默认高度</h5>
 <div class="mb-3 progress">
 <div role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="75" class="progress-bar" style="width: 75%;">75</div>
 </div>
-<h5>Custom heights</h5>
+<h5>自定义高度</h5>
 <div class="mb-2 progress" style="height: 2rem;">
 <div role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="75" class="progress-bar" style="width: 75%;">75</div>
 </div>
@@ -512,9 +530,11 @@ a standard CSS dimension (<code translate="no" class="notranslate text-nowrap">p
     }
   }
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
-<h2 id="backgrounds" class="bv-no-focus-ring"><span class="bd-content-title">Backgrounds<a class="anchorjs-link" href="#backgrounds" aria-labelledby="backgrounds"></a></span></h2>
-<p>Use background variants to change the appearance of individual progress bars. The default variant is <code translate="no" class="notranslate text-nowrap">primary</code>.</p>
-<h3 id="solid-background-variants" class="bv-no-focus-ring"><span class="bd-content-title">Solid background variants<a class="anchorjs-link" href="#solid-background-variants" aria-labelledby="solid-background-variants"></a></span></h3>
+<h2 id="backgrounds" class="bv-no-focus-ring"><span class="bd-content-title">背景<a class="anchorjs-link" href="#backgrounds" aria-labelledby="backgrounds"></a></span></h2>
+<p>
+  使用背景变体更改单个进度条的外观。 默认变量是<code translate="no" class="notranslate text-nowrap">primary</code>。
+  </p>
+<h3 id="solid-background-variants" class="bv-no-focus-ring"><span class="bd-content-title">实体背景变量<a class="anchorjs-link" href="#solid-background-variants" aria-labelledby="solid-background-variants"></a></span></h3>
 <div translate="translate" class="bd-example vue-example vue-example-b-progress-backgrounds notranslate">
 <div>
 <div class="row mb-1">
@@ -613,8 +633,10 @@ a standard CSS dimension (<code translate="no" class="notranslate text-nowrap">p
     }
   }
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
-<h3 id="striped-backgrounds" class="bv-no-focus-ring"><span class="bd-content-title">Striped backgrounds<a class="anchorjs-link" href="#striped-backgrounds" aria-labelledby="striped-backgrounds"></a></span></h3>
-<p>Set <code translate="no" class="notranslate text-nowrap">striped</code> to apply a stripe via CSS gradient over the progress bar's background variant.</p>
+<h3 id="striped-backgrounds" class="bv-no-focus-ring"><span class="bd-content-title">条纹背景<a class="anchorjs-link" href="#striped-backgrounds" aria-labelledby="striped-backgrounds"></a></span></h3>
+<p>
+  将<code translate="no" class="notranslate text-nowrap">striped</code>设置为通过CSS渐变在进度条的背景变量上应用条纹。
+</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-progress-striped notranslate">
 <div>
 <div class="progress">
@@ -654,8 +676,10 @@ a standard CSS dimension (<code translate="no" class="notranslate text-nowrap">p
     }
   }
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
-<h3 id="animated-backgrounds" class="bv-no-focus-ring"><span class="bd-content-title">Animated backgrounds<a class="anchorjs-link" href="#animated-backgrounds" aria-labelledby="animated-backgrounds"></a></span></h3>
-<p>The striped gradient can also be animated by setting the <code translate="no" class="notranslate text-nowrap">animated</code>prop.</p>
+<h3 id="animated-backgrounds" class="bv-no-focus-ring"><span class="bd-content-title">动画背景<a class="anchorjs-link" href="#animated-backgrounds" aria-labelledby="animated-backgrounds"></a></span></h3>
+<p>
+  也可以通过设置<code translate="no" class="notranslate text-nowrap">animated</code>属性设置条纹渐变的动画。
+</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-progress-animated notranslate">
 <div>
 <div class="progress">
@@ -695,14 +719,17 @@ a standard CSS dimension (<code translate="no" class="notranslate text-nowrap">p
     }
   }
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
-<p>Notes:</p>
+<p>注意事项:</p>
 <ul>
-<li>if <code translate="no" class="notranslate text-nowrap">animated</code> is true, <code translate="no" class="notranslate text-nowrap">striped</code> will automatically be enabled.</li>
-<li>Animated progress bars don't work in Opera 12 — as they don't support CSS3 animations.</li>
+<li>
+  如果<code translate="no" class="notranslate text-nowrap">animated</code>为true，则将自动启用<code translate="no" class="notranslate text-nowrap">条纹</code>。
+</li>
+<li>动画进度条在Opera12中不起作用，因为它们不支持CSS3动画。</li>
 </ul>
-<h2 id="multiple-bars" class="bv-no-focus-ring"><span class="bd-content-title">Multiple bars<a class="anchorjs-link" href="#multiple-bars" aria-labelledby="multiple-bars"></a></span></h2>
-<p>Include multiple <code translate="no" class="notranslate text-nowrap">&lt;b-progress-bar&gt;</code> sub-components in a <code translate="no" class="notranslate text-nowrap">&lt;b-progress&gt;</code> component to build a
-horizontally stacked set of progress bars.</p>
+<h2 id="multiple-bars" class="bv-no-focus-ring"><span class="bd-content-title">多条<a class="anchorjs-link" href="#multiple-bars" aria-labelledby="multiple-bars"></a></span></h2>
+<p>
+  在<code translate="no" class="notranslate text-nowrap">&lt;b-progress&gt;</code>组件中包含多个子组件，以构建一组水平堆叠的进度条。
+</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-progress-multiple notranslate">
 <div>
 <div class="mb-3 progress">
@@ -765,16 +792,24 @@ horizontally stacked set of progress bars.</p>
     }
   }
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
-<p><code translate="no" class="notranslate text-nowrap">&lt;b-progress-bar&gt;</code> will inherit most of the props from the <code translate="no" class="notranslate text-nowrap">&lt;b-progress&gt;</code> parent component, but you
-can override any of the props by setting them on the <code translate="no" class="notranslate text-nowrap">&lt;b-progress-bar&gt;</code></p>
-<p>Notes:</p>
+<p>
+  <code translate="no" class="notranslate text-nowrap">&lt;b-progress-bar&gt;</code>将继承<code translate="no" class="notranslate text-nowrap">&lt;b-progress&gt;</code>父组件的
+  大部分属性，但是您可以通过在<code translate="no" class="notranslate text-nowrap">&lt;b-progress-bar&gt;</code>上进行设置来覆盖任何属性。
+</p>
+<p>注意事项:</p>
 <ul>
-<li><code translate="no" class="notranslate text-nowrap">height</code>, if specified, should always set on the <code translate="no" class="notranslate text-nowrap">&lt;b-progress&gt;</code> component.</li>
-<li><code translate="no" class="notranslate text-nowrap">&lt;b-progress-bar&gt;</code> will not inherit <code translate="no" class="notranslate text-nowrap">value</code> from <code translate="no" class="notranslate text-nowrap">&lt;b-progress&gt;</code>.</li>
+<li>
+  如果指定了<code translate="no" class="notranslate text-nowrap">高度</code>，
+  则应始终在 <code translate="no" class="notranslate text-nowrap">&lt;b-progress&gt;</code>组件上设置。
+</li>
+<li>
+  <code translate="no" class="notranslate text-nowrap">&lt;b-progress-bar&gt;</code>不会从
+  <code translate="no" class="notranslate text-nowrap">&lt;b-progress&gt;</code>继承
+  <code translate="no" class="notranslate text-nowrap">值</code>。</li>
 </ul>
 <!-- Component reference added automatically from component package.json -->
 
-<h2 id="component-reference" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title">Component reference<a href="../../../bootstrap-vue/docs/components/progress#component-reference" class="anchorjs-link" aria-labelledby="component-reference" target="_self"></a></span></h2>
+<h2 id="component-reference" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title">组件参考<a href="../../../bootstrap-vue/docs/components/progress#component-reference" class="anchorjs-link" aria-labelledby="component-reference" target="_self"></a></span></h2>
 <section data-v-866a22e8="" class="bd-content">
 <header data-v-866a22e8="" class="row align-items-center">
 <div data-v-866a22e8="" class="col-sm-9">
@@ -783,7 +818,7 @@ can override any of the props by setting them on the <code translate="no" class=
 <div data-v-866a22e8="" class="text-sm-right col-sm-3"><a data-v-866a22e8="" rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev/src/components/progress/progress.js" class="btn btn-outline-secondary btn-sm"> View source </a></div>
 </header>
 <ul data-v-866a22e8="" class="component-ref-mini-toc my-3">
-<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-progress-props"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-progress&gt;</code> Properties </a></li>
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-progress-props"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-progress&gt;</code> 属性 </a></li>
 </ul>
 <article data-v-866a22e8="" class="bd-content">
 <h4 data-v-866a22e8="" id="comp-ref-b-progress-props" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> Properties <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/progress#comp-ref-b-progress-props" class="anchorjs-link" aria-labelledby="comp-ref-b-progress-props" target="_self"></a></span></h4>
@@ -791,10 +826,10 @@ can override any of the props by setting them on the <code translate="no" class=
 <table role="table" aria-busy="false" aria-colcount="4" class="table b-table bv-docs-table table-striped" id="__BVID__1391">
 <thead role="rowgroup" class="">
 <tr role="row" class="">
-<th role="columnheader" scope="col" aria-colindex="1" class="">Property</th>
-<th role="columnheader" scope="col" aria-colindex="2" class="">Type</th>
-<th role="columnheader" scope="col" aria-colindex="3" class="">Default</th>
-<th role="columnheader" scope="col" aria-colindex="4" class="">Description</th>
+<th role="columnheader" scope="col" aria-colindex="1" class="">属性</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">类型</th>
+<th role="columnheader" scope="col" aria-colindex="3" class="">默认值</th>
+<th role="columnheader" scope="col" aria-colindex="4" class="">描述</th>
 </tr>
 </thead>
 <tbody role="rowgroup">
@@ -802,55 +837,55 @@ can override any of the props by setting them on the <code translate="no" class=
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">variant</code></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">Applies one of the Bootstrap theme color variants to the component</td>
+<td aria-colindex="4" role="cell" class="">将一个引导主题颜色变体应用于组件</td>
 </tr>
 <tr role="row" data-pk="striped" class="" id="__BVID__1391__row_striped">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">striped</code></td>
 <td aria-colindex="2" role="cell" class="">Boolean</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
-<td aria-colindex="4" role="cell" class="">Enable the striped background</td>
+<td aria-colindex="4" role="cell" class="">启用条纹背景</td>
 </tr>
 <tr role="row" data-pk="animated" class="" id="__BVID__1391__row_animated">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">animated</code></td>
 <td aria-colindex="2" role="cell" class="">Boolean</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
-<td aria-colindex="4" role="cell" class="">Enable the animated background. Also automatically sets 'striped'</td>
+<td aria-colindex="4" role="cell" class="">启用动画背景。也会自动设置“条纹”</td>
 </tr>
 <tr role="row" data-pk="height" class="" id="__BVID__1391__row_height">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">height</code></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">Override the default height by specifying a CSS height value (including units)</td>
+<td aria-colindex="4" role="cell" class="">通过指定CSS高度值（包括单位）覆盖默认高度</td>
 </tr>
 <tr role="row" data-pk="precision" class="" id="__BVID__1391__row_precision">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">precision</code></td>
 <td aria-colindex="2" role="cell" class="">Number or String</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">0</code></td>
-<td aria-colindex="4" role="cell" class="">The number of digits after the decimal to round the value to</td>
+<td aria-colindex="4" role="cell" class="">小数点后四舍五入到的位数</td>
 </tr>
 <tr role="row" data-pk="show-progress" class="" id="__BVID__1391__row_show-progress">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">show-progress</code></td>
 <td aria-colindex="2" role="cell" class="">Boolean</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
-<td aria-colindex="4" role="cell" class="">Displays the current progress value as a percentage</td>
+<td aria-colindex="4" role="cell" class="">以百分比形式显示当前进度值</td>
 </tr>
 <tr role="row" data-pk="show-value" class="" id="__BVID__1391__row_show-value">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">show-value</code></td>
 <td aria-colindex="2" role="cell" class="">Boolean</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
-<td aria-colindex="4" role="cell" class="">Displays the current progress value</td>
+<td aria-colindex="4" role="cell" class="">显示当前进度值</td>
 </tr>
 <tr role="row" data-pk="max" class="" id="__BVID__1391__row_max">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">max</code></td>
 <td aria-colindex="2" role="cell" class="">Number or String</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">100</code></td>
-<td aria-colindex="4" role="cell" class="">Set the maximum value</td>
+<td aria-colindex="4" role="cell" class="">设置最大值</td>
 </tr>
 <tr role="row" data-pk="value" class="" id="__BVID__1391__row_value">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">value</code></td>
 <td aria-colindex="2" role="cell" class="">Number or String</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">0</code></td>
-<td aria-colindex="4" role="cell" class="">The current value of the progress bar</td>
+<td aria-colindex="4" role="cell" class="">进度条的当前值</td>
 </tr>
 </tbody>
 </table>
@@ -865,7 +900,7 @@ can override any of the props by setting them on the <code translate="no" class=
 <div data-v-866a22e8="" class="text-sm-right col-sm-3"><a data-v-866a22e8="" rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev/src/components/progress/progress-bar.js" class="btn btn-outline-secondary btn-sm"> View source </a></div>
 </header>
 <ul data-v-866a22e8="" class="component-ref-mini-toc my-3">
-<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-progress-bar-props"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-progress-bar&gt;</code> Properties </a></li>
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-progress-bar-props"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-progress-bar&gt;</code> 属性 </a></li>
 </ul>
 <article data-v-866a22e8="" class="bd-content">
 <h4 data-v-866a22e8="" id="comp-ref-b-progress-bar-props" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> Properties <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/progress#comp-ref-b-progress-bar-props" class="anchorjs-link" aria-labelledby="comp-ref-b-progress-bar-props" target="_self"></a></span></h4>
@@ -873,10 +908,10 @@ can override any of the props by setting them on the <code translate="no" class=
 <table role="table" aria-busy="false" aria-colcount="4" class="table b-table bv-docs-table table-striped" id="__BVID__1414">
 <thead role="rowgroup" class="">
 <tr role="row" class="">
-<th role="columnheader" scope="col" tabindex="0" aria-colindex="1" aria-sort="none" class="b-table-sort-icon-left">Property<span class="sr-only"> (Click to sort Ascending)</span></th>
-<th role="columnheader" scope="col" tabindex="0" aria-colindex="2" class="">Type</th>
-<th role="columnheader" scope="col" tabindex="0" aria-colindex="3" class="">Default</th>
-<th role="columnheader" scope="col" tabindex="0" aria-colindex="4" class="">Description</th>
+<th role="columnheader" scope="col" tabindex="0" aria-colindex="1" aria-sort="none" class="b-table-sort-icon-left">属性<span class="sr-only"> (Click to sort Ascending)</span></th>
+<th role="columnheader" scope="col" tabindex="0" aria-colindex="2" class="">类型</th>
+<th role="columnheader" scope="col" tabindex="0" aria-colindex="3" class="">默认值</th>
+<th role="columnheader" scope="col" tabindex="0" aria-colindex="4" class="">描述</th>
 </tr>
 </thead>
 <tbody role="rowgroup">
@@ -884,80 +919,82 @@ can override any of the props by setting them on the <code translate="no" class=
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">value</code></td>
 <td aria-colindex="2" role="cell" class="">Number or String</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">0</code></td>
-<td aria-colindex="4" role="cell" class="">The current value of the progress bar</td>
+<td aria-colindex="4" role="cell" class="">进度条的当前值</td>
 </tr>
 <tr role="row" data-pk="label" class="" id="__BVID__1414__row_label">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">label</code></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">Text string to explicitly set the label as</td>
+<td aria-colindex="4" role="cell" class="">文本字符串，用于将标签明确设置为</td>
 </tr>
 <tr role="row" data-pk="label-html" class="" id="__BVID__1414__row_label-html">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">label-html</code> <span data-v-866a22e8="" class="badge badge-warning">Use with caution</span></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">HTML string to explicitly set the label as. Use with caution</td>
+<td aria-colindex="4" role="cell" class="">HTML字符串，用于将标签明确设置为。 谨慎使用</td>
 </tr>
 <tr role="row" data-pk="max" class="" id="__BVID__1414__row_max">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">max</code></td>
 <td aria-colindex="2" role="cell" class="">Number or String</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">Set the maximum value</td>
+<td aria-colindex="4" role="cell" class="">设定最大值</td>
 </tr>
 <tr role="row" data-pk="precision" class="" id="__BVID__1414__row_precision">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">precision</code></td>
 <td aria-colindex="2" role="cell" class="">Number or String</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">The number of digits after the decimal to round the value to</td>
+<td aria-colindex="4" role="cell" class="">小数点后四舍五入的位数</td>
 </tr>
 <tr role="row" data-pk="variant" class="" id="__BVID__1414__row_variant">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">variant</code></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">Applies one of the Bootstrap theme color variants to the component</td>
+<td aria-colindex="4" role="cell" class="">将Bootstrap主题颜色变体之一应用于组件</td>
 </tr>
 <tr role="row" data-pk="striped" class="" id="__BVID__1414__row_striped">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">striped</code></td>
 <td aria-colindex="2" role="cell" class="">Boolean</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">Enable the striped background</td>
+<td aria-colindex="4" role="cell" class="">启用条纹背景</td>
 </tr>
 <tr role="row" data-pk="animated" class="" id="__BVID__1414__row_animated">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">animated</code></td>
 <td aria-colindex="2" role="cell" class="">Boolean</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">Enable the animated background. Also automatically sets 'striped'</td>
+<td aria-colindex="4" role="cell" class="">启用动画背景。 同时自动设置“条纹”</td>
 </tr>
 <tr role="row" data-pk="show-progress" class="" id="__BVID__1414__row_show-progress">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">show-progress</code></td>
 <td aria-colindex="2" role="cell" class="">Boolean</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">Displays the current progress value as a percentage</td>
+<td aria-colindex="4" role="cell" class="">以百分比显示当前进度值</td>
 </tr>
 <tr role="row" data-pk="show-value" class="" id="__BVID__1414__row_show-value">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">show-value</code></td>
 <td aria-colindex="2" role="cell" class="">Boolean</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">Displays the current progress value</td>
+<td aria-colindex="4" role="cell" class="">显示当前进度值</td>
 </tr>
 </tbody>
 </table>
 </div>
 <div data-v-866a22e8="" class="alert alert-warning">
-<p data-v-866a22e8="" class="mb-0 small"><strong data-v-866a22e8="">Caution:</strong> Props that support HTML strings
-        (<code data-v-866a22e8="" translate="translate" class="notranslate">*-html</code>) can be vulnerable to <a data-v-866a22e8="" rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/Cross-site_scripting" class="alert-link"> Cross Site Scripting (XSS) attacks </a> when passed raw user supplied values. You must properly <a data-v-866a22e8="" rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/HTML_sanitization" class="alert-link"> sanitize </a> the user input first! </p>
+<p data-v-866a22e8="" class="mb-0 small"><strong data-v-866a22e8="">警告:</strong> 
+  当传递原始用户提供的值时，支持HTML字符串（<code data-v-866a22e8="" translate="translate" class="notranslate">*-html</code>）的属性可能容易
+  受到<a data-v-866a22e8="" rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/Cross-site_scripting" class="alert-link"> 跨站点脚本（XSS）攻击 </a>。
+  必须先正确<a data-v-866a22e8="" rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/HTML_sanitization" class="alert-link">清理</a> 用户输入！
+  </p>
 </div>
 </article>
-<h3 id="importing-individual-components" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title"> Importing individual components <a href="../../../bootstrap-vue/docs/components/progress#importing-individual-components" class="anchorjs-link" aria-labelledby="importing-individual-components" target="_self"></a></span></h3>
-<p> You can import individual components into your project via the following named
-        exports: </p>
+<h3 id="importing-individual-components" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title">导入单个组件<a href="../../../bootstrap-vue/docs/components/progress#importing-individual-components" class="anchorjs-link" aria-labelledby="importing-individual-components" target="_self"></a></span></h3>
+<p>可以通过以下命名导出将各个组件导入到项目中：</p>
 <div class="table-responsive-sm">
 <table role="table" aria-busy="false" aria-colcount="3" class="table b-table bv-docs-table table-striped" id="__BVID__1437">
 <thead role="rowgroup" class="thead-default">
 <tr role="row" class="">
-<th role="columnheader" scope="col" aria-colindex="1" class="">Component</th>
-<th role="columnheader" scope="col" aria-colindex="2" class="">Named Export</th>
-<th role="columnheader" scope="col" aria-colindex="3" class="">Import Path</th>
+<th role="columnheader" scope="col" aria-colindex="1" class="">组成部分</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">命名导出</th>
+<th role="columnheader" scope="col" aria-colindex="3" class="">导入路径</th>
 </tr>
 </thead>
 <tbody role="rowgroup">
@@ -974,21 +1011,19 @@ can override any of the props by setting them on the <code translate="no" class=
 </tbody>
 </table>
 </div>
-<p><strong>Example:</strong></p>
+<p><strong>例子:</strong></p>
 <pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { BProgress } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
 Vue.component(<span class="hljs-string">'b-progress'</span>, BProgress)</pre>
 </article>
 <article class="bd-content">
-<h3 id="importing-as-a-plugin" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title"> Importing as a Vue.js plugin <a href="../../../bootstrap-vue/docs/components/progress#importing-as-a-plugin" class="anchorjs-link" aria-labelledby="importing-as-a-plugin" target="_self"></a></span></h3>
-<p> This plugin includes all of the above listed individual
-      components.
-      Plugins also include any component aliases. </p>
+<h3 id="importing-as-a-plugin" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title">作为Vue.js插件导入<a href="../../../bootstrap-vue/docs/components/progress#importing-as-a-plugin" class="anchorjs-link" aria-labelledby="importing-as-a-plugin" target="_self"></a></span></h3>
+<p>这个插件包括上面列出的所有独立组件。插件还包括任何组件别名。</p>
 <div class="table-responsive-sm">
 <table fileds="namedExport,importPath" role="table" aria-busy="false" aria-colcount="2" class="table b-table bv-docs-table table-striped b-table-caption-top" id="__BVID__1448">
 <thead role="rowgroup" class="thead-default">
 <tr role="row" class="">
-<th role="columnheader" scope="col" aria-colindex="1" class="">Named Export</th>
-<th role="columnheader" scope="col" aria-colindex="2" class="">Import Path</th>
+<th role="columnheader" scope="col" aria-colindex="1" class="">命名导出</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">导入路径</th>
 </tr>
 </thead>
 <tbody role="rowgroup">
@@ -999,7 +1034,7 @@ Vue.component(<span class="hljs-string">'b-progress'</span>, BProgress)</pre>
 </tbody>
 </table>
 </div>
-<p><strong>Example:</strong></p>
+<p><strong>例子:</strong></p>
 <pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { ProgressPlugin } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
 Vue.use(ProgressPlugin)</pre>
 

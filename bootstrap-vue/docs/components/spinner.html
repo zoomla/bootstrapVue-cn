@@ -188,34 +188,34 @@
 
 <div class="d-none d-xl-block col-xl-2 bd-toc">
 <ul class="section-nav">
-<li class="nav-item toc-entry mb-2"><a target="_self" href="#spinners" class="nav-link font-weight-bold"><span>Spinners</span></a></li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#spinner-types" class="nav-link"><span>Spinner types</span></a>
+<li class="nav-item toc-entry mb-2"><a target="_self" href="#spinners" class="nav-link font-weight-bold"><span>旋转指示器(Spinners)</span></a></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#spinner-types" class="nav-link"><span>Spinner 类型</span></a>
 <ul class="nav flex-column">
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#border-spinner" class="nav-link"><span>Border spinner</span></a></li>
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#grow-spinner" class="nav-link"><span>Grow spinner</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#border-spinner" class="nav-link"><span>边框 spinner</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#grow-spinner" class="nav-link"><span>增长 spinner</span></a></li>
 </ul>
 </li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#spinner-color-variants" class="nav-link"><span>Spinner color variants</span></a> <!----></li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#size" class="nav-link"><span>Size</span></a> <!----></li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#alignment" class="nav-link"><span>Alignment</span></a>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#spinner-color-variants" class="nav-link"><span>Spinner 颜色 variants</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#size" class="nav-link"><span>大小</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#alignment" class="nav-link"><span>对齐</span></a>
 <ul class="nav flex-column">
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#margin" class="nav-link"><span>Margin</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#margin" class="nav-link"><span>边距</span></a></li>
 </ul>
 </li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#placement" class="nav-link"><span>Placement</span></a>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#placement" class="nav-link"><span>放置方式</span></a>
 <ul class="nav flex-column">
 <li class="nav-item toc-entry toc-h3"><a target="_self" href="#flex" class="nav-link"><span>Flex</span></a></li>
 <li class="nav-item toc-entry toc-h3"><a target="_self" href="#floats" class="nav-link"><span>Floats</span></a></li>
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#text-align" class="nav-link"><span>Text align</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#text-align" class="nav-link"><span>文本对齐</span></a></li>
 </ul>
 </li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#spinners-in-buttons" class="nav-link"><span>Spinners in buttons</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#spinners-in-buttons" class="nav-link"><span>Spinners 按钮</span></a> <!----></li>
 <li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#spinner-accessibility" class="nav-link"><span>Spinner accessibility</span></a> <!----></li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#component-reference" class="nav-link"><span>Component reference</span></a>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#component-reference" class="nav-link"><span>参考组件</span></a>
 <ul class="nav flex-column">
 <li class="nav-item toc-entry toc-h3"><a target="_self" href="#comp-ref-b-spinner" class="nav-link"><span>&lt;b-spinner&gt;</span></a></li>
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#importing-individual-components" class="nav-link"><span>Importing individual components</span></a></li>
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#importing-as-a-plugin" class="nav-link"><span>Importing as a Vue.js plugin</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#importing-individual-components" class="nav-link"><span>导入单个组件</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#importing-as-a-plugin" class="nav-link"><span>作为Vue.js插件导入</span></a></li>
 </ul>
 </li>
 </ul>
@@ -233,8 +233,9 @@
 </nav>
 <div class="clearfix d-block"></div>
   <h1 class="bd-title" id="content">旋转指示器(Spinners)</h1>
-  <p class="bd-lead">The <code translate="no" class="notranslate text-nowrap">&lt;b-spinner&gt;</code> component can be used to show the loading state in your projects. They're rendered only with basic HTML and CSS as a lightweight Vue functional component. Their appearance, alignment, and sizing can be easily customized with a few built-in props and/or Bootstrap v4
-utility classes.</p>
+  <p class="bd-lead"><code translate="no" class="notranslate text-nowrap">&lt;b-spinner&gt;</code> 
+    组件可用于显示项目中的加载状态。 仅使用基本的HTML和CSS作为轻量级的Vue功能组件来呈现它们。 可以使用一些内置的props和/或Bootstrap v4实用程序类轻松地自定义它们的外观，对齐方式和大小。
+    </p>
   <script type="text/javascript" src="../../../v4/assets/js/pupCMS.js"></script>
 
 
@@ -275,8 +276,9 @@ utility classes.</p>
 </li>
 </ul>
 </nav>
-<p>Spinners can be placed just about anywhere, including inside buttons, alerts, and even <code translate="no" class="notranslate text-nowrap">&lt;b-table&gt;</code>'s
-busy slot.</p>
+<p>
+  微调框可以放置在几乎任何地方，包括内部按钮，弹出层，甚至是<code translate="no" class="notranslate text-nowrap">&lt;b-table&gt;</code>的繁忙插槽。
+</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-spinners notranslate">
 <div class="text-center"><span role="status" class="spinner-border"><span class="sr-only">Spinning</span></span> <span role="status" class="spinner-grow"><span class="sr-only">Spinning</span></span> <span role="status" class="spinner-border text-primary"><span class="sr-only">Spinning</span></span> <span role="status" class="spinner-grow text-primary"><span class="sr-only">Spinning</span></span> <span role="status" class="spinner-border text-success"><span class="sr-only">Spinning</span></span> <span role="status" class="spinner-grow text-success"><span class="sr-only">Spinning</span></span></div>
 </div>
@@ -288,31 +290,41 @@ busy slot.</p>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-spinner</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"success"</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Spinning"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-spinner</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-spinner</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"success"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"grow"</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Spinning"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-spinner</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
-<h2 id="spinner-types" class="bv-no-focus-ring"><span class="bd-content-title">Spinner types<a class="anchorjs-link" href="#spinner-types" aria-labelledby="spinner-types"></a></span></h2>
-<p>Bootstrap includes two types of spinners. The default spinner type is called <code translate="no" class="notranslate text-nowrap">border</code> (spinning
-circle border), and the optional type <code translate="no" class="notranslate text-nowrap">grow</code> (a throbber style indicator).</p>
-<h3 id="border-spinner" class="bv-no-focus-ring"><span class="bd-content-title">Border spinner<a class="anchorjs-link" href="#border-spinner" aria-labelledby="border-spinner"></a></span></h3>
-<p>Use the default <code translate="no" class="notranslate text-nowrap">border</code> type spinners for a lightweight loading indicator.</p>
+<h2 id="spinner-types" class="bv-no-focus-ring"><span class="bd-content-title">Spinner 类型<a class="anchorjs-link" href="#spinner-types" aria-labelledby="spinner-types"></a></span></h2>
+<p>
+  Bootstrap包括两种类型的微调器。 默认的微调器类型称为<code translate="no" class="notranslate text-nowrap">border</code>（旋转的圆环边框），
+  而可选的类型<code translate="no" class="notranslate text-nowrap">增长</code>（throbber样式指示器）。
+</p>
+<h3 id="border-spinner" class="bv-no-focus-ring"><span class="bd-content-title">边框 spinner<a class="anchorjs-link" href="#border-spinner" aria-labelledby="border-spinner"></a></span></h3>
+<p>
+  将默认<code translate="no" class="notranslate text-nowrap">边框</code>类型微调器用于轻型加载指示器。
+</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-spinner-border notranslate">
 <div><span role="status" class="spinner-border"><span class="sr-only">Loading...</span></span></div>
 </div>
 <pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-spinner</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Loading..."</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-spinner</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
-<h3 id="grow-spinner" class="bv-no-focus-ring"><span class="bd-content-title">Grow spinner<a class="anchorjs-link" href="#grow-spinner" aria-labelledby="grow-spinner"></a></span></h3>
-<p>If you don't fancy a <code translate="no" class="notranslate text-nowrap">border</code> spinner, switch to the <code translate="no" class="notranslate text-nowrap">grow</code> spinner by setting the prop <code translate="no" class="notranslate text-nowrap">type</code> to <code translate="no" class="notranslate text-nowrap">'grow'</code>. While it doesn't technically spin, it does repeatedly grow!</p>
+<h3 id="grow-spinner" class="bv-no-focus-ring"><span class="bd-content-title">成长 spinner<a class="anchorjs-link" href="#grow-spinner" aria-labelledby="grow-spinner"></a></span></h3>
+<p>
+  如果您不喜欢<code translate="no" class="notranslate text-nowrap">边框</code>spinner，
+  请通过将属性类型设置为<code translate="no" class="notranslate text-nowrap">'增长'</code>来切换到<code translate="no" class="notranslate text-nowrap">增长</code> spinner。
+  尽管从技术上讲它不是旋转的，但确实会反复增长！
+</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-spinner-grow notranslate">
 <div><span role="status" class="spinner-grow"><span class="sr-only">Loading...</span></span></div>
 </div>
 <pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-spinner</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"grow"</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Loading..."</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-spinner</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
-<h2 id="spinner-color-variants" class="bv-no-focus-ring"><span class="bd-content-title">Spinner color variants<a class="anchorjs-link" href="#spinner-color-variants" aria-labelledby="spinner-color-variants"></a></span></h2>
-<p>Spinners use <code translate="no" class="notranslate text-nowrap">currentColor</code> for their color, meaning it inherits the current font color. You can
-customize the color using the standard text color variants using the <code translate="no" class="notranslate text-nowrap">variant</code> prop, or place
-classes or styles on the component to change its color.</p>
-<p>The <code translate="no" class="notranslate text-nowrap">variant</code> prop translates the variant name to the Bootstrap v4 class <code translate="no" class="notranslate text-nowrap">.text-{variant}</code>, so if
-you have custom defined text color variants, feel free to use them via the <code translate="no" class="notranslate text-nowrap">variant</code> prop.</p>
+<h2 id="spinner-color-variants" class="bv-no-focus-ring"><span class="bd-content-title">Spinner 颜色variant<a class="anchorjs-link" href="#spinner-color-variants" aria-labelledby="spinner-color-variants"></a></span></h2>
+<p>
+  Spinners使用<code translate="no" class="notranslate text-nowrap">currentColor</code>作为其颜色，这意味着它继承了当前的字体颜色。
+  您可以使用<code translate="no" class="notranslate text-nowrap">variant</code>属性使用标准文本颜色变体来自定义颜色，或在组件上放置类或样式以更改其颜色。
+</p>
+<p<code translate="no" class="notranslate text-nowrap">variant</code>属性将variant名称转换为Bootstrap v4类
+<code translate="no" class="notranslate text-nowrap">.text-{variant}</code>，因此，如果您有自定义的文本颜色变体，请随时通过<code translate="no" class="notranslate text-nowrap">variant</code>属性使用它们。
+</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-spinner-variants notranslate">
 <div>
 <div class="text-center mb-3 d-flex justify-content-between"><span aria-hidden="true" class="spinner-border text-primary"></span><span aria-hidden="true" class="spinner-border text-secondary"></span><span aria-hidden="true" class="spinner-border text-danger"></span><span aria-hidden="true" class="spinner-border text-warning"></span><span aria-hidden="true" class="spinner-border text-success"></span><span aria-hidden="true" class="spinner-border text-info"></span><span aria-hidden="true" class="spinner-border text-light"></span><span aria-hidden="true" class="spinner-border text-dark"></span></div>
@@ -349,11 +361,15 @@ you have custom defined text color variants, feel free to use them via the <code
     }
   }
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
-<p><strong>Why not use <code translate="no" class="notranslate text-nowrap">border-color</code> utilities?</strong> Each <code translate="no" class="notranslate text-nowrap">border</code> spinner specifies a <code translate="no" class="notranslate text-nowrap">transparent</code> border for
-at least one side, so <code translate="no" class="notranslate text-nowrap">.border-{color}</code> utilities would override that.</p>
-<h2 id="size" class="bv-no-focus-ring"><span class="bd-content-title">Size<a class="anchorjs-link" href="#size" aria-labelledby="size"></a></span></h2>
-<p>Set the prop <code translate="no" class="notranslate text-nowrap">small</code> to <code translate="no" class="notranslate text-nowrap">true</code> to make a smaller spinner that can quickly be used within other
-components.</p>
+<p>
+  <strong>为什么不使用<code translate="no" class="notranslate text-nowrap">border-color</code>实体程序?</strong> 
+  每个<code translate="no" class="notranslate text-nowrap">边框</code> spinner 至少为一侧指定<code translate="no" class="notranslate text-nowrap">透明</code> 边框，
+  因此<code translate="no" class="notranslate text-nowrap">.border-{color}</code>实用程序将覆盖该边框。
+</p>
+<h2 id="size" class="bv-no-focus-ring"><span class="bd-content-title">大小<a class="anchorjs-link" href="#size" aria-labelledby="size"></a></span></h2>
+<p>
+  将属性设置为<code translate="no" class="notranslate text-nowrap">true</code>可以制作一个<code translate="no" class="notranslate text-nowrap">小</code>的微调器，可以在其他组件中快速使用该微调器。
+</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-spinner-sizes notranslate">
 <div><span role="status" class="spinner-border spinner-border-sm"><span class="sr-only">Small Spinner</span></span> <span role="status" class="spinner-grow spinner-grow-sm"><span class="sr-only">Small Spinner</span></span></div>
 </div>
@@ -361,7 +377,7 @@ components.</p>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-spinner</span> <span class="hljs-attr">small</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Small Spinner"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-spinner</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-spinner</span> <span class="hljs-attr">small</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Small Spinner"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"grow"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-spinner</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
-<p>Or, use custom CSS or inline styles to change the dimensions as needed.</p>
+<p>或者，使用自定义CSS或内联样式来根据需要更改尺寸。</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-spinner-sizes-custom notranslate">
 <div><span role="status" class="spinner-border" style="width: 3rem; height: 3rem;"><span class="sr-only">Large Spinner</span></span> <span role="status" class="spinner-grow" style="width: 3rem; height: 3rem;"><span class="sr-only">Large Spinner</span></span></div>
 </div>
@@ -369,22 +385,26 @@ components.</p>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-spinner</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"width: 3rem; height: 3rem;"</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Large Spinner"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-spinner</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-spinner</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"width: 3rem; height: 3rem;"</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Large Spinner"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"grow"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-spinner</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
-<h2 id="alignment" class="bv-no-focus-ring"><span class="bd-content-title">Alignment<a class="anchorjs-link" href="#alignment" aria-labelledby="alignment"></a></span></h2>
-<p>Spinners in Bootstrap are built with <code translate="no" class="notranslate text-nowrap">rem</code>s, <code translate="no" class="notranslate text-nowrap">currentColor</code>, and <code translate="no" class="notranslate text-nowrap">display: inline-flex</code>. This means
-they can easily be resized, recolored, and quickly aligned.</p>
-<h3 id="margin" class="bv-no-focus-ring"><span class="bd-content-title">Margin<a class="anchorjs-link" href="#margin" aria-labelledby="margin"></a></span></h3>
-<p>Use margin utilities like <code translate="no" class="notranslate text-nowrap">.m-5</code> for easy spacing.</p>
+<h2 id="alignment" class="bv-no-focus-ring"><span class="bd-content-title">对齐<a class="anchorjs-link" href="#alignment" aria-labelledby="alignment"></a></span></h2>
+<p>
+  Bootstrap中的Spinner使用<code translate="no" class="notranslate text-nowrap">rem</code>s, 
+  <code translate="no" class="notranslate text-nowrap">currentColor</code>,和
+  <code translate="no" class="notranslate text-nowrap">display: inline-flex</code>构建。 这意味着它们可以轻松地调整大小，重新着色并快速对齐。
+</p>
+<h3 id="margin" class="bv-no-focus-ring"><span class="bd-content-title">边距<a class="anchorjs-link" href="#margin" aria-labelledby="margin"></a></span></h3>
+<p>
+  使用诸如<code translate="no" class="notranslate text-nowrap">.m-5</code>之类的边距实用程序可轻松实现间距。
+</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-spinner-margin notranslate">
 <div><span role="status" class="m-5 spinner-border"><span class="sr-only">Busy</span></span></div>
 </div>
 <pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-spinner</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"m-5"</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Busy"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-spinner</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
-<h2 id="placement" class="bv-no-focus-ring"><span class="bd-content-title">Placement<a class="anchorjs-link" href="#placement" aria-labelledby="placement"></a></span></h2>
-<p>Use flexbox utilities, float utilities, or text alignment utility classes to place spinners exactly
-where you need them in any situation.</p>
+<h2 id="placement" class="bv-no-focus-ring"><span class="bd-content-title">放置方式<a class="anchorjs-link" href="#placement" aria-labelledby="placement"></a></span></h2>
+<p>在任何情况下，都可以使用flexbox实用程序，float实用程序或文本对齐实用程序类将Spinner精确地放置在所需的位置。</p>
 <h3 id="flex" class="bv-no-focus-ring"><span class="bd-content-title">Flex<a class="anchorjs-link" href="#flex" aria-labelledby="flex"></a></span></h3>
-<p>Using flex utility classes:</p>
+<p>使用flex实用程序类：</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-spinner-flex notranslate">
 <div>
 <div class="d-flex justify-content-center mb-3"><span role="status" class="spinner-border"><span class="sr-only">Loading...</span></span></div>
@@ -402,24 +422,23 @@ where you need them in any situation.</p>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
 <h3 id="floats" class="bv-no-focus-ring"><span class="bd-content-title">Floats<a class="anchorjs-link" href="#floats" aria-labelledby="floats"></a></span></h3>
-<p>Using float utility classes:</p>
+<p>使用float实用程序类：</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-spinner-floats notranslate">
 <div class="clearfix"><span role="status" class="float-right spinner-border"><span class="sr-only">Floated Right</span></span></div>
 </div>
 <pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"clearfix"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-spinner</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"float-right"</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Floated Right"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-spinner</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
-<h3 id="text-align" class="bv-no-focus-ring"><span class="bd-content-title">Text align<a class="anchorjs-link" href="#text-align" aria-labelledby="text-align"></a></span></h3>
-<p>Using text alignment utility classes:</p>
+<h3 id="text-align" class="bv-no-focus-ring"><span class="bd-content-title">文本对齐<a class="anchorjs-link" href="#text-align" aria-labelledby="text-align"></a></span></h3>
+<p>使用文本对齐工具类：</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-spinner-text-align notranslate">
 <div class="text-center"><span role="status" class="spinner-border text-primary"><span class="sr-only">Text Centered</span></span></div>
 </div>
 <pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-center"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-spinner</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"primary"</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Text Centered"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-spinner</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
-<h2 id="spinners-in-buttons" class="bv-no-focus-ring"><span class="bd-content-title">Spinners in buttons<a class="anchorjs-link" href="#spinners-in-buttons" aria-labelledby="spinners-in-buttons"></a></span></h2>
-<p>Use spinners within buttons to indicate an action is currently processing or taking place. You may
-also swap the label text out of the spinner element and utilize button text as needed.</p>
+<h2 id="spinners-in-buttons" class="bv-no-focus-ring"><span class="bd-content-title">Spinners 按钮<a class="anchorjs-link" href="#spinners-in-buttons" aria-labelledby="spinners-in-buttons"></a></span></h2>
+<p>使用按钮内的Spinners指示当前正在处理或正在进行的动作。 您也可以将标签文本换出Spinner元素，并根据需要使用按钮文本。</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-spinner-buttons notranslate">
 <div>
 <button type="button" disabled="disabled" class="btn btn-primary disabled"><span aria-hidden="true" class="spinner-border spinner-border-sm"></span> <span class="sr-only">Loading...</span></button>
@@ -438,24 +457,32 @@ also swap the label text out of the spinner element and utilize button text as n
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
 <h2 id="spinner-accessibility" class="bv-no-focus-ring"><span class="bd-content-title">Spinner accessibility<a class="anchorjs-link" href="#spinner-accessibility" aria-labelledby="spinner-accessibility"></a></span></h2>
-<p>Place a hidden label text inside the spinner for screen reader users, via the <code translate="no" class="notranslate text-nowrap">label</code> prop or <code translate="no" class="notranslate text-nowrap">label</code> slot. The content will be placed <em>inside</em> the spinner wrapped in a <code translate="no" class="notranslate text-nowrap">&lt;span&gt;</code> element that has
-the class <code translate="no" class="notranslate text-nowrap">sr-only</code>, which will make the label available to screen reader users.</p>
-<p>For accessibility purposes, each spinner will automatically have a <code translate="no" class="notranslate text-nowrap">role="status"</code> attribute when a
-label is provided. You can easily customize the role if required via prop <code translate="no" class="notranslate text-nowrap">role</code>. The specified <code translate="no" class="notranslate text-nowrap">role</code> will not be applied when no label is provided.</p>
-<p>As well, when no label is provided, the spinner will automatically have the attribute <code translate="no" class="notranslate text-nowrap">aria-hidden="true"</code> to hide the spinner from screen reader users.</p>
+<p>
+  通过<code translate="no" class="notranslate text-nowrap">标签</code>属性或<code translate="no" class="notranslate text-nowrap">标签</code>槽将隐藏的标签文本放置在spinner内，
+  以供屏幕阅读器用户使用。 内容将放置在包裹在<code translate="no" class="notranslate text-nowrap">&lt;span&gt;</code>元素中的微调框内，
+  该元素具有<code translate="no" class="notranslate text-nowrap">sr-only</code>类，</br>这将使标签可供屏幕阅读器用户使用。
+</p>
+<p>
+  出于可访问性的目的，每个spinner在提供标签时将自动具有<code translate="no" class="notranslate text-nowrap">role="status"</code>属性。如果需要，
+  您可以通过属性<code translate="no" class="notranslate text-nowrap">角色</code>轻松自定义<code translate="no" class="notranslate text-nowrap">角色</code>。
+  如果未提供标签，则将不应用指定的角色。
+</p>
+<p>
+  同样，当未提供标签时，spinner将自动具有属性<code translate="no" class="notranslate text-nowrap">aria-hidden="true"</code>，以向屏幕阅读器用户隐藏spinner。
+</p>
 <!-- Component reference added automatically from component package.json -->
 
-<h2 id="component-reference" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title">Component reference<a href="../../../bootstrap-vue/docs/components/spinner#component-reference" class="anchorjs-link" aria-labelledby="component-reference" target="_self"></a></span></h2>
+<h2 id="component-reference" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title">组件参考<a href="../../../bootstrap-vue/docs/components/spinner#component-reference" class="anchorjs-link" aria-labelledby="component-reference" target="_self"></a></span></h2>
 <section data-v-866a22e8="" class="bd-content">
 <header data-v-866a22e8="" class="row align-items-center">
 <div data-v-866a22e8="" class="col-sm-9">
 <h3 data-v-866a22e8="" id="comp-ref-b-spinner" tabindex="-1" class="bv-no-focus-ring"><span data-v-866a22e8="" class="bd-content-title"><code data-v-866a22e8="" translate="translate" class="notranslate bigger">&lt;b-spinner&gt;</code><a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/spinner#comp-ref-b-spinner" class="anchorjs-link" aria-labelledby="comp-ref-b-spinner" target="_self"></a></span></h3>
-<a data-v-866a22e8="" rel="noopener" target="_blank" href="https://vuejs.org/v2/guide/render-function.html#Functional-Components" class="badge badge-secondary"> Functional Component </a></div>
+<a data-v-866a22e8="" rel="noopener" target="_blank" href="https://vuejs.org/v2/guide/render-function.html#Functional-Components" class="badge badge-secondary"> 功能组件</a></div>
 <div data-v-866a22e8="" class="text-sm-right col-sm-3"><a data-v-866a22e8="" rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev/src/components/spinner/spinner.js" class="btn btn-outline-secondary btn-sm"> View source </a></div>
 </header>
 <ul data-v-866a22e8="" class="component-ref-mini-toc my-3">
-<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-spinner-props"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-spinner&gt;</code> Properties </a></li>
-<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-spinner-slots"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-spinner&gt;</code> Slots </a></li>
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-spinner-props"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-spinner&gt;</code> 属性 </a></li>
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-spinner-slots"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-spinner&gt;</code> 插槽 </a></li>
 </ul>
 <article data-v-866a22e8="" class="bd-content">
 <h4 data-v-866a22e8="" id="comp-ref-b-spinner-props" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> Properties <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/spinner#comp-ref-b-spinner-props" class="anchorjs-link" aria-labelledby="comp-ref-b-spinner-props" target="_self"></a></span></h4>
@@ -463,10 +490,10 @@ label is provided. You can easily customize the role if required via prop <code 
 <table role="table" aria-busy="false" aria-colcount="4" class="table b-table bv-docs-table table-striped" id="__BVID__1589">
 <thead role="rowgroup" class="">
 <tr role="row" class="">
-<th role="columnheader" scope="col" aria-colindex="1" class="">Property</th>
-<th role="columnheader" scope="col" aria-colindex="2" class="">Type</th>
-<th role="columnheader" scope="col" aria-colindex="3" class="">Default</th>
-<th role="columnheader" scope="col" aria-colindex="4" class="">Description</th>
+<th role="columnheader" scope="col" aria-colindex="1" class="">属性</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">类型</th>
+<th role="columnheader" scope="col" aria-colindex="3" class="">默认值</th>
+<th role="columnheader" scope="col" aria-colindex="4" class="">描述</th>
 </tr>
 </thead>
 <tbody role="rowgroup">
@@ -474,71 +501,70 @@ label is provided. You can easily customize the role if required via prop <code 
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">type</code></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'border'</code></td>
-<td aria-colindex="4" role="cell" class="">Type of spinner to show. Current supported types are 'border' and 'grow'</td>
+<td aria-colindex="4" role="cell" class="">要显示的spinner 类型。 当前支持的类型为“边界”和“增长”</td>
 </tr>
 <tr role="row" data-pk="label" class="" id="__BVID__1589__row_label">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">label</code></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">Text content to place in the sr-only label</td>
+<td aria-colindex="4" role="cell" class="">放置在sr-only标签中的文本内容</td>
 </tr>
 <tr role="row" data-pk="variant" class="" id="__BVID__1589__row_variant">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">variant</code></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">Applies one of the Bootstrap theme color variants to the component</td>
+<td aria-colindex="4" role="cell" class="">将Bootstrap主题颜色变体之一应用于组件</td>
 </tr>
 <tr role="row" data-pk="small" class="" id="__BVID__1589__row_small">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">small</code></td>
 <td aria-colindex="2" role="cell" class="">Boolean</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
-<td aria-colindex="4" role="cell" class="">When set, rendered a smaller spinner suitable for placing in buttons</td>
+<td aria-colindex="4" role="cell" class="">设置后，渲染一个适合放置在按钮中的较小的spinner </td>
 </tr>
 <tr role="row" data-pk="role" class="" id="__BVID__1589__row_role">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">role</code></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'status'</code></td>
-<td aria-colindex="4" role="cell" class="">Sets the ARIA attribute 'role' to a specific value</td>
+<td aria-colindex="4" role="cell" class="">将ARIA属性“角色”设置为特定值</td>
 </tr>
 <tr role="row" data-pk="tag" class="" id="__BVID__1589__row_tag">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">tag</code></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'span'</code></td>
-<td aria-colindex="4" role="cell" class="">Specify the HTML tag to render instead of the default tag</td>
+<td aria-colindex="4" role="cell" class="">指定要呈现的HTML标签，而不是默认标签</td>
 </tr>
 </tbody>
 </table>
 </div>
 </article>
 <article data-v-866a22e8="" class="bd-content">
-<h4 data-v-866a22e8="" id="comp-ref-b-spinner-slots" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> Slots <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/spinner#comp-ref-b-spinner-slots" class="anchorjs-link" aria-labelledby="comp-ref-b-spinner-slots" target="_self"></a></span></h4>
+<h4 data-v-866a22e8="" id="comp-ref-b-spinner-slots" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> 插槽 <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/spinner#comp-ref-b-spinner-slots" class="anchorjs-link" aria-labelledby="comp-ref-b-spinner-slots" target="_self"></a></span></h4>
 <div data-v-866a22e8="" class="table-responsive-sm">
 <table role="table" aria-busy="false" aria-colcount="2" class="table b-table bv-docs-table table-striped" id="__BVID__1605">
 <thead role="rowgroup" class="">
 <tr role="row" class="">
-<th role="columnheader" scope="col" aria-colindex="1" class="">Slot Name</th>
-<th role="columnheader" scope="col" aria-colindex="2" class="">Description</th>
+<th role="columnheader" scope="col" aria-colindex="1" class="">插槽名称</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">描述</th>
 </tr>
 </thead>
 <tbody role="rowgroup">
 <tr role="row" data-pk="label" class="" id="__BVID__1605__row_label">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">label</code></td>
-<td aria-colindex="2" role="cell" class="">Content to place in the sr-only label</td>
+<td aria-colindex="2" role="cell" class="">放置在sr-only标签中的内容</td>
 </tr>
 </tbody>
 </table>
 </div>
 </article>
-<h3 id="importing-individual-components" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title"> Importing individual components <a href="../../../bootstrap-vue/docs/components/spinner#importing-individual-components" class="anchorjs-link" aria-labelledby="importing-individual-components" target="_self"></a></span></h3>
-<p> You can import individual components into your project via the following named
-        exports: </p>
+<h3 id="importing-individual-components" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title">导入单个组件<a href="../../../bootstrap-vue/docs/components/spinner#importing-individual-components" class="anchorjs-link" aria-labelledby="importing-individual-components" target="_self"></a></span></h3>
+<p> 您可以通过以下命名的导出将单个组件导入到项目中：</p>
 <div class="table-responsive-sm">
 <table role="table" aria-busy="false" aria-colcount="3" class="table b-table bv-docs-table table-striped" id="__BVID__1615">
 <thead role="rowgroup" class="thead-default">
 <tr role="row" class="">
-<th role="columnheader" scope="col" aria-colindex="1" class="">Component</th>
-<th role="columnheader" scope="col" aria-colindex="2" class="">Named Export</th>
-<th role="columnheader" scope="col" aria-colindex="3" class="">Import Path</th>
+<th role="columnheader" scope="col" aria-colindex="1" class="">组成部分</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">命名</th>
+<th role="columnheader" scope="col" aria-colindex="3" class="">导入路径</th>
 </tr>
 </thead>
 <tbody role="rowgroup">
@@ -550,21 +576,19 @@ label is provided. You can easily customize the role if required via prop <code 
 </tbody>
 </table>
 </div>
-<p><strong>Example:</strong></p>
+<p><strong>例子:</strong></p>
 <pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { BSpinner } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
 Vue.component(<span class="hljs-string">'b-spinner'</span>, BSpinner)</pre>
 </article>
 <article class="bd-content">
-<h3 id="importing-as-a-plugin" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title"> Importing as a Vue.js plugin <a href="../../../bootstrap-vue/docs/components/spinner#importing-as-a-plugin" class="anchorjs-link" aria-labelledby="importing-as-a-plugin" target="_self"></a></span></h3>
-<p> This plugin includes all of the above listed individual
-      components.
-      Plugins also include any component aliases. </p>
+<h3 id="importing-as-a-plugin" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title">作为Vue.js插件导入<a href="../../../bootstrap-vue/docs/components/spinner#importing-as-a-plugin" class="anchorjs-link" aria-labelledby="importing-as-a-plugin" target="_self"></a></span></h3>
+<p> 这个插件包括上面列出的所有独立组件。插件还包括任何组件别名。</p>
 <div class="table-responsive-sm">
 <table fileds="namedExport,importPath" role="table" aria-busy="false" aria-colcount="2" class="table b-table bv-docs-table table-striped b-table-caption-top" id="__BVID__1625">
 <thead role="rowgroup" class="thead-default">
 <tr role="row" class="">
-<th role="columnheader" scope="col" aria-colindex="1" class="">Named Export</th>
-<th role="columnheader" scope="col" aria-colindex="2" class="">Import Path</th>
+<th role="columnheader" scope="col" aria-colindex="1" class="">命名导出</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">导入路径</th>
 </tr>
 </thead>
 <tbody role="rowgroup">
@@ -575,7 +599,7 @@ Vue.component(<span class="hljs-string">'b-spinner'</span>, BSpinner)</pre>
 </tbody>
 </table>
 </div>
-<p><strong>Example:</strong></p>
+<p><strong>例子:</strong></p>
 <pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { SpinnerPlugin } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
 Vue.use(SpinnerPlugin)</pre>
 

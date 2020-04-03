@@ -238,7 +238,7 @@
 </nav>
 <div class="clearfix d-block"></div>
   <h1 class="bd-title" id="content">分页导航(Pagination Navigation)</h1>
-<p class="bd-lead">Quick first, previous, next, last, and page buttons for navigation based pagination, supporting regular links or router links.</p>
+<p class="bd-lead">快速第一，上一，下一，最后和页面按钮，用于基于导航的分页，支持常规链接或路由器链接。</p>
   <script type="text/javascript" src="../../../v4/assets/js/pupCMS.js"></script>
 
 
@@ -289,11 +289,15 @@
 </li>
 </ul>
 </nav>
-<p><code translate="no" class="notranslate text-nowrap">b-pagination-nav</code> will try and auto-detect which page link is active page button based on the
-current page's URL (via either <code translate="no" class="notranslate text-nowrap">$route</code> detection or, if no <code translate="no" class="notranslate text-nowrap">$router</code> detected, the browser location
-URL).</p>
-<p><strong>Note:</strong> <code translate="no" class="notranslate text-nowrap">&lt;b-pagination-nav&gt;</code> is used for navigating to new page URLs. For controlling in page
-component pagination (such as table or list pagination), use the <a href="../../../bootstrap-vue/docs/components/pagination" class="font-weight-bold"><code translate="no" class="notranslate text-nowrap">&lt;b-pagination&gt;</code></a> component instead.</p>
+<p>
+  <code translate="no" class="notranslate text-nowrap">b-pagination-nav</code>将尝试根据当前页面的URL
+  （通过<code translate="no" class="notranslate text-nowrap">$route</code> detection或
+  （如果未检测到<code translate="no" class="notranslate text-nowrap">$router</code>）浏览器位置URL）自动检测哪个页面链接是活动页面按钮。
+</p>
+<p><strong>注意:</strong> <code translate="no" class="notranslate text-nowrap">&lt;b-pagination-nav&gt;</code> 
+  用于导航到新页面url。要控制页内组件分页（如表或列表分页），
+  请改用<a href="../../../bootstrap-vue/docs/components/pagination" class="font-weight-bold"><code translate="no" class="notranslate text-nowrap">&lt;b-pagination&gt;</code></a>组件。
+</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-pagination-nav-lead notranslate">
 <div class="overflow-auto">
 <nav aria-hidden="false">
@@ -326,33 +330,50 @@ component pagination (such as table or list pagination), use the <a href="../../
     }
   }
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
-<p><code translate="no" class="notranslate text-nowrap">&lt;b-pagination-nav&gt;</code> is a custom input component that provides navigational pagination. The total
-number of pages set with the <code translate="no" class="notranslate text-nowrap">number-of-pages</code> prop. Page numbers are indexed from 1 through <code translate="no" class="notranslate text-nowrap">number-of-pages</code>.</p>
-<h2 id="page-link-and-number-generation" class="bv-no-focus-ring"><span class="bd-content-title">Page link and number generation<a class="anchorjs-link" href="#page-link-and-number-generation" aria-labelledby="page-link-and-number-generation"></a></span></h2>
-<p>By default, <code translate="no" class="notranslate text-nowrap">&lt;b-pagination-nav&gt;</code> generates plain link tags, setting the HREF attribute to <code translate="no" class="notranslate text-nowrap">base-url</code> concatenated with the page number. The <code translate="no" class="notranslate text-nowrap">base-url</code> prop defaults to '/'. The number of pages is
-specified via the <code translate="no" class="notranslate text-nowrap">number-of-pages</code> prop. Pages are numbers from <code translate="no" class="notranslate text-nowrap">1</code> through to <code translate="no" class="notranslate text-nowrap">number-of-pages</code>.</p>
-<h3 id="router-links" class="bv-no-focus-ring"><span class="bd-content-title">Router links<a class="anchorjs-link" href="#router-links" aria-labelledby="router-links"></a></span></h3>
-<p>To generate page links as <a href="https://router.vuejs.org/api/#router-link" target="_blank" rel="noopener"><code translate="no" class="notranslate text-nowrap">&lt;router link&gt;</code></a> components
-(or <a href="https://nuxtjs.org/api/components-nuxt-link#the-lt-nuxt-link-gt-component" target="_blank" rel="noopener"><code translate="no" class="notranslate text-nowrap">&lt;nuxt-link&gt;</code></a> if <a href="https://nuxtjs.org/" target="_blank" rel="noopener">Nuxt.js</a> is detected), set the <code translate="no" class="notranslate text-nowrap">use-router</code> prop. The HREF will then become
-the <code translate="no" class="notranslate text-nowrap">to</code> prop of the router link. Or, optionally, use a link generator function to return a
-router-link <a href="https://router.vuejs.org/api/#to" target="_blank" rel="noopener"><code translate="no" class="notranslate text-nowrap">to</code> location</a> object.</p>
-<p>If a <code translate="no" class="notranslate text-nowrap">$router</code> is not detected on your app, <code translate="no" class="notranslate text-nowrap">&lt;b-pagination-nav&gt;</code> will fallback to regular <code translate="no" class="notranslate text-nowrap">&lt;a&gt;</code> elements, and any <code translate="no" class="notranslate text-nowrap">to</code> location object will be converted to a standard URL (if possible).</p>
-<p>The following router link specific props are supported:</p>
+<p>
+  <code translate="no" class="notranslate text-nowrap">&lt;b-pagination-nav&gt;</code>是提供导航分页的自定义输入组件。
+  用页数属性设置的总<code translate="no" class="notranslate text-nowrap">页数</code>。页码是从1到<code translate="no" class="notranslate text-nowrap">页数</code>的索引。
+</p>
+<h2 id="page-link-and-number-generation" class="bv-no-focus-ring"><span class="bd-content-title">页面链接和编号生成<a class="anchorjs-link" href="#page-link-and-number-generation" aria-labelledby="page-link-and-number-generation"></a></span></h2>
+<p>
+  默认情况下，<code translate="no" class="notranslate text-nowrap">&lt;b-pagination-nav&gt;</code>生成<code translate="no" class="notranslate text-nowrap">基本url</code>标记，将ref属性设置为与页码连接的基本url。<code translate="no" class="notranslate text-nowrap">基本url</code>属性默认为“/”。<code translate="no" class="notranslate text-nowrap">页数</code>是通过页数属性指定的。<code translate="no" class="notranslate text-nowrap">页数</code>是从<code translate="no" class="notranslate text-nowrap">1</code>到页数的数字。
+</p>
+<h3 id="router-links" class="bv-no-focus-ring"><span class="bd-content-title">路由器链接<a class="anchorjs-link" href="#router-links" aria-labelledby="router-links"></a></span></h3>
+<p>
+  要将页面链接生成为 <a href="https://router.vuejs.org/api/#router-link" target="_blank" rel="noopener"><code translate="no" class="notranslate text-nowrap">&lt;router link&gt;</code></a>组件
+  （或者如果检测到<a href="https://nuxtjs.org/" target="_blank" rel="noopener">Nuxt.js</a>
+  则生成<a href="https://nuxtjs.org/api/components-nuxt-link#the-lt-nuxt-link-gt-component" target="_blank" rel="noopener"><code translate="no" class="notranslate text-nowrap">&lt;nuxt-link&gt;</code></a>），
+  请设置<code translate="no" class="notranslate text-nowrap">use-router</code>属性。然后，HREF将成为路由器链接的<code translate="no" class="notranslate text-nowrap">to</code>属性。
+  或者，可以选择使用链接生成器函数将路由器链接返回到<a href="https://router.vuejs.org/api/#to" target="_blank" rel="noopener"><code translate="no" class="notranslate text-nowrap"></code> 位置</a>对象。
+</p>
+<p>
+  如果在应用程序中未检测到<code translate="no" class="notranslate text-nowrap">$router</code>，
+  <code translate="no" class="notranslate text-nowrap">&lt;b-pagination-nav&gt;</code>将回退到常规的 <code translate="no" class="notranslate text-nowrap">&lt;a&gt;</code>元素，
+    并且任何 <code translate="no" class="notranslate text-nowrap">to</code> location对象将转换为标准URL（如果可能）。
+<p>支持以下路由器链接特定的属性：</p>
 <ul>
 <li><code translate="no" class="notranslate text-nowrap">active-class</code></li>
 <li><code translate="no" class="notranslate text-nowrap">exact</code></li>
 <li><code translate="no" class="notranslate text-nowrap">exact-active-class</code></li>
-<li><code translate="no" class="notranslate text-nowrap">no-prefetch</code> (<code translate="no" class="notranslate text-nowrap">&lt;nuxt-link&gt;</code> specific prop)</li>
+<li><code translate="no" class="notranslate text-nowrap">no-prefetch</code> (<code translate="no" class="notranslate text-nowrap">&lt;nuxt-link&gt;</code> 特殊属性)</li>
 </ul>
-<p>For details on the above props, refer to the <a href="../../../bootstrap-vue/docs/reference/router-links" class="font-weight-bold">Router Link Support</a> reference section.</p>
-<h3 id="link-generator-function" class="bv-no-focus-ring"><span class="bd-content-title">Link generator function<a class="anchorjs-link" href="#link-generator-function" aria-labelledby="link-generator-function"></a></span></h3>
-<p>If you need finer grained control over the generated link URLs or <code translate="no" class="notranslate text-nowrap">&lt;router-link&gt;</code> <code translate="no" class="notranslate text-nowrap">to</code> props, you
-may set the <code translate="no" class="notranslate text-nowrap">link-gen</code> prop to a function reference that receives two arguments: the page number,
-and an object containing two fields (<code translate="no" class="notranslate text-nowrap">link</code> and <code translate="no" class="notranslate text-nowrap">page</code>), where <code translate="no" class="notranslate text-nowrap">page</code> is the page number and <code translate="no" class="notranslate text-nowrap">link</code> is the internally generated link.</p>
-<p>The <code translate="no" class="notranslate text-nowrap">link-gen</code> function should return either a string (for HREF) or a router <code translate="no" class="notranslate text-nowrap">to</code> object. If the
-returned value is an object, then a router-link will always be generated (if a <code translate="no" class="notranslate text-nowrap">$router</code> is
-detected). If the return value is a string, a standard link is generated by default unless the <code translate="no" class="notranslate text-nowrap">use-router</code> prop is set. If a <code translate="no" class="notranslate text-nowrap">to</code> location object is used, then the <code translate="no" class="notranslate text-nowrap">base-url</code> prop will have no
-effect.</p>
+<p>
+  有关上述道具的详细信息，请参阅<a href="../../../bootstrap-vue/docs/reference/router-links" class="font-weight-bold">路由器链接支持</a>参考部分。
+</p>
+<h3 id="link-generator-function" class="bv-no-focus-ring"><span class="bd-content-title">链接生成器功能<a class="anchorjs-link" href="#link-generator-function" aria-labelledby="link-generator-function"></a></span></h3>
+<p>
+  如果需要对生成的链接url进行更细粒度的控制或将<code translate="no" class="notranslate text-nowrap">&lt;router-link&gt;</code> 设置为props，
+  则可以将<code translate="no" class="notranslate text-nowrap">link-gen</code>属性设置为接收两个参数的函数引用：页码和包含两个字段
+  （<code translate="no" class="notranslate text-nowrap">link</code>和
+  <code translate="no" class="notranslate text-nowrap">page</code>）的对象，其中<code translate="no" class="notranslate text-nowrap">page</code>是页码，
+  <code translate="no" class="notranslate text-nowrap">link</code>是内部生成的链接。
+</p>
+<p>
+  <code translate="no" class="notranslate text-nowrap">link-gen</code>函数应该返回一个字符串（用于ref）或一个路由器到对象。
+  如果返回的值是一个对象，则始终会生成路由器链接（如果检测到<code translate="no" class="notranslate text-nowrap">$router</code>）。
+  如果返回值是字符串，则默认情况下会生成标准链接，除非设置了<code translate="no" class="notranslate text-nowrap">use-router</code>属性。
+  如果使用了<code translate="no" class="notranslate text-nowrap">to</code> location对象，那么 <code translate="no" class="notranslate text-nowrap">基本url</code>属性将不起作用。
+</p>
 <!-- eslint-disable no-dupe-keys -->
 
 <pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
@@ -384,22 +405,27 @@ effect.</p>
     }
   }
 }</pre>
-<p><strong>Note:</strong> when falling back from a <code translate="no" class="notranslate text-nowrap">to</code> location object to a standard link (when no <code translate="no" class="notranslate text-nowrap">$router</code> is
-available), only the following location properties are used to generate the URL:</p>
+<p><strong>注意:</strong> 
+  当从<code translate="no" class="notranslate text-nowrap">to</code> location对象返回到标准链接时（当没有可用的<code translate="no" class="notranslate text-nowrap">$router</code>时），只有以下位置属性用于生成URL：
+</p>
 <ul>
-<li><code translate="no" class="notranslate text-nowrap">path</code> (if not provided defaults to the page's current URL path)</li>
+<li><code translate="no" class="notranslate text-nowrap">path</code> (如果未提供，则默认为页面的当前URL路径)</li>
 <li><code translate="no" class="notranslate text-nowrap">query</code></li>
-<li><code translate="no" class="notranslate text-nowrap">hash</code> (must include the leading <code translate="no" class="notranslate text-nowrap">#</code> if used)</li>
+<li><code translate="no" class="notranslate text-nowrap">hash</code> (如果使用，必须包含前导<code translate="no" class="notranslate text-nowrap">#</code>)</li>
 </ul>
-<p>The conversion of <code translate="no" class="notranslate text-nowrap">name</code> routes and <code translate="no" class="notranslate text-nowrap">params</code> is not supported.</p>
-<h3 id="page-number-generation" class="bv-no-focus-ring"><span class="bd-content-title">Page number generation<a class="anchorjs-link" href="#page-number-generation" aria-labelledby="page-number-generation"></a></span></h3>
-<p>By default, <code translate="no" class="notranslate text-nowrap">&lt;b-pagination-nav&gt;</code> renders page numbers (1-N) in the page link buttons. You can
-override this behaviour by supplying a function reference to the <code translate="no" class="notranslate text-nowrap">page-gen</code> property. The function
-reference should accept a single argument which is a page number (1-N). The <code translate="no" class="notranslate text-nowrap">page-gen</code> function
-should return a string.</p>
-<p><strong>Note:</strong> HTML content in generated page number strings is <strong>not</strong> supported. For basic HTML, you
-can use the scoped slot <code translate="no" class="notranslate text-nowrap">page</code> for finer-grained formatting.</p>
-<p><strong>Example: Using an array of links to generate pagination:</strong></p>
+<p>
+  不支持 <code translate="no" class="notranslate text-nowrap">名称</code>路由和 <code translate="no" class="notranslate text-nowrap">参数</code>的转换。
+</p>
+<h3 id="page-number-generation" class="bv-no-focus-ring"><span class="bd-content-title">页码生成<a class="anchorjs-link" href="#page-number-generation" aria-labelledby="page-number-generation"></a></span></h3>
+<p>
+  默认情况下，<code translate="no" class="notranslate text-nowrap">&lt;b-pagination-nav&gt;</code>在页面链接按钮中呈现页码（1-N）。
+  您可以通过向<code translate="no" class="notranslate text-nowrap">page-gen</code>属性提供函数引用来重写此行为。函数引用应该接受一个单独的参数，即页码（1-N）。
+  <code translate="no" class="notranslate text-nowrap">page-gen</code>函数应该返回一个字符串。
+</p>
+<p><strong>注意:</strong> 
+  <strong>不</strong>支持生成的页码字符串中的HTML内容。对于基本HTML，可以使用作用域槽页进行更细粒度的格式化。
+</p>
+<p><strong>示例：使用链接数组生成分页：</strong></p>
 <div translate="translate" class="bd-example vue-example vue-example-b-pagination-nav-links notranslate">
 <div class="overflow-auto">
 <nav aria-hidden="false">
@@ -443,23 +469,28 @@ can use the scoped slot <code translate="no" class="notranslate text-nowrap">pag
     }
   }
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
-<h3 id="providing-an-array-of-pages" class="bv-no-focus-ring"><span class="bd-content-title">Providing an array of pages<a class="anchorjs-link" href="#providing-an-array-of-pages" aria-labelledby="providing-an-array-of-pages"></a></span></h3>
-<p>Rather than using <code translate="no" class="notranslate text-nowrap">number-of-pages</code> to auto generate page links, you can pass an array of links via
-the <code translate="no" class="notranslate text-nowrap">pages</code> prop. When the <code translate="no" class="notranslate text-nowrap">pages</code> prop has an array of length <code translate="no" class="notranslate text-nowrap">1</code> or greater, it will be used to
-generate the page links.</p>
-<p>The array can be one of two formats:</p>
+<h3 id="providing-an-array-of-pages" class="bv-no-focus-ring"><span class="bd-content-title">提供页面数组<a class="anchorjs-link" href="#providing-an-array-of-pages" aria-labelledby="providing-an-array-of-pages"></a></span></h3>
+<p>
+  您可以通过<code translate="no" class="notranslate text-nowrap">pages</code>属性传递一个链接数组，而不是使用 Rather than using <code translate="no" class="notranslate text-nowrap">页数</code>来自动生成页面链接。
+  当<code translate="no" class="notranslate text-nowrap">pages</code>属性的数组长度为<code translate="no" class="notranslate text-nowrap">1</code>或更大时，它将用于生成页面链接。
+</p>
+<p>数组可以是以下两种格式之一：</p>
 <ul>
-<li>Array of strings, where each entry is a link. in this mode, the page button numbers will
-automatically be set to <code translate="no" class="notranslate text-nowrap">1</code> through to the number of entries in the array.</li>
-<li>Array of objects, where each object has two fields: <code translate="no" class="notranslate text-nowrap">link</code> (required) and <code translate="no" class="notranslate text-nowrap">text</code> (optional). Link
-can be be either a string specifying the link, or a <code translate="no" class="notranslate text-nowrap">to</code> location object. <code translate="no" class="notranslate text-nowrap">text</code> will be the
-content of the page link buttons. If <code translate="no" class="notranslate text-nowrap">text</code> is omitted, page button content will default to the
-page number.</li>
+<li>
+  字符串数组，其中每个条目都是一个链接。 在这种模式下，页面按钮的编号将自动设置为<code translate="no" class="notranslate text-nowrap">1</code> 至阵列中的条目数。
+</li>
+<li>
+  对象数组，其中每个对象有两个字段：链接（必需）和文本（可选）。链接可以是指定链接的字符串，也可以是to location对象。文本将是页面链接按钮的内容。如果省略文本，则页面按钮内容将默认为页码。
+</li>
 </ul>
-<p>When a string link is provided, <code translate="no" class="notranslate text-nowrap">&lt;b-pagination-nav&gt;</code> will use regular <code translate="no" class="notranslate text-nowrap">&lt;a&gt;</code> elements, unless the <code translate="no" class="notranslate text-nowrap">use-router</code> prop is set. When link (in the array of objects form) is a <code translate="no" class="notranslate text-nowrap">to</code> location object, then a
-router link will automatically be generated (if a <code translate="no" class="notranslate text-nowrap">$router</code> is detected).</p>
-<p>With the array format, link strings (and/or location objects) are used as-as and <code translate="no" class="notranslate text-nowrap">base-url</code> prop
-will be ignored.</p>
+<p>
+  当提供字符串链接时，<code translate="no" class="notranslate text-nowrap">&lt;b-pagination-nav&gt;</code>将使用
+  常规的<code translate="no" class="notranslate text-nowrap">&lt;a&gt;</code>元素，除非设置了 <code translate="no" class="notranslate text-nowrap">use-router</code>属性。
+  当link（在array of objects表单中）是 <code translate="no" class="notranslate text-nowrap">to</code> location对象时，将自动生成路由器链接（如果检测到<code translate="no" class="notranslate text-nowrap">$router</code>）。
+</p>
+<p>
+  使用数组格式时，链接字符串（和/或位置对象）用作as，并且<code translate="no" class="notranslate text-nowrap">基本url</code>属性将被忽略。
+</p>
 <div translate="translate" class="bd-example vue-example vue-example-pagination-nav-array notranslate">
 <nav aria-hidden="false">
 <ul role="menubar" aria-disabled="false" aria-label="Pagination" class="pagination b-pagination">
@@ -523,23 +554,32 @@ will be ignored.</p>
   }
 }
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
-<h2 id="customizing-appearance" class="bv-no-focus-ring"><span class="bd-content-title">Customizing appearance<a class="anchorjs-link" href="#customizing-appearance" aria-labelledby="customizing-appearance"></a></span></h2>
-<h3 id="limiting-the-number-of-displayed-buttons" class="bv-no-focus-ring"><span class="bd-content-title">Limiting the number of displayed buttons<a class="anchorjs-link" href="#limiting-the-number-of-displayed-buttons" aria-labelledby="limiting-the-number-of-displayed-buttons"></a></span></h3>
-<p>To restrict the number of page buttons (including the ellipsis, but excluding the first, prev, next,
-and last buttons) shown, use the <code translate="no" class="notranslate text-nowrap">limit</code> prop to specify the desired number of page buttons
-(including the ellipsis, if shown). The default <code translate="no" class="notranslate text-nowrap">limit</code> is <code translate="no" class="notranslate text-nowrap">5</code>. The minimum supported value is <code translate="no" class="notranslate text-nowrap">3</code>.
-When <code translate="no" class="notranslate text-nowrap">limit</code> is set to <code translate="no" class="notranslate text-nowrap">3</code>, no ellipsis indicators will be shown for practical purposes.</p>
-<p>The <code translate="no" class="notranslate text-nowrap">first</code> and <code translate="no" class="notranslate text-nowrap">last</code> buttons can be optionally hidden by setting the <code translate="no" class="notranslate text-nowrap">hide-goto-end-buttons</code> prop.</p>
-<p>The showing of the <code translate="no" class="notranslate text-nowrap">ellipsis</code> can be optionally disabled by setting the <code translate="no" class="notranslate text-nowrap">hide-ellipsis</code> prop.</p>
-<h4 id="small-screen-support" class="bv-no-focus-ring"><span class="bd-content-title">Small screen support<a class="anchorjs-link" href="#small-screen-support" aria-labelledby="small-screen-support"></a></span></h4>
-<p>On smaller screens (i.e. mobile), some of the <code translate="no" class="notranslate text-nowrap">&lt;b-pagination-nav&gt;</code> buttons will be hidden to
-minimize the potential of the pagination interface wrapping onto multiple lines:</p>
+<h2 id="customizing-appearance" class="bv-no-focus-ring"><span class="bd-content-title">自定义外观<a class="anchorjs-link" href="#customizing-appearance" aria-labelledby="customizing-appearance"></a></span></h2>
+<h3 id="limiting-the-number-of-displayed-buttons" class="bv-no-focus-ring"><span class="bd-content-title">限制显示按钮的数量<a class="anchorjs-link" href="#limiting-the-number-of-displayed-buttons" aria-labelledby="limiting-the-number-of-displayed-buttons"></a></span></h3>
+<p>
+  要限制显示的页面按钮数（包括省略号，但不包括第一个、上一个、下一个和最后一个按钮），请使用<code translate="no" class="notranslate text-nowrap">limit</code>属性指定所需的页面按钮数（包括省略号，如果显示）。
+  默认限制为<code translate="no" class="notranslate text-nowrap">5</code>。支持的最小值为<code translate="no" class="notranslate text-nowrap">3</code>。
+  当<code translate="no" class="notranslate text-nowrap">limit</code>设置为3时，出于实际目的，不会显示省略号指示器。
+</p>
+<p>
+  通过设置<code translate="no" class="notranslate text-nowrap">hide-goto-end-buttons</code>属性，可以选择隐藏 <code translate="no" class="notranslate text-nowrap">第一个</code>
+  和 <code translate="no" class="notranslate text-nowrap">最后一个</code> 。
+</p>
+<p>
+  通过设置<code translate="no" class="notranslate text-nowrap">隐藏省略号</code>属性，可以选择性地禁用<code translate="no" class="notranslate text-nowrap">省略号</code>的显示。
+</p>
+<h4 id="small-screen-support" class="bv-no-focus-ring"><span class="bd-content-title">小屏幕支持<a class="anchorjs-link" href="#small-screen-support" aria-labelledby="small-screen-support"></a></span></h4>
+<p>
+  在较小的屏幕（即移动屏幕）上，一些<code translate="no" class="notranslate text-nowrap">&lt;b-pagination-nav&gt;</code>按钮将被隐藏，以最小化分页界面包装到多行的可能性：
+</p>
 <ul>
-<li>The ellipsis indicators will be hidden on screens <code translate="no" class="notranslate text-nowrap">xs</code> and smaller.</li>
-<li>Page number buttons will be limited to a maximum of 3 visible on <code translate="no" class="notranslate text-nowrap">xs</code> screens and smaller.</li>
+<li>
+  省略号指示符将隐藏在 <code translate="no" class="notranslate text-nowrap">xs</code>或更小的屏幕上。
+</li>
+<li>页码按钮将限制为在<code translate="no" class="notranslate text-nowrap">xs</code>屏幕上最多可见3个或更小。</li>
 </ul>
-<p>This ensures that no more than 3 page number buttons are visible, along with the goto <em>first</em>, <em>prev</em>, <em>next</em>, and <em>last</em> buttons.</p>
-<h3 id="button-content" class="bv-no-focus-ring"><span class="bd-content-title">Button content<a class="anchorjs-link" href="#button-content" aria-labelledby="button-content"></a></span></h3>
+<p>这样可以确保不超过3个页码按钮以及“转到第一页”、“上一页”、“下一页”和“最后一页”按钮可见。</p>
+<h3 id="button-content" class="bv-no-focus-ring"><span class="bd-content-title">按钮内容<a class="anchorjs-link" href="#button-content" aria-labelledby="button-content"></a></span></h3>
 <p><code translate="no" class="notranslate text-nowrap">&lt;b-pagination-nav&gt;</code> supports several props/slots that allow you to customize the appearance. All <code translate="no" class="notranslate text-nowrap">*-text</code> props are text-only and strip out HTML but you can use their equally named slot
 counterparts for that.</p>
 <p>For a full list of all available slots see the <a href="#comp-ref-b-pagination-nav-slots" class="font-weight-bold">Slots</a> section
