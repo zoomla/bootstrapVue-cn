@@ -36,18 +36,14 @@
   <div class="navbar-nav-scroll">
     <ul class="navbar-nav bd-navbar-nav flex-row">
       <li class="nav-item"><a class="nav-link " href="../">首页</a></li>
-      <li class="nav-item"><a class="nav-link active" href="../../docs/">中文手册</a></li>
-      <li class="nav-item"><a class="nav-link " href="../../v4/examples/">实例</a></li>
-      <li class="nav-item dropdown">
-<a class="nav-item nav-link dropdown-toggle mr-md-2" id="bd-versions" aria-expanded="false" aria-haspopup="true" href="#" data-toggle="dropdown"> 主题模板 </a>
-<div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
-<a class="dropdown-item" href="../../V4/themes/" target="_blank">主题门户</a>
-<a class="dropdown-item" href="../../V4/themes/live.html">精选模板</a>
-</div>
-</li>
-      <li class="nav-item"><a class="nav-link" href="//ico.z01.com" target="_blank" rel="noopener">zico图标系统</a></li>
-      <li class="nav-item"><a class="nav-link" href="https://expo.getbootstrap.com" target="_blank" rel="noopener">优站精选</a></li>
-      <li class="nav-item"><a class="nav-link" href="https://blog.getbootstrap.com" target="_blank" rel="noopener">Blog</a></li>
+      <li class="nav-item"><a class="nav-link " href="index.html">中文手册</a></li>
+      <li class="nav-item"><a class="nav-link " href="../components">组件</a></li>
+      <li class="nav-item"><a class="nav-link " href="../directives">指令</a></li>
+      <li class="nav-item"><a class="nav-link active" href="../reference">参考</a></li>
+      <li class="nav-item"><a class="nav-link " href="https://bootstrap-vue.org/play" target="_blank">体验</a></li>
+      <li class="nav-item"><a class="nav-link " href="http://code.z01.com/v4"><i class="zi zi_bold" zico="粗"></i> Boostrap</a></li>
+      <li class="nav-item"><a class="nav-link" href="http://ico.z01.com" target="_blank" rel="noopener">zico图标系统</a></li>
+      <li class="nav-item"><a class="nav-link" href="http://www.z01.com" target="_blank" rel="noopener">Zoomla!逐浪CMS</a></li>
     </ul>
   </div>
   <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
@@ -189,11 +185,11 @@
 
 <div class="d-none d-xl-block col-xl-2 bd-toc">
 <ul class="section-nav">
-<li class="nav-item toc-entry mb-2"><a target="_self" href="#sizing-props-and-classes" class="nav-link font-weight-bold"><span>Sizing props and classes</span></a></li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#component-size-prop" class="nav-link"><span>Component size prop</span></a> </li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#breakpoint-sizes" class="nav-link"><span>Breakpoint sizes</span></a> </li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#sizing-utility-classes" class="nav-link"><span>Sizing utility classes</span></a> </li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#additional-resources" class="nav-link"><span>Additional resources</span></a> </li>
+<li class="nav-item toc-entry mb-2"><a target="_self" href="#sizing-props-and-classes" class="nav-link font-weight-bold"><span>大小规格 Sizing props and classes</span></a></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#component-size-prop" class="nav-link"><span>组件size属性</span></a> </li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#breakpoint-sizes" class="nav-link"><span>Breakpoint 大小</span></a> </li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#sizing-utility-classes" class="nav-link"><span>调整实用程序类</span></a> </li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#additional-resources" class="nav-link"><span>额外资源</span></a> </li>
 </ul>
 </div>
 
@@ -226,26 +222,42 @@
 <li data-v-4abf2740=""><a data-v-4abf2740="" target="_self" href="#additional-resources" class=""><span data-v-4abf2740="">Additional resources</span></a> <!----></li>
 </ul>
 </nav>
-<h2 id="component-size-prop" class="bv-no-focus-ring"><span class="bd-content-title">Component <code class="text-nowrap" translate="no">size</code> prop<a class="anchorjs-link" href="#component-size-prop" aria-labelledby="component-size-prop"></a></span></h2>
-<p>Various components allow for an optional size (via the <code class="text-nowrap" translate="no">size</code> prop). Below are the sizes supported
-via the default Bootstrap v4 CSS.</p>
-<p>Available Sizes:</p>
+<h2 id="component-size-prop" class="bv-no-focus-ring"><span class="bd-content-title">组件<code class="text-nowrap" translate="no">size</code>属性<a class="anchorjs-link" href="#component-size-prop" aria-labelledby="component-size-prop"></a></span></h2>
+<p>
+  各种组件都允许一个可选的尺寸（通过<code class="text-nowrap" translate="no">size</code>属性）。 以下是默认的Bootstrap v4 CSS支持的大小。
+</p>
+<p>可用大小:</p>
 <ul>
 <li><code class="text-nowrap" translate="no">sm</code> small</li>
 <li><code class="text-nowrap" translate="no">lg</code> large</li>
 </ul>
-<p>When no size is specified, this results in normal sized appearance (usually referred to as <code class="text-nowrap" translate="no">md</code>).</p>
-<p>These size values will be translated into the appropriate Bootstrap CSS class, depending on the
-component used on, such as <code class="text-nowrap" translate="no">.btn-&lt;size&gt;</code> for buttons, <code class="text-nowrap" translate="no">.modal-&lt;size&gt;</code> for modal, <code class="text-nowrap" translate="no">.form-control-&lt;size&gt;</code> for form elements, <code class="text-nowrap" translate="no">.pagination-&lt;size&gt;</code> for pagination buttons, etc.</p>
-<h2 id="breakpoint-sizes" class="bv-no-focus-ring"><span class="bd-content-title">Breakpoint sizes<a class="anchorjs-link" href="#breakpoint-sizes" aria-labelledby="breakpoint-sizes"></a></span></h2>
-<p>Bootstrap v4 also includes viewport breakpoint sizes: <code class="text-nowrap" translate="no">xs</code>, <code class="text-nowrap" translate="no">sm</code>, <code class="text-nowrap" translate="no">md</code>, <code class="text-nowrap" translate="no">lg</code>, and <code class="text-nowrap" translate="no">xl</code>. which refer
-to the width of the user's view port.</p>
-<p>For details on breakpoint sizes, please check the <a href="/docs/layout/" class="font-weight-bold">Layout and Grid</a> documentation.</p>
-<h2 id="sizing-utility-classes" class="bv-no-focus-ring"><span class="bd-content-title">Sizing utility classes<a class="anchorjs-link" href="#sizing-utility-classes" aria-labelledby="sizing-utility-classes"></a></span></h2>
-<p>Easily make an element as wide or as tall (relative to its parent) with the width and height
-utilities classes.</p>
-<p>Width and height utilities are generated from the <code class="text-nowrap" translate="no">$sizes</code> Sass map in Bootstrap's <code class="text-nowrap" translate="no">_variables.scss</code>. Includes support for <code class="text-nowrap" translate="no">25%</code>, <code class="text-nowrap" translate="no">50%</code>, <code class="text-nowrap" translate="no">75%</code>, and <code class="text-nowrap" translate="no">100%</code> by default. Modify those
-values as you need to generate different utilities here.</p>
+<p>
+  如果未指定大小，则会导致正常大小的外观（通常称为<code class="text-nowrap" translate="no">md</code>）。
+</p>
+<p>
+  这些大小值将转换为相应的引导CSS类，具体取决于使用的组件，例如<code class="text-nowrap" translate="no">.btn-&lt;size&gt;</code>用于按钮，
+  <code class="text-nowrap" translate="no">.modal-&lt;size&gt;</code>用于模式，<code class="text-nowrap" translate="no">.form-control-&lt;size&gt;</code>用于表单元素，
+  <code class="text-nowrap" translate="no">.pagination-&lt;size&gt;</code>用于分页按钮等。
+</p>
+<h2 id="breakpoint-sizes" class="bv-no-focus-ring"><span class="bd-content-title">Breakpoint 大小<a class="anchorjs-link" href="#breakpoint-sizes" aria-labelledby="breakpoint-sizes"></a></span></h2>
+<p>
+  Bootstrap v4还包括视口Breakpoint大小：<code class="text-nowrap" translate="no">xs</code>, 
+  <code class="text-nowrap" translate="no">sm</code>, 
+  <code class="text-nowrap" translate="no">md</code>, 
+  <code class="text-nowrap" translate="no">lg</code>,和
+  <code class="text-nowrap" translate="no">xl</code>。 指的是用户视口的宽度。
+</p>
+<p>
+  有关breakpoint大小的详细信息，请查看<a href="/docs/layout/" class="font-weight-bold">布局和网格</a>文档。
+</p>
+<h2 id="sizing-utility-classes" class="bv-no-focus-ring"><span class="bd-content-title">调整实用程序类<a class="anchorjs-link" href="#sizing-utility-classes" aria-labelledby="sizing-utility-classes"></a></span></h2>
+<p>使用width和height实用程序类，可以轻松地使元素的宽度和高度相同（相对于其父元素）。</p>
+<p>
+  Width和height实用程序是从Bootstrap的<code class="text-nowrap" translate="no">_variables.scss</code>中的<code class="text-nowrap" translate="no">$sizes</code> Sass映射生成的。
+  默认情况下包括<code class="text-nowrap" translate="no">25%</code>, <code class="text-nowrap" translate="no">50%</code>, 
+  <code class="text-nowrap" translate="no">75%</code>, 和
+  <code class="text-nowrap" translate="no">100%</code>的支持。根据需要修改这些值以在此处生成不同的实用程序。
+</p>
 <p><strong>Widths:</strong></p>
 <div translate="translate" class="bd-example vue-example vue-example-widths">
 <div class="text-center">
@@ -288,11 +300,15 @@ values as you need to generate different utilities here.</p>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
 </div>
-<p><strong>Max width and height:</strong></p>
-<p>You can also use <code class="text-nowrap" translate="no">mw-100</code> (<code class="text-nowrap" translate="no">max-width: 100%;</code>) and <code class="text-nowrap" translate="no">mh-100</code> (<code class="text-nowrap" translate="no">max-height: 100%;</code>) utilities as
-needed.</p>
-<h2 id="additional-resources" class="bv-no-focus-ring"><span class="bd-content-title">Additional resources<a class="anchorjs-link" href="#additional-resources" aria-labelledby="additional-resources"></a></span></h2>
-<p>Refer to <a href="https://getbootstrap.com/" target="_blank" rel="noopener">Bootstrap v4</a> official documentation site for more information.</p>
+<p><strong>最大 width and height:</strong></p>
+<p>
+  您还可以根据需要使用<code class="text-nowrap" translate="no">mw-100</code> (<code class="text-nowrap" translate="no">max-width: 100%;</code>)和
+  <code class="text-nowrap" translate="no">mh-100</code> (<code class="text-nowrap" translate="no">max-height: 100%;</code>）实用程序。
+</p>
+<h2 id="additional-resources" class="bv-no-focus-ring"><span class="bd-content-title">额外资源<a class="anchorjs-link" href="#additional-resources" aria-labelledby="additional-resources"></a></span></h2>
+<p>
+  有关更多信息，请参阅<a href="https://getbootstrap.com/" target="_blank" rel="noopener">Bootstrap v4</a>官方文档站点。
+</p>
 
 
 

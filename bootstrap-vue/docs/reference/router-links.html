@@ -36,18 +36,14 @@
   <div class="navbar-nav-scroll">
     <ul class="navbar-nav bd-navbar-nav flex-row">
       <li class="nav-item"><a class="nav-link " href="../">首页</a></li>
-      <li class="nav-item"><a class="nav-link active" href="../../docs/">中文手册</a></li>
-      <li class="nav-item"><a class="nav-link " href="../../v4/examples/">实例</a></li>
-      <li class="nav-item dropdown">
-<a class="nav-item nav-link dropdown-toggle mr-md-2" id="bd-versions" aria-expanded="false" aria-haspopup="true" href="#" data-toggle="dropdown"> 主题模板 </a>
-<div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
-<a class="dropdown-item" href="../../V4/themes/" target="_blank">主题门户</a>
-<a class="dropdown-item" href="../../V4/themes/live.html">精选模板</a>
-</div>
-</li>
-      <li class="nav-item"><a class="nav-link" href="//ico.z01.com" target="_blank" rel="noopener">zico图标系统</a></li>
-      <li class="nav-item"><a class="nav-link" href="https://expo.getbootstrap.com" target="_blank" rel="noopener">优站精选</a></li>
-      <li class="nav-item"><a class="nav-link" href="https://blog.getbootstrap.com" target="_blank" rel="noopener">Blog</a></li>
+      <li class="nav-item"><a class="nav-link " href="index.html">中文手册</a></li>
+      <li class="nav-item"><a class="nav-link " href="../components">组件</a></li>
+      <li class="nav-item"><a class="nav-link " href="../directives">指令</a></li>
+      <li class="nav-item"><a class="nav-link active" href="../reference">参考</a></li>
+      <li class="nav-item"><a class="nav-link " href="https://bootstrap-vue.org/play" target="_blank">体验</a></li>
+      <li class="nav-item"><a class="nav-link " href="http://code.z01.com/v4"><i class="zi zi_bold" zico="粗"></i> Boostrap</a></li>
+      <li class="nav-item"><a class="nav-link" href="http://ico.z01.com" target="_blank" rel="noopener">zico图标系统</a></li>
+      <li class="nav-item"><a class="nav-link" href="http://www.z01.com" target="_blank" rel="noopener">Zoomla!逐浪CMS</a></li>
     </ul>
   </div>
   <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
@@ -189,19 +185,19 @@
 
 <div class="d-none d-xl-block col-xl-2 bd-toc">
 <ul class="section-nav">
-<li class="nav-item toc-entry mb-2"><a target="_self" href="#router-link-support" class="nav-link font-weight-bold"><span>Router link support</span></a></li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#common-router-link-props" class="nav-link"><span>Common router link props</span></a>
+<li class="nav-item toc-entry mb-2"><a target="_self" href="#router-link-support" class="nav-link font-weight-bold"><span>Router 路由支持</span></a></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#common-router-link-props" class="nav-link"><span>通用路由器链接属性</span></a>
 <ul class="nav flex-column">
 <li class="nav-item toc-entry toc-h3"><a target="_self" href="#to" class="nav-link"><span>to</span></a></li>
 <li class="nav-item toc-entry toc-h3"><a target="_self" href="#replace" class="nav-link"><span>replace</span></a></li>
 <li class="nav-item toc-entry toc-h3"><a target="_self" href="#append" class="nav-link"><span>append</span></a></li>
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#router-tag" class="nav-link"><span>router-tag</span></a></li>
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#active-class" class="nav-link"><span>active-class</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#router-tag" class="nav-link"><span>router 标签</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#active-class" class="nav-link"><span>active 类</span></a></li>
 <li class="nav-item toc-entry toc-h3"><a target="_self" href="#exact" class="nav-link"><span>exact</span></a></li>
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#exact-active-class" class="nav-link"><span>exact-active-class</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#exact-active-class" class="nav-link"><span>exact-active 类</span></a></li>
 </ul>
 </li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#nuxtjs-specific-router-link-props" class="nav-link"><span>Nuxt.js specific router link props</span></a>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#nuxtjs-specific-router-link-props" class="nav-link"><span>Nuxt.js特定的路由器链接属性</span></a>
 <ul class="nav flex-column">
 <li class="nav-item toc-entry toc-h3"><a target="_self" href="#no-prefetch" class="nav-link"><span>no-prefetch</span></a></li>
 </ul>
@@ -213,7 +209,8 @@
 
 
 <div class="bv-ad"><script id="_carbonads_js" async="async" type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CE7ITK77&amp;placement=bootstrap-vuejsorg"></script>
-<div id="carbonads"><span><span class="carbon-wrap"><a href="https://srv.carbonads.net/ads/click/x/GTND42QYCKSD42QMC6ALYKQMFT7IPKJECKAIKZ3JCWADC2QIFTYDLK3KC6BIEK7NCWBDVK3EHJNCLSIZ?segment=placement:bootstrap-vuejsorg;" class="carbon-img" target="_blank" rel="noopener sponsored"><img src="https://cdn4.buysellads.net/uu/1/56866/1574258644-20191120_Octopus_Product.png" alt="ads via Carbon" border="0" style="max-width: 130px;"></a><a href="https://srv.carbonads.net/ads/click/x/GTND42QYCKSD42QMC6ALYKQMFT7IPKJECKAIKZ3JCWADC2QIFTYDLK3KC6BIEK7NCWBDVK3EHJNCLSIZ?segment=placement:bootstrap-vuejsorg;" class="carbon-text" target="_blank" rel="noopener sponsored">Give your team a single place to release, deploy and operate your software.</a></span><a href="http://carbonads.net/?utm_source=bootstrap-vuejsorg&amp;utm_medium=ad_via_link&amp;utm_campaign=in_unit&amp;utm_term=carbon" class="carbon-poweredby" target="_blank" rel="noopener sponsored">ads via Carbon</a></span></div>
+<div id="carbonads"><span><span class="carbon-wrap"><a href="https://srv.carbonads.net/ads/click/x/GTND42QYCKSD42QMC6ALYKQMFT7IPKJECKAIKZ3JCWADC2QIFTYDLK3KC6BIEK7NCWBDVK3EHJNCLSIZ?segment=placement:bootstrap-vuejsorg;" class="carbon-img" target="_blank" rel="noopener sponsored"><img src="https://cdn4.buysellads.net/uu/1/56866/1574258644-20191120_Octopus_Product.png" alt="ads via Carbon" border="0" style="max-width: 130px;"></a><a href="https://srv.carbonads.net/ads/click/x/GTND42QYCKSD42QMC6ALYKQMFT7IPKJECKAIKZ3JCWADC2QIFTYDLK3KC6BIEK7NCWBDVK3EHJNCLSIZ?segment=placement:bootstrap-vuejsorg;" class="carbon-text" target="_blank" rel="noopener sponsored">
+  给您的团队一个发布，</br>部署和操作软件的地方。</a></span><a href="http://carbonads.net/?utm_source=bootstrap-vuejsorg&amp;utm_medium=ad_via_link&amp;utm_campaign=in_unit&amp;utm_term=carbon" class="carbon-poweredby" target="_blank" rel="noopener sponsored">ads via Carbon</a></span></div>
 </div>
 <nav class="bd-quick-links mb-3 d-xl-none" style="" data-v-4abf2740="">
 <header data-v-4abf2740="">
@@ -238,16 +235,27 @@
 </li>
 </ul>
 </nav>
-<h2 id="common-router-link-props" class="bv-no-focus-ring"><span class="bd-content-title">Common router link props<a class="anchorjs-link" href="#common-router-link-props" aria-labelledby="common-router-link-props"></a></span></h2>
-<p>In the following sections, we are using the <code class="text-nowrap" translate="no">&lt;b-link&gt;</code> component to render router links. <code class="text-nowrap" translate="no">&lt;b-link&gt;</code> is the building block of most of BootstrapVue's <em>actionable</em> components. You could use any other
-component that supports link generation such as <a href="/docs/components/link" class="font-weight-bold"><code class="text-nowrap" translate="no">&lt;b-link&gt;</code></a>, <a href="/docs/components/button" class="font-weight-bold"><code class="text-nowrap" translate="no">&lt;b-button&gt;</code></a>, <a href="/docs/components/breadcrumb" class="font-weight-bold"><code class="text-nowrap" translate="no">&lt;b-breadcrumb-item&gt;</code></a>, <a href="/docs/components/list-group" class="font-weight-bold"><code class="text-nowrap" translate="no">&lt;b-list-group-item&gt;</code></a>, <a href="/docs/components/nav" class="font-weight-bold"><code class="text-nowrap" translate="no">&lt;b-nav-item&gt;</code></a>, <a href="/docs/components/dropdown" class="font-weight-bold"><code class="text-nowrap" translate="no">&lt;b-dropdown-item&gt;</code></a>, and <a href="/docs/components/pagination-nav" class="font-weight-bold"><code class="text-nowrap" translate="no">&lt;b-pagination-nav&gt;</code></a>. Note that not all props are available on
-all components. Refer to the respective component documentation for details.</p>
+<h2 id="common-router-link-props" class="bv-no-focus-ring"><span class="bd-content-title">通用路由器链接属性<a class="anchorjs-link" href="#common-router-link-props" aria-labelledby="common-router-link-props"></a></span></h2>
+<p>
+  在下面的部分中，我们将使用<code class="text-nowrap" translate="no">&lt;b-link&gt;</code>组件来呈现路由器链接。
+  <code class="text-nowrap" translate="no">&lt;b-link&gt;</code>是大多数BootstrapVue可操作组件的构建块。您可以使用支持链接生成的任何其他组件，
+  如<a href="/docs/components/link" class="font-weight-bold"><code class="text-nowrap" translate="no">&lt;b-link&gt;</code></a>, 
+  <a href="/docs/components/button" class="font-weight-bold"><code class="text-nowrap" translate="no">&lt;b-button&gt;</code></a>, 
+  <a href="/docs/components/breadcrumb" class="font-weight-bold"><code class="text-nowrap" translate="no">&lt;b-breadcrumb-item&gt;</code></a>, 
+  <a href="/docs/components/list-group" class="font-weight-bold"><code class="text-nowrap" translate="no">&lt;b-list-group-item&gt;</code></a>, 
+  <a href="/docs/components/nav" class="font-weight-bold"><code class="text-nowrap" translate="no">&lt;b-nav-item&gt;</code></a>, 
+  <a href="/docs/components/dropdown" class="font-weight-bold"><code class="text-nowrap" translate="no">&lt;b-dropdown-item&gt;</code></a>,和
+   <a href="/docs/components/pagination-nav" class="font-weight-bold"><code class="text-nowrap" translate="no">&lt;b-pagination-nav&gt;</code></a>。请注意，
+   并非所有组件上都有可用的属性。有关详细信息，请参阅相应的组件文档。
+</p>
 <h3 id="to" class="bv-no-focus-ring"><span class="bd-content-title"><code class="text-nowrap" translate="no">to</code><a class="anchorjs-link" href="#to" aria-labelledby="to"></a></span></h3>
 <ul>
-<li>type: <code class="text-nowrap" translate="no">string | Location</code></li>
-<li>required to generate a <code class="text-nowrap" translate="no">&lt;router-link&gt;</code></li>
+<li>类型: <code class="text-nowrap" translate="no">string | Location</code></li>
+<li>需要生成一个 <code class="text-nowrap" translate="no">&lt;router-link&gt;</code></li>
 </ul>
-<p>Denotes the target route of the link. When clicked, the value of the <code class="text-nowrap" translate="no">to</code> prop will be passed to <code class="text-nowrap" translate="no">router.push()</code> internally, so the value can be either a string or a location descriptor object.</p>
+<p>
+  表示链接的目标路由。单击时，<code class="text-nowrap" translate="no">to</code>属性的值将在内部传递给<code class="text-nowrap" translate="no">router.push()</code>，因此该值可以是字符串或位置描述符对象。
+</p>
 <div class="bd-code">
 <pre class="hljs html p-2" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-comment">&lt;!-- Literal string --&gt;</span>
@@ -276,11 +284,13 @@ all components. Refer to the respective component documentation for details.</p>
 </div>
 <h3 id="replace" class="bv-no-focus-ring"><span class="bd-content-title"><code class="text-nowrap" translate="no">replace</code><a class="anchorjs-link" href="#replace" aria-labelledby="replace"></a></span></h3>
 <ul>
-<li>type: <code class="text-nowrap" translate="no">boolean</code></li>
-<li>default: <code class="text-nowrap" translate="no">false</code></li>
+<li>类型: <code class="text-nowrap" translate="no">boolean</code></li>
+<li>默认值: <code class="text-nowrap" translate="no">false</code></li>
 </ul>
-<p>Setting <code class="text-nowrap" translate="no">replace</code> prop will call <code class="text-nowrap" translate="no">router.replace()</code> instead of <code class="text-nowrap" translate="no">router.push()</code> when clicked, so the
-navigation will not leave a history record.</p>
+<p>
+  设置<code class="text-nowrap" translate="no">replace</code>属性将在单击时调用<code class="text-nowrap" translate="no">router.replace()</code>而不是
+  <code class="text-nowrap" translate="no">router.push()</code>，因此导航不会留下历史记录。
+</p>
 <div class="bd-code">
 <pre class="hljs html p-2" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-link</span> <span class="hljs-attr">:to</span>=<span class="hljs-string">"{ path: '/abc'}"</span> <span class="hljs-attr">replace</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-link</span>&gt;</span>
@@ -288,22 +298,30 @@ navigation will not leave a history record.</p>
 </div>
 <h3 id="append" class="bv-no-focus-ring"><span class="bd-content-title"><code class="text-nowrap" translate="no">append</code><a class="anchorjs-link" href="#append" aria-labelledby="append"></a></span></h3>
 <ul>
-<li>type: <code class="text-nowrap" translate="no">boolean</code></li>
-<li>default: <code class="text-nowrap" translate="no">false</code></li>
+<li>类型: <code class="text-nowrap" translate="no">boolean</code></li>
+<li>默认值: <code class="text-nowrap" translate="no">false</code></li>
 </ul>
-<p>Setting <code class="text-nowrap" translate="no">append</code> prop always appends the relative path to the current path. For example, assuming we
-are navigating from <code class="text-nowrap" translate="no">/a</code> to a relative link <code class="text-nowrap" translate="no">b</code>, without <code class="text-nowrap" translate="no">append</code> we will end up at <code class="text-nowrap" translate="no">/b</code>, but with <code class="text-nowrap" translate="no">append</code> we will end up at <code class="text-nowrap" translate="no">/a/b</code>.</p>
+<p>
+  设置<code class="text-nowrap" translate="no">append</code>属性总是将相对路径附加到当前路径。例如，假设我们从<code class="text-nowrap" translate="no">/a</code>导航到一个相对链接<code class="text-nowrap" translate="no">b</code>，
+  没有<code class="text-nowrap" translate="no">append</code>，我们将在<code class="text-nowrap" translate="no">/b</code>结束，但是有<code class="text-nowrap" translate="no">append</code>，
+  我们将在<code class="text-nowrap" translate="no">/a/b</code>结束。
+</p>
 <div class="bd-code">
 <pre class="hljs html p-2" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-link</span> <span class="hljs-attr">:to</span>=<span class="hljs-string">"{ path: 'relative/path'}"</span> <span class="hljs-attr">append</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-link</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
 </div>
-<h3 id="router-tag" class="bv-no-focus-ring"><span class="bd-content-title"><code class="text-nowrap" translate="no">router-tag</code><a class="anchorjs-link" href="#router-tag" aria-labelledby="router-tag"></a></span></h3>
+<h3 id="router-tag" class="bv-no-focus-ring"><span class="bd-content-title"><code class="text-nowrap" translate="no">router 标签</code><a class="anchorjs-link" href="#router-tag" aria-labelledby="router-tag"></a></span></h3>
 <ul>
-<li>type: <code class="text-nowrap" translate="no">string</code></li>
-<li>default: <code class="text-nowrap" translate="no">'a'</code></li>
+<li>类型: <code class="text-nowrap" translate="no">string</code></li>
+<li>默认值: <code class="text-nowrap" translate="no">'a'</code></li>
 </ul>
-<p>Sometimes we want <code class="text-nowrap" translate="no">&lt;router-link&gt;</code> to render as another tag, e.g <code class="text-nowrap" translate="no">&lt;li&gt;</code>. Then we can use <code class="text-nowrap" translate="no">router-tag</code> prop to specify which tag to render to, and it will still listen to click events for navigation. <code class="text-nowrap" translate="no">router-tag</code> translates to the <code class="text-nowrap" translate="no">tag</code> prop on the final rendered <code class="text-nowrap" translate="no">&lt;router-link&gt;</code>.</p>
+<p>
+  有时我们希望<code class="text-nowrap" translate="no">&lt;router-link&gt;</code>呈现为另一个标签，例如<code class="text-nowrap" translate="no">&lt;li&gt;</code>。 
+  然后，我们可以使用<code class="text-nowrap" translate="no">router-tag</code>属性指定要渲染到的标签，它仍将监听单击事件以进行导航。
+  <code class="text-nowrap" translate="no">router-tag</code>转换为最终呈现的<code class="text-nowrap" translate="no">&lt;router-link&gt;</code>
+  上的<code class="text-nowrap" translate="no">标签</code>属性。
+</p>
 <div class="bd-code">
 <pre class="hljs html p-2" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-link</span> <span class="hljs-attr">to</span>=<span class="hljs-string">"/foo"</span> <span class="hljs-attr">router-tag</span>=<span class="hljs-string">"li"</span>&gt;</span>foo<span class="hljs-tag">&lt;/<span class="hljs-name">b-link</span>&gt;</span>
@@ -312,60 +330,84 @@ are navigating from <code class="text-nowrap" translate="no">/a</code> to a rela
   <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>foo<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
 </div>
-<p><strong>Note:</strong> Changing the tag from anything other than <code class="text-nowrap" translate="no">&lt;a&gt;</code> is discouraged, as it hinders
-accessibility of keyboard and/or screen-reader users, and is also not very SEO friendly.</p>
-<h3 id="active-class" class="bv-no-focus-ring"><span class="bd-content-title"><code class="text-nowrap" translate="no">active-class</code><a class="anchorjs-link" href="#active-class" aria-labelledby="active-class"></a></span></h3>
+<p><strong>注意:</strong> 
+  不建议从<code class="text-nowrap" translate="no">&lt;a&gt;</code>之外的其他任何地方更改标签，因为这会妨碍键盘和/或屏幕阅读器用户的可访问性，并且也不是非常适合SEO。
+</p>
+<h3 id="active-class" class="bv-no-focus-ring"><span class="bd-content-title"><code class="text-nowrap" translate="no">active 类</code><a class="anchorjs-link" href="#active-class" aria-labelledby="active-class"></a></span></h3>
 <ul>
-<li>type: <code class="text-nowrap" translate="no">string</code></li>
-<li>default: <code class="text-nowrap" translate="no">'router-link-active'</code> (<code class="text-nowrap" translate="no">'nuxt-link-active'</code> when using Nuxt.js)</li>
+<li>类型: <code class="text-nowrap" translate="no">string</code></li>
+<li>默认值: <code class="text-nowrap" translate="no">'router-link-active'</code> (使用Nuxt.js时为<code class="text-nowrap" translate="no">'nuxt-link-active'</code>)</li>
 </ul>
-<p>Configure the active CSS class applied when the link is active. Note the default value can also be
-configured globally via the <code class="text-nowrap" translate="no">linkActiveClass</code> <a href="https://router.vuejs.org/api/#linkactiveclass" target="_blank" rel="noopener">router constructor option</a>.</p>
-<p>With components that support router links (have a <code class="text-nowrap" translate="no">to</code> prop), you will want to set this to the class <code class="text-nowrap" translate="no">'active'</code> (or a space separated string that includes <code class="text-nowrap" translate="no">'active'</code>) to apply Bootstrap's active
-styling on the component when the current route matches the <code class="text-nowrap" translate="no">to</code> prop.</p>
+<p>
+  配置链接处于active状态时应用的activeCSS类。注意，默认值也可以通过<code class="text-nowrap" translate="no">linkActiveClass</code> 
+  <a href="https://router.vuejs.org/api/#linkactiveclass" target="_blank" rel="noopener">路由器构造函数选项</a>进行全局配置。
+</p>
+<p>
+  对于支持路由器链接（有<code class="text-nowrap" translate="no">to</code>属性）的组件，
+  您需要将其设置为类<code class="text-nowrap" translate="no">'active'</code>（或包含<code class="text-nowrap" translate="no">'active'</code>的空格分隔字符串），以便在当前路由与to prop匹配时在组件上应用Bootstrap的active样式。
+</p>
 <h3 id="exact" class="bv-no-focus-ring"><span class="bd-content-title"><code class="text-nowrap" translate="no">exact</code><a class="anchorjs-link" href="#exact" aria-labelledby="exact"></a></span></h3>
 <ul>
-<li>type: <code class="text-nowrap" translate="no">boolean</code></li>
-<li>default: <code class="text-nowrap" translate="no">false</code></li>
+<li>类型: <code class="text-nowrap" translate="no">boolean</code></li>
+<li>默认值: <code class="text-nowrap" translate="no">false</code></li>
 </ul>
-<p>The default active class matching behavior is <strong>inclusive match</strong>. For example, <code class="text-nowrap" translate="no">&lt;b-link to="/a"&gt;</code> will get this class applied as long as the current path starts with <code class="text-nowrap" translate="no">/a/</code> or is <code class="text-nowrap" translate="no">/a</code>.</p>
-<p>One consequence of this is that <code class="text-nowrap" translate="no">&lt;b-link to="/"&gt;</code> will be active for every route! To force the link
-into "exact match mode", use the <code class="text-nowrap" translate="no">exact</code> prop:</p>
+<p>
+  默认的活动类匹配行为是<strong>inclusive match</strong>。例如，<code class="text-nowrap" translate="no">&lt;b-link to="/a"&gt;</code>将应用该类，
+  只要当前路径以<code class="text-nowrap" translate="no">/a/</code>或is <code class="text-nowrap" translate="no">/a</code>开头。
+</p>
+<p>
+  这样的结果是，<code class="text-nowrap" translate="no">&lt;b-link to="/"&gt;</code>将对每条路线都有效！ 要将链接强制为“完全匹配模式”，
+  请使用<code class="text-nowrap" translate="no">exact</code>的属性：
+</p>
 <div class="bd-code">
 <pre class="hljs html p-2" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-comment">&lt;!-- This link will only be active at `/` --&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-link</span> <span class="hljs-attr">to</span>=<span class="hljs-string">"/"</span> <span class="hljs-attr">exact</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-link</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
 </div>
-<p>Check out more examples explaining active link class <a href="https://jsfiddle.net/8xrk1n9f/" target="_blank" rel="noopener">live</a>.</p>
-<h3 id="exact-active-class" class="bv-no-focus-ring"><span class="bd-content-title"><code class="text-nowrap" translate="no">exact-active-class</code><a class="anchorjs-link" href="#exact-active-class" aria-labelledby="exact-active-class"></a></span></h3>
+<p>
+  查看更多解释active链接类<a href="https://jsfiddle.net/8xrk1n9f/" target="_blank" rel="noopener">live</a>的示例。
+</p>
+<h3 id="exact-active-class" class="bv-no-focus-ring"><span class="bd-content-title"><code class="text-nowrap" translate="no">exact-active 类</code><a class="anchorjs-link" href="#exact-active-class" aria-labelledby="exact-active-class"></a></span></h3>
 <ul>
-<li>type: <code class="text-nowrap" translate="no">string</code></li>
-<li>default: <code class="text-nowrap" translate="no">'router-link-exact-active'</code> (<code class="text-nowrap" translate="no">'nuxt-link-exact-active'</code> when using Nuxt.js)</li>
-<li>availability: Vue Router 2.5.0+</li>
+<li>类型: <code class="text-nowrap" translate="no">string</code></li>
+<li>默认值: <code class="text-nowrap" translate="no">'router-link-exact-active'</code> (使用Nuxt.js时<code class="text-nowrap" translate="no">'nuxt-link-exact-active'</code>)</li>
+<li>可用性: Vue Router 2.5.0+</li>
 </ul>
-<p>Configure the active CSS class applied when the link is active with exact match. Note the default
-value can also be configured globally via the <code class="text-nowrap" translate="no">linkExactActiveClass</code> <a href="https://router.vuejs.org/api/#linkexactactiveclass" target="_blank" rel="noopener">router constructor option</a>.</p>
-<p>With components that support router links (have a <code class="text-nowrap" translate="no">to</code> prop), you will want to set this to the class <code class="text-nowrap" translate="no">'active'</code> (or a space separated string that includes <code class="text-nowrap" translate="no">'active'</code>) to apply Bootstrap's active
-styling on the component when the current route matches the <code class="text-nowrap" translate="no">to</code> prop.</p>
-<h2 id="nuxtjs-specific-router-link-props" class="bv-no-focus-ring"><span class="bd-content-title">Nuxt.js specific router link props<a class="anchorjs-link" href="#nuxtjs-specific-router-link-props" aria-labelledby="nuxtjs-specific-router-link-props"></a></span></h2>
-<p>When BootstrapVue detects that your app is running under <a href="https://nuxtjs.org" target="_blank" rel="noopener">Nuxt.js</a>, it will
-render a <a href="https://nuxtjs.org/api/components-nuxt-link" target="_blank" rel="noopener"><code class="text-nowrap" translate="no">&lt;nuxt-link&gt;</code></a> sub component instead of a <code class="text-nowrap" translate="no">&lt;router-link&gt;</code>. <code class="text-nowrap" translate="no">&lt;nuxt-link&gt;</code> supports all of the above router link props, plus the following
-additional Nuxt.js specific props.</p>
+<p>
+  配置具有完全匹配的活动链接时应用的活动CSS类。 注意，默认值也可以通过<code class="text-nowrap" translate="no">linkExactActiveClass</code> 
+  <a href="https://router.vuejs.org/api/#linkexactactiveclass" target="_blank" rel="noopener">路由器构造函数选项</a>进行全局配置。
+</p>
+<p>
+  对于支持路由器链接（有<code class="text-nowrap" translate="no">to</code>属性）的组件，
+  您需要将其设置为类<code class="text-nowrap" translate="no">'active'</code>（或包含<code class="text-nowrap" translate="no">'active'</code>的空格分隔字符串），
+  以便在当前路由与<code class="text-nowrap" translate="no">to</code>属性匹配时在组件上应用Bootstrap的active样式。
+</p>
+<h2 id="nuxtjs-specific-router-link-props" class="bv-no-focus-ring"><span class="bd-content-title">Nuxt.js特定的路由器链接属性<a class="anchorjs-link" href="#nuxtjs-specific-router-link-props" aria-labelledby="nuxtjs-specific-router-link-props"></a></span></h2>
+<p>
+  当BootstrapVue检测到您的应用程序正在<a href="https://nuxtjs.org" target="_blank" rel="noopener">Nuxt.js</a>下运行时，
+  它将呈现一个<a href="https://nuxtjs.org/api/components-nuxt-link" target="_blank" rel="noopener"><code class="text-nowrap" translate="no">&lt;nuxt-link&gt;</code></a>子组件，
+  而不是一个<code class="text-nowrap" translate="no">&lt;router-link&gt;</code>。
+  <code class="text-nowrap" translate="no">&lt;nuxt-link&gt;</code>支持上述所有路由器链接属性，以及以下特定于nuxt.js的附加属性。
+</p>
 <h3 id="no-prefetch" class="bv-no-focus-ring"><span class="bd-content-title"><code class="text-nowrap" translate="no">no-prefetch</code><a class="anchorjs-link" href="#no-prefetch" aria-labelledby="no-prefetch"></a></span></h3>
 <ul>
-<li>type: <code class="text-nowrap" translate="no">boolean</code></li>
-<li>default: <code class="text-nowrap" translate="no">false</code></li>
-<li>availability: Nuxt.js 2.4.0+</li>
+<li>类型: <code class="text-nowrap" translate="no">boolean</code></li>
+<li>默认值: <code class="text-nowrap" translate="no">false</code></li>
+<li>可用性: Nuxt.js 2.4.0+</li>
 </ul>
-<p>To improve the responsiveness of your Nuxt.js applications, when the link will be displayed within
-the viewport, Nuxt.js will automatically prefetch the code splitted page. Setting <code class="text-nowrap" translate="no">no-prefetch</code> will
-disabled this feature for the specific link.</p>
-<p><strong>Note:</strong> If you have prefetching disabled in your <code class="text-nowrap" translate="no">nuxt.config.js</code> configuration
-(<code class="text-nowrap" translate="no">router: { prefetchLinks: false}</code>), or are using a version of Nuxt.js <code class="text-nowrap" translate="no">&lt; 2.4.0</code>, then this prop
-will have no effect.</p>
-<p>Prefetching support requires <a href="https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API" target="_blank" rel="noopener">IntersectionObserver</a> to be supported (see <a href="https://caniuse.com/#feat=intersectionobserver" target="_blank" rel="noopener">CanIUse</a>). For browsers that
-do not support IntersectionObserver, you can use the following conditional polyfill in <code class="text-nowrap" translate="no">nuxt.config.js</code>:</p>
+<p>
+  为了提高Nuxt.js应用程序的响应能力，当链接显示在视区内时，Nuxt.js将自动prefetch代码分割的页面。不设置<code class="text-nowrap" translate="no">no-prefetch</code>将禁用特定链接的此功能。
+</p>
+<p><strong>注意:</strong> 
+  如果您在 <code class="text-nowrap" translate="no">nuxt.config.js</code>配置中禁用了prefetch
+  （<code class="text-nowrap" translate="no">router: { prefetchLinks: false}</code>），
+  或者正在使用nuxt.js<code class="text-nowrap" translate="no">&lt; 2.4.0</code>的版本，则此属性将无效。
+</p>
+<p>Prefetch支持要求支持<a href="https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API" target="_blank" rel="noopener">IntersectionObserver</a>
+  （请参阅<a href="https://caniuse.com/#feat=intersectionobserver" target="_blank" rel="noopener">CanIUse</a>）。
+  对于不支持IntersectionObserver的浏览器，可以在<code class="text-nowrap" translate="no">nuxt.config.js</code>中使用以下条件polyfill：
+</p>
 <div class="bd-code">
 <pre class="hljs js p-2" translate="no"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
   <span class="hljs-attr">head</span>: {

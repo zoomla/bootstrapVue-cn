@@ -36,18 +36,14 @@
   <div class="navbar-nav-scroll">
     <ul class="navbar-nav bd-navbar-nav flex-row">
       <li class="nav-item"><a class="nav-link " href="../">首页</a></li>
-      <li class="nav-item"><a class="nav-link active" href="../../docs/">中文手册</a></li>
-      <li class="nav-item"><a class="nav-link " href="../../v4/examples/">实例</a></li>
-      <li class="nav-item dropdown">
-<a class="nav-item nav-link dropdown-toggle mr-md-2" id="bd-versions" aria-expanded="false" aria-haspopup="true" href="#" data-toggle="dropdown"> 主题模板 </a>
-<div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
-<a class="dropdown-item" href="../../V4/themes/" target="_blank">主题门户</a>
-<a class="dropdown-item" href="../../V4/themes/live.html">精选模板</a>
-</div>
-</li>
-      <li class="nav-item"><a class="nav-link" href="//ico.z01.com" target="_blank" rel="noopener">zico图标系统</a></li>
-      <li class="nav-item"><a class="nav-link" href="https://expo.getbootstrap.com" target="_blank" rel="noopener">优站精选</a></li>
-      <li class="nav-item"><a class="nav-link" href="https://blog.getbootstrap.com" target="_blank" rel="noopener">Blog</a></li>
+      <li class="nav-item"><a class="nav-link" href="index.html">中文手册</a></li>
+      <li class="nav-item"><a class="nav-link active" href="../components">组件</a></li>
+      <li class="nav-item"><a class="nav-link " href="../directives">指令</a></li>
+      <li class="nav-item"><a class="nav-link " href="../reference">参考</a></li>
+      <li class="nav-item"><a class="nav-link " href="https://bootstrap-vue.org/play" target="_blank">体验</a></li>
+      <li class="nav-item"><a class="nav-link " href="http://code.z01.com/v4"><i class="zi zi_bold" zico="粗"></i> Boostrap</a></li>
+      <li class="nav-item"><a class="nav-link" href="http://ico.z01.com" target="_blank" rel="noopener">zico图标系统</a></li>
+      <li class="nav-item"><a class="nav-link" href="http://www.z01.com" target="_blank" rel="noopener">Zoomla!逐浪CMS</a></li>
     </ul>
   </div>
   <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
@@ -175,41 +171,34 @@
 <li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/validation.html" class="nav-link">Form表单验证</a></li>
 </ul>
 </div>
-<div class="bd-toc-item"> <a class="bd-toc-link" href="../components/alerts.html"> 杂项 </a>
-  <ul class="nav bd-sidenav">
-<li class="nav-item"><a href="../../../bootstrap-vue/docs/misc/changelog" class="nav-link"> Changelog </a></li>
-<li class="nav-item"><a href="../../../bootstrap-vue/docs/misc/contributing" class="nav-link"> Contributing </a></li>
-<li class="nav-item"><a href="../../../bootstrap-vue/docs/misc/settings" class="nav-link"> Settings </a></li>
-<li class="nav-item"><a href="../../../bootstrap-vue/docs/misc/third-party" class="nav-link"> Third party libraries </a></li>
-  </ul>
-</div>
-<div class=""><a href="/play" class="bd-toc-link">在线模拟器</a></div>
+<div class=""><a href="https://bootstrap-vue.org/play" class="bd-toc-link" target="_blank">在线模拟器</a></div>
 </nav>
 </div>
 
 <div class="d-none d-xl-block col-xl-2 bd-toc">
 <ul class="section-nav">
-<li class="nav-item toc-entry mb-2"><a target="_self" href="#input-groups" class="nav-link font-weight-bold"><span>Input Groups</span></a></li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#usage" class="nav-link"><span>Usage</span></a>
+<li class="nav-item toc-entry mb-2"><a target="_self" href="#input-groups" class="nav-link font-weight-bold"><span>输入框(input-group)</span></a></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#usage" class="nav-link"><span>用法</span></a>
 <ul class="nav flex-column">
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#using-prepend-and-append-props" class="nav-link"><span>Using prepend and append props</span></a></li>
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#using-named-slots" class="nav-link"><span>Using named slots</span></a></li>
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#using-sub-components" class="nav-link"><span>Using sub-components</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#using-prepend-and-append-props" class="nav-link"><span>使用前置和附加属性</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#using-named-slots" class="nav-link"><span>使用命名插槽</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#using-sub-components" class="nav-link"><span>使用子组件</span></a></li>
 </ul>
 </li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#supported-form-controls" class="nav-link"><span>Supported form-controls</span></a> <!----></li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#checkbox-and-radio-addons" class="nav-link"><span>Checkbox and radio addons</span></a>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#supported-form-controls" class="nav-link"><span>支持的表单控件</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#checkbox-and-radio-addons" class="nav-link"><span>复选框和单选插件</span></a>
 <ul class="nav flex-column">
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#native-checkbox-and-radio-addons" class="nav-link"><span>Native checkbox and radio addons</span></a></li>
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#custom-radio-checkbox-and-switch-addons" class="nav-link"><span>Custom radio, checkbox, and switch addons</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#native-checkbox-and-radio-addons" class="nav-link"><span>Native 复选框的 radio 插件</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#custom-radio-checkbox-and-switch-addons" class="nav-link"><span>自定义 radio,复选框和开关插件</span></a></li>
 </ul>
 </li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#multiple-inputs" class="nav-link"><span>Multiple inputs</span></a> <!----></li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#multiple-addons" class="nav-link"><span>Multiple addons</span></a> <!----></li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#dropdown-addons" class="nav-link"><span>Dropdown addons</span></a> <!----></li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#control-sizing" class="nav-link"><span>Control sizing</span></a>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#multiple-inputs" class="nav-link"><span>多个输入</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#multiple-addons" class="nav-link"><span>多个插件</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#dropdown-addons" class="nav-link"><span>下拉插件</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#control-sizing" class="nav-link"><span>控制大小</span></a>
 <ul class="nav flex-column">
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#sizing-custom-radio-checkbox-and-switch-addons" class="nav-link"><span>Sizing custom radio, checkbox and switch addons</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#sizing-custom-radio-checkbox-and-switch-addons" class="nav-link"><span>
+  调整自定义单选、复选框和开关加载项的大小</span></a></li>
 </ul>
 </li>
 <li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#contextual-states" class="nav-link"><span>上下文状态</span></a> <!----></li>
@@ -238,8 +227,8 @@
 </ol>
 </nav>
 <div class="clearfix d-block"></div>
-  <h1 class="bd-title" id="content">输入框(Alert)</h1>
-<p class="bd-lead">Easily extend form controls by adding text, buttons, or button groups on either side of textual inputs.</p>
+  <h1 class="bd-title" id="content">输入框(input-group)</h1>
+<p class="bd-lead">通过在文本输入的两边添加文本、按钮或按钮组，可以轻松扩展表单控件。</p>
   <script type="text/javascript" src="../../../v4/assets/js/pupCMS.js"></script>
 
 
@@ -340,10 +329,13 @@
     <span class="hljs-tag">&lt;/<span class="hljs-name">b-input-group-append</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-input-group</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
-<h2 id="usage" class="bv-no-focus-ring"><span class="bd-content-title">Usage<a class="anchorjs-link" href="#usage" aria-labelledby="usage"></a></span></h2>
-<p>You can attach addons using either props, named slots and/or sub-components.</p>
-<h3 id="using-prepend-and-append-props" class="bv-no-focus-ring"><span class="bd-content-title">Using <code translate="no" class="notranslate text-nowrap">prepend</code> and <code translate="no" class="notranslate text-nowrap">append</code> props<a class="anchorjs-link" href="#using-prepend-and-append-props" aria-labelledby="using-prepend-and-append-props"></a></span></h3>
-<p>Values will be internally wrapped by a <code translate="no" class="notranslate text-nowrap">&lt;b-input-group-text&gt;</code> to display correctly.</p>
+<h2 id="usage" class="bv-no-focus-ring"><span class="bd-content-title">用法<a class="anchorjs-link" href="#usage" aria-labelledby="usage"></a></span></h2>
+<p>可以使用属性、命名插槽和/或子组件附加插件。</p>
+<h3 id="using-prepend-and-append-props" class="bv-no-focus-ring"><span class="bd-content-title">
+  使用<code translate="no" class="notranslate text-nowrap">前置</code>和<code translate="no" class="notranslate text-nowrap">附加</code>属性<a class="anchorjs-link" href="#using-prepend-and-append-props" aria-labelledby="using-prepend-and-append-props"></a></span></h3>
+<p>
+  值将由<code translate="no" class="notranslate text-nowrap">&lt;b-input-group-text&gt;</code>内部包装以正确显示。
+</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-input-group-using-props notranslate">
 <div>
 <div role="group" class="input-group">
@@ -375,9 +367,14 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">b-form-input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"range"</span> <span class="hljs-attr">min</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">max</span>=<span class="hljs-string">"100"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-input</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-input-group</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
-<h3 id="using-named-slots" class="bv-no-focus-ring"><span class="bd-content-title">Using named slots<a class="anchorjs-link" href="#using-named-slots" aria-labelledby="using-named-slots"></a></span></h3>
-<p>if you want better control over addons, you can use <code translate="no" class="notranslate text-nowrap">prepend</code> and <code translate="no" class="notranslate text-nowrap">append</code> slots instead.</p>
-<p>The slot content will automatically be wrapped by <a href="#using-sub-components" class="font-weight-bold"><code translate="no" class="notranslate text-nowrap">&lt;b-input-group-prepend&gt;</code> or <code translate="no" class="notranslate text-nowrap">&lt;b-input-group-append&gt;</code></a> to display correctly.</p>
+<h3 id="using-named-slots" class="bv-no-focus-ring"><span class="bd-content-title">使用命名插槽<a class="anchorjs-link" href="#using-named-slots" aria-labelledby="using-named-slots"></a></span></h3>
+<p>
+  如果您想要更好地控制插件，可以使用 <code translate="no" class="notranslate text-nowrap">prepend</code>和<code translate="no" class="notranslate text-nowrap">append</code>slots代替。
+</p>
+<p>
+  插槽内容将由 <a href="#using-sub-components" class="font-weight-bold"><code translate="no" class="notranslate text-nowrap">&lt;b-input-group-prepend&gt;</code>或
+    <code translate="no" class="notranslate text-nowrap">&lt;b-input-group-append&gt;</code></a>自动包装以正确显示。
+</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-input-group-using-slots notranslate">
 <div>
 <div role="group" class="input-group">
@@ -412,10 +409,11 @@
     <span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-input-group</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
-<h3 id="using-sub-components" class="bv-no-focus-ring"><span class="bd-content-title">Using sub-components<a class="anchorjs-link" href="#using-sub-components" aria-labelledby="using-sub-components"></a></span></h3>
-<p>Use the <code translate="no" class="notranslate text-nowrap">&lt;b-input-group-prepend&gt;</code> or <code translate="no" class="notranslate text-nowrap">&lt;b-input-group-append&gt;</code> to add arbitrary addons wherever you
-like, and use these components to group buttons in your input group. Single buttons must always be
-wrapped in these components for proper styling.</p>
+<h3 id="using-sub-components" class="bv-no-focus-ring"><span class="bd-content-title">使用子组件<a class="anchorjs-link" href="#using-sub-components" aria-labelledby="using-sub-components"></a></span></h3>
+<p>
+  使用<code translate="no" class="notranslate text-nowrap">&lt;b-input-group-prepend&gt;</code>或
+  <code translate="no" class="notranslate text-nowrap">&lt;b-input-group-append&gt;</code>添加任意加载项，并使用这些组件对输入组中的按钮进行分组。必须始终将单个按钮包装在这些组件中，以便进行正确的样式设置。
+</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-input-group-addons-placement notranslate">
 <div>
 <div role="group" class="input-group">
@@ -444,28 +442,41 @@ wrapped in these components for proper styling.</p>
     <span class="hljs-tag">&lt;/<span class="hljs-name">b-input-group-append</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-input-group</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
-<p>Set the <code translate="no" class="notranslate text-nowrap">is-text</code> prop on <code translate="no" class="notranslate text-nowrap">&lt;b-input-group-prepend&gt;</code> or <code translate="no" class="notranslate text-nowrap">&lt;b-input-group-append&gt;</code> if the content is
-textual in nature to apply proper styling. Alternatively, place the <code translate="no" class="notranslate text-nowrap">&lt;b-input-group-text&gt;</code> subcomponent inside of the <code translate="no" class="notranslate text-nowrap">&lt;b-input-group-prepend&gt;</code> or <code translate="no" class="notranslate text-nowrap">&lt;b-input-group-append&gt;</code>.</p>
-<h2 id="supported-form-controls" class="bv-no-focus-ring"><span class="bd-content-title">Supported form-controls<a class="anchorjs-link" href="#supported-form-controls" aria-labelledby="supported-form-controls"></a></span></h2>
-<p>The following are the form controls supported as the input-group's <em>main</em> input element:</p>
+<p>
+  如果内容是文本性质的，则将<code translate="no" class="notranslate text-nowrap">is-text</code>属性
+  设置为<code translate="no" class="notranslate text-nowrap">&lt;b-input-group-prepend&gt;</code>或
+  <code translate="no" class="notranslate text-nowrap">&lt;b-input-group-append&gt;</code>，以应用适当的样式。或者，
+  将<code translate="no" class="notranslate text-nowrap">&lt;b-input-group-text&gt;</code>子组件放入
+  <code translate="no" class="notranslate text-nowrap">&lt;b-input-group-prepend&gt;</code>或
+  <code translate="no" class="notranslate text-nowrap">&lt;b-input-group-append&gt;</code>中。
+</p>
+<h2 id="supported-form-controls" class="bv-no-focus-ring"><span class="bd-content-title">支持的表单控件<a class="anchorjs-link" href="#supported-form-controls" aria-labelledby="supported-form-controls"></a></span></h2>
+<p>以下是作为输入组的主输入元素支持的表单控件：</p>
 <ul>
 <li><code translate="no" class="notranslate text-nowrap">&lt;b-form-input&gt;</code></li>
 <li><code translate="no" class="notranslate text-nowrap">&lt;b-form-textarea&gt;</code></li>
 <li><code translate="no" class="notranslate text-nowrap">&lt;b-form-select&gt;</code></li>
 <li><code translate="no" class="notranslate text-nowrap">&lt;b-form-file&gt;</code></li>
 </ul>
-<p><strong>Notes:</strong></p>
+<p><strong>注意事项:</strong></p>
 <ul>
-<li>BootstrapVue uses custom SCSS/CSS to handling sizing the <code translate="no" class="notranslate text-nowrap">&lt;b-form-file&gt;</code> input when it is placed
-in a <code translate="no" class="notranslate text-nowrap">&lt;b-input-group&gt;</code> which has a <a href="#control-sizing" class="font-weight-bold"><code translate="no" class="notranslate text-nowrap">size</code></a> specified.</li>
-<li>BootstrapVue uses custom SCSS/CSS when <code translate="no" class="notranslate text-nowrap">&lt;b-form-input type="range"&gt;</code> is placed in a <code translate="no" class="notranslate text-nowrap">&lt;b-input-group&gt;</code>.</li>
+<li>
+  BootstrapVue使用定制的SCSS/CSS来处理<code translate="no" class="notranslate text-nowrap">&lt;b-form-file&gt;</code>输入在指定大小的
+  <code translate="no" class="notranslate text-nowrap">&lt;b-input-group&gt;</code>中时的<a href="#control-sizing" class="font-weight-bold"><code translate="no" class="notranslate text-nowrap">size</code></a>调整。
+</li>
+<li>
+  当<code translate="no" class="notranslate text-nowrap">&lt;b-form-input type="range"&gt;</code>放在
+  <code translate="no" class="notranslate text-nowrap">&lt;b-input-group&gt;</code>中时，BootstrapVue使用自定义SCSS/CSS。
+</li>
 </ul>
-<h2 id="checkbox-and-radio-addons" class="bv-no-focus-ring"><span class="bd-content-title">Checkbox and radio addons<a class="anchorjs-link" href="#checkbox-and-radio-addons" aria-labelledby="checkbox-and-radio-addons"></a></span></h2>
-<p>Place any checkbox or radio within an input group's addon instead of text.</p>
-<p><strong>Note:</strong> Bootstrap v4.x recommends using native radio and checkbox inputs over custom radios and
-checkboxes, but it is possible to use as <code translate="no" class="notranslate text-nowrap">&lt;b-form-radio&gt;</code> and <code translate="no" class="notranslate text-nowrap">&lt;b-form-checkbox&gt;</code> with a few utility
-classes applied.</p>
-<h3 id="native-checkbox-and-radio-addons" class="bv-no-focus-ring"><span class="bd-content-title">Native checkbox and radio addons<a class="anchorjs-link" href="#native-checkbox-and-radio-addons" aria-labelledby="native-checkbox-and-radio-addons"></a></span></h3>
+<h2 id="checkbox-and-radio-addons" class="bv-no-focus-ring"><span class="bd-content-title">复选框和单选插件<a class="anchorjs-link" href="#checkbox-and-radio-addons" aria-labelledby="checkbox-and-radio-addons"></a></span></h2>
+<p>在输入组的加载项中放置任何复选框或单选框，而不是文本。</p>
+<p><strong>注意:</strong> 
+  Bootstrap v4.x建议使用本地radio和checkbox输入，而不是自定义radio和checkbox，
+  但是可以使用<code translate="no" class="notranslate text-nowrap">&lt;b-form-radio&gt;</code>和
+  <code translate="no" class="notranslate text-nowrap">&lt;b-form-checkbox&gt;</code>并应用一些实用程序类。
+</p>
+<h3 id="native-checkbox-and-radio-addons" class="bv-no-focus-ring"><span class="bd-content-title">Native 复选框的 radio 插件<a class="anchorjs-link" href="#native-checkbox-and-radio-addons" aria-labelledby="native-checkbox-and-radio-addons"></a></span></h3>
 <div translate="translate" class="bd-example vue-example vue-example-b-input-group-checks-radios notranslate">
 <div>
 <div role="group" class="input-group mb-2">
@@ -501,9 +512,12 @@ classes applied.</p>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-form-input</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Text input with radio input"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-input</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-input-group</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
-<h3 id="custom-radio-checkbox-and-switch-addons" class="bv-no-focus-ring"><span class="bd-content-title">Custom radio, checkbox, and switch addons<a class="anchorjs-link" href="#custom-radio-checkbox-and-switch-addons" aria-labelledby="custom-radio-checkbox-and-switch-addons"></a></span></h3>
-<p>Using <code translate="no" class="notranslate text-nowrap">&lt;b-form-checkbox&gt;</code> and <code translate="no" class="notranslate text-nowrap">&lt;b-form-radio&gt;</code> components as addons, using Bootstrap <a href="../../../bootstrap-vue/docs/reference/utility-classes" class="font-weight-bold">utility classes</a> for additional styling to get them to "fit" in
-the addon:</p>
+<h3 id="custom-radio-checkbox-and-switch-addons" class="bv-no-focus-ring"><span class="bd-content-title">自定义 radio,复选框和开关插件<a class="anchorjs-link" href="#custom-radio-checkbox-and-switch-addons" aria-labelledby="custom-radio-checkbox-and-switch-addons"></a></span></h3>
+<p>
+  使用<code translate="no" class="notranslate text-nowrap">&lt;b-form-checkbox&gt;</code>和
+  <code translate="no" class="notranslate text-nowrap">&lt;b-form-radio&gt;</code>组件作为加载项，
+  使用Bootstrap<a href="../../../bootstrap-vue/docs/reference/utility-classes" class="font-weight-bold">实用程序类</a>进行额外的样式设置以使它们“适合”加载项：
+</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-input-group-custom-checks-radios notranslate">
 <div>
 <div role="group" class="input-group mb-2">
@@ -569,11 +583,12 @@ the addon:</p>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-form-input</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Text input with switch"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-input</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-input-group</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
-<p>In the above example, we have use the <code translate="no" class="notranslate text-nowrap">.sr-only</code> class on a <code translate="no" class="notranslate text-nowrap">&lt;span&gt;</code> to visually hide the custom
-control's label content (while making them still accessible to screen reader users), and used the
-utility class <code translate="no" class="notranslate text-nowrap">.mr-n2</code> to add a negative right margin to compensate for the "gutter" space between
-the control and the hidden label.</p>
-<h2 id="multiple-inputs" class="bv-no-focus-ring"><span class="bd-content-title">Multiple inputs<a class="anchorjs-link" href="#multiple-inputs" aria-labelledby="multiple-inputs"></a></span></h2>
+<p>
+  在上面的示例中，我们使用<code translate="no" class="notranslate text-nowrap">&lt;span&gt;</code>上的
+  <code translate="no" class="notranslate text-nowrap">.sr-only</code>类直观地隐藏自定义控件的标签内容（同时使屏幕阅读器用户仍然可以访问这些内容），
+  并使用实用程序类<code translate="no" class="notranslate text-nowrap">.mr-n2</code>添加一个负右边距以补偿控件和隐藏标签之间的“边距”空间。
+</p>
+<h2 id="multiple-inputs" class="bv-no-focus-ring"><span class="bd-content-title">多个输入<a class="anchorjs-link" href="#multiple-inputs" aria-labelledby="multiple-inputs"></a></span></h2>
 <div translate="translate" class="bd-example vue-example vue-example-input-group-multiple-inputs notranslate">
 <div>
 <div role="group" class="input-group mb-2">
@@ -591,8 +606,8 @@ the control and the hidden label.</p>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-form-input</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Last name"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-input</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-input-group</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
-<h2 id="multiple-addons" class="bv-no-focus-ring"><span class="bd-content-title">Multiple addons<a class="anchorjs-link" href="#multiple-addons" aria-labelledby="multiple-addons"></a></span></h2>
-<p>Multiple add-ons are supported and can be mixed with checkbox and radio input versions.</p>
+<h2 id="multiple-addons" class="bv-no-focus-ring"><span class="bd-content-title">多个插件<a class="anchorjs-link" href="#multiple-addons" aria-labelledby="multiple-addons"></a></span></h2>
+<p>支持多个加载项，并且可以与复选框和radio输入版本混合使用。</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-input-group-multiple-addons notranslate">
 <div>
 <div role="group" class="input-group">
@@ -620,7 +635,7 @@ the control and the hidden label.</p>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-form-input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"number"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Text input with checkbox"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-input</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-input-group</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
-<h2 id="dropdown-addons" class="bv-no-focus-ring"><span class="bd-content-title">Dropdown addons<a class="anchorjs-link" href="#dropdown-addons" aria-labelledby="dropdown-addons"></a></span></h2>
+<h2 id="dropdown-addons" class="bv-no-focus-ring"><span class="bd-content-title">下拉插件<a class="anchorjs-link" href="#dropdown-addons" aria-labelledby="dropdown-addons"></a></span></h2>
 <div translate="translate" class="bd-example vue-example vue-example-b-input-group-dropdown notranslate">
 <div>
 <div role="group" class="input-group">
@@ -672,10 +687,11 @@ the control and the hidden label.</p>
     <span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-input-group</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
-<h2 id="control-sizing" class="bv-no-focus-ring"><span class="bd-content-title">Control sizing<a class="anchorjs-link" href="#control-sizing" aria-labelledby="control-sizing"></a></span></h2>
-<p>Set height using the <code translate="no" class="notranslate text-nowrap">size</code> prop to <code translate="no" class="notranslate text-nowrap">sm</code> or <code translate="no" class="notranslate text-nowrap">lg</code> for small or large respectively. There is no need
-to set size on the individual inputs or buttons. Note however, you <em>will be required</em> to also set
-the size on dropdowns.</p>
+<h2 id="control-sizing" class="bv-no-focus-ring"><span class="bd-content-title">控制大小<a class="anchorjs-link" href="#control-sizing" aria-labelledby="control-sizing"></a></span></h2>
+<p>
+  使用<code translate="no" class="notranslate text-nowrap">size</code>属性将高度分别设置为<code translate="no" class="notranslate text-nowrap">sm</code>或 
+  <code translate="no" class="notranslate text-nowrap">lg</code> （小或大）。不需要设置单个输入或按钮的大小。但请注意，您还需要在下拉列表中设置大小。
+</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-input-group-size notranslate">
 <div>
 <div role="group" class="input-group mb-3 input-group-sm">
@@ -721,10 +737,12 @@ the size on dropdowns.</p>
     <span class="hljs-tag">&lt;/<span class="hljs-name">b-input-group-append</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-input-group</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
-<p>To control width, place the input inside standard Bootstrap grid column.</p>
-<h3 id="sizing-custom-radio-checkbox-and-switch-addons" class="bv-no-focus-ring"><span class="bd-content-title">Sizing custom radio, checkbox and switch addons<a class="anchorjs-link" href="#sizing-custom-radio-checkbox-and-switch-addons" aria-labelledby="sizing-custom-radio-checkbox-and-switch-addons"></a></span></h3>
-<p>If using <code translate="no" class="notranslate text-nowrap">&lt;b-form-radio&gt;</code> or <code translate="no" class="notranslate text-nowrap">&lt;b-form-checkbox&gt;</code> as addons, additional utility classes may be
-required to make everything fit correctly, depending on the size chosen:</p>
+<p>要控制宽度，请将输入放在标准引导网格列中。</p>
+<h3 id="sizing-custom-radio-checkbox-and-switch-addons" class="bv-no-focus-ring"><span class="bd-content-title">调整自定义单选、复选框和开关加载项的大小<a class="anchorjs-link" href="#sizing-custom-radio-checkbox-and-switch-addons" aria-labelledby="sizing-custom-radio-checkbox-and-switch-addons"></a></span></h3>
+<p>
+  如果使用<code translate="no" class="notranslate text-nowrap">&lt;b-form-radio&gt;</code>或
+  <code translate="no" class="notranslate text-nowrap">&lt;b-form-checkbox&gt;</code>作为加载项，则可能需要附加实用程序类以使所有内容都正确匹配，具体取决于所选的大小：
+</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-input-group-custom-checks-radios-sizing notranslate">
 <div>
 <div role="group" class="input-group mb-2 input-group-sm">
@@ -776,11 +794,14 @@ required to make everything fit correctly, depending on the size chosen:</p>
     <span class="hljs-tag">&lt;/<span class="hljs-name">b-input-group-append</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-input-group</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
-<p>Specifically, when using the <code translate="no" class="notranslate text-nowrap">sm</code> size on <code translate="no" class="notranslate text-nowrap">&lt;b-input-group&gt;</code> you will need to add a negative bottom
-margin, via the use of the <code translate="no" class="notranslate text-nowrap">.mb-n1</code> <a href="../../../bootstrap-vue/docs/reference/utility-classes" class="font-weight-bold">utility class</a>.</p>
+<p>
+  具体来说，当在<code translate="no" class="notranslate text-nowrap">&lt;b-input-group&gt;</code>上使用<code translate="no" class="notranslate text-nowrap">sm</code>size时，
+  需要通过使用<code translate="no" class="notranslate text-nowrap">.mb-n1</code> <a href="../../../bootstrap-vue/docs/reference/utility-classes" class="font-weight-bold">实用程序类</a>添加负的下边距。
+</p>
 <h2 id="contextual-states" class="bv-no-focus-ring"><span class="bd-content-title">上下文状态<a class="anchorjs-link" href="#contextual-states" aria-labelledby="contextual-states"></a></span></h2>
-<p>Bootstrap v4 currently <strong>does not</strong> support contextual state styling (i.e. valid or invalid) of
-input groups. However, the inputs inside the input group do support contextual state.</p>
+<p>
+  引导程序v4当前<strong>不</strong>支持输入组的上下文状态样式（即有效或无效）。但是，输入组中的输入确实支持上下文状态。
+</p>
 <!-- Component reference added automatically from component package.json --> 
 
 <h2 id="component-reference" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title">组件引用<a href="../../../bootstrap-vue/docs/components/input-group#component-reference" class="anchorjs-link" aria-labelledby="component-reference" target="_self"></a></span></h2>
@@ -833,35 +854,35 @@ input groups. However, the inputs inside the input group do support contextual s
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">prepend</code>     </td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">Text to prepend to the input group</td>
+<td aria-colindex="4" role="cell" class="">将文本添加到输入组之前</td>
 </tr>
 
 <tr role="row" data-pk="prepend-html" class="" id="__BVID__1548__row_prepend-html">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">prepend-html</code>    <span data-v-866a22e8="" class="badge badge-warning">Use with caution</span> </td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">HTML string to prepend to the input group. Has precedence over 'prepend' prop. Use with caution</td>
+<td aria-colindex="4" role="cell" class="">HTML字符串，位于输入组的前面。 优先于“ prepend”属性。 谨慎使用</td>
 </tr>
 
 <tr role="row" data-pk="append" class="" id="__BVID__1548__row_append">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">append</code>     </td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">Text to append to the input group</td>
+<td aria-colindex="4" role="cell" class="">要附加到输入组的文本</td>
 </tr>
 
 <tr role="row" data-pk="append-html" class="" id="__BVID__1548__row_append-html">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">append-html</code>    <span data-v-866a22e8="" class="badge badge-warning">Use with caution</span> </td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">HTML string to append to the input group. Has precedence over 'append' prop. Use with caution</td>
+<td aria-colindex="4" role="cell" class="">要附加到输入组的HTML字符串。优先于'append'属性。慎用</td>
 </tr>
 
 <tr role="row" data-pk="tag" class="" id="__BVID__1548__row_tag">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">tag</code>     </td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'div'</code></td>
-<td aria-colindex="4" role="cell" class="">Specify the HTML tag to render instead of the default tag</td>
+<td aria-colindex="4" role="cell" class="">指定要呈现的HTML标记，而不是默认标记</td>
 </tr>
 
 </tbody>
@@ -870,8 +891,9 @@ input groups. However, the inputs inside the input group do support contextual s
 </div>
 
 <div data-v-866a22e8="" class="alert alert-warning">
-<p data-v-866a22e8="" class="mb-0 small"><strong data-v-866a22e8="">Caution:</strong> Props that support HTML strings
-        (<code data-v-866a22e8="" translate="translate" class="notranslate">*-html</code>) can be vulnerable to <a data-v-866a22e8="" rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/Cross-site_scripting" class="alert-link"> Cross Site Scripting (XSS) attacks </a> when passed raw user supplied values. You must properly <a data-v-866a22e8="" rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/HTML_sanitization" class="alert-link"> sanitize </a> the user input first! </p>
+<p data-v-866a22e8="" class="mb-0 small"><strong data-v-866a22e8="">警告:</strong> 当传递原始用户提供的值时，支持HTML字符串（<code data-v-866a22e8="" translate="translate" class="notranslate">*-html</code>）的属性可能容易
+  受到<a data-v-866a22e8="" rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/Cross-site_scripting" class="alert-link">跨站点脚本（XSS）攻击</a>。
+  必须先正确<a data-v-866a22e8="" rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/HTML_sanitization" class="alert-link"> 清理 </a> 用户输入！</p>
 </div>
 </article>
 
@@ -891,12 +913,12 @@ input groups. However, the inputs inside the input group do support contextual s
 
 <tr role="row" data-pk="prepend" class="" id="__BVID__1567__row_prepend">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">prepend</code> </td>
-<td aria-colindex="2" role="cell" class="">Prepend attachment</td>
+<td aria-colindex="2" role="cell" class="">前置附件</td>
 </tr>
 
 <tr role="row" data-pk="append" class="" id="__BVID__1567__row_append">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">append</code> </td>
-<td aria-colindex="2" role="cell" class="">Append attachment</td>
+<td aria-colindex="2" role="cell" class="">附加附件</td>
 </tr>
 
 </tbody>
@@ -909,17 +931,17 @@ input groups. However, the inputs inside the input group do support contextual s
 <header data-v-866a22e8="" class="row align-items-center">
 <div data-v-866a22e8="" class="col-sm-9">
 <h3 data-v-866a22e8="" id="comp-ref-b-input-group-prepend" tabindex="-1" class="bv-no-focus-ring"><span data-v-866a22e8="" class="bd-content-title"><code data-v-866a22e8="" translate="translate" class="notranslate bigger">&lt;b-input-group-prepend&gt;</code><a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/input-group#comp-ref-b-input-group-prepend" class="anchorjs-link" aria-labelledby="comp-ref-b-input-group-prepend" target="_self"></a></span></h3>
- <a data-v-866a22e8="" rel="noopener" target="_blank" href="https://vuejs.org/v2/guide/render-function.html#Functional-Components" class="badge badge-secondary"> Functional Component </a></div>
+ <a data-v-866a22e8="" rel="noopener" target="_blank" href="https://vuejs.org/v2/guide/render-function.html#Functional-Components" class="badge badge-secondary"> 功能部件 </a></div>
 <div data-v-866a22e8="" class="text-sm-right col-sm-3"><a data-v-866a22e8="" rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev/src/components/input-group/input-group-prepend.js" class="btn btn-outline-secondary btn-sm"> View source </a></div>
 </header>
 <ul data-v-866a22e8="" class="component-ref-mini-toc my-3">
 
-<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-input-group-prepend-props"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-input-group-prepend&gt;</code> Properties </a></li>
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-input-group-prepend-props"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-input-group-prepend&gt;</code> 属性 </a></li>
    
 </ul>
 
 <article data-v-866a22e8="" class="bd-content">
-<h4 data-v-866a22e8="" id="comp-ref-b-input-group-prepend-props" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> Properties <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/input-group#comp-ref-b-input-group-prepend-props" class="anchorjs-link" aria-labelledby="comp-ref-b-input-group-prepend-props" target="_self"></a></span></h4>
+<h4 data-v-866a22e8="" id="comp-ref-b-input-group-prepend-props" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> 属性 <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/input-group#comp-ref-b-input-group-prepend-props" class="anchorjs-link" aria-labelledby="comp-ref-b-input-group-prepend-props" target="_self"></a></span></h4>
 <div data-v-866a22e8="" class="table-responsive-sm">
 <table role="table" aria-busy="false" aria-colcount="4" class="table b-table bv-docs-table table-striped" id="__BVID__1582">
 
@@ -927,9 +949,9 @@ input groups. However, the inputs inside the input group do support contextual s
 
 <tr role="row" class="">
 <th role="columnheader" scope="col" aria-colindex="1" class="">属性</th>
-<th role="columnheader" scope="col" aria-colindex="2" class="">Type</th>
-<th role="columnheader" scope="col" aria-colindex="3" class="">Default</th>
-<th role="columnheader" scope="col" aria-colindex="4" class="">Description</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">类型</th>
+<th role="columnheader" scope="col" aria-colindex="3" class="">默认值</th>
+<th role="columnheader" scope="col" aria-colindex="4" class="">描述</th>
 </tr>
 </thead>
 <tbody role="rowgroup">
@@ -945,14 +967,14 @@ input groups. However, the inputs inside the input group do support contextual s
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">tag</code>     </td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'div'</code></td>
-<td aria-colindex="4" role="cell" class="">Specify the HTML tag to render instead of the default tag</td>
+<td aria-colindex="4" role="cell" class="">指定要呈现的HTML标签，而不是默认标签</td>
 </tr>
 
 <tr role="row" data-pk="is-text" class="" id="__BVID__1582__row_is-text">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">is-text</code>     </td>
 <td aria-colindex="2" role="cell" class="">Boolean</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
-<td aria-colindex="4" role="cell" class="">When 'true', wraps the content in a b-input-group-text component</td>
+<td aria-colindex="4" role="cell" class="">为“ true”时，将内容包装在b-input-group-text组件中</td>
 </tr>
 
 </tbody>
@@ -965,17 +987,17 @@ input groups. However, the inputs inside the input group do support contextual s
 <header data-v-866a22e8="" class="row align-items-center">
 <div data-v-866a22e8="" class="col-sm-9">
 <h3 data-v-866a22e8="" id="comp-ref-b-input-group-append" tabindex="-1" class="bv-no-focus-ring"><span data-v-866a22e8="" class="bd-content-title"><code data-v-866a22e8="" translate="translate" class="notranslate bigger">&lt;b-input-group-append&gt;</code><a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/input-group#comp-ref-b-input-group-append" class="anchorjs-link" aria-labelledby="comp-ref-b-input-group-append" target="_self"></a></span></h3>
- <a data-v-866a22e8="" rel="noopener" target="_blank" href="https://vuejs.org/v2/guide/render-function.html#Functional-Components" class="badge badge-secondary"> Functional Component </a></div>
+ <a data-v-866a22e8="" rel="noopener" target="_blank" href="https://vuejs.org/v2/guide/render-function.html#Functional-Components" class="badge badge-secondary"> 功能部件 </a></div>
 <div data-v-866a22e8="" class="text-sm-right col-sm-3"><a data-v-866a22e8="" rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev/src/components/input-group/input-group-append.js" class="btn btn-outline-secondary btn-sm"> View source </a></div>
 </header>
 <ul data-v-866a22e8="" class="component-ref-mini-toc my-3">
 
-<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-input-group-append-props"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-input-group-append&gt;</code> Properties </a></li>
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-input-group-append-props"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-input-group-append&gt;</code> 属性 </a></li>
    
 </ul>
 
 <article data-v-866a22e8="" class="bd-content">
-<h4 data-v-866a22e8="" id="comp-ref-b-input-group-append-props" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> Properties <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/input-group#comp-ref-b-input-group-append-props" class="anchorjs-link" aria-labelledby="comp-ref-b-input-group-append-props" target="_self"></a></span></h4>
+<h4 data-v-866a22e8="" id="comp-ref-b-input-group-append-props" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> 属性 <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/input-group#comp-ref-b-input-group-append-props" class="anchorjs-link" aria-labelledby="comp-ref-b-input-group-append-props" target="_self"></a></span></h4>
 <div data-v-866a22e8="" class="table-responsive-sm">
 <table role="table" aria-busy="false" aria-colcount="4" class="table b-table bv-docs-table table-striped" id="__BVID__1600">
 
@@ -983,9 +1005,9 @@ input groups. However, the inputs inside the input group do support contextual s
 
 <tr role="row" class="">
 <th role="columnheader" scope="col" aria-colindex="1" class="">属性</th>
-<th role="columnheader" scope="col" aria-colindex="2" class="">Type</th>
-<th role="columnheader" scope="col" aria-colindex="3" class="">Default</th>
-<th role="columnheader" scope="col" aria-colindex="4" class="">Description</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">类型</th>
+<th role="columnheader" scope="col" aria-colindex="3" class="">默认值</th>
+<th role="columnheader" scope="col" aria-colindex="4" class="">描述</th>
 </tr>
 </thead>
 <tbody role="rowgroup">
@@ -1001,14 +1023,14 @@ input groups. However, the inputs inside the input group do support contextual s
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">tag</code>     </td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'div'</code></td>
-<td aria-colindex="4" role="cell" class="">Specify the HTML tag to render instead of the default tag</td>
+<td aria-colindex="4" role="cell" class="">指定要呈现的HTML标签，而不是默认标签</td>
 </tr>
 
 <tr role="row" data-pk="is-text" class="" id="__BVID__1600__row_is-text">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">is-text</code>     </td>
 <td aria-colindex="2" role="cell" class="">Boolean</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
-<td aria-colindex="4" role="cell" class="">When 'true', wraps the content in a b-input-group-text component</td>
+<td aria-colindex="4" role="cell" class="">为“ true”时，将内容包装在b-input-group-text组件中</td>
 </tr>
 
 </tbody>
@@ -1021,17 +1043,17 @@ input groups. However, the inputs inside the input group do support contextual s
 <header data-v-866a22e8="" class="row align-items-center">
 <div data-v-866a22e8="" class="col-sm-9">
 <h3 data-v-866a22e8="" id="comp-ref-b-input-group-text" tabindex="-1" class="bv-no-focus-ring"><span data-v-866a22e8="" class="bd-content-title"><code data-v-866a22e8="" translate="translate" class="notranslate bigger">&lt;b-input-group-text&gt;</code><a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/input-group#comp-ref-b-input-group-text" class="anchorjs-link" aria-labelledby="comp-ref-b-input-group-text" target="_self"></a></span></h3>
- <a data-v-866a22e8="" rel="noopener" target="_blank" href="https://vuejs.org/v2/guide/render-function.html#Functional-Components" class="badge badge-secondary"> Functional Component </a></div>
+ <a data-v-866a22e8="" rel="noopener" target="_blank" href="https://vuejs.org/v2/guide/render-function.html#Functional-Components" class="badge badge-secondary"> 功能部件 </a></div>
 <div data-v-866a22e8="" class="text-sm-right col-sm-3"><a data-v-866a22e8="" rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev/src/components/input-group/input-group-text.js" class="btn btn-outline-secondary btn-sm"> View source </a></div>
 </header>
 <ul data-v-866a22e8="" class="component-ref-mini-toc my-3">
 
-<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-input-group-text-props"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-input-group-text&gt;</code> Properties </a></li>
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-input-group-text-props"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-input-group-text&gt;</code> 属性 </a></li>
    
 </ul>
 
 <article data-v-866a22e8="" class="bd-content">
-<h4 data-v-866a22e8="" id="comp-ref-b-input-group-text-props" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> Properties <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/input-group#comp-ref-b-input-group-text-props" class="anchorjs-link" aria-labelledby="comp-ref-b-input-group-text-props" target="_self"></a></span></h4>
+<h4 data-v-866a22e8="" id="comp-ref-b-input-group-text-props" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> 属性 <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/input-group#comp-ref-b-input-group-text-props" class="anchorjs-link" aria-labelledby="comp-ref-b-input-group-text-props" target="_self"></a></span></h4>
 <div data-v-866a22e8="" class="table-responsive-sm">
 <table role="table" aria-busy="false" aria-colcount="4" class="table b-table bv-docs-table table-striped" id="__BVID__1618">
 
@@ -1039,9 +1061,9 @@ input groups. However, the inputs inside the input group do support contextual s
 
 <tr role="row" class="">
 <th role="columnheader" scope="col" aria-colindex="1" class="">属性</th>
-<th role="columnheader" scope="col" aria-colindex="2" class="">Type</th>
-<th role="columnheader" scope="col" aria-colindex="3" class="">Default</th>
-<th role="columnheader" scope="col" aria-colindex="4" class="">Description</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">类型</th>
+<th role="columnheader" scope="col" aria-colindex="3" class="">默认值</th>
+<th role="columnheader" scope="col" aria-colindex="4" class="">描述</th>
 </tr>
 </thead>
 <tbody role="rowgroup">
@@ -1050,7 +1072,7 @@ input groups. However, the inputs inside the input group do support contextual s
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">tag</code>     </td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'div'</code></td>
-<td aria-colindex="4" role="cell" class="">Specify the HTML tag to render instead of the default tag</td>
+<td aria-colindex="4" role="cell" class="">指定要呈现的HTML标签，而不是默认标签</td>
 </tr>
 
 </tbody>
@@ -1063,17 +1085,17 @@ input groups. However, the inputs inside the input group do support contextual s
 <header data-v-866a22e8="" class="row align-items-center">
 <div data-v-866a22e8="" class="col-sm-9">
 <h3 data-v-866a22e8="" id="comp-ref-b-input-group-addon" tabindex="-1" class="bv-no-focus-ring"><span data-v-866a22e8="" class="bd-content-title"><code data-v-866a22e8="" translate="translate" class="notranslate bigger">&lt;b-input-group-addon&gt;</code><a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/input-group#comp-ref-b-input-group-addon" class="anchorjs-link" aria-labelledby="comp-ref-b-input-group-addon" target="_self"></a></span></h3>
- <a data-v-866a22e8="" rel="noopener" target="_blank" href="https://vuejs.org/v2/guide/render-function.html#Functional-Components" class="badge badge-secondary"> Functional Component </a></div>
+ <a data-v-866a22e8="" rel="noopener" target="_blank" href="https://vuejs.org/v2/guide/render-function.html#Functional-Components" class="badge badge-secondary">功能部件 </a></div>
 <div data-v-866a22e8="" class="text-sm-right col-sm-3"><a data-v-866a22e8="" rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev/src/components/input-group/input-group-addon.js" class="btn btn-outline-secondary btn-sm"> View source </a></div>
 </header>
 <ul data-v-866a22e8="" class="component-ref-mini-toc my-3">
 
-<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-input-group-addon-props"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-input-group-addon&gt;</code> Properties </a></li>
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-input-group-addon-props"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-input-group-addon&gt;</code> 属性 </a></li>
    
 </ul>
 
 <article data-v-866a22e8="" class="bd-content">
-<h4 data-v-866a22e8="" id="comp-ref-b-input-group-addon-props" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> Properties <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/input-group#comp-ref-b-input-group-addon-props" class="anchorjs-link" aria-labelledby="comp-ref-b-input-group-addon-props" target="_self"></a></span></h4>
+<h4 data-v-866a22e8="" id="comp-ref-b-input-group-addon-props" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> 属性 <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/input-group#comp-ref-b-input-group-addon-props" class="anchorjs-link" aria-labelledby="comp-ref-b-input-group-addon-props" target="_self"></a></span></h4>
 <div data-v-866a22e8="" class="table-responsive-sm">
 <table role="table" aria-busy="false" aria-colcount="4" class="table b-table bv-docs-table table-striped" id="__BVID__1634">
 
@@ -1081,9 +1103,9 @@ input groups. However, the inputs inside the input group do support contextual s
 
 <tr role="row" class="">
 <th role="columnheader" scope="col" aria-colindex="1" class="">属性</th>
-<th role="columnheader" scope="col" aria-colindex="2" class="">Type</th>
-<th role="columnheader" scope="col" aria-colindex="3" class="">Default</th>
-<th role="columnheader" scope="col" aria-colindex="4" class="">Description</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">类型</th>
+<th role="columnheader" scope="col" aria-colindex="3" class="">默认值</th>
+<th role="columnheader" scope="col" aria-colindex="4" class="">描述</th>
 </tr>
 </thead>
 <tbody role="rowgroup">
@@ -1099,21 +1121,21 @@ input groups. However, the inputs inside the input group do support contextual s
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">tag</code>     </td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'div'</code></td>
-<td aria-colindex="4" role="cell" class="">Specify the HTML tag to render instead of the default tag</td>
+<td aria-colindex="4" role="cell" class="">指定要呈现的HTML标记，而不是默认标记</td>
 </tr>
 
 <tr role="row" data-pk="is-text" class="" id="__BVID__1634__row_is-text">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">is-text</code>     </td>
 <td aria-colindex="2" role="cell" class="">Boolean</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
-<td aria-colindex="4" role="cell" class="">When 'true', wraps the content in a b-input-group-text component</td>
+<td aria-colindex="4" role="cell" class="">当“true”时，将内容包装在b-input-group-text组件中</td>
 </tr>
 
 <tr role="row" data-pk="append" class="" id="__BVID__1634__row_append">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">append</code>     </td>
 <td aria-colindex="2" role="cell" class="">Boolean</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
-<td aria-colindex="4" role="cell" class="">When set to 'true' sets the addon as being appended. defaults to 'false' which is prepended</td>
+<td aria-colindex="4" role="cell" class="">当设置为“true”时，将加载项设置为附加。默认为“false”，该值在前面</td>
 </tr>
 
 </tbody>

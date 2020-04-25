@@ -36,18 +36,14 @@
   <div class="navbar-nav-scroll">
     <ul class="navbar-nav bd-navbar-nav flex-row">
       <li class="nav-item"><a class="nav-link " href="../">首页</a></li>
-      <li class="nav-item"><a class="nav-link active" href="../../docs/">中文手册</a></li>
-      <li class="nav-item"><a class="nav-link " href="../../v4/examples/">实例</a></li>
-      <li class="nav-item dropdown">
-<a class="nav-item nav-link dropdown-toggle mr-md-2" id="bd-versions" aria-expanded="false" aria-haspopup="true" href="#" data-toggle="dropdown"> 主题模板 </a>
-<div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
-<a class="dropdown-item" href="../../V4/themes/" target="_blank">主题门户</a>
-<a class="dropdown-item" href="../../V4/themes/live.html">精选模板</a>
-</div>
-</li>
-      <li class="nav-item"><a class="nav-link" href="//ico.z01.com" target="_blank" rel="noopener">zico图标系统</a></li>
-      <li class="nav-item"><a class="nav-link" href="https://expo.getbootstrap.com" target="_blank" rel="noopener">优站精选</a></li>
-      <li class="nav-item"><a class="nav-link" href="https://blog.getbootstrap.com" target="_blank" rel="noopener">Blog</a></li>
+      <li class="nav-item"><a class="nav-link " href="index.html">中文手册</a></li>
+      <li class="nav-item"><a class="nav-link " href="../components">组件</a></li>
+      <li class="nav-item"><a class="nav-link " href="../directives">指令</a></li>
+      <li class="nav-item"><a class="nav-link active" href="../reference">参考</a></li>
+      <li class="nav-item"><a class="nav-link " href="https://bootstrap-vue.org/play" target="_blank">体验</a></li>
+      <li class="nav-item"><a class="nav-link " href="http://code.z01.com/v4"><i class="zi zi_bold" zico="粗"></i> Boostrap</a></li>
+      <li class="nav-item"><a class="nav-link" href="http://ico.z01.com" target="_blank" rel="noopener">zico图标系统</a></li>
+      <li class="nav-item"><a class="nav-link" href="http://www.z01.com" target="_blank" rel="noopener">Zoomla!逐浪CMS</a></li>
     </ul>
   </div>
   <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
@@ -189,14 +185,14 @@
 
 <div class="d-none d-xl-block col-xl-2 bd-toc">
 <ul class="section-nav">
-<li class="nav-item toc-entry mb-2"><a target="_self" href="#starter-templates" class="nav-link font-weight-bold"><span>Starter Templates</span></a></li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#basic-example" class="nav-link"><span>Basic example</span></a> </li>
+<li class="nav-item toc-entry mb-2"><a target="_self" href="#starter-templates" class="nav-link font-weight-bold"><span>开始模板</span></a></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#basic-example" class="nav-link"><span>基本示例</span></a> </li>
 <li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#vue-cli-3" class="nav-link"><span>Vue CLI 3</span></a> </li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#building-with-customized-bootstrap-v4-css" class="nav-link"><span>Building with customized Bootstrap v4 CSS</span></a> </li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#individual-component-import" class="nav-link"><span>Individual component import</span></a>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#building-with-customized-bootstrap-v4-css" class="nav-link"><span>使用自定义的Bootstrap v4 CSS进行构建</span></a> </li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#individual-component-import" class="nav-link"><span>单个组件导入</span></a>
 <ul class="nav flex-column">
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#importing-individual-components-and-directives" class="nav-link"><span>Importing individual components and directives</span></a></li>
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#importing-component-groups-and-directives-as-vue-plugins" class="nav-link"><span>Importing component groups and directives as Vue plugins</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#importing-individual-components-and-directives" class="nav-link"><span>导入单个组件和指令</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#importing-component-groups-and-directives-as-vue-plugins" class="nav-link"><span>将组件组和指令作为Vue插件导入</span></a></li>
 </ul>
 </li>
 </ul>
@@ -235,10 +231,14 @@
 </li>
 </ul>
 </nav>
-<p>In all cases, you should have familiarity with using <a href="https://vuejs.org" target="_blank" rel="noopener">Vue</a>. A good resource for
-Vue tutorials is <a href="https://laracasts.com/search?q=vue" target="_blank" rel="noopener">Laracasts</a>.</p>
-<h2 id="basic-example" class="bv-no-focus-ring"><span class="bd-content-title">Basic example<a class="anchorjs-link" href="#basic-example" aria-labelledby="basic-example"></a></span></h2>
-<p>Get started quickly without the need for a build system, by using standard <code class="text-nowrap" translate="no">&lt;script&gt;</code> and <code class="text-nowrap" translate="no">&lt;link&gt;</code> tags to load the required JavaScript and CSS in your page.</p>
+<p>
+  在所有情况下，您都应该熟悉使用<a href="https://vuejs.org" target="_blank" rel="noopener">Vue</a>。
+  对于Vue教程来说，一个很好的资源是<a href="https://laracasts.com/search?q=vue" target="_blank" rel="noopener">Laracasts</a>。
+</p>
+<h2 id="basic-example" class="bv-no-focus-ring"><span class="bd-content-title">基本示例<a class="anchorjs-link" href="#basic-example" aria-labelledby="basic-example"></a></span></h2>
+<p>
+  通过使用标准<code class="text-nowrap" translate="no">&lt;script&gt;</code> 和 <code class="text-nowrap" translate="no">&lt;link&gt;</code>标记在页面中加载所需的JavaScript和CSS，无需构建系统即可快速入门。
+  </p>
 <div class="bd-code">
 <pre class="hljs html p-2" translate="no"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"en"</span>&gt;</span>
@@ -309,26 +309,35 @@ Vue tutorials is <a href="https://laracasts.com/search?q=vue" target="_blank" re
 <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></pre>
 </div>
 <h2 id="vue-cli-3" class="bv-no-focus-ring"><span class="bd-content-title">Vue CLI 3<a class="anchorjs-link" href="#vue-cli-3" aria-labelledby="vue-cli-3"></a></span></h2>
-<p>Vue CLI 3 is the newest way to create Vue apps.</p>
-<p>A Vue CLI 3 BootStrapVue plugin is available for setting up a basic app. refer to the <a href="/docs/#vue-cli-3-plugin" class="font-weight-bold">Getting Started</a> docs page for more details.</p>
-<h2 id="building-with-customized-bootstrap-v4-css" class="bv-no-focus-ring"><span class="bd-content-title">Building with customized Bootstrap v4 CSS<a class="anchorjs-link" href="#building-with-customized-bootstrap-v4-css" aria-labelledby="building-with-customized-bootstrap-v4-css"></a></span></h2>
-<p>If you are using a build system, and would like to customize the Bootstrap v4 CSS, the following
-references will be handy starting points:</p>
+<p>Vue CLI 3 是创建Vue应用程序的最新方法。</p>
+<p>
+  Vue CLI 3 BootStrapVue插件可用于设置基本应用程序。有关详细信息，请参阅<a href="/docs/#vue-cli-3-plugin" class="font-weight-bold">入门文档</a>页。
+</p>
+<h2 id="building-with-customized-bootstrap-v4-css" class="bv-no-focus-ring"><span class="bd-content-title">使用自定义的Bootstrap v4 CSS进行构建<a class="anchorjs-link" href="#building-with-customized-bootstrap-v4-css" aria-labelledby="building-with-customized-bootstrap-v4-css"></a></span></h2>
+<p>如果您使用的是构建系统，并且想自定义Bootstrap v4 CSS，那么以下参考将是方便的起点：</p>
 <ul>
-<li>BootstrapVue's <a href="/docs/reference/theming" class="font-weight-bold">Theming</a> reference section</li>
-<li>Official Bootstrap <a href="https://getbootstrap.com/docs/4.3/getting-started/theming/" target="_blank" rel="noopener">Theming Bootstrap </a> guide</li>
+<li>
+  BootstrapVue的<a href="/docs/reference/theming" class="font-weight-bold">主题</a>参考部分
+</li>
+<li>
+  官方Bootstrap<a href="https://getbootstrap.com/docs/4.3/getting-started/theming/" target="_blank" rel="noopener">主题Bootstrap</a>指南
+</li>
 </ul>
-<h2 id="individual-component-import" class="bv-no-focus-ring"><span class="bd-content-title">Individual component import<a class="anchorjs-link" href="#individual-component-import" aria-labelledby="individual-component-import"></a></span></h2>
-<p>There are a few methods that you can use to import individual components and directives.</p>
-<p>You will need <code class="text-nowrap" translate="no">vue-loader</code> configured to handle the compiling any components that are internally
-single file <code class="text-nowrap" translate="no">.vue</code> components.</p>
-<p>The BootstrapVue distribution now includes <code class="text-nowrap" translate="no">ES</code> modules for all components and directives. These are
-located in the <code class="text-nowrap" translate="no">bootstrap-vue/es/components/</code> and <code class="text-nowrap" translate="no">bootstrap-vue/es/directives/</code> directories, when
-using the NPM bundle. When building from the BootstrapVue repo source the directories will be
-created when you run <code class="text-nowrap" translate="no">yarn build</code>.</p>
-<h3 id="importing-individual-components-and-directives" class="bv-no-focus-ring"><span class="bd-content-title">Importing individual components and directives<a class="anchorjs-link" href="#importing-individual-components-and-directives" aria-labelledby="importing-individual-components-and-directives"></a></span></h3>
-<p>As an example, you can import <code class="text-nowrap" translate="no">&lt;b-card&gt;</code> (plus some of its sub components) and <code class="text-nowrap" translate="no">&lt;b-table&gt;</code> as
-follows:</p>
+<h2 id="individual-component-import" class="bv-no-focus-ring"><span class="bd-content-title">单个组件导入<a class="anchorjs-link" href="#individual-component-import" aria-labelledby="individual-component-import"></a></span></h2>
+<p>您可以使用几种方法来导入单个组件和指令。</p>
+<p>
+  您将需要配置<code class="text-nowrap" translate="no">vue加载程序</code>来处理编译内部为单个文件<code class="text-nowrap" translate="no">.vue</code>组件的任何组件。
+</p>
+<p>
+  现在，BootstrapVue发行版包括用于所有组件和指令的<code class="text-nowrap" translate="no">ES</code>模块。 使用NPM捆绑包时，
+  这些文件位于<code class="text-nowrap" translate="no">bootstrap-vue/es/components/</code>和
+  <code class="text-nowrap" translate="no">bootstrap-vue/es/directives/</code>目录中。 从BootstrapVue存储库源构建时，
+  将在运行<code class="text-nowrap" translate="no">yarn build</code>时创建目录。
+</p>
+<h3 id="importing-individual-components-and-directives" class="bv-no-focus-ring"><span class="bd-content-title">导入单个组件和指令<a class="anchorjs-link" href="#importing-individual-components-and-directives" aria-labelledby="importing-individual-components-and-directives"></a></span></h3>
+<p>
+  例如，您可以导入<code class="text-nowrap" translate="no">&lt;b-card&gt;</code>（及其一些子组件）和<code class="text-nowrap" translate="no">&lt;b-table&gt;</code>，如下所示：
+</p>
 <div class="bd-code">
 <pre class="hljs js p-2" translate="no"><span class="hljs-comment">// Import the individual components</span>
 <span class="hljs-keyword">import</span> { BCard, BCardBody, BCardFooter, BCardHeader, BCardImg, BTable } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
@@ -354,10 +363,11 @@ Vue.component(<span class="hljs-string">'b-table'</span>, BTable)
   <span class="hljs-comment">// ...</span>
 }</pre>
 </div>
-<h3 id="importing-component-groups-and-directives-as-vue-plugins" class="bv-no-focus-ring"><span class="bd-content-title">Importing component groups and directives as Vue plugins<a class="anchorjs-link" href="#importing-component-groups-and-directives-as-vue-plugins" aria-labelledby="importing-component-groups-and-directives-as-vue-plugins"></a></span></h3>
-<p>A component group and/or directive can be imported as a Vue plugin by importing the component group
-or directive directory. Importing <code class="text-nowrap" translate="no">&lt;b-card&gt;</code> (and related sub-components) and <code class="text-nowrap" translate="no">&lt;b-table&gt;</code> can be
-done with:</p>
+<h3 id="importing-component-groups-and-directives-as-vue-plugins" class="bv-no-focus-ring"><span class="bd-content-title">将组件组和指令作为Vue插件导入<a class="anchorjs-link" href="#importing-component-groups-and-directives-as-vue-plugins" aria-labelledby="importing-component-groups-and-directives-as-vue-plugins"></a></span></h3>
+<p>
+  通过导入组件组或指令目录，可以将组件组和/或指令作为Vue插件导入。 导入<code class="text-nowrap" translate="no">&lt;b-card&gt;</code>（和相关子组件）
+  和<code class="text-nowrap" translate="no">&lt;b-table&gt;</code>可以通过以下方式完成：
+</p>
 <div class="bd-code">
 <pre class="hljs js p-2" translate="no"><span class="hljs-comment">// Import the components as Vue plugins</span>
 <span class="hljs-keyword">import</span> { CardPlugin, TablePlugin } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
@@ -366,9 +376,14 @@ done with:</p>
 Vue.use(CardPlugin)
 Vue.use(TablePlugin)</pre>
 </div>
-<p>Now you can use the <code class="text-nowrap" translate="no">&lt;b-card&gt;</code> (including the <code class="text-nowrap" translate="no">&lt;b-card-*&gt;</code> sub-components) and <code class="text-nowrap" translate="no">&lt;b-table&gt;</code> components in your project templates.</p>
-<p>Note that some component plugins automatically import other directives and components (i.e. the <code class="text-nowrap" translate="no">modal</code> plugin also imports the <code class="text-nowrap" translate="no">v-b-modal</code> directive, and <code class="text-nowrap" translate="no">nav</code> plugin automatically imports all <code class="text-nowrap" translate="no">nav-*</code> sub-components and the dropdown sub-components). Refer to the component reference or
-directive reference at the bottom of each documentation page for details.</p>
+<p>
+  现在，您可以在项目模板中使用<code class="text-nowrap" translate="no">&lt;b-card&gt;</code> 
+  （包括<code class="text-nowrap" translate="no">&lt;b-card-*&gt;</code>子组件）和<code class="text-nowrap" translate="no">&lt;b-table&gt;</code>组件。
+</p>
+<p>
+  请注意，某些组件插件会自动导入其他指令和组件（即<code class="text-nowrap" translate="no">modal</code>插件也导入<code class="text-nowrap" translate="no">v-b-modal</code>指令，而<code class="text-nowrap" translate="no">nav</code>插件
+  会自动导入所有<code class="text-nowrap" translate="no">nav-*</code>子组件和下拉子组件）。 有关详细信息，请参阅每个文档页面底部的组件参考或指令参考。
+</p>
 
 
 

@@ -36,18 +36,14 @@
   <div class="navbar-nav-scroll">
     <ul class="navbar-nav bd-navbar-nav flex-row">
       <li class="nav-item"><a class="nav-link " href="../">首页</a></li>
-      <li class="nav-item"><a class="nav-link active" href="../../docs/">中文手册</a></li>
-      <li class="nav-item"><a class="nav-link " href="../../v4/examples/">实例</a></li>
-      <li class="nav-item dropdown">
-<a class="nav-item nav-link dropdown-toggle mr-md-2" id="bd-versions" aria-expanded="false" aria-haspopup="true" href="#" data-toggle="dropdown"> 主题模板 </a>
-<div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
-<a class="dropdown-item" href="../../V4/themes/" target="_blank">主题门户</a>
-<a class="dropdown-item" href="../../V4/themes/live.html">精选模板</a>
-</div>
-</li>
-      <li class="nav-item"><a class="nav-link" href="//ico.z01.com" target="_blank" rel="noopener">zico图标系统</a></li>
-      <li class="nav-item"><a class="nav-link" href="https://expo.getbootstrap.com" target="_blank" rel="noopener">优站精选</a></li>
-      <li class="nav-item"><a class="nav-link" href="https://blog.getbootstrap.com" target="_blank" rel="noopener">Blog</a></li>
+      <li class="nav-item"><a class="nav-link " href="index.html">中文手册</a></li>
+      <li class="nav-item"><a class="nav-link " href="../components">组件</a></li>
+      <li class="nav-item"><a class="nav-link " href="../directives">指令</a></li>
+      <li class="nav-item"><a class="nav-link active" href="../reference">参考</a></li>
+      <li class="nav-item"><a class="nav-link " href="https://bootstrap-vue.org/play" target="_blank">体验</a></li>
+      <li class="nav-item"><a class="nav-link " href="http://code.z01.com/v4"><i class="zi zi_bold" zico="粗"></i> Boostrap</a></li>
+      <li class="nav-item"><a class="nav-link" href="http://ico.z01.com" target="_blank" rel="noopener">zico图标系统</a></li>
+      <li class="nav-item"><a class="nav-link" href="http://www.z01.com" target="_blank" rel="noopener">Zoomla!逐浪CMS</a></li>
     </ul>
   </div>
   <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
@@ -189,11 +185,11 @@
 
 <div class="d-none d-xl-block col-xl-2 bd-toc">
 <ul class="section-nav">
-<li class="nav-item toc-entry mb-2"><a target="_self" href="#spacing" class="nav-link font-weight-bold"><span>Spacing</span></a></li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#how-it-works" class="nav-link"><span>How it works</span></a> </li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#notation" class="nav-link"><span>Notation</span></a> </li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#examples" class="nav-link"><span>Examples</span></a> </li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#horizontal-centering" class="nav-link"><span>Horizontal centering</span></a> </li>
+<li class="nav-item toc-entry mb-2"><a target="_self" href="#spacing" class="nav-link font-weight-bold"><span>间距处理</span></a></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#how-it-works" class="nav-link"><span>工作原理</span></a> </li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#notation" class="nav-link"><span>符号</span></a> </li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#examples" class="nav-link"><span>例子</span></a> </li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#horizontal-centering" class="nav-link"><span>水平居中</span></a> </li>
 </ul>
 </div>
 
@@ -225,42 +221,67 @@
 <li data-v-4abf2740=""><a data-v-4abf2740="" target="_self" href="#horizontal-centering" class=""><span data-v-4abf2740="">Horizontal centering</span></a> </li>
 </ul>
 </nav>
-<h2 id="how-it-works" class="bv-no-focus-ring"><span class="bd-content-title">How it works<a class="anchorjs-link" href="#how-it-works" aria-labelledby="how-it-works"></a></span></h2>
-<p>Assign responsive-friendly margin or padding values to an element or a subset of its sides with
-shorthand classes. Includes support for individual properties, all properties, and vertical and
-horizontal properties. Classes are built from a default Sass map ranging from .25rem to 3rem.</p>
-<h2 id="notation" class="bv-no-focus-ring"><span class="bd-content-title">Notation<a class="anchorjs-link" href="#notation" aria-labelledby="notation"></a></span></h2>
-<p>Spacing utilities that apply to all breakpoints, from xs to xl, have no breakpoint abbreviation in
-them. This is because those classes are applied from <code class="text-nowrap" translate="no">min-width: 0</code> and up, and thus are not bound
-by a media query. The remaining breakpoints, however, do include a breakpoint abbreviation.</p>
-<p>The classes are named using the format <code class="text-nowrap" translate="no">{property}{sides}-{size}</code> for <code class="text-nowrap" translate="no">xs</code> and <code class="text-nowrap" translate="no">{property}{sides}-{breakpoint}-{size}</code> for <code class="text-nowrap" translate="no">sm</code>, <code class="text-nowrap" translate="no">md</code>, <code class="text-nowrap" translate="no">lg</code>, and <code class="text-nowrap" translate="no">xl</code>.</p>
-<p>Where <em><code class="text-nowrap" translate="no">property</code></em> is one of:</p>
+<h2 id="how-it-works" class="bv-no-focus-ring"><span class="bd-content-title">工作原理<a class="anchorjs-link" href="#how-it-works" aria-labelledby="how-it-works"></a></span></h2>
+<p>
+  使用shorthand类将响应友好的边距或填充值分配给元素或其侧面的子集。 包括对单个属性，所有属性以及垂直和水平属性的支持。根据默认的Sass映射（从.25rem到3rem）构建类。
+</p>
+<h2 id="notation" class="bv-no-focus-ring"><span class="bd-content-title">符号<a class="anchorjs-link" href="#notation" aria-labelledby="notation"></a></span></h2>
+<p>
+  适用于从xs到xl的所有断点的间距实用程序中没有断点的缩写。 这是因为这些类是从<code class="text-nowrap" translate="no">min-width: 0</code>开始使用的，因此不受媒体查询的约束。 但是，其余的断点确实包含断点的缩写。
+</p>
+<p>
+  这些类使用<code class="text-nowrap" translate="no">xs</code>的<code class="text-nowrap" translate="no">{property}{sides}-{size}</code>
+  和<code class="text-nowrap" translate="no">sm</code>, 
+  <code class="text-nowrap" translate="no">md</code>, 
+  <code class="text-nowrap" translate="no">lg</code>,和 
+  <code class="text-nowrap" translate="no">xl</code>的
+  <code class="text-nowrap" translate="no">{property}{sides}-{breakpoint}-{size}</code>格式命名。
+</p>
+<p>其中 <em><code class="text-nowrap" translate="no">属性</code></em>是以下之一:</p>
 <ul>
-<li><code class="text-nowrap" translate="no">m</code> - for classes that set margin</li>
-<li><code class="text-nowrap" translate="no">p</code> - for classes that set padding</li>
+<li><code class="text-nowrap" translate="no">m</code> - 对于设置边距的类</li>
+<li><code class="text-nowrap" translate="no">p</code> - 用于设置填充的类</li>
 </ul>
-<p>Where <em><code class="text-nowrap" translate="no">sides</code></em> is one of:</p>
+<p>其中<em><code class="text-nowrap" translate="no">sides</code></em>是以下之一:</p>
 <ul>
-<li><code class="text-nowrap" translate="no">t</code> - for classes that set <code class="text-nowrap" translate="no">margin-top</code> or <code class="text-nowrap" translate="no">padding-top</code></li>
-<li><code class="text-nowrap" translate="no">b</code> - for classes that set <code class="text-nowrap" translate="no">margin-bottom</code> or <code class="text-nowrap" translate="no">padding-bottom</code></li>
-<li><code class="text-nowrap" translate="no">l</code> - for classes that set <code class="text-nowrap" translate="no">margin-left</code> or <code class="text-nowrap" translate="no">padding-left</code></li>
-<li><code class="text-nowrap" translate="no">r</code> - for classes that set <code class="text-nowrap" translate="no">margin-right</code> or <code class="text-nowrap" translate="no">padding-right</code></li>
-<li><code class="text-nowrap" translate="no">x</code> - for classes that set both <code class="text-nowrap" translate="no">*-left</code> and <code class="text-nowrap" translate="no">*-right</code></li>
-<li><code class="text-nowrap" translate="no">y</code> - for classes that set both <code class="text-nowrap" translate="no">*-top</code> and <code class="text-nowrap" translate="no">*-bottom</code></li>
-<li>blank - for classes that set <code class="text-nowrap" translate="no">margin</code> or <code class="text-nowrap" translate="no">padding</code> on all 4 sides of the element</li>
+<li><code class="text-nowrap" translate="no">t</code> - 对于设置<code class="text-nowrap" translate="no">margin-top</code>或<code class="text-nowrap" translate="no">padding-top</code>的类</li>
+<li><code class="text-nowrap" translate="no">b</code> - 对于设置<code class="text-nowrap" translate="no">margin-bottom</code>或<code class="text-nowrap" translate="no">padding-bottom</code>的类</li>
+<li><code class="text-nowrap" translate="no">l</code> - 对于设置<code class="text-nowrap" translate="no">margin-left</code>或<code class="text-nowrap" translate="no">padding-left</code>的类</li>
+<li><code class="text-nowrap" translate="no">r</code> - 对于设置<code class="text-nowrap" translate="no">margin-right</code>或<code class="text-nowrap" translate="no">padding-right</code>的类</li>
+<li><code class="text-nowrap" translate="no">x</code> - 对于同时设置<code class="text-nowrap" translate="no">*-left</code>和<code class="text-nowrap" translate="no">*-right</code>的类</li>
+<li><code class="text-nowrap" translate="no">y</code> - 对于同时设置<code class="text-nowrap" translate="no">*-top</code>和<code class="text-nowrap" translate="no">*-bottom</code>的类</li>
+<li>blank - 用于在元素的所有4个边上设置<code class="text-nowrap" translate="no">margin</code>或<code class="text-nowrap" translate="no">padding</code>的类
+</li>
 </ul>
-<p>Where <em><code class="text-nowrap" translate="no">size</code></em> is one of:</p>
+<p>其中<em><code class="text-nowrap" translate="no">size</code></em>是以下之一:</p>
 <ul>
-<li><code class="text-nowrap" translate="no">0</code> - for classes that eliminate the margin or padding by setting it to <code class="text-nowrap" translate="no">0</code></li>
-<li><code class="text-nowrap" translate="no">1</code> - (by default) for classes that set the <code class="text-nowrap" translate="no">margin</code> or <code class="text-nowrap" translate="no">padding</code> to <code class="text-nowrap" translate="no">$spacer * .25</code></li>
-<li><code class="text-nowrap" translate="no">2</code> - (by default) for classes that set the <code class="text-nowrap" translate="no">margin</code> or <code class="text-nowrap" translate="no">padding</code> to <code class="text-nowrap" translate="no">$spacer * .5</code></li>
-<li><code class="text-nowrap" translate="no">3</code> - (by default) for classes that set the <code class="text-nowrap" translate="no">margin</code> or <code class="text-nowrap" translate="no">padding</code> to <code class="text-nowrap" translate="no">$spacer</code></li>
-<li><code class="text-nowrap" translate="no">4</code> - (by default) for classes that set the <code class="text-nowrap" translate="no">margin</code> or <code class="text-nowrap" translate="no">padding</code> to <code class="text-nowrap" translate="no">$spacer * 1.5</code></li>
-<li><code class="text-nowrap" translate="no">5</code> - (by default) for classes that set the <code class="text-nowrap" translate="no">margin</code> or <code class="text-nowrap" translate="no">padding</code> to <code class="text-nowrap" translate="no">$spacer * 3</code></li>
+<li><code class="text-nowrap" translate="no">0</code> - 对于通过将其设置为<code class="text-nowrap" translate="no">0</code>消除边距或填充的类</li>
+<li><code class="text-nowrap" translate="no">1</code> - 
+  （默认情况下）用于将<code class="text-nowrap" translate="no">margin</code>或<code class="text-nowrap" translate="no">padding</code>
+  设置为<code class="text-nowrap" translate="no">$spacer * .25</code>的类
+</li>
+<li><code class="text-nowrap" translate="no">2</code> - 
+  （默认情况下）用于将<code class="text-nowrap" translate="no">margin</code>或<code class="text-nowrap" translate="no">padding</code>
+  设置为<code class="text-nowrap" translate="no">$spacer * .5</code>的类
+</li>
+<li><code class="text-nowrap" translate="no">3</code> - 
+  （默认情况下）用于将<code class="text-nowrap" translate="no">margin</code>或<code class="text-nowrap" translate="no">padding</code>
+  设置为<code class="text-nowrap" translate="no">$spacer</code>的类
+</li>
+<li><code class="text-nowrap" translate="no">4</code> - 
+  （默认情况下）用于将<code class="text-nowrap" translate="no">margin</code>或<code class="text-nowrap" translate="no">padding</code>
+  设置为<code class="text-nowrap" translate="no">$spacer * .1.5</code>的类
+</li>
+<li><code class="text-nowrap" translate="no">5</code> - 
+  （默认情况下）用于将<code class="text-nowrap" translate="no">margin</code>或<code class="text-nowrap" translate="no">padding</code>
+  设置为<code class="text-nowrap" translate="no">$spacer * .3</code>的类
+</li>
 </ul>
-<p><em>(You can add more sizes by adding entries to the <code class="text-nowrap" translate="no">$spacers</code> Sass map variable.)</em></p>
-<h2 id="examples" class="bv-no-focus-ring"><span class="bd-content-title">Examples<a class="anchorjs-link" href="#examples" aria-labelledby="examples"></a></span></h2>
-<p>Here are some representative examples of these classes:</p>
+<p><em>
+  （您可以通过将条目添加到<code class="text-nowrap" translate="no">$spacers</code> Sass映射变量来添加更多大小。）
+</em></p>
+<h2 id="examples" class="bv-no-focus-ring"><span class="bd-content-title">例子<a class="anchorjs-link" href="#examples" aria-labelledby="examples"></a></span></h2>
+<p>以下是这些类的一些代表性示例：</p>
 <div class="bd-code">
 <pre class="hljs css p-2" translate="no"><span class="hljs-selector-class">.mt-0</span> {
   <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">0</span> <span class="hljs-meta">!important</span>;
@@ -279,10 +300,11 @@ by a media query. The remaining breakpoints, however, do include a breakpoint ab
   <span class="hljs-attribute">padding</span>: $spacer <span class="hljs-meta">!important</span>;
 }</pre>
 </div>
-<h2 id="horizontal-centering" class="bv-no-focus-ring"><span class="bd-content-title">Horizontal centering<a class="anchorjs-link" href="#horizontal-centering" aria-labelledby="horizontal-centering"></a></span></h2>
-<p>Additionally, Bootstrap also includes an <code class="text-nowrap" translate="no">.mx-auto</code> class for horizontally centering fixed-width
-block level content — that is, content that has <code class="text-nowrap" translate="no">display: block</code> and a <code class="text-nowrap" translate="no">width</code> set—by setting the
-horizontal margins to <code class="text-nowrap" translate="no">auto</code>.</p>
+<h2 id="horizontal-centering" class="bv-no-focus-ring"><span class="bd-content-title">水平居中<a class="anchorjs-link" href="#horizontal-centering" aria-labelledby="horizontal-centering"></a></span></h2>
+<p>
+  此外，Bootstrap还包括一个<code class="text-nowrap" translate="no">.mx-auto</code>类，用于水平居中固定宽度块级内容，
+  即具有<code class="text-nowrap" translate="no">display: block</code>的内容和通过将水平边距设置为<code class="text-nowrap" translate="no">auto</code>而设置的<code class="text-nowrap" translate="no">width</code>。
+</p>
 <div translate="translate" class="bd-example vue-example vue-example-horizontal-centering">
 <div class="mx-auto bg-info" style="width: 200px;">Centered element</div>
 </div>

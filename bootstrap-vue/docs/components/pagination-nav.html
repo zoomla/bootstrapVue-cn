@@ -36,18 +36,14 @@
   <div class="navbar-nav-scroll">
     <ul class="navbar-nav bd-navbar-nav flex-row">
       <li class="nav-item"><a class="nav-link " href="../">首页</a></li>
-      <li class="nav-item"><a class="nav-link active" href="../../docs/">中文手册</a></li>
-      <li class="nav-item"><a class="nav-link " href="../../v4/examples/">实例</a></li>
-      <li class="nav-item dropdown">
-<a class="nav-item nav-link dropdown-toggle mr-md-2" id="bd-versions" aria-expanded="false" aria-haspopup="true" href="#" data-toggle="dropdown"> 主题模板 </a>
-<div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
-<a class="dropdown-item" href="../../V4/themes/" target="_blank">主题门户</a>
-<a class="dropdown-item" href="../../V4/themes/live.html">精选模板</a>
-</div>
-</li>
-      <li class="nav-item"><a class="nav-link" href="//ico.z01.com" target="_blank" rel="noopener">zico图标系统</a></li>
-      <li class="nav-item"><a class="nav-link" href="https://expo.getbootstrap.com" target="_blank" rel="noopener">优站精选</a></li>
-      <li class="nav-item"><a class="nav-link" href="https://blog.getbootstrap.com" target="_blank" rel="noopener">Blog</a></li>
+      <li class="nav-item"><a class="nav-link" href="index.html">中文手册</a></li>
+      <li class="nav-item"><a class="nav-link active" href="../components">组件</a></li>
+      <li class="nav-item"><a class="nav-link " href="../directives">指令</a></li>
+      <li class="nav-item"><a class="nav-link " href="../reference">参考</a></li>
+      <li class="nav-item"><a class="nav-link " href="https://bootstrap-vue.org/play" target="_blank">体验</a></li>
+      <li class="nav-item"><a class="nav-link " href="http://code.z01.com/v4"><i class="zi zi_bold" zico="粗"></i> Boostrap</a></li>
+      <li class="nav-item"><a class="nav-link" href="http://ico.z01.com" target="_blank" rel="noopener">zico图标系统</a></li>
+      <li class="nav-item"><a class="nav-link" href="http://www.z01.com" target="_blank" rel="noopener">Zoomla!逐浪CMS</a></li>
     </ul>
   </div>
   <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
@@ -174,52 +170,45 @@
 <li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/utility-classes.html" class="nav-link">通用Class类</a></li>
 <li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/validation.html" class="nav-link">Form表单验证</a></li>
 </ul>
-</div><div class="bd-toc-item"> <a class="bd-toc-link" href="../components/alerts.html"> 杂项 </a>
-<ul class="nav bd-sidenav">
-<li class="nav-item"><a href="../../../bootstrap-vue/docs/misc/changelog" class="nav-link"> Changelog </a></li>
-<li class="nav-item"><a href="../../../bootstrap-vue/docs/misc/contributing" class="nav-link"> Contributing </a></li>
-<li class="nav-item"><a href="../../../bootstrap-vue/docs/misc/settings" class="nav-link"> Settings </a></li>
-<li class="nav-item"><a href="../../../bootstrap-vue/docs/misc/third-party" class="nav-link"> Third party libraries </a></li>
-</ul>
 </div>
-<div class=""><a href="/play" class="bd-toc-link">在线模拟器</a></div>
+<div class=""><a href="https://bootstrap-vue.org/play" class="bd-toc-link" target="_blank">在线模拟器</a></div>
 </nav>
 </div>
 
 <div class="d-none d-xl-block col-xl-2 bd-toc">
 <ul class="section-nav">
-<li class="nav-item toc-entry mb-2"><a target="_self" href="#pagination-navigation" class="nav-link font-weight-bold"><span>Pagination Navigation</span></a></li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#page-link-and-number-generation" class="nav-link"><span>Page link and number generation</span></a>
+<li class="nav-item toc-entry mb-2"><a target="_self" href="#pagination-navigation" class="nav-link font-weight-bold"><span>分页导航(Pagination Navigation)</span></a></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#page-link-and-number-generation" class="nav-link"><span>页面链接和编号生成</span></a>
 <ul class="nav flex-column">
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#router-links" class="nav-link"><span>Router links</span></a></li>
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#link-generator-function" class="nav-link"><span>Link generator function</span></a></li>
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#page-number-generation" class="nav-link"><span>Page number generation</span></a></li>
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#providing-an-array-of-pages" class="nav-link"><span>Providing an array of pages</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#router-links" class="nav-link"><span>路由器链接</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#link-generator-function" class="nav-link"><span>链接生成器功能</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#page-number-generation" class="nav-link"><span>页码生成</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#providing-an-array-of-pages" class="nav-link"><span>提供页面数组</span></a></li>
 </ul>
 </li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#customizing-appearance" class="nav-link"><span>Customizing appearance</span></a>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#customizing-appearance" class="nav-link"><span>自定义外观</span></a>
 <ul class="nav flex-column">
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#limiting-the-number-of-displayed-buttons" class="nav-link"><span>Limiting the number of displayed buttons</span></a></li>
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#button-content" class="nav-link"><span>Button content</span></a></li>
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#goto-firstlast-button-type" class="nav-link"><span>Goto first/last button type</span></a></li>
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#button-size" class="nav-link"><span>Button size</span></a></li>
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#pill-style" class="nav-link"><span>Pill style</span></a></li>
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#alignment" class="nav-link"><span>Alignment</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#limiting-the-number-of-displayed-buttons" class="nav-link"><span>限制显示按钮的数量</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#button-content" class="nav-link"><span>按钮内容</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#goto-firstlast-button-type" class="nav-link"><span>转到第一个/最后一个按钮类型</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#button-size" class="nav-link"><span>按钮大小</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#pill-style" class="nav-link"><span>Pill 样式</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#alignment" class="nav-link"><span>对齐</span></a></li>
 </ul>
 </li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#auto-current-page-detection-and-v-model-support" class="nav-link"><span>Auto current page detection and v-model support</span></a> <!----></li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#accessibility" class="nav-link"><span>Accessibility</span></a>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#auto-current-page-detection-and-v-model-support" class="nav-link"><span>自动当前页检测和v-model支持</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#accessibility" class="nav-link"><span>可访问性</span></a>
 <ul class="nav flex-column">
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#aria-labels" class="nav-link"><span>ARIA labels</span></a></li>
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#keyboard-navigation" class="nav-link"><span>Keyboard navigation</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#aria-labels" class="nav-link"><span>ARIA 标签</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#keyboard-navigation" class="nav-link"><span>键盘导航</span></a></li>
 </ul>
 </li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#see-also" class="nav-link"><span>See also</span></a> <!----></li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#component-reference" class="nav-link"><span>Component reference</span></a>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#see-also" class="nav-link"><span>另请参阅</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#component-reference" class="nav-link"><span>组件引用</span></a>
 <ul class="nav flex-column">
 <li class="nav-item toc-entry toc-h3"><a target="_self" href="#comp-ref-b-pagination-nav" class="nav-link"><span>&lt;b-pagination-nav&gt;</span></a></li>
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#importing-individual-components" class="nav-link"><span>Importing individual components</span></a></li>
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#importing-as-a-plugin" class="nav-link"><span>Importing as a Vue.js plugin</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#importing-individual-components" class="nav-link"><span>导入单个组件</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#importing-as-a-plugin" class="nav-link"><span>作为Vue.js插件导入</span></a></li>
 </ul>
 </li>
 </ul>
@@ -580,10 +569,13 @@
 </ul>
 <p>这样可以确保不超过3个页码按钮以及“转到第一页”、“上一页”、“下一页”和“最后一页”按钮可见。</p>
 <h3 id="button-content" class="bv-no-focus-ring"><span class="bd-content-title">按钮内容<a class="anchorjs-link" href="#button-content" aria-labelledby="button-content"></a></span></h3>
-<p><code translate="no" class="notranslate text-nowrap">&lt;b-pagination-nav&gt;</code> supports several props/slots that allow you to customize the appearance. All <code translate="no" class="notranslate text-nowrap">*-text</code> props are text-only and strip out HTML but you can use their equally named slot
-counterparts for that.</p>
-<p>For a full list of all available slots see the <a href="#comp-ref-b-pagination-nav-slots" class="font-weight-bold">Slots</a> section
-below.</p>
+<p>
+  <code translate="no" class="notranslate text-nowrap">&lt;b-pagination-nav&gt;</code>支持多个道具/插槽，允许您自定义外观。
+  所有的<code translate="no" class="notranslate text-nowrap">*-text</code>属性都是纯文本的，去掉了HTML，但是您可以使用它们相同名称的插槽对应项。
+</p>
+<p>
+  有关所有可用插槽的完整列表，请参阅下面的<a href="#comp-ref-b-pagination-nav-slots" class="font-weight-bold">Slots</a>部分。
+</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-pagination-nav-appearance notranslate">
 <div class="overflow-auto">
 <nav aria-hidden="false">
@@ -672,78 +664,101 @@ below.</p>
     <span class="hljs-tag">&lt;/<span class="hljs-name">b-pagination-nav</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span></pre>
-<p>The slot <code translate="no" class="notranslate text-nowrap">page</code> is always scoped, while the slots <code translate="no" class="notranslate text-nowrap">first-text</code>, <code translate="no" class="notranslate text-nowrap">prev-text</code>, <code translate="no" class="notranslate text-nowrap">next-text</code> and <code translate="no" class="notranslate text-nowrap">last-text</code> are optionally scoped. The <code translate="no" class="notranslate text-nowrap">ellipsis-text</code> slot is not scoped.</p>
-<p><strong>Scoped variables properties available to the <code translate="no" class="notranslate text-nowrap">page</code> slot:</strong></p>
+<p>
+  slo<code translate="no" class="notranslate text-nowrap">页面</code>始终具有作用域，而slots <code translate="no" class="notranslate text-nowrap">first-text</code>, 
+  <code translate="no" class="notranslate text-nowrap">prev-text</code>,
+   <code translate="no" class="notranslate text-nowrap">next-text</code>和
+   <code translate="no" class="notranslate text-nowrap">last-text</code>可以选择作用域。<code translate="no" class="notranslate text-nowrap">省略文本</code>槽没有作用域。
+</p>
+<p><strong>
+  <code translate="no" class="notranslate text-nowrap">页面</code>可用的作用域变量属性：
+</p>
 <div class="table-responsive-sm">
 <table class="b-table table table-bordered table-striped bv-docs-table">
 <thead class="thead-default">
 <tr>
-<th>Property</th>
-<th>Type</th>
-<th>Description</th>
+<th>属性</th>
+<th>类型</th>
+<th>描述</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code translate="no" class="notranslate text-nowrap">page</code></td>
 <td>Number</td>
-<td>Page number (from <code translate="no" class="notranslate text-nowrap">1</code> to <code translate="no" class="notranslate text-nowrap">numberOfPages</code>)</td>
+<td>
+  页码（从<code translate="no" class="notranslate text-nowrap">1</code>到<code translate="no" class="notranslate text-nowrap">页码</code>）
+</td>
 </tr>
 <tr>
 <td><code translate="no" class="notranslate text-nowrap">index</code></td>
 <td>Number</td>
-<td>Page number (indexed from <code translate="no" class="notranslate text-nowrap">0</code> to <code translate="no" class="notranslate text-nowrap">numberOfPages -1</code>)</td>
+<td>
+  页码（从<code translate="no" class="notranslate text-nowrap">0</code>索引到页码 <code translate="no" class="notranslate text-nowrap">-1</code>）
 </tr>
 <tr>
 <td><code translate="no" class="notranslate text-nowrap">active</code></td>
 <td>Boolean</td>
-<td>If the page is the active page</td>
+<td>如果该页是活动页</td>
 </tr>
 <tr>
 <td><code translate="no" class="notranslate text-nowrap">disabled</code></td>
 <td>Boolean</td>
-<td>If the page button is disabled</td>
+<td>如果页面按钮被禁用</td>
 </tr>
 <tr>
 <td><code translate="no" class="notranslate text-nowrap">content</code></td>
 <td>String</td>
-<td>default content, or the result of the <code translate="no" class="notranslate text-nowrap">page-gen</code> function</td>
+<td>
+  默认内容，或<code translate="no" class="notranslate text-nowrap">页面生成</code>函数的结果
+</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p><strong>Scoped variables properties available to the <code translate="no" class="notranslate text-nowrap">first-text</code>, <code translate="no" class="notranslate text-nowrap">prev-text</code>, <code translate="no" class="notranslate text-nowrap">next-text</code> and <code translate="no" class="notranslate text-nowrap">last-text</code> slots:</strong></p>
+<p><strong>
+  <code translate="no" class="notranslate text-nowrap">第一个文本</code>, 
+  <code translate="no" class="notranslate text-nowrap">上一个文本</code>, 
+  <code translate="no" class="notranslate text-nowrap">下一个文本</code>和 
+  <code translate="no" class="notranslate text-nowrap">最后一个文本</code> 槽可用的作用域变量属性：
+</p>
 <div class="table-responsive-sm">
 <table class="b-table table table-bordered table-striped bv-docs-table">
 <thead class="thead-default">
 <tr>
-<th>Property</th>
-<th>Type</th>
-<th>Description</th>
+<th>属性</th>
+<th>类型</th>
+<th>描述</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code translate="no" class="notranslate text-nowrap">page</code></td>
 <td>Number</td>
-<td>Page number (from <code translate="no" class="notranslate text-nowrap">1</code> to <code translate="no" class="notranslate text-nowrap">numberOfPages</code>)</td>
+<td>
+  页码（从 <code translate="no" class="notranslate text-nowrap">1</code>到<code translate="no" class="notranslate text-nowrap">页码</code>）
+</td>
 </tr>
 <tr>
 <td><code translate="no" class="notranslate text-nowrap">index</code></td>
 <td>Number</td>
-<td>Page number (indexed from <code translate="no" class="notranslate text-nowrap">0</code> to <code translate="no" class="notranslate text-nowrap">numberOfPages -1</code>)</td>
+<td>
+  页码（从<code translate="no" class="notranslate text-nowrap">0</code>索引到页码<code translate="no" class="notranslate text-nowrap">-1</code>）
+</td>
 </tr>
 <tr>
 <td><code translate="no" class="notranslate text-nowrap">disabled</code></td>
 <td>Boolean</td>
-<td>If the page button is disabled</td>
+<td>如果页面按钮被禁用</td>
 </tr>
 </tbody>
 </table>
 </div>
-<h3 id="goto-firstlast-button-type" class="bv-no-focus-ring"><span class="bd-content-title">Goto first/last button type<a class="anchorjs-link" href="#goto-firstlast-button-type" aria-labelledby="goto-firstlast-button-type"></a></span></h3>
-<p>If you prefer to have buttons with the first and last page number to go to the corresponding page,
-use the <code translate="no" class="notranslate text-nowrap">first-number</code> and <code translate="no" class="notranslate text-nowrap">last-number</code> props.</p>
+<h3 id="goto-firstlast-button-type" class="bv-no-focus-ring"><span class="bd-content-title">转到第一个/最后一个按钮类型<a class="anchorjs-link" href="#goto-firstlast-button-type" aria-labelledby="goto-firstlast-button-type"></a></span></h3>
+<p>
+  如果希望有带有第一个和最后一个页码的按钮转到相应的页面，请使用<code translate="no" class="notranslate text-nowrap">第一个页码</code>和
+  <code translate="no" class="notranslate text-nowrap">最后一个页码</code>属性。
+</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-pagination-nav-goto-first-last-number notranslate">
 <div class="overflow-auto">
 <div>
@@ -841,9 +856,11 @@ use the <code translate="no" class="notranslate text-nowrap">first-number</code>
     }
   }
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
-<h3 id="button-size" class="bv-no-focus-ring"><span class="bd-content-title">Button size<a class="anchorjs-link" href="#button-size" aria-labelledby="button-size"></a></span></h3>
-<p>Optionally change from the default button size by setting the <code translate="no" class="notranslate text-nowrap">size</code> prop to either <code translate="no" class="notranslate text-nowrap">'sm'</code> for
-smaller buttons or <code translate="no" class="notranslate text-nowrap">'lg'</code> for larger buttons.</p>
+<h3 id="button-size" class="bv-no-focus-ring"><span class="bd-content-title">按钮大小<a class="anchorjs-link" href="#button-size" aria-labelledby="button-size"></a></span></h3>
+<p>
+  通过将“<code translate="no" class="notranslate text-nowrap">size</code>”属性设置为“<code translate="no" class="notranslate text-nowrap">'sm'</code>”表示较小的按钮，
+  或将“<code translate="no" class="notranslate text-nowrap">'lg'</code>”表示较大的按钮，可以选择从默认按钮大小更改为“<code translate="no" class="notranslate text-nowrap">'sm'</code>”。
+</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-pagination-nav-size notranslate">
 <div class="overflow-auto">
 <div>
@@ -914,8 +931,10 @@ smaller buttons or <code translate="no" class="notranslate text-nowrap">'lg'</co
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span></pre>
-<h3 id="pill-style" class="bv-no-focus-ring"><span class="bd-content-title">Pill style<a class="anchorjs-link" href="#pill-style" aria-labelledby="pill-style"></a></span></h3>
-<p>Easily switch to pill style buttons by setting the <code translate="no" class="notranslate text-nowrap">pills</code> prop</p>
+<h3 id="pill-style" class="bv-no-focus-ring"><span class="bd-content-title">Pill 样式<a class="anchorjs-link" href="#pill-style" aria-labelledby="pill-style"></a></span></h3>
+<p>
+  通过设置<code translate="no" class="notranslate text-nowrap">pills</code>属性轻松切换到pill样式按钮
+</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-pagination-nav-pills notranslate">
 <div class="overflow-auto">
 <div>
@@ -986,9 +1005,13 @@ smaller buttons or <code translate="no" class="notranslate text-nowrap">'lg'</co
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span></pre>
-<p><strong>Note:</strong> Pill styling requires BootstrapVue's custom CSS/SCSS.</p>
-<h3 id="alignment" class="bv-no-focus-ring"><span class="bd-content-title">Alignment<a class="anchorjs-link" href="#alignment" aria-labelledby="alignment"></a></span></h3>
-<p>By default the pagination component is left aligned. Change the alignment to <code translate="no" class="notranslate text-nowrap">center</code>, <code translate="no" class="notranslate text-nowrap">right</code> (<code translate="no" class="notranslate text-nowrap">right</code> is an alias for <code translate="no" class="notranslate text-nowrap">end</code>), or 'fill' by setting the prop <code translate="no" class="notranslate text-nowrap">align</code> to the appropriate value.</p>
+<p><strong>注意:</strong> pill样式需要BootstrapVue的自定义CSS/SCSS。</p>
+<h3 id="alignment" class="bv-no-focus-ring"><span class="bd-content-title">对齐<a class="anchorjs-link" href="#alignment" aria-labelledby="alignment"></a></span></h3>
+<p>
+  默认情况下，分页组件是左对齐的。通过将属性<code translate="no" class="notranslate text-nowrap">align</code>设置为适当的值，将align更改为 <code translate="no" class="notranslate text-nowrap">center</code>, 
+  <code translate="no" class="notranslate text-nowrap">right</code> (
+  <code translate="no" class="notranslate text-nowrap">right</code>是<code translate="no" class="notranslate text-nowrap">end</code>的别名）或fill。
+</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-pagination-nav-alignment notranslate">
 <div class="overflow-auto">
 <div>
@@ -1080,32 +1103,44 @@ smaller buttons or <code translate="no" class="notranslate text-nowrap">'lg'</co
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span></pre>
-<h2 id="auto-current-page-detection-and-v-model-support" class="bv-no-focus-ring"><span class="bd-content-title">Auto current page detection and <code translate="no" class="notranslate text-nowrap">v-model</code> support<a class="anchorjs-link" href="#auto-current-page-detection-and-v-model-support" aria-labelledby="auto-current-page-detection-and-v-model-support"></a></span></h2>
-<p><code translate="no" class="notranslate text-nowrap">&lt;b-pagination-nav&gt;</code> will try and automatically detect which page button should be active, based on
-the page's current URL or <code translate="no" class="notranslate text-nowrap">$route</code> (if a router is detected). In cases where it cannot detect the
-page, no page number buttons will be in the active state, and the first, previous, next and last
-buttons will be in the disabled state until a page button is clicked.</p>
-<p><code translate="no" class="notranslate text-nowrap">v-model</code> is optionally supported (updated by the <code translate="no" class="notranslate text-nowrap">input</code> event, and tied to the <code translate="no" class="notranslate text-nowrap">value</code> prop).
-Setting the <code translate="no" class="notranslate text-nowrap">v-model</code> to <code translate="no" class="notranslate text-nowrap">null</code> (the default) initially will trigger auto active page detection, and
-will subsequently be updated with the current page number (indexed from <code translate="no" class="notranslate text-nowrap">1</code> to number of pages). If
-you initially set the <code translate="no" class="notranslate text-nowrap">v-model</code> to a value of <code translate="no" class="notranslate text-nowrap">1</code> or greater, auto page detection will not occur
-(until after a user clicks a page button), and the page specified by the <code translate="no" class="notranslate text-nowrap">v-model</code> will be set as <code translate="no" class="notranslate text-nowrap">active</code>.</p>
-<p>To disable auto active page detection, set the <code translate="no" class="notranslate text-nowrap">no-page-detect</code> prop to <code translate="no" class="notranslate text-nowrap">true</code>.</p>
-<p><strong>Note:</strong> Auto page detection needs to loop through all possible page links until a match is
-detected. For larger <code translate="no" class="notranslate text-nowrap">number-of-pages</code>, this check can take some time so you may want to manually
-control which page is the active via the <code translate="no" class="notranslate text-nowrap">v-model</code> and the <code translate="no" class="notranslate text-nowrap">no-page-detect</code> prop.</p>
-<h2 id="accessibility" class="bv-no-focus-ring"><span class="bd-content-title">Accessibility<a class="anchorjs-link" href="#accessibility" aria-labelledby="accessibility"></a></span></h2>
-<p>The <code translate="no" class="notranslate text-nowrap">&lt;b-pagination-nav&gt;</code> component provides many features to support assistive technology users,
-such as <code translate="no" class="notranslate text-nowrap">aria-</code> attributes and keyboard navigation.</p>
-<h3 id="aria-labels" class="bv-no-focus-ring"><span class="bd-content-title">ARIA labels<a class="anchorjs-link" href="#aria-labels" aria-labelledby="aria-labels"></a></span></h3>
-<p><code translate="no" class="notranslate text-nowrap">&lt;b-pagination-nav&gt;</code> provides various <code translate="no" class="notranslate text-nowrap">*-label-*</code> props which are used to set the <code translate="no" class="notranslate text-nowrap">aria-label</code> attributes on the various elements within the component, which will help users of assistive
-technology.</p>
+<h2 id="auto-current-page-detection-and-v-model-support" class="bv-no-focus-ring"><span class="bd-content-title">
+  自动当前页检测和<code translate="no" class="notranslate text-nowrap">v-model</code>支持
+  <a class="anchorjs-link" href="#auto-current-page-detection-and-v-model-support" aria-labelledby="auto-current-page-detection-and-v-model-support"></a></span>
+</h2>
+<p>
+  <code translate="no" class="notranslate text-nowrap">&lt;b-pagination-nav&gt;</code>将根据页面的当前URL或<code translate="no" class="notranslate text-nowrap">$route</code>（如果检测到路由器），
+  尝试并自动检测哪个页面按钮应处于活动状态。如果无法检测到页面，则没有页码按钮处于活动状态，在单击页面按钮之前，第一个、上一个、下一个和最后一个按钮将处于禁用状态。
+</p>
+<p>
+  <code translate="no" class="notranslate text-nowrap">v-model</code>是可选支持的（由输入事件更新，并绑定到值属性）。
+  最初将<code translate="no" class="notranslate text-nowrap">v-model</code>设置为<code translate="no" class="notranslate text-nowrap">null</code>（默认值）将触发自动活动页面检测，
+  随后将使用当前页码（从<code translate="no" class="notranslate text-nowrap">1</code>到页数的索引）进行更新。如果最初将<code translate="no" class="notranslate text-nowrap">v-model</code>设置为1或更大的值，
+  则不会进行自动页面检测（直到用户单击页面按钮之后），<code translate="no" class="notranslate text-nowrap">v-model</code>指定的页面将设置为活动页面。
+</p>
+<p>
+  要禁用自动活动页面检测，请将<code translate="no" class="notranslate text-nowrap">无页面检测</code>属性设置为<code translate="no" class="notranslate text-nowrap">true</code>。
+</p>
+<p><strong>注意:</strong> 
+  
+  自动页面检测需要遍历所有可能的页面链接，直到检测到匹配。对于更多的页面，此检查可能需要一些时间，因此您可能希望通过<code translate="no" class="notranslate text-nowrap">v-model</code>和
+  <code translate="no" class="notranslate text-nowrap">no-page-detect</code>属性手动控制哪个页面处于活动状态。
+</p>
+<h2 id="accessibility" class="bv-no-focus-ring"><span class="bd-content-title">可访问性<a class="anchorjs-link" href="#accessibility" aria-labelledby="accessibility"></a></span></h2>
+<p>
+  <code translate="no" class="notranslate text-nowrap">&lt;b-pagination-nav&gt;</code>组件提供了许多支持辅助技术用户的功能，
+  例如<code translate="no" class="notranslate text-nowrap">aria</code>属性和键盘导航。
+</p>
+<h3 id="aria-labels" class="bv-no-focus-ring"><span class="bd-content-title">ARIA标签<a class="anchorjs-link" href="#aria-labels" aria-labelledby="aria-labels"></a></span></h3>
+<p>
+  <code translate="no" class="notranslate text-nowrap">&lt;b-pagination-nav&gt;</code>提供各种<code translate="no" class="notranslate text-nowrap">*-label-*</code>属性，
+  用于设置组件中各个元素的<code translate="no" class="notranslate text-nowrap">aria-label</code>属性，这将帮助辅助技术的用户。
+</p>
 <div class="table-responsive-sm">
 <table class="b-table table table-bordered table-striped bv-docs-table">
 <thead class="thead-default">
 <tr>
-<th>Prop</th>
-<th><code translate="no" class="notranslate text-nowrap">aria-label</code> content default</th>
+<th>属性</th>
+<th><code translate="no" class="notranslate text-nowrap">aria-label</code> 内容默认值</th>
 </tr>
 </thead>
 <tbody>
@@ -1127,35 +1162,50 @@ technology.</p>
 </tr>
 <tr>
 <td><code translate="no" class="notranslate text-nowrap">label-page</code></td>
-<td>"Goto page", appended with the page number</td>
+<td>"Goto page", 附页码</td>
 </tr>
 <tr>
 <td><code translate="no" class="notranslate text-nowrap">aria-label</code></td>
-<td>"Pagination", applied to the outer pagination container</td>
+<td>"Pagination", 应用于外部分页容器</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p>The <code translate="no" class="notranslate text-nowrap">label-page</code> will optionally accept a function to generate the aria-label. The function is
-passed a single argument which is the page number (indexed from 1 to number of pages).</p>
-<p>You can remove any label by setting the prop to an empty string (<code translate="no" class="notranslate text-nowrap">''</code>), although this is not
-recommended unless the content of the button textually conveys its purpose.</p>
-<h3 id="keyboard-navigation" class="bv-no-focus-ring"><span class="bd-content-title">Keyboard navigation<a class="anchorjs-link" href="#keyboard-navigation" aria-labelledby="keyboard-navigation"></a></span></h3>
-<p><code translate="no" class="notranslate text-nowrap">&lt;b-pagination-nav&gt;</code> supports keyboard navigation out of the box, and follows the <a href="https://www.w3.org/TR/wai-aria-practices-1.2/#kbd_roving_tabindex" target="_blank" rel="noopener">WAI-ARIA roving tabindex</a> pattern.</p>
+<p>
+  <code translate="no" class="notranslate text-nowrap">label页面</code>可以选择接受一个函数来生成aria标签。函数被传递一个参数，即页码（从1到页数的索引）。
+</p>
+<p>
+  您可以通过将prop设置为空字符串（<code translate="no" class="notranslate text-nowrap">''</code>）来移除任何标签，但不建议这样做，除非按钮的内容以文本形式传达其用途。
+</p>
+<h3 id="keyboard-navigation" class="bv-no-focus-ring"><span class="bd-content-title">键盘导航 <a class="anchorjs-link" href="#keyboard-navigation" aria-labelledby="keyboard-navigation"></a></span></h3>
+<p>
+  <code translate="no" class="notranslate text-nowrap">&lt;b-pagination-nav&gt;</code>支持现成的键盘导航，
+  并遵循 <a href="https://www.w3.org/TR/wai-aria-practices-1.2/#kbd_roving_tabindex" target="_blank" rel="noopener">WAI-ARIA roving tabindex</a>模式。
+</p>
 <ul>
-<li>Tabbing into the pagination component will autofocus the current active page button</li>
-<li><kbd class="notranslate" translate="no">LEFT</kbd> (or <kbd class="notranslate" translate="no">UP</kbd>) and <kbd class="notranslate" translate="no">RIGHT</kbd> (or <kbd class="notranslate" translate="no">DOWN</kbd>) arrow keys will focus
-the previous and next buttons, respectively, in the page list</li>
-<li><kbd class="notranslate" translate="no">ENTER</kbd> or <kbd class="notranslate" translate="no">SPACE</kbd> keys will select (click) the currently focused page button</li>
-<li>Pressing <kbd class="notranslate" translate="no">TAB</kbd> will move to the next control or link on the page, while pressing <kbd class="notranslate" translate="no">SHIFT</kbd>+<kbd class="notranslate" translate="no">TAB</kbd> will move to the previous control or link on the page.</li>
+<li>切换到分页组件将自动聚焦当前活动页按钮</li>
+<li>
+  <kbd class="notranslate" translate="no">LEFT</kbd> (或 <kbd class="notranslate" translate="no">UP</kbd>)和 
+  <kbd class="notranslate" translate="no">RIGHT</kbd> (或 <kbd class="notranslate" translate="no">DOWN</kbd>)箭头键将分别聚焦页面列表中的上一个和下一个按钮
+</li>
+<li>
+  <kbd class="notranslate" translate="no">ENTER</kbd>或<kbd class="notranslate" translate="no">SPACE</kbd>键将选择（单击）当前聚焦的页面按钮
+</li>
+<li>
+  按<kbd class="notranslate" translate="no">TAB</kbd>键将移动到页面上的下一个控件或链接，而按<kbd class="notranslate" translate="no">SHIFT</kbd>+<kbd class="notranslate" translate="no">TAB</kbd>键将移动到页面上的上一个控件或链接。
+</li>
 </ul>
-<h2 id="see-also" class="bv-no-focus-ring"><span class="bd-content-title">See also<a class="anchorjs-link" href="#see-also" aria-labelledby="see-also"></a></span></h2>
-<p>Refer to the <a href="../../../bootstrap-vue/docs/reference/router-links" class="font-weight-bold">Router support</a> reference page for router-link specific
-props.</p>
-<p>For pagination control of a component (such as <code translate="no" class="notranslate text-nowrap">&lt;b-table&gt;</code>), use the <a href="../../../bootstrap-vue/docs/components/pagination" class="font-weight-bold"><code translate="no" class="notranslate text-nowrap">&lt;b-pagination&gt;</code></a> component instead.</p>
+<h2 id="see-also" class="bv-no-focus-ring"><span class="bd-content-title">另请参阅<a class="anchorjs-link" href="#see-also" aria-labelledby="see-also"></a></span></h2>
+<p>
+  请参阅<a href="../../../bootstrap-vue/docs/reference/router-links" class="font-weight-bold">路由器支持</a>参考页以获取路由器链接特定的道具。
+</p>
+<p>
+  对于组件的分页控制（例如<code translate="no" class="notranslate text-nowrap">&lt;b-table&gt;</code>），
+  请改用<a href="../../../bootstrap-vue/docs/components/pagination" class="font-weight-bold"><code translate="no" class="notranslate text-nowrap">&lt;b-pagination&gt;</code></a>组件。
+</p>
 <!-- Component reference added automatically from component package.json -->
 
-<h2 id="component-reference" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title">Component reference<a href="../../../bootstrap-vue/docs/components/pagination-nav#component-reference" class="anchorjs-link" aria-labelledby="component-reference" target="_self"></a></span></h2>
+<h2 id="component-reference" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title">组件引用<a href="../../../bootstrap-vue/docs/components/pagination-nav#component-reference" class="anchorjs-link" aria-labelledby="component-reference" target="_self"></a></span></h2>
 <section data-v-866a22e8="" class="bd-content">
 <header data-v-866a22e8="" class="row align-items-center">
 <div data-v-866a22e8="" class="col-sm-9">
@@ -1164,21 +1214,21 @@ props.</p>
 <div data-v-866a22e8="" class="text-sm-right col-sm-3"><a data-v-866a22e8="" rel="noopener" target="_blank" href="https://github.com/bootstrap-vue/bootstrap-vue/tree/dev/src/components/pagination-nav/pagination-nav.js" class="btn btn-outline-secondary btn-sm"> View source </a></div>
 </header>
 <ul data-v-866a22e8="" class="component-ref-mini-toc my-3">
-<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-pagination-nav-props"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-pagination-nav&gt;</code> Properties </a></li>
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-pagination-nav-props"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-pagination-nav&gt;</code> 属性 </a></li>
 <li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-pagination-nav-v-model"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-pagination-nav&gt;</code> v-model </a></li>
 <li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-pagination-nav-slots"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-pagination-nav&gt;</code> Slots </a></li>
-<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-pagination-nav-events"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-pagination-nav&gt;</code> Events </a></li>
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-pagination-nav-events"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-pagination-nav&gt;</code> 事件 </a></li>
 </ul>
 <article data-v-866a22e8="" class="bd-content">
-<h4 data-v-866a22e8="" id="comp-ref-b-pagination-nav-props" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> Properties <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/pagination-nav#comp-ref-b-pagination-nav-props" class="anchorjs-link" aria-labelledby="comp-ref-b-pagination-nav-props" target="_self"></a></span></h4>
+<h4 data-v-866a22e8="" id="comp-ref-b-pagination-nav-props" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> 属性 <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/pagination-nav#comp-ref-b-pagination-nav-props" class="anchorjs-link" aria-labelledby="comp-ref-b-pagination-nav-props" target="_self"></a></span></h4>
 <div data-v-866a22e8="" class="table-responsive-sm">
 <table role="table" aria-busy="false" aria-colcount="4" class="table b-table bv-docs-table table-striped" id="__BVID__879">
 <thead role="rowgroup" class="">
 <tr role="row" class="">
-<th role="columnheader" scope="col" tabindex="0" aria-colindex="1" aria-sort="none" class="b-table-sort-icon-left">Property<span class="sr-only"> (Click to sort Ascending)</span></th>
-<th role="columnheader" scope="col" tabindex="0" aria-colindex="2" class="">Type</th>
-<th role="columnheader" scope="col" tabindex="0" aria-colindex="3" class="">Default</th>
-<th role="columnheader" scope="col" tabindex="0" aria-colindex="4" class="">Description</th>
+<th role="columnheader" scope="col" tabindex="0" aria-colindex="1" aria-sort="none" class="b-table-sort-icon-left">属性<span class="sr-only"> (Click to sort Ascending)</span></th>
+<th role="columnheader" scope="col" tabindex="0" aria-colindex="2" class="">类型</th>
+<th role="columnheader" scope="col" tabindex="0" aria-colindex="3" class="">默认值</th>
+<th role="columnheader" scope="col" tabindex="0" aria-colindex="4" class="">描述</th>
 </tr>
 </thead>
 <tbody role="rowgroup">
@@ -1186,31 +1236,31 @@ props.</p>
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">disabled</code></td>
 <td aria-colindex="2" role="cell" class="">Boolean</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
-<td aria-colindex="4" role="cell" class="">When set to 'true', disables the component's functionality and places it in a disabled state</td>
+<td aria-colindex="4" role="cell" class="">当设置为“true”时，将禁用组件的功能并将其置于禁用状态</td>
 </tr>
 <tr role="row" data-pk="value" class="" id="__BVID__879__row_value">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">value</code> <span data-v-866a22e8="" class="badge badge-primary">v-model</span></td>
 <td aria-colindex="2" role="cell" class="">Number or String</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">Current page number, starting from 1</td>
+<td aria-colindex="4" role="cell" class="">当前页码，从1开始</td>
 </tr>
 <tr role="row" data-pk="limit" class="" id="__BVID__879__row_limit">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">limit</code></td>
 <td aria-colindex="2" role="cell" class="">Number or String</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">5</code></td>
-<td aria-colindex="4" role="cell" class="">Maximum number of buttons to show (including ellipsis if shown, but excluding the bookend buttons)</td>
+<td aria-colindex="4" role="cell" class="">要显示的最大按钮数（如果显示，则包括省略号，但不包括bookend按钮）</td>
 </tr>
 <tr role="row" data-pk="align" class="" id="__BVID__879__row_align">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">align</code></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'left'</code></td>
-<td aria-colindex="4" role="cell" class="">Alignment of the page buttons: 'start' (or 'left'), 'center', 'end' (or 'right'), or 'fill'</td>
+<td aria-colindex="4" role="cell" class="">页面按钮的对齐方式：“开始”（或“左”）、“中心”、“结束”（或“右”）或“填充”</td>
 </tr>
 <tr role="row" data-pk="pills" class="" id="__BVID__879__row_pills">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">pills</code> <span data-v-866a22e8="" class="badge badge-secondary">v2.1.0+</span></td>
 <td aria-colindex="2" role="cell" class="">Boolean</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
-<td aria-colindex="4" role="cell" class="">Applies pill styling to the pagination buttons</td>
+<td aria-colindex="4" role="cell" class="">对分页按钮应用pill样式</td>
 </tr>
 <tr role="row" data-pk="hide-goto-end-buttons" class="" id="__BVID__879__row_hide-goto-end-buttons">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">hide-goto-end-buttons</code></td>
@@ -1222,200 +1272,208 @@ props.</p>
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">aria-label</code></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'Pagination'</code></td>
-<td aria-colindex="4" role="cell" class="">Value to place in the 'aria-label' attribute of the pagination control</td>
+<td aria-colindex="4" role="cell" class="">隐藏“转到第一页”和“转到最后一页”按钮</td>
 </tr>
 <tr role="row" data-pk="label-first-page" class="" id="__BVID__879__row_label-first-page">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">label-first-page</code></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'Go to first page'</code></td>
-<td aria-colindex="4" role="cell" class="">Value to place in the 'aria-label' attribute of the goto first page button</td>
+<td aria-colindex="4" role="cell" class="">要放入“转到第一页”按钮的“aria label”属性中的值</td>
 </tr>
 <tr role="row" data-pk="first-text" class="" id="__BVID__879__row_first-text">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">first-text</code></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'«'</code></td>
-<td aria-colindex="4" role="cell" class="">Content to place in the goto first page button</td>
+<td aria-colindex="4" role="cell" class="">“转到第一页”按钮中要放置的内容</td>
 </tr>
 <tr role="row" data-pk="first-number" class="" id="__BVID__879__row_first-number">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">first-number</code> <span data-v-866a22e8="" class="badge badge-secondary">v2.3.0+</span></td>
 <td aria-colindex="2" role="cell" class="">Boolean</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
-<td aria-colindex="4" role="cell" class="">Display first page number instead of Goto First button</td>
+<td aria-colindex="4" role="cell" class="">显示第一个页码而不是转到第一个按钮</td>
 </tr>
 <tr role="row" data-pk="first-class" class="" id="__BVID__879__row_first-class">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">first-class</code> <span data-v-866a22e8="" class="badge badge-secondary">v2.3.0+</span></td>
 <td aria-colindex="2" role="cell" class="">String or Array or Object</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">Class(es) to apply to the 'Go to first page' button</td>
+<td aria-colindex="4" role="cell" class="">类应用于“转到第一页”按钮</td>
 </tr>
 <tr role="row" data-pk="label-prev-page" class="" id="__BVID__879__row_label-prev-page">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">label-prev-page</code></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'Go to previous page'</code></td>
-<td aria-colindex="4" role="cell" class="">Value to place in the 'aria-label' attribute of the goto previous page button</td>
+<td aria-colindex="4" role="cell" class="">要放入“转到上一页”按钮的“aria label”属性中的值</td>
 </tr>
 <tr role="row" data-pk="prev-text" class="" id="__BVID__879__row_prev-text">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">prev-text</code></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'‹'</code></td>
-<td aria-colindex="4" role="cell" class="">Content to place in the goto previous page button</td>
+<td aria-colindex="4" role="cell" class="">“转到上一页”按钮中要放置的内容</td>
 </tr>
 <tr role="row" data-pk="prev-class" class="" id="__BVID__879__row_prev-class">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">prev-class</code> <span data-v-866a22e8="" class="badge badge-secondary">v2.3.0+</span></td>
 <td aria-colindex="2" role="cell" class="">String or Array or Object</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">Class(es) to apply to the 'Go to previous page' button</td>
+<td aria-colindex="4" role="cell" class="">类应用于“转到上一页”按钮</td>
 </tr>
 <tr role="row" data-pk="label-next-page" class="" id="__BVID__879__row_label-next-page">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">label-next-page</code></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'Go to next page'</code></td>
-<td aria-colindex="4" role="cell" class="">Value to place in the 'aria-label' attribute of the goto next page button</td>
+<td aria-colindex="4" role="cell" class="">要放入“转到下一页”按钮的“aria label”属性中的值</td>
 </tr>
 <tr role="row" data-pk="next-text" class="" id="__BVID__879__row_next-text">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">next-text</code></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'›'</code></td>
-<td aria-colindex="4" role="cell" class="">Content to place in the goto next page button</td>
+<td aria-colindex="4" role="cell" class="">“转到下一页”按钮中要放置的内容</td>
 </tr>
 <tr role="row" data-pk="next-class" class="" id="__BVID__879__row_next-class">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">next-class</code> <span data-v-866a22e8="" class="badge badge-secondary">v2.3.0+</span></td>
 <td aria-colindex="2" role="cell" class="">String or Array or Object</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">Class(es) to apply to the 'Go to next page' button</td>
+<td aria-colindex="4" role="cell" class="">类应用于“转到下一页”按钮</td>
 </tr>
 <tr role="row" data-pk="label-last-page" class="" id="__BVID__879__row_label-last-page">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">label-last-page</code></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'Go to last page'</code></td>
-<td aria-colindex="4" role="cell" class="">Value to place in the 'aria-label' attribute of the goto last page button</td>
+<td aria-colindex="4" role="cell" class="">要放入“转到最后一页”按钮的“aria label”属性中的值</td>
 </tr>
 <tr role="row" data-pk="last-text" class="" id="__BVID__879__row_last-text">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">last-text</code></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'»'</code></td>
-<td aria-colindex="4" role="cell" class="">Content to place in the goto last page button</td>
+<td aria-colindex="4" role="cell" class="">“转到最后一页”按钮中要放置的内容</td>
 </tr>
 <tr role="row" data-pk="last-number" class="" id="__BVID__879__row_last-number">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">last-number</code> <span data-v-866a22e8="" class="badge badge-secondary">v2.3.0+</span></td>
 <td aria-colindex="2" role="cell" class="">Boolean</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
-<td aria-colindex="4" role="cell" class="">Display last page number instead of Goto Last button</td>
+<td aria-colindex="4" role="cell" class="">显示最后一个页码而不是转到最后一个按钮</td>
 </tr>
 <tr role="row" data-pk="last-class" class="" id="__BVID__879__row_last-class">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">last-class</code> <span data-v-866a22e8="" class="badge badge-secondary">v2.3.0+</span></td>
 <td aria-colindex="2" role="cell" class="">String or Array or Object</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">Class(es) to apply to the 'Go to last page' button</td>
+<td aria-colindex="4" role="cell" class="">类应用于“转到最后一页”按钮</td>
 </tr>
 <tr role="row" data-pk="label-page" class="" id="__BVID__879__row_label-page">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">label-page</code></td>
 <td aria-colindex="2" role="cell" class="">String or Function</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'Go to page'</code></td>
-<td aria-colindex="4" role="cell" class="">Value to place in the 'aria-label' attribute of the goto page button. Page number will be prepended automatically</td>
+<td aria-colindex="4" role="cell" class="">要放入“转到页面”按钮的“aria label”属性中的值。页码将自动添加</td>
 </tr>
 <tr role="row" data-pk="page-class" class="" id="__BVID__879__row_page-class">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">page-class</code> <span data-v-866a22e8="" class="badge badge-secondary">v2.3.0+</span></td>
 <td aria-colindex="2" role="cell" class="">String or Array or Object</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">Class(es) to apply to the 'Go to page #' buttons</td>
+<td aria-colindex="4" role="cell" class="">要应用于“转到页面”按钮的类</td>
 </tr>
 <tr role="row" data-pk="hide-ellipsis" class="" id="__BVID__879__row_hide-ellipsis">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">hide-ellipsis</code></td>
 <td aria-colindex="2" role="cell" class="">Boolean</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
-<td aria-colindex="4" role="cell" class="">Do not show ellipsis buttons</td>
+<td aria-colindex="4" role="cell" class="">不显示省略号按钮</td>
 </tr>
 <tr role="row" data-pk="ellipsis-text" class="" id="__BVID__879__row_ellipsis-text">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">ellipsis-text</code></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'…'</code></td>
-<td aria-colindex="4" role="cell" class="">Content to place in the ellipsis placeholder</td>
+<td aria-colindex="4" role="cell" class="">要放置在省略号占位符中的内容</td>
 </tr>
 <tr role="row" data-pk="ellipsis-class" class="" id="__BVID__879__row_ellipsis-class">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">ellipsis-class</code> <span data-v-866a22e8="" class="badge badge-secondary">v2.3.0+</span></td>
 <td aria-colindex="2" role="cell" class="">String or Array or Object</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">Class(es) to apply to the 'ellipsis' placeholders</td>
+<td aria-colindex="4" role="cell" class="">要应用于“省略号”占位符的类</td>
 </tr>
 <tr role="row" data-pk="size" class="" id="__BVID__879__row_size">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">size</code></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">Size of the rendered buttons: 'sm', 'md' (default), or 'lg'</td>
+<td aria-colindex="4" role="cell" class="">呈现按钮的大小：“sm”、“md”（默认）或“lg”</td>
 </tr>
 <tr role="row" data-pk="number-of-pages" class="" id="__BVID__879__row_number-of-pages">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">number-of-pages</code></td>
 <td aria-colindex="2" role="cell" class="">Number or String</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">1</code></td>
-<td aria-colindex="4" role="cell" class="">Total number of pages</td>
+<td aria-colindex="4" role="cell" class="">总页数</td>
 </tr>
 <tr role="row" data-pk="base-url" class="" id="__BVID__879__row_base-url">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">base-url</code></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'/'</code></td>
-<td aria-colindex="4" role="cell" class="">Base URL to use when auto generating page links</td>
+<td aria-colindex="4" role="cell" class="">自动生成页面链接时使用的基本URL</td>
 </tr>
 <tr role="row" data-pk="use-router" class="" id="__BVID__879__row_use-router">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">use-router</code></td>
 <td aria-colindex="2" role="cell" class="">Boolean</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
-<td aria-colindex="4" role="cell" class="">Render router-links instead of links when auto generating the page links</td>
+<td aria-colindex="4" role="cell" class="">自动生成页面链接时，渲染路由器链接而不是链接</td>
 </tr>
 <tr role="row" data-pk="link-gen" class="" id="__BVID__879__row_link-gen">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">link-gen</code></td>
 <td aria-colindex="2" role="cell" class="">Function</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">Link generator function. See docs for details</td>
+<td aria-colindex="4" role="cell" class="">链接生成器功能。 有关详细信息，请参阅文档</td>
 </tr>
 <tr role="row" data-pk="page-gen" class="" id="__BVID__879__row_page-gen">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">page-gen</code></td>
 <td aria-colindex="2" role="cell" class="">Function</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">page number generator function. See docs for details</td>
+<td aria-colindex="4" role="cell" class="">页码生成器功能。 有关详细信息，请参阅文档</td>
 </tr>
 <tr role="row" data-pk="pages" class="" id="__BVID__879__row_pages">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">pages</code></td>
 <td aria-colindex="2" role="cell" class="">Array</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">Array of page numbers and links</td>
+<td aria-colindex="4" role="cell" class="">页码和链接数组</td>
 </tr>
 <tr role="row" data-pk="no-page-detect" class="" id="__BVID__879__row_no-page-detect">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">no-page-detect</code></td>
 <td aria-colindex="2" role="cell" class="">Boolean</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
-<td aria-colindex="4" role="cell" class="">Disable of auto detection of current page</td>
+<td aria-colindex="4" role="cell" class="">禁用自动检测当前页面</td>
 </tr>
 <tr role="row" data-pk="active-class" class="" id="__BVID__879__row_active-class">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">active-class</code></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">router-link prop: Configure the active CSS class applied when the link is active. Typically you will want to set this to class name 'active'</td>
+<td aria-colindex="4" role="cell" class="">
+  router-link属性：配置在链接处于活动状态时应用的活动CSS类。 通常，您将需要将此设置为类名称“ active”</td>
 </tr>
 <tr role="row" data-pk="exact" class="" id="__BVID__879__row_exact">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">exact</code></td>
 <td aria-colindex="2" role="cell" class="">Boolean</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
-<td aria-colindex="4" role="cell" class="">router-link prop: The default active class matching behavior is inclusive match. Setting this prop forces the mode to exactly match the route</td>
+<td aria-colindex="4" role="cell" class="">
+  router-link属性：默认的活动类匹配行为是包含匹配。 设置此道具会强制模式与路线完全匹配</td>
 </tr>
 <tr role="row" data-pk="exact-active-class" class="" id="__BVID__879__row_exact-active-class">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">exact-active-class</code></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">router-link prop: Configure the active CSS class applied when the link is active with exact match. Typically you will want to set this to class name 'active'</td>
+<td aria-colindex="4" role="cell" class="">
+  router-link属性：配置当链接处于完全匹配状态时应用的活动CSS类。 通常，您将需要将此设置为类名称“ active”</td>
 </tr>
 <tr role="row" data-pk="no-prefetch" class="" id="__BVID__879__row_no-prefetch">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">no-prefetch</code></td>
 <td aria-colindex="2" role="cell" class="">Boolean</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
-<td aria-colindex="4" role="cell" class="">nuxt-link prop: To improve the responsiveness of your Nuxt.js applications, when the link will be displayed within the viewport, Nuxt.js will automatically prefetch the code splitted page. Setting 'no-prefetch' will disabled this feature for the specific link</td>
+<td aria-colindex="4" role="cell" class="">
+  nuxt-link属性：为了提高Nuxt.js应用程序的响应速度，当链接将显示在视口中时，Nuxt.js将自动预取代码拆分页面。 设置“不预取”将禁用特定链接的此功能</td>
 </tr>
 </tbody>
 </table>
 </div>
 <div data-v-866a22e8="" class="alert alert-info">
-<p data-v-866a22e8="" class="mb-0 small"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-pagination-nav&gt;</code> supports generating <code data-v-866a22e8="" translate="translate" class="notranslate">&lt;router-link&gt;</code> or <code data-v-866a22e8="" translate="translate" class="notranslate">&lt;nuxt-link&gt;</code> component (if using Nuxt.js).
-        For more details on the router link (or nuxt link) specific props, see the <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/reference/router-links" class="alert-link" target="_self">Router support</a> reference section. </p>
+<p data-v-866a22e8="" class="mb-0 small">
+  <code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-pagination-nav&gt;</code>
+  支持生成<code data-v-866a22e8="" translate="translate" class="notranslate">&lt;router-link&gt;</code>或 
+  <code data-v-866a22e8="" translate="translate" class="notranslate">&lt;nuxt-link&gt;</code>组件（如果使用nuxt.js）。
+  有关路由器链接（或nuxt链接）特定属性的更多详细信息，请参阅<a data-v-866a22e8="" href="../../../bootstrap-vue/docs/reference/router-links" class="alert-link" target="_self">路由器支持</a>参考部分。
+</p>
 </div>
 </article>
 <article data-v-866a22e8="" class="bd-content">
@@ -1424,8 +1482,8 @@ props.</p>
 <table role="table" aria-busy="false" aria-colcount="2" class="table b-table bv-docs-table table-striped" id="__BVID__929">
 <thead role="rowgroup" class="">
 <tr role="row" class="">
-<th role="columnheader" scope="col" aria-colindex="1" class="">Property</th>
-<th role="columnheader" scope="col" aria-colindex="2" class="">Event</th>
+<th role="columnheader" scope="col" aria-colindex="1" class="">属性</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">事件</th>
 </tr>
 </thead>
 <tbody role="rowgroup">
@@ -1443,40 +1501,40 @@ props.</p>
 <table role="table" aria-busy="false" aria-colcount="3" class="table b-table bv-docs-table table-striped" id="__BVID__938">
 <thead role="rowgroup" class="">
 <tr role="row" class="">
-<th role="columnheader" scope="col" aria-colindex="1" class="">Slot Name</th>
-<th role="columnheader" scope="col" aria-colindex="2" class="">Description</th>
-<th role="columnheader" scope="col" aria-colindex="3" class="">Scoped</th>
+<th role="columnheader" scope="col" aria-colindex="1" class="">Slot 名称</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">描述</th>
+<th role="columnheader" scope="col" aria-colindex="3" class="">范围</th>
 </tr>
 </thead>
 <tbody role="rowgroup">
 <tr role="row" data-pk="first-text" class="" id="__BVID__938__row_first-text">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">first-text</code></td>
-<td aria-colindex="2" role="cell" class="">The "go to first page" button content. Optionally scoped</td>
+<td aria-colindex="2" role="cell" class="">“转到第一页”按钮内容。可选范围</td>
 <td aria-colindex="3" role="cell" class=""><button data-v-866a22e8="" type="button" class="btn py-0 btn-info btn-sm"> Scope </button></td>
 </tr>
 <tr role="row" data-pk="prev-text" class="" id="__BVID__938__row_prev-text">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">prev-text</code></td>
-<td aria-colindex="2" role="cell" class="">The "go to previous page" button content. Optionally scoped</td>
+<td aria-colindex="2" role="cell" class="">“转到上一页”按钮内容。可选范围</td>
 <td aria-colindex="3" role="cell" class=""><button data-v-866a22e8="" type="button" class="btn py-0 btn-info btn-sm"> Scope </button></td>
 </tr>
 <tr role="row" data-pk="next-text" class="" id="__BVID__938__row_next-text">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">next-text</code></td>
-<td aria-colindex="2" role="cell" class="">The "go to next page" button content. Optionally scoped</td>
+<td aria-colindex="2" role="cell" class="">“转到下一页”按钮内容。可选范围</td>
 <td aria-colindex="3" role="cell" class=""><button data-v-866a22e8="" type="button" class="btn py-0 btn-info btn-sm"> Scope </button></td>
 </tr>
 <tr role="row" data-pk="last-text" class="" id="__BVID__938__row_last-text">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">last-text</code></td>
-<td aria-colindex="2" role="cell" class="">The "go to last page" button content. Optionally scoped</td>
+<td aria-colindex="2" role="cell" class="">“转到最后一页”按钮内容。可选范围</td>
 <td aria-colindex="3" role="cell" class=""><button data-v-866a22e8="" type="button" class="btn py-0 btn-info btn-sm"> Scope </button></td>
 </tr>
 <tr role="row" data-pk="ellipsis-text" class="" id="__BVID__938__row_ellipsis-text">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">ellipsis-text</code></td>
-<td aria-colindex="2" role="cell" class="">The '...' indicator content. Not scoped</td>
+<td aria-colindex="2" role="cell" class="">“…”指示器内容。未限定范围</td>
 <td aria-colindex="3" role="cell" class=""></td>
 </tr>
 <tr role="row" data-pk="page" class="" id="__BVID__938__row_page">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">page</code></td>
-<td aria-colindex="2" role="cell" class="">Page number button content. Always scoped</td>
+<td aria-colindex="2" role="cell" class="">页码按钮内容。始终限定范围</td>
 <td aria-colindex="3" role="cell" class=""><button data-v-866a22e8="" type="button" class="btn py-0 btn-info btn-sm"> Scope </button></td>
 </tr>
 </tbody>
@@ -1484,45 +1542,44 @@ props.</p>
 </div>
 </article>
 <article data-v-866a22e8="" class="bd-content">
-<h4 data-v-866a22e8="" id="comp-ref-b-pagination-nav-events" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> Events <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/pagination-nav#comp-ref-b-pagination-nav-events" class="anchorjs-link" aria-labelledby="comp-ref-b-pagination-nav-events" target="_self"></a></span></h4>
+<h4 data-v-866a22e8="" id="comp-ref-b-pagination-nav-events" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title">事件<a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/pagination-nav#comp-ref-b-pagination-nav-events" class="anchorjs-link" aria-labelledby="comp-ref-b-pagination-nav-events" target="_self"></a></span></h4>
 <div data-v-866a22e8="" class="table-responsive-sm">
 <table role="table" aria-busy="false" aria-colcount="3" class="table b-table bv-docs-table table-striped" id="__BVID__953">
 <thead role="rowgroup" class="">
 <tr role="row" class="">
-<th role="columnheader" scope="col" aria-colindex="1" class="">Event</th>
-<th role="columnheader" scope="col" aria-colindex="2" class="">Arguments</th>
-<th role="columnheader" scope="col" aria-colindex="3" class="">Description</th>
+<th role="columnheader" scope="col" aria-colindex="1" class="">事件</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">参数</th>
+<th role="columnheader" scope="col" aria-colindex="3" class="">描述</th>
 </tr>
 </thead>
 <tbody role="rowgroup">
 <tr role="row" data-pk="input" class="" id="__BVID__953__row_input">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="notranslate">input</code></td>
 <td aria-colindex="2" role="cell" class=""><ol data-v-866a22e8="" class="list-unstyled mb-0">
-<li data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">page</code> - <span data-v-866a22e8="">Selected page number (starting with 1), or null if no page found</span></li>
+<li data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">page</code> - <span data-v-866a22e8="">所选页码（以1开头），如果找不到页，则为空</span></li>
 </ol></td>
-<td aria-colindex="3" role="cell" class="">when page changes via user interaction or programmatically</td>
+<td aria-colindex="3" role="cell" class="">当页面通过用户交互或编程方式更改时</td>
 </tr>
 <tr role="row" data-pk="change" class="" id="__BVID__953__row_change">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="notranslate">change</code></td>
 <td aria-colindex="2" role="cell" class=""><ol data-v-866a22e8="" class="list-unstyled mb-0">
-<li data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">page</code> - <span data-v-866a22e8="">Selected page number (starting with 1)</span></li>
+<li data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">page</code> - <span data-v-866a22e8="">所选页码（从1开始）</span></li>
 </ol></td>
-<td aria-colindex="3" role="cell" class="">when page changes via user interaction</td>
+<td aria-colindex="3" role="cell" class="">当页面通过用户交互更改时</td>
 </tr>
 </tbody>
 </table>
 </div>
 </article>
-<h3 id="importing-individual-components" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title"> Importing individual components <a href="../../../bootstrap-vue/docs/components/pagination-nav#importing-individual-components" class="anchorjs-link" aria-labelledby="importing-individual-components" target="_self"></a></span></h3>
-<p> You can import individual components into your project via the following named
-        exports: </p>
+<h3 id="importing-individual-components" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title">导入单个组件<a href="../../../bootstrap-vue/docs/components/pagination-nav#importing-individual-components" class="anchorjs-link" aria-labelledby="importing-individual-components" target="_self"></a></span></h3>
+<p> 可以通过以下命名导出将各个组件导入到项目中：</p>
 <div class="table-responsive-sm">
 <table role="table" aria-busy="false" aria-colcount="3" class="table b-table bv-docs-table table-striped" id="__BVID__965">
 <thead role="rowgroup" class="thead-default">
 <tr role="row" class="">
-<th role="columnheader" scope="col" aria-colindex="1" class="">Component</th>
-<th role="columnheader" scope="col" aria-colindex="2" class="">Named Export</th>
-<th role="columnheader" scope="col" aria-colindex="3" class="">Import Path</th>
+<th role="columnheader" scope="col" aria-colindex="1" class="">组成部分</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">命名导出</th>
+<th role="columnheader" scope="col" aria-colindex="3" class="">导入路径</th>
 </tr>
 </thead>
 <tbody role="rowgroup">
@@ -1534,21 +1591,19 @@ props.</p>
 </tbody>
 </table>
 </div>
-<p><strong>Example:</strong></p>
+<p><strong>例子:</strong></p>
 <pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { BPaginationNav } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
 Vue.component(<span class="hljs-string">'b-pagination-nav'</span>, BPaginationNav)</pre>
 </article>
 <article class="bd-content">
-<h3 id="importing-as-a-plugin" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title"> Importing as a Vue.js plugin <a href="../../../bootstrap-vue/docs/components/pagination-nav#importing-as-a-plugin" class="anchorjs-link" aria-labelledby="importing-as-a-plugin" target="_self"></a></span></h3>
-<p> This plugin includes all of the above listed individual
-      components.
-      Plugins also include any component aliases. </p>
+<h3 id="importing-as-a-plugin" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title">作为Vue.js插件导入<a href="../../../bootstrap-vue/docs/components/pagination-nav#importing-as-a-plugin" class="anchorjs-link" aria-labelledby="importing-as-a-plugin" target="_self"></a></span></h3>
+<p>这个插件包括上面列出的所有独立组件。插件还包括任何组件别名。</p>
 <div class="table-responsive-sm">
 <table fileds="namedExport,importPath" role="table" aria-busy="false" aria-colcount="2" class="table b-table bv-docs-table table-striped b-table-caption-top" id="__BVID__975">
 <thead role="rowgroup" class="thead-default">
 <tr role="row" class="">
-<th role="columnheader" scope="col" aria-colindex="1" class="">Named Export</th>
-<th role="columnheader" scope="col" aria-colindex="2" class="">Import Path</th>
+<th role="columnheader" scope="col" aria-colindex="1" class="">命名导出</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">导入路径</th>
 </tr>
 </thead>
 <tbody role="rowgroup">
@@ -1559,7 +1614,7 @@ Vue.component(<span class="hljs-string">'b-pagination-nav'</span>, BPaginationNa
 </tbody>
 </table>
 </div>
-<p><strong>Example:</strong></p>
+<p><strong>例子:</strong></p>
 <pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { PaginationNavPlugin } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
 Vue.use(PaginationNavPlugin)</pre>
 

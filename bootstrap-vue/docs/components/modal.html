@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="generator" content="Jekyll v3.6.0">
-<title>弹出模态框 &middot; BootstrapVue</title>
+<title>弹出模式框 &middot; BootstrapVue</title>
 <!-- Bootstrap 核心CSS -->
 <link href="../../../v4/dist/css/bootstrap.min.css" rel="stylesheet">
 <!-- 本文档额外专用css -->
@@ -36,18 +36,14 @@
   <div class="navbar-nav-scroll">
     <ul class="navbar-nav bd-navbar-nav flex-row">
       <li class="nav-item"><a class="nav-link " href="../">首页</a></li>
-      <li class="nav-item"><a class="nav-link active" href="../../docs/">中文手册</a></li>
-      <li class="nav-item"><a class="nav-link " href="../../v4/examples/">实例</a></li>
-      <li class="nav-item dropdown">
-<a class="nav-item nav-link dropdown-toggle mr-md-2" id="bd-versions" aria-expanded="false" aria-haspopup="true" href="#" data-toggle="dropdown"> 主题模板 </a>
-<div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
-<a class="dropdown-item" href="../../V4/themes/" target="_blank">主题门户</a>
-<a class="dropdown-item" href="../../V4/themes/live.html">精选模板</a>
-</div>
-</li>
-      <li class="nav-item"><a class="nav-link" href="//ico.z01.com" target="_blank" rel="noopener">zico图标系统</a></li>
-      <li class="nav-item"><a class="nav-link" href="https://expo.getbootstrap.com" target="_blank" rel="noopener">优站精选</a></li>
-      <li class="nav-item"><a class="nav-link" href="https://blog.getbootstrap.com" target="_blank" rel="noopener">Blog</a></li>
+      <li class="nav-item"><a class="nav-link" href="index.html">中文手册</a></li>
+      <li class="nav-item"><a class="nav-link active" href="../components">组件</a></li>
+      <li class="nav-item"><a class="nav-link " href="../directives">指令</a></li>
+      <li class="nav-item"><a class="nav-link " href="../reference">参考</a></li>
+      <li class="nav-item"><a class="nav-link " href="https://bootstrap-vue.org/play" target="_blank">体验</a></li>
+      <li class="nav-item"><a class="nav-link " href="http://code.z01.com/v4"><i class="zi zi_bold" zico="粗"></i> Boostrap</a></li>
+      <li class="nav-item"><a class="nav-link" href="http://ico.z01.com" target="_blank" rel="noopener">zico图标系统</a></li>
+      <li class="nav-item"><a class="nav-link" href="http://www.z01.com" target="_blank" rel="noopener">Zoomla!逐浪CMS</a></li>
     </ul>
   </div>
   <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
@@ -130,7 +126,7 @@
 <li class="nav-item"><a href="../../../bootstrap-vue/docs/components/link.html" class="nav-link"> 链接(Link)</a></li>
 <li class="nav-item"><a href="../../../bootstrap-vue/docs/components/list-group.html" class="nav-link"> 列表组(List group) </a></li>
 <li class="nav-item"><a href="../../../bootstrap-vue/docs/components/media.html" class="nav-link"> 媒体(Media) </a></li>
-<li class="nav-item active"><a href="../../../bootstrap-vue/docs/components/modal.html" class="nav-link"> 弹出模态框(Modal) </a></li>
+<li class="nav-item active"><a href="../../../bootstrap-vue/docs/components/modal.html" class="nav-link"> 弹出模式框(Modal) </a></li>
 <li class="nav-item"><a href="../../../bootstrap-vue/docs/components/nav.html" class="nav-link"> 导航(Nav) </a></li>
 <li class="nav-item"><a href="../../../bootstrap-vue/docs/components/navbar.html" class="nav-link"> 导航栏(Navbar) </a></li>
 <li class="nav-item"><a href="../../../bootstrap-vue/docs/components/pagination.html" class="nav-link"> 分页(Pagination) </a></li>
@@ -174,70 +170,63 @@
 <li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/utility-classes.html" class="nav-link">通用Class类</a></li>
 <li class="nav-item"><a href="../../../bootstrap-vue/docs/reference/validation.html" class="nav-link">Form表单验证</a></li>
 </ul>
-</div><div class="bd-toc-item"> <a class="bd-toc-link" href="../components/alerts.html"> 杂项 </a>
-<ul class="nav bd-sidenav">
-<li class="nav-item"><a href="../../../bootstrap-vue/docs/misc/changelog" class="nav-link"> Changelog </a></li>
-<li class="nav-item"><a href="../../../bootstrap-vue/docs/misc/contributing" class="nav-link"> Contributing </a></li>
-<li class="nav-item"><a href="../../../bootstrap-vue/docs/misc/settings" class="nav-link"> Settings </a></li>
-<li class="nav-item"><a href="../../../bootstrap-vue/docs/misc/third-party" class="nav-link"> Third party libraries </a></li>
-</ul>
 </div>
-<div class=""><a href="/play" class="bd-toc-link">在线模拟器</a></div>
+<div class=""><a href="https://bootstrap-vue.org/play" class="bd-toc-link" target="_blank">在线模拟器</a></div>
 </nav>
 </div>
 
 <div class="d-none d-xl-block col-xl-2 bd-toc">
 <ul class="section-nav">
-<li class="nav-item toc-entry mb-2"><a target="_self" href="#modals" class="nav-link font-weight-bold"><span>Modals</span></a></li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#overview" class="nav-link"><span>Overview</span></a> <!----></li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#toggle-modal-visibility" class="nav-link"><span>Toggle modal visibility</span></a>
+<li class="nav-item toc-entry mb-2"><a target="_self" href="#modals" class="nav-link font-weight-bold"><span>弹出模式框(Modal)</span></a></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#overview" class="nav-link"><span>概述</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#toggle-modal-visibility" class="nav-link"><span>切换模式可见性</span></a>
 <ul class="nav flex-column">
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#using-v-b-modal-directive" class="nav-link"><span>Using v-b-modal directive</span></a></li>
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#using-thisbvmodalshow-and-thisbvmodalhide-instance-methods" class="nav-link"><span>Using this.$bvModal.show() and this.$bvModal.hide() instance methods</span></a></li>
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#using-show-hide-and-toggle-component-methods" class="nav-link"><span>Using show(), hide(), and toggle() component methods</span></a></li>
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#using-v-model-property" class="nav-link"><span>Using v-model property</span></a></li>
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#using-scoped-slot-scope-methods" class="nav-link"><span>Using scoped slot scope methods</span></a></li>
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#emitting-events-on-root" class="nav-link"><span>Emitting events on $root</span></a></li>
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#prevent-closing" class="nav-link"><span>Prevent closing</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#using-v-b-modal-directive" class="nav-link"><span>使用 v-b-modal 命令</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#using-thisbvmodalshow-and-thisbvmodalhide-instance-methods" class="nav-link"><span>使用 this.$bvModal.show() 和 this.$bvModal.hide()实例方法</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#using-show-hide-and-toggle-component-methods" class="nav-link"><span>使用 show(), hide(), 和 toggle()组件方法</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#using-v-model-property" class="nav-link"><span>使用 v-model 属性</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#using-scoped-slot-scope-methods" class="nav-link"><span>使用作用域插槽作用域方法</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#emitting-events-on-root" class="nav-link"><span>在$root上发出事件</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#prevent-closing" class="nav-link"><span>防止关闭</span></a></li>
 </ul>
 </li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#modal-content" class="nav-link"><span>Modal content</span></a>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#modal-content" class="nav-link"><span>模式内容</span></a>
 <ul class="nav flex-column">
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#using-the-grid" class="nav-link"><span>Using the grid</span></a></li>
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#tooltips-and-popovers" class="nav-link"><span>Tooltips and popovers</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#using-the-grid" class="nav-link"><span>使用网格</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#tooltips-and-popovers" class="nav-link"><span>工具提示和弹出窗口</span></a></li>
 </ul>
 </li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#lazy-loading-and-static-modals" class="nav-link"><span>Lazy loading and static modals</span></a> <!----></li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#styling-options-and-customization" class="nav-link"><span>Styling, options, and customization</span></a>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#lazy-loading-and-static-modals" class="nav-link"><span>延迟加载和静态模式</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#styling-options-and-customization" class="nav-link"><span>样式、选项和自定义</span></a>
 <ul class="nav flex-column">
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#modal-sizing" class="nav-link"><span>Modal sizing</span></a></li>
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#scrolling-long-content" class="nav-link"><span>Scrolling long content</span></a></li>
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#vertically-centered-modal" class="nav-link"><span>Vertically centered modal</span></a></li>
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#variants" class="nav-link"><span>Variants</span></a></li>
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#hiding-the-backdrop" class="nav-link"><span>Hiding the backdrop</span></a></li>
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#disable-open-and-close-animation" class="nav-link"><span>Disable open and close animation</span></a></li>
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#footer-button-sizing" class="nav-link"><span>Footer button sizing</span></a></li>
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#disabling-built-in-footer-buttons" class="nav-link"><span>Disabling built-in footer buttons</span></a></li>
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#custom-rendering-with-slots" class="nav-link"><span>Custom rendering with slots</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#modal-sizing" class="nav-link"><span>模式尺寸</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#scrolling-long-content" class="nav-link"><span>滚动长内容</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#vertically-centered-modal" class="nav-link"><span>垂直居中模式</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#variants" class="nav-link"><span>变量</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#hiding-the-backdrop" class="nav-link"><span>隐藏背景</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#disable-open-and-close-animation" class="nav-link"><span>禁用打开和关闭动画</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#footer-button-sizing" class="nav-link"><span>页脚按钮大小</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#disabling-built-in-footer-buttons" class="nav-link"><span>禁用内置页脚按钮</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#custom-rendering-with-slots" class="nav-link"><span>带插槽的自定义渲染</span></a></li>
 </ul>
 </li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#multiple-modal-support" class="nav-link"><span>Multiple modal support</span></a> <!----></li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#modal-message-boxes" class="nav-link"><span>Modal message boxes</span></a>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#multiple-modal-support" class="nav-link"><span>多模式支持</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#modal-message-boxes" class="nav-link"><span>模式消息框</span></a>
 <ul class="nav flex-column">
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#ok-message-box" class="nav-link"><span>OK message box</span></a></li>
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#confirm-message-box" class="nav-link"><span>Confirm message box</span></a></li>
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#message-box-notes" class="nav-link"><span>Message box notes</span></a></li>
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#message-box-advanced-usage" class="nav-link"><span>Message box advanced usage</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#ok-message-box" class="nav-link"><span>确认消息框</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#confirm-message-box" class="nav-link"><span>确认消息框 </span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#message-box-notes" class="nav-link"><span>消息框注释</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#message-box-advanced-usage" class="nav-link"><span>消息框高级用法</span></a></li>
 </ul>
 </li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#listening-to-modal-changes-via-root-events" class="nav-link"><span>Listening to modal changes via $root events</span></a> <!----></li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#accessibility" class="nav-link"><span>Accessibility</span></a>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#listening-to-modal-changes-via-root-events" class="nav-link"><span>通过$root事件监听模式更改</span></a> <!----></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#accessibility" class="nav-link"><span>可访问性</span></a>
 <ul class="nav flex-column">
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#modal-aria-attributes" class="nav-link"><span>Modal ARIA attributes</span></a></li>
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#auto-focus-on-open" class="nav-link"><span>Auto focus on open</span></a></li>
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#returning-focus-to-the-triggering-element" class="nav-link"><span>Returning focus to the triggering element</span></a></li>
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#keyboard-navigation" class="nav-link"><span>Keyboard navigation</span></a></li>
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#v-b-modal-directive-accessibility" class="nav-link"><span>v-b-modal directive accessibility</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#modal-aria-attributes" class="nav-link"><span>模式 ARIA 属性</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#auto-focus-on-open" class="nav-link"><span>打开时自动聚焦</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#returning-focus-to-the-triggering-element" class="nav-link"><span>将焦点返回到触发元素</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#keyboard-navigation" class="nav-link"><span>键盘导航</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#v-b-modal-directive-accessibility" class="nav-link"><span>v-b-modal 指令可访问性</span></a></li>
 </ul>
 </li>
 <li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#component-reference" class="nav-link"><span>组件引用</span></a>
@@ -258,12 +247,14 @@
 <li data-v-aafc4aea="" class="breadcrumb-item"><a data-v-aafc4aea="" href="../../" class="nuxt-link-active" target="_self">首页</a></li>
 <li data-v-aafc4aea="" class="breadcrumb-item"><a data-v-aafc4aea="" href="../../../bootstrap-vue/docs" class="nuxt-link-active" target="_self">中文手册</a></li>
 <li data-v-aafc4aea="" class="breadcrumb-item"><a data-v-aafc4aea="" href="../../../bootstrap-vue/docs/components/" class="nuxt-link-active" target="_self">组件</a></li>
-<li data-v-aafc4aea="" class="breadcrumb-item active"><span data-v-aafc4aea="" aria-current="location">弹出模态框</span></li>
+<li data-v-aafc4aea="" class="breadcrumb-item active"><span data-v-aafc4aea="" aria-current="location">弹出模式框</span></li>
 </ol>
 </nav>
 <div class="clearfix d-block"></div>
-  <h1 class="bd-title" id="content">弹出模态框(Modal)</h1>
-<p class="bd-lead">Modals are streamlined, but flexible dialog prompts powered by JavaScript and CSS. They support a number of use cases from user notification to completely custom content and feature a handful of helpful sub-components, sizes, variants, accessibility, and more.</p>
+  <h1 class="bd-title" id="content">弹出模式框(Modal)</h1>
+<p class="bd-lead">
+  Modals是流线型的，但是由JavaScript和CSS提供灵活的对话框提示。它们支持许多用例，从用户通知到完全定制的内容，并具有一些有用的子组件、大小、变体、可访问性等特性。
+</p>
   <script type="text/javascript" src="../../../v4/assets/js/pupCMS.js"></script>
 
 
@@ -348,27 +339,46 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"my-4"</span>&gt;</span>Hello from modal!<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-modal</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
-<h2 id="overview" class="bv-no-focus-ring"><span class="bd-content-title">Overview<a class="anchorjs-link" href="#overview" aria-labelledby="overview"></a></span></h2>
-<p><code translate="no" class="notranslate text-nowrap">&lt;b-modal&gt;</code>, by default, has an <strong>OK</strong> and <strong>Cancel</strong> buttons in the footer. These buttons can be
-customized by setting various props on the component. You can customize the size of the buttons,
-disable buttons, hide the <strong>Cancel</strong> button (i.e. <code translate="no" class="notranslate text-nowrap">ok-only</code>), choose a variant (e.g. <code translate="no" class="notranslate text-nowrap">danger</code> for a
-red OK button) using the <code translate="no" class="notranslate text-nowrap">ok-variant</code> and <code translate="no" class="notranslate text-nowrap">cancel-variant</code> props, and provide custom button content
-using the <code translate="no" class="notranslate text-nowrap">ok-title</code> and <code translate="no" class="notranslate text-nowrap">cancel-title</code> props, or using the named slots <code translate="no" class="notranslate text-nowrap">modal-ok</code> and <code translate="no" class="notranslate text-nowrap">modal-cancel</code>.</p>
-<p><code translate="no" class="notranslate text-nowrap">&lt;b-modal&gt;</code> supports close on ESC (enabled by default), close on backdrop click (enabled by
-default), and the <code translate="no" class="notranslate text-nowrap">X</code> close button in the header (enabled by default). These features may be
-disabled by setting the props <code translate="no" class="notranslate text-nowrap">no-close-on-esc</code>, <code translate="no" class="notranslate text-nowrap">no-close-on-backdrop</code>, and <code translate="no" class="notranslate text-nowrap">hide-header-close</code> respectively.</p>
-<p>You can override the modal title via the named slot <code translate="no" class="notranslate text-nowrap">modal-title</code>, override the header completely
-via the <code translate="no" class="notranslate text-nowrap">modal-header</code> slot, and override the footer completely via the <code translate="no" class="notranslate text-nowrap">modal-footer</code> slot.</p>
-<p><strong>Note</strong>: when using the <code translate="no" class="notranslate text-nowrap">modal-footer</code> slot, the default <strong>OK</strong> and <strong>Cancel</strong> buttons will not be
-present. Also, if you use the <code translate="no" class="notranslate text-nowrap">modal-header</code> slot, the default header <code translate="no" class="notranslate text-nowrap">X</code> close button will not be
-present, nor can you use the <code translate="no" class="notranslate text-nowrap">modal-title</code> slot.</p>
-<p>Modals will not render their content in the document until they are shown (lazily rendered). Modals,
-when visible, are rendered <strong>appended to the <code translate="no" class="notranslate text-nowrap">&lt;body&gt;</code> element</strong>. The placement of the <code translate="no" class="notranslate text-nowrap">&lt;b-modal&gt;</code> component will not affect layout, as it always renders as a placeholder comment node (<code translate="no" class="notranslate text-nowrap">&lt;!----&gt;</code>).
-You can revert to the behaviour of previous BootstrapVue versions via the use of the <a href="#lazy-loading-and-static-modals" class="font-weight-bold"><code translate="no" class="notranslate text-nowrap">static</code> prop</a>.</p>
-<h2 id="toggle-modal-visibility" class="bv-no-focus-ring"><span class="bd-content-title">Toggle modal visibility<a class="anchorjs-link" href="#toggle-modal-visibility" aria-labelledby="toggle-modal-visibility"></a></span></h2>
-<p>There are several methods that you can employ to toggle the visibility of <code translate="no" class="notranslate text-nowrap">&lt;b-modal&gt;</code>.</p>
-<h3 id="using-v-b-modal-directive" class="bv-no-focus-ring"><span class="bd-content-title">Using <code translate="no" class="notranslate text-nowrap">v-b-modal</code> directive<a class="anchorjs-link" href="#using-v-b-modal-directive" aria-labelledby="using-v-b-modal-directive"></a></span></h3>
-<p>Other elements can easily show modals using the <code translate="no" class="notranslate text-nowrap">v-b-modal</code> directive.</p>
+<h2 id="overview" class="bv-no-focus-ring"><span class="bd-content-title">概述<a class="anchorjs-link" href="#overview" aria-labelledby="overview"></a></span></h2>
+<p>
+  <code translate="no" class="notranslate text-nowrap">&lt;b-modal&gt;</code>在默认情况下，在页脚中有一个<strong>确认</strong>和<strong>取消</strong>按钮。
+  可以通过在组件上设置各种属性来自定义这些按钮。您可以自定义按钮的大小、禁用按钮、隐藏<strong>取消</strong>按钮（即<code translate="no" class="notranslate text-nowrap">ok-only</code>），
+  使用<code translate="no" class="notranslate text-nowrap">ok 变量</code>和 
+  <code translate="no" class="notranslate text-nowrap">cancel 变量</code>属性选择变量（如红色“确定”按钮有<code translate="no" class="notranslate text-nowrap">危险</code>），
+  使用<code translate="no" class="notranslate text-nowrap">ok 标题</code>和
+  <code translate="no" class="notranslate text-nowrap">cancel 标题</code>属性提供自定义按钮内容，或使用命名的插槽<code translate="no" class="notranslate text-nowrap">modal-ok</code>和
+  <code translate="no" class="notranslate text-nowrap">modal-cancel</code>。
+</p>
+<p>
+  <code translate="no" class="notranslate text-nowrap">&lt;b-modal&gt;</code>支持按ESC键关闭（默认启用）、
+  按背景关闭（默认启用）和页眉中的<code translate="no" class="notranslate text-nowrap">X</code>关闭按钮（默认启用）。
+  通过分别设置<code translate="no" class="notranslate text-nowrap">“在esc上不关闭属性”</code>, 
+  <code translate="no" class="notranslate text-nowrap">“在背景上不关闭属性”</code>, 和 
+  <code translate="no" class="notranslate text-nowrap">“隐藏标题关闭属性”</code>，可以禁用这些功能。
+</p>
+<p>
+  您可以通过命名的槽 <code translate="no" class="notranslate text-nowrap">modal-title</code>覆盖模式标题，
+  通过<code translate="no" class="notranslate text-nowrap">modal-header</code>槽完全覆盖页眉，
+  并通过<code translate="no" class="notranslate text-nowrap">modal-footer</code>槽完全覆盖页脚。
+</p>
+<p><strong>注意</strong>: 
+  使用<code translate="no" class="notranslate text-nowrap">modal-footer</code> 槽时，默认的<strong>确定</strong> and <strong>取消</strong>按钮将不存在。
+  此外，如果使用<code translate="no" class="notranslate text-nowrap">modal-header</code>槽，则默认标题<code translate="no" class="notranslate text-nowrap">X</code>关闭按钮将不存在，
+  也不能使用<code translate="no" class="notranslate text-nowrap">modal-title</code>槽。
+</p>
+<p>
+  Modals不会在文档中呈现它们的内容，除非它们被显示（延迟呈现）。当Modals可见时，<strong>它将被附加到<code translate="no" class="notranslate text-nowrap">&lt;body&gt;</code>元素中</strong>。
+  <code translate="no" class="notranslate text-nowrap">&lt;b-modal&gt;</code>组件的位置不会影响布局，
+  因为它始终呈现为占位符注释节点（<code translate="no" class="notranslate text-nowrap">&lt;!----&gt;</code>). 您可以通过使用<a href="#lazy-loading-and-static-modals" class="font-weight-bold"><code translate="no" class="notranslate text-nowrap">static</code>属性</a>恢复到以前BootstrapVue版本的行为。
+</p>
+<h2 id="toggle-modal-visibility" class="bv-no-focus-ring"><span class="bd-content-title">切换模式可见性<a class="anchorjs-link" href="#toggle-modal-visibility" aria-labelledby="toggle-modal-visibility"></a></span></h2>
+<p>
+  有几种方法可用于切换<code translate="no" class="notranslate text-nowrap">&lt;b-modal&gt;</code>的可见性。
+</p>
+<h3 id="using-v-b-modal-directive" class="bv-no-focus-ring"><span class="bd-content-title">使用 <code translate="no" class="notranslate text-nowrap">v-b-modal</code> 命令<a class="anchorjs-link" href="#using-v-b-modal-directive" aria-labelledby="using-v-b-modal-directive"></a></span></h3>
+<p>
+  其他元素可以使用<code translate="no" class="notranslate text-nowrap">v-b-modal</code> 指令轻松显示模式。
+</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-modal-directive notranslate">
 <div>
 <button type="button" class="btn btn-secondary">Show Modal</button>
@@ -385,35 +395,37 @@ You can revert to the behaviour of previous BootstrapVue versions via the use of
   <span class="hljs-comment">&lt;!-- The modal --&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-modal</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"my-modal"</span>&gt;</span>Hello From My Modal!<span class="hljs-tag">&lt;/<span class="hljs-name">b-modal</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
-<p>This approach will automatically return focus to the trigger element once the modal closes (similar
-to default Bootstrap functionality). Other approaches for toggling modal visibility may require
-additional code to implement this accessibility feature.</p>
-<p>See the <a href="#accessibility" class="font-weight-bold">Accessibility</a> section below for details.</p>
-<h3 id="using-thisbvmodalshow-and-thisbvmodalhide-instance-methods" class="bv-no-focus-ring"><span class="bd-content-title">Using <code translate="no" class="notranslate text-nowrap">this.$bvModal.show()</code> and <code translate="no" class="notranslate text-nowrap">this.$bvModal.hide()</code> instance methods<a class="anchorjs-link" href="#using-thisbvmodalshow-and-thisbvmodalhide-instance-methods" aria-labelledby="using-thisbvmodalshow-and-thisbvmodalhide-instance-methods"></a></span></h3>
-<p>When BootstrapVue is installed as a plugin, or the <code translate="no" class="notranslate text-nowrap">ModalPlugin</code> plugin is used, BootstrapVue will
-inject a <code translate="no" class="notranslate text-nowrap">$bvModal</code> object into every Vue instance (components, apps). <code translate="no" class="notranslate text-nowrap">this.$bvModal</code> exposes
-several methods, of which two are for showing and hiding modals:</p>
+<p>一旦模式关闭，此方法将自动将焦点返回到触发器元素（类似于默认的引导功能）。用于切换模式可见性的其他方法可能需要额外的代码来实现此可访问性功能。</p>
+<p>
+  有关详细信息，请参见下面的<a href="#accessibility" class="font-weight-bold">可访问性</a>功能部分。
+</p>
+<h3 id="using-thisbvmodalshow-and-thisbvmodalhide-instance-methods" class="bv-no-focus-ring"><span class="bd-content-title">使用 <code translate="no" class="notranslate text-nowrap">this.$bvModal.show()</code> 和 <code translate="no" class="notranslate text-nowrap">this.$bvModal.hide()</code>实例方法<a class="anchorjs-link" href="#using-thisbvmodalshow-and-thisbvmodalhide-instance-methods" aria-labelledby="using-thisbvmodalshow-and-thisbvmodalhide-instance-methods"></a></span></h3>
+<p>
+  当BootstrapVue作为插件安装或使用<code translate="no" class="notranslate text-nowrap">ModalPlugin</code>插件时，
+  BootstrapVue将向每个Vue实例（组件、应用程序）注入<code translate="no" class="notranslate text-nowrap">$bvModal</code>对象。
+</p>
 <div class="table-responsive-sm">
 <table class="b-table table table-bordered table-striped bv-docs-table">
 <thead class="thead-default">
 <tr>
-<th>Method</th>
-<th>Description</th>
+<th>方法</th>
+<th>描述</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code translate="no" class="notranslate text-nowrap">this.$bvModal.show(id)</code></td>
-<td>Show the modal with the specified <code translate="no" class="notranslate text-nowrap">id</code></td>
+<td>
+  显示具有指定<code translate="no" class="notranslate text-nowrap">id</code>的模式</td>
 </tr>
 <tr>
 <td><code translate="no" class="notranslate text-nowrap">this.$bvModal.hide(id)</code></td>
-<td>Hide the modal with the specified <code translate="no" class="notranslate text-nowrap">id</code></td>
+<td> 隐藏具有指定<code translate="no" class="notranslate text-nowrap">id</code>的模式</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p>Both methods return immediately after being called.</p>
+<p>两个方法在被调用后立即返回。</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-modal-bv-modal-hide-show notranslate">
 <div>
 <button id="show-btn" type="button" class="btn btn-secondary">Open Modal</button>
@@ -432,9 +444,15 @@ several methods, of which two are for showing and hiding modals:</p>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mt-3"</span> <span class="hljs-attr">block</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"$bvModal.hide('bv-modal-example')"</span>&gt;</span>Close Me<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-modal</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
-<p>The <code translate="no" class="notranslate text-nowrap">this.$bvModal</code> object is also used for displaying <a href="#modal-message-boxes" class="font-weight-bold">modal message boxes</a>.</p>
-<h3 id="using-show-hide-and-toggle-component-methods" class="bv-no-focus-ring"><span class="bd-content-title">Using <code translate="no" class="notranslate text-nowrap">show()</code>, <code translate="no" class="notranslate text-nowrap">hide()</code>, and <code translate="no" class="notranslate text-nowrap">toggle()</code> component methods<a class="anchorjs-link" href="#using-show-hide-and-toggle-component-methods" aria-labelledby="using-show-hide-and-toggle-component-methods"></a></span></h3>
-<p>You can access modal using <code translate="no" class="notranslate text-nowrap">ref</code> attribute and then call the <code translate="no" class="notranslate text-nowrap">show()</code>, <code translate="no" class="notranslate text-nowrap">hide()</code> or <code translate="no" class="notranslate text-nowrap">toggle()</code> methods.</p>
+<p>
+  <code translate="no" class="notranslate text-nowrap">this.$bvModal</code>对象还用<a href="#modal-message-boxes" class="font-weight-bold">显示模式消息框</a>。
+</p>
+<h3 id="using-show-hide-and-toggle-component-methods" class="bv-no-focus-ring"><span class="bd-content-title">使用 <code translate="no" class="notranslate text-nowrap">show()</code>, <code translate="no" class="notranslate text-nowrap">hide()</code>, 和 <code translate="no" class="notranslate text-nowrap">toggle()</code>组件方法<a class="anchorjs-link" href="#using-show-hide-and-toggle-component-methods" aria-labelledby="using-show-hide-and-toggle-component-methods"></a></span></h3>
+<p>
+  可以使用<code translate="no" class="notranslate text-nowrap">ref</code>属性访问modal，然后调用<code translate="no" class="notranslate text-nowrap">show()</code>, 
+  <code translate="no" class="notranslate text-nowrap">hide()</code>或 
+  <code translate="no" class="notranslate text-nowrap">toggle()</code>方法。
+</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-modal-methods notranslate">
 <div>
 <button id="show-btn" type="button" class="btn btn-secondary">Open Modal</button>
@@ -473,13 +491,19 @@ several methods, of which two are for showing and hiding modals:</p>
     }
   }
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
-<p>The <code translate="no" class="notranslate text-nowrap">hide()</code> method accepts an optional string <code translate="no" class="notranslate text-nowrap">trigger</code> argument for defining what triggered the
-modal to close. See section <a href="#prevent-closing" class="font-weight-bold">Prevent Closing</a> below for details.</p>
-<p><strong>Note:</strong> It is recommended to use the <code translate="no" class="notranslate text-nowrap">this.$bvModal.show()</code> and <code translate="no" class="notranslate text-nowrap">this.$bvModal.hide()</code> methods
-(mentioned in the previous section) instead of using <code translate="no" class="notranslate text-nowrap">$ref</code> methods.</p>
-<h3 id="using-v-model-property" class="bv-no-focus-ring"><span class="bd-content-title">Using <code translate="no" class="notranslate text-nowrap">v-model</code> 属性<a class="anchorjs-link" href="#using-v-model-property" aria-labelledby="using-v-model-property"></a></span></h3>
-<p><code translate="no" class="notranslate text-nowrap">v-model</code> property is always automatically synced with <code translate="no" class="notranslate text-nowrap">&lt;b-modal&gt;</code> visible state and you can
-show/hide using <code translate="no" class="notranslate text-nowrap">v-model</code>.</p>
+<p>
+  <code translate="no" class="notranslate text-nowrap">hide()</code>方法接受一个可选的字符串<code translate="no" class="notranslate text-nowrap">trigger</code>器参数，
+  用于定义触发模式关闭的内容。有关详细信息，请参阅下面的<a href="#prevent-closing" class="font-weight-bold">“防止关闭”</a>部分。
+</p>
+<p><strong>注意:</strong> 
+  建议使用<code translate="no" class="notranslate text-nowrap">this.$bvModal.show()</code>和
+  <code translate="no" class="notranslate text-nowrap">this.$bvModal.hide()</code>（）方法（在上一节中提到），而不要使用<code translate="no" class="notranslate text-nowrap">$ref</code>方法。
+</p>
+<h3 id="using-v-model-property" class="bv-no-focus-ring"><span class="bd-content-title">使用 <code translate="no" class="notranslate text-nowrap">v-model</code> 属性<a class="anchorjs-link" href="#using-v-model-property" aria-labelledby="using-v-model-property"></a></span></h3>
+<p>
+  <code translate="no" class="notranslate text-nowrap">v-model</code>属性总是与<code translate="no" class="notranslate text-nowrap">&lt;b-modal&gt;</code> 可见状态自动同步，
+    您可以使用<code translate="no" class="notranslate text-nowrap">v-model</code>显示/隐藏。
+</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-modal-v-model notranslate">
 <div>
 <button type="button" class="btn btn-secondary">Open Modal</button>
@@ -502,15 +526,19 @@ show/hide using <code translate="no" class="notranslate text-nowrap">v-model</co
     }
   }
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
-<p>When using the <code translate="no" class="notranslate text-nowrap">v-model</code> prop, <strong>do not</strong> use the <code translate="no" class="notranslate text-nowrap">visible</code> prop at the same time.</p>
-<h3 id="using-scoped-slot-scope-methods" class="bv-no-focus-ring"><span class="bd-content-title">Using scoped slot scope methods<a class="anchorjs-link" href="#using-scoped-slot-scope-methods" aria-labelledby="using-scoped-slot-scope-methods"></a></span></h3>
-<p>Refer to the <a href="#custom-rendering-with-slots" class="font-weight-bold">Custom rendering with slots</a> section on using the
-various methods passed to scoped slots for closing modals.</p>
-<h3 id="emitting-events-on-root" class="bv-no-focus-ring"><span class="bd-content-title">Emitting events on $root<a class="anchorjs-link" href="#emitting-events-on-root" aria-labelledby="emitting-events-on-root"></a></span></h3>
-<p>You can emit <code translate="no" class="notranslate text-nowrap">bv::show::modal</code>, <code translate="no" class="notranslate text-nowrap">bv::hide::modal</code>, and <code translate="no" class="notranslate text-nowrap">bv::toggle::modal</code> events on <code translate="no" class="notranslate text-nowrap">$root</code> with
-the first argument set to the modal's id. An optional second argument can specify the element to
-return focus to once the modal is closed. The second argument can be a CSS selector, an element
-reference, or a component reference (the root element of the component will be focused).</p>
+<p>
+  使用<code translate="no" class="notranslate text-nowrap">v-model</code>属性时，<strong>不要</strong>同时使用<code translate="no" class="notranslate text-nowrap">visible</code>属性。
+</p>
+<h3 id="using-scoped-slot-scope-methods" class="bv-no-focus-ring"><span class="bd-content-title">使用作用域插槽作用域方法<a class="anchorjs-link" href="#using-scoped-slot-scope-methods" aria-labelledby="using-scoped-slot-scope-methods"></a></span></h3>
+<p>
+  请参阅使用传递给作用域插槽的各种方法关闭模式的 <a href="#custom-rendering-with-slots" class="font-weight-bold">使用插槽自定义呈现</a> 部分。
+</p>
+<h3 id="emitting-events-on-root" class="bv-no-focus-ring"><span class="bd-content-title">在$root上发出事件<a class="anchorjs-link" href="#emitting-events-on-root" aria-labelledby="emitting-events-on-root"></a></span></h3>
+<p>
+  您可以在<code translate="no" class="notranslate text-nowrap">$root</code>上发出<code translate="no" class="notranslate text-nowrap">bv::show::modal</code>,
+  <code translate="no" class="notranslate text-nowrap">bv::hide::modal</code>,和
+  <code translate="no" class="notranslate text-nowrap">bv::toggle::modal</code>事件，第一个参数设置为modal的id。可选的第二个参数可以指定在关闭modal后返回焦点的元素。第二个参数可以是CSS选择器、元素引用或组件引用（组件的根元素将被聚焦）。
+</p>
 <pre class="hljs html text-monospace p-2 notranslate" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"showModal"</span> <span class="hljs-attr">ref</span>=<span class="hljs-string">"btnShow"</span>&gt;</span>Open Modal<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"toggleModal"</span> <span class="hljs-attr">ref</span>=<span class="hljs-string">"btnToggle"</span>&gt;</span>Toggle Modal<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
@@ -534,10 +562,20 @@ reference, or a component reference (the root element of the component will be f
     }
   }
 }</pre>
-<p><strong>Note:</strong> It is recommended to use the <code translate="no" class="notranslate text-nowrap">this.$bvModal.show()</code> and <code translate="no" class="notranslate text-nowrap">this.$bvModal.hide()</code> methods
-(mentioned in a previous section) instead of emitting <code translate="no" class="notranslate text-nowrap">$root</code> events.</p>
-<h3 id="prevent-closing" class="bv-no-focus-ring"><span class="bd-content-title">Prevent closing<a class="anchorjs-link" href="#prevent-closing" aria-labelledby="prevent-closing"></a></span></h3>
-<p>To prevent <code translate="no" class="notranslate text-nowrap">&lt;b-modal&gt;</code> from closing (for example when validation fails). you can call the <code translate="no" class="notranslate text-nowrap">.preventDefault()</code> method of the event object passed to your <code translate="no" class="notranslate text-nowrap">ok</code> (<strong>OK</strong> button), <code translate="no" class="notranslate text-nowrap">cancel</code> (<strong>Cancel</strong> button), <code translate="no" class="notranslate text-nowrap">close</code> (modal header close button) and <code translate="no" class="notranslate text-nowrap">hide</code> event handlers. Note that <code translate="no" class="notranslate text-nowrap">.preventDefault()</code>, when used, <strong>must</strong> be called synchronously, as async is not supported.</p>
+<p><strong>注意:</strong> 
+  建议使用<code translate="no" class="notranslate text-nowrap">this.$bvModal.show()</code>和
+  <code translate="no" class="notranslate text-nowrap">this.$bvModal.hide()</code>方法（在上一节中提到）而不是发出<code translate="no" class="notranslate text-nowrap">$root</code>事件。
+</p>
+<h3 id="prevent-closing" class="bv-no-focus-ring"><span class="bd-content-title">防止关闭<a class="anchorjs-link" href="#prevent-closing" aria-labelledby="prevent-closing"></a></span></h3>
+<p>
+  以防止<code translate="no" class="notranslate text-nowrap">&lt;b-modal&gt;</code>关闭（例如验证失败时）。
+  <code translate="no" class="notranslate text-nowrap">ok</code> (<strong>确认</strong> 按钮), 
+  <code translate="no" class="notranslate text-nowrap">cancel</code> (<strong>取消</strong> 按钮), 
+  <code translate="no" class="notranslate text-nowrap">close</code> (模式头关闭按钮)和
+  <code translate="no" class="notranslate text-nowrap">hide</code>
+  事件处理程序的事件对象的<code translate="no" class="notranslate text-nowrap">.preventDefault()</code>方法。请注意，
+  使用时<strong>必须</strong>同步调用<code translate="no" class="notranslate text-nowrap">.preventDefault()</code>，因为不支持异步。
+</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-modal-prevent-closing notranslate">
 <div>
 <button type="button" class="btn btn-secondary">Open Modal</button>
@@ -625,64 +663,89 @@ reference, or a component reference (the root element of the component will be f
     }
   }
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
-<p><strong>Note</strong>: events <code translate="no" class="notranslate text-nowrap">ok</code>, <code translate="no" class="notranslate text-nowrap">cancel</code>, and <code translate="no" class="notranslate text-nowrap">close</code> are emitted by modal's built in <strong>OK</strong>, <strong>Cancel</strong>, and
-header close (<strong>X</strong>) buttons respectively. These events will not be emitted, by default, if you have
-provided your own buttons in the <code translate="no" class="notranslate text-nowrap">modal-footer</code> slot or have hidden the footer. In this case use the <code translate="no" class="notranslate text-nowrap">hide</code> event to control cancelling of the modal close. Event <code translate="no" class="notranslate text-nowrap">hide</code> is always emitted, even if <code translate="no" class="notranslate text-nowrap">ok</code>, <code translate="no" class="notranslate text-nowrap">cancel</code>, and <code translate="no" class="notranslate text-nowrap">close</code> are emitted.</p>
-<p>The <code translate="no" class="notranslate text-nowrap">ok</code>, <code translate="no" class="notranslate text-nowrap">cancel</code>, <code translate="no" class="notranslate text-nowrap">close</code> and <code translate="no" class="notranslate text-nowrap">hide</code> event object (<code translate="no" class="notranslate text-nowrap">BvModalEvent</code>) contains several properties and
-methods:</p>
+<p><strong>注意</strong>: 
+  事件<code translate="no" class="notranslate text-nowrap">ok</code>, 
+  <code translate="no" class="notranslate text-nowrap">cancel</code>,和 
+  <code translate="no" class="notranslate text-nowrap">close</code>分别由modal的内置<strong>OK</strong>, <strong>Cancel</strong>,和header close (<strong>X</strong>)按钮发出。
+  默认情况下，如果在<code translate="no" class="notranslate text-nowrap">modal-footer</code>槽中提供了自己的按钮或<code translate="no" class="notranslate text-nowrap">隐藏</code>了页脚，
+  则不会发出这些事件。在这种情况下，使用<code translate="no" class="notranslate text-nowrap">hide</code>事件来控制取消模式关闭。
+  即使发出<code translate="no" class="notranslate text-nowrap">确定</code>, 
+  <code translate="no" class="notranslate text-nowrap">取消</code>,和
+  <code translate="no" class="notranslate text-nowrap">关闭</code>，也始终发出“事件隐藏”。
+</p>
+<p>
+  <code translate="no" class="notranslate text-nowrap">ok</code>,
+   <code translate="no" class="notranslate text-nowrap">cancel</code>, 
+   <code translate="no" class="notranslate text-nowrap">close</code> 和
+   <code translate="no" class="notranslate text-nowrap">hide</code>事件对象（<code translate="no" class="notranslate text-nowrap">BvModalEvent</code>）包含几个属性和方法：
+</p>
 <div class="table-responsive-sm">
 <table class="b-table table table-bordered table-striped bv-docs-table">
 <thead class="thead-default">
 <tr>
-<th>Property or Method</th>
-<th>Type</th>
-<th>Description</th>
+<th>属性或方法</th>
+<th>类型</th>
+<th>描述</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code translate="no" class="notranslate text-nowrap">preventDefault()</code></td>
 <td>Method</td>
-<td>When called prevents the modal from closing</td>
+<td>调用时阻止模式关闭</td>
 </tr>
 <tr>
 <td><code translate="no" class="notranslate text-nowrap">trigger</code></td>
 <td>属性</td>
-<td>Will be one of: <code translate="no" class="notranslate text-nowrap">ok</code> (Default <strong>OK</strong> Clicked), <code translate="no" class="notranslate text-nowrap">cancel</code> (Default <strong>Cancel</strong> clicked), <code translate="no" class="notranslate text-nowrap">esc</code> (if the <kbd class="notranslate" translate="no">ESC</kbd> key was pressed), <code translate="no" class="notranslate text-nowrap">backdrop</code> (if the backdrop was clicked), <code translate="no" class="notranslate text-nowrap">headerclose</code> (if the header X button was clicked), the first argument provided to the <code translate="no" class="notranslate text-nowrap">hide()</code> method, or <code translate="no" class="notranslate text-nowrap">null</code> otherwise.</td>
+<td>
+  将是：<code translate="no" class="notranslate text-nowrap">ok</code> (默认单击<strong>确定</strong>), 
+  <code translate="no" class="notranslate text-nowrap">cancel</code> (默认单击<strong>取消</strong>), 
+  <code translate="no" class="notranslate text-nowrap">esc</code> (如果按了<kbd class="notranslate" translate="no">ESC</kbd>键),
+   <code translate="no" class="notranslate text-nowrap">backdrop</code> (如果单击了backdrop), 
+   <code translate="no" class="notranslate text-nowrap">headerclose</code> (如果单击了header X按钮)、
+   提供给<code translate="no" class="notranslate text-nowrap">hide()</code>方法的第一个参数，否则为<code translate="no" class="notranslate text-nowrap">null</code>。
+</td>
 </tr>
 <tr>
 <td><code translate="no" class="notranslate text-nowrap">target</code></td>
 <td>属性</td>
-<td>A reference to the modal element</td>
+<td>对模式元素的引用</td>
 </tr>
 <tr>
 <td><code translate="no" class="notranslate text-nowrap">vueTarget</code></td>
 <td>属性</td>
-<td>A reference to the modal's Vue VM instance</td>
+<td>对模式的Vue VM实例的引用</td>
 </tr>
 <tr>
 <td><code translate="no" class="notranslate text-nowrap">componentId</code></td>
 <td>属性</td>
-<td>The modal's ID</td>
+<td>模式的ID</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p>You can set the value of <code translate="no" class="notranslate text-nowrap">trigger</code> by passing an argument to the component's <code translate="no" class="notranslate text-nowrap">hide()</code> method for
-advanced control (i.e. detecting what button or action triggered the modal to hide).</p>
-<p><strong>Note:</strong> <code translate="no" class="notranslate text-nowrap">ok</code>, <code translate="no" class="notranslate text-nowrap">cancel</code>, or <code translate="no" class="notranslate text-nowrap">close</code> events will be only emitted when the argument to <code translate="no" class="notranslate text-nowrap">hide()</code> is
-strictly <code translate="no" class="notranslate text-nowrap">'ok'</code>, <code translate="no" class="notranslate text-nowrap">'cancel'</code>, or <code translate="no" class="notranslate text-nowrap">'headerclose'</code> respectively. The argument passed to <code translate="no" class="notranslate text-nowrap">hide()</code> will
-be placed into the <code translate="no" class="notranslate text-nowrap">trigger</code> property of the event object.</p>
-<h2 id="modal-content" class="bv-no-focus-ring"><span class="bd-content-title">Modal content<a class="anchorjs-link" href="#modal-content" aria-labelledby="modal-content"></a></span></h2>
-<h3 id="using-the-grid" class="bv-no-focus-ring"><span class="bd-content-title">Using the grid<a class="anchorjs-link" href="#using-the-grid" aria-labelledby="using-the-grid"></a></span></h3>
-<p>Utilize the Bootstrap grid system within a modal by nesting <code translate="no" class="notranslate text-nowrap">&lt;b-container fluid&gt;</code> within the
-modal-body. Then, use the normal grid system <code translate="no" class="notranslate text-nowrap">&lt;b-row&gt;</code> (or <code translate="no" class="notranslate text-nowrap">&lt;b-form-row&gt;</code>) and <code translate="no" class="notranslate text-nowrap">&lt;b-col&gt;</code> as you
-would anywhere else.</p>
-<h3 id="tooltips-and-popovers" class="bv-no-focus-ring"><span class="bd-content-title">Tooltips and popovers<a class="anchorjs-link" href="#tooltips-and-popovers" aria-labelledby="tooltips-and-popovers"></a></span></h3>
-<p>Tooltips and popovers can be placed within modals as needed. When modals are closed, any tooltips
-and popovers within are also automatically dismissed. Tooltips and popovers are automatically
-appended to the modal element (to ensure correct z-indexing), although you can override where they
-are appended by specifying a container ID (refer to tooltip and popover docs for details).</p>
+<p>
+  您可以通过向高级控件的组件<code translate="no" class="notranslate text-nowrap">hide()</code>方法传递一个参数来设置<code translate="no" class="notranslate text-nowrap">trigger</code>的值（即检测哪个按钮或操作触发了要隐藏的模式）。
+</p>
+<p><strong>注意:</strong> 
+  仅当<code translate="no" class="notranslate text-nowrap">hide()</code>的参数分别严格为<code translate="no" class="notranslate text-nowrap">ok</code>, 
+  <code translate="no" class="notranslate text-nowrap">cancel</code>,或
+  <code translate="no" class="notranslate text-nowrap">close</code>时，
+  才会发出<code translate="no" class="notranslate text-nowrap">'ok'</code>, 
+  <code translate="no" class="notranslate text-nowrap">'cancel'</code>, or 
+  <code translate="no" class="notranslate text-nowrap">'headerclose'</code>事件。
+  传递给<code translate="no" class="notranslate text-nowrap">hide()</code>的参数将放入事件对象的<code translate="no" class="notranslate text-nowrap">trigger</code>属性中。
+</p>
+<h2 id="modal-content" class="bv-no-focus-ring"><span class="bd-content-title">模式内容<a class="anchorjs-link" href="#modal-content" aria-labelledby="modal-content"></a></span></h2>
+<h3 id="using-the-grid" class="bv-no-focus-ring"><span class="bd-content-title">使用网格<a class="anchorjs-link" href="#using-the-grid" aria-labelledby="using-the-grid"></a></span></h3>
+<p>
+  通过在模式体中嵌套<code translate="no" class="notranslate text-nowrap">&lt;b-container fluid&gt;</code>来利用模式中的引导网格系统。然后，
+  像在其他地方一样，使用普通的网格系统<code translate="no" class="notranslate text-nowrap">&lt;b-row&gt;</code> (或 
+  <code translate="no" class="notranslate text-nowrap">&lt;b-form-row&gt;</code>)和
+  <code translate="no" class="notranslate text-nowrap">&lt;b-col&gt;</code>。
+</p>
+<h3 id="tooltips-and-popovers" class="bv-no-focus-ring"><span class="bd-content-title">工具提示和弹出窗口<a class="anchorjs-link" href="#tooltips-and-popovers" aria-labelledby="tooltips-and-popovers"></a></span></h3>
+<p>工具提示和弹出窗口可以根据需要放置在modals中。关闭模式时，其中的任何工具提示和弹出窗口也会自动关闭。工具提示和弹出窗口将自动附加到模式元素（以确保正确的z索引），但您可以通过指定容器ID来覆盖它们的附加位置（有关详细信息，请参阅工具提示和弹出窗口文档）。</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-modal-popover notranslate">
 <div>
 <button type="button" class="btn btn-secondary">Show Modal</button>
@@ -703,20 +766,30 @@ are appended by specifying a container ID (refer to tooltip and popover docs for
     <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-modal</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
-<h2 id="lazy-loading-and-static-modals" class="bv-no-focus-ring"><span class="bd-content-title">Lazy loading and static modals<a class="anchorjs-link" href="#lazy-loading-and-static-modals" aria-labelledby="lazy-loading-and-static-modals"></a></span></h2>
-<p>By default, modals will not render their content in the document until they are shown (lazily
-rendered). Modals that, when visible, are rendered appended to the <code translate="no" class="notranslate text-nowrap">&lt;body&gt;</code> element. The <code translate="no" class="notranslate text-nowrap">&lt;b-modal&gt;</code> component will not affect layout, as they render as a placeholder comment node (<code translate="no" class="notranslate text-nowrap">&lt;!----&gt;</code>) in the
-DOM position they are placed. Due to the portalling process, it can take two or more <code translate="no" class="notranslate text-nowrap">$nextTick</code>s to
-render changes of the content into the target.</p>
-<p>Modals can be rendered <em>in-place</em> in the document (i.e. where the <code translate="no" class="notranslate text-nowrap">&lt;b-modal&gt;</code> component is placed in
-the document) by setting the <code translate="no" class="notranslate text-nowrap">static</code> prop to <code translate="no" class="notranslate text-nowrap">true</code>. Note that the content of the modal will be
-rendered in the DOM even if the modal is not visible/shown when <code translate="no" class="notranslate text-nowrap">static</code> is <code translate="no" class="notranslate text-nowrap">true</code>. To make <code translate="no" class="notranslate text-nowrap">static</code> modals lazy rendered, also set the <code translate="no" class="notranslate text-nowrap">lazy</code> prop to <code translate="no" class="notranslate text-nowrap">true</code>. The modal will then appear in the document <em>only</em> when it is visible. Note, when in <code translate="no" class="notranslate text-nowrap">static</code> mode, placement of the <code translate="no" class="notranslate text-nowrap">&lt;b-modal&gt;</code> component <em>may
-affect layout</em> of your document and the modal.</p>
-<p>The <code translate="no" class="notranslate text-nowrap">lazy</code> prop will have no effect if the prop <code translate="no" class="notranslate text-nowrap">static</code> is not <code translate="no" class="notranslate text-nowrap">true</code> (non-static modals will <em>always</em> be lazily rendered).</p>
-<h2 id="styling-options-and-customization" class="bv-no-focus-ring"><span class="bd-content-title">Styling, options, and customization<a class="anchorjs-link" href="#styling-options-and-customization" aria-labelledby="styling-options-and-customization"></a></span></h2>
-<h3 id="modal-sizing" class="bv-no-focus-ring"><span class="bd-content-title">Modal sizing<a class="anchorjs-link" href="#modal-sizing" aria-labelledby="modal-sizing"></a></span></h3>
-<p>Modals have three optional sizes, available via the prop <code translate="no" class="notranslate text-nowrap">size</code>. These sizes kick in at certain
-breakpoints to avoid horizontal scrollbars on narrower viewports. Valid optional sizes are <code translate="no" class="notranslate text-nowrap">sm</code>, <code translate="no" class="notranslate text-nowrap">lg</code>, and <code translate="no" class="notranslate text-nowrap">xl</code>.</p>
+<h2 id="lazy-loading-and-static-modals" class="bv-no-focus-ring"><span class="bd-content-title">延迟加载和静态模式<a class="anchorjs-link" href="#lazy-loading-and-static-modals" aria-labelledby="lazy-loading-and-static-modals"></a></span></h2>
+<p>
+  默认情况下，modals在显示（延迟呈现）内容之前不会在文档中呈现内容。在可见时附加到<code translate="no" class="notranslate text-nowrap">&lt;body&gt;</code>元素的模式。
+  <code translate="no" class="notranslate text-nowrap">&lt;b-modal&gt;</code>组件不会影响布局，因为它们呈现为占位符注释节点（<code translate="no" class="notranslate text-nowrap">&lt;!----&gt;</code>)
+  它们被放置在DOM位置。由于移植过程，可能需要两个或更多的<code translate="no" class="notranslate text-nowrap">$nextTick</code>才能将内容的更改呈现到目标中。
+</p>
+<p>
+  通过将static prop设置为true，可以在文档中的适当位置呈现Modals（即<code translate="no" class="notranslate text-nowrap">&lt;b-modal&gt;</code>组件位于文档中的位置）。
+  注意，即使<code translate="no" class="notranslate text-nowrap">static</code> 为<code translate="no" class="notranslate text-nowrap">true</code>时模态不可见/显示，
+  模态的内容也将在DOM中呈现。要使静态模式延迟呈现，还需要将<code translate="no" class="notranslate text-nowrap">lazy</code> 属性设置
+  为<code translate="no" class="notranslate text-nowrap">true</code> 。只有当模态可见时，它才会出现在文档中。注意，在静态模式下，<code translate="no" class="notranslate text-nowrap">&lt;b-modal&gt;</code>组件的位置可能会影响文档和模式的布局。
+</p>
+<p>
+  如果属性<code translate="no" class="notranslate text-nowrap">static</code>不为<code translate="no" class="notranslate text-nowrap">true</code>，
+  则<code translate="no" class="notranslate text-nowrap">lazy</code>属性将不起作用（非静态模式将始终延迟呈现）。
+</p>
+<h2 id="styling-options-and-customization" class="bv-no-focus-ring"><span class="bd-content-title">样式、选项和自定义<a class="anchorjs-link" href="#styling-options-and-customization" aria-labelledby="styling-options-and-customization"></a></span></h2>
+<h3 id="modal-sizing" class="bv-no-focus-ring"><span class="bd-content-title">模式尺寸<a class="anchorjs-link" href="#modal-sizing" aria-labelledby="modal-sizing"></a></span></h3>
+<p>
+  模态有三种可选sizes，可通过属性<code translate="no" class="notranslate text-nowrap">size</code>。
+  这些大小在某些断点处启动，以避免在较窄的视口上出现水平滚动条。有效的可选尺寸为<code translate="no" class="notranslate text-nowrap">sm</code>, 
+  <code translate="no" class="notranslate text-nowrap">lg</code>,和
+  <code translate="no" class="notranslate text-nowrap">xl</code>。
+</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-modal-sizes notranslate">
 <div>
 <button type="button" class="btn btn-primary">xl modal</button>
@@ -733,10 +806,11 @@ breakpoints to avoid horizontal scrollbars on narrower viewports. Valid optional
   <span class="hljs-tag">&lt;<span class="hljs-name">b-modal</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"modal-lg"</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"lg"</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Large Modal"</span>&gt;</span>Hello Large Modal!<span class="hljs-tag">&lt;/<span class="hljs-name">b-modal</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-modal</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"modal-sm"</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"sm"</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Small Modal"</span>&gt;</span>Hello Small Modal!<span class="hljs-tag">&lt;/<span class="hljs-name">b-modal</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
-<p>The <code translate="no" class="notranslate text-nowrap">size</code> prop maps the size to the <code translate="no" class="notranslate text-nowrap">.modal-&lt;size&gt;</code> classes.</p>
-<h3 id="scrolling-long-content" class="bv-no-focus-ring"><span class="bd-content-title">Scrolling long content<a class="anchorjs-link" href="#scrolling-long-content" aria-labelledby="scrolling-long-content"></a></span></h3>
-<p>When modals become too long for the user's viewport or device, they scroll independent of the page
-itself. Try the demo below to see what we mean.</p>
+<p>
+  <code translate="no" class="notranslate text-nowrap">size</code>属性将大小映射到<code translate="no" class="notranslate text-nowrap">.modal-&lt;size&gt;</code>类。
+</p>
+<h3 id="scrolling-long-content" class="bv-no-focus-ring"><span class="bd-content-title">滚动长内容<a class="anchorjs-link" href="#scrolling-long-content" aria-labelledby="scrolling-long-content"></a></span></h3>
+<p>当modals对于用户的视窗或设备太长时，它们会独立于页面本身滚动。试试下面的演示看看我们的意思。</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-modal-scroll-overflow notranslate">
 <div>
 <button type="button" class="btn btn-secondary">Launch overflowing modal</button>
@@ -752,8 +826,9 @@ itself. Try the demo below to see what we mean.</p>
     <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-modal</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
-<p>You can also create a scrollable modal that allows the scrolling of the modal body by setting the
-prop <code translate="no" class="notranslate text-nowrap">scrollable</code> to <code translate="no" class="notranslate text-nowrap">true</code>.</p>
+<p>
+  您还可以通过将属性<code translate="no" class="notranslate text-nowrap">scrollable</code>设置为<code translate="no" class="notranslate text-nowrap">true</code>来创建一个可滚动的模式，该模式允许模式体滚动。
+</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-modal-scrollable-content notranslate">
 <div>
 <button type="button" class="btn btn-secondary">Launch scrolling modal</button>
@@ -769,8 +844,10 @@ prop <code translate="no" class="notranslate text-nowrap">scrollable</code> to <
     <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-modal</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
-<h3 id="vertically-centered-modal" class="bv-no-focus-ring"><span class="bd-content-title">Vertically centered modal<a class="anchorjs-link" href="#vertically-centered-modal" aria-labelledby="vertically-centered-modal"></a></span></h3>
-<p>Vertically center your modal in the viewport by setting the <code translate="no" class="notranslate text-nowrap">centered</code> prop.</p>
+<h3 id="vertically-centered-modal" class="bv-no-focus-ring"><span class="bd-content-title">垂直居中模式<a class="anchorjs-link" href="#vertically-centered-modal" aria-labelledby="vertically-centered-modal"></a></span></h3>
+<p>
+  通过设置<code translate="no" class="notranslate text-nowrap">centered</code>属性，在视口中垂直居中模式。
+</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-modal-center-vertically notranslate">
 <div>
 <button type="button" class="btn btn-secondary">Launch centered modal</button>
@@ -783,12 +860,28 @@ prop <code translate="no" class="notranslate text-nowrap">scrollable</code> to <
     <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"my-4"</span>&gt;</span>Vertically centered modal!<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-modal</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
-<p>Feel free to mix vertically <code translate="no" class="notranslate text-nowrap">centered</code> with <code translate="no" class="notranslate text-nowrap">scrollable</code>.</p>
-<h3 id="variants" class="bv-no-focus-ring"><span class="bd-content-title">Variants<a class="anchorjs-link" href="#variants" aria-labelledby="variants"></a></span></h3>
-<p>Control the header, footer, and body background and text variants by setting the <code translate="no" class="notranslate text-nowrap">header-bg-variant</code>, <code translate="no" class="notranslate text-nowrap">header-text-variant</code>, <code translate="no" class="notranslate text-nowrap">body-bg-variant</code>, <code translate="no" class="notranslate text-nowrap">body-text-variant</code>, <code translate="no" class="notranslate text-nowrap">footer-bg-variant</code>, and <code translate="no" class="notranslate text-nowrap">footer-text-variant</code> props. Use any of the standard Bootstrap variants
-such as <code translate="no" class="notranslate text-nowrap">danger</code>, <code translate="no" class="notranslate text-nowrap">warning</code>, <code translate="no" class="notranslate text-nowrap">info</code>, <code translate="no" class="notranslate text-nowrap">success</code>, <code translate="no" class="notranslate text-nowrap">dark</code>, <code translate="no" class="notranslate text-nowrap">light</code>, etc.</p>
-<p>The variants for the bottom border of the header and top border of the footer can be controlled by
-the <code translate="no" class="notranslate text-nowrap">header-border-variant</code> and <code translate="no" class="notranslate text-nowrap">footer-border-variant</code> props respectively.</p>
+<p>
+  您可以随意将<code translate="no" class="notranslate text-nowrap">centered</code>与<code translate="no" class="notranslate text-nowrap">scrollable</code>的混合。
+</p>
+<h3 id="variants" class="bv-no-focus-ring"><span class="bd-content-title">变量<a class="anchorjs-link" href="#variants" aria-labelledby="variants"></a></span></h3>
+<p>
+  通过设置<code translate="no" class="notranslate text-nowrap">header-bg-variant</code>, 
+  <code translate="no" class="notranslate text-nowrap">header-text-variant</code>, 
+  <code translate="no" class="notranslate text-nowrap">body-bg-variant</code>,
+   <code translate="no" class="notranslate text-nowrap">body-text-variant</code>, 
+   <code translate="no" class="notranslate text-nowrap">footer-bg-variant</code>,和
+   <code translate="no" class="notranslate text-nowrap">footer-text-variant</code>属性来控制页眉、页脚和正文背景以及文本变量。
+   使用任何标准的引导变量，如<code translate="no" class="notranslate text-nowrap">danger</code>, 
+   <code translate="no" class="notranslate text-nowrap">warning</code>, 
+   <code translate="no" class="notranslate text-nowrap">info</code>, 
+   <code translate="no" class="notranslate text-nowrap">success</code>, 
+   <code translate="no" class="notranslate text-nowrap">dark</code>, 
+   <code translate="no" class="notranslate text-nowrap">light</code>等。
+</p>
+<p>
+  页眉下边框和页脚上边框的变体可以分别由<code translate="no" class="notranslate text-nowrap">header-border-variant</code>和
+  <code translate="no" class="notranslate text-nowrap">footer-border-variant</code>属性控制。
+</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-modal-variants notranslate">
 <div>
 <button type="button" class="btn btn-primary">Show Modal</button>
@@ -897,10 +990,17 @@ the <code translate="no" class="notranslate text-nowrap">header-border-variant</
     }
   }
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
-<p>You can also apply arbitrary classes to the modal dialog container, content (modal window itself),
-header, body and footer via the <code translate="no" class="notranslate text-nowrap">modal-class</code>, <code translate="no" class="notranslate text-nowrap">content-class</code>, <code translate="no" class="notranslate text-nowrap">header-class</code>, <code translate="no" class="notranslate text-nowrap">body-class</code> and <code translate="no" class="notranslate text-nowrap">footer-class</code> props, respectively. The props accept either a string or array of strings.</p>
-<h3 id="hiding-the-backdrop" class="bv-no-focus-ring"><span class="bd-content-title">Hiding the backdrop<a class="anchorjs-link" href="#hiding-the-backdrop" aria-labelledby="hiding-the-backdrop"></a></span></h3>
-<p>Hide the modal's backdrop via setting the <code translate="no" class="notranslate text-nowrap">hide-backdrop</code> prop.</p>
+<p>
+  您还可以分别通过code translate="no" class="notranslate text-nowrap">modal-class</code>,
+  <code translate="no" class="notranslate text-nowrap">content-class</code>, 
+  <code translate="no" class="notranslate text-nowrap">header-class</code>, 
+  <code translate="no" class="notranslate text-nowrap">body-class</code>和
+  <code translate="no" class="notranslate text-nowrap">footer-class</code>属性将任意类应用于modal对话框容器、content（modal窗口本身）、header、body和footer。道具接受字符串或字符串数组。
+</p>
+<h3 id="hiding-the-backdrop" class="bv-no-focus-ring"><span class="bd-content-title">隐藏背景<a class="anchorjs-link" href="#hiding-the-backdrop" aria-labelledby="hiding-the-backdrop"></a></span></h3>
+<p>
+  通过设置<code translate="no" class="notranslate text-nowrap">hide-backdrop</code>属性隐藏模式的背景。
+</p>
 <div translate="translate" class="bd-example vue-example vue-example-modal-no-backdrop notranslate">
 <div>
 <button type="button" class="btn btn-secondary">Open modal</button>
@@ -916,12 +1016,18 @@ header, body and footer via the <code translate="no" class="notranslate text-now
     <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-modal</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
-<p>Note that clicking outside of the modal will still close the modal even though the backdrop is
-hidden. You can disable this behaviour by setting the <code translate="no" class="notranslate text-nowrap">no-close-on-backdrop</code> prop on <code translate="no" class="notranslate text-nowrap">&lt;b-modal&gt;</code>.</p>
-<h3 id="disable-open-and-close-animation" class="bv-no-focus-ring"><span class="bd-content-title">Disable open and close animation<a class="anchorjs-link" href="#disable-open-and-close-animation" aria-labelledby="disable-open-and-close-animation"></a></span></h3>
-<p>To disable the fading transition/animation when modal opens and closes, just set the prop <code translate="no" class="notranslate text-nowrap">no-fade</code> on the <code translate="no" class="notranslate text-nowrap">&lt;b-modal&gt;</code> component.</p>
-<h3 id="footer-button-sizing" class="bv-no-focus-ring"><span class="bd-content-title">Footer button sizing<a class="anchorjs-link" href="#footer-button-sizing" aria-labelledby="footer-button-sizing"></a></span></h3>
-<p>Fancy smaller or larger buttons in the default footer? Simply set the <code translate="no" class="notranslate text-nowrap">button-size</code> prop to <code translate="no" class="notranslate text-nowrap">'sm'</code> for small buttons, or <code translate="no" class="notranslate text-nowrap">'lg'</code> for larger buttons.</p>
+<p>
+  请注意，即使背景被隐藏，单击模式外部仍将关闭模式。您可以通过将<code translate="no" class="notranslate text-nowrap">no-close-on-backdrop</code>属性设置为<code translate="no" class="notranslate text-nowrap">&lt;b-modal&gt;</code>来禁用此行为。
+</p>
+<h3 id="disable-open-and-close-animation" class="bv-no-focus-ring"><span class="bd-content-title">禁用打开和关闭动画<a class="anchorjs-link" href="#disable-open-and-close-animation" aria-labelledby="disable-open-and-close-animation"></a></span></h3>
+<p>
+  要在模式打开和关闭时禁用淡入淡出过渡/动画，只需在<code translate="no" class="notranslate text-nowrap">&lt;b-modal&gt;</code>组件上设置属性<code translate="no" class="notranslate text-nowrap">no-fade</code>。
+</p>
+<h3 id="footer-button-sizing" class="bv-no-focus-ring"><span class="bd-content-title">页脚按钮大小<a class="anchorjs-link" href="#footer-button-sizing" aria-labelledby="footer-button-sizing"></a></span></h3>
+<p>
+  喜欢默认页脚中的较小或较大按钮吗？ 只需将<code translate="no" class="notranslate text-nowrap">button-size</code>属性的小按钮
+  设置为<code translate="no" class="notranslate text-nowrap">'sm'</code>，或将大按钮设置为<code translate="no" class="notranslate text-nowrap">'lg'</code>。
+</p>
 <div translate="translate" class="bd-example vue-example vue-example-modal-footer-btn-sizes notranslate">
 <div>
 <button type="button" class="btn btn-secondary">Small Footer Buttons</button>
@@ -940,96 +1046,119 @@ hidden. You can disable this behaviour by setting the <code translate="no" class
     <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"my-2"</span>&gt;</span>This modal has large footer buttons<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-modal</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
-<p>The prop <code translate="no" class="notranslate text-nowrap">button-size</code> has no effect if you have provided your own footer via the <a href="#custom-rendering-with-slots" class="font-weight-bold"><code translate="no" class="notranslate text-nowrap">modal-footer</code></a> slot.</p>
-<h3 id="disabling-built-in-footer-buttons" class="bv-no-focus-ring"><span class="bd-content-title">Disabling built-in footer buttons<a class="anchorjs-link" href="#disabling-built-in-footer-buttons" aria-labelledby="disabling-built-in-footer-buttons"></a></span></h3>
-<p>You can disable the built-in footer buttons programmatically.</p>
-<p>You can disable the <strong>Cancel</strong> and <strong>OK</strong> buttons individually by setting the <code translate="no" class="notranslate text-nowrap">cancel-disabled</code> and <code translate="no" class="notranslate text-nowrap">ok-disabled</code> props, respectively, to <code translate="no" class="notranslate text-nowrap">true</code>. Set the prop to <code translate="no" class="notranslate text-nowrap">false</code> to re-enable the button.</p>
-<p>To disable both <strong>Cancel</strong> and <strong>OK</strong> buttons at the same time, simply set the <code translate="no" class="notranslate text-nowrap">busy</code> prop to <code translate="no" class="notranslate text-nowrap">true</code>. Set it to <code translate="no" class="notranslate text-nowrap">false</code> to re-enable both buttons.</p>
-<h3 id="custom-rendering-with-slots" class="bv-no-focus-ring"><span class="bd-content-title">Custom rendering with slots<a class="anchorjs-link" href="#custom-rendering-with-slots" aria-labelledby="custom-rendering-with-slots"></a></span></h3>
-<p><code translate="no" class="notranslate text-nowrap">&lt;b-modal&gt;</code> provides several named slots (of which some are optionally scoped) that you can use to
-customize the content of various sections of the modal.</p>
+<p>
+  如果您已经通过<a href="#custom-rendering-with-slots" class="font-weight-bold"><code translate="no" class="notranslate text-nowrap">modal-footer</code></a>槽提供了自己的页脚，那么属性<code translate="no" class="notranslate text-nowrap">button-size</code>将不起作用。
+</p>
+<h3 id="disabling-built-in-footer-buttons" class="bv-no-focus-ring"><span class="bd-content-title">禁用内置页脚按钮<a class="anchorjs-link" href="#disabling-built-in-footer-buttons" aria-labelledby="disabling-built-in-footer-buttons"></a></span></h3>
+<p>您可以通过编程方式禁用内置页脚按钮。</p>
+<p>
+  通过将<code translate="no" class="notranslate text-nowrap">cancel-disabled</code>和 
+  <code translate="no" class="notranslate text-nowrap">ok-disabled</code>属性分别设置为<code translate="no" class="notranslate text-nowrap">true</code>，
+  可以分别禁用<strong>Cancel</strong> 和 <strong>OK</strong>按钮。将属性设置为<code translate="no" class="notranslate text-nowrap">false</code>以重新启用按钮。
+</p>
+<p>
+  要同时禁用<strong>Cancel</strong>和<strong>OK</strong>按钮，只需将<code translate="no" class="notranslate text-nowrap">busy</code>属性设置为
+  <code translate="no" class="notranslate text-nowrap">true</code>。将其设置为<code translate="no" class="notranslate text-nowrap">false</code>可重新启用两个按钮。
+</p>
+<h3 id="custom-rendering-with-slots" class="bv-no-focus-ring"><span class="bd-content-title">带插槽的自定义渲染<a class="anchorjs-link" href="#custom-rendering-with-slots" aria-labelledby="custom-rendering-with-slots"></a></span></h3>
+<p><code translate="no" class="notranslate text-nowrap">&lt;b-modal&gt;</code>提供多个命名槽（其中一些槽的作用域是可选的），您可以使用这些槽自定义模式的各个部分的内容。</p>
 <div class="table-responsive-sm">
 <table class="b-table table table-bordered table-striped bv-docs-table">
 <thead class="thead-default">
 <tr>
 <th>Slot</th>
-<th>Optionally Scoped</th>
-<th>Description</th>
+<th>可选范围</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code translate="no" class="notranslate text-nowrap">default</code></td>
 <td>Yes</td>
-<td>Main content of the modal</td>
+<td>模式的主要内容</td>
 </tr>
 <tr>
 <td><code translate="no" class="notranslate text-nowrap">modal-title</code></td>
 <td>Yes</td>
-<td>Content to place in the modal's title</td>
+<td>放在情态词标题中的内容</td>
 </tr>
 <tr>
 <td><code translate="no" class="notranslate text-nowrap">modal-header</code></td>
 <td>Yes</td>
-<td>Content to place in the header. Replaces the entire header including the close button</td>
+<td>要放在标题中的内容。替换整个标题，包括“关闭”按钮</td>
 </tr>
 <tr>
 <td><code translate="no" class="notranslate text-nowrap">modal-footer</code></td>
 <td>Yes</td>
-<td>Content to place in the footer. Replaces the entire footer including the button(s)</td>
+<td>要放在页脚中的内容。替换包括按钮在内的整个页脚</td>
 </tr>
 <tr>
 <td><code translate="no" class="notranslate text-nowrap">modal-ok</code></td>
 <td>No</td>
-<td>Content to place inside the footer OK button</td>
+<td>要放在页脚内的内容“确定”按钮</td>
 </tr>
 <tr>
 <td><code translate="no" class="notranslate text-nowrap">modal-cancel</code></td>
 <td>No</td>
-<td>Content to place inside the footer CANCEL button</td>
+<td>要放置在页脚中的内容“取消”按钮</td>
 </tr>
 <tr>
 <td><code translate="no" class="notranslate text-nowrap">modal-header-close</code></td>
 <td>No</td>
-<td>Content to place inside the header CLOSE (<code translate="no" class="notranslate text-nowrap">x</code>) button</td>
+<td>
+  放置在页眉关闭（<code translate="no" class="notranslate text-nowrap">x</code>）按钮内的内容
+</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p>The scope available to the slots that support optional scoping are:</p>
+<p>支持可选作用域的插槽可用的作用域为：</p>
 <div class="table-responsive-sm">
 <table class="b-table table table-bordered table-striped bv-docs-table">
 <thead class="thead-default">
 <tr>
-<th>Method or Property</th>
-<th>Description</th>
+<th>方法或属性</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code translate="no" class="notranslate text-nowrap">ok()</code></td>
-<td>Closes the modal and fires the <code translate="no" class="notranslate text-nowrap">ok</code> and <code translate="no" class="notranslate text-nowrap">hide</code> events, with <code translate="no" class="notranslate text-nowrap">bvModalEvent.trigger = 'ok'</code></td>
+<td>
+  关闭模式并触发<code translate="no" class="notranslate text-nowrap">ok</code>和
+  <code translate="no" class="notranslate text-nowrap">hide</code>事件，<code translate="no" class="notranslate text-nowrap">bvModalEvent.trigger = 'ok'</code>
+</td>
 </tr>
 <tr>
 <td><code translate="no" class="notranslate text-nowrap">cancel()</code></td>
-<td>Closes the modal and fires the <code translate="no" class="notranslate text-nowrap">cancel</code> and <code translate="no" class="notranslate text-nowrap">hide</code> events, with <code translate="no" class="notranslate text-nowrap">bvModalEvent.trigger = 'cancel'</code></td>
+<td>
+  关闭模式并启动<code translate="no" class="notranslate text-nowrap">cancel</code>和
+  <code translate="no" class="notranslate text-nowrap">hide</code> 事件，<code translate="no" class="notranslate text-nowrap">bvModalEvent.trigger = 'cancel'</code>
+</td>
 </tr>
 <tr>
 <td><code translate="no" class="notranslate text-nowrap">close()</code></td>
-<td>Closes the modal and fires the <code translate="no" class="notranslate text-nowrap">close</code> and <code translate="no" class="notranslate text-nowrap">hide</code> events, with <code translate="no" class="notranslate text-nowrap">bvModalEvent.trigger = 'headerclose'</code></td>
+<td>
+  关闭模式并触发<code translate="no" class="notranslate text-nowrap">close</code>和
+  <code translate="no" class="notranslate text-nowrap">hide</code>事件，<code translate="no" class="notranslate text-nowrap">bvModalEvent.trigger = 'headerclose'</code>
+</td>
 </tr>
 <tr>
 <td><code translate="no" class="notranslate text-nowrap">hide(trigger)</code></td>
-<td>Closes the modal and fires the <code translate="no" class="notranslate text-nowrap">hide</code> event, with the <code translate="no" class="notranslate text-nowrap">bvModalEvent.trigger = trigger</code> (trigger is optional)</td>
+<td>
+  关闭模式并触发<code translate="no" class="notranslate text-nowrap">hide</code>事件，<code translate="no" class="notranslate text-nowrap">bvModalEvent.trigger = trigger</code>（trigger是可选的）
+</td>
 </tr>
 <tr>
 <td><code translate="no" class="notranslate text-nowrap">visible</code></td>
-<td>The visibility state of the modal. <code translate="no" class="notranslate text-nowrap">true</code> if the modal is visible and <code translate="no" class="notranslate text-nowrap">false</code> if not visible</td>
+<td>
+  模态的可见性状态。如果模态可见，则为<code translate="no" class="notranslate text-nowrap">true</code>；如果不可见，则为<code translate="no" class="notranslate text-nowrap">false</code>
+</td>
 </tr>
 </tbody>
 </table>
 </div>
-<h4 id="example-modal-using-custom-scoped-slots" class="bv-no-focus-ring"><span class="bd-content-title">Example modal using custom scoped slots<a class="anchorjs-link" href="#example-modal-using-custom-scoped-slots" aria-labelledby="example-modal-using-custom-scoped-slots"></a></span></h4>
+<h4 id="example-modal-using-custom-scoped-slots" class="bv-no-focus-ring"><span class="bd-content-title">使用自定义范围插槽的示例模式<a class="anchorjs-link" href="#example-modal-using-custom-scoped-slots" aria-labelledby="example-modal-using-custom-scoped-slots"></a></span></h4>
 <div translate="translate" class="bd-example vue-example vue-example-b-modal-scoped-slots notranslate">
 <button type="button" class="btn btn-secondary">Open Modal</button>
 </div>
@@ -1066,9 +1195,12 @@ customize the content of various sections of the modal.</p>
     <span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-modal</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span></pre>
-<h2 id="multiple-modal-support" class="bv-no-focus-ring"><span class="bd-content-title">Multiple modal support<a class="anchorjs-link" href="#multiple-modal-support" aria-labelledby="multiple-modal-support"></a></span></h2>
-<p>Unlike native Bootstrap v4, BootstrapVue supports multiple modals opened at the same time.</p>
-<p>To disable stacking for a specific modal, just set the prop <code translate="no" class="notranslate text-nowrap">no-stacking</code> on the <code translate="no" class="notranslate text-nowrap">&lt;b-modal&gt;</code> component. This will hide the modal before another modal is shown.</p>
+<h2 id="multiple-modal-support" class="bv-no-focus-ring"><span class="bd-content-title">多模式支持<a class="anchorjs-link" href="#multiple-modal-support" aria-labelledby="multiple-modal-support"></a></span></h2>
+<p>与本机引导v4不同，BootstrapVue支持同时打开多个modal。</p>
+<p>
+  要禁用特定模式的堆叠，只需在<code translate="no" class="notranslate text-nowrap">&lt;b-modal&gt;</code>组件上设置
+  属性 <code translate="no" class="notranslate text-nowrap">no-stacking</code>。这将在显示另一个模态之前隐藏该模态。
+</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-modal-multiple notranslate">
 <div>
 <button type="button" class="btn btn-secondary">Open First Modal</button>
@@ -1091,47 +1223,64 @@ customize the content of various sections of the modal.</p>
     <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"my-1"</span>&gt;</span>Third Modal<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-modal</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
-<p><strong>Notes:</strong></p>
+<p><strong>注意事项:</strong></p>
 <ul>
-<li>Avoid nesting a <code translate="no" class="notranslate text-nowrap">&lt;b-modal&gt;</code> <em>inside</em> another <code translate="no" class="notranslate text-nowrap">&lt;b-modal&gt;</code>, as it may get "constrained" to the
-boundaries of the parent modal dialog (specifically when static modals are used).</li>
-<li>The opaque backdrop will appear progressively darker for each modal that is opened. This is
-expected behaviour as each backdrop is opened over top the other modals and backdrops.</li>
+<li>
+  避免将<code translate="no" class="notranslate text-nowrap">&lt;b-modal&gt;</code> 嵌套在另一个<code translate="no" class="notranslate text-nowrap">&lt;b-modal&gt;</code> 中，
+  因为它可能会被“约束”到父模式对话框的边界（特别是在使用静态模式时）。
+</li>
+<li>对于打开的每个模式，不透明背景将逐渐变暗。这是预期的行为，因为每个背景是打开超过其他模式和背景。</li>
 </ul>
-<h2 id="modal-message-boxes" class="bv-no-focus-ring"><span class="bd-content-title">Modal message boxes<a class="anchorjs-link" href="#modal-message-boxes" aria-labelledby="modal-message-boxes"></a></span></h2>
-<p>BootstrapVue provides a few built in Message Box methods on the exposed <code translate="no" class="notranslate text-nowrap">this.$bvModal</code> object.
-These methods provide a way to generate simple OK and Confirm style modal messages, from anywhere in
-your app without having to explicitly place a <code translate="no" class="notranslate text-nowrap">&lt;b-modal&gt;</code> component in your pages.</p>
+<h2 id="modal-message-boxes" class="bv-no-focus-ring"><span class="bd-content-title">模式消息框<a class="anchorjs-link" href="#modal-message-boxes" aria-labelledby="modal-message-boxes"></a></span></h2>
+<p>
+  BootstrapVue在公开的<code translate="no" class="notranslate text-nowrap">this.$bvModal</code>对象上提供了一些内置的消息框方法。
+  这些方法提供了一种从应用程序中的任何位置生成简单的“确定”和“确认”样式模式消息的方法，而无需在页面中显式放置<code translate="no" class="notranslate text-nowrap">&lt;b-modal&gt;</code>组件。
+</p>
 <div class="table-responsive-sm">
 <table class="b-table table table-bordered table-striped bv-docs-table">
 <thead class="thead-default">
 <tr>
-<th>Method</th>
-<th>Description</th>
+<th>方法</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code translate="no" class="notranslate text-nowrap">this.$bvModal.msgBoxOk(message, options)</code></td>
-<td>Open a modal with <code translate="no" class="notranslate text-nowrap">message</code> as the content and a single OK button</td>
+<td>
+  打开一个包含<code translate="no" class="notranslate text-nowrap">message</code>和一个OK按钮的模式
+</td>
 </tr>
 <tr>
 <td><code translate="no" class="notranslate text-nowrap">this.$bvModal.msgBoxConfirm(message, options)</code></td>
-<td>Open a modal with <code translate="no" class="notranslate text-nowrap">message</code> as the content and CANCEL and OK buttons</td>
+<td>
+  打开一个以<code translate="no" class="notranslate text-nowrap">message</code>为内容的模式，然后单击“取消”和“确定”按钮
+</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p>The <code translate="no" class="notranslate text-nowrap">options</code> argument is an optional configuration object for adding titles and styling the Message
-Box modal. The object properties correspond to <code translate="no" class="notranslate text-nowrap">&lt;b-modal&gt;</code> props, except in <samp class="notranslate" translate="no">camelCase</samp> format instead of <samp class="notranslate" translate="no">kebab-case</samp>.</p>
-<p>Both methods return a <code translate="no" class="notranslate text-nowrap">Promise</code> (requires a polyfill for IE 11 and older browser support) which
-resolve into a value when the modal hides. <code translate="no" class="notranslate text-nowrap">.msgBoxOk()</code> always resolves to the value <code translate="no" class="notranslate text-nowrap">true</code>, while <code translate="no" class="notranslate text-nowrap">.msgBoxConfirm()</code> resolves to either <code translate="no" class="notranslate text-nowrap">true</code> (OK button pressed), <code translate="no" class="notranslate text-nowrap">false</code> (CANCEL button pressed),
-or <code translate="no" class="notranslate text-nowrap">null</code> (if the modal was closed via backdrop click, <kbd class="notranslate" translate="no">ESC</kbd> press, or some other means.</p>
-<p>If <code translate="no" class="notranslate text-nowrap">message</code> is not provided, both methods will return immediately with the value <code translate="no" class="notranslate text-nowrap">undefined</code>.</p>
-<p>You can use either the <code translate="no" class="notranslate text-nowrap">.then(..).catch(...)</code> or async <code translate="no" class="notranslate text-nowrap">await</code> code styles (async <code translate="no" class="notranslate text-nowrap">await</code> requires
-modern browsers or a transpiler).</p>
-<h3 id="ok-message-box" class="bv-no-focus-ring"><span class="bd-content-title">OK message box<a class="anchorjs-link" href="#ok-message-box" aria-labelledby="ok-message-box"></a></span></h3>
-<p>Example OK Message boxes</p>
+<p>
+  <code translate="no" class="notranslate text-nowrap">options</code> 参数是用于添加标题和设置消息框模式样式的可选配置对象。
+  对象属性对应于<code translate="no" class="notranslate text-nowrap">&lt;b-modal&gt;</code>属性，但以camelCase格式而不是kebab格式除外。
+</p>
+<p>
+  这两个方法都返回一个 <code translate="no" class="notranslate text-nowrap">Promise</code>（需要IE 11的polyfill和更旧的浏览器支持），
+  当模式隐藏时，该Promise将解析为一个值。<code translate="no" class="notranslate text-nowrap">.msgBoxOk()</code>始终解析为值<code translate="no" class="notranslate text-nowrap">true</code>，
+  而<code translate="no" class="notranslate text-nowrap">.msgBoxConfirm()</code>解析为
+  <code translate="no" class="notranslate text-nowrap">true</code> (单击“确定”按钮), 
+<code translate="no" class="notranslate text-nowrap">false</code> (单击“取消”按钮),或
+ <code translate="no" class="notranslate text-nowrap">null</code> (如果通过背景单击、按<kbd class="notranslate" translate="no">ESC</kbd> C键或其他方式关闭了模式)。
+</p>
+<p>
+  如果未提供<code translate="no" class="notranslate text-nowrap">message</code>，两个方法将立即返回<code translate="no" class="notranslate text-nowrap">undefined</code>的值。
+</p>
+<p>
+  您可以使用<code translate="no" class="notranslate text-nowrap">.then(..).catch(...)</code>或async<code translate="no" class="notranslate text-nowrap">await</code>代码样式
+  （async <code translate="no" class="notranslate text-nowrap">await</code>需要现代浏览器或transpiler）。
+</p>
+<h3 id="ok-message-box" class="bv-no-focus-ring"><span class="bd-content-title">确定消息框<a class="anchorjs-link" href="#ok-message-box" aria-labelledby="ok-message-box"></a></span></h3>
+<p>示例OK消息框</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-modal-msg-box-ok notranslate">
 <div>
 <div class="mb-2">
@@ -1195,8 +1344,8 @@ Return value: </div>
     }
   }
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
-<h3 id="confirm-message-box" class="bv-no-focus-ring"><span class="bd-content-title">Confirm message box<a class="anchorjs-link" href="#confirm-message-box" aria-labelledby="confirm-message-box"></a></span></h3>
-<p>Example Confirm Message boxes</p>
+<h3 id="confirm-message-box" class="bv-no-focus-ring"><span class="bd-content-title">确认消息框<a class="anchorjs-link" href="#confirm-message-box" aria-labelledby="confirm-message-box"></a></span></h3>
+<p>确认消息框示例</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-modal-msg-box-confirm notranslate">
 <div>
 <div class="mb-2">
@@ -1262,35 +1411,66 @@ Return value: </div>
     }
   }
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
-<h3 id="message-box-notes" class="bv-no-focus-ring"><span class="bd-content-title">Message box notes<a class="anchorjs-link" href="#message-box-notes" aria-labelledby="message-box-notes"></a></span></h3>
+<h3 id="message-box-notes" class="bv-no-focus-ring"><span class="bd-content-title">消息框注释<a class="anchorjs-link" href="#message-box-notes" aria-labelledby="message-box-notes"></a></span></h3>
 <ul>
-<li>The <code translate="no" class="notranslate text-nowrap">this.$bvModal</code> injection is only available when using the full <code translate="no" class="notranslate text-nowrap">BootstrapVue</code> plugin or the <code translate="no" class="notranslate text-nowrap">ModalPlugin</code> plugin. It is not available if importing just the <code translate="no" class="notranslate text-nowrap">b-modal</code> component. To just
-import the injection, use the <code translate="no" class="notranslate text-nowrap">BVModalPlugin</code> plugin.</li>
-<li>A new <code translate="no" class="notranslate text-nowrap">$bvModal</code> injection (mixin) is created for each Vue virtual machine (i.e. each instantiated
-component), and is not usable via direct access to the <code translate="no" class="notranslate text-nowrap">Vue.prototype</code>, as it needs access to the
-instance's <code translate="no" class="notranslate text-nowrap">this</code> and <code translate="no" class="notranslate text-nowrap">$root</code> contexts.</li>
-<li>Message Boxes require <code translate="no" class="notranslate text-nowrap">Promise</code> support in the browser. If targeting your app for older browsers,
-such as IE 11, please include a polyfill that provides <code translate="no" class="notranslate text-nowrap">Promise</code> support. If <code translate="no" class="notranslate text-nowrap">Promise</code> support is
-not detected, then the message box methods will immediately return <code translate="no" class="notranslate text-nowrap">undefined</code>.</li>
-<li>Message Boxes are an extension of the <code translate="no" class="notranslate text-nowrap">&lt;b-modal&gt;</code> component, and hence support the majority of <code translate="no" class="notranslate text-nowrap">&lt;b-modal&gt;</code> props (using <samp class="notranslate" translate="no">camelCase</samp> format), with the exception of the following
-props: <code translate="no" class="notranslate text-nowrap">lazy</code>, <code translate="no" class="notranslate text-nowrap">static</code>, <code translate="no" class="notranslate text-nowrap">busy</code>, <code translate="no" class="notranslate text-nowrap">visible</code>, <code translate="no" class="notranslate text-nowrap">noStacking</code>, <code translate="no" class="notranslate text-nowrap">okOnly</code>, <code translate="no" class="notranslate text-nowrap">okDisabled</code>, and <code translate="no" class="notranslate text-nowrap">cancelDisabled</code>.</li>
-<li>When a <code translate="no" class="notranslate text-nowrap">title</code> (or <code translate="no" class="notranslate text-nowrap">titleHtml</code>) <em>is not</em> provided in the options, the header will not be shown.</li>
-<li>When a <code translate="no" class="notranslate text-nowrap">title</code> (or <code translate="no" class="notranslate text-nowrap">titleHtml</code>) <em>is</em> provided in the options, the header close button is not shown
-by default. You can enable the header close button by setting <code translate="no" class="notranslate text-nowrap">hideHeaderClose: false</code> in the
-options.</li>
-<li>Message Boxes will throw an error (promise rejection) if they are closed/destroyed before they are
-hidden. Always include a <code translate="no" class="notranslate text-nowrap">.catch(errHandler)</code> reject handler, event if using the async <code translate="no" class="notranslate text-nowrap">await</code> style code.</li>
-<li>When using Vue Router (or similar), Message Boxes will close and reject if the route changes
-before the modal hides. If you wish for the message box to remain open when the route changes, use <code translate="no" class="notranslate text-nowrap">this.$root.$bvModal</code> instead of <code translate="no" class="notranslate text-nowrap">this.$bvModal</code>.</li>
-<li>Message boxes cannot be generated during Server Side Rendering (SSR).</li>
-<li>The Message Box <code translate="no" class="notranslate text-nowrap">message</code> currently does not support HTML strings, however, you can pass an <em>array</em> of <code translate="no" class="notranslate text-nowrap">VNodes</code> as the <code translate="no" class="notranslate text-nowrap">message</code> for fine grained control of the markup. You can use Vue's <a href="https://vuejs.org/v2/guide/render-function.html#createElement-Arguments" target="_blank" rel="noopener"><code translate="no" class="notranslate text-nowrap">this.$createElement</code></a> method to generate VNodes. This can also be done for the modal title (by passing VNodes to the <code translate="no" class="notranslate text-nowrap">title</code> option), OK button text (via the <code translate="no" class="notranslate text-nowrap">okTitle</code> option), and the CANCEL button text (via the <code translate="no" class="notranslate text-nowrap">cancelTitle</code> option).</li>
+<li>
+  <code translate="no" class="notranslate text-nowrap">this.$bvModal</code>注入仅在使用完整的<code translate="no" class="notranslate text-nowrap">BootstrapVue</code>插件或
+  <code translate="no" class="notranslate text-nowrap">ModalPlugin</code>插件时可用。如果仅导入<code translate="no" class="notranslate text-nowrap">b-modal</code>组件，
+  则此选项不可用。要导入注入，请使用<code translate="no" class="notranslate text-nowrap">BVModalPlugin</code>插件。
+</li>
+<li>
+  为每个Vue虚拟机（即每个实例化组件）创建一个新的<code translate="no" class="notranslate text-nowrap">$bvModal</code>注入（mixin），
+  并且不能通过直接访问<code translate="no" class="notranslate text-nowrap">Vue.prototype</code>来使用，因为它需要访问实例的<code translate="no" class="notranslate text-nowrap">this</code>和
+  <code translate="no" class="notranslate text-nowrap">$root</code>上下文。
+</li>
+<li>
+  消息框需要浏览器中的<code translate="no" class="notranslate text-nowrap">Promise</code>支持。如果你的应用是针对较老的浏览器，如IE 11，
+  请包括一个提供<code translate="no" class="notranslate text-nowrap">Promise</code>支持的polyfill。
+  如果未检测到<code translate="no" class="notranslate text-nowrap">Promise</code>支持，则消息框方法将立即返回<code translate="no" class="notranslate text-nowrap">undefined</code>。
+</li>
+<li>
+  消息框是<code translate="no" class="notranslate text-nowrap">&lt;b-modal&gt;</code>组件的扩展，因此支持大多数<code translate="no" class="notranslate text-nowrap">&lt;b-modal&gt;</code>属性
+  （使用camelCase格式），但以下属性除外：<code translate="no" class="notranslate text-nowrap">lazy</code>,
+  <code translate="no" class="notranslate text-nowrap">static</code>, 
+  <code translate="no" class="notranslate text-nowrap">busy</code>,
+   <code translate="no" class="notranslate text-nowrap">visible</code>, 
+   <code translate="no" class="notranslate text-nowrap">noStacking</code>, 
+   <code translate="no" class="notranslate text-nowrap">okOnly</code>, 
+   <code translate="no" class="notranslate text-nowrap">okDisabled</code>,和 
+   <code translate="no" class="notranslate text-nowrap">cancelDisabled</code>。
+</li>
+<li>
+  如果选项中没有提供<code translate="no" class="notranslate text-nowrap">title</code> （或<code translate="no" class="notranslate text-nowrap">titleHtml</code>），则不会显示标题。
+</li>
+<li>
+  当选项中提供<code translate="no" class="notranslate text-nowrap">title</code>（或<code translate="no" class="notranslate text-nowrap">titleHtml</code>）时，
+  默认情况下不显示标题关闭按钮。通过在选项中设置<code translate="no" class="notranslate text-nowrap">hideHeaderClose: false</code>，可以启用标题关闭按钮。
+</li>
+<li>
+  如果消息框在隐藏之前被关闭/销毁，则会抛出错误（拒绝承诺）。如果使用异步<code translate="no" class="notranslate text-nowrap">await</code>样式的代码，则始终包含<code translate="no" class="notranslate text-nowrap">.catch(errHandler)</code>拒绝处理程序、事件。
+</li>
+<li>
+  使用Vue路由器（或类似路由器）时，如果在隐藏模式之前更改了路由，则消息框将关闭并拒绝。如果希望在路由更改时消息框保持打开状态，
+  请使用<code translate="no" class="notranslate text-nowrap">this.$root.$bvModal</code>而不是<code translate="no" class="notranslate text-nowrap">this.$bvModal</code>。
+</li>
+<li>在服务器端呈现（SSR）期间无法生成消息框。</li>
+<li>
+  消息框<code translate="no" class="notranslate text-nowrap">message</code>当前不支持HTML字符串，但是，可以将<code translate="no" class="notranslate text-nowrap">VNodes</code>数组
+  作为<code translate="no" class="notranslate text-nowrap">message</code>传递，以便对标记进行细粒度控制。
+  您可以使用Vue的<a href="https://vuejs.org/v2/guide/render-function.html#createElement-Arguments" target="_blank" rel="noopener"><code translate="no" class="notranslate text-nowrap">this.$createElement</code></a>
+  方法生成Vnode。也可以对模式标题（通过将VNodes传递给<code translate="no" class="notranslate text-nowrap">title</code>选项）、OK按钮文本
+  （通过<code translate="no" class="notranslate text-nowrap">okTitle</code>选项）和CANCEL按钮文本（通过<code translate="no" class="notranslate text-nowrap">cancelTitle</code>选项）执行此操作。
+</li>
 </ul>
-<h3 id="message-box-advanced-usage" class="bv-no-focus-ring"><span class="bd-content-title">Message box advanced usage<a class="anchorjs-link" href="#message-box-advanced-usage" aria-labelledby="message-box-advanced-usage"></a></span></h3>
-<p>When using the <code translate="no" class="notranslate text-nowrap">this.$bvModal.msgBoxOk(...)</code> or <code translate="no" class="notranslate text-nowrap">this.$bvModal.msgBoxConfirm(...)</code> methods for
-generating modals, you may want the modal content to be more than just a string message. As
-mentioned in the <a href="#message-box-notes" class="font-weight-bold">message box notes</a> section above, you can pass <em>arrays</em> of
-VNodes as the message and title for more complex content.</p>
-<p>Use Vue's <a href="https://vuejs.org/v2/guide/render-function.html#createElement-Arguments" target="_blank" rel="noopener"><code translate="no" class="notranslate text-nowrap">this.$createElement</code></a> method to generate VNodes.</p>
+<h3 id="message-box-advanced-usage" class="bv-no-focus-ring"><span class="bd-content-title">消息框高级用法<a class="anchorjs-link" href="#message-box-advanced-usage" aria-labelledby="message-box-advanced-usage"></a></span></h3>
+<p>
+  使用<code translate="no" class="notranslate text-nowrap">this.$bvModal.msgBoxOk(...)</code>或
+  <code translate="no" class="notranslate text-nowrap">this.$bvModal.msgBoxConfirm(...)</code>方法生成模式时，
+  您可能希望模式内容不仅仅是字符串消息。如上面的<a href="#message-box-notes" class="font-weight-bold">消息框注释</a> 部分所述，可以将vnode数组作为更复杂内容的消息和标题传递。
+</p>
+<p>
+  使用Vue的<a href="https://vuejs.org/v2/guide/render-function.html#createElement-Arguments" target="_blank" rel="noopener"><code translate="no" class="notranslate text-nowrap">this.$createElement</code></a>方法生成vnode。
+ </p>
 <div translate="translate" class="bd-example vue-example vue-example-modal-msg-box-advanced notranslate">
 <div>
 <button type="button" class="btn btn-secondary">Show OK message box with custom content</button>
@@ -1336,8 +1516,8 @@ VNodes as the message and title for more complex content.</p>
     }
   }
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
-<h2 id="listening-to-modal-changes-via-root-events" class="bv-no-focus-ring"><span class="bd-content-title">Listening to modal changes via $root events<a class="anchorjs-link" href="#listening-to-modal-changes-via-root-events" aria-labelledby="listening-to-modal-changes-via-root-events"></a></span></h2>
-<p>To listen to any modal opening, use:</p>
+<h2 id="listening-to-modal-changes-via-root-events" class="bv-no-focus-ring"><span class="bd-content-title">通过$root事件监听模式更改<a class="anchorjs-link" href="#listening-to-modal-changes-via-root-events" aria-labelledby="listening-to-modal-changes-via-root-events"></a></span></h2>
+<p>要监听任何模式打开，请使用：</p>
 <pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
   mounted() {
     <span class="hljs-keyword">this</span>.$root.$on(<span class="hljs-string">'bv::modal::show'</span>, (bvEvent, modalId) =&gt; {
@@ -1345,30 +1525,44 @@ VNodes as the message and title for more complex content.</p>
     })
   }
 }</pre>
-<p>Refer to the <a href="#comp-ref-b-modal" class="font-weight-bold">Events</a> section of this documentation for the full list of events
-emitted.</p>
-<h2 id="accessibility" class="bv-no-focus-ring"><span class="bd-content-title">Accessibility<a class="anchorjs-link" href="#accessibility" aria-labelledby="accessibility"></a></span></h2>
-<p><code translate="no" class="notranslate text-nowrap">&lt;b-modal&gt;</code> provides several accessibility features, including auto focus, return focus, keyboard
-(tab) <em>focus containment</em>, and automated <code translate="no" class="notranslate text-nowrap">aria-*</code> attributes.</p>
-<h3 id="modal-aria-attributes" class="bv-no-focus-ring"><span class="bd-content-title">Modal ARIA attributes<a class="anchorjs-link" href="#modal-aria-attributes" aria-labelledby="modal-aria-attributes"></a></span></h3>
-<p>The <code translate="no" class="notranslate text-nowrap">aria-labelledby</code> and <code translate="no" class="notranslate text-nowrap">aria-describedby</code> attributes will appear on the modal automatically in
-most cases.</p>
+<p>
+  有关发出的事件的完整列表，请参阅本文档的<a href="#comp-ref-b-modal" class="font-weight-bold">事件</a>部分。
+</p>
+<h2 id="accessibility" class="bv-no-focus-ring"><span class="bd-content-title">可访问性<a class="anchorjs-link" href="#accessibility" aria-labelledby="accessibility"></a></span></h2>
+<p>
+  <code translate="no" class="notranslate text-nowrap">&lt;b-modal&gt;</code>提供了一些辅助功能，
+  包括自动对焦、返回对焦、键盘（选项卡）对焦控制和自动<code translate="no" class="notranslate text-nowrap">aria-*</code>属性。
+</p>
+<h3 id="modal-aria-attributes" class="bv-no-focus-ring"><span class="bd-content-title">模式 ARIA 属性<a class="anchorjs-link" href="#modal-aria-attributes" aria-labelledby="modal-aria-attributes"></a></span></h3>
+<p>
+  在大多数情况下，<code translate="no" class="notranslate text-nowrap">aria-labelledby</code>和
+  <code translate="no" class="notranslate text-nowrap">aria-describedby</code>属性将自动出现在模式上。
+</p>
 <ul>
-<li>The <code translate="no" class="notranslate text-nowrap">aria-labelledby</code> attribute will <strong>not</strong> be present if you have the header hidden, or supplied
-your own header, or have not supplied a modal title. It is recommended to supply a title for your
-modals (when using the built in header). You can visually hide the header title, but still make it
-available to screen readers by setting the <code translate="no" class="notranslate text-nowrap">title-sr-only</code> prop. If you do not have a header, you
-can supply a label for the modal by passing a string to the <code translate="no" class="notranslate text-nowrap">aria-label</code> prop.</li>
-<li>The <code translate="no" class="notranslate text-nowrap">aria-describedby</code> attribute will always point to the modal's body content.</li>
-<li>If the <code translate="no" class="notranslate text-nowrap">aria-label</code> prop is specified with a string value, the <code translate="no" class="notranslate text-nowrap">aria-labelledby</code> attribute will
-not be rendered, even if you have a title/header for your modal.</li>
+<li>
+  如果隐藏了头，或者提供了自己的头，或者没有提供模式标题，<code translate="no" class="notranslate text-nowrap">aria-labelledby</code>属性将<strong>不</strong>存在。
+  建议为您的modals提供一个标题（当使用内置头文件时）。您可以直观地隐藏标题标题，
+  但仍然可以通过设置<code translate="no" class="notranslate text-nowrap">title-sr-only</code>属性使其对屏幕阅读器可用。
+  如果没有头，则可以通过向<code translate="no" class="notranslate text-nowrap">aria-label</code>属性传递字符串来为模态提供标签。
+</li>
+<li>
+  <code translate="no" class="notranslate text-nowrap">aria-describedby</code>属性将始终指向模态的正文内容。
+</li>
+<li>
+  如果使用字符串值指定<code translate="no" class="notranslate text-nowrap">aria-label</code>属性，则将不会呈现<code translate="no" class="notranslate text-nowrap">aria-labelledby</code>属性，即使您有模式的标题/标题。
+</li>
 </ul>
-<p>The <code translate="no" class="notranslate text-nowrap">aria-label</code> and <code translate="no" class="notranslate text-nowrap">title-sr-only</code> props were added in version 2.0.0-rc.27.</p>
-<h3 id="auto-focus-on-open" class="bv-no-focus-ring"><span class="bd-content-title">Auto focus on open<a class="anchorjs-link" href="#auto-focus-on-open" aria-labelledby="auto-focus-on-open"></a></span></h3>
-<p><code translate="no" class="notranslate text-nowrap">&lt;b-modal&gt;</code> will autofocus the modal container when opened.</p>
-<p>You can pre-focus an element within the <code translate="no" class="notranslate text-nowrap">&lt;b-modal&gt;</code> by listening to the <code translate="no" class="notranslate text-nowrap">&lt;b-modal&gt;</code> <code translate="no" class="notranslate text-nowrap">shown</code> event,
-and call the element's <code translate="no" class="notranslate text-nowrap">focus()</code> method. <code translate="no" class="notranslate text-nowrap">&lt;b-modal&gt;</code> will not attempt to autofocus if an element
-already has focus within the <code translate="no" class="notranslate text-nowrap">&lt;b-modal&gt;</code>.</p>
+<p>
+  在2.0.0-rc.27版本中添加了<code translate="no" class="notranslate text-nowrap">aria-label</code>和
+  <code translate="no" class="notranslate text-nowrap">title-sr-only</code>属性。
+</p>
+<h3 id="auto-focus-on-open" class="bv-no-focus-ring"><span class="bd-content-title">打开时自动聚焦<a class="anchorjs-link" href="#auto-focus-on-open" aria-labelledby="auto-focus-on-open"></a></span></h3>
+<p><code translate="no" class="notranslate text-nowrap">&lt;b-modal&gt;</code>打开时将自动对焦模态容器。</p>
+<p>
+  您可以通过监听显示的<code translate="no" class="notranslate text-nowrap">&lt;b-modal&gt;</code>事件来预聚焦<code translate="no" class="notranslate text-nowrap">&lt;b-modal&gt;</code>
+  中的元素，并调用该元素的<code translate="no" class="notranslate text-nowrap">focus()</code>方法。<code translate="no" class="notranslate text-nowrap">&lt;b-modal&gt;</code>
+  不会尝试自动对焦，如果元素已在<code translate="no" class="notranslate text-nowrap">&lt;b-modal&gt;</code>中具有焦点。
+</p>
 <pre class="hljs html text-monospace p-2 notranslate" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-modal</span> @<span class="hljs-attr">shown</span>=<span class="hljs-string">"focusMyElement"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span>&gt;</span>I Don't Have Focus<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
@@ -1394,53 +1588,83 @@ already has focus within the <code translate="no" class="notranslate text-nowrap
     }
   }
 }</pre>
-<p>Alternatively, if using <code translate="no" class="notranslate text-nowrap">b-form-*</code> form controls, you can use the <code translate="no" class="notranslate text-nowrap">autofocus</code> prop to automatically
-focus a form control when the modal opens. Note that the <code translate="no" class="notranslate text-nowrap">autofocus</code> prop will not work with <code translate="no" class="notranslate text-nowrap">b-modal</code> if the <code translate="no" class="notranslate text-nowrap">static</code> prop is used without the <code translate="no" class="notranslate text-nowrap">lazy</code> prop set, as <code translate="no" class="notranslate text-nowrap">autofocus</code> happens when the <code translate="no" class="notranslate text-nowrap">b-form-*</code> controls are <em>mounted in the DOM</em>.</p>
-<p>If you want to auto focus one of the <em>built-in</em> modal buttons (<code translate="no" class="notranslate text-nowrap">ok</code>, <code translate="no" class="notranslate text-nowrap">cancel</code> or the header <code translate="no" class="notranslate text-nowrap">close</code> button, you can set the prop <code translate="no" class="notranslate text-nowrap">auto-focus-button</code> to one of the values <code translate="no" class="notranslate text-nowrap">'ok'</code>, <code translate="no" class="notranslate text-nowrap">'cancel'</code> or <code translate="no" class="notranslate text-nowrap">'close'</code> and <code translate="no" class="notranslate text-nowrap">&lt;b-modal&gt;</code> will focus the specified button if it exists. This feature is also
-available for modal message boxes.</p>
-<p class="alert alert-warning"> <strong>Note:</strong> it is <strong>not recommended</strong> to autofocus an input or control
-  inside of a modal for accessibility reasons, as screen reader users will not know the context of
-  where the input is (the announcement of the modal may not be spoken). It is best to let <code class="notranslate" translate="no">&lt;b-modal&gt;</code> focus the modal's container, allowing the modal information to be
-  spoken to the user, and then allow the user to tab into the input. </p>
-<h3 id="returning-focus-to-the-triggering-element" class="bv-no-focus-ring"><span class="bd-content-title">Returning focus to the triggering element<a class="anchorjs-link" href="#returning-focus-to-the-triggering-element" aria-labelledby="returning-focus-to-the-triggering-element"></a></span></h3>
-<p>For accessibility reasons, it is desirable to return focus to the element that triggered the opening
-of the modal, when the modal closes.</p>
-<p><code translate="no" class="notranslate text-nowrap">&lt;b-modal&gt;</code> will try and automatically determine which element had focus before the modal was
-opened, and will return the focus to that element when the modal has hidden if possible. However,
-several methods and options are provided to allow you to specify the element to return focus to once
-the modal has hidden.</p>
-<h4 id="specify-return-focus-element-via-the-return-focus-prop" class="bv-no-focus-ring"><span class="bd-content-title">Specify return focus element via the <code translate="no" class="notranslate text-nowrap">return-focus</code> prop<a class="anchorjs-link" href="#specify-return-focus-element-via-the-return-focus-prop" aria-labelledby="specify-return-focus-element-via-the-return-focus-prop"></a></span></h4>
-<p>You can also specify an element to return focus to, when modal closes, by setting the <code translate="no" class="notranslate text-nowrap">return-focus</code> prop to one of the following:</p>
+<p>
+  或者，如果使用<code translate="no" class="notranslate text-nowrap">b-form-*</code>表单控件，
+  则可以在模式打开时使用<code translate="no" class="notranslate text-nowrap">autofocus</code>属性<code translate="no" class="notranslate text-nowrap">autofocus</code>表单控件。
+  注意，如果在<code translate="no" class="notranslate text-nowrap">lazy</code>属性集的情况下使用<code translate="no" class="notranslate text-nowrap">static</code>属性，
+  则<code translate="no" class="notranslate text-nowrap">autofocus</code>属性将无法与b-model一起使用，因为在DOM中安装<code translate="no" class="notranslate text-nowrap">b-form-*</code>控件时会发生autofocus。
+</p>
+<p>
+  如果要自动对焦其中一个内置模式按钮（<code translate="no" class="notranslate text-nowrap">ok</code>,
+  <code translate="no" class="notranslate text-nowrap">cancel</code> 或 
+  <code translate="no" class="notranslate text-nowrap">close</code>按钮），可以将属性<code translate="no" class="notranslate text-nowrap">auto-focus-button</code>设置为
+  <code translate="no" class="notranslate text-nowrap">'ok'</code>, 
+  <code translate="no" class="notranslate text-nowrap">'cancel'</code>或 
+  <code translate="no" class="notranslate text-nowrap">'close'</code>并且
+  <code translate="no" class="notranslate text-nowrap">&lt;b-modal&gt;</code>将对焦指定的按钮（如果存在）。此功能也可用于模式消息框。
+</p>
+<p class="alert alert-warning"> <strong>注意:</strong> 
+  
+  出于可访问性的原因，<strong>不建议</strong>将输入或控件自动对焦到模式内部，因为屏幕阅读器用户将不知道输入位置的上下文（可能不会声明该模式）。
+  最好让 <code class="notranslate" translate="no">&lt;b-modal&gt;</code>聚焦模态的容器，允许模态信息与用户对话，然后允许用户在输入中使用tab键。
+</p>
+<h3 id="returning-focus-to-the-triggering-element" class="bv-no-focus-ring"><span class="bd-content-title">将焦点返回到触发元素<a class="anchorjs-link" href="#returning-focus-to-the-triggering-element" aria-labelledby="returning-focus-to-the-triggering-element"></a></span></h3>
+<p>出于可访问性的原因，希望在模式关闭时将焦点返回到触发模式打开的元素。</p>
+<p><code translate="no" class="notranslate text-nowrap">&lt;b-modal&gt;</code> 将尝试并自动确定在打开模态之前哪个元素具有焦点，如果可能，将在模态已隐藏时将焦点返回给该元素。但是，提供了一些方法和选项，允许您指定在模态隐藏后要将焦点返回到的元素。</p>
+<h4 id="specify-return-focus-element-via-the-return-focus-prop" class="bv-no-focus-ring">
+  <span class="bd-content-title">
+    通过返回焦点属性指定<code translate="no" class="notranslate text-nowrap">返回焦点</code>元素
+  <a class="anchorjs-link" href="#specify-return-focus-element-via-the-return-focus-prop" aria-labelledby="specify-return-focus-element-via-the-return-focus-prop"></a></span></h4>
+<p>
+  当模式关闭时，还可以通过将 <code translate="no" class="notranslate text-nowrap">返回焦点</code>属性设置为以下之一来指定要返回焦点的元素：
+</p>
 <ul>
-<li>A CSS Query Selector string (or an element ID prepended with <code translate="no" class="notranslate text-nowrap">#</code>)</li>
-<li>A component reference (which is mounted on a focusable element, such as <code translate="no" class="notranslate text-nowrap">&lt;b-button&gt;</code>)</li>
-<li>A reference to a DOM element that is focusable</li>
+<li>
+  CSS查询选择器字符串（或以<code translate="no" class="notranslate text-nowrap">#</code>开头的元素ID）
+</li>
+<li>
+  组件引用（安装在可聚焦元素上，如<code translate="no" class="notranslate text-nowrap">&lt;b-button&gt;</code>）
+</li>
+<li>对可聚焦的DOM元素的引用</li>
 </ul>
-<p>If the passed in element is not focusable, then the browser will determine what has focus (usually <code translate="no" class="notranslate text-nowrap">&lt;body&gt;</code>, which is not desirable)</p>
-<p>This method for returning focus is handy when you use the <code translate="no" class="notranslate text-nowrap">&lt;b-modal&gt;</code> methods <code translate="no" class="notranslate text-nowrap">show()</code> and <code translate="no" class="notranslate text-nowrap">hide()</code>,
-or the <code translate="no" class="notranslate text-nowrap">v-model</code> prop. Note this property takes precedence over other methods of specifying the
-return focus element.</p>
-<h4 id="auto-return-focus" class="bv-no-focus-ring"><span class="bd-content-title">Auto return focus<a class="anchorjs-link" href="#auto-return-focus" aria-labelledby="auto-return-focus"></a></span></h4>
-<p>When <code translate="no" class="notranslate text-nowrap">&lt;b-modal&gt;</code> is opened via the <code translate="no" class="notranslate text-nowrap">v-b-modal</code> directive on an element, focus will be returned to
-this element automatically when <code translate="no" class="notranslate text-nowrap">&lt;b-modal&gt;</code> closes, unless an element has been specified via the <code translate="no" class="notranslate text-nowrap">return-focus</code> prop.</p>
-<h4 id="specify-return-focus-via-event" class="bv-no-focus-ring"><span class="bd-content-title">Specify return focus via event<a class="anchorjs-link" href="#specify-return-focus-via-event" aria-labelledby="specify-return-focus-via-event"></a></span></h4>
-<p>When using the <code translate="no" class="notranslate text-nowrap">bv::show::modal</code> event (emitted on <code translate="no" class="notranslate text-nowrap">$root</code>), you can specify a second argument which
-is the element to return focus to. This argument accepts the same types as the <code translate="no" class="notranslate text-nowrap">return-focus</code> prop.</p>
+<p>
+  如果传入的元素不可聚焦，那么浏览器将确定哪些元素具有焦点（通常<code translate="no" class="notranslate text-nowrap">&lt;body&gt;</code>，这是不可取的）
+</p>
+<p>
+  当您使用 <code translate="no" class="notranslate text-nowrap">&lt;b-modal&gt;</code>方法
+  <code translate="no" class="notranslate text-nowrap">show()</code>和
+  <code translate="no" class="notranslate text-nowrap">hide()</code>或<code translate="no" class="notranslate text-nowrap">v-model</code>属性时，返回焦点的方法非常方便。注意，此属性优先于指定返回焦点元素的其他方法。
+</p>
+<h4 id="auto-return-focus" class="bv-no-focus-ring"><span class="bd-content-title">自动返回焦点<a class="anchorjs-link" href="#auto-return-focus" aria-labelledby="auto-return-focus"></a></span></h4>
+<p>
+  当通过元素的<code translate="no" class="notranslate text-nowrap">v-b-modal</code>指令打开<code translate="no" class="notranslate text-nowrap">&lt;b-modal&gt;</code>时，<code translate="no" class="notranslate text-nowrap">&lt;b-modal&gt;</code>
+  关闭时焦点将自动返回到该元素，除非通过<code translate="no" class="notranslate text-nowrap">返回焦点</code>属性指定了元素。
+</p>
+<h4 id="specify-return-focus-via-event" class="bv-no-focus-ring"><span class="bd-content-title">通过事件指定返回焦点<a class="anchorjs-link" href="#specify-return-focus-via-event" aria-labelledby="specify-return-focus-via-event"></a></span></h4>
+<p>
+  使用<code translate="no" class="notranslate text-nowrap">bv::show::modal</code>事件（在<code translate="no" class="notranslate text-nowrap">$root</code>上发出）时，
+  可以指定第二个参数，该参数是要返回焦点的元素。此参数接受与<code translate="no" class="notranslate text-nowrap">返回焦点</code>属性相同的类型。
+</p>
 <pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-keyword">this</span>.$root.$emit(<span class="hljs-string">'bv::show::modal'</span>, <span class="hljs-string">'modal-1'</span>, <span class="hljs-string">'#focusThisOnClose'</span>)</pre>
 <p><em>Tip:</em> if using a click event (or similar) to trigger modal to open, pass the event's <code translate="no" class="notranslate text-nowrap">target</code> property:</p>
 <pre class="hljs html text-monospace p-2 notranslate" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"$root.$emit('bv::show::modal', 'modal-1', $event.target)"</span>&gt;</span>Open Modal<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
-<p><strong>Note:</strong> If the <code translate="no" class="notranslate text-nowrap">&lt;b-modal&gt;</code> has the <code translate="no" class="notranslate text-nowrap">return-focus</code> prop set, then the element specified via the
-event will be ignored.</p>
-<h3 id="keyboard-navigation" class="bv-no-focus-ring"><span class="bd-content-title">Keyboard navigation<a class="anchorjs-link" href="#keyboard-navigation" aria-labelledby="keyboard-navigation"></a></span></h3>
-<p>When tabbing through elements within a <code translate="no" class="notranslate text-nowrap">&lt;b-modal&gt;</code>, if focus attempts to leave the modal into the
-document, it will be brought back into the modal.</p>
-<p>Avoid setting <code translate="no" class="notranslate text-nowrap">tabindex</code> on elements within the modal to any value other than <code translate="no" class="notranslate text-nowrap">0</code> or <code translate="no" class="notranslate text-nowrap">-1</code>. Doing so
-will make it difficult for people who rely on assistive technology to navigate and operate page
-content and can make some of your elements unreachable via keyboard navigation.</p>
-<p>If some elements outside the modal need to be focusable (i.e. for TinyMCE), you can add them as CSS
-selectors to the <code translate="no" class="notranslate text-nowrap">ignore-enforce-focus-selector</code> prop <span class="badge badge-secondary">2.4.0+</span>, e.g.:</p>
+<p><strong>注意:</strong> 
+  如果<code translate="no" class="notranslate text-nowrap">&lt;b-modal&gt;</code>设置了<code translate="no" class="notranslate text-nowrap">返回焦点</code>属性，则通过事件指定的元素将被忽略。
+</p>
+<h3 id="keyboard-navigation" class="bv-no-focus-ring"><span class="bd-content-title">键盘导航<a class="anchorjs-link" href="#keyboard-navigation" aria-labelledby="keyboard-navigation"></a></span></h3>
+<p>
+  当在<code translate="no" class="notranslate text-nowrap">&lt;b-modal&gt;</code>中的元素之间切换时，如果focus试图将该模式保留到文档中，则它将返回到模式中。
+</p>
+<p>
+  避免将模式中元素的<code translate="no" class="notranslate text-nowrap">tabindex</code>设置为除<code translate="no" class="notranslate text-nowrap">0</code>或
+  <code translate="no" class="notranslate text-nowrap">-1</code>之外的任何值。这样做将使依赖辅助技术的人很难导航和操作页面内容，并可能使一些元素无法通过键盘导航访问。
+</p>
+<p>
+  如果模式之外的某些元素需要可聚焦（即对于TinyMCE），可以将它们作为CSS选择器添加到<code translate="no" class="notranslate text-nowrap">ignore-enforce-focus-selector</code>属性
+  <span class="badge badge-secondary">2.4.0+</span>，例如：
+</p>
 <pre class="hljs html text-monospace p-2 notranslate" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-modal</span>
   <span class="hljs-attr">id</span>=<span class="hljs-string">"some-modal-id"</span>
   <span class="hljs-attr">title</span>=<span class="hljs-string">"Modal with TinyMCE Editor"</span>
@@ -1448,17 +1672,26 @@ selectors to the <code translate="no" class="notranslate text-nowrap">ignore-enf
 &gt;</span>
   <span class="hljs-comment">&lt;!-- Modal content with TinyMCE editor here --&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">b-modal</span>&gt;</span></pre>
-<p>In some circumstances, you may need to disable the enforce focus feature completely. You can do this
-by setting the prop <code translate="no" class="notranslate text-nowrap">no-enforce-focus</code>, although this is <em>highly discouraged</em> for accessibility
-reasons.</p>
-<h3 id="v-b-modal-directive-accessibility" class="bv-no-focus-ring"><span class="bd-content-title"><code translate="no" class="notranslate text-nowrap">v-b-modal</code> directive accessibility<a class="anchorjs-link" href="#v-b-modal-directive-accessibility" aria-labelledby="v-b-modal-directive-accessibility"></a></span></h3>
-<p>Notes on <code translate="no" class="notranslate text-nowrap">v-b-modal</code> directive accessibility:</p>
+<p>
+  在某些情况下，可能需要完全禁用“强制聚焦”功能。您可以通过设置属性 <code translate="no" class="notranslate text-nowrap">no-enforce-focus</code>来实现这一点，
+  尽管出于可访问性的原因，这是非常不可取的。
+</p>
+<h3 id="v-b-modal-directive-accessibility" class="bv-no-focus-ring"><span class="bd-content-title"><code translate="no" class="notranslate text-nowrap">v-b-modal</code> 指令可访问性 <a class="anchorjs-link" href="#v-b-modal-directive-accessibility" aria-labelledby="v-b-modal-directive-accessibility"></a></span></h3>
+<p>
+  关于 <code translate="no" class="notranslate text-nowrap">v-b-modal</code>指令可访问性的说明：
+</p>
 <ul>
-<li>If the element is anything other than a <code translate="no" class="notranslate text-nowrap">&lt;button&gt;</code> (or component that renders a <code translate="no" class="notranslate text-nowrap">&lt;button&gt;</code>), the
-ARIA <code translate="no" class="notranslate text-nowrap">role</code> will be set to <code translate="no" class="notranslate text-nowrap">button</code>, and a keydown event listeners for <kbd class="notranslate" translate="no">ENTER</kbd> and <kbd class="notranslate" translate="no">SPACE</kbd> will be added, along with a <code translate="no" class="notranslate text-nowrap">click</code> listener.</li>
-<li>If the element is anything other than a <code translate="no" class="notranslate text-nowrap">&lt;button&gt;</code> or <code translate="no" class="notranslate text-nowrap">&lt;a&gt;</code> (or a component that renders either),
-then a <code translate="no" class="notranslate text-nowrap">tabindex</code> of <code translate="no" class="notranslate text-nowrap">0</code> will be added to the element to ensure accessibility, unless there is
-already a <code translate="no" class="notranslate text-nowrap">tabindex</code> set.</li>
+<li>
+  如果元素不是<code translate="no" class="notranslate text-nowrap">&lt;button&gt;</code>（或呈现<code translate="no" class="notranslate text-nowrap">&lt;button&gt;</code>的组件），
+  则ARI<code translate="no" class="notranslate text-nowrap">角色</code>将设置为<code translate="no" class="notranslate text-nowrap">button</code>，
+  并将添加<kbd class="notranslate" translate="no">ENTER</kbd>和<kbd class="notranslate" translate="no">SPACE</kbd>的keydown事件监听器以及<code translate="no" class="notranslate text-nowrap">click</code>监听器。
+</li>
+<li>
+  如果元素不是<code translate="no" class="notranslate text-nowrap">&lt;button&gt;</code>或 
+  <code translate="no" class="notranslate text-nowrap">&lt;a&gt;</code>（或呈现两者的组件），
+  那么将向元素添加<code translate="no" class="notranslate text-nowrap">0</code>的<code translate="no" class="notranslate text-nowrap">tabindex</code>以确保可访问性，
+  除非已经设置了<code translate="no" class="notranslate text-nowrap">tabindex</code>。
+</li>
 </ul>
 <!-- Component reference added automatically from component package.json -->
 
@@ -1475,7 +1708,7 @@ already a <code translate="no" class="notranslate text-nowrap">tabindex</code> s
 <li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-modal-v-model"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-modal&gt;</code> v-model </a></li>
 <li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-modal-slots"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-modal&gt;</code> 插槽 </a></li>
 <li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-modal-events"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-modal&gt;</code> 事件 </a></li>
-<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-modal-rootEventListeners"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-modal&gt;</code> <code data-v-866a22e8="" translate="translate" class="notranslate">$root</code> Event Listeners </a></li>
+<li data-v-866a22e8=""><a data-v-866a22e8="" href="#comp-ref-b-modal-rootEventListeners"><code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-modal&gt;</code> <code data-v-866a22e8="" translate="translate" class="notranslate">$root</code> 事件侦听器 </a></li>
 </ul>
 <article data-v-866a22e8="" class="bd-content">
 <h4 data-v-866a22e8="" id="comp-ref-b-modal-props" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"> 属性 <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/modal#comp-ref-b-modal-props" class="anchorjs-link" aria-labelledby="comp-ref-b-modal-props" target="_self"></a></span></h4>
@@ -1500,320 +1733,324 @@ already a <code translate="no" class="notranslate text-nowrap">tabindex</code> s
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">size</code></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'md'</code></td>
-<td aria-colindex="4" role="cell" class="">Set the size of the modal's width. 'sm', 'md' (default), 'lg', or 'xl'</td>
+<td aria-colindex="4" role="cell" class="">设置模式宽度的大小sm、md（默认）、“lg”或“xl”</td>
 </tr>
 <tr role="row" data-pk="centered" class="" id="__BVID__2718__row_centered">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">centered</code></td>
 <td aria-colindex="2" role="cell" class="">Boolean</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
-<td aria-colindex="4" role="cell" class="">Vertically centers the modal in the viewport</td>
+<td aria-colindex="4" role="cell" class="">在视口中垂直居中模式</td>
 </tr>
 <tr role="row" data-pk="scrollable" class="" id="__BVID__2718__row_scrollable">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">scrollable</code></td>
 <td aria-colindex="2" role="cell" class="">Boolean</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
-<td aria-colindex="4" role="cell" class="">Enables scrolling of the modal body</td>
+<td aria-colindex="4" role="cell" class="">启用模式体的滚动</td>
 </tr>
 <tr role="row" data-pk="button-size" class="" id="__BVID__2718__row_button-size">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">button-size</code></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">Size of the built in footer buttons: 'sm', 'md' (default), or 'lg'</td>
+<td aria-colindex="4" role="cell" class="">内置页脚按钮的大小：“sm”、“md”（默认）或“lg”</td>
 </tr>
 <tr role="row" data-pk="no-stacking" class="" id="__BVID__2718__row_no-stacking">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">no-stacking</code></td>
 <td aria-colindex="2" role="cell" class="">Boolean</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
-<td aria-colindex="4" role="cell" class="">Prevents other modals from stacking over this one</td>
+<td aria-colindex="4" role="cell" class="">防止其他模态叠加在这个模态上</td>
 </tr>
 <tr role="row" data-pk="no-fade" class="" id="__BVID__2718__row_no-fade">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">no-fade</code></td>
 <td aria-colindex="2" role="cell" class="">Boolean</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
-<td aria-colindex="4" role="cell" class="">When set to 'true', disables the fade animation/transition on the component</td>
+<td aria-colindex="4" role="cell" class="">设置为“true”时，禁用组件上的淡入动画/过渡</td>
 </tr>
 <tr role="row" data-pk="no-close-on-backdrop" class="" id="__BVID__2718__row_no-close-on-backdrop">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">no-close-on-backdrop</code></td>
 <td aria-colindex="2" role="cell" class="">Boolean</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
-<td aria-colindex="4" role="cell" class="">Disables the ability to close the modal by clicking the backdrop</td>
+<td aria-colindex="4" role="cell" class="">通过单击背景禁用关闭模式的功能</td>
 </tr>
 <tr role="row" data-pk="no-close-on-esc" class="" id="__BVID__2718__row_no-close-on-esc">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">no-close-on-esc</code></td>
 <td aria-colindex="2" role="cell" class="">Boolean</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
-<td aria-colindex="4" role="cell" class="">Disables the ability to close the modal by pressing ESC</td>
+<td aria-colindex="4" role="cell" class="">通过按ESC键禁用关闭模式的功能</td>
 </tr>
 <tr role="row" data-pk="no-enforce-focus" class="" id="__BVID__2718__row_no-enforce-focus">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">no-enforce-focus</code></td>
 <td aria-colindex="2" role="cell" class="">Boolean</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
-<td aria-colindex="4" role="cell" class="">Disables the enforce focus routine which maintains focus inside the modal</td>
+<td aria-colindex="4" role="cell" class="">禁用强制焦点例程，该例程在模式中维护焦点</td>
 </tr>
 <tr role="row" data-pk="ignore-enforce-focus-selector" class="" id="__BVID__2718__row_ignore-enforce-focus-selector">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">ignore-enforce-focus-selector</code> <span data-v-866a22e8="" class="badge badge-secondary">v2.4.0+</span></td>
 <td aria-colindex="2" role="cell" class="">Array or String</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">Ignore certain elements from the enforce focus routine, specified by css selector(s)</td>
+<td aria-colindex="4" role="cell" class="">忽略强制焦点例程中由css选择器指定的某些元素</td>
 </tr>
 <tr role="row" data-pk="title" class="" id="__BVID__2718__row_title">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">title</code></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">Text content to place in the title</td>
+<td aria-colindex="4" role="cell" class="">要放置在标题中的文本内容</td>
 </tr>
 <tr role="row" data-pk="title-html" class="" id="__BVID__2718__row_title-html">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">title-html</code> <span data-v-866a22e8="" class="badge badge-warning">Use with caution</span></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">HTML string content to place in the title. Use with caution</td>
+<td aria-colindex="4" role="cell" class="">要放置在标题中的HTML字符串内容。慎用</td>
 </tr>
 <tr role="row" data-pk="title-tag" class="" id="__BVID__2718__row_title-tag">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">title-tag</code></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'h5'</code></td>
-<td aria-colindex="4" role="cell" class="">Specify the HTML tag to render instead of the default tag for the title</td>
+<td aria-colindex="4" role="cell" class="">指定要呈现的HTML标记，而不是标题的默认标记</td>
 </tr>
 <tr role="row" data-pk="title-class" class="" id="__BVID__2718__row_title-class">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">title-class</code></td>
 <td aria-colindex="2" role="cell" class="">String or Array or Object</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">CSS class (or classes) to apply to the title</td>
+<td aria-colindex="4" role="cell" class="">应用于标题的CSS类</td>
 </tr>
 <tr role="row" data-pk="title-sr-only" class="" id="__BVID__2718__row_title-sr-only">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">title-sr-only</code></td>
 <td aria-colindex="2" role="cell" class="">Boolean</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
-<td aria-colindex="4" role="cell" class="">Wraps the title in an '.sr-only' wrapper</td>
+<td aria-colindex="4" role="cell" class="">将标题包装在“.sr only”包装中</td>
 </tr>
 <tr role="row" data-pk="aria-label" class="" id="__BVID__2718__row_aria-label">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">aria-label</code></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">Explicitly supply an 'aria-label' attribute for the modal. Should be set when the modal has no title. When not set 'aria-labelledby' will point to the modal's title</td>
+<td aria-colindex="4" role="cell" class="">
+  为模态显式提供“aria label”属性。应在模态没有标题时设置。如果未设置“aria labelledby”，则会指向模态的标题</td>
 </tr>
 <tr role="row" data-pk="header-bg-variant" class="" id="__BVID__2718__row_header-bg-variant">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">header-bg-variant</code></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">Applies one of the Bootstrap theme color variants to the header background</td>
+<td aria-colindex="4" role="cell" class="">将一个引导主题颜色变体应用于标题背景</td>
 </tr>
 <tr role="row" data-pk="header-border-variant" class="" id="__BVID__2718__row_header-border-variant">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">header-border-variant</code></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">Applies one of the Bootstrap theme color variants to the header border</td>
+<td aria-colindex="4" role="cell" class="">将一个引导主题颜色变体应用于标题边框</td>
 </tr>
 <tr role="row" data-pk="header-text-variant" class="" id="__BVID__2718__row_header-text-variant">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">header-text-variant</code></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">Applies one of the Bootstrap theme color variants to the header text</td>
+<td aria-colindex="4" role="cell" class="">将引导主题颜色变体之一应用于标题文本</td>
 </tr>
 <tr role="row" data-pk="header-close-variant" class="" id="__BVID__2718__row_header-close-variant">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">header-close-variant</code></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">Text theme color variant to apply to the header close button</td>
+<td aria-colindex="4" role="cell" class="">应用于标题关闭按钮的文本主题颜色变体</td>
 </tr>
 <tr role="row" data-pk="header-class" class="" id="__BVID__2718__row_header-class">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">header-class</code></td>
 <td aria-colindex="2" role="cell" class="">String or Array or Object</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">CSS class (or classes) to apply to the '.modal-header' wrapper element</td>
+<td aria-colindex="4" role="cell" class="">应用于“.modal header”包装元素的CSS类</td>
 </tr>
 <tr role="row" data-pk="body-bg-variant" class="" id="__BVID__2718__row_body-bg-variant">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">body-bg-variant</code></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">Applies one of the Bootstrap theme color variants to the body background</td>
+<td aria-colindex="4" role="cell" class="">将一个引导主题颜色变体应用于主体背景</td>
 </tr>
 <tr role="row" data-pk="body-text-variant" class="" id="__BVID__2718__row_body-text-variant">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">body-text-variant</code></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">Applies one of the Bootstrap theme color variants to the body text</td>
+<td aria-colindex="4" role="cell" class="">将引导主题颜色变体之一应用于正文文本</td>
 </tr>
 <tr role="row" data-pk="modal-class" class="" id="__BVID__2718__row_modal-class">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">modal-class</code></td>
 <td aria-colindex="2" role="cell" class="">String or Array or Object</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">CSS class (or classes) to apply to the '.modal' wrapper element</td>
+<td aria-colindex="4" role="cell" class="">应用于“.modal”包装元素的CSS类</td>
 </tr>
 <tr role="row" data-pk="dialog-class" class="" id="__BVID__2718__row_dialog-class">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">dialog-class</code></td>
 <td aria-colindex="2" role="cell" class="">String or Array or Object</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">CSS class (or classes) to apply to the '.modal-dialog' wrapper element</td>
+<td aria-colindex="4" role="cell" class="">应用于“.modal dialog”包装元素的CSS类</td>
 </tr>
 <tr role="row" data-pk="content-class" class="" id="__BVID__2718__row_content-class">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">content-class</code></td>
 <td aria-colindex="2" role="cell" class="">String or Array or Object</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">CSS class (or classes) to apply to the '.modal-content' wrapper element</td>
+<td aria-colindex="4" role="cell" class="">应用于“.modal content”包装元素的CSS类</td>
 </tr>
 <tr role="row" data-pk="body-class" class="" id="__BVID__2718__row_body-class">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">body-class</code></td>
 <td aria-colindex="2" role="cell" class="">String or Array or Object</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">CSS class (or classes) to apply to the '.modal-body' wrapper element</td>
+<td aria-colindex="4" role="cell" class="">应用于“.modal body”包装元素的CSS类</td>
 </tr>
 <tr role="row" data-pk="footer-bg-variant" class="" id="__BVID__2718__row_footer-bg-variant">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">footer-bg-variant</code></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">Applies one of the Bootstrap theme color variants to the footer background</td>
+<td aria-colindex="4" role="cell" class="">将一个引导主题颜色变体应用于页脚背景</td>
 </tr>
 <tr role="row" data-pk="footer-border-variant" class="" id="__BVID__2718__row_footer-border-variant">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">footer-border-variant</code></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">Applies one of the Bootstrap theme color variants to the footer border</td>
+<td aria-colindex="4" role="cell" class="">将一个引导主题颜色变体应用于页脚边框</td>
 </tr>
 <tr role="row" data-pk="footer-text-variant" class="" id="__BVID__2718__row_footer-text-variant">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">footer-text-variant</code></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">Applies one of the Bootstrap theme color variants to the footer text</td>
+<td aria-colindex="4" role="cell" class="">将一个引导主题颜色变体应用于页脚文本</td>
 </tr>
 <tr role="row" data-pk="footer-class" class="" id="__BVID__2718__row_footer-class">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">footer-class</code></td>
 <td aria-colindex="2" role="cell" class="">String or Array or Object</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">CSS class (or classes) to apply to the '.modal-footer' wrapper element</td>
+<td aria-colindex="4" role="cell" class="">应用于“.modal footer”包装元素的CSS类</td>
 </tr>
 <tr role="row" data-pk="hide-header" class="" id="__BVID__2718__row_hide-header">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">hide-header</code></td>
 <td aria-colindex="2" role="cell" class="">Boolean</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
-<td aria-colindex="4" role="cell" class="">Disables rendering of the modal header</td>
+<td aria-colindex="4" role="cell" class="">禁用模式头的呈现</td>
 </tr>
 <tr role="row" data-pk="hide-footer" class="" id="__BVID__2718__row_hide-footer">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">hide-footer</code></td>
 <td aria-colindex="2" role="cell" class="">Boolean</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
-<td aria-colindex="4" role="cell" class="">Disables rendering of the modal footer</td>
+<td aria-colindex="4" role="cell" class="">禁用模式页脚的呈现</td>
 </tr>
 <tr role="row" data-pk="hide-header-close" class="" id="__BVID__2718__row_hide-header-close">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">hide-header-close</code></td>
 <td aria-colindex="2" role="cell" class="">Boolean</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
-<td aria-colindex="4" role="cell" class="">Disables rendering of the modal header's close button</td>
+<td aria-colindex="4" role="cell" class="">禁用模式头的“关闭”按钮的呈现</td>
 </tr>
 <tr role="row" data-pk="hide-backdrop" class="" id="__BVID__2718__row_hide-backdrop">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">hide-backdrop</code></td>
 <td aria-colindex="2" role="cell" class="">Boolean</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
-<td aria-colindex="4" role="cell" class="">Disables rendering of the modal backdrop</td>
+<td aria-colindex="4" role="cell" class="">禁用模式背景的呈现</td>
 </tr>
 <tr role="row" data-pk="ok-only" class="" id="__BVID__2718__row_ok-only">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">ok-only</code></td>
 <td aria-colindex="2" role="cell" class="">Boolean</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
-<td aria-colindex="4" role="cell" class="">Disables rendering of the default footer Cancel button</td>
+<td aria-colindex="4" role="cell" class="">禁用呈现默认页脚取消按钮</td>
 </tr>
 <tr role="row" data-pk="ok-disabled" class="" id="__BVID__2718__row_ok-disabled">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">ok-disabled</code></td>
 <td aria-colindex="2" role="cell" class="">Boolean</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
-<td aria-colindex="4" role="cell" class="">Places the default footer OK button in the disabled state</td>
+<td aria-colindex="4" role="cell" class="">将默认页脚“确定”按钮置于禁用状态</td>
 </tr>
 <tr role="row" data-pk="cancel-disabled" class="" id="__BVID__2718__row_cancel-disabled">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">cancel-disabled</code></td>
 <td aria-colindex="2" role="cell" class="">Boolean</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
-<td aria-colindex="4" role="cell" class="">Places the default footer Cancel button in the disabled state</td>
+<td aria-colindex="4" role="cell" class="">将默认页脚取消按钮置于禁用状态</td>
 </tr>
 <tr role="row" data-pk="visible" class="" id="__BVID__2718__row_visible">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">visible</code> <span data-v-866a22e8="" class="badge badge-primary">v-model</span></td>
 <td aria-colindex="2" role="cell" class="">Boolean</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
-<td aria-colindex="4" role="cell" class="">The current visibility state of the modal</td>
+<td aria-colindex="4" role="cell" class="">模态的当前可见性状态</td>
 </tr>
 <tr role="row" data-pk="return-focus" class="" id="__BVID__2718__row_return-focus">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">return-focus</code></td>
 <td aria-colindex="2" role="cell" class="">HTMLElement or String or Object</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">HTML Element reference, CSS selector, or component reference to return focus to when the modal closes. When not set, will return focus to the element that last had focus before the modal opened</td>
+<td aria-colindex="4" role="cell" class="">
+  当模式关闭时返回焦点的HTML元素引用、CSS选择器或组件引用。如果未设置，则将焦点返回到模式打开之前最后具有焦点的元素</td>
 </tr>
 <tr role="row" data-pk="header-close-content" class="" id="__BVID__2718__row_header-close-content">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">header-close-content</code> <span data-v-866a22e8="" class="badge badge-secondary">v2.3.0+</span></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'&amp;times;'</code></td>
-<td aria-colindex="4" role="cell" class="">Content of the header close button</td>
+<td aria-colindex="4" role="cell" class="">标题关闭按钮的内容</td>
 </tr>
 <tr role="row" data-pk="header-close-label" class="" id="__BVID__2718__row_header-close-label">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">header-close-label</code></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'Close'</code></td>
-<td aria-colindex="4" role="cell" class="">Value of the 'aria-label' on the header close button</td>
+<td aria-colindex="4" role="cell" class="">标题关闭按钮上的“aria label”值</td>
 </tr>
 <tr role="row" data-pk="cancel-title" class="" id="__BVID__2718__row_cancel-title">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">cancel-title</code></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'Cancel'</code></td>
-<td aria-colindex="4" role="cell" class="">Text string to place in the default footer Cancel button</td>
+<td aria-colindex="4" role="cell" class="">要放置在默认页脚取消按钮中的文本字符串</td>
 </tr>
 <tr role="row" data-pk="cancel-title-html" class="" id="__BVID__2718__row_cancel-title-html">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">cancel-title-html</code> <span data-v-866a22e8="" class="badge badge-warning">Use with caution</span></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">HTML string to place in the default footer Cancel button. Use with caution</td>
+<td aria-colindex="4" role="cell" class="">要放置在默认页脚取消按钮中的HTML字符串。慎用</td>
 </tr>
 <tr role="row" data-pk="ok-title" class="" id="__BVID__2718__row_ok-title">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">ok-title</code></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'OK'</code></td>
-<td aria-colindex="4" role="cell" class="">Text string to place in the default footer OK button</td>
+<td aria-colindex="4" role="cell" class="">要放置在默认页脚中的文本字符串“确定”按钮</td>
 </tr>
 <tr role="row" data-pk="ok-title-html" class="" id="__BVID__2718__row_ok-title-html">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">ok-title-html</code> <span data-v-866a22e8="" class="badge badge-warning">Use with caution</span></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">HTML string to place in the default footer OK button. Use with caution</td>
+<td aria-colindex="4" role="cell" class="">要放置在默认页脚“确定”按钮中的HTML字符串。慎用</td>
 </tr>
 <tr role="row" data-pk="cancel-variant" class="" id="__BVID__2718__row_cancel-variant">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">cancel-variant</code></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'secondary'</code></td>
-<td aria-colindex="4" role="cell" class="">Button color theme variant to apply to the default footer Cancel button</td>
+<td aria-colindex="4" role="cell" class="">应用于默认页脚取消按钮的按钮颜色主题变量</td>
 </tr>
 <tr role="row" data-pk="ok-variant" class="" id="__BVID__2718__row_ok-variant">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">ok-variant</code></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">'primary'</code></td>
-<td aria-colindex="4" role="cell" class="">Button color theme variant to apply to the default footer OK button</td>
+<td aria-colindex="4" role="cell" class="">按钮颜色主题变量应用于默认页脚“确定”按钮</td>
 </tr>
 <tr role="row" data-pk="lazy" class="" id="__BVID__2718__row_lazy">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">lazy</code></td>
 <td aria-colindex="2" role="cell" class="">Boolean</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
-<td aria-colindex="4" role="cell" class="">When the modal has the `static` prop set, renders the modal content lazily</td>
+<td aria-colindex="4" role="cell" class="">当模态设置了“static”属性时，将惰性地呈现模态内容</td>
 </tr>
 <tr role="row" data-pk="busy" class="" id="__BVID__2718__row_busy">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">busy</code></td>
 <td aria-colindex="2" role="cell" class="">Boolean</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
-<td aria-colindex="4" role="cell" class="">Places the built in default footer OK and Cancel buttons in the disabled state</td>
+<td aria-colindex="4" role="cell" class="">将内置的默认页脚“确定”和“取消”按钮置于禁用状态</td>
 </tr>
 <tr role="row" data-pk="static" class="" id="__BVID__2718__row_static">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">static</code></td>
 <td aria-colindex="2" role="cell" class="">Boolean</td>
 <td aria-colindex="3" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="word-wrap-normal notranslate">false</code></td>
-<td aria-colindex="4" role="cell" class="">Renders the content of the component in-place in the DOM, rather than portalling it to be appended to the body element</td>
+<td aria-colindex="4" role="cell" class="">在DOM中就地呈现组件的内容，而不是将其移植到body元素中</td>
 </tr>
 <tr role="row" data-pk="auto-focus-button" class="" id="__BVID__2718__row_auto-focus-button">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">auto-focus-button</code> <span data-v-866a22e8="" class="badge badge-secondary">v2.0.0+</span></td>
 <td aria-colindex="2" role="cell" class="">String</td>
 <td aria-colindex="3" role="cell" class=""></td>
-<td aria-colindex="4" role="cell" class="">Specify which built-in button to focus once the modal opens: 'ok', 'cancel', or 'close'</td>
+<td aria-colindex="4" role="cell" class="">指定模式打开后要聚焦的内置按钮：“确定”、“取消”或“关闭”</td>
 </tr>
 </tbody>
 </table>
 </div>
 <div data-v-866a22e8="" class="alert alert-warning">
-<p data-v-866a22e8="" class="mb-0 small"><strong data-v-866a22e8="">Caution:</strong> Props that support HTML strings
-        (<code data-v-866a22e8="" translate="translate" class="notranslate">*-html</code>) can be vulnerable to <a data-v-866a22e8="" rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/Cross-site_scripting" class="alert-link"> Cross Site Scripting (XSS) attacks </a> when passed raw user supplied values. You must properly <a data-v-866a22e8="" rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/HTML_sanitization" class="alert-link"> sanitize </a> the user input first! </p>
+<p data-v-866a22e8="" class="mb-0 small"><strong data-v-866a22e8="">警告:</strong> 
+  当传递原始用户提供的值时，支持HTML字符串（<code data-v-866a22e8="" translate="translate" class="notranslate">*-html</code>）的属性可能容易受到<a data-v-866a22e8="" rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/Cross-site_scripting" class="alert-link"> 跨站点脚本 (XSS) attacks</a>
+  攻击。必须先正确<a data-v-866a22e8="" rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/HTML_sanitization" class="alert-link"> 清理 </a>用户输入！
+</p>
 </div>
 </article>
 <article data-v-866a22e8="" class="bd-content">
@@ -1849,42 +2086,42 @@ already a <code translate="no" class="notranslate text-nowrap">tabindex</code> s
 <tbody role="rowgroup">
 <tr role="row" data-pk="modal-header" class="" id="__BVID__2792__row_modal-header">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">modal-header</code></td>
-<td aria-colindex="2" role="cell" class="">Entire modal header container contents. Also removes the top right X close button. Optionally scoped.</td>
+<td aria-colindex="2" role="cell" class="">整个模式头容器内容。同时删除右上角的“X关闭”按钮。可选范围。</td>
 <td aria-colindex="3" role="cell" class=""><button data-v-866a22e8="" type="button" class="btn py-0 btn-info btn-sm"> Scope </button></td>
 </tr>
 <tr role="row" data-pk="modal-title" class="" id="__BVID__2792__row_modal-title">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">modal-title</code></td>
-<td aria-colindex="2" role="cell" class="">Modal title. If modal-header slot is used, this slot will not be shown. Optionally scoped.</td>
+<td aria-colindex="2" role="cell" class="">模态标题。如果使用了模态头槽，则不会显示此槽。可选范围。</td>
 <td aria-colindex="3" role="cell" class=""><button data-v-866a22e8="" type="button" class="btn py-0 btn-info btn-sm"> Scope </button></td>
 </tr>
 <tr role="row" data-pk="modal-footer" class="" id="__BVID__2792__row_modal-footer">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">modal-footer</code></td>
-<td aria-colindex="2" role="cell" class="">Modal footer content. Also removes default OK and CANCEL buttons. Optionally scoped.</td>
+<td aria-colindex="2" role="cell" class="">模式页脚内容。同时删除默认的“确定”和“取消”按钮。可选范围。</td>
 <td aria-colindex="3" role="cell" class=""><button data-v-866a22e8="" type="button" class="btn py-0 btn-info btn-sm"> Scope </button></td>
 </tr>
 <tr role="row" data-pk="modal-header-close" class="" id="__BVID__2792__row_modal-header-close">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">modal-header-close</code></td>
-<td aria-colindex="2" role="cell" class="">Content of Modal header close button. If modal-header slot is used, this slot will not be shown.</td>
+<td aria-colindex="2" role="cell" class="">模式标题关闭按钮的内容。如果使用了模态头槽，则不会显示此槽。</td>
 <td aria-colindex="3" role="cell" class=""></td>
 </tr>
 <tr role="row" data-pk="modal-ok" class="" id="__BVID__2792__row_modal-ok">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">modal-ok</code></td>
-<td aria-colindex="2" role="cell" class="">Modal OK button content.</td>
+<td aria-colindex="2" role="cell" class="">模式确定按钮内容。</td>
 <td aria-colindex="3" role="cell" class=""></td>
 </tr>
 <tr role="row" data-pk="modal-cancel" class="" id="__BVID__2792__row_modal-cancel">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">modal-cancel</code></td>
-<td aria-colindex="2" role="cell" class="">Modal CANCEL button content.</td>
+<td aria-colindex="2" role="cell" class="">模式取消按钮内容。</td>
 <td aria-colindex="3" role="cell" class=""></td>
 </tr>
 <tr role="row" data-pk="modal-backdrop" class="" id="__BVID__2792__row_modal-backdrop">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">modal-backdrop</code></td>
-<td aria-colindex="2" role="cell" class="">Modal Backdrop content.</td>
+<td aria-colindex="2" role="cell" class="">模式背景内容。</td>
 <td aria-colindex="3" role="cell" class=""></td>
 </tr>
 <tr role="row" data-pk="default" class="" id="__BVID__2792__row_default">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">default</code></td>
-<td aria-colindex="2" role="cell" class="">Content of modal body. Optionally scoped.</td>
+<td aria-colindex="2" role="cell" class="">情态体的内容。可选范围。</td>
 <td aria-colindex="3" role="cell" class=""><button data-v-866a22e8="" type="button" class="btn py-0 btn-info btn-sm"> Scope </button></td>
 </tr>
 </tbody>
@@ -1906,99 +2143,100 @@ already a <code translate="no" class="notranslate text-nowrap">tabindex</code> s
 <tr role="row" data-pk="change" class="" id="__BVID__2809__row_change">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="notranslate">change</code></td>
 <td aria-colindex="2" role="cell" class=""><ol data-v-866a22e8="" class="list-unstyled mb-0">
-<li data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">isVisible</code> - <span data-v-866a22e8="">true if modal is visible, false otherwise</span></li>
+<li data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">isVisible</code> - <span data-v-866a22e8="">如果模态可见，则为true；否则为false</span></li>
 </ol></td>
-<td aria-colindex="3" role="cell" class="">New modal visibility state. Used to update the v-model</td>
+<td aria-colindex="3" role="cell" class="">新模态可见性状态。用于更新v模型</td>
 </tr>
 <tr role="row" data-pk="show" class="" id="__BVID__2809__row_show">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="notranslate">show</code></td>
 <td aria-colindex="2" role="cell" class=""><ol data-v-866a22e8="" class="list-unstyled mb-0">
-<li data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">bvModalEvt</code> - <span data-v-866a22e8="">BvModalEvent object. Call bvModalEvt.preventDefault() to cancel show</span></li>
+<li data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">bvModalEvt</code> - <span data-v-866a22e8="">BvModalEvent对象。调用bvModalEvt.preventDefault（）取消显示</span></li>
 </ol></td>
-<td aria-colindex="3" role="cell" class="">Always emits just before modal is shown. Cancelable</td>
+<td aria-colindex="3" role="cell" class="">总是在模态显示之前发出。可取消</td>
 </tr>
 <tr role="row" data-pk="shown" class="" id="__BVID__2809__row_shown">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="notranslate">shown</code></td>
 <td aria-colindex="2" role="cell" class=""><ol data-v-866a22e8="" class="list-unstyled mb-0">
-<li data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">bvModalEvt</code> - <span data-v-866a22e8="">BvModalEvent object</span></li>
+<li data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">bvModalEvt</code> - <span data-v-866a22e8="">BvModalEvent对象</span></li>
 </ol></td>
-<td aria-colindex="3" role="cell" class="">Always emits when modal is shown</td>
+<td aria-colindex="3" role="cell" class="">显示模态时始终发出</td>
 </tr>
 <tr role="row" data-pk="hide" class="" id="__BVID__2809__row_hide">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="notranslate">hide</code></td>
 <td aria-colindex="2" role="cell" class=""><ol data-v-866a22e8="" class="list-unstyled mb-0">
-<li data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">bvModalEvt</code> - <span data-v-866a22e8="">BvModalEvent object. Call bvModalEvt.preventDefault() to cancel hide</span></li>
+<li data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">bvModalEvt</code> - <span data-v-866a22e8="">BvModalEvent对象。调用bvModalEvt.preventDefault（）取消隐藏</span></li>
 </ol></td>
-<td aria-colindex="3" role="cell" class="">Always emits just before modal has hidden. Cancelable (as long as modal wasn't forcibly hidden)</td>
+<td aria-colindex="3" role="cell" class="">总是在模态隐藏之前发出。可取消（只要模态没有被强制隐藏）</td>
 </tr>
 <tr role="row" data-pk="hidden" class="" id="__BVID__2809__row_hidden">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="notranslate">hidden</code></td>
 <td aria-colindex="2" role="cell" class=""><ol data-v-866a22e8="" class="list-unstyled mb-0">
-<li data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">bvModalEvt</code> - <span data-v-866a22e8="">BvModalEvent object</span></li>
+<li data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">bvModalEvt</code> - <span data-v-866a22e8="">BvModalEvent对象</span></li>
 </ol></td>
-<td aria-colindex="3" role="cell" class="">Always emits after modal is hidden</td>
+<td aria-colindex="3" role="cell" class="">总是在模态被隐藏后发出</td>
 </tr>
 <tr role="row" data-pk="ok" class="" id="__BVID__2809__row_ok">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="notranslate">ok</code></td>
 <td aria-colindex="2" role="cell" class=""><ol data-v-866a22e8="" class="list-unstyled mb-0">
-<li data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">bvModalEvt</code> - <span data-v-866a22e8="">BvModalEvent object. Call bvModalEvt.preventDefault() to cancel hide</span></li>
+<li data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">bvModalEvt</code> - <span data-v-866a22e8="">BvModalEvent对象。调用bvModalEvt.preventDefault（）取消隐藏</span></li>
 </ol></td>
-<td aria-colindex="3" role="cell" class="">When default OK button pressed, just before modal has hidden. Cancelable</td>
+<td aria-colindex="3" role="cell" class="">当按下默认的OK按钮时，就在模态隐藏之前。可取消</td>
 </tr>
 <tr role="row" data-pk="cancel" class="" id="__BVID__2809__row_cancel">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="notranslate">cancel</code></td>
 <td aria-colindex="2" role="cell" class=""><ol data-v-866a22e8="" class="list-unstyled mb-0">
-<li data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">bvModalEvt</code> - <span data-v-866a22e8="">BvModalEvent object. Call bvModalEvt.preventDefault() to cancel hide</span></li>
+<li data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">bvModalEvt</code> - <span data-v-866a22e8="">BvModalEvent对象。调用bvModalEvt.preventDefault（）取消隐藏</span></li>
 </ol></td>
-<td aria-colindex="3" role="cell" class="">When default CANCEL button pressed, just before modal has hidden. Cancelable</td>
+<td aria-colindex="3" role="cell" class="">当按下默认的取消按钮时，就在模态隐藏之前。可取消</td>
 </tr>
 <tr role="row" data-pk="close" class="" id="__BVID__2809__row_close">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="notranslate">close</code></td>
 <td aria-colindex="2" role="cell" class=""><ol data-v-866a22e8="" class="list-unstyled mb-0">
-<li data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">bvModalEvt</code> - <span data-v-866a22e8="">BvModalEvent object. Call bvModalEvt.preventDefault() to cancel hide</span></li>
+<li data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">bvModalEvt</code> - <span data-v-866a22e8="">BvModalEvent对象。调用bvModalEvt.preventDefault（）取消隐藏</span></li>
 </ol></td>
-<td aria-colindex="3" role="cell" class="">When default header close button pressed, just before modal has hidden. Cancelable</td>
+<td aria-colindex="3" role="cell" class="">当按下默认的标题关闭按钮时，就在模态隐藏之前。可取消</td>
 </tr>
 <tr role="row" data-pk="bv::modal::show" class="" id="__BVID__2809__row_bv::modal::show">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="notranslate">bv::modal::show</code></td>
 <td aria-colindex="2" role="cell" class=""><ol data-v-866a22e8="" class="list-unstyled mb-0">
-<li data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">bvModalEvt</code> - <span data-v-866a22e8="">BvModalEvent object. Call bvEvt.preventDefault() to cancel show</span></li>
+<li data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">bvModalEvt</code> - <span data-v-866a22e8="">BvModalEvent对象。调用bvEvt.preventDefault（）取消显示</span></li>
 <li data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">modalId</code> - <span data-v-866a22e8="">modal ID</span></li>
 </ol></td>
-<td aria-colindex="3" role="cell" class="">Emitted on $root when modal is about to be shown. Cancelable</td>
+<td aria-colindex="3" role="cell" class="">当modal即将显示时在$root上发出。可取消</td>
 </tr>
 <tr role="row" data-pk="bv::modal::shown" class="" id="__BVID__2809__row_bv::modal::shown">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="notranslate">bv::modal::shown</code></td>
 <td aria-colindex="2" role="cell" class=""><ol data-v-866a22e8="" class="list-unstyled mb-0">
-<li data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">bvModalEvt</code> - <span data-v-866a22e8="">BvModalEvent object</span></li>
+<li data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">bvModalEvt</code> - <span data-v-866a22e8="">BvModalEvent对象</span></li>
 <li data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">modalId</code> - <span data-v-866a22e8="">modal ID</span></li>
 </ol></td>
-<td aria-colindex="3" role="cell" class="">Emitted on $root when modal is shown</td>
+<td aria-colindex="3" role="cell" class="">显示modal时在$root上发出</td>
 </tr>
 <tr role="row" data-pk="bv::modal::hide" class="" id="__BVID__2809__row_bv::modal::hide">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="notranslate">bv::modal::hide</code></td>
 <td aria-colindex="2" role="cell" class=""><ol data-v-866a22e8="" class="list-unstyled mb-0">
-<li data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">bvModalEvt</code> - <span data-v-866a22e8="">BvModalEvent object. Call bvEvt.preventDefault() to cancel hide</span></li>
+<li data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">bvModalEvt</code> - <span data-v-866a22e8="">BvModalEvent对象。调用bvEvt.preventDefault（）取消隐藏</span></li>
 <li data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">modalId</code> - <span data-v-866a22e8="">modal ID</span></li>
 </ol></td>
-<td aria-colindex="3" role="cell" class="">Emitted on $root when modal is about to be hidden. Cancelable (as long as modal wasn't forcibly hidden)</td>
+<td aria-colindex="3" role="cell" class="">当modal即将隐藏时在$root上发出。可取消（只要模态没有被强制隐藏）</td>
 </tr>
 <tr role="row" data-pk="bv::modal::hidden" class="" id="__BVID__2809__row_bv::modal::hidden">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="notranslate">bv::modal::hidden</code></td>
 <td aria-colindex="2" role="cell" class=""><ol data-v-866a22e8="" class="list-unstyled mb-0">
-<li data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">bvModalEvt</code> - <span data-v-866a22e8="">BvModalEvent object</span></li>
+<li data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">bvModalEvt</code> - <span data-v-866a22e8="">BvModalEvent对象</span></li>
 <li data-v-866a22e8=""><code data-v-866a22e8="" translate="translate" class="notranslate">modalId</code> - <span data-v-866a22e8="">modal ID</span></li>
 </ol></td>
-<td aria-colindex="3" role="cell" class="">Emitted on $root when modal is hidden</td>
+<td aria-colindex="3" role="cell" class="">隐藏模态时在$root上发出</td>
 </tr>
 </tbody>
 </table>
 </div>
 </article>
 <article data-v-866a22e8="" class="bd-content">
-<h4 data-v-866a22e8="" id="comp-ref-b-modal-rootEventListeners" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"><code data-v-866a22e8="" translate="translate" class="notranslate">$root</code> Event Listeners <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/modal#comp-ref-b-modal-rootEventListeners" class="anchorjs-link" aria-labelledby="comp-ref-b-modal-rootEventListeners" target="_self"></a></span></h4>
-<p data-v-866a22e8=""> You can control <code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-modal&gt;</code> by emitting the
-      following events on <samp data-v-866a22e8="" translate="translate" class="notranslate">$root</samp>: </p>
+<h4 data-v-866a22e8="" id="comp-ref-b-modal-rootEventListeners" tabindex="-1" class="bv-no-focus-ring mb-3"><span data-v-866a22e8="" class="bd-content-title"><code data-v-866a22e8="" translate="translate" class="notranslate">$root</code>事件侦听器 <a data-v-866a22e8="" href="../../../bootstrap-vue/docs/components/modal#comp-ref-b-modal-rootEventListeners" class="anchorjs-link" aria-labelledby="comp-ref-b-modal-rootEventListeners" target="_self"></a></span></h4>
+<p data-v-866a22e8=""> 
+  您可以通过在<samp data-v-866a22e8="" translate="translate" class="notranslate">$root</samp>上发出以下事件来控制<code data-v-866a22e8="" translate="translate" class="notranslate">&lt;b-modal&gt;</code>：
+</p>
 <div data-v-866a22e8="" class="table-responsive-sm">
 <table role="table" aria-busy="false" aria-colcount="3" class="table b-table bv-docs-table table-striped" id="__BVID__2830">
 <thead role="rowgroup" class="">
@@ -2011,20 +2249,20 @@ already a <code translate="no" class="notranslate text-nowrap">tabindex</code> s
 <tbody role="rowgroup">
 <tr role="row" data-pk="bv::show::modal" class="" id="__BVID__2830__row_bv::show::modal">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">bv::show::modal</code></td>
-<td aria-colindex="2" role="cell" class=""><p data-v-866a22e8="" class="mb-1"><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">modalId</code> <span data-v-866a22e8=""> - modal ID to show</span></p>
-<p data-v-866a22e8="" class="mb-1"><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">elIDtoFocusOnClose</code> <span data-v-866a22e8=""> - (optional), specify the element reference, or CSS selector, to return focus to once the modal is closed</span></p></td>
-<td aria-colindex="3" role="cell" class="">Show modal with specified ID when this event is emitted on $root</td>
+<td aria-colindex="2" role="cell" class=""><p data-v-866a22e8="" class="mb-1"><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">modalId</code> <span data-v-866a22e8=""> - 要显示的模态ID</span></p>
+<p data-v-866a22e8="" class="mb-1"><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">elIDtoFocusOnClose</code> <span data-v-866a22e8=""> - (可选择的),指定元素引用或CSS选择器，以便在关闭模式后将焦点返回到</span></p></td>
+<td aria-colindex="3" role="cell" class="">在$root上发出此事件时，显示具有指定ID的模态</td>
 </tr>
 <tr role="row" data-pk="bv::hide::modal" class="" id="__BVID__2830__row_bv::hide::modal">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">bv::hide::modal</code></td>
-<td aria-colindex="2" role="cell" class=""><p data-v-866a22e8="" class="mb-1"><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">modalId</code> <span data-v-866a22e8=""> - ID of modal to hide</span></p></td>
-<td aria-colindex="3" role="cell" class="">Hide modal with specified ID when this event is emitted on $root</td>
+<td aria-colindex="2" role="cell" class=""><p data-v-866a22e8="" class="mb-1"><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">modalId</code> <span data-v-866a22e8=""> - 要隐藏的模态ID</span></p></td>
+<td aria-colindex="3" role="cell" class="">在$root上发出此事件时隐藏具有指定ID的模态</td>
 </tr>
 <tr role="row" data-pk="bv::toggle::modal" class="" id="__BVID__2830__row_bv::toggle::modal">
 <td aria-colindex="1" role="cell" class=""><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">bv::toggle::modal</code></td>
-<td aria-colindex="2" role="cell" class=""><p data-v-866a22e8="" class="mb-1"><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">modalId</code> <span data-v-866a22e8=""> - ID of modal to toggle visibility</span></p>
-<p data-v-866a22e8="" class="mb-1"><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">elIDtoFocusOnClose</code> <span data-v-866a22e8=""> - (optional), specify the element reference, or CSS selector, to return focus to once the modal is closed</span></p></td>
-<td aria-colindex="3" role="cell" class="">Toggle a modal's visibility given its ID</td>
+<td aria-colindex="2" role="cell" class=""><p data-v-866a22e8="" class="mb-1"><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">modalId</code> <span data-v-866a22e8=""> - 切换可见性的模态ID</span></p>
+<p data-v-866a22e8="" class="mb-1"><code data-v-866a22e8="" translate="translate" class="text-nowrap notranslate">elIDtoFocusOnClose</code> <span data-v-866a22e8=""> - (可选择的), 指定元素引用或CSS选择器，以便在关闭模式后将焦点返回到</span></p></td>
+<td aria-colindex="3" role="cell" class="">根据模态的ID切换其可见性</td>
 </tr>
 </tbody>
 </table>
@@ -2055,16 +2293,15 @@ already a <code translate="no" class="notranslate text-nowrap">tabindex</code> s
 Vue.component(<span class="hljs-string">'b-modal'</span>, BModal)</pre>
 </article>
 <article class="bd-content">
-<h3 id="importing-individual-directives" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title"> Importing individual directives <a href="../../../bootstrap-vue/docs/components/modal#importing-individual-directives" class="anchorjs-link" aria-labelledby="importing-individual-directives" target="_self"></a></span></h3>
-<p> You can import individual directives into your project via the following named
-        exports: </p>
+<h3 id="importing-individual-directives" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title"> 导入单个指令<a href="../../../bootstrap-vue/docs/components/modal#importing-individual-directives" class="anchorjs-link" aria-labelledby="importing-individual-directives" target="_self"></a></span></h3>
+<p>可以通过以下命名导出将单个指令导入到项目中：</p>
 <div class="table-responsive-sm">
 <table role="table" aria-busy="false" aria-colcount="3" class="table b-table bv-docs-table table-striped" id="__BVID__2853">
 <thead role="rowgroup" class="thead-default">
 <tr role="row" class="">
-<th role="columnheader" scope="col" aria-colindex="1" class="">Directive</th>
-<th role="columnheader" scope="col" aria-colindex="2" class="">Named Export</th>
-<th role="columnheader" scope="col" aria-colindex="3" class="">Import Path</th>
+<th role="columnheader" scope="col" aria-colindex="1" class="">指令</th>
+<th role="columnheader" scope="col" aria-colindex="2" class="">命名导出</th>
+<th role="columnheader" scope="col" aria-colindex="3" class="">导入路径</th>
 </tr>
 </thead>
 <tbody role="rowgroup">
@@ -2083,9 +2320,7 @@ Vue.directive(<span class="hljs-string">'b-modal'</span>, VBModal)</pre>
 </article>
 <article class="bd-content">
 <h3 id="importing-as-a-plugin" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title"> 导入为Vue.js插件 <a href="../../../bootstrap-vue/docs/components/modal#importing-as-a-plugin" class="anchorjs-link" aria-labelledby="importing-as-a-plugin" target="_self"></a></span></h3>
-<p> This plugin includes all of the above listed individual
-      components<span> and directives</span>.
-      Plugins also include any component aliases. </p>
+<p>这个插件包括上面列出的所有单个组件和指令。插件还包括任何组件别名。</p>
 <div class="table-responsive-sm">
 <table fileds="namedExport,importPath" role="table" aria-busy="false" aria-colcount="2" class="table b-table bv-docs-table table-striped b-table-caption-top" id="__BVID__2863">
 <thead role="rowgroup" class="thead-default">
@@ -2102,7 +2337,7 @@ Vue.directive(<span class="hljs-string">'b-modal'</span>, VBModal)</pre>
 </tbody>
 </table>
 </div>
-<p>This plugin also automatically includes the following plugins:</p>
+<p>此插件还自动包含以下插件：</p>
 <ul>
 <li><code translate="translate" class="notranslate">BVModalPlugin</code></li>
 </ul>

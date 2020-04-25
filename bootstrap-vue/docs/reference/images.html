@@ -36,18 +36,14 @@
   <div class="navbar-nav-scroll">
     <ul class="navbar-nav bd-navbar-nav flex-row">
       <li class="nav-item"><a class="nav-link " href="../">首页</a></li>
-      <li class="nav-item"><a class="nav-link active" href="../../docs/">中文手册</a></li>
-      <li class="nav-item"><a class="nav-link " href="../../v4/examples/">实例</a></li>
-      <li class="nav-item dropdown">
-<a class="nav-item nav-link dropdown-toggle mr-md-2" id="bd-versions" aria-expanded="false" aria-haspopup="true" href="#" data-toggle="dropdown"> 主题模板 </a>
-<div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
-<a class="dropdown-item" href="../../V4/themes/" target="_blank">主题门户</a>
-<a class="dropdown-item" href="../../V4/themes/live.html">精选模板</a>
-</div>
-</li>
-      <li class="nav-item"><a class="nav-link" href="//ico.z01.com" target="_blank" rel="noopener">zico图标系统</a></li>
-      <li class="nav-item"><a class="nav-link" href="https://expo.getbootstrap.com" target="_blank" rel="noopener">优站精选</a></li>
-      <li class="nav-item"><a class="nav-link" href="https://blog.getbootstrap.com" target="_blank" rel="noopener">Blog</a></li>
+      <li class="nav-item"><a class="nav-link " href="index.html">中文手册</a></li>
+      <li class="nav-item"><a class="nav-link " href="../components">组件</a></li>
+      <li class="nav-item"><a class="nav-link " href="../directives">指令</a></li>
+      <li class="nav-item"><a class="nav-link active" href="../reference">参考</a></li>
+      <li class="nav-item"><a class="nav-link " href="https://bootstrap-vue.org/play" target="_blank">体验</a></li>
+      <li class="nav-item"><a class="nav-link " href="http://code.z01.com/v4"><i class="zi zi_bold" zico="粗"></i> Boostrap</a></li>
+      <li class="nav-item"><a class="nav-link" href="http://ico.z01.com" target="_blank" rel="noopener">zico图标系统</a></li>
+      <li class="nav-item"><a class="nav-link" href="http://www.z01.com" target="_blank" rel="noopener">Zoomla!逐浪CMS</a></li>
     </ul>
   </div>
   <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
@@ -189,15 +185,17 @@
 
 <div class="d-none d-xl-block col-xl-2 bd-toc">
 <ul class="section-nav">
-<li class="nav-item toc-entry mb-2"><a target="_self" href="#component-img-src-resolving" class="nav-link font-weight-bold"><span>Component img src resolving</span></a></li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#using-project-relative-image-urls-for-bootstrapvue-custom-components" class="nav-link"><span>Using project relative image URLs for BootstrapVue custom components</span></a> </li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#vue-loader-transformasseturls-to-resolve-img-paths" class="nav-link"><span>Vue Loader transformAssetUrls to resolve img paths</span></a>
+<li class="nav-item toc-entry mb-2"><a target="_self" href="#component-img-src-resolving" class="nav-link font-weight-bold"><span>组件img src解析</span></a></li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#using-project-relative-image-urls-for-bootstrapvue-custom-components" class="nav-link"><span>
+  对BootstrapVue自定义组件使用项目相关的图像URL</span></a> </li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#vue-loader-transformasseturls-to-resolve-img-paths" class="nav-link"><span>
+  用于解析img路径的Vue加载程序transformAssetUrls</span></a>
 <ul class="nav flex-column">
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#vue-cli-3-support" class="nav-link"><span>Vue CLI 3 Support</span></a></li>
-<li class="nav-item toc-entry toc-h3"><a target="_self" href="#configuring-transformasseturls-in-nuxtjs" class="nav-link"><span>Configuring transformAssetUrls in Nuxt.js</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#vue-cli-3-support" class="nav-link"><span>Vue CLI 3 支持</span></a></li>
+<li class="nav-item toc-entry toc-h3"><a target="_self" href="#configuring-transformasseturls-in-nuxtjs" class="nav-link"><span>在Nuxt.js中配置transformAssetUrls</span></a></li>
 </ul>
 </li>
-<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#using-require-to-resolve-image-paths" class="nav-link"><span>Using require to resolve image paths</span></a> </li>
+<li class="nav-item toc-entry toc-h2 mb-1"><a target="_self" href="#using-require-to-resolve-image-paths" class="nav-link"><span>使用 require解析图像路径</span></a> </li>
 </ul>
 </div>
 
@@ -219,13 +217,18 @@
 <li data-v-4abf2740=""><a data-v-4abf2740="" target="_self" href="#using-require-to-resolve-image-paths" class=""><span data-v-4abf2740="">Using require to resolve image paths</span></a> </li>
 </ul>
 </nav>
-<h2 id="using-project-relative-image-urls-for-bootstrapvue-custom-components" class="bv-no-focus-ring"><span class="bd-content-title">Using project relative image URLs for BootstrapVue custom components<a class="anchorjs-link" href="#using-project-relative-image-urls-for-bootstrapvue-custom-components" aria-labelledby="using-project-relative-image-urls-for-bootstrapvue-custom-components"></a></span></h2>
-<p>vue-loader automatically converts project relative <code class="text-nowrap" translate="no">src</code> attributes on <code class="text-nowrap" translate="no">&lt;img&gt;</code> tags, but doesn't
-automatically for BootstrapVue custom components that accept image src url tags.</p>
-<h2 id="vue-loader-transformasseturls-to-resolve-img-paths" class="bv-no-focus-ring"><span class="bd-content-title">Vue Loader <code class="text-nowrap" translate="no">transformAssetUrls</code> to resolve img paths<a class="anchorjs-link" href="#vue-loader-transformasseturls-to-resolve-img-paths" aria-labelledby="vue-loader-transformasseturls-to-resolve-img-paths"></a></span></h2>
-<p>To have your project convert these custom component image URLs for you, you will need to customize
-the <a href="https://vue-loader.vuejs.org/options.html#transformasseturls" target="_blank" rel="noopener"><code class="text-nowrap" translate="no">transformAssetUrls</code></a> <code class="text-nowrap" translate="no">option</code> for <code class="text-nowrap" translate="no">vue-loader</code> in your webpack config.</p>
-<p>The default value for <code class="text-nowrap" translate="no">transformAssetUrls</code> is:</p>
+<h2 id="using-project-relative-image-urls-for-bootstrapvue-custom-components" class="bv-no-focus-ring"><span class="bd-content-title">
+  对BootstrapVue自定义组件使用项目相关的图像URL<a class="anchorjs-link" href="#using-project-relative-image-urls-for-bootstrapvue-custom-components" aria-labelledby="using-project-relative-image-urls-for-bootstrapvue-custom-components"></a></span></h2>
+<p>
+  vue loader会自动转换<code class="text-nowrap" translate="no">&lt;img&gt;</code>标记上的项目相关<code class="text-nowrap" translate="no">src</code>属性，但不会自动转换接受图像src url标记的BootstrapVue自定义组件。
+</p>
+<h2 id="vue-loader-transformasseturls-to-resolve-img-paths" class="bv-no-focus-ring"><span class="bd-content-title">用于解析img路径的Vue加载程序<code class="text-nowrap" translate="no">transformAssetUrls</code><a class="anchorjs-link" href="#vue-loader-transformasseturls-to-resolve-img-paths" aria-labelledby="vue-loader-transformasseturls-to-resolve-img-paths"></a></span></h2>
+<p>
+  要让您的项目为您转换这些自定义组件图像URL，您将需要在Webpack配置中为<code class="text-nowrap" translate="no">vue-loader</code>自定义
+  <a href="https://vue-loader.vuejs.org/options.html#transformasseturls" target="_blank" rel="noopener"><code class="text-nowrap" translate="no">transformAssetUrls</code></a> 
+<code class="text-nowrap" translate="no">选项</code>。
+</p>
+<p><code class="text-nowrap" translate="no">transformAssetUrls</code>的默认值为:</p>
 <!-- eslint-disable no-unused-vars -->
 
 <div class="bd-code">
@@ -238,7 +241,7 @@ the <a href="https://vue-loader.vuejs.org/options.html#transformasseturls" targe
   }
 }</pre>
 </div>
-<p>To allow BootstrapVue components to use project relative URLs, use the following configuration:</p>
+<p>要允许BootstrapVue组件使用与项目相关的url，请使用以下配置：</p>
 <!-- eslint-disable no-unused-vars -->
 
 <div class="bd-code">
@@ -258,18 +261,21 @@ the <a href="https://vue-loader.vuejs.org/options.html#transformasseturls" targe
   }
 }</pre>
 </div>
-<p>This will allow you to use the following format in your <code class="text-nowrap" translate="no">.vue</code> files:</p>
+<p>
+  这将使您可以在<code class="text-nowrap" translate="no">.vue</code>文件中使用以下格式：
+</p>
 <div class="bd-code">
 <pre class="hljs html p-2" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"~/static/picture.jpg"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-img</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">b-card-img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"~/static/picture.jpg"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-card-img</span>&gt;</span></pre>
 </div>
-<h3 id="vue-cli-3-support" class="bv-no-focus-ring"><span class="bd-content-title">Vue CLI 3 Support<a class="anchorjs-link" href="#vue-cli-3-support" aria-labelledby="vue-cli-3-support"></a></span></h3>
-<p>Vue CLI 3 changed the way that webpack compiles a Vue app, in order to make BootstrapVue work again,
-you need to do the following steps:</p>
+<h3 id="vue-cli-3-support" class="bv-no-focus-ring"><span class="bd-content-title">Vue CLI 3 支持<a class="anchorjs-link" href="#vue-cli-3-support" aria-labelledby="vue-cli-3-support"></a></span></h3>
+<p>Vue CLI 3更改了webpack编译Vue应用程序的方式，为了使BootstrapVue再次工作，您需要执行以下步骤：</p>
 <ol>
-<li>Create <code class="text-nowrap" translate="no">vue.config.js</code> in the root directory (next to <code class="text-nowrap" translate="no">package.json</code>).</li>
-<li>Put the following code</li>
+<li>
+  在根目录（<code class="text-nowrap" translate="no">package.json</code>旁边）中创建<code class="text-nowrap" translate="no">vue.config.js</code>。
+</li>
+<li>输入以下代码</li>
 </ol>
 <div class="bd-code">
 <pre class="hljs js p-2" translate="no"><span class="hljs-built_in">module</span>.exports = {
@@ -296,8 +302,10 @@ you need to do the following steps:</p>
   }
 }</pre>
 </div>
-<h3 id="configuring-transformasseturls-in-nuxtjs" class="bv-no-focus-ring"><span class="bd-content-title">Configuring <code class="text-nowrap" translate="no">transformAssetUrls</code> in Nuxt.js<a class="anchorjs-link" href="#configuring-transformasseturls-in-nuxtjs" aria-labelledby="configuring-transformasseturls-in-nuxtjs"></a></span></h3>
-<p>In your <code class="text-nowrap" translate="no">nuxt.config.js</code> file, add the following to your build section:</p>
+<h3 id="configuring-transformasseturls-in-nuxtjs" class="bv-no-focus-ring"><span class="bd-content-title">在Nuxt.js中配置<code class="text-nowrap" translate="no">transformAssetUrls</code><a class="anchorjs-link" href="#configuring-transformasseturls-in-nuxtjs" aria-labelledby="configuring-transformasseturls-in-nuxtjs"></a></span></h3>
+<p>
+  在您的 <code class="text-nowrap" translate="no">nuxt.config.js</code> 文件中，将以下内容添加到您的build部分：
+</p>
 <div class="bd-code">
 <pre class="hljs js p-2" translate="no"><span class="hljs-built_in">module</span>.exports = {
   <span class="hljs-attr">build</span>: {
@@ -320,10 +328,14 @@ you need to do the following steps:</p>
   }
 }</pre>
 </div>
-<p>If using the <a href="/docs#nuxtjs-module" class="font-weight-bold">BootstrapVue Nuxt</a> module with Nuxt.js, the plugin module will
-automatically add in the BootstrapVue specific <code class="text-nowrap" translate="no">transformAssetUrls</code> configuration for you.</p>
-<h2 id="using-require-to-resolve-image-paths" class="bv-no-focus-ring"><span class="bd-content-title">Using <code class="text-nowrap" translate="no">require</code> to resolve image paths<a class="anchorjs-link" href="#using-require-to-resolve-image-paths" aria-labelledby="using-require-to-resolve-image-paths"></a></span></h2>
-<p>If you cannot set the <code class="text-nowrap" translate="no">transformAssetUrls</code> in your view-loader config, you can alternatively use the <code class="text-nowrap" translate="no">require</code> method:</p>
+<p>
+  如果将 <a href="/docs#nuxtjs-module" class="font-weight-bold">BootstrapVue Nuxt</a> 模块与Nuxt.js一起使用，
+  插件模块将自动为您添加BootstrapVue特定的<code class="text-nowrap" translate="no">transformAssetUrls</code>配置。
+</p>
+<h2 id="using-require-to-resolve-image-paths" class="bv-no-focus-ring"><span class="bd-content-title">使用 <code class="text-nowrap" translate="no">require</code>解析图像路径<a class="anchorjs-link" href="#using-require-to-resolve-image-paths" aria-labelledby="using-require-to-resolve-image-paths"></a></span></h2>
+<p>
+  如果您无法在视图加载器配置中设置<code class="text-nowrap" translate="no">transformAssetUrls</code>，则可以选择使用<code class="text-nowrap" translate="no">require</code>方法：
+</p>
 <div class="bd-code">
 <pre class="hljs html p-2" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-img</span> <span class="hljs-attr">:src</span>=<span class="hljs-string">"require('../static/picture.jpg')"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-img</span>&gt;</span>
 
