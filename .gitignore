@@ -18,3 +18,4 @@ _book
 ## ignore this file下面是忽略文件夹与文件设置##
 git自动更新与提交-develop.ps1
 git自动更新与提交-master.ps1
+*.rar

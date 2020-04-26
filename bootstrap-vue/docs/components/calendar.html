@@ -47,7 +47,7 @@
     </ul>
   </div>
   <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="alse"> v2.6.1 </a>
+    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="alse"> v2.12.0 </a>
       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions"> 
         <a class="dropdown-item active" href="../../../bootstrap-vue/docs/4.0/">Latest (4.3.x)</a>
         <a class="dropdown-item" href="/Boot/">v3.3.7</a>
@@ -626,6 +626,7 @@
             </div>
           </div>
         </div>
+        <figure class="highlight">
         <pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">md</span>=<span class="hljs-string">"auto"</span>&gt;</span>
@@ -653,7 +654,7 @@
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
         <h2 id="v-model-return-value" class="bv-no-focus-ring"><span class="bd-content-title"><code translate="no"
               class="notranslate text-nowrap">v-model</code> 返回值 <a class="anchorjs-link" href="#v-model-return-value"
               aria-labelledby="v-model-return-value"></a></span></h2>
@@ -1009,6 +1010,7 @@
             </div>
           </div>
         </div>
+        <figure class="highlight">
         <pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-form-group</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Select calendar interactive state"</span>&gt;</span>
@@ -1038,7 +1040,7 @@
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
         <h2 id="date-constraints" class="bv-no-focus-ring"><span class="bd-content-title">日期限制<a class="anchorjs-link"
               href="#date-constraints" aria-labelledby="date-constraints"></a></span></h2>
         <h3 id="minimum-and-maximum-dates" class="bv-no-focus-ring"><span class="bd-content-title">最小和最大日期<a
@@ -1341,6 +1343,7 @@
             </div>
           </div>
         </div>
+        <figure class="highlight">
         <pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-calendar</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">"value"</span> <span class="hljs-attr">:min</span>=<span class="hljs-string">"min"</span> <span class="hljs-attr">:max</span>=<span class="hljs-string">"max"</span> <span class="hljs-attr">locale</span>=<span class="hljs-string">"en"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-calendar</span>&gt;</span>
@@ -1368,7 +1371,7 @@
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
         <h3 id="disabling-dates" class="bv-no-focus-ring"><span class="bd-content-title">禁用日期<a class="anchorjs-link"
               href="#disabling-dates" aria-labelledby="disabling-dates"></a></span></h3>
         <p>如果需要禁用日历中的特定日期，请指定对 <code translate="no" class="notranslate text-nowrap">date-disabled-fn</code>
@@ -1686,6 +1689,7 @@
             </div>
           </div>
         </div>
+        <figure class="highlight">
         <pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-calendar</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">"value"</span> <span class="hljs-attr">:date-disabled-fn</span>=<span class="hljs-string">"dateDisabled"</span> <span class="hljs-attr">locale</span>=<span class="hljs-string">"en"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-calendar</span>&gt;</span>
@@ -1710,7 +1714,7 @@
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
         <p>注意， <code translate="no" class="notranslate text-nowrap">min</code> 和 <code translate="no"
             class="notranslate text-nowrap">max</code> 日期限制将在 <code translate="no"
             class="notranslate text-nowrap">date-disabled-fn</code>之前被求值。</p>
@@ -2015,9 +2019,10 @@
             </div>
           </div>
         </div>
+        <figure class="highlight">
         <pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-calendar</span> <span class="hljs-attr">selected-variant</span>=<span class="hljs-string">"success"</span> <span class="hljs-attr">today-variant</span>=<span class="hljs-string">"info"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-calendar</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span></pre></figure>
         <h3 id="width" class="bv-no-focus-ring"><span class="bd-content-title">宽度<a class="anchorjs-link" href="#width"
               aria-labelledby="width"></a></span></h3>
         <p> <code translate="no" class="notranslate text-nowrap">&lt;b-calendar&gt;</code> 渲染为一个默认宽度为 <code
@@ -2314,9 +2319,10 @@
             </div>
           </div>
         </div>
+        <figure class="highlight">
         <pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-calendar</span> <span class="hljs-attr">block</span> <span class="hljs-attr">local</span>=<span class="hljs-string">"en-US"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-calendar</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span></pre></figure>
         <p>注意，<em>不建议</em> 将宽度设置为 <code translate="no" class="notranslate text-nowrap">260px</code> 以下，否则可能会出现截断和布局问题。
         </p>
         <h3 id="hiding-the-top-selected-date-header" class="bv-no-focus-ring"><span
@@ -2616,9 +2622,10 @@
             </div>
           </div>
         </div>
+        <figure class="highlight">
         <pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-calendar</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"border rounded p-2"</span> <span class="hljs-attr">locale</span>=<span class="hljs-string">"en"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-calendar</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span></pre></figure>
         <h3 id="default-slot" class="bv-no-focus-ring"><span class="bd-content-title">默认插槽<a class="anchorjs-link"
               href="#default-slot" aria-labelledby="default-slot"></a></span></h3>
         <p>通过使用默认插槽，在日历界面的底部提供可选内容。该插槽可用于添加按钮，如选择 <code translate="no" class="notranslate text-nowrap">今天</code> 或 <code
@@ -2914,6 +2921,7 @@
             </div>
           </div>
         </div>
+        <figure class="highlight">
         <pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-calendar</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">"value"</span> <span class="hljs-attr">value-as-date</span> <span class="hljs-attr">locale</span>=<span class="hljs-string">"en"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"d-flex"</span> <span class="hljs-attr">dir</span>=<span class="hljs-string">"ltr"</span>&gt;</span>
@@ -2954,7 +2962,7 @@
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
         <h3 id="adding-css-classes-to-specific-dates" class="bv-no-focus-ring"><span
             class="bd-content-title">为特定日期添加CSS类<a class="anchorjs-link" href="#adding-css-classes-to-specific-dates"
               aria-labelledby="adding-css-classes-to-specific-dates"></a></span></h3>
@@ -3264,6 +3272,7 @@
             </div>
           </div>
         </div>
+        <figure class="highlight">
         <pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-calendar</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">"value"</span> <span class="hljs-attr">:date-info-fn</span>=<span class="hljs-string">"dateClass"</span> <span class="hljs-attr">locale</span>=<span class="hljs-string">"en"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-calendar</span>&gt;</span>
@@ -3284,7 +3293,7 @@
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
         <p>注意，该函数在 <a href="#date-constraints" class="font-weight-bold">禁用日期</a> <em>不会</em> 被调用。</p>
         <p><strong>辅助功能说明：</strong></p>
         <p>当使用类向日期传递特定的含义时，您应该包括日历之外的其他上下文（或通过默认插槽）以突出显示日期（例如在<code translate="no"
@@ -3735,6 +3744,7 @@
             <div class="col">
               <p>Value: <b>''</b></p>
               <p class="mb-0">Context:</p>
+              <figure class="highlight">
               <pre class="small">{
   "selectedYMD": "",
   "selectedDate": null,
@@ -3746,10 +3756,11 @@
   "locale": "en-US",
   "calendarLocale": "en-US",
   "rtl": false
-}</pre>
+}</pre></figure>
             </div>
           </div>
         </div>
+        <figure class="highlight">
         <pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"12"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-3"</span>&gt;</span>
@@ -3843,7 +3854,7 @@
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
         <p>目前 <code translate="no" class="notranslate text-nowrap">&lt;b-calendar&gt;</code> 只支持Gregorian（<code
             translate="no" class="notranslate text-nowrap">'gregory'</code>） 日历。</p>
         <p>默认情况下，<code translate="no" class="notranslate text-nowrap">&lt;b-calendar&gt;</code>
@@ -4338,8 +4349,9 @@
             </table>
           </div>
           <p><strong>示例：</strong></p>
+          <figure class="highlight">
           <pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { BCalendar } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
-Vue.component(<span class="hljs-string">'b-calendar'</span>, BCalendar)</pre>
+Vue.component(<span class="hljs-string">'b-calendar'</span>, BCalendar)</pre></figure>
         </article>
         <article class="bd-content">
           <h3 id="importing-as-a-plugin" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title">
@@ -4366,8 +4378,9 @@ Vue.component(<span class="hljs-string">'b-calendar'</span>, BCalendar)</pre>
             </table>
           </div>
           <p><strong>示例：</strong></p>
+          <figure class="highlight">
           <pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { CalendarPlugin } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
-Vue.use(CalendarPlugin)</pre>
+Vue.use(CalendarPlugin)</pre></figure>
         </article>
 
 
@@ -4398,8 +4411,7 @@ Vue.use(CalendarPlugin)</pre>
   </div>
 
 
-  <script src="../../../js/jquery-3.2.1.slim.min.js"></script>
-  <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+<script src="../../../v4/assets/js/vendor/jquery-slim.min.js"></script>
   <script src="../../../v4/dist/js/popper.min.js"></script>
   <script src="../../../v4/dist/js/bootstrap.min.js"></script>
   <script src="../../../v4/assets/js/docs.min.js"></script>

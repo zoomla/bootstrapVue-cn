@@ -47,7 +47,7 @@
     </ul>
   </div>
   <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="alse"> v2.6.1 </a>
+    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="alse"> v2.12.0 </a>
       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions"> 
         <a class="dropdown-item active" href="../../../bootstrap-vue/docs/4.0/">Latest (4.3.x)</a>
         <a class="dropdown-item" href="/Boot/">v3.3.7</a>
@@ -273,7 +273,7 @@
 <button type="button" class="btn mt-3 btn-secondary">Click me</button>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-progress</span> <span class="hljs-attr">:value</span>=<span class="hljs-string">"value"</span> <span class="hljs-attr">:max</span>=<span class="hljs-string">"max"</span> <span class="hljs-attr">show-progress</span> <span class="hljs-attr">animated</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-progress</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-progress</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mt-2"</span> <span class="hljs-attr">:max</span>=<span class="hljs-string">"max"</span> <span class="hljs-attr">show-value</span>&gt;</span>
@@ -300,7 +300,7 @@
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <h2 id="value" class="bv-no-focus-ring"><span class="bd-content-title">值<a class="anchorjs-link" href="#value" aria-labelledby="value"></a></span></h2>
 <p>
   使用<code translate="no" class="notranslate text-nowrap">max</code>属性（默认值为<code translate="no" class="notranslate text-nowrap">100</code>）设置最大值，
@@ -339,7 +339,7 @@
 </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">h5</span>&gt;</span>No label<span class="hljs-tag">&lt;/<span class="hljs-name">h5</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-progress</span> <span class="hljs-attr">:value</span>=<span class="hljs-string">"value"</span> <span class="hljs-attr">:max</span>=<span class="hljs-string">"max"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-3"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-progress</span>&gt;</span>
@@ -367,7 +367,7 @@
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <h3 id="custom-progress-label" class="bv-no-focus-ring"><span class="bd-content-title">自定义进度标签<a class="anchorjs-link" href="#custom-progress-label" aria-labelledby="custom-progress-label"></a></span></h3>
 <p>
   需要对标签进行更多控制吗？ 通过使用<code translate="no" class="notranslate text-nowrap">&lt;b-progress-bar&gt;</code>子组件中的默认插槽，
@@ -391,7 +391,7 @@
 </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">h5</span>&gt;</span>Custom label via default slot<span class="hljs-tag">&lt;/<span class="hljs-name">h5</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-progress</span> <span class="hljs-attr">:max</span>=<span class="hljs-string">"max"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"2rem"</span>&gt;</span>
@@ -421,7 +421,7 @@
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <p>标签方法的优先顺序（最高优先级）：</p>
 <ul>
 <li><code translate="no" class="notranslate text-nowrap">&lt;b-progress-bar&gt;</code>的默认插槽</li>
@@ -454,7 +454,7 @@
 </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">h5</span>&gt;</span>Default width<span class="hljs-tag">&lt;/<span class="hljs-name">h5</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-progress</span> <span class="hljs-attr">:value</span>=<span class="hljs-string">"value"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-3"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-progress</span>&gt;</span>
@@ -474,7 +474,7 @@
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <p>
   进度条的高度可以通过<code translate="no" class="notranslate text-nowrap">height</code>属性来控制。高度值应为标准CSS尺寸（<code translate="no" class="notranslate text-nowrap">px</code>,
   <code translate="no" class="notranslate text-nowrap">rem</code>,
@@ -498,7 +498,7 @@
 </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">h5</span>&gt;</span>Default height<span class="hljs-tag">&lt;/<span class="hljs-name">h5</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-progress</span> <span class="hljs-attr">:value</span>=<span class="hljs-string">"value"</span> <span class="hljs-attr">show-progress</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-3"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-progress</span>&gt;</span>
@@ -518,7 +518,7 @@
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <h2 id="backgrounds" class="bv-no-focus-ring"><span class="bd-content-title">背景<a class="anchorjs-link" href="#backgrounds" aria-labelledby="backgrounds"></a></span></h2>
 <p>
   使用背景变体更改单个进度条的外观。 默认变量是<code translate="no" class="notranslate text-nowrap">primary</code>。
@@ -584,7 +584,7 @@
 </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">v-for</span>=<span class="hljs-string">"bar in bars"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row mb-1"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-sm-2"</span>&gt;</span>{{ bar.variant }}:<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -621,7 +621,7 @@
       <span class="hljs-keyword">this</span>.timer = <span class="hljs-literal">null</span>
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <h3 id="striped-backgrounds" class="bv-no-focus-ring"><span class="bd-content-title">条纹背景<a class="anchorjs-link" href="#striped-backgrounds" aria-labelledby="striped-backgrounds"></a></span></h3>
 <p>
   将<code translate="no" class="notranslate text-nowrap">striped</code>设置为通过CSS渐变在进度条的背景变量上应用条纹。
@@ -643,7 +643,7 @@
 <button type="button" class="btn mt-3 btn-secondary"> Remove Striped </button>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-progress</span> <span class="hljs-attr">:value</span>=<span class="hljs-string">"25"</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"success"</span> <span class="hljs-attr">:striped</span>=<span class="hljs-string">"striped"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-progress</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-progress</span> <span class="hljs-attr">:value</span>=<span class="hljs-string">"50"</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"info"</span> <span class="hljs-attr">:striped</span>=<span class="hljs-string">"striped"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mt-2"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-progress</span>&gt;</span>
@@ -664,7 +664,7 @@
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <h3 id="animated-backgrounds" class="bv-no-focus-ring"><span class="bd-content-title">动画背景<a class="anchorjs-link" href="#animated-backgrounds" aria-labelledby="animated-backgrounds"></a></span></h3>
 <p>
   也可以通过设置<code translate="no" class="notranslate text-nowrap">animated</code>属性设置条纹渐变的动画。
@@ -686,7 +686,7 @@
 <button type="button" class="btn mt-3 btn-secondary"> Stop Animation </button>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-progress</span> <span class="hljs-attr">:value</span>=<span class="hljs-string">"25"</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"success"</span> <span class="hljs-attr">striped</span> <span class="hljs-attr">:animated</span>=<span class="hljs-string">"animate"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-progress</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-progress</span> <span class="hljs-attr">:value</span>=<span class="hljs-string">"50"</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"info"</span> <span class="hljs-attr">striped</span> <span class="hljs-attr">:animated</span>=<span class="hljs-string">"animate"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mt-2"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-progress</span>&gt;</span>
@@ -707,7 +707,7 @@
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <p>注意事项:</p>
 <ul>
 <li>
@@ -743,7 +743,7 @@
 </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-progress</span> <span class="hljs-attr">:max</span>=<span class="hljs-string">"max"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-3"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">b-progress-bar</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"primary"</span> <span class="hljs-attr">:value</span>=<span class="hljs-string">"values[0]"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-progress-bar</span>&gt;</span>
@@ -780,7 +780,7 @@
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <p>
   <code translate="no" class="notranslate text-nowrap">&lt;b-progress-bar&gt;</code>将继承<code translate="no" class="notranslate text-nowrap">&lt;b-progress&gt;</code>父组件的
   大部分属性，但是您可以通过在<code translate="no" class="notranslate text-nowrap">&lt;b-progress-bar&gt;</code>上进行设置来覆盖任何属性。
@@ -1001,8 +1001,8 @@
 </table>
 </div>
 <p><strong>例子:</strong></p>
-<pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { BProgress } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
-Vue.component(<span class="hljs-string">'b-progress'</span>, BProgress)</pre>
+<figure class="highlight"><pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { BProgress } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
+Vue.component(<span class="hljs-string">'b-progress'</span>, BProgress)</pre></figure>
 </article>
 <article class="bd-content">
 <h3 id="importing-as-a-plugin" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title">作为Vue.js插件导入<a href="../../../bootstrap-vue/docs/components/progress#importing-as-a-plugin" class="anchorjs-link" aria-labelledby="importing-as-a-plugin" target="_self"></a></span></h3>
@@ -1024,8 +1024,8 @@ Vue.component(<span class="hljs-string">'b-progress'</span>, BProgress)</pre>
 </table>
 </div>
 <p><strong>例子:</strong></p>
-<pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { ProgressPlugin } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
-Vue.use(ProgressPlugin)</pre>
+<figure class="highlight"><pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { ProgressPlugin } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
+Vue.use(ProgressPlugin)</pre></figure>
 
 
 
@@ -1037,8 +1037,7 @@ Vue.use(ProgressPlugin)</pre>
 </div>
 
 
-<script src="../../../js/jquery-3.2.1.slim.min.js"></script> 
-<script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery-slim.min.js"><\/script>')</script> 
+<script src="../../../v4/assets/js/vendor/jquery-slim.min.js"></script>
 <script src="../../../v4/dist/js/popper.min.js"></script> 
 <script src="../../../v4/dist/js/bootstrap.min.js"></script> 
 <script src="../../../v4/assets/js/docs.min.js"></script> 

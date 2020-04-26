@@ -47,7 +47,7 @@
     </ul>
   </div>
   <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="alse"> v2.6.1 </a>
+    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="alse"> v2.12.0 </a>
       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions"> 
         <a class="dropdown-item active" href="../../../bootstrap-vue/docs/4.0/">Latest (4.3.x)</a>
         <a class="dropdown-item" href="/Boot/">v3.3.7</a>
@@ -283,7 +283,7 @@
 <div class="mt-3">Selected: <strong></strong></div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-form-group</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Individual radios"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">b-form-radio</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">"selected"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"some-radios"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"A"</span>&gt;</span>Option A<span class="hljs-tag">&lt;/<span class="hljs-name">b-form-radio</span>&gt;</span>
@@ -302,7 +302,7 @@
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <h2 id="grouped-radios" class="bv-no-focus-ring"><span class="bd-content-title">分组 radios<a class="anchorjs-link" href="#grouped-radios" aria-labelledby="grouped-radios"></a></span></h2>
 <p><code translate="no" class="notranslate text-nowrap">&lt;b-form-radio-group&gt;</code> 中的各个 radio 输入可以通过 <code translate="no" class="notranslate text-nowrap">options</code> 属性或通过手动放置 <code translate="no" class="notranslate text-nowrap">&lt;b-form-radio&gt;</code> 子组件来指定。在 <code translate="no" class="notranslate text-nowrap">&lt;b-form-radio-group&gt;</code> 中使用手动放置的 <code translate="no" class="notranslate text-nowrap">&lt;b-form-radio&gt;</code> 组件时，它们将从 <code translate="no" class="notranslate text-nowrap">&lt;b-form-radio-group&gt;</code> 继承大多数属性和 v-model。</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-form-radio-group notranslate">
@@ -356,7 +356,7 @@
 <div class="mt-3">Selected: <strong>first</strong></div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-form-group</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Radios using options"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">b-form-radio-group</span>
@@ -394,7 +394,7 @@
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <p>请随意混合和匹配 <code translate="no" class="notranslate text-nowrap">&lt;b-form-radio-group&gt;</code> 中的 <code translate="no" class="notranslate text-nowrap">options</code> 属性和 <code translate="no" class="notranslate text-nowrap">&lt;b-form-radio&gt;</code> 。手动放置的 <code translate="no" class="notranslate text-nowrap">&lt;b-form-radio&gt;</code> 输入将显示在由 <code translate="no" class="notranslate text-nowrap">options</code> 属性生成的任何无线电输入 <em>下面</em> 。要使它们显示在由 <code translate="no" class="notranslate text-nowrap">options</code> 生成的输入 <em>上面</em> ，请 <code translate="no" class="notranslate text-nowrap">first</code>【首先】将它们放置在指定的插槽中。</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-form-radio-group-slot notranslate">
 <div>
@@ -428,7 +428,7 @@
 <div class="mt-3">Selected: <strong></strong></div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-form-group</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Radios using options and slots"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">b-form-radio-group</span>
@@ -464,7 +464,7 @@
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <h2 id="radio-group-options-array" class="bv-no-focus-ring"><span class="bd-content-title">radio 组 options 数组<a class="anchorjs-link" href="#radio-group-options-array" aria-labelledby="radio-group-options-array"></a></span></h2>
 <p><code translate="no" class="notranslate text-nowrap">options</code> 可以是字符串或对象的数组。可用字段：</p>
 <ul>
@@ -478,41 +478,41 @@
 
 <!-- eslint-disable no-unused-vars -->
 
-<pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-keyword">const</span> options = [<span class="hljs-string">'A'</span>, <span class="hljs-string">'B'</span>, <span class="hljs-string">'C'</span>, { <span class="hljs-attr">text</span>: <span class="hljs-string">'D'</span>, <span class="hljs-attr">value</span>: { <span class="hljs-attr">d</span>: <span class="hljs-number">1</span> }, <span class="hljs-attr">disabled</span>: <span class="hljs-literal">true</span> }, <span class="hljs-string">'E'</span>, <span class="hljs-string">'F'</span>]</pre>
+<figure class="highlight"><pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-keyword">const</span> options = [<span class="hljs-string">'A'</span>, <span class="hljs-string">'B'</span>, <span class="hljs-string">'C'</span>, { <span class="hljs-attr">text</span>: <span class="hljs-string">'D'</span>, <span class="hljs-attr">value</span>: { <span class="hljs-attr">d</span>: <span class="hljs-number">1</span> }, <span class="hljs-attr">disabled</span>: <span class="hljs-literal">true</span> }, <span class="hljs-string">'E'</span>, <span class="hljs-string">'F'</span>]</pre></figure>
 <p>如果数组条目是字符串，则它将用于生成的 <code translate="no" class="notranslate text-nowrap">value</code> 和 <code translate="no" class="notranslate text-nowrap">text</code> 字段。</p>
 <p>您可以在数组中使用字 strings 和 <a href="#options-as-an-array-of-objects" class="font-weight-bold">objects</a> 进行混合。</p>
 <p>在内部，BootstrapVue 会将上面的数组转换为下面的数组（ <a href="#options-as-an-array-of-objects" class="font-weight-bold">array of objects</a>【对象数组】）格式：</p>
 <!-- eslint-disable no-unused-vars -->
 
-<pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-keyword">const</span> options = [
+<figure class="highlight"><pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-keyword">const</span> options = [
   { <span class="hljs-attr">text</span>: <span class="hljs-string">'A'</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">'A'</span>, <span class="hljs-attr">disabled</span>: <span class="hljs-literal">false</span> },
   { <span class="hljs-attr">text</span>: <span class="hljs-string">'B'</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">'B'</span>, <span class="hljs-attr">disabled</span>: <span class="hljs-literal">false</span> },
   { <span class="hljs-attr">text</span>: <span class="hljs-string">'C'</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">'C'</span>, <span class="hljs-attr">disabled</span>: <span class="hljs-literal">false</span> },
   { <span class="hljs-attr">text</span>: <span class="hljs-string">'D'</span>, <span class="hljs-attr">value</span>: { <span class="hljs-attr">d</span>: <span class="hljs-number">1</span> }, <span class="hljs-attr">disabled</span>: <span class="hljs-literal">true</span> },
   { <span class="hljs-attr">text</span>: <span class="hljs-string">'E'</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">'E'</span>, <span class="hljs-attr">disabled</span>: <span class="hljs-literal">false</span> },
   { <span class="hljs-attr">text</span>: <span class="hljs-string">'F'</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">'F'</span>, <span class="hljs-attr">disabled</span>: <span class="hljs-literal">false</span> }
-]</pre>
+]</pre></figure>
 <h3 id="options-as-an-array-of-objects" class="bv-no-focus-ring"><span class="bd-content-title">选项作为对象数组<a class="anchorjs-link" href="#options-as-an-array-of-objects" aria-labelledby="options-as-an-array-of-objects"></a></span></h3>
 <!-- eslint-disable no-unused-vars -->
 
-<pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-keyword">const</span> options = [
+<figure class="highlight"><pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-keyword">const</span> options = [
   { <span class="hljs-attr">text</span>: <span class="hljs-string">'Item 1'</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">'first'</span> },
   { <span class="hljs-attr">text</span>: <span class="hljs-string">'Item 2'</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">'second'</span> },
   { <span class="hljs-attr">html</span>: <span class="hljs-string">'&lt;b&gt;Item&lt;/b&gt; 3'</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">'third'</span>, <span class="hljs-attr">disabled</span>: <span class="hljs-literal">true</span> },
   { <span class="hljs-attr">text</span>: <span class="hljs-string">'Item 4'</span> },
   { <span class="hljs-attr">text</span>: <span class="hljs-string">'Item 5'</span>, <span class="hljs-attr">value</span>: { <span class="hljs-attr">foo</span>: <span class="hljs-string">'bar'</span>, <span class="hljs-attr">baz</span>: <span class="hljs-literal">true</span> } }
-]</pre>
+]</pre></figure>
 <p>如果缺少 <code translate="no" class="notranslate text-nowrap">value</code> ，则 <code translate="no" class="notranslate text-nowrap">text</code> 将同时用作 <code translate="no" class="notranslate text-nowrap">value</code> 和 <code translate="no" class="notranslate text-nowrap">text</code> 字段。如果使用 <code translate="no" class="notranslate text-nowrap">html</code> 属性，则 <strong>必须</strong> 提供 <code translate="no" class="notranslate text-nowrap">value</code> 属性。</p>
 <p>在内部，BootstrapVue 会将上面的数组转换为下面的数组（ <a href="#options-as-an-array-of-objects" class="font-weight-bold">array of objects</a>【对象数组】）格式：</p>
 <!-- eslint-disable no-unused-vars -->
 
-<pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-keyword">const</span> options = [
+<figure class="highlight"><pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-keyword">const</span> options = [
   { <span class="hljs-attr">text</span>: <span class="hljs-string">'Item 1'</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">'first'</span>, <span class="hljs-attr">disabled</span>: <span class="hljs-literal">false</span> },
   { <span class="hljs-attr">text</span>: <span class="hljs-string">'Item 2'</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">'second'</span>, <span class="hljs-attr">disabled</span>: <span class="hljs-literal">false</span> },
   { <span class="hljs-attr">html</span>: <span class="hljs-string">'&lt;b&gt;Item&lt;/b&gt; 3'</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">'third'</span>, <span class="hljs-attr">disabled</span>: <span class="hljs-literal">true</span> },
   { <span class="hljs-attr">text</span>: <span class="hljs-string">'Item 4'</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">'Item 4'</span>, <span class="hljs-attr">disabled</span>: <span class="hljs-literal">false</span> },
   { <span class="hljs-attr">text</span>: <span class="hljs-string">'Item 5'</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">'E'</span>, <span class="hljs-attr">disabled</span>: <span class="hljs-literal">false</span> }
-]</pre>
+]</pre></figure>
 <h3 id="changing-the-option-field-names" class="bv-no-focus-ring"><span class="bd-content-title">更改选项字段名称<a class="anchorjs-link" href="#changing-the-option-field-names" aria-labelledby="changing-the-option-field-names"></a></span></h3>
 <p>如果要自定义字段属性名称（例如使用 <code translate="no" class="notranslate text-nowrap">name</code> 字段显示 <code translate="no" class="notranslate text-nowrap">text</code> ），可以通过将 <code translate="no" class="notranslate text-nowrap">text-field</code> ，<code translate="no" class="notranslate text-nowrap">html-field</code> ，<code translate="no" class="notranslate text-nowrap">value-field</code> ，和 <code translate="no" class="notranslate text-nowrap">disabled-field</code> 属性设置为包含要使用的属性名称的字符串来轻松更改它们：</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-form-radio-group-options-fields notranslate">
@@ -538,7 +538,7 @@
 <div class="mt-3">Selected: <strong>A</strong></div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-form-radio-group</span>
       <span class="hljs-attr">v-model</span>=<span class="hljs-string">"selected"</span>
@@ -566,7 +566,7 @@
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <h2 id="radio-value-and-v-model" class="bv-no-focus-ring"><span class="bd-content-title">Radio 值和 v-model<a class="anchorjs-link" href="#radio-value-and-v-model" aria-labelledby="radio-value-and-v-model"></a></span></h2>
 <p><code translate="no" class="notranslate text-nowrap">&lt;b-form-radio&gt;</code> 组件默认情况下没有值。您必须通过 <code translate="no" class="notranslate text-nowrap">&lt;b-form-radio&gt;</code> 上的 <code translate="no" class="notranslate text-nowrap">value</code> 属性显式提供一个值。检查 radio 时，此值将发送到 <code translate="no" class="notranslate text-nowrap">v-model</code> 。</p>
 <p><code translate="no" class="notranslate text-nowrap">&lt;b-form-radio&gt;</code> 和 <code translate="no" class="notranslate text-nowrap">&lt;b-form-radio-group&gt;</code> 的 <code translate="no" class="notranslate text-nowrap">v-model</code> 都绑定到 <code translate="no" class="notranslate text-nowrap">checked</code> 属性。要预先检查 radio ，您必须将 <code translate="no" class="notranslate text-nowrap">v-model</code> 值设置为 radio 的值之一（即必须与 radio 的 <code translate="no" class="notranslate text-nowrap">value</code> 属性之一上指定的值匹配）。请勿直接使用 <code translate="no" class="notranslate text-nowrap">checked</code> 属性。radio 组中的每个 radio <em>必须</em> 具有唯一的值。</p>
@@ -616,7 +616,7 @@
 <div class="mt-3">Selected: <strong>first</strong></div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-form-group</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Inline radios (default)"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">b-form-radio-group</span>
@@ -652,7 +652,7 @@
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <h2 id="control-sizing" class="bv-no-focus-ring"><span class="bd-content-title">控制尺寸<a class="anchorjs-link" href="#control-sizing" aria-labelledby="control-sizing"></a></span></h2>
 <p>使用 <code translate="no" class="notranslate text-nowrap">size</code> 属性控制收音机的大小。默认大小为中。支持的大小值为 <code translate="no" class="notranslate text-nowrap">sm</code>（小）和 <code translate="no" class="notranslate text-nowrap">lg</code>（大）。</p>
 <div translate="translate" class="bd-example vue-example vue-example-form-radio-sizes notranslate">
@@ -671,11 +671,11 @@
 </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-form-radio</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"radio-size"</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"sm"</span>&gt;</span>Small<span class="hljs-tag">&lt;/<span class="hljs-name">b-form-radio</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-form-radio</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"radio-size"</span>&gt;</span>Default<span class="hljs-tag">&lt;/<span class="hljs-name">b-form-radio</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-form-radio</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"radio-size"</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"lg"</span>&gt;</span>Large<span class="hljs-tag">&lt;/<span class="hljs-name">b-form-radio</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre></figure>
 <p>可以在各个 <code translate="no" class="notranslate text-nowrap">&lt;b-form-radio&gt;</code> 组件上设置大小，也可以继承 <code translate="no" class="notranslate text-nowrap">&lt;b-form-radio-group&gt;</code> 的 <code translate="no" class="notranslate text-nowrap">size</code> 设置。</p>
 <p><strong>注意：</strong> Bootstrap v4.x 本身不支持自定义 radio 控件的大小。但是，BootstrapVue 包含自定义SCSS / CSS，它增加了对自定义 radio 大小的支持。</p>
 <h2 id="button-style-radios" class="bv-no-focus-ring"><span class="bd-content-title">按钮式 radio<a class="anchorjs-link" href="#button-style-radios" aria-labelledby="button-style-radios"></a></span></h2>
@@ -743,7 +743,7 @@
 </fieldset>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-form-group</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Button style radios"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">b-form-radio-group</span>
@@ -794,7 +794,7 @@
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <h2 id="non-custom-style-radio-inputs-plain" class="bv-no-focus-ring"><span class="bd-content-title">非定制样式的 radio 输入（普通）<a class="anchorjs-link" href="#non-custom-style-radio-inputs-plain" aria-labelledby="non-custom-style-radio-inputs-plain"></a></span></h2>
 <p>您可以通过设置 <code translate="no" class="notranslate text-nowrap">plain</code> 属性使 <code translate="no" class="notranslate text-nowrap">&lt;b-form-radio&gt;</code> 和 <code translate="no" class="notranslate text-nowrap">&lt;b-form-radio-group&gt;</code> 呈现浏览器本机样式的单选输入。</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-form-radio-plain notranslate">
@@ -839,7 +839,7 @@
 </fieldset>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-form-group</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Plain inline radios"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">b-form-radio-group</span>
@@ -875,7 +875,7 @@
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <p><strong>注意：</strong> 如果设置了 <code translate="no" class="notranslate text-nowrap">buttons</code>/<code translate="no" class="notranslate text-nowrap">button</code> ，则 <code translate="no" class="notranslate text-nowrap">plain</code> 将不起作用。</p>
 <h2 id="required-constraint" class="bv-no-focus-ring"><span class="bd-content-title">必需的约束<a class="anchorjs-link" href="#required-constraint" aria-labelledby="required-constraint"></a></span></h2>
 <p>当使用单独的 <code translate="no" class="notranslate text-nowrap">&lt;b-form-radio&gt;</code> 组件(不在 <code translate="no" class="notranslate text-nowrap">&lt;b-form-radio-group&gt;</code> 中)，并且希望表单中 <code translate="no" class="notranslate text-nowrap">required</code>【需要】radio 时，<strong>必须</strong> 在每个 <code translate="no" class="notranslate text-nowrap">&lt;b-form-radio&gt;</code> 上提供一个 <code translate="no" class="notranslate text-nowrap">name</code> ，以便所需的约束能够工作。绑定到同一 <code translate="no" class="notranslate text-nowrap">v-model</code> 的所有 <code translate="no" class="notranslate text-nowrap">&lt;b-form-radio&gt;</code> 组件 <strong>必须</strong> 具有相同的 <code translate="no" class="notranslate text-nowrap">name</code> 。</p>
@@ -913,7 +913,7 @@
 </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-form-radio-group</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">"value"</span> <span class="hljs-attr">:options</span>=<span class="hljs-string">"options"</span> <span class="hljs-attr">:state</span>=<span class="hljs-string">"state"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"radio-validation"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">b-form-invalid-feedback</span> <span class="hljs-attr">:state</span>=<span class="hljs-string">"state"</span>&gt;</span>Please select one<span class="hljs-tag">&lt;/<span class="hljs-name">b-form-invalid-feedback</span>&gt;</span>
@@ -940,7 +940,7 @@
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <h3 id="conveying-contextual-validation-state-to-assistive-technologies-and-colorblind-users" class="bv-no-focus-ring"><span class="bd-content-title">向辅助技术和色盲用户传达上下文验证状态<a class="anchorjs-link" href="#conveying-contextual-validation-state-to-assistive-technologies-and-colorblind-users" aria-labelledby="conveying-contextual-validation-state-to-assistive-technologies-and-colorblind-users"></a></span></h3>
 <p>使用这些上下文状态来表示表单控件的状态仅提供基于颜色的可视指示，而不会将其传达给辅助技术的用户（例如屏幕阅读器）或色盲用户。</p>
 <p>确保还提供了备用状态指示。例如，您可以在表单控件的 <code translate="no" class="notranslate text-nowrap">&lt;label&gt;</code> 文本本身中包含有关状态的提示，或者通过提供其他帮助文本块（即 <code translate="no" class="notranslate text-nowrap">&lt;b-form-invalid-feedback&gt;</code> ）。专门针对辅助技术，还可以为无效的表单控件分配一个 <code translate="no" class="notranslate text-nowrap">aria-invalid="true"</code> 属性（请参见下文）。</p>
@@ -1471,8 +1471,8 @@
 </table>
 </div>
 <p><strong>示例：</strong></p>
-<pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { BFormRadioGroup } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
-Vue.component(<span class="hljs-string">'b-form-radio-group'</span>, BFormRadioGroup)</pre>
+<figure class="highlight"><pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { BFormRadioGroup } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
+Vue.component(<span class="hljs-string">'b-form-radio-group'</span>, BFormRadioGroup)</pre></figure>
 
 <h3 id="importing-as-a-plugin" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title"> 导入为Vue.js插件 <a href="../../../bootstrap-vue/docs/components/form-radio#importing-as-a-plugin" class="anchorjs-link" aria-labelledby="importing-as-a-plugin" target="_self"></a></span></h3>
 <p> 该插件包括上面列出的所有单个组件。插件还包括任何组件别名。 </p>
@@ -1499,8 +1499,8 @@ Vue.component(<span class="hljs-string">'b-form-radio-group'</span>, BFormRadioG
 </div>
 
 <p><strong>示例：</strong></p>
-<pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { FormRadioPlugin } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
-Vue.use(FormRadioPlugin)</pre>
+<figure class="highlight"><pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { FormRadioPlugin } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
+Vue.use(FormRadioPlugin)</pre></figure>
 
 
 
@@ -1514,8 +1514,7 @@ Vue.use(FormRadioPlugin)</pre>
 </div>
 
 
-<script src="../../../js/jquery-3.2.1.slim.min.js"></script> 
-<script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery-slim.min.js"><\/script>')</script> 
+<script src="../../../v4/assets/js/vendor/jquery-slim.min.js"></script>
 <script src="../../../v4/dist/js/popper.min.js"></script> 
 <script src="../../../v4/dist/js/bootstrap.min.js"></script> 
 <script src="../../../v4/assets/js/docs.min.js"></script> 

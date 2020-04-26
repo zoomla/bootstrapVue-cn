@@ -47,7 +47,7 @@
     </ul>
   </div>
   <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="alse"> v2.6.1 </a>
+    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="alse"> v2.12.0 </a>
       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions"> 
         <a class="dropdown-item active" href="../../../bootstrap-vue/docs/4.0/">Latest (4.3.x)</a>
         <a class="dropdown-item" href="/Boot/">v3.3.7</a>
@@ -290,7 +290,7 @@
 <p>Value: ''</p>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"example-datepicker"</span>&gt;</span>Choose a date<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-form-datepicker</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"example-datepicker"</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">"value"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-2"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-datepicker</span>&gt;</span>
@@ -306,7 +306,7 @@
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <p><code translate="no" class="notranslate text-nowrap">&lt;b-form-datepicker&gt;</code> 支持 <a href="../../../bootstrap-vue/docs/components/calendar" class="font-weight-bold"><code translate="no" class="notranslate text-nowrap">&lt;b-calendar&gt;</code></a> 上可用的许多道具，以及 <a href="../../../bootstrap-vue/docs/components/dropdown" class="font-weight-bold"><code translate="no" class="notranslate text-nowrap">&lt;b-dropdown&gt;</code></a> 上可用的一些属性 。</p>
 <h2 id="v-model-return-value" class="bv-no-focus-ring"><span class="bd-content-title"><code translate="no" class="notranslate text-nowrap">v-model</code> 返回值<a class="anchorjs-link" href="#v-model-return-value" aria-labelledby="v-model-return-value"></a></span></h2>
 <p>默认情况下，<code translate="no" class="notranslate text-nowrap">&lt;b-form-datepicker&gt;</code> 以 <code translate="no" class="notranslate text-nowrap">YYYY-MM-DD</code> 格式返回日期作为字符串，该格式与本机浏览器 <code translate="no" class="notranslate text-nowrap">&lt;input type="date"&gt;</code> 控件返回的格式相同。您可以让 <code translate="no" class="notranslate text-nowrap">&lt;b-form-datepicker&gt;</code> 返回 <code translate="no" class="notranslate text-nowrap">Date</code> 对象（没有时间部分）作为 <code translate="no" class="notranslate text-nowrap">v-model</code> 值，而不是通过设置 <code translate="no" class="notranslate text-nowrap">value-as-date</code> 属性。</p>
@@ -355,7 +355,7 @@
 </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-form-group</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Select date picker interactive state"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">b-form-radio-group</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">"state"</span> <span class="hljs-attr">aria-controls</span>=<span class="hljs-string">"ex-disabled-readonly"</span>&gt;</span>
@@ -384,7 +384,7 @@
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <h2 id="date-constraints" class="bv-no-focus-ring"><span class="bd-content-title">日期限制<a class="anchorjs-link" href="#date-constraints" aria-labelledby="date-constraints"></a></span></h2>
 <h3 id="minimum-and-maximum-dates" class="bv-no-focus-ring"><span class="bd-content-title">最小和最大日期<a class="anchorjs-link" href="#minimum-and-maximum-dates" aria-labelledby="minimum-and-maximum-dates"></a></span></h3>
 <p>通过 <code translate="no" class="notranslate text-nowrap">min</code> 和 <code translate="no" class="notranslate text-nowrap">max</code> 属性限制日历范围。 道具接受 <code translate="no" class="notranslate text-nowrap">YYYY-MM-DD</code> 格式的日期字符串或 <code translate="no" class="notranslate text-nowrap">Date</code> 对象。</p>
@@ -407,7 +407,7 @@
 </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-form-datepicker</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">"value"</span> <span class="hljs-attr">:min</span>=<span class="hljs-string">"min"</span> <span class="hljs-attr">:max</span>=<span class="hljs-string">"max"</span> <span class="hljs-attr">locale</span>=<span class="hljs-string">"en"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-datepicker</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -434,7 +434,7 @@
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <h3 id="disabling-dates" class="bv-no-focus-ring"><span class="bd-content-title">禁用日期<a class="anchorjs-link" href="#disabling-dates" aria-labelledby="disabling-dates"></a></span></h3>
 <p>如果需要在日期选择器中禁用特定日期，请指定对 <code translate="no" class="notranslate text-nowrap">date-disabled-fn</code> 道具的函数引用。该函数传递两个参数：</p>
 <ul>
@@ -461,7 +461,7 @@
 </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-form-datepicker</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">"value"</span> <span class="hljs-attr">:date-disabled-fn</span>=<span class="hljs-string">"dateDisabled"</span> <span class="hljs-attr">locale</span>=<span class="hljs-string">"en"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-datepicker</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -485,7 +485,7 @@
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <p>请注意，在 <code translate="no" class="notranslate text-nowrap">date-disabled-fn</code> 之前，首先评估 <code translate="no" class="notranslate text-nowrap">min</code> 和 <code translate="no" class="notranslate text-nowrap">max</code> 日期约束。</p>
 <h2 id="validation-states" class="bv-no-focus-ring"><span class="bd-content-title">验证状态<a class="anchorjs-link" href="#validation-states" aria-labelledby="validation-states"></a></span></h2>
 <p><code translate="no" class="notranslate text-nowrap">&lt;b-form-datepicker&gt;</code> 通过布尔 <code translate="no" class="notranslate text-nowrap">state</code> 属性支持无效和有效的样式。将 <code translate="no" class="notranslate text-nowrap">state</code> 设置为 boolean <code translate="no" class="notranslate text-nowrap">false</code> 会将输入设置为无效，而将其设置为 boolean <code translate="no" class="notranslate text-nowrap">true</code> 会将其设置为有效。将 <code translate="no" class="notranslate text-nowrap">state</code> 设置为 <code translate="no" class="notranslate text-nowrap">null</code> 不会显示任何验证状态样式（默认）。</p>
@@ -525,6 +525,7 @@
 </div>
 </div>
 </div>
+<figure class="highlight">
 <pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"datepicker-invalid"</span>&gt;</span>Choose a date (invalid style)<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
@@ -532,7 +533,7 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"datepicker-valid"</span>&gt;</span>Choose a date (valid style)<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-form-datepicker</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"datepicker-valid"</span> <span class="hljs-attr">:state</span>=<span class="hljs-string">"true"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-datepicker</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span></pre></figure>
 <p>请注意，本机浏览器验证 <em>不</em> 适用于 <code translate="no" class="notranslate text-nowrap">&lt;b-form-datepicker&gt;</code> 。</p>
 <h2 id="styling" class="bv-no-focus-ring"><span class="bd-content-title">式样<a class="anchorjs-link" href="#styling" aria-labelledby="styling"></a></span></h2>
 <h3 id="variants" class="bv-no-focus-ring"><span class="bd-content-title">变量<a class="anchorjs-link" href="#variants" aria-labelledby="variants"></a></span></h3>
@@ -577,14 +578,14 @@
 </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"datepicker-sm"</span>&gt;</span>Small date picker<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-form-datepicker</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"datepicker-sm"</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"sm"</span> <span class="hljs-attr">local</span>=<span class="hljs-string">"en"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-2"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-datepicker</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"datepicker-lg"</span>&gt;</span>Large date picker<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-form-datepicker</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"datepicker-lg"</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"lg"</span> <span class="hljs-attr">local</span>=<span class="hljs-string">"en"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-datepicker</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span></pre></figure>
 <h3 id="placeholder" class="bv-no-focus-ring"><span class="bd-content-title">占位符<a class="anchorjs-link" href="#placeholder" aria-labelledby="placeholder"></a></span></h3>
 <p>如果未选择日期，则通过 <code translate="no" class="notranslate text-nowrap">placeholder</code>【占位符】属性将自定义占位符文本添加到控件中。如果未提供占位符，则使用 <code translate="no" class="notranslate text-nowrap">label-no-date-selected</code> 属性的值。</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-form-datepicker-placeholder notranslate">
@@ -607,12 +608,12 @@
 </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"datepicker-placeholder"</span>&gt;</span>Date picker with placeholder<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-form-datepicker</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"datepicker-placeholder"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Choose a date"</span> <span class="hljs-attr">local</span>=<span class="hljs-string">"en"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-datepicker</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span></pre></figure>
 <h3 id="optional-controls" class="bv-no-focus-ring"><span class="bd-content-title">可选控件<a class="anchorjs-link" href="#optional-controls" aria-labelledby="optional-controls"></a></span></h3>
 <p>通过 <code translate="no" class="notranslate text-nowrap">today-button</code> ，<code translate="no" class="notranslate text-nowrap">reset-button</code> 和 <code translate="no" class="notranslate text-nowrap">close-button</code> ，将可选的控制按钮添加到日历弹出窗口的底部。</p>
 <ul>
@@ -641,7 +642,7 @@
 </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"datepicker-buttons"</span>&gt;</span>Date picker with optional footer buttons<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-form-datepicker</span>
@@ -652,7 +653,7 @@
       <span class="hljs-attr">locale</span>=<span class="hljs-string">"en"</span>
     &gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-datepicker</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span></pre></figure>
 <p>可选按钮的文本可以通过 <code translate="no" class="notranslate text-nowrap">label-today-button</code> ，<code translate="no" class="notranslate text-nowrap">label-reset-button</code> ，和
  <code translate="no" class="notranslate text-nowrap">label-close-button</code> 道具进行设置。由于页脚部分的宽度有限，建议使这些标签简短。</p>
 <h3 id="dropdown-placement" class="bv-no-focus-ring"><span class="bd-content-title">下拉位置<a class="anchorjs-link" href="#dropdown-placement" aria-labelledby="dropdown-placement"></a></span></h3>
@@ -698,7 +699,7 @@
 <p>Value: <b>''</b></p>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"example-locales"</span>&gt;</span>Locale:<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-form-select</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"example-locales"</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">"locale"</span> <span class="hljs-attr">:options</span>=<span class="hljs-string">"locales"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-2"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-select</span>&gt;</span>
@@ -781,7 +782,7 @@
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <p>您可以侦听 <code translate="no" class="notranslate text-nowrap">context</code> 事件，以确定日历已解决的语言环境和方向性。</p>
 <p>有关更多详细信息，请参考 <a href="../../../bootstrap-vue/docs/components/calendar#internationalization" class="font-weight-bold"><code translate="no" class="notranslate text-nowrap">&lt;b-calendar&gt;</code></a> 文档。</p>
 <h2 id="accessibility" class="bv-no-focus-ring"><span class="bd-content-title">辅助功能<a class="anchorjs-link" href="#accessibility" aria-labelledby="accessibility"></a></span></h2>
@@ -1300,8 +1301,8 @@
 </table>
 </div>
 <p><strong>示例：</strong></p>
-<pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { BFormDatepicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
-Vue.component(<span class="hljs-string">'b-form-datepicker'</span>, BFormDatepicker)</pre>
+<figure class="highlight"><pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { BFormDatepicker } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
+Vue.component(<span class="hljs-string">'b-form-datepicker'</span>, BFormDatepicker)</pre></figure>
 </article>
 <!---->
 <article class="bd-content">
@@ -1330,8 +1331,8 @@ Vue.component(<span class="hljs-string">'b-form-datepicker'</span>, BFormDatepic
 </div>
 <!---->
 <p><strong>示例：</strong></p>
-<pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { FormDatepickerPlugin } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
-Vue.use(FormDatepickerPlugin)</pre>
+<figure class="highlight"><pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { FormDatepickerPlugin } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
+Vue.use(FormDatepickerPlugin)</pre></figure>
 </article>
 
 
@@ -1347,8 +1348,7 @@ Vue.use(FormDatepickerPlugin)</pre>
 </div>
 
 
-<script src="../../../js/jquery-3.2.1.slim.min.js"></script> 
-<script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery-slim.min.js"><\/script>')</script> 
+<script src="../../../v4/assets/js/vendor/jquery-slim.min.js"></script>
 <script src="../../../v4/dist/js/popper.min.js"></script> 
 <script src="../../../v4/dist/js/bootstrap.min.js"></script> 
 <script src="../../../v4/assets/js/docs.min.js"></script> 

@@ -47,7 +47,7 @@
     </ul>
   </div>
   <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="alse"> v2.6.1 </a>
+    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="alse"> v2.12.0 </a>
       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions"> 
         <a class="dropdown-item active" href="../../../bootstrap-vue/docs/4.0/">Latest (4.3.x)</a>
         <a class="dropdown-item" href="/Boot/">v3.3.7</a>
@@ -296,7 +296,7 @@
 <button id="popover-target-1" type="button" class="btn btn-secondary"> Hover Me </button>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-center my-3"</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-center my-3"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">v-b-popover.hover.top</span>=<span class="hljs-string">"'I am popover directive content!'"</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Popover Title"</span>&gt;</span>
     Hover Me
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
@@ -308,7 +308,7 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">template</span> <span class="hljs-attr">v-slot:title</span>&gt;</span>Popover Title<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
     I am popover <span class="hljs-tag">&lt;<span class="hljs-name">b</span>&gt;</span>component<span class="hljs-tag">&lt;/<span class="hljs-name">b</span>&gt;</span> content!
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-popover</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre></figure>
 <h2 id="overview" class="bv-no-focus-ring"><span class="bd-content-title">概述<a class="anchorjs-link" href="#overview" aria-labelledby="overview"></a></span></h2>
 <p>使用popover组件时需要知道的事项：</p>
 <ul>
@@ -451,7 +451,7 @@
 <p>
   下面将生成一个看起来像按钮的<code translate="no" class="notranslate text-nowrap">&lt;a&gt;</code>：
 </p>
-<pre class="hljs html text-monospace p-2 notranslate" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-button</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-button</span>
   <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>
   <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"0"</span>
   <span class="hljs-attr">v-b-popover.focus</span>=<span class="hljs-string">"'Popover content'"</span>
@@ -465,7 +465,7 @@
 <span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">b-popover</span> <span class="hljs-attr">target</span>=<span class="hljs-string">"link-button"</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Popover title"</span> <span class="hljs-attr">triggers</span>=<span class="hljs-string">"focus"</span>&gt;</span>
   Popover content
-<span class="hljs-tag">&lt;/<span class="hljs-name">b-popover</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b-popover</span>&gt;</span></pre></figure>
 <h3 id="dismiss-on-next-click-self-dismissing" class="bv-no-focus-ring"><span class="bd-content-title">下次单击时关闭（自行关闭）<a class="anchorjs-link" href="#dismiss-on-next-click-self-dismissing" aria-labelledby="dismiss-on-next-click-self-dismissing"></a></span></h3>
 <p>
   使用<code translate="no" class="notranslate text-nowrap">focus</code>触发器本身在用户下一次单击时关闭弹出窗口。
@@ -531,7 +531,7 @@
 </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">fluid</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">h5</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"my-3"</span>&gt;</span>Placement<span class="hljs-tag">&lt;/<span class="hljs-name">h5</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span>&gt;</span>
@@ -597,7 +597,7 @@
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <h3 id="component-options-via-props" class="bv-no-focus-ring"><span class="bd-content-title">通过属性的组件选项<a class="anchorjs-link" href="#component-options-via-props" aria-labelledby="component-options-via-props"></a></span></h3>
 <div class="table-responsive-sm">
 <table class="b-table table table-bordered table-striped bv-docs-table">
@@ -745,13 +745,13 @@
 <div translate="translate" class="bd-example vue-example vue-example-b-popover-variant notranslate">
 <div class="text-center"><a id="popover-button-variant" tabindex="0" role="button" target="_self" href="#" class="btn btn-secondary">Button</a> </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-center"</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-center"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"popover-button-variant"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"0"</span>&gt;</span>Button<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-popover</span> <span class="hljs-attr">target</span>=<span class="hljs-string">"popover-button-variant"</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"danger"</span> <span class="hljs-attr">triggers</span>=<span class="hljs-string">"focus"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">template</span> <span class="hljs-attr">v-slot:title</span>&gt;</span>Danger!<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
     Danger variant popover
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-popover</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre></figure>
 <p>
   引导默认的主题变量有：<code translate="no" class="notranslate text-nowrap">danger</code>, 
   <code translate="no" class="notranslate text-nowrap">warning</code>,
@@ -766,13 +766,13 @@
 <p>
   通过使用<code translate="no" class="notranslate text-nowrap">自定义类</code>属性，可以将自定义类应用于popover外部包装器<code translate="no" class="notranslate text-nowrap">&lt;div&gt;</code> ：
 </p>
-<pre class="hljs html text-monospace p-2 notranslate" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-center"</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-center"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"my-button"</span>&gt;</span>Button<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-popover</span> <span class="hljs-attr">target</span>=<span class="hljs-string">"my-button"</span> <span class="hljs-attr">custom-class</span>=<span class="hljs-string">"my-popover-class"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">template</span> <span class="hljs-attr">v-slot:title</span>&gt;</span>Popover Title<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
     Popover content
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-popover</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre></figure>
 <p>
   <code translate="no" class="notranslate text-nowrap">variant</code>和
    <code translate="no" class="notranslate text-nowrap">custom-class</code>是被动的，可以在popover打开时更改。
@@ -795,7 +795,7 @@
 </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"d-flex flex-column text-md-center"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"p-2"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"popover-button-sync"</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"primary"</span>&gt;</span>I have a popover<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
@@ -819,7 +819,7 @@
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <p>
   通过引用向popover提交<code translate="no" class="notranslate text-nowrap">'打卡'</code> 和<code translate="no" class="notranslate text-nowrap">'关闭'</code>事件也会影响程序控制。
 </p>
@@ -834,7 +834,7 @@
 </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"d-flex flex-column text-md-center"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"p-2"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"popover-button-event"</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"primary"</span>&gt;</span>I have a popover<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
@@ -862,7 +862,7 @@
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <p>
   要使弹出窗口显示在初始渲染中，只需在<code translate="no" class="notranslate text-nowrap">&lt;b-popover&gt;</code>上添加显示道具：
 </p>
@@ -871,13 +871,13 @@
 <button id="popover-button-open" type="button" class="btn btn-primary" aria-describedby="__bv_popover_1321__">Button</button>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-center"</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-center"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"popover-button-open"</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"primary"</span>&gt;</span>Button<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
 
   <span class="hljs-tag">&lt;<span class="hljs-name">b-popover</span> <span class="hljs-attr">show</span> <span class="hljs-attr">target</span>=<span class="hljs-string">"popover-button-open"</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Popover"</span>&gt;</span>
     I start <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>open<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-popover</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre></figure>
 <p>通过“show”属性或事件调用以编程方式打开的popover只能以编程方式关闭。内置触发器将无法充分工作，因为触发器事件将尝试打开popover，即使它已经打开。</p>
 <p>在下面的示例中，当第一个弹出窗口用“打开”事件打开时，需要单击两次按钮才能将其关闭。玩下面的演示来理解这一点。当您希望优雅地处理Popover组件的编程控制和用户交互触发器时，应该禁用内置触发器，并按照第二个Popover演示的那样处理自己的控制。</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-popover-advanced-caution notranslate">
@@ -895,7 +895,7 @@
 </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"d-flex flex-column text-md-center"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"p-2"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"popover-manual-1"</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"primary"</span> <span class="hljs-attr">ref</span>=<span class="hljs-string">"button"</span>&gt;</span>Unreliable<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
@@ -944,7 +944,7 @@
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <p>
   您还可以使用$root事件触发弹出窗口的显示和隐藏。有关详细信息，请参阅下面的“通过<code translate="no" class="notranslate text-nowrap">$root</code>事件隐藏和显示弹出窗口”部分。
 </p>
@@ -966,7 +966,7 @@
 </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"d-flex flex-column text-md-center"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"p-2"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"popover-button-disable"</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"primary"</span>&gt;</span>I have a popover<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
@@ -1009,7 +1009,7 @@
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <p>
   通过引用向popover提交<code translate="no" class="notranslate text-nowrap">'enable'</code>和<code translate="no" class="notranslate text-nowrap">'disable'</code>事件也会影响编程控制。
 </p>
@@ -1024,7 +1024,7 @@
 </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"d-flex flex-column text-md-center"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"p-2"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"popover-button-disable-event"</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"primary"</span>&gt;</span>I have a popover<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
@@ -1052,7 +1052,7 @@
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <p>
   禁用后，可以通过编程方式（通过<code translate="no" class="notranslate text-nowrap">show</code> prop、methods或events）打开弹出窗口
 </p>
@@ -1084,7 +1084,7 @@
 </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">fluid</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-center"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">md</span>=<span class="hljs-string">"3"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"py-3"</span>&gt;</span>
@@ -1104,7 +1104,7 @@
       <span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre></figure>
 <p>
   有关指令用法的详细信息，请参阅<a href="../../../bootstrap-vue/docs/directives/popover" class="font-weight-bold"><code translate="no" class="notranslate text-nowrap">v-b-popover</code> 指令</a>文档。
 </p>
@@ -1138,7 +1138,7 @@
 </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"my-container"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"my-3"</span>&gt;</span>
       <span class="hljs-comment">&lt;!-- Our triggering (target) element --&gt;</span>
@@ -1303,7 +1303,7 @@
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <h2 id="global-root-instance-events" class="bv-no-focus-ring"><span class="bd-content-title">'全局'$ root实例事件<a class="anchorjs-link" href="#global-root-instance-events" aria-labelledby="global-root-instance-events"></a></span></h2>
 <p>
   使用<code translate="no" class="notranslate text-nowrap">$root</code>实例，可以在组件之外的某个地方发出和侦听事件，
@@ -1315,18 +1315,18 @@
 <p>
   通过在$root上发出<code translate="no" class="notranslate text-nowrap">bv::hide::popover</code>事件，可以关闭（隐藏）<strong>所有打开的弹出窗口</strong>：
 </p>
-<pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-keyword">this</span>.$root.$emit(<span class="hljs-string">'bv::hide::popover'</span>)</pre>
+<figure class="highlight"><pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-keyword">this</span>.$root.$emit(<span class="hljs-string">'bv::hide::popover'</span>)</pre></figure>
 <p>
   要关闭<strong>特定的popover</strong>，请将触发器元素的<code translate="no" class="notranslate text-nowrap">id</code>或popover的<code translate="no" class="notranslate text-nowrap">id</code>
   （如果是通过<code translate="no" class="notranslate text-nowrap">id</code> 属性提供的）作为第一个参数传递：
 </p>
-<pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-keyword">this</span>.$root.$emit(<span class="hljs-string">'bv::hide::popover'</span>, <span class="hljs-string">'my-trigger-button-id'</span>)</pre>
+<figure class="highlight"><pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-keyword">this</span>.$root.$emit(<span class="hljs-string">'bv::hide::popover'</span>, <span class="hljs-string">'my-trigger-button-id'</span>)</pre></figure>
 <p>
   要打开（显示） <strong>特定的popover</strong>，请在发出<code translate="no" class="notranslate text-nowrap">bv::show::popover</code>
   事件时将触发器元素的<code translate="no" class="notranslate text-nowrap">id</code>或popover的<code translate="no" class="notranslate text-nowrap">id</code>
   （如果是通过<code translate="no" class="notranslate text-nowrap">id</code>属性提供的）作为第一个参数传递：
 </p>
-<pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-keyword">this</span>.$root.$emit(<span class="hljs-string">'bv::show::popover'</span>, <span class="hljs-string">'my-trigger-button-id'</span>)</pre>
+<figure class="highlight"><pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-keyword">this</span>.$root.$emit(<span class="hljs-string">'bv::show::popover'</span>, <span class="hljs-string">'my-trigger-button-id'</span>)</pre></figure>
 <p>
   要同时打开所有弹出窗口，请在发出<code translate="no" class="notranslate text-nowrap">bv::show::popover</code>事件时省略<code translate="no" class="notranslate text-nowrap">id</code>参数。
 </p>
@@ -1336,19 +1336,19 @@
 <p>
   您可以通过在$root上发出<code translate="no" class="notranslate text-nowrap">bv::disable::popover</code>事件来禁用<strong>所有</strong>弹出窗口：
 </p>
-<pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-keyword">this</span>.$root.$emit(<span class="hljs-string">'bv::disable::popover'</span>)</pre>
+<figure class="highlight"><pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-keyword">this</span>.$root.$emit(<span class="hljs-string">'bv::disable::popover'</span>)</pre></figure>
 <p>
   要禁用<strong>特定的popover</strong>，请将触发器元素的<code translate="no" class="notranslate text-nowrap">id</code>
   或popover的<code translate="no" class="notranslate text-nowrap">id</code>
   （如果是通过<code translate="no" class="notranslate text-nowrap">id</code>属性提供的）作为第一个参数传递：
 </p>
-<pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-keyword">this</span>.$root.$emit(<span class="hljs-string">'bv::disable::popover'</span>, <span class="hljs-string">'my-trigger-button-id'</span>)</pre>
+<figure class="highlight"><pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-keyword">this</span>.$root.$emit(<span class="hljs-string">'bv::disable::popover'</span>, <span class="hljs-string">'my-trigger-button-id'</span>)</pre></figure>
 <p>
   要启用<strong>特定的popover</strong>，请在发出<code translate="no" class="notranslate text-nowrap">bv::enable::popover</code>事件时将触发器元素的
   <code translate="no" class="notranslate text-nowrap">id</code>或popover的<code translate="no" class="notranslate text-nowrap">id</code>
   （如果是通过<code translate="no" class="notranslate text-nowrap">id</code>属性提供的）作为第一个参数传递：
 </p>
-<pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-keyword">this</span>.$root.$emit(<span class="hljs-string">'bv::enable::popover'</span>, <span class="hljs-string">'my-trigger-button-id'</span>)</pre>
+<figure class="highlight"><pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-keyword">this</span>.$root.$emit(<span class="hljs-string">'bv::enable::popover'</span>, <span class="hljs-string">'my-trigger-button-id'</span>)</pre></figure>
 <p>
   要同时启用所有弹出窗口，请在发出<code translate="no" class="notranslate text-nowrap">bv::enable::popover</code>事件时省略<code translate="no" class="notranslate text-nowrap">id</code>参数。
 </p>
@@ -1356,13 +1356,13 @@
 <p><strong>注意:</strong> <strong>触发器元素</strong>必须存在于DOM中，才能启用或禁用popover。</p>
 <h3 id="listening-to-popover-changes-via-root-events" class="bv-no-focus-ring"><span class="bd-content-title">通过$ root事件监听弹出窗口更改<a class="anchorjs-link" href="#listening-to-popover-changes-via-root-events" aria-labelledby="listening-to-popover-changes-via-root-events"></a></span></h3>
 <p>要监听任何弹出窗口，请使用：</p>
-<pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+<figure class="highlight"><pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
   mounted() {
     <span class="hljs-keyword">this</span>.$root.$on(<span class="hljs-string">'bv::popover::show'</span>, bvEventObj =&gt; {
       <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'bvEventObj:'</span>, bvEventObj)
     })
   }
-}</pre>
+}</pre></figure>
 <p>
   有关事件的完整列表，请参阅文档的<a href="../../../bootstrap-vue/docs/components/popover#component-reference" class="font-weight-bold">事件</a>部分。
 </p>
@@ -1720,8 +1720,8 @@
 </table>
 </div>
 <p><strong>示例：</strong></p>
-<pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { BPopover } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
-Vue.component(<span class="hljs-string">'b-popover'</span>, BPopover)</pre>
+<figure class="highlight"><pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { BPopover } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
+Vue.component(<span class="hljs-string">'b-popover'</span>, BPopover)</pre></figure>
 </article>
 <article class="bd-content">
 <h3 id="importing-as-a-plugin" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title"> 导入为Vue.js插件 <a href="../../../bootstrap-vue/docs/components/popover#importing-as-a-plugin" class="anchorjs-link" aria-labelledby="importing-as-a-plugin" target="_self"></a></span></h3>
@@ -1747,8 +1747,8 @@ Vue.component(<span class="hljs-string">'b-popover'</span>, BPopover)</pre>
 <li><code translate="translate" class="notranslate">VBPopoverPlugin</code></li>
 </ul>
 <p><strong>示例：</strong></p>
-<pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { PopoverPlugin } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
-Vue.use(PopoverPlugin)</pre>
+<figure class="highlight"><pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { PopoverPlugin } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
+Vue.use(PopoverPlugin)</pre></figure>
 
 
 
@@ -1760,8 +1760,7 @@ Vue.use(PopoverPlugin)</pre>
 </div>
 
 
-<script src="../../../js/jquery-3.2.1.slim.min.js"></script> 
-<script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery-slim.min.js"><\/script>')</script> 
+<script src="../../../v4/assets/js/vendor/jquery-slim.min.js"></script>
 <script src="../../../v4/dist/js/popper.min.js"></script> 
 <script src="../../../v4/dist/js/bootstrap.min.js"></script> 
 <script src="../../../v4/assets/js/docs.min.js"></script> 

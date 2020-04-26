@@ -47,7 +47,7 @@
     </ul>
   </div>
   <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="alse"> v2.6.1 </a>
+    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="alse"> v2.12.0 </a>
       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions"> 
         <a class="dropdown-item active" href="../../../bootstrap-vue/docs/4.0/">Latest (4.3.x)</a>
         <a class="dropdown-item" href="/Boot/">v3.3.7</a>
@@ -272,6 +272,7 @@
 <button type="button" class="btn m-1 btn-info"> Show dismissible alert (hidden) </button>
 </div>
 </div>
+<figure class="highlight">
 <pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-alert</span> <span class="hljs-attr">show</span>&gt;</span>Default Alert<span class="hljs-tag">&lt;/<span class="hljs-name">b-alert</span>&gt;</span>
@@ -325,7 +326,7 @@
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <h2 id="visible-state" class="bv-no-focus-ring"><span class="bd-content-title">可见状态<a class="anchorjs-link" href="#visible-state" aria-labelledby="visible-state"></a></span></h2>
 <p>使用<code translate="no" class="notranslate text-nowrap">.show</code>方法来控制警告提示框的可见性状态。默认不显示。</p>
 <p>该<code translate="no" class="notranslate text-nowrap">.show</code>方法接受布尔<code translate="no" class="notranslate text-nowrap">true</code> 或 <code translate="no" class="notranslate text-nowrap">false</code>显示和隐藏分别警报。也可以将其设置为正整数（代表秒数）以创建自消灭警报。</p>
@@ -345,6 +346,7 @@
 <div role="alert" aria-live="polite" aria-atomic="true" class="alert alert-dark">Dark Alert</div>
 </div>
 </div>
+<figure class="highlight">
 <pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-alert</span> <span class="hljs-attr">show</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"primary"</span>&gt;</span>Primary Alert<span class="hljs-tag">&lt;/<span class="hljs-name">b-alert</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-alert</span> <span class="hljs-attr">show</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"secondary"</span>&gt;</span>Secondary Alert<span class="hljs-tag">&lt;/<span class="hljs-name">b-alert</span>&gt;</span>
@@ -354,7 +356,7 @@
   <span class="hljs-tag">&lt;<span class="hljs-name">b-alert</span> <span class="hljs-attr">show</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"info"</span>&gt;</span>Info Alert<span class="hljs-tag">&lt;/<span class="hljs-name">b-alert</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-alert</span> <span class="hljs-attr">show</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"light"</span>&gt;</span>Light Alert<span class="hljs-tag">&lt;/<span class="hljs-name">b-alert</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-alert</span> <span class="hljs-attr">show</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"dark"</span>&gt;</span>Dark Alert<span class="hljs-tag">&lt;/<span class="hljs-name">b-alert</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre></figure>
 <h3 id="conveying-meaning-to-assistive-technologies" class="bv-no-focus-ring"><span class="bd-content-title">向辅助技术传达意义<a class="anchorjs-link" href="#conveying-meaning-to-assistive-technologies" aria-labelledby="conveying-meaning-to-assistive-technologies"></a></span></h3>
 <p>使用颜色变体添加含义仅提供视觉指示，而不会传达给辅助技术的用户（例如屏幕阅读器）。确保用颜色表示的信息在内容本身（例如可见文本）中是显而易见的，或者通过替代方式包括在该信息中，例如在<code translate="no" class="notranslate text-nowrap">.sr-only</code> 类中隐藏的其他文本。</p>
 <h2 id="additional-content-inside-alerts" class="bv-no-focus-ring"><span class="bd-content-title">警告提示框中的其他内容<a class="anchorjs-link" href="#additional-content-inside-alerts" aria-labelledby="additional-content-inside-alerts"></a></span></h2>
@@ -371,6 +373,7 @@
 </div>
 </div>
 </div>
+<figure class="highlight">
 <pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-alert</span> <span class="hljs-attr">show</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"success"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">h4</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"alert-heading"</span>&gt;</span>Well done!<span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
@@ -385,6 +388,7 @@
     <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-alert</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+</figure>
 <h3 id="color-of-links-within-alerts" class="bv-no-focus-ring"><span class="bd-content-title">警告提示框中链接的颜色<a class="anchorjs-link" href="#color-of-links-within-alerts" aria-labelledby="color-of-links-within-alerts"></a></span></h3>
 <p>使用<code translate="no" class="notranslate text-nowrap">.alert-link</code>实用程序CSS类可在任何警报中快速提供匹配的彩色链接。在<code translate="no" class="notranslate text-nowrap">&lt;a&gt;</code>或<code translate="no" class="notranslate text-nowrap">&lt;b-link&gt;</code>上使用。</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-alert-links notranslate">
@@ -399,6 +403,7 @@
 <div role="alert" aria-live="polite" aria-atomic="true" class="alert alert-dark"><a href="#" class="alert-link">Dark Alert</a></div>
 </div>
 </div>
+<figure class="highlight">
 <pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-alert</span> <span class="hljs-attr">show</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"primary"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"alert-link"</span>&gt;</span>Primary Alert<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-alert</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-alert</span> <span class="hljs-attr">show</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"secondary"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"alert-link"</span>&gt;</span>Secondary Alert<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-alert</span>&gt;</span>
@@ -409,6 +414,7 @@
   <span class="hljs-tag">&lt;<span class="hljs-name">b-alert</span> <span class="hljs-attr">show</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"light"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"alert-link"</span>&gt;</span>Light Alert<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-alert</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-alert</span> <span class="hljs-attr">show</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"dark"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"alert-link"</span>&gt;</span>Dark Alert<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-alert</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+</figure>
 <h2 id="dismissible-alerts" class="bv-no-focus-ring"><span class="bd-content-title">可忽略的警告提示框<a class="anchorjs-link" href="#dismissible-alerts" aria-labelledby="dismissible-alerts"></a></span></h2>
 <p>使用<code translate="no" class="notranslate text-nowrap">dismissible</code>方法可以消除任何<code translate="no" class="notranslate text-nowrap">&lt;b-alert&gt;</code>内联。这将添加一个关闭<code translate="no" class="notranslate text-nowrap">X</code>按钮。使用<code translate="no" class="notranslate text-nowrap">dismiss-label</code>方法更改与关闭按钮关联的隐藏标签文本。</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-alert-dismiss notranslate">
@@ -418,11 +424,13 @@
 Dismissible Alert! Click the close button over there <b>⇒</b></div>
 </div>
 </div>
+<figure class="highlight">
 <pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-alert</span> <span class="hljs-attr">show</span> <span class="hljs-attr">dismissible</span>&gt;</span>
     Dismissible Alert! Click the close button over there <span class="hljs-tag">&lt;<span class="hljs-name">b</span>&gt;</span><span class="hljs-symbol">&amp;rArr;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-alert</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+</figure>
 <h3 id="auto-dismissing-alerts" class="bv-no-focus-ring"><span class="bd-content-title">自动关闭警告提示框<a class="anchorjs-link" href="#auto-dismissing-alerts" aria-labelledby="auto-dismissing-alerts"></a></span></h3>
 <p>要创建一个<code translate="no" class="notranslate text-nowrap">&lt;b-alert&gt;</code>会在一段时间后自动关闭的，请将<code translate="no" class="notranslate text-nowrap">show</code> prop (或
 <code translate="no" class="notranslate text-nowrap">v-model</code>)设置为希望其<code translate="no" class="notranslate text-nowrap">&lt;b-alert&gt;</code>可见的秒数。仅支持整数秒数。</p>
@@ -431,6 +439,7 @@ Dismissible Alert! Click the close button over there <b>⇒</b></div>
 <button type="button" class="btn m-1 btn-info"> Show alert with count-down timer </button>
 </div>
 </div>
+<figure class="highlight">
 <pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-alert</span>
@@ -465,7 +474,7 @@ Dismissible Alert! Click the close button over there <b>⇒</b></div>
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <h2 id="fading-alerts" class="bv-no-focus-ring"><span class="bd-content-title">褪色警告提示框<a class="anchorjs-link" href="#fading-alerts" aria-labelledby="fading-alerts"></a></span></h2>
 <p>使用<code translate="no" class="notranslate text-nowrap">fade</code>方法启用动画。默认情况下，警报不设置动画。</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-alert-fade notranslate">
@@ -478,6 +487,7 @@ Dismissible Alert!</div>
 <button type="button" class="btn m-1 btn-info"> Show dismissible alert (hidden) </button>
 </div>
 </div>
+<figure class="highlight">
 <pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-alert</span> <span class="hljs-attr">show</span> <span class="hljs-attr">dismissible</span> <span class="hljs-attr">fade</span>&gt;</span>Dismissible Alert!<span class="hljs-tag">&lt;/<span class="hljs-name">b-alert</span>&gt;</span>
@@ -530,6 +540,7 @@ Dismissible Alert!</div>
     }
   }
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</figure>
 <!-- Component reference added automatically from component package.json --> 
 
 <h2 id="component-reference" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title">组件参考<a href="../../../bootstrap-vue/docs/components/alert#component-reference" class="anchorjs-link" aria-labelledby="component-reference" target="_self"></a></span></h2>
@@ -720,8 +731,9 @@ Dismissible Alert!</div>
 </table>
 </div>
 <p><strong>例:</strong></p>
+<figure class="highlight">
 <pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { BAlert } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
-Vue.component(<span class="hljs-string">'b-alert'</span>, BAlert)</pre>
+Vue.component(<span class="hljs-string">'b-alert'</span>, BAlert)</pre></figure>
 </article>
 
 <article class="bd-content">
@@ -750,24 +762,10 @@ Vue.component(<span class="hljs-string">'b-alert'</span>, BAlert)</pre>
 </div>
 
 <p><strong>例:</strong></p>
+<figure class="highlight">
 <pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { AlertPlugin } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
-Vue.use(AlertPlugin)</pre>
+Vue.use(AlertPlugin)</pre></figure>
 </article>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -782,8 +780,7 @@ Vue.use(AlertPlugin)</pre>
 </div>
 
 
-<script src="../../../js/jquery-3.2.1.slim.min.js"></script> 
-<script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery-slim.min.js"><\/script>')</script> 
+<script src="../../../v4/assets/js/vendor/jquery-slim.min.js"></script> 
 <script src="../../../v4/dist/js/popper.min.js"></script> 
 <script src="../../../v4/dist/js/bootstrap.min.js"></script> 
 <script src="../../../v4/assets/js/docs.min.js"></script> 
@@ -809,8 +806,7 @@ Vue.use(AlertPlugin)</pre>
     },
     debug: false // Set debug to true if you want to inspect the dropdown
   });
-</script> 
-<script>
+
   Holder.addTheme('gray', {
     bg: '#777',
     fg: 'rgba(255,255,255,.75)',

@@ -47,7 +47,7 @@
     </ul>
   </div>
   <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="alse"> v2.6.1 </a>
+    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="alse"> v2.12.0 </a>
       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions"> 
         <a class="dropdown-item active" href="../../../bootstrap-vue/docs/4.0/">Latest (4.3.x)</a>
         <a class="dropdown-item" href="/Boot/">v3.3.7</a>
@@ -274,13 +274,14 @@
             <h6>Example heading <span class="badge badge-secondary">New</span></h6>
           </div>
         </div>
+        <figure class="highlight">
         <pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Example heading <span class="hljs-tag">&lt;<span class="hljs-name">b-badge</span>&gt;</span>New<span class="hljs-tag">&lt;/<span class="hljs-name">b-badge</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>Example heading <span class="hljs-tag">&lt;<span class="hljs-name">b-badge</span>&gt;</span>New<span class="hljs-tag">&lt;/<span class="hljs-name">b-badge</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">h4</span>&gt;</span>Example heading <span class="hljs-tag">&lt;<span class="hljs-name">b-badge</span>&gt;</span>New<span class="hljs-tag">&lt;/<span class="hljs-name">b-badge</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">h5</span>&gt;</span>Example heading <span class="hljs-tag">&lt;<span class="hljs-name">b-badge</span>&gt;</span>New<span class="hljs-tag">&lt;/<span class="hljs-name">b-badge</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">h5</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">h6</span>&gt;</span>Example heading <span class="hljs-tag">&lt;<span class="hljs-name">b-badge</span>&gt;</span>New<span class="hljs-tag">&lt;/<span class="hljs-name">b-badge</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">h6</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre></figure>
         <p>徽章可以用作链接或按钮的一部分，以提供计数器（或类似的标志）。</p>
         <div translate="translate" class="bd-example vue-example vue-example-b-badge-button notranslate">
           <div class="text-center">
@@ -288,11 +289,12 @@
                 class="badge badge-light">4</span></button>
           </div>
         </div>
+        <figure class="highlight">
         <pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-串">"text-center"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">variant</span>=<span class="hljs-串">"primary"</span>&gt;</span>
     Notifications <span class="hljs-tag">&lt;<span class="hljs-name">b-badge</span> <span class="hljs-attr">variant</span>=<span class="hljs-串">"light"</span>&gt;</span>4<span class="hljs-tag">&lt;/<span class="hljs-name">b-badge</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre></figure>
         <p>
           根据使用方式的不同，徽章可能会使屏幕阅读器和类似辅助技术的用户感到困惑。虽然徽章的样式提供了有关其用途的视觉提示，但这些用户将仅看到徽章的内容。根据具体情况，这些标记在句子，链接或按钮的末尾可能看起来像是随机附加的单词或数字。
         </p>
@@ -303,12 +305,13 @@
                   class="sr-only">unread messages</span></span></button>
           </div>
         </div>
+        <figure class="highlight">
         <pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-串">"text-center"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">variant</span>=<span class="hljs-串">"primary"</span>&gt;</span>
     Profile
     <span class="hljs-tag">&lt;<span class="hljs-name">b-badge</span> <span class="hljs-attr">variant</span>=<span class="hljs-串">"light"</span>&gt;</span>9 <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-串">"sr-only"</span>&gt;</span>unread messages<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-badge</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre></figure>
         <h2 id="contextual-variations" class="bv-no-focus-ring"><span class="bd-content-title">上下文差异<a
               class="anchorjs-link" href="#contextual-variations" aria-labelledby="contextual-variations"></a></span>
         </h2>
@@ -327,6 +330,7 @@
               class="badge badge-warning">Warning</span> <span class="badge badge-info">Info</span> <span
               class="badge badge-light">Light</span> <span class="badge badge-dark">Dark</span></div>
         </div>
+        <figure class="highlight">
         <pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-badge</span> <span class="hljs-attr">variant</span>=<span class="hljs-串">"primary"</span>&gt;</span>Primary<span class="hljs-tag">&lt;/<span class="hljs-name">b-badge</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-badge</span> <span class="hljs-attr">variant</span>=<span class="hljs-串">"secondary"</span>&gt;</span>Secondary<span class="hljs-tag">&lt;/<span class="hljs-name">b-badge</span>&gt;</span>
@@ -336,7 +340,7 @@
   <span class="hljs-tag">&lt;<span class="hljs-name">b-badge</span> <span class="hljs-attr">variant</span>=<span class="hljs-串">"info"</span>&gt;</span>Info<span class="hljs-tag">&lt;/<span class="hljs-name">b-badge</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-badge</span> <span class="hljs-attr">variant</span>=<span class="hljs-串">"light"</span>&gt;</span>Light<span class="hljs-tag">&lt;/<span class="hljs-name">b-badge</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-badge</span> <span class="hljs-attr">variant</span>=<span class="hljs-串">"dark"</span>&gt;</span>Dark<span class="hljs-tag">&lt;/<span class="hljs-name">b-badge</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre></figure>
         <h3 id="conveying-meaning-to-assistive-technologies" class="bv-no-focus-ring"><span
             class="bd-content-title">向辅助技术传达意义<a class="anchorjs-link"
               href="#conveying-meaning-to-assistive-technologies"
@@ -356,6 +360,7 @@
               class="badge badge-info badge-pill">Info</span> <span class="badge badge-light badge-pill">Light</span>
             <span class="badge badge-dark badge-pill">Dark</span></div>
         </div>
+        <figure class="highlight">
         <pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-badge</span> <span class="hljs-attr">pill</span> <span class="hljs-attr">variant</span>=<span class="hljs-串">"primary"</span>&gt;</span>Primary<span class="hljs-tag">&lt;/<span class="hljs-name">b-badge</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-badge</span> <span class="hljs-attr">pill</span> <span class="hljs-attr">variant</span>=<span class="hljs-串">"secondary"</span>&gt;</span>Secondary<span class="hljs-tag">&lt;/<span class="hljs-name">b-badge</span>&gt;</span>
@@ -365,7 +370,7 @@
   <span class="hljs-tag">&lt;<span class="hljs-name">b-badge</span> <span class="hljs-attr">pill</span> <span class="hljs-attr">variant</span>=<span class="hljs-串">"info"</span>&gt;</span>Info<span class="hljs-tag">&lt;/<span class="hljs-name">b-badge</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-badge</span> <span class="hljs-attr">pill</span> <span class="hljs-attr">variant</span>=<span class="hljs-串">"light"</span>&gt;</span>Light<span class="hljs-tag">&lt;/<span class="hljs-name">b-badge</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-badge</span> <span class="hljs-attr">pill</span> <span class="hljs-attr">variant</span>=<span class="hljs-串">"dark"</span>&gt;</span>Dark<span class="hljs-tag">&lt;/<span class="hljs-name">b-badge</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre></figure>
         <h2 id="actionable-badges" class="bv-no-focus-ring"><span class="bd-content-title">可操作的徽章<a
               class="anchorjs-link" href="#actionable-badges" aria-labelledby="actionable-badges"></a></span></h2>
         <p>通过指定<code translate="no" class="notranslate text-nowrap">href</code>方法（链接）或<code translate="no"
@@ -378,6 +383,7 @@
               class="badge badge-info">Info</a> <a target="_self" href="#" class="badge badge-light">Light</a> <a
               target="_self" href="#" class="badge badge-dark">Dark</a></div>
         </div>
+        <figure class="highlight">
         <pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-badge</span> <span class="hljs-attr">href</span>=<span class="hljs-串">"#"</span> <span class="hljs-attr">variant</span>=<span class="hljs-串">"primary"</span>&gt;</span>Primary<span class="hljs-tag">&lt;/<span class="hljs-name">b-badge</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-badge</span> <span class="hljs-attr">href</span>=<span class="hljs-串">"#"</span> <span class="hljs-attr">variant</span>=<span class="hljs-串">"secondary"</span>&gt;</span>Secondary<span class="hljs-tag">&lt;/<span class="hljs-name">b-badge</span>&gt;</span>
@@ -387,7 +393,7 @@
   <span class="hljs-tag">&lt;<span class="hljs-name">b-badge</span> <span class="hljs-attr">href</span>=<span class="hljs-串">"#"</span> <span class="hljs-attr">variant</span>=<span class="hljs-串">"info"</span>&gt;</span>Info<span class="hljs-tag">&lt;/<span class="hljs-name">b-badge</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-badge</span> <span class="hljs-attr">href</span>=<span class="hljs-串">"#"</span> <span class="hljs-attr">variant</span>=<span class="hljs-串">"light"</span>&gt;</span>Light<span class="hljs-tag">&lt;/<span class="hljs-name">b-badge</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-badge</span> <span class="hljs-attr">href</span>=<span class="hljs-串">"#"</span> <span class="hljs-attr">variant</span>=<span class="hljs-串">"dark"</span>&gt;</span>Dark<span class="hljs-tag">&lt;/<span class="hljs-name">b-badge</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre></figure>
         <p>请参阅<a href="../../../bootstrap-vue/docs/reference/router-links"
             class="font-weight-bold">路由器支持</a>参考页以获取特定于路由器链接的方法。</p>
         <h2 id="javascript-behavior">JavaScript行为</h2>
@@ -610,8 +616,9 @@
             </table>
           </div>
           <p><strong>例：</strong></p>
+          <figure class="highlight">
           <pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { BBadge } <span class="hljs-keyword">from</span> <span class="hljs-串">'bootstrap-vue'</span>
-Vue.component(<span class="hljs-串">'b-badge'</span>, BBadge)</pre>
+Vue.component(<span class="hljs-串">'b-badge'</span>, BBadge)</pre></figure>
         </article>
         <article class="bd-content">
           <h3 id="importing-as-a-plugin" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title">
@@ -639,8 +646,9 @@ Vue.component(<span class="hljs-串">'b-badge'</span>, BBadge)</pre>
             </table>
           </div>
           <p><strong>例:</strong></p>
+          <figure class="highlight">
           <pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { BadgePlugin } <span class="hljs-keyword">from</span> <span class="hljs-串">'bootstrap-vue'</span>
-Vue.use(BadgePlugin)</pre>
+Vue.use(BadgePlugin)</pre></figure>
         </article>
 
 
@@ -671,8 +679,7 @@ Vue.use(BadgePlugin)</pre>
   </div>
 
 
-  <script src="../../../js/jquery-3.2.1.slim.min.js"></script>
-  <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+<script src="../../../v4/assets/js/vendor/jquery-slim.min.js"></script>
   <script src="../../../v4/dist/js/popper.min.js"></script>
   <script src="../../../v4/dist/js/bootstrap.min.js"></script>
   <script src="../../../v4/assets/js/docs.min.js"></script>

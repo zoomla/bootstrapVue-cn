@@ -47,7 +47,7 @@
     </ul>
   </div>
   <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="alse"> v2.6.1 </a>
+    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="alse"> v2.12.0 </a>
       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions"> 
         <a class="dropdown-item active" href="../../../bootstrap-vue/docs/4.0/">Latest (4.3.x)</a>
         <a class="dropdown-item" href="/Boot/">v3.3.7</a>
@@ -270,7 +270,7 @@
 <div class="mt-3">Selected file: </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-comment">&lt;!-- Styled --&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-form-file</span>
@@ -296,7 +296,7 @@
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <p>为了实现跨浏览器的一致性，Form文件默认为Bootstrap定制文件输入，以替换浏览器的默认设置。它们建立在语义和可访问标记之上，因此可以替代默认文件输入。</p>
 <h2 id="single-file-default" class="bv-no-focus-ring"><span class="bd-content-title">单个文件（默认）<a class="anchorjs-link" href="#single-file-default" aria-labelledby="single-file-default"></a></span></h2>
 <p>在单文件模式下，当未选择任何文件或用户取消“浏览”对话框时，<code translate="no" class="notranslate text-nowrap">v-model</code> 为 <code translate="no" class="notranslate text-nowrap">null</code> 表示未选择文件。选择文件后，返回值将是 JavaScript <a href="https://developer.mozilla.org/en/docs/Web/API/File" target="_blank" rel="noopener"><code translate="no" class="notranslate text-nowrap">File</code></a> 对象实例。</p>
@@ -311,7 +311,7 @@
 <p>您可以选择通过 <code translate="no" class="notranslate text-nowrap">drop-placeholder</code> 属性设置其他占位符。默认为无放置占位符文本。仅支持纯文本。不支持HTML和组件。如果未设置 <code translate="no" class="notranslate text-nowrap">no-drop</code> 或在 <code translate="no" class="notranslate text-nowrap">plain</code> 模式下，<code translate="no" class="notranslate text-nowrap">drop-placeholder</code> 属性无效。</p>
 <h2 id="limiting-to-certain-file-types" class="bv-no-focus-ring"><span class="bd-content-title">限制为某些文件类型<a class="anchorjs-link" href="#limiting-to-certain-file-types" aria-labelledby="limiting-to-certain-file-types"></a></span></h2>
 <p>您可以通过将 <code translate="no" class="notranslate text-nowrap">accept</code> 属性设置为包含允许的文件类型的字符串来限制文件类型。要指定多个类型，请用逗号分隔值。</p>
-<pre class="hljs html text-monospace p-2 notranslate" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-comment">&lt;!-- Accept all image formats by IANA media type wildcard--&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-form-file</span> <span class="hljs-attr">accept</span>=<span class="hljs-string">"image/*"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-file</span>&gt;</span>
 
@@ -320,7 +320,7 @@
 
   <span class="hljs-comment">&lt;!-- Accept specific image formats by extension --&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-form-file</span> <span class="hljs-attr">accept</span>=<span class="hljs-string">".jpg, .png, .gif"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-file</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre></figure>
 <p>要接受任何文件类型，请将 <code translate="no" class="notranslate text-nowrap">accept</code> 保留为null（默认值）。您可以混合并匹配IANA媒体类型和扩展名。</p>
 <p>有关标准媒体类型的完整列表，请参阅 <a href="http://www.iana.org/assignments/media-types/" target="_blank" rel="noopener">IANA Media Types</a>【IANA媒体类型】。</p>
 <p><strong>注意：</strong> 并非所有浏览器都支持或尊重文件输入的 <code translate="no" class="notranslate text-nowrap">accept</code> 属性。</p>
@@ -359,7 +359,7 @@
 </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-form-group</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Small:"</span> <span class="hljs-attr">label-for</span>=<span class="hljs-string">"file-small"</span> <span class="hljs-attr">label-cols-sm</span>=<span class="hljs-string">"2"</span> <span class="hljs-attr">label-size</span>=<span class="hljs-string">"sm"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-form-file</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"file-small"</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"sm"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-file</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-form-group</span>&gt;</span>
@@ -371,15 +371,15 @@
   <span class="hljs-tag">&lt;<span class="hljs-name">b-form-group</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Large:"</span> <span class="hljs-attr">label-for</span>=<span class="hljs-string">"file-large"</span> <span class="hljs-attr">label-cols-sm</span>=<span class="hljs-string">"2"</span> <span class="hljs-attr">label-size</span>=<span class="hljs-string">"lg"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-form-file</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"file-large"</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"lg"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-file</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-form-group</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre></figure>
 <p><strong>注意：</strong> Bootstrap v4.x 本身不支持自定义文件控件的大小。但是，BootstrapVue 包含自定义 SCSS / CSS，它增加了对自定义文件输入控件的大小的支持。</p>
 <h3 id="customize-the-placeholder-text" class="bv-no-focus-ring"><span class="bd-content-title">自定义占位符文本<a class="anchorjs-link" href="#customize-the-placeholder-text" aria-labelledby="customize-the-placeholder-text"></a></span></h3>
 <p>使用 <code translate="no" class="notranslate text-nowrap">placeholder</code> 属性更改未选择文件时显示的提示文本。仅支持纯文本。不支持 HTML 和组件。</p>
 <h3 id="customize-browse-button-label" class="bv-no-focus-ring"><span class="bd-content-title">自定义浏览按钮标签<a class="anchorjs-link" href="#customize-browse-button-label" aria-labelledby="customize-browse-button-label"></a></span></h3>
 <p>如果要全局更改 <code translate="no" class="notranslate text-nowrap">Browse</code> 标签，则可以在全局样式表中添加类似的内容。另外，建议将 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:lang" target="_blank" rel="noopener">:lang()</a> 用于多语言站点。</p>
-<pre class="hljs css text-monospace p-2 notranslate" translate="no"><span class="hljs-selector-class">.custom-file-input</span><span class="hljs-selector-pseudo">:lang(en)</span> ~ <span class="hljs-selector-class">.custom-file-label</span><span class="hljs-selector-pseudo">::after</span> {
+<figure class="highlight"><pre class="hljs css text-monospace p-2 notranslate" translate="no"><span class="hljs-selector-class">.custom-file-input</span><span class="hljs-selector-pseudo">:lang(en)</span> ~ <span class="hljs-selector-class">.custom-file-label</span><span class="hljs-selector-pseudo">::after</span> {
   <span class="hljs-attribute">content</span>: <span class="hljs-string">'Browse'</span>;
-}</pre>
+}</pre></figure>
 <p>或者，您可以通过 <code translate="no" class="notranslate text-nowrap">browse-text</code> 属性设置自定义文件浏览按钮文本的内容。注意，仅支持纯文本。不支持 HTML 和组件。</p>
 <h3 id="file-name-formatter-function" class="bv-no-focus-ring"><span class="bd-content-title">文件名格式化函数 <a class="anchorjs-link" href="#file-name-formatter-function" aria-labelledby="file-name-formatter-function"></a></span></h3>
 <p>将 <code translate="no" class="notranslate text-nowrap">file-name-formatter</code> 属性设置为接受单个参数的函数，该参数是 <a href="https://developer.mozilla.org/en-US/docs/Web/API/File" target="_blank" rel="noopener"><code translate="no" class="notranslate text-nowrap">File</code></a> 对象的数组。该函数应返回单个格式化的字符串（不支持 HTML ）。如果未选择文件，则不会调用格式化程序。</p>
@@ -390,7 +390,7 @@
 <label data-browse="Browse" class="custom-file-label" for="__BVID__3726">No file chosen</label>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-form-file</span> <span class="hljs-attr">multiple</span> <span class="hljs-attr">:file-name-formatter</span>=<span class="hljs-string">"formatNames"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-file</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
 
@@ -406,7 +406,7 @@
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <h3 id="file-name-formatting-via-scoped-slot" class="bv-no-focus-ring"><span class="bd-content-title">通过作用域插槽格式化文件名<a class="anchorjs-link" href="#file-name-formatting-via-scoped-slot" aria-labelledby="file-name-formatting-via-scoped-slot"></a></span></h3>
 <p>或者，您可以使用作用域插槽 <code translate="no" class="notranslate text-nowrap">file-name</code> 来呈现文件名。作用域插槽将具有以下属性：</p>
 <div class="table-responsive-sm">
@@ -439,7 +439,7 @@
 <label data-browse="Browse" class="custom-file-label" for="__BVID__3728">No file chosen</label>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-form-file</span> <span class="hljs-attr">multiple</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">template</span> <span class="hljs-attr">slot</span>=<span class="hljs-string">"file-name"</span> <span class="hljs-attr">slot-scope</span>=<span class="hljs-string">"{ names }"</span>&gt;</span>
      <span class="hljs-tag">&lt;<span class="hljs-name">b-badge</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"dark"</span>&gt;</span>{{ names[0] }}<span class="hljs-tag">&lt;/<span class="hljs-name">b-badge</span>&gt;</span>
@@ -448,7 +448,7 @@
      <span class="hljs-tag">&lt;/<span class="hljs-name">b-badge</span>&gt;</span>
    <span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-form-file</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span></pre></figure>
 <p>使用 <code translate="no" class="notranslate text-nowrap">file-name</code> 插槽时，将忽略 <code translate="no" class="notranslate text-nowrap">file-name-formatter</code> 属性。另外，如果没有选择文件，则不会渲染该插槽。</p>
 <h2 id="non-custom-file-input" class="bv-no-focus-ring"><span class="bd-content-title">非自定义文件输入<a class="anchorjs-link" href="#non-custom-file-input" aria-labelledby="non-custom-file-input"></a></span></h2>
 <p>您可以通过设置 <code translate="no" class="notranslate text-nowrap">plain</code>【纯】属性使 <code translate="no" class="notranslate text-nowrap">&lt;b-form-file&gt;</code> 呈现浏览器本机文件输入。请注意，设置为 <code translate="no" class="notranslate text-nowrap">plain</code> 时，许多自定义表单文件功能均不适用。</p>
@@ -480,7 +480,7 @@
 <p class="mt-2">Selected file: <b></b></p>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-form-file</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">"file"</span> <span class="hljs-attr">ref</span>=<span class="hljs-string">"file-input"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-2"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-file</span>&gt;</span>
 
@@ -504,7 +504,7 @@
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <p><strong>实施注意事项：</strong> 实施注意事项：由于并非所有浏览器都允许设置文件输入的值（甚至设置为null或空字符串），因此 <code translate="no" class="notranslate text-nowrap">b-form-input</code> 采用了一种跨浏览器工作的技术，该技术涉及将输入类型更改为 <code translate="no" class="notranslate text-nowrap">null</code> ，然后立即返回键入 <code translate="no" class="notranslate text-nowrap">file</code>【文件】。</p>
 <!-- Component reference added automatically from component package.json --> 
 
@@ -808,8 +808,8 @@
 </table>
 </div>
 <p><strong>示例：</strong></p>
-<pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { BFormFile } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
-Vue.component(<span class="hljs-string">'b-form-file'</span>, BFormFile)</pre>
+<figure class="highlight"><pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { BFormFile } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
+Vue.component(<span class="hljs-string">'b-form-file'</span>, BFormFile)</pre></figure>
 </article>
 <!---->
 <article class="bd-content">
@@ -838,8 +838,8 @@ Vue.component(<span class="hljs-string">'b-form-file'</span>, BFormFile)</pre>
 </div>
 <!---->
 <p><strong>示例：</strong></p>
-<pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { FormFilePlugin } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
-Vue.use(FormFilePlugin)</pre>
+<figure class="highlight"><pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { FormFilePlugin } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
+Vue.use(FormFilePlugin)</pre></figure>
 </article>
 
 
@@ -860,8 +860,7 @@ Vue.use(FormFilePlugin)</pre>
 </div>
 
 
-<script src="../../../js/jquery-3.2.1.slim.min.js"></script> 
-<script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery-slim.min.js"><\/script>')</script> 
+<script src="../../../v4/assets/js/vendor/jquery-slim.min.js"></script>
 <script src="../../../v4/dist/js/popper.min.js"></script> 
 <script src="../../../v4/dist/js/bootstrap.min.js"></script> 
 <script src="../../../v4/assets/js/docs.min.js"></script> 

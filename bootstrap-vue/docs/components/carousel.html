@@ -47,7 +47,7 @@
     </ul>
   </div>
   <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="alse"> v2.6.1 </a>
+    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="alse"> v2.12.0 </a>
       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions"> 
         <a class="dropdown-item active" href="../../../bootstrap-vue/docs/4.0/">Latest (4.3.x)</a>
         <a class="dropdown-item" href="/Boot/">v3.3.7</a>
@@ -308,6 +308,7 @@
 Sliding: false </p>
 </div>
 </div>
+<figure class="highlight">
 <pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-carousel</span>
@@ -385,7 +386,7 @@ Sliding: false </p>
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <p>请注意， <strong>不支持</strong> 嵌套轮播。</p>
 <h2 id="sizing" class="bv-no-focus-ring"><span class="bd-content-title">尺寸<a class="anchorjs-link" href="#sizing" aria-labelledby="sizing"></a></span></h2>
 <p>轮播不会自动标准化幻灯片尺寸。 因此，您可能需要使用其他实用程序或自定义样式来适当调整内容的大小。 在每张幻灯片中使用图像时，请确保它们均具有相同的尺寸（或长宽比）。</p>
@@ -453,6 +454,7 @@ Sliding: false </p>
 </div>
 </div>
 </div>
+<figure class="highlight">
 <pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-carousel</span>
     <span class="hljs-attr">id</span>=<span class="hljs-string">"carousel-fade"</span>
@@ -475,7 +477,7 @@ Sliding: false </p>
       <span class="hljs-attr">img-src</span>=<span class="hljs-string">"https://picsum.photos/1024/480/?image=22"</span>
     &gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-carousel-slide</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-carousel</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre></figure>
 <h3 id="disable-animation" class="bv-no-focus-ring"><span class="bd-content-title">禁用动画<a class="anchorjs-link" href="#disable-animation" aria-labelledby="disable-animation"></a></span></h3>
 <p>将 <code translate="no" class="notranslate text-nowrap">&lt;b-carousel&gt;</code> <code translate="no" class="notranslate text-nowrap">no-animation</code> 属性设置为 <code translate="no" class="notranslate text-nowrap">true</code> 以禁用幻灯片动画。</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-carousel-no-animation notranslate">
@@ -512,6 +514,7 @@ Sliding: false </p>
 </div>
 </div>
 </div>
+<figure class="highlight">
 <pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-carousel</span>
     <span class="hljs-attr">id</span>=<span class="hljs-string">"carousel-no-animation"</span>
@@ -538,7 +541,7 @@ Sliding: false </p>
       <span class="hljs-attr">img-src</span>=<span class="hljs-string">"https://picsum.photos/1024/480/?image=23"</span>
     &gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-carousel-slide</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-carousel</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre></figure>
 <h2 id="slide-wrapping" class="bv-no-focus-ring"><span class="bd-content-title">循环轮播<a class="anchorjs-link" href="#slide-wrapping" aria-labelledby="slide-wrapping"></a></span></h2>
 <p>通常，当转盘到达幻灯片列表中的一端或另一端时，它将绕到幻灯片列表的另一端并继续循环。</p>
 <p>要禁用循环轮播，请将 <code translate="no" class="notranslate text-nowrap">no-wrap</code> 属性设置为 true。</p>
@@ -583,6 +586,7 @@ Sliding: false </p>
 </table>
 </div>
 <p>你需要一个对 carousel 实例的引用（通过 <code translate="no" class="notranslate text-nowrap">this.$refs</code>）来调用这些方法：</p>
+<figure class="highlight">
 <pre class="hljs html text-monospace p-2 notranslate" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-carousel</span> <span class="hljs-attr">ref</span>=<span class="hljs-string">"myCarousel"</span> <span class="hljs-attr">....</span> &gt;</span>
     <span class="hljs-comment">&lt;!-- slides go here --&gt;</span>
@@ -601,7 +605,7 @@ Sliding: false </p>
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <h2 id="accessibility" class="bv-no-focus-ring"><span class="bd-content-title">辅助功能<a class="anchorjs-link" href="#accessibility" aria-labelledby="accessibility"></a></span></h2>
 <p>轮播通常不完全符合无障碍标准，尽管我们试图使它们尽可能无障碍。</p>
 <p>通过 <code translate="no" class="notranslate text-nowrap">id</code> 属性提供文档唯一值，<code translate="no" class="notranslate text-nowrap">&lt;b-carousel&gt;</code> 将启用辅助功能。强烈建议始终向所有组件添加ID。</p>
@@ -960,8 +964,9 @@ Sliding: false </p>
 </table>
 </div>
 <p><strong>示例：</strong></p>
+<figure class="highlight">
 <pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { BCarousel } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
-Vue.component(<span class="hljs-string">'b-carousel'</span>, BCarousel)</pre>
+Vue.component(<span class="hljs-string">'b-carousel'</span>, BCarousel)</pre></figure>
 </article>
 <article class="bd-content">
 <h3 id="importing-as-a-plugin" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title"> 作为Vue.js插件导入 <a href="../../../bootstrap-vue/docs/components/carousel#importing-as-a-plugin" class="anchorjs-link" aria-labelledby="importing-as-a-plugin" target="_self"></a></span></h3>
@@ -983,8 +988,9 @@ Vue.component(<span class="hljs-string">'b-carousel'</span>, BCarousel)</pre>
 </table>
 </div>
 <p><strong>示例：</strong></p>
+<figure class="highlight">
 <pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { CarouselPlugin } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
-Vue.use(CarouselPlugin)</pre>
+Vue.use(CarouselPlugin)</pre></figure>
 </article>
 
 
@@ -1009,8 +1015,7 @@ Vue.use(CarouselPlugin)</pre>
 </div>
 
 
-<script src="../../../js/jquery-3.2.1.slim.min.js"></script> 
-<script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery-slim.min.js"><\/script>')</script> 
+<script src="../../../v4/assets/js/vendor/jquery-slim.min.js"></script>
 <script src="../../../v4/dist/js/popper.min.js"></script> 
 <script src="../../../v4/dist/js/bootstrap.min.js"></script> 
 <script src="../../../v4/assets/js/docs.min.js"></script> 

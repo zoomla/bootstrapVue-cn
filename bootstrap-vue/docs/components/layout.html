@@ -47,7 +47,7 @@
     </ul>
   </div>
   <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="alse"> v2.6.1 </a>
+    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="alse"> v2.12.0 </a>
       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions"> 
         <a class="dropdown-item active" href="../../../bootstrap-vue/docs/4.0/">Latest (4.3.x)</a>
         <a class="dropdown-item" href="/Boot/">v3.3.7</a>
@@ -349,13 +349,13 @@
 </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bv-example-row"</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bv-example-row"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>1 of 3<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>2 of 3<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>3 of 3<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span></pre></figure>
 <p>
   上面的示例使用Bootstrap v4的预定义网格类在小型、中型、大型和特大型设备上创建三个等宽列。这些列在页面中以parent <code translate="no" class="notranslate text-nowrap">.container</code>居中。
 </p>
@@ -420,16 +420,16 @@
 <p>
   默认的<code translate="no" class="notranslate text-nowrap">&lt;b-container&gt;</code>是一个响应的、固定宽度的容器，这意味着它的<code translate="no" class="notranslate text-nowrap">max-width</code>在每个视窗宽度断点处发生变化。
 </p>
-<pre class="hljs html text-monospace p-2 notranslate" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span>&gt;</span>
   <span class="hljs-comment">&lt;!-- Content here --&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span></pre></figure>
 <h3 id="fluid-width-container" class="bv-no-focus-ring"><span class="bd-content-title">弹性容器<a class="anchorjs-link" href="#fluid-width-container" aria-labelledby="fluid-width-container"></a></span></h3>
 <p>
   在 <code translate="no" class="notranslate text-nowrap">&lt;b-container&gt;</code>上使用<code translate="no" class="notranslate text-nowrap">fluid</code>属性将呈现始终为100%宽度的容器，而不考虑视口断点。
 </p>
-<pre class="hljs html text-monospace p-2 notranslate" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">fluid</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">fluid</span>&gt;</span>
   <span class="hljs-comment">&lt;!-- Content here --&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span></pre></figure>
 <p>
   将<code translate="no" class="notranslate text-nowrap">fluid</code>属性设置为true（或空字符串）相当于Bootstrap<code translate="no" class="notranslate text-nowrap">.container-fluid</code>类。
 </p>
@@ -440,7 +440,7 @@
   将“prop <code translate="no" class="notranslate text-nowrap">fluid</code>”设置为<code translate="no" class="notranslate text-nowrap">'md'</code>将呈现一个100%宽的容器，
   直到到达<code translate="no" class="notranslate text-nowrap">'md'</code>断点，此时它将保持在该断点的容器<code translate="no" class="notranslate text-nowrap">max-width</code>。
 </p>
-<pre class="hljs html text-monospace p-2 notranslate" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">fluid</span>=<span class="hljs-string">"sm"</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">fluid</span>=<span class="hljs-string">"sm"</span>&gt;</span>
   100% wide until small breakpoint
 <span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">fluid</span>=<span class="hljs-string">"md"</span>&gt;</span>
@@ -451,7 +451,7 @@
 <span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">fluid</span>=<span class="hljs-string">"xl"</span>&gt;</span>
   100% wide until extra large breakpoint
-<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span></pre></figure>
 <p>
   将fluid prop设置为断点名称将转换为Bootstrap类<code translate="no" class="notranslate text-nowrap">.container-{breakpoint}</code>。
 </p>
@@ -574,7 +574,7 @@
 </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bv-example-row"</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bv-example-row"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>1 of 2<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>2 of 2<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
@@ -585,7 +585,7 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>2 of 3<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>3 of 3<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span></pre></figure>
 <h3 id="equal-width-multi-line" class="bv-no-focus-ring"><span class="bd-content-title">等宽多行<a class="anchorjs-link" href="#equal-width-multi-line" aria-labelledby="equal-width-multi-line"></a></span></h3>
 <p>
   通过插入<code translate="no" class="notranslate text-nowrap">.w-100</code>来创建跨越多行的等宽列，在该行中您希望列换行到新行。 通过将<code translate="no" class="notranslate text-nowrap">.w-100</code>
@@ -608,7 +608,7 @@
 </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bv-example-row"</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bv-example-row"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>Column<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>Column<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
@@ -616,7 +616,7 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>Column<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>Column<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span></pre></figure>
 <h3 id="setting-one-column-width" class="bv-no-focus-ring"><span class="bd-content-title">设置一列宽度<a class="anchorjs-link" href="#setting-one-column-width" aria-labelledby="setting-one-column-width"></a></span></h3>
 <p>Flexbox网格列的自动布局还意味着您可以设置一列的宽度，并使同级列在其周围自动调整大小。 您可以使用预定义的网格类（如下所示），网格混合或内联宽度。 请注意，无论中间列的宽度如何，其他列都会调整大小。</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-grid-one-width notranslate">
@@ -633,7 +633,7 @@
 </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bv-example-row"</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bv-example-row"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-center"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>1 of 3<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"8"</span>&gt;</span>2 of 3 (wider)<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
@@ -645,7 +645,7 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"5"</span>&gt;</span>2 of 3 (wider)<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>3 of 3<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span></pre></figure>
 <h3 id="variable-width-content" class="bv-no-focus-ring"><span class="bd-content-title">可变宽度内容<a class="anchorjs-link" href="#variable-width-content" aria-labelledby="variable-width-content"></a></span></h3>
 <p>
   使用<code translate="no" class="notranslate text-nowrap">{breakpoint}="auto"</code>属性可以根据其内容的自然宽度来调整列的大小。
@@ -664,7 +664,7 @@
 </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bv-example-row"</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bv-example-row"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"justify-content-md-center"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">col</span> <span class="hljs-attr">lg</span>=<span class="hljs-string">"2"</span>&gt;</span>1 of 3<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"12"</span> <span class="hljs-attr">md</span>=<span class="hljs-string">"auto"</span>&gt;</span>Variable width content<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
@@ -676,7 +676,7 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"12"</span> <span class="hljs-attr">md</span>=<span class="hljs-string">"auto"</span>&gt;</span>Variable width content<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">col</span> <span class="hljs-attr">lg</span>=<span class="hljs-string">"2"</span>&gt;</span>3 of 3<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span></pre></figure>
 <h2 id="responsive-classes" class="bv-no-focus-ring"><span class="bd-content-title">响应类<a class="anchorjs-link" href="#responsive-classes" aria-labelledby="responsive-classes"></a></span></h2>
 <p>Bootstrap的网格包括五层预定义的类，用于构建复杂的响应式布局。 在您认为合适的超小型，小型，中型，大型或超大型设备上自定义列的大小。</p>
 <h3 id="all-breakpoints" class="bv-no-focus-ring"><span class="bd-content-title">所有断点<a class="anchorjs-link" href="#all-breakpoints" aria-labelledby="all-breakpoints"></a></span></h3>
@@ -699,7 +699,7 @@
 </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bv-example-row"</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bv-example-row"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>col<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>col<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
@@ -711,7 +711,7 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"8"</span>&gt;</span>col-8<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"4"</span>&gt;</span>col-4<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span></pre></figure>
 <h3 id="stacked-to-horizontal" class="bv-no-focus-ring"><span class="bd-content-title">堆叠到水平<a class="anchorjs-link" href="#stacked-to-horizontal" aria-labelledby="stacked-to-horizontal"></a></span></h3>
 <p>
   使用一组<code translate="no" class="notranslate text-nowrap">sm="*"</code> or <code translate="no" class="notranslate text-nowrap">或</code>（布尔值，表示相等宽度的@sm）属性，您可以创建一个基本的网格系统，该系统开始堆叠在超小型设备上，然后在台式机（中型）上变为水平设备。
@@ -729,7 +729,7 @@
 </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bv-example-row"</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bv-example-row"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">sm</span>=<span class="hljs-string">"8"</span>&gt;</span>col-sm-8<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">sm</span>=<span class="hljs-string">"4"</span>&gt;</span>col-sm-4<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
@@ -740,7 +740,7 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">sm</span>&gt;</span>col-sm<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">sm</span>&gt;</span>col-sm<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span></pre></figure>
 <h3 id="mix-and-match" class="bv-no-focus-ring"><span class="bd-content-title">混搭<a class="anchorjs-link" href="#mix-and-match" aria-labelledby="mix-and-match"></a></span></h3>
 <p>不希望您的列简单地堆叠在一些网格层中？根据需要为每层使用不同的属性组合。请参阅下面的示例，以更好地了解它是如何工作的。</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-grid-mix-and-match notranslate">
@@ -760,7 +760,7 @@
 </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bv-example-row"</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bv-example-row"</span>&gt;</span>
   <span class="hljs-comment">&lt;!-- Stack the columns on mobile by making one full-width and the other half-width --&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"12"</span> <span class="hljs-attr">md</span>=<span class="hljs-string">"8"</span>&gt;</span>cols="12" md="8"<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
@@ -779,7 +779,7 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"6"</span>&gt;</span>cols="6"<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"6"</span>&gt;</span>cols="6"<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span></pre></figure>
 <h2 id="alignment" class="bv-no-focus-ring"><span class="bd-content-title">对齐<a class="anchorjs-link" href="#alignment" aria-labelledby="alignment"></a></span></h2>
 <p>使用flexbox对齐实用程序垂直和水平对齐列。</p>
 <h3 id="vertical-alignment" class="bv-no-focus-ring"><span class="bd-content-title">垂直对齐<a class="anchorjs-link" href="#vertical-alignment" aria-labelledby="vertical-alignment"></a></span></h3>
@@ -802,7 +802,7 @@
 </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bv-example-row bv-example-row-flex-cols"</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bv-example-row bv-example-row-flex-cols"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span> <span class="hljs-attr">align-v</span>=<span class="hljs-string">"start"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>One of three columns<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>One of three columns<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
@@ -820,7 +820,7 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>One of three columns<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>One of three columns<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span></pre></figure>
 <div translate="translate" class="bd-example vue-example vue-example-b-grid-align-self notranslate">
 <div class="bv-example-row bv-example-row-flex-cols container">
 <div class="row">
@@ -830,13 +830,13 @@
 </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bv-example-row bv-example-row-flex-cols"</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bv-example-row bv-example-row-flex-cols"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">align-self</span>=<span class="hljs-string">"start"</span>&gt;</span>One of three columns<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">align-self</span>=<span class="hljs-string">"center"</span>&gt;</span>One of three columns<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">align-self</span>=<span class="hljs-string">"end"</span>&gt;</span>One of three columns<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span></pre></figure>
 <h3 id="horizontal-alignment" class="bv-no-focus-ring"><span class="bd-content-title">水平对齐<a class="anchorjs-link" href="#horizontal-alignment" aria-labelledby="horizontal-alignment"></a></span></h3>
 <div translate="translate" class="bd-example vue-example vue-example-b-grid-horizontal-alignment notranslate">
 <div class="bv-example-row container">
@@ -862,7 +862,7 @@
 </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bv-example-row"</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bv-example-row"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span> <span class="hljs-attr">align-h</span>=<span class="hljs-string">"start"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"4"</span>&gt;</span>One of two columns<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"4"</span>&gt;</span>One of two columns<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
@@ -887,7 +887,7 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"4"</span>&gt;</span>One of two columns<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"4"</span>&gt;</span>One of two columns<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span></pre></figure>
 <h2 id="reordering" class="bv-no-focus-ring"><span class="bd-content-title">重新排序<a class="anchorjs-link" href="#reordering" aria-labelledby="reordering"></a></span></h2>
 <h3 id="ordering-columns" class="bv-no-focus-ring"><span class="bd-content-title">排序列<a class="anchorjs-link" href="#ordering-columns" aria-labelledby="ordering-columns"></a></span></h3>
 <p>
@@ -909,7 +909,7 @@
 </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">fluid</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bv-example-row"</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">fluid</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bv-example-row"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-3"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>First in DOM, no order applied<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">order</span>=<span class="hljs-string">"5"</span>&gt;</span>Second in DOM, with a larger order<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
@@ -921,7 +921,7 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">order</span>=<span class="hljs-string">"1"</span>&gt;</span>Second in DOM, with an order of 1<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>Third in DOM, no order applied<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span></pre></figure>
 <p>
   <code translate="no" class="notranslate text-nowrap">order</code>由flexbox的CSS样式顺序控制。
 </p>
@@ -946,7 +946,7 @@
 </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">fluid</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bv-example-row"</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">fluid</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bv-example-row"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">md</span>=<span class="hljs-string">"4"</span>&gt;</span>md="4"<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">md</span>=<span class="hljs-string">"4"</span> <span class="hljs-attr">offset-md</span>=<span class="hljs-string">"4"</span>&gt;</span>md="4" offset-md="4"<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
@@ -960,7 +960,7 @@
   <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">md</span>=<span class="hljs-string">"6"</span> <span class="hljs-attr">offset-md</span>=<span class="hljs-string">"3"</span>&gt;</span>md="6" offset-md="3"<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span></pre></figure>
 <p>
   除了在响应断点处清除列之外，还可能需要通过在较大断点处将偏移量设置为<code translate="no" class="notranslate text-nowrap">0</code>来重置偏移量：
 </p>
@@ -976,7 +976,7 @@
 </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">fluid</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bv-example-row"</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">fluid</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bv-example-row"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">sm</span>=<span class="hljs-string">"5"</span> <span class="hljs-attr">md</span>=<span class="hljs-string">"6"</span>&gt;</span>sm="5" md="6"<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">sm</span>=<span class="hljs-string">"5"</span> <span class="hljs-attr">offset-sm</span>=<span class="hljs-string">"2"</span> <span class="hljs-attr">md</span>=<span class="hljs-string">"6"</span> <span class="hljs-attr">offset-md</span>=<span class="hljs-string">"0"</span>&gt;</span>sm="5" offset-sm="2" md="6" offset-md="0"<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
@@ -986,7 +986,7 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">sm</span>=<span class="hljs-string">"6"</span> <span class="hljs-attr">md</span>=<span class="hljs-string">"5"</span> <span class="hljs-attr">lg</span>=<span class="hljs-string">"6"</span>&gt;</span>sm="6" md="5" lg="6"<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">sm</span>=<span class="hljs-string">"6"</span> <span class="hljs-attr">md</span>=<span class="hljs-string">"5"</span> <span class="hljs-attr">offset-md</span>=<span class="hljs-string">"2"</span> <span class="hljs-attr">lg</span>=<span class="hljs-string">"6"</span> <span class="hljs-attr">offset-lg</span>=<span class="hljs-string">"0"</span>&gt;</span>sm="6" md="5" offset-md="2" col-lg="6" offset-lg="0"<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span></pre></figure>
 <h3 id="margin-utilities-on-columns" class="bv-no-focus-ring"><span class="bd-content-title">列上的边距实用程序<a class="anchorjs-link" href="#margin-utilities-on-columns" aria-labelledby="margin-utilities-on-columns"></a></span></h3>
 <p>
   通过在Bootstrap v4中移至flexbox，您可以使用<a href="../../../bootstrap-vue/docs/reference/spacing-classes" class="font-weight-bold">margin 和 spacing</a>实用程序类
@@ -1008,7 +1008,7 @@
 </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">fluid</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-light text-center"</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">fluid</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-light text-center"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-3"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">md</span>=<span class="hljs-string">"4"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"p-3 bg-info"</span>&gt;</span>md="4"<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">md</span>=<span class="hljs-string">"4"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ml-auto p-3 bg-info"</span>&gt;</span>md="4" .ml-auto<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
@@ -1023,7 +1023,7 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"auto"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mr-auto p-3 bg-info"</span>&gt;</span>cols="auto" .mr-auto<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"auto"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"p-3 bg-info"</span>&gt;</span>cols="auto"<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span></pre></figure>
 <h2 id="nesting-grids" class="bv-no-focus-ring"><span class="bd-content-title">嵌套网格<a class="anchorjs-link" href="#nesting-grids" aria-labelledby="nesting-grids"></a></span></h2>
 <p>
   要将内容与默认网格嵌套，请在现有的<code translate="no" class="notranslate text-nowrap">&lt;b-col&gt;</code>组件内
@@ -1041,7 +1041,7 @@
 </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">fluid</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bv-example-row"</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">fluid</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bv-example-row"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">sm</span>=<span class="hljs-string">"9"</span>&gt;</span>
       Level 1: sm="9"
@@ -1051,7 +1051,7 @@
       <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span></pre></figure>
 <h2 id="row-columns" class="bv-no-focus-ring"><span class="bd-content-title">行列<a class="anchorjs-link" href="#row-columns" aria-labelledby="row-columns"></a></span></h2>
 <p><span class="badge badge-info small">Requires Bootstrap v4.4+ CSS</span></p>
 <p>
@@ -1102,7 +1102,7 @@
 </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bv-example-row mb-3"</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bv-example-row mb-3"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"2"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>Column<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>Column<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
@@ -1136,7 +1136,7 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"6"</span>&gt;</span>Column<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>Column<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span></pre></figure>
 <p>
   您可以通过以下<code translate="no" class="notranslate text-nowrap">&lt;b-row&gt;</code>属性控制每个断点级别的列数：
 </p>
@@ -1159,7 +1159,7 @@
 </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bv-example-row"</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bv-example-row"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"1"</span> <span class="hljs-attr">cols-sm</span>=<span class="hljs-string">"2"</span> <span class="hljs-attr">cols-md</span>=<span class="hljs-string">"4"</span> <span class="hljs-attr">cols-lg</span>=<span class="hljs-string">"6"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>Column<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>Column<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
@@ -1168,7 +1168,7 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>Column<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>Column<span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span></pre></figure>
 <h2 id="utilities-for-layout" class="bv-no-focus-ring"><span class="bd-content-title">布局实用程序<a class="anchorjs-link" href="#utilities-for-layout" aria-labelledby="utilities-for-layout"></a></span></h2>
 <p>
   为了更快地进行适合移动设备的响应式开发，Bootstrap包含了数十种<a href="../../../bootstrap-vue/docs/reference/utility-classes" class="font-weight-bold">实用程序类</a>，用于显示，隐藏，对齐和分隔内容。
@@ -1543,8 +1543,8 @@
 </table>
 </div>
 <p><strong>例子:</strong></p>
-<pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { BContainer } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
-Vue.component(<span class="hljs-string">'b-container'</span>, BContainer)</pre>
+<figure class="highlight"><pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { BContainer } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
+Vue.component(<span class="hljs-string">'b-container'</span>, BContainer)</pre></figure>
 </article>
 <article class="bd-content">
 <h3 id="importing-as-a-plugin" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title"> 导入为Vue.js插件 <a href="../../../bootstrap-vue/docs/components/layout#importing-as-a-plugin" class="anchorjs-link" aria-labelledby="importing-as-a-plugin" target="_self"></a></span></h3>
@@ -1566,8 +1566,8 @@ Vue.component(<span class="hljs-string">'b-container'</span>, BContainer)</pre>
 </table>
 </div>
 <p><strong>例子:</strong></p>
-<pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { LayoutPlugin } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
-Vue.use(LayoutPlugin)</pre>
+<figure class="highlight"><pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { LayoutPlugin } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
+Vue.use(LayoutPlugin)</pre></figure>
 
 
 
@@ -1579,8 +1579,7 @@ Vue.use(LayoutPlugin)</pre>
 </div>
 
 
-<script src="../../../js/jquery-3.2.1.slim.min.js"></script> 
-<script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery-slim.min.js"><\/script>')</script> 
+<script src="../../../v4/assets/js/vendor/jquery-slim.min.js"></script>
 <script src="../../../v4/dist/js/popper.min.js"></script> 
 <script src="../../../v4/dist/js/bootstrap.min.js"></script> 
 <script src="../../../v4/assets/js/docs.min.js"></script> 

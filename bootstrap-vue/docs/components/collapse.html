@@ -47,7 +47,7 @@
     </ul>
   </div>
   <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="alse"> v2.6.1 </a>
+    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="alse"> v2.12.0 </a>
       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions"> 
         <a class="dropdown-item active" href="../../../bootstrap-vue/docs/4.0/">Latest (4.3.x)</a>
         <a class="dropdown-item" href="/Boot/">v3.3.7</a>
@@ -220,7 +220,7 @@
   <script type="text/javascript" src="../../../v4/assets/js/pupCMS.js"></script>
 
 
-
+<figure class="highlight">
 <pre class="hljs html text-monospace p-2 notranslate" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>></span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">v-b-toggle.collapse-1</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"primary"</span>></span>Toggle Collapse<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>></span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-collapse</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"collapse-1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mt-2"</span>></span>
@@ -234,9 +234,10 @@
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-collapse</span>></span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>></span>
 
-<span class="hljs-comment">&lt;!-- b-collapse.vue --></span></pre>
+<span class="hljs-comment">&lt;!-- b-collapse.vue --></span></pre></figure>
 <h2 id="usage" class="bv-no-focus-ring"><span class="bd-content-title">用法<a class="anchorjs-link" href="#usage" aria-labelledby="usage"></a></span></h2>
 <p>其他元素可以使用 <code translate="no" class="notranslate text-nowrap">v-b-toggle</code> 指令轻松切 <code translate="no" class="notranslate text-nowrap">&lt;b-collapse></code> 组件。</p>
+<figure class="highlight">
 <pre class="hljs html text-monospace p-2 notranslate" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>></span>
   <span class="hljs-comment">&lt;!-- Using modifiers --></span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">v-b-toggle.collapse-2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"m-1"</span>></span>Toggle Collapse<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>></span>
@@ -250,9 +251,10 @@
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-collapse</span>></span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>></span>
 
-<span class="hljs-comment">&lt;!-- b-collapse-usage.vue --></span></pre>
+<span class="hljs-comment">&lt;!-- b-collapse-usage.vue --></span></pre></figure>
 <h2 id="initial-visibility-start-expanded" class="bv-no-focus-ring"><span class="bd-content-title">初始可见性（开始扩展）<a class="anchorjs-link" href="#initial-visibility-start-expanded" aria-labelledby="initial-visibility-start-expanded"></a></span></h2>
 <p>要使 <code translate="no" class="notranslate text-nowrap">&lt;b-collapse></code> 最初显示，请设置 <code translate="no" class="notranslate text-nowrap">visible</code> 属性：</p>
+<figure class="highlight">
 <pre class="hljs html text-monospace p-2 notranslate" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>></span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">v-b-toggle.collapse-3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"m-1"</span>></span>Toggle Collapse<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>></span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-collapse</span> <span class="hljs-attr">visible</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"collapse-3"</span>></span>
@@ -260,11 +262,12 @@
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-collapse</span>></span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>></span>
 
-<span class="hljs-comment">&lt;!-- b-collapse-visible.vue --></span></pre>
+<span class="hljs-comment">&lt;!-- b-collapse-visible.vue --></span></pre></figure>
 <p>默认情况下，初始可见的塌陷不会在安装时进行动画处理。要在挂载上启用折叠展开动画（<code translate="no" class="notranslate text-nowrap">visible</code> 或 <code translate="no" class="notranslate text-nowrap">v-model</code> 为 <code translate="no" class="notranslate text-nowrap">true</code> 时），请将 <code translate="no" class="notranslate text-nowrap">appear</code> 道具设置为 <code translate="no" class="notranslate text-nowrap">&lt;b-collapse></code> 。</p>
 <h2 id="v-model-support" class="bv-no-focus-ring"><span class="bd-content-title"><code translate="no" class="notranslate text-nowrap">v-model</code> 支持<a class="anchorjs-link" href="#v-model-support" aria-labelledby="v-model-support"></a></span></h2>
 <p>组件的折叠（可见）状态也可以使用 <code translate="no" class="notranslate text-nowrap">v-model</code> 设置，该 v-model 在内部绑定到 <code translate="no" class="notranslate text-nowrap">visible</code> 属性。</p>
 <p>请注意，使用 <code translate="no" class="notranslate text-nowrap">v-model</code> 控制 <code translate="no" class="notranslate text-nowrap">&lt;b-collapse></code> 时，不会自动将 <code translate="no" class="notranslate text-nowrap">aria-*</code> 属性和 <code translate="no" class="notranslate text-nowrap">collapsed</code> 类自动放置在触发按钮上（使用 <code translate="no" class="notranslate text-nowrap">v-b-toggle</code> 指令时就是这种情况）。在此示例中，我们 <strong>必须自己控制属性</strong> 以获得适当的可访问性支持。</p>
+<figure class="highlight">
 <pre class="hljs html text-monospace p-2 notranslate" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>></span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>></span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span>
@@ -291,9 +294,10 @@
   }
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>></span>
 
-<span class="hljs-comment">&lt;!-- b-collapse-v-model.vue --></span></pre>
+<span class="hljs-comment">&lt;!-- b-collapse-v-model.vue --></span></pre></figure>
 <h2 id="trigger-multiple-collapse-elements" class="bv-no-focus-ring"><span class="bd-content-title">触发多个折叠元素<a class="anchorjs-link" href="#trigger-multiple-collapse-elements" aria-labelledby="trigger-multiple-collapse-elements"></a></span></h2>
 <p>您甚至可以通过使用修饰符提供多个目标ID，通过单个 <code translate="no" class="notranslate text-nowrap">v-b-toggle</code> 来折叠多个 <code translate="no" class="notranslate text-nowrap">&lt;b-collapse></code> 组件：</p>
+<figure class="highlight">
 <pre class="hljs html text-monospace p-2 notranslate" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>></span>
   <span class="hljs-comment">&lt;!-- Single button triggers two "&lt;b-collapse>" components --></span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">v-b-toggle.collapse-a.collapse-b</span>></span>Toggle Both Collapse A and B<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>></span>
@@ -307,9 +311,10 @@
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-collapse</span>></span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>></span>
 
-<span class="hljs-comment">&lt;!-- b-collapse-trigger-multiple.vue --></span></pre>
+<span class="hljs-comment">&lt;!-- b-collapse-trigger-multiple.vue --></span></pre></figure>
 <h2 id="accordion-support" class="bv-no-focus-ring"><span class="bd-content-title">手风琴支持<a class="anchorjs-link" href="#accordion-support" aria-labelledby="accordion-support"></a></span></h2>
 <p>通过 <code translate="no" class="notranslate text-nowrap">accordion</code> 属性提供手风琴组标识符，将一组 <code translate="no" class="notranslate text-nowrap">&lt;b-collapse></code> 组件转变为手风琴。请注意，一次手风琴组中只有一个折叠可以打开。</p>
+<figure class="highlight">
 <pre class="hljs html text-monospace p-2 notranslate" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>></span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"tablist"</span>></span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-card</span> <span class="hljs-attr">no-body</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-1"</span>></span>
@@ -367,7 +372,7 @@
   }
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>></span>
 
-<span class="hljs-comment">&lt;!-- b-accordion.vue --></span></pre>
+<span class="hljs-comment">&lt;!-- b-accordion.vue --></span></pre></figure>
 <p><strong>注意：</strong></p>
 <ul>
 <li>使用手风琴模式时，请确保将触发元素和 <code translate="no" class="notranslate text-nowrap">&lt;b-collapse></code> 组件放置在具有 <code translate="no" class="notranslate text-nowrap">role="tablist"</code> 的元素内，并按顺序在每个触发元素的容器上设置 <code translate="no" class="notranslate text-nowrap">role="tab"</code> （每个触发元素都应包装） 帮助屏幕阅读器用户浏览手风琴组。</li>
@@ -377,6 +382,7 @@
 <h2 id="hiding-and-showing-content-in-the-toggle-button-based-on-collapse-state" class="bv-no-focus-ring"><span class="bd-content-title">根据折叠状态在切换按钮中隐藏和显示内容<a class="anchorjs-link" href="#hiding-and-showing-content-in-the-toggle-button-based-on-collapse-state" aria-labelledby="hiding-and-showing-content-in-the-toggle-button-based-on-collapse-state"></a></span></h2>
 <p>当使用 <code translate="no" class="notranslate text-nowrap">v-b-toggle</code> 指令时，<code translate="no" class="notranslate text-nowrap">collapsed</code> 类将在折叠关闭时自动放置在触发元素上，并在打开时自动删除。 您可以使用此类通过自定义CSS在切换中显示或隐藏内容：</p>
 <p><strong>HTML标记示例：</strong></p>
+<figure class="highlight">
 <pre class="hljs html text-monospace p-2 notranslate" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>></span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">v-b-toggle.my-collapse</span>></span>
     <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"when-opened"</span>></span>Close<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>></span> <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"when-closed"</span>></span>Open<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>></span> My Collapse
@@ -384,16 +390,18 @@
   <span class="hljs-tag">&lt;<span class="hljs-name">b-collapse</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"my-collapse"</span>></span>
     <span class="hljs-comment">&lt;!-- Content here --></span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-collapse</span>></span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>></span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>></span></pre></figure>
 <p><strong>自定义CSS示例：</strong></p>
+<figure class="highlight">
 <pre class="hljs css text-monospace p-2 notranslate" translate="no"><span class="hljs-selector-class">.collapsed</span> > <span class="hljs-selector-class">.when-opened</span>,
 <span class="hljs-selector-pseudo">:not(.collapsed)</span> > <span class="hljs-selector-class">.when-closed</span> {
   <span class="hljs-attribute">display</span>: none;
-}</pre>
+}</pre></figure>
 <h2 id="global-root-instance-events" class="bv-no-focus-ring"><span class="bd-content-title">'Global' $root 实例事件<a class="anchorjs-link" href="#global-root-instance-events" aria-labelledby="global-root-instance-events"></a></span></h2>
 <p>使用 <code translate="no" class="notranslate text-nowrap">$root</code> 实例可以在使用 <code translate="no" class="notranslate text-nowrap">&lt;b-collapse></code> 的组件之外的某个地方发出和监听事件。 简而言之，<code translate="no" class="notranslate text-nowrap">$root</code> 的行为类似于全局事件的发射器和侦听器。 有关 <code translate="no" class="notranslate text-nowrap">$root</code> 实例的详细信息可以在 <a href="https://vuejs.org/v2/guide/components-edge-cases.html#Accessing-the-Root-Instance" target="_blank" rel="noopener">Vue官方文档</a> 中找到。</p>
 <h3 id="listening-to-collapses-state-changes-via-root-events" class="bv-no-focus-ring"><span class="bd-content-title">通过 $root 事件监听折叠状态更改<a class="anchorjs-link" href="#listening-to-collapses-state-changes-via-root-events" aria-labelledby="listening-to-collapses-state-changes-via-root-events"></a></span></h3>
 <p>要监听任何折叠状态更改，请使用：</p>
+<figure class="highlight">
 <pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
   mounted() {
     <span class="hljs-keyword">this</span>.$root.$on(<span class="hljs-string">'bv::collapse::state'</span>, (collapseId, isJustShown) => {
@@ -401,11 +409,12 @@
       <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'isJustShown:'</span>, isJustShown)
     })
   }
-}</pre>
+}</pre></figure>
 <p>其中 <code translate="no" class="notranslate text-nowrap">collapseId</code> 是折叠ID，它更改了状态；<code translate="no" class="notranslate text-nowrap">isJustShown</code> 为 true / false，即显示/隐藏的折叠。</p>
 <h3 id="toggling-collapses-via-root-events" class="bv-no-focus-ring"><span class="bd-content-title">通过 $root 事件切换折叠<a class="anchorjs-link" href="#toggling-collapses-via-root-events" aria-labelledby="toggling-collapses-via-root-events"></a></span></h3>
 <p>要切换（打开/关闭）<strong>特定的折叠</strong>，请传递折叠 <code translate="no" class="notranslate text-nowrap">id</code>： </p>
-<pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-keyword">this</span>.$root.$emit(<span class="hljs-string">'bv::toggle::collapse'</span>, <span class="hljs-string">'my-collapse-id'</span>)</pre>
+<figure class="highlight">
+<pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-keyword">this</span>.$root.$emit(<span class="hljs-string">'bv::toggle::collapse'</span>, <span class="hljs-string">'my-collapse-id'</span>)</pre></figure>
 <h2 id="optionally-scoped-default-slot" class="bv-no-focus-ring"><span class="bd-content-title">可选范围的默认插槽<a class="anchorjs-link" href="#optionally-scoped-default-slot" aria-labelledby="optionally-scoped-default-slot"></a></span></h2>
 <p><span class="badge badge-info small">New in v2.2.0</span></p>
 <p>默认插槽可以选择范围。 以下作用域属性可用：</p>
@@ -655,8 +664,9 @@
 </table>
 </div>
 <p><strong>示例：</strong></p>
+<figure class="highlight">
 <pre translate="translate" class="hljs language-js text-monospace p-2 notranslate">import { BCollapse } from 'bootstrap-vue'
-Vue.component('b-collapse', BCollapse)</pre>
+Vue.component('b-collapse', BCollapse)</pre></figure>
 </article>
 <article class="bd-content">
 <h3 id="importing-individual-directives" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title"> 导入单个指令 <a href="../../../bootstrap-vue/docs/components/collapse#importing-individual-directives" aria-labelledby="importing-individual-directives" target="_self" class="anchorjs-link"></a></span></h3>
@@ -680,9 +690,10 @@ Vue.component('b-collapse', BCollapse)</pre>
 </table>
 </div>
 <p><strong>示例：</strong></p>
+<figure class="highlight">
 <pre translate="translate" class="hljs language-js text-monospace p-2 notranslate">import { VBToggle } from 'bootstrap-vue'
 // Note: Vue automatically prefixes the directive name with 'v-'
-Vue.directive('b-toggle', VBToggle)</pre>
+Vue.directive('b-toggle', VBToggle)</pre></figure>
 </article>
 <article class="bd-content">
 <h3 id="importing-as-a-plugin" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title"> 作为Vue.js插件导入 <a href="../../../bootstrap-vue/docs/components/collapse#importing-as-a-plugin" aria-labelledby="importing-as-a-plugin" target="_self" class="anchorjs-link"></a></span></h3>
@@ -704,8 +715,9 @@ Vue.directive('b-toggle', VBToggle)</pre>
 </table>
 </div>
 <p><strong>示例：</strong></p>
+<figure class="highlight">
 <pre translate="translate" class="hljs language-js text-monospace p-2 notranslate">import { CollapsePlugin } from 'bootstrap-vue'
-Vue.use(CollapsePlugin)</pre>
+Vue.use(CollapsePlugin)</pre></figure>
 </article>
 
 
@@ -735,8 +747,7 @@ Vue.use(CollapsePlugin)</pre>
 </div>
 
 
-<script src="../../../js/jquery-3.2.1.slim.min.js"></script> 
-<script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery-slim.min.js"><\/script>')</script> 
+<script src="../../../v4/assets/js/vendor/jquery-slim.min.js"></script>
 <script src="../../../v4/dist/js/popper.min.js"></script> 
 <script src="../../../v4/dist/js/bootstrap.min.js"></script> 
 <script src="../../../v4/assets/js/docs.min.js"></script> 

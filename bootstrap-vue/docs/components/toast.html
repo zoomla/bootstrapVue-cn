@@ -47,7 +47,7 @@
     </ul>
   </div>
   <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="alse"> v2.6.1 </a>
+    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="alse"> v2.12.0 </a>
       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions"> 
         <a class="dropdown-item active" href="../../../bootstrap-vue/docs/4.0/">Latest (4.3.x)</a>
         <a class="dropdown-item" href="/Boot/">v3.3.7</a>
@@ -314,7 +314,7 @@
 </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"p-3 bg-secondary progress-bar-striped"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"min-height: 170px;"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-2"</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"primary"</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"$bvToast.show('example-toast')"</span>&gt;</span>
       Show toast
@@ -323,7 +323,7 @@
       Hello, world! This is a toast message.
     <span class="hljs-tag">&lt;/<span class="hljs-name">b-toast</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span></pre></figure>
 <p><strong>注意:</strong> 
   我们在上面的示例中使用了静态道具，以在文档中显示toast的进度，而不是将其传输到<code translate="no" class="notranslate text-nowrap">&lt;b-toaster&gt;</code>目标容器。 并且，我们在外部<code translate="no" class="notranslate text-nowrap">&lt;div&gt;</code>中添加了<code translate="no" class="notranslate text-nowrap">bg-secondary</code>类和<code translate="no" class="notranslate text-nowrap">progress-bar-striped</code>类，仅用于说明toast透明度。
 </p>
@@ -391,7 +391,7 @@
 <button type="button" class="btn btn-secondary">Show Toast (appended)</button>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"makeToast()"</span>&gt;</span>Show Toast<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"makeToast(true)"</span>&gt;</span>Show Toast (appended)<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
@@ -416,7 +416,7 @@
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <p>
   一旦使用<code translate="no" class="notranslate text-nowrap">this.$bvToast.toast()</code>生成的toast被隐藏，它将被自动销毁并从文档中删除。
 </p>
@@ -464,7 +464,7 @@
 <button type="button" class="btn mb-2 btn-info">Info</button>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"makeToast()"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-2"</span>&gt;</span>Default<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"primary"</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"makeToast('primary')"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-2"</span>&gt;</span>Primary<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
@@ -488,7 +488,7 @@
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <h3 id="toaster-target" class="bv-no-focus-ring"><span class="bd-content-title">Toaster target<a class="anchorjs-link" href="#toaster-target" aria-labelledby="toaster-target"></a></span></h3>
 <p>BootstrapVue带有以下“内置”toaster名称（以及在SCSS中定义的相关样式）：</p>
 <ul>
@@ -513,7 +513,7 @@
 <button type="button" class="btn mb-2 btn-secondary">b-toaster-bottom-full</button>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"toast('b-toaster-top-right')"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-2"</span>&gt;</span>b-toaster-top-right<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"toast('b-toaster-top-left')"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-2"</span>&gt;</span>b-toaster-top-left<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
@@ -545,7 +545,7 @@
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <p><strong>Notes:</strong></p>
 <ul>
 <li>
@@ -582,7 +582,7 @@
 <button type="button" class="btn btn-secondary">Toast with link</button>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"toast()"</span>&gt;</span>Toast with link<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -599,7 +599,7 @@
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <h2 id="b-toast-component" class="bv-no-focus-ring"><span class="bd-content-title"><code translate="no" class="notranslate text-nowrap">&lt;b-toast&gt;</code> component 部件<a class="anchorjs-link" href="#b-toast-component" aria-labelledby="b-toast-component"></a></span></h2>
 <p>
   如果有一个自定义组件希望一次只显示一个toast，请使用<code translate="no" class="notranslate text-nowrap">&lt;b-toast&gt;</code>组件。<code translate="no" class="notranslate text-nowrap">&lt;b-toast&gt;</code>组件可以放置在自定义组件或应用程序中的任何位置，并且不呈现元素（它们呈现不会影响布局的注释占位符节点）。
@@ -618,7 +618,7 @@
 <button type="button" class="btn btn-secondary">Show toast</button>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"$bvToast.show('my-toast')"</span>&gt;</span>Show toast<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
 
@@ -634,7 +634,7 @@
       It is short and to the point.
     <span class="hljs-tag">&lt;/<span class="hljs-name">b-toast</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span></pre></figure>
 <h3 id="slots" class="bv-no-focus-ring"><span class="bd-content-title">插槽<a class="anchorjs-link" href="#slots" aria-labelledby="slots"></a></span></h3>
 <ul>
 <li><code translate="no" class="notranslate text-nowrap">toast-title</code>: 替换默认标题元素的内容。</li>
@@ -722,7 +722,7 @@
 <button type="button" class="btn btn-secondary">Show Toast with custom content</button>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"popToast"</span>&gt;</span>Show Toast with custom content<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -771,7 +771,7 @@
       }
     }
  }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <h2 id="alerts-versus-toasts" class="bv-no-focus-ring"><span class="bd-content-title">Alerts versus toasts<a class="anchorjs-link" href="#alerts-versus-toasts" aria-labelledby="alerts-versus-toasts"></a></span></h2>
 <p>
   在某些情况下，您可能只需要一个简单的警报样式消息（即cookie使用通知等）。在这些情况下，通过在<a href="../../../bootstrap-vue/docs/components/alert" class="font-weight-bold"><code translate="no" class="notranslate text-nowrap">&lt;b-alert&gt;</code></a>组件上应用一些引导 <a href="../../../bootstrap-vue/docs/reference/utility-classes" class="font-weight-bold">使用程序类</a>和少量自定义样式，通常最好使用固定位置警报而不是toast：
@@ -782,7 +782,7 @@
 <button type="button" class="btn btn-secondary btn-sm"> Show Fixed top Alert </button>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"sm"</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"showBottom = !showBottom"</span>&gt;</span>
       {{ showBottom ? 'Hide' : 'Show' }} Fixed bottom Alert
@@ -821,7 +821,7 @@
     }
   }
 }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <p>
   我们使用类位置固定来设置用户视窗内的<code translate="no" class="notranslate text-nowrap">固定位置</code>，并且类<code translate="no" class="notranslate text-nowrap">固定底部</code>
   或<code translate="no" class="notranslate text-nowrap">固定顶部</code>来将警报定位在视窗的底部或顶部。类<code translate="no" class="notranslate text-nowrap">m-0</code>删除警报周围的默认边距，<code translate="no" class="notranslate text-nowrap">rounded-0</code>删除默认圆角。我们还将<code translate="no" class="notranslate text-nowrap">z-index</code>设置为一个大值，以确保警报出现在页面上的任何其他内容上（<code translate="no" class="notranslate text-nowrap">fixed-top</code>和<code translate="no" class="notranslate text-nowrap">fixed-bottom</code>的默认值是<code translate="no" class="notranslate text-nowrap">1030</code>）。您可能需要为您的特定布局调整<code translate="no" class="notranslate text-nowrap">z-index</code>。
@@ -1195,8 +1195,8 @@
 </table>
 </div>
 <p><strong>示例：</strong></p>
-<pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { BToast } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
-Vue.component(<span class="hljs-string">'b-toast'</span>, BToast)</pre>
+<figure class="highlight"><pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { BToast } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
+Vue.component(<span class="hljs-string">'b-toast'</span>, BToast)</pre></figure>
 </article>
 <article class="bd-content">
 <h3 id="importing-as-a-plugin" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title"> 导入为Vue.js插件 <a href="../../../bootstrap-vue/docs/components/toast#importing-as-a-plugin" class="anchorjs-link" aria-labelledby="importing-as-a-plugin" target="_self"></a></span></h3>
@@ -1222,8 +1222,8 @@ Vue.component(<span class="hljs-string">'b-toast'</span>, BToast)</pre>
 <li><code translate="translate" class="notranslate">BVToastPlugin</code></li>
 </ul>
 <p><strong>示例：</strong></p>
-<pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { ToastPlugin } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
-Vue.use(ToastPlugin)</pre>
+<figure class="highlight"><pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { ToastPlugin } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
+Vue.use(ToastPlugin)</pre></figure>
 
 
 
@@ -1238,8 +1238,7 @@ Vue.use(ToastPlugin)</pre>
 </div>
 
 
-<script src="../../../js/jquery-3.2.1.slim.min.js"></script> 
-<script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery-slim.min.js"><\/script>')</script> 
+<script src="../../../v4/assets/js/vendor/jquery-slim.min.js"></script>
 <script src="../../../v4/dist/js/popper.min.js"></script> 
 <script src="../../../v4/dist/js/bootstrap.min.js"></script> 
 <script src="../../../v4/assets/js/docs.min.js"></script> 

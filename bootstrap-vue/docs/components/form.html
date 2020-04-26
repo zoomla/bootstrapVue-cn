@@ -47,7 +47,7 @@
     </ul>
   </div>
   <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="alse"> v2.6.1 </a>
+    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="alse"> v2.12.0 </a>
       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions"> 
         <a class="dropdown-item active" href="../../../bootstrap-vue/docs/4.0/">Latest (4.3.x)</a>
         <a class="dropdown-item" href="/Boot/">v3.3.7</a>
@@ -321,17 +321,17 @@
 <div>Form Data Result</div>
 </div>
 <div class="card-body">
-<pre class="m-0">{
+<figure class="highlight"><pre class="m-0">{
   "email": "",
   "name": "",
   "food": null,
   "checked": []
-}</pre>
+}</pre></figure>
 </div>
 </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-form</span> @<span class="hljs-attr">submit</span>=<span class="hljs-string">"onSubmit"</span> @<span class="hljs-attr">reset</span>=<span class="hljs-string">"onReset"</span> <span class="hljs-attr">v-if</span>=<span class="hljs-string">"show"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">b-form-group</span>
@@ -417,7 +417,7 @@
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <h2 id="inline-form" class="bv-no-focus-ring"><span class="bd-content-title">内联表格<a class="anchorjs-link" href="#inline-form" aria-labelledby="inline-form"></a></span></h2>
 <p>使用 <code translate="no" class="notranslate text-nowrap">&lt;b-form&gt;</code> 上的 <code translate="no" class="notranslate text-nowrap">inline</code>（内联）属性在单个水平行上显示一系列标签，表单控件和按钮。 内联表单中的表单控件与其默认状态略有不同。</p>
 <ul>
@@ -446,7 +446,7 @@
 </form>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-form</span> <span class="hljs-attr">inline</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"sr-only"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"inline-form-input-name"</span>&gt;</span>Name<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-input</span>
@@ -464,7 +464,7 @@
 
     <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"primary"</span>&gt;</span>Save<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-form</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre></figure>
 <p>还支持自定义表单控件和选择。</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-form-inline-custom notranslate">
 <div>
@@ -484,6 +484,7 @@
 </form>
 </div>
 </div>
+<figure class="highlight">
 <pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-form</span> <span class="hljs-attr">inline</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mr-sm-2"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"inline-form-custom-select-pref"</span>&gt;</span>Preference<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
@@ -502,7 +503,7 @@
 
     <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"primary"</span>&gt;</span>Save<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-form</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre></figure>
 <p><strong>注意：</strong> <em>由于布局冲突，<code translate="no" class="notranslate text-nowrap">inline</code>（内联）表单不支持 <code translate="no" class="notranslate text-nowrap">&lt;b-form-group&gt;</code></em></p>
 <h3 id="alternatives-to-hidden-labels" class="bv-no-focus-ring"><span class="bd-content-title">隐藏标签的替代方法<a class="anchorjs-link" href="#alternatives-to-hidden-labels" aria-labelledby="alternatives-to-hidden-labels"></a></span></h3>
 <p>如果您没有为每个 input（输入）都包含标签，那么诸如屏幕阅读器之类的辅助技术将对您的表单造成麻烦。对于这些内联表单，您可以使用 <code translate="no" class="notranslate text-nowrap">.sr-only</code> 类隐藏标签。 还有其他为辅助技术提供标签的替代方法，例如 <code translate="no" class="notranslate text-nowrap">aria-label</code> ，<code translate="no" class="notranslate text-nowrap">aria-labelledby</code> 或 <code translate="no" class="notranslate text-nowrap">title</code> 属性。如果不存在任何一种，辅助技术可能会诉诸使用 <code translate="no" class="notranslate text-nowrap">placeholder</code> （占位符）属性（如果存在），但是请注意，不建议使用 <code translate="no" class="notranslate text-nowrap">placeholder</code>（占位符）代替其他标记方法。</p>
@@ -541,7 +542,7 @@
 </form>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-form</span> @<span class="hljs-attr">submit.stop.prevent</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"text-password"</span>&gt;</span>Password<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"password"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"text-password"</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">"password-help-block"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-input</span>&gt;</span>
@@ -550,7 +551,7 @@
       contain spaces, special characters, or emoji.
     <span class="hljs-tag">&lt;/<span class="hljs-name">b-form-text</span>&gt;</span>
    <span class="hljs-tag">&lt;/<span class="hljs-name">b-form</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre></figure>
 <h3 id="feedback-helpers" class="bv-no-focus-ring"><span class="bd-content-title">反馈辅助<a class="anchorjs-link" href="#feedback-helpers" aria-labelledby="feedback-helpers"></a></span></h3>
 <p><code translate="no" class="notranslate text-nowrap">&lt;b-form-valid-feedback&gt;</code> 和 <code translate="no" class="notranslate text-nowrap">&lt;b-form-invalid-feedback&gt;</code> 帮助器组件将反馈（基于输入状态）显示为彩色文本块。 它们依赖于放置在输入（同级）之后，并将根据输入的浏览器本机验证状态显示。 若要强制显示，请将 <code translate="no" class="notranslate text-nowrap">force-show</code> 属性设置为 <code translate="no" class="notranslate text-nowrap">true</code> ，或将控件 <code translate="no" class="notranslate text-nowrap">state</code>（状态）绑定到反馈帮助器的 <code translate="no" class="notranslate text-nowrap">state</code>（状态）属性，，或在父元素（例如，表单）上设置 <code translate="no" class="notranslate text-nowrap">was-validated</code> 类。 有关其他详细信息，请参见下面的 <strong>Validation</strong>（验证方式）部分。</p>
 <p>使用可选的 Boolean 属性 <code translate="no" class="notranslate text-nowrap">tooltip</code>（工具提示）将显示从块更改为静态工具提示样式。反馈通常将显示在表单控件下方。 启用此模式后，重要的是父容器必须具有 <code translate="no" class="notranslate text-nowrap">position: relative:</code> css样式（或 <code translate="no" class="notranslate text-nowrap">position-relative</code> 类）。请注意，由于工具提示样式的位置是静态的，因此可能会使其他输入，标签等模糊不清。</p>
@@ -565,7 +566,7 @@
 </form>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-form</span>  @<span class="hljs-attr">submit.stop.prevent</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"feedback-user"</span>&gt;</span>User ID<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
@@ -593,7 +594,7 @@
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <h3 id="datalist-helper" class="bv-no-focus-ring"><span class="bd-content-title">数据列表帮助<a class="anchorjs-link" href="#datalist-helper" aria-labelledby="datalist-helper"></a></span></h3>
 <p>对于支持 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist" target="_blank" rel="noopener"><code translate="no" class="notranslate text-nowrap">&lt;datalist&gt;</code></a> 元素的浏览器，<code translate="no" class="notranslate text-nowrap">&lt;b-form-datalist&gt;</code> 帮助器组件将允许您通过传递给 <code translate="no" class="notranslate text-nowrap">options</code> 属性的数组快速创建 <code translate="no" class="notranslate text-nowrap">&lt;datalist&gt;</code> 和 <code translate="no" class="notranslate text-nowrap">&lt;option&gt;</code> 子元素</p>
 <p>您也可以在 <code translate="no" class="notranslate text-nowrap">&lt;b-form-datalist&gt;</code> 中手动提供 <code translate="no" class="notranslate text-nowrap">&lt;option&gt;</code> 元素。它们将显示在 <code translate="no" class="notranslate text-nowrap">options</code> 属性生成的所有 <code translate="no" class="notranslate text-nowrap">&lt;option&gt;</code> 元素下方。</p>
@@ -608,7 +609,7 @@
 <option value="Orange">Orange</option>
 </datalist>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"input-with-list"</span>&gt;</span>Input with datalist<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-form-input</span> <span class="hljs-attr">list</span>=<span class="hljs-string">"input-list"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"input-with-list"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-input</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-form-datalist</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"input-list"</span> <span class="hljs-attr">:options</span>=<span class="hljs-string">"options"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-datalist</span>&gt;</span>
@@ -622,7 +623,7 @@
     }
   }
 }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <p>也可以通过 <code translate="no" class="notranslate text-nowrap">&lt;b-datalist&gt;</code> 的较短别名来使用 <code translate="no" class="notranslate text-nowrap">&lt;b-form-datalist&gt;</code> 。</p>
 <p>另请参阅：</p>
 <ul>
@@ -1109,8 +1110,8 @@
 </table>
 </div>
 <p><strong>示例：</strong></p>
-<pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { BForm } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
-Vue.component(<span class="hljs-string">'b-form'</span>, BForm)</pre>
+<figure class="highlight"><pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { BForm } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
+Vue.component(<span class="hljs-string">'b-form'</span>, BForm)</pre></figure>
 </article>
 
 <article class="bd-content">
@@ -1139,8 +1140,8 @@ Vue.component(<span class="hljs-string">'b-form'</span>, BForm)</pre>
 </div>
 
 <p><strong>示例：</strong></p>
-<pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { FormPlugin } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
-Vue.use(FormPlugin)</pre>
+<figure class="highlight"><pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { FormPlugin } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
+Vue.use(FormPlugin)</pre></figure>
 </article>
 
 
@@ -1168,8 +1169,7 @@ Vue.use(FormPlugin)</pre>
 </div>
 
 
-<script src="../../../js/jquery-3.2.1.slim.min.js"></script> 
-<script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery-slim.min.js"><\/script>')</script> 
+<script src="../../../v4/assets/js/vendor/jquery-slim.min.js"></script>
 <script src="../../../v4/dist/js/popper.min.js"></script> 
 <script src="../../../v4/dist/js/bootstrap.min.js"></script> 
 <script src="../../../v4/assets/js/docs.min.js"></script> 

@@ -47,7 +47,7 @@
     </ul>
   </div>
   <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="alse"> v2.6.1 </a>
+    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="alse"> v2.12.0 </a>
       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions"> 
         <a class="dropdown-item active" href="../../../bootstrap-vue/docs/4.0/">Latest (4.3.x)</a>
         <a class="dropdown-item" href="/Boot/">v3.3.7</a>
@@ -486,7 +486,7 @@
 </table>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-table</span> <span class="hljs-attr">striped</span> <span class="hljs-attr">hover</span> <span class="hljs-attr">:items</span>=<span class="hljs-string">"items"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-table</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -505,16 +505,16 @@
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <h2 id="items-record-data" class="bv-no-focus-ring"><span class="bd-content-title">项目（记录数据）<a class="anchorjs-link" href="#items-record-data" aria-labelledby="items-record-data"></a></span></h2>
 <p><code translate="no" class="notranslate text-nowrap">items</code> items是数组格式的表数据，其中每个记录（行）数据都是键对象。 示例格式：</p>
 <!-- eslint-disable no-unused-vars -->
 
-<pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-keyword">const</span> items = [
+<figure class="highlight"><pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-keyword">const</span> items = [
   { <span class="hljs-attr">age</span>: <span class="hljs-number">32</span>, <span class="hljs-attr">first_name</span>: <span class="hljs-string">'Cyndi'</span> },
   { <span class="hljs-attr">age</span>: <span class="hljs-number">27</span>, <span class="hljs-attr">first_name</span>: <span class="hljs-string">'Havij'</span> },
   { <span class="hljs-attr">age</span>: <span class="hljs-number">42</span>, <span class="hljs-attr">first_name</span>: <span class="hljs-string">'Robert'</span> }
-]</pre>
+]</pre></figure>
 <p><code translate="no" class="notranslate text-nowrap">&lt;b-table&gt;</code> 自动对第一行进行采样以提取字段名称（记录数据中的键）。 字段名称是自动的 
 <code translate="no" class="notranslate text-nowrap">kebab-case</code>, <code translate="no" class="notranslate text-nowrap">snake_case</code>, and
  <code translate="no" class="notranslate text-nowrap">camelCase</code> kebab-case，snake_case和camel对单个单词进行大写并为每个单词大写。 转换示例:</p>
@@ -608,7 +608,7 @@
 </table>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-table</span> <span class="hljs-attr">hover</span> <span class="hljs-attr">:items</span>=<span class="hljs-string">"items"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-table</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -638,7 +638,7 @@
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <p><code translate="no" class="notranslate text-nowrap">items</code> 也可以是对提供程序函数的引用，该函数将返回一个Array of items数据。 提供程序功能也可以是异步的：</p>
 <ul>
 <li>在数据准备好后，以数据组作为回调的唯一参数，通过返回 <code translate="no" class="notranslate text-nowrap">null</code> (或 <code translate="no" class="notranslate text-nowrap">
@@ -696,7 +696,7 @@
 </table>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-table</span> <span class="hljs-attr">striped</span> <span class="hljs-attr">hover</span> <span class="hljs-attr">:items</span>=<span class="hljs-string">"items"</span> <span class="hljs-attr">:fields</span>=<span class="hljs-string">"fields"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-table</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -717,7 +717,7 @@
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <h3 id="fields-as-an-array-of-objects" class="bv-no-focus-ring"><span class="bd-content-title">字段作为对象数组<a class="anchorjs-link" href="#fields-as-an-array-of-objects" aria-labelledby="fields-as-an-array-of-objects"></a></span></h3>
 <p>字段可以是对象数组，可以对字段进行其他控制（例如排序，格式化等）。 仅显示出现在字段数组中的列（键）：</p>
 <p><strong>示例：使用对象数组字段定义</strong></p>
@@ -757,7 +757,7 @@
 </table>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-table</span> <span class="hljs-attr">striped</span> <span class="hljs-attr">hover</span> <span class="hljs-attr">:items</span>=<span class="hljs-string">"items"</span> <span class="hljs-attr">:fields</span>=<span class="hljs-string">"fields"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-table</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -794,7 +794,7 @@
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <h3 id="field-definition-reference" class="bv-no-focus-ring"><span class="bd-content-title">字段定义参考<a class="anchorjs-link" href="#field-definition-reference" aria-labelledby="field-definition-reference"></a></span></h3>
 <p>可以识别以下字段属性：</p>
 <div class="table-responsive-sm">
@@ -981,12 +981,12 @@
 <p></p>随意混合和匹配简单数组和对象数组：</p>
 <!-- eslint-disable no-unused-vars -->
 
-<pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-keyword">const</span> fields = [
+<figure class="highlight"><pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-keyword">const</span> fields = [
   { <span class="hljs-attr">key</span>: <span class="hljs-string">'first_name'</span>, <span class="hljs-attr">label</span>: <span class="hljs-string">'First'</span> },
   { <span class="hljs-attr">key</span>: <span class="hljs-string">'last_name'</span>, <span class="hljs-attr">label</span>: <span class="hljs-string">'Last'</span> },
   <span class="hljs-string">'age'</span>,
   <span class="hljs-string">'sex'</span>
-]</pre>
+]</pre></figure>
 <h2 id="primary-key" class="bv-no-focus-ring"><span class="bd-content-title">主键<a class="anchorjs-link" href="#primary-key" aria-labelledby="primary-key"></a></span></h2>
 <p><code translate="no" class="notranslate text-nowrap">&lt;b-table&gt;</code> 提供而外的道具给<code translate="no" class="notranslate text-nowrap">primary-key</code>您可以使用它来标识唯一标识行的字段键的名称。
 </p>
@@ -1273,7 +1273,7 @@ a和拖放插件，因为它们依赖于每行：key值的一致性和唯一性�
 </table>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-form-group</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Table Options"</span> <span class="hljs-attr">label-cols-lg</span>=<span class="hljs-string">"2"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">b-form-checkbox</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">"striped"</span> <span class="hljs-attr">inline</span>&gt;</span>Striped<span class="hljs-tag">&lt;/<span class="hljs-name">b-form-checkbox</span>&gt;</span>
@@ -1360,7 +1360,7 @@ a和拖放插件，因为它们依赖于每行：key值的一致性和唯一性�
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <h3 id="row-styling-and-attributes" class="bv-no-focus-ring"><span class="bd-content-title">行样式和属性<a class="anchorjs-link" href="#row-styling-and-attributes" aria-labelledby="row-styling-and-attributes"></a></span></h3>
 <p>
   您还可以使用<code translate="no" class="notranslate text-nowrap">tbody-tr-class</code>属性设置每一行的样式，并可以选择通过<code translate="no" class="notranslate text-nowrap">tbody-tr-attr</code>属性提供其他属性：
@@ -1442,7 +1442,7 @@ a和拖放插件，因为它们依赖于每行：key值的一致性和唯一性�
 </table>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-table</span> <span class="hljs-attr">:items</span>=<span class="hljs-string">"items"</span> <span class="hljs-attr">:fields</span>=<span class="hljs-string">"fields"</span> <span class="hljs-attr">:tbody-tr-class</span>=<span class="hljs-string">"rowClass"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-table</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -1467,7 +1467,7 @@ a和拖放插件，因为它们依赖于每行：key值的一致性和唯一性�
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <h3 id="responsive-tables" class="bv-no-focus-ring"><span class="bd-content-title">响应表格<a class="anchorjs-link" href="#responsive-tables" aria-labelledby="responsive-tables"></a></span></h3>
 <p>
   响应式表格允许轻松地水平滚动表。 通过将prop设置为<code translate="no" class="notranslate text-nowrap">true</code>，
@@ -1547,7 +1547,7 @@ a和拖放插件，因为它们依赖于每行：key值的一致性和唯一性�
 </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-table</span> <span class="hljs-attr">responsive</span> <span class="hljs-attr">:items</span>=<span class="hljs-string">"items"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-table</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -1604,7 +1604,7 @@ a和拖放插件，因为它们依赖于每行：key值的一致性和唯一性�
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <p><strong>响应表格注释：</strong></p>
 <ul>
 <li>
@@ -1675,7 +1675,7 @@ a和拖放插件，因为它们依赖于每行：key值的一致性和唯一性�
 </table>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-table</span> <span class="hljs-attr">stacked</span> <span class="hljs-attr">:items</span>=<span class="hljs-string">"items"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-table</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -1693,7 +1693,7 @@ a和拖放插件，因为它们依赖于每行：key值的一致性和唯一性�
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <p><strong>注意: 当table被视觉上堆叠时：</strong></p>
 <ul>
 <li>表格标题（和表格页脚）将被隐藏。</li>
@@ -1750,7 +1750,7 @@ This is a table caption.
 </table>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-table</span> <span class="hljs-attr">:items</span>=<span class="hljs-string">"items"</span> <span class="hljs-attr">:fields</span>=<span class="hljs-string">"fields"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">template</span> <span class="hljs-attr">v-slot:table-caption</span>&gt;</span>This is a table caption.<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
@@ -1771,7 +1771,7 @@ This is a table caption.
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <p>
   您可以通过将<code translate="no" class="notranslate text-nowrap">caption-top</code>属性设置为<code translate="no" class="notranslate text-nowrap">true</code>来将标题放置在表格的顶部：
 </p>
@@ -1808,7 +1808,7 @@ This is a table caption at the top.
 </table>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-table</span> <span class="hljs-attr">:items</span>=<span class="hljs-string">"items"</span> <span class="hljs-attr">:fields</span>=<span class="hljs-string">"fields"</span> <span class="hljs-attr">caption-top</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">template</span> <span class="hljs-attr">v-slot:table-caption</span>&gt;</span>This is a table caption at the top.<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
@@ -1829,7 +1829,7 @@ This is a table caption at the top.
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <p>
   您还可以使用<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/caption-side" target="_blank" rel="noopener">自定义 CSS</a>来控制字幕的位置。
 </p>
@@ -1878,7 +1878,7 @@ This is a table caption at the top.
   在某些情况下，当尝试通过<col>元素上的 <code translate="no" class="notranslate text-nowrap">style</code>或
   <code translate="no" class="notranslate text-nowrap">class</code>设置列宽时，您可能会发现将表置于<code translate="no" class="notranslate text-nowrap">固定</code>标题宽度（表固定布局模式）模式与<code translate="no" class="notranslate text-nowrap">responsive</code>（水平滚动）模式结合使用会有所帮助，尽管您将需要通过样式或类为每个列的相应<code translate="no" class="notranslate text-nowrap">&lt;col&gt;</code>元素设置显式宽度或最小宽度。例如：
 </p>
-<pre class="hljs html text-monospace p-2 notranslate" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-table</span> <span class="hljs-attr">fixed</span> <span class="hljs-attr">responsive</span> <span class="hljs-attr">:items</span>=<span class="hljs-string">"items"</span> <span class="hljs-attr">:fields</span>=<span class="hljs-string">"fields"</span> <span class="hljs-attr">...</span> &gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-table</span> <span class="hljs-attr">fixed</span> <span class="hljs-attr">responsive</span> <span class="hljs-attr">:items</span>=<span class="hljs-string">"items"</span> <span class="hljs-attr">:fields</span>=<span class="hljs-string">"fields"</span> <span class="hljs-attr">...</span> &gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">template</span> <span class="hljs-attr">v-slot:table-colgroup</span>=<span class="hljs-string">"scope"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">col</span>
       <span class="hljs-attr">v-for</span>=<span class="hljs-string">"field in scope.fields"</span>
@@ -1887,7 +1887,7 @@ This is a table caption at the top.
     &gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-comment">&lt;!-- additional table slots here if needed --&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">b-table</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b-table</span>&gt;</span></pre></figure>
 <h3 id="table-busy-state" class="bv-no-focus-ring"><span class="bd-content-title">表格忙碌状态<a class="anchorjs-link" href="#table-busy-state" aria-labelledby="table-busy-state"></a></span></h3>
 <p>
   <code translate="no" class="notranslate text-nowrap">&lt;b-table&gt;</code>提供了一个忙碌属性，它将把table标记为<code translate="no" class="notranslate text-nowrap">busy</code>，您可以在更新商品之前将其设置为<code translate="no" class="notranslate text-nowrap">true</code>，然后在拥有商品后将其设置为<code translate="no" class="notranslate text-nowrap">false</code>。当处于繁忙状态时，该表将具有属性<code translate="no" class="notranslate text-nowrap">aria-busy="true"</code>。
@@ -1895,10 +1895,10 @@ This is a table caption at the top.
 <p>
   在繁忙状态期间，将使用以下自定义CSS将表呈现为“静音”外观（<code translate="no" class="notranslate text-nowrap">opacity: 0.6</code>）：
 </p>
-<pre class="hljs css text-monospace p-2 notranslate" translate="no"><span class="hljs-comment">/* Busy table styling */</span>
+<figure class="highlight"><pre class="hljs css text-monospace p-2 notranslate" translate="no"><span class="hljs-comment">/* Busy table styling */</span>
 <span class="hljs-selector-tag">table</span><span class="hljs-selector-class">.b-table</span><span class="hljs-selector-attr">[aria-busy=<span class="hljs-string">'true'</span>]</span> {
   <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0.6</span>;
-}</pre>
+}</pre></figure>
 <p>您可以使用自己的CSS覆盖此样式。</p>
 <p>
   您可以选择提供一个<code translate="no" class="notranslate text-nowrap">table-busy</code>
@@ -1944,7 +1944,7 @@ This is a table caption at the top.
 </table>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"toggleBusy"</span>&gt;</span>Toggle Busy State<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
 
@@ -1978,7 +1978,7 @@ This is a table caption at the top.
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <p>
   另请参阅下面的<a href="#using-items-provider-functions" class="font-weight-bold">使用项目提供程序功能</a>以获取有关<code translate="no" class="notranslate text-nowrap">busy</code>状态的其他信息。
 </p>
@@ -2054,7 +2054,7 @@ This is a table caption at the top.
 </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-table</span> <span class="hljs-attr">small</span> <span class="hljs-attr">:fields</span>=<span class="hljs-string">"fields"</span> <span class="hljs-attr">:items</span>=<span class="hljs-string">"items"</span> <span class="hljs-attr">responsive</span>=<span class="hljs-string">"sm"</span>&gt;</span>
       <span class="hljs-comment">&lt;!-- A virtual column --&gt;</span>
@@ -2105,7 +2105,7 @@ This is a table caption at the top.
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <p>
   
   插槽的范围变量（上述示例中的<code translate="no" class="notranslate text-nowrap">data</code>）将具有以下属性：
@@ -2228,7 +2228,7 @@ This is a table caption at the top.
 </table>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-table</span> <span class="hljs-attr">:items</span>=<span class="hljs-string">"items"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">template</span> <span class="hljs-attr">v-slot:cell</span>(<span class="hljs-attr">html</span>)=<span class="hljs-string">"data"</span>&gt;</span>
@@ -2251,7 +2251,7 @@ This is a table caption at the top.
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <p class="alert alert-danger"> <strong>警告:</strong> 
   请谨慎使用<code class="notranslate" translate="no">v-html</code>方法显示用户提供的内容，因为这可能会使您的应用程序容易受到<a class="alert-link" href="https://en.wikipedia.org/wiki/Cross-site_scripting"> <abbr title="Cross Site Scripting Attacks">XSS 攻击</abbr></a>
 </p>
@@ -2305,7 +2305,7 @@ This is a table caption at the top.
 </table>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-table</span> <span class="hljs-attr">:fields</span>=<span class="hljs-string">"fields"</span> <span class="hljs-attr">:items</span>=<span class="hljs-string">"items"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">template</span> <span class="hljs-attr">v-slot:cell</span>(<span class="hljs-attr">name</span>)=<span class="hljs-string">"data"</span>&gt;</span>
@@ -2360,7 +2360,7 @@ This is a table caption at the top.
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <h2 id="header-and-footer-custom-rendering-via-scoped-slots" class="bv-no-focus-ring"><span class="bd-content-title">通过作用域插槽的页眉和页脚自定义呈现<a class="anchorjs-link" href="#header-and-footer-custom-rendering-via-scoped-slots" aria-labelledby="header-and-footer-custom-rendering-via-scoped-slots"></a></span></h2>
 <p>
   还可以为表格<code translate="no" class="notranslate text-nowrap">thead</code>和 
@@ -2419,7 +2419,7 @@ This is a table caption at the top.
 </table>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-table</span> <span class="hljs-attr">:fields</span>=<span class="hljs-string">"fields"</span> <span class="hljs-attr">:items</span>=<span class="hljs-string">"items"</span> <span class="hljs-attr">foot-clone</span>&gt;</span>
       <span class="hljs-comment">&lt;!-- A custom formatted data column cell --&gt;</span>
@@ -2466,7 +2466,7 @@ This is a table caption at the top.
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <p>
   插槽可以选择范围（上例中的<code translate="no" class="notranslate text-nowrap">数据</code>），并具有以下属性：
 </p>
@@ -2603,7 +2603,7 @@ This is a table caption at the top.
 </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-table</span>
       <span class="hljs-attr">:items</span>=<span class="hljs-string">"items"</span>
@@ -2645,7 +2645,7 @@ This is a table caption at the top.
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <p>
   插槽<code translate="no" class="notranslate text-nowrap">thead-top</code>可以选择范围，接收具有以下属性的对象：
 </p>
@@ -2745,7 +2745,7 @@ This is a table caption at the top.
 <p>
   为了显示这些插槽，必须设置<code translate="no" class="notranslate text-nowrap">show-empty</code>属性，并且项必须为falsy或长度为0的数组。
 </p>
-<pre class="hljs html text-monospace p-2 notranslate" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-table</span> <span class="hljs-attr">:fields</span>=<span class="hljs-string">"fields"</span> <span class="hljs-attr">:items</span>=<span class="hljs-string">"items"</span> <span class="hljs-attr">show-empty</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">template</span> <span class="hljs-attr">v-slot:empty</span>=<span class="hljs-string">"scope"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">h4</span>&gt;</span>{{ scope.emptyText }}<span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
@@ -2754,7 +2754,7 @@ This is a table caption at the top.
       <span class="hljs-tag">&lt;<span class="hljs-name">h4</span>&gt;</span>{{ scope.emptyFilteredText }}<span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-table</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre></figure>
 <p>
   插槽可以选择范围。 插槽的范围（上例中的作用域）将具有以下属性：
 </p>
@@ -2888,7 +2888,7 @@ This is a table caption at the top.
 </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-table</span> <span class="hljs-attr">sticky-header</span> <span class="hljs-attr">:items</span>=<span class="hljs-string">"items"</span> <span class="hljs-attr">head-variant</span>=<span class="hljs-string">"light"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-table</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -2915,7 +2915,7 @@ This is a table caption at the top.
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <p><strong>粘性标头说明：</strong></p>
 <ul>
 <li>
@@ -3131,7 +3131,7 @@ This is a table caption at the top.
 </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-2"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">b-form-checkbox</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">"stickyHeader"</span> <span class="hljs-attr">inline</span>&gt;</span>Sticky header<span class="hljs-tag">&lt;/<span class="hljs-name">b-form-checkbox</span>&gt;</span>
@@ -3193,7 +3193,7 @@ This is a table caption at the top.
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <p><strong>粘性列注释：</strong></p>
 <ul>
 <li>
@@ -3363,7 +3363,7 @@ This is a table caption at the top.
 </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-table</span> <span class="hljs-attr">:items</span>=<span class="hljs-string">"items"</span> <span class="hljs-attr">:fields</span>=<span class="hljs-string">"fields"</span> <span class="hljs-attr">striped</span> <span class="hljs-attr">responsive</span>=<span class="hljs-string">"sm"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">template</span> <span class="hljs-attr">v-slot:cell</span>(<span class="hljs-attr">show_details</span>)=<span class="hljs-string">"row"</span>&gt;</span>
@@ -3416,7 +3416,7 @@ This is a table caption at the top.
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <h3 id="row-select-support" class="bv-no-focus-ring"><span class="bd-content-title">行选择支持<a class="anchorjs-link" href="#row-select-support" aria-labelledby="row-select-support"></a></span></h3>
 <p>
 
@@ -3603,7 +3603,7 @@ This is a table caption at the top.
 [] </p>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-form-group</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Selection mode:"</span> <span class="hljs-attr">label-cols-md</span>=<span class="hljs-string">"4"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">b-form-select</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">"selectMode"</span> <span class="hljs-attr">:options</span>=<span class="hljs-string">"modes"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-3"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-select</span>&gt;</span>
@@ -3679,7 +3679,7 @@ This is a table caption at the top.
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <h3 id="table-body-transition-support" class="bv-no-focus-ring"><span class="bd-content-title">表格内容过渡支持<a class="anchorjs-link" href="#table-body-transition-support" aria-labelledby="table-body-transition-support"></a></span></h3>
 <p>
   可以通过内部使用Vue的<code translate="no" class="notranslate text-nowrap">&lt;tbody&gt;</code>组件在<tbody>元素上支持Vue<code translate="no" class="notranslate text-nowrap">&lt;transition-group&gt;</code>。 提供了三个支持过渡的道具（所有三个道具默认为undefined）：
@@ -3724,9 +3724,9 @@ This is a table caption at the top.
   有关Vue的列表呈现过渡的更多信息，请参见 <a href="https://vuejs.org/v2/guide/transitions.html#List-Move-Transitions" target="_blank" rel="noopener">Vue JS 官方文档</a>。
 </p>
 <p>在下面的示例中，我们使用了以下自定义CSS：</p>
-<pre class="hljs css text-monospace p-2 notranslate" translate="no"><span class="hljs-selector-tag">table</span><span class="hljs-selector-id">#table-transition-example</span> <span class="hljs-selector-class">.flip-list-move</span> {
+<figure class="highlight"><pre class="hljs css text-monospace p-2 notranslate" translate="no"><span class="hljs-selector-tag">table</span><span class="hljs-selector-id">#table-transition-example</span> <span class="hljs-selector-class">.flip-list-move</span> {
   <span class="hljs-attribute">transition</span>: transform <span class="hljs-number">1s</span>;
-}</pre>
+}</pre></figure>
 <div translate="translate" class="bd-example vue-example vue-example-b-table-transitions notranslate">
 <div>
 <table id="table-transition-example" role="table" aria-busy="false" aria-colcount="3" class="table b-table table-striped table-sm">
@@ -3762,7 +3762,7 @@ This is a table caption at the top.
 </table>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-table</span>
       <span class="hljs-attr">id</span>=<span class="hljs-string">"table-transition-example"</span>
@@ -3799,7 +3799,7 @@ This is a table caption at the top.
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <h3 id="v-model-binding" class="bv-no-focus-ring"><span class="bd-content-title"><code translate="no" class="notranslate text-nowrap">v-model</code> 捆绑<a class="anchorjs-link" href="#v-model-binding" aria-labelledby="v-model-binding"></a></span></h3>
 <p>
   如果将变量绑定到<code translate="no" class="notranslate text-nowrap">v-model</code>属性，
@@ -3887,7 +3887,7 @@ This is a table caption at the top.
 <div> Sorting By: <b>age</b>, Sort Direction: <b>Ascending</b></div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-table</span>
       <span class="hljs-attr">:items</span>=<span class="hljs-string">"items"</span>
@@ -3925,7 +3925,7 @@ This is a table caption at the top.
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <h3 id="sort-icon-alignment" class="bv-no-focus-ring"><span class="bd-content-title">排序图标对齐<a class="anchorjs-link" href="#sort-icon-alignment" aria-labelledby="sort-icon-alignment"></a></span></h3>
 <p>
   默认情况下，排序图标在标题单元格中显示为右对齐。 您可以通过在<code translate="no" class="notranslate text-nowrap">&lt;b-table&gt;</code>上设置属性<code translate="no" class="notranslate text-nowrap">sort-icon-left</code> 来更改图标以使其左对齐。
@@ -3973,7 +3973,7 @@ This is a table caption at the top.
 <div> Sorting By: <b>age</b>, Sort Direction: <b>Ascending</b></div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-table</span>
       <span class="hljs-attr">:items</span>=<span class="hljs-string">"items"</span>
@@ -4014,7 +4014,7 @@ This is a table caption at the top.
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <h3 id="customizing-the-sort-icons" class="bv-no-focus-ring"><span class="bd-content-title">自定义排序图标<a class="anchorjs-link" href="#customizing-the-sort-icons" aria-labelledby="customizing-the-sort-icons"></a></span></h3>
 <p>
   排序图标是通过使用SVG背景图像生成的。可以通过更新BootstrapVue的SASS/SCSS变量并重新编译SCSS源代码来更改图标。有关自定义Bootstrap和BootstrapVue生成的CSS的详细信息，
@@ -4116,7 +4116,7 @@ This is a table caption at the top.
   （瑞典语，<code translate="no" class="notranslate text-nowrap">ä</code>排序在<code translate="no" class="notranslate text-nowrap">z</code>之后）
 </p>
 <p><strong>例子 2:</strong> 要比较数字字符串，并忽略大小写和重音符号：</p>
-<pre class="hljs html text-monospace p-2 notranslate" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-table</span> <span class="hljs-attr">:sort-compare-options</span>=<span class="hljs-string">"{ numeric: true, sensitivity: 'base' }"</span> <span class="hljs-attr">...</span>&gt;</span></pre>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-table</span> <span class="hljs-attr">:sort-compare-options</span>=<span class="hljs-string">"{ numeric: true, sensitivity: 'base' }"</span> <span class="hljs-attr">...</span>&gt;</span></pre></figure>
 <p><strong>注意事项:</strong></p>
 <ul>
 <li>
@@ -4187,7 +4187,7 @@ This is a table caption at the top.
 </p>
 <!-- eslint-disable no-unused-vars, no-undef -->
 
-<pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">sortCompare</span>(<span class="hljs-params">aRow, bRow, key, sortDesc, formatter, compareOptions, compareLocale</span>) </span>{
+<figure class="highlight"><pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">sortCompare</span>(<span class="hljs-params">aRow, bRow, key, sortDesc, formatter, compareOptions, compareLocale</span>) </span>{
   <span class="hljs-keyword">const</span> a = aRow[key] <span class="hljs-comment">// or use Lodash `_.get()`</span>
   <span class="hljs-keyword">const</span> b = bRow[key]
   <span class="hljs-keyword">if</span> (
@@ -4214,7 +4214,7 @@ This is a table caption at the top.
   } <span class="hljs-keyword">else</span> {
     <span class="hljs-keyword">return</span> <span class="hljs-built_in">String</span>(value)
   }
-}</pre>
+}</pre></figure>
 <h3 id="disable-local-sorting" class="bv-no-focus-ring"><span class="bd-content-title">禁用本地排序<a class="anchorjs-link" href="#disable-local-sorting" aria-labelledby="disable-local-sorting"></a></span></h3>
 <p>
   如果您想完全在应用中处理排序，则可以通过将属性<code translate="no" class="notranslate text-nowrap">no-local-sorting</code>
@@ -4375,7 +4375,7 @@ This is a table caption at the top.
 </p>
 <!-- eslint-disable no-undef -->
 
-<pre class="hljs js text-monospace p-2 notranslate" translate="no">provider(ctx, [callback])</pre>
+<figure class="highlight"><pre class="hljs js text-monospace p-2 notranslate" translate="no">provider(ctx, [callback])</pre></figure>
 <p> 
   <code translate="no" class="notranslate text-nowrap">ctx</code> 是与表状态关联的上下文对象，并且包含以下五个属性：
 </p>
@@ -4438,18 +4438,18 @@ This is a table caption at the top.
 <p><strong>示例： 返回数据数组（同步）：</strong></p>
 <!-- eslint-disable no-unused-vars, prefer-const -->
 
-<pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">myProvider</span>(<span class="hljs-params"></span>) </span>{
+<figure class="highlight"><pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">myProvider</span>(<span class="hljs-params"></span>) </span>{
   <span class="hljs-keyword">let</span> items = []
 
   <span class="hljs-comment">// Perform any items processing needed</span>
 
   <span class="hljs-comment">// Must return an array</span>
   <span class="hljs-keyword">return</span> items || []
-}</pre>
+}</pre></figure>
 <p><strong>示例： 使用回调返回数据（异步）：</strong></p>
 <!-- eslint-disable no-unused-vars, standard/no-callback-literal -->
 
-<pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">myProvider</span>(<span class="hljs-params">ctx, callback</span>) </span>{
+<figure class="highlight"><pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">myProvider</span>(<span class="hljs-params">ctx, callback</span>) </span>{
   <span class="hljs-keyword">const</span> params = <span class="hljs-string">'?page='</span> + ctx.currentPage + <span class="hljs-string">'&amp;size='</span> + ctx.perPage
 
   <span class="hljs-keyword">this</span>.fetchData(<span class="hljs-string">'/some/url'</span> + params)
@@ -4465,11 +4465,11 @@ This is a table caption at the top.
 
   <span class="hljs-comment">// Must return null or undefined to signal b-table that callback is being used</span>
   <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>
-}</pre>
+}</pre></figure>
 <p><strong>示例： 使用Promise返回数据（异步）：</strong></p>
 <!-- eslint-disable no-unused-vars, no-undef -->
 
-<pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">myProvider</span>(<span class="hljs-params">ctx</span>) </span>{
+<figure class="highlight"><pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">myProvider</span>(<span class="hljs-params">ctx</span>) </span>{
   <span class="hljs-keyword">const</span> promise = axios.get(<span class="hljs-string">'/some/url?page='</span> + ctx.currentPage + <span class="hljs-string">'&amp;size='</span> + ctx.perPage)
 
   <span class="hljs-comment">// Must return a promise that resolves to an array of items</span>
@@ -4479,7 +4479,7 @@ This is a table caption at the top.
     <span class="hljs-comment">// Must return an array of items or an empty array if an error occurred</span>
     <span class="hljs-keyword">return</span> items || []
   })
-}</pre>
+}</pre></figure>
 <h3 id="automated-table-busy-state" class="bv-no-focus-ring"><span class="bd-content-title">自动表格繁忙状态<a class="anchorjs-link" href="#automated-table-busy-state" aria-labelledby="automated-table-busy-state"></a></span></h3>
 <p>
   使用项目提供程序功能时， <code translate="no" class="notranslate text-nowrap">&lt;b-table&gt;</code> 自动跟踪/控制其<code translate="no" class="notranslate text-nowrap">繁忙</code>状态，
@@ -4491,7 +4491,7 @@ This is a table caption at the top.
   并将空数组返回到<code translate="no" class="notranslate text-nowrap">&lt;b-table&gt;</code>。
 </p>
 <p><strong>示例： 繁忙状态的使用</strong></p>
-<pre class="hljs html text-monospace p-2 notranslate" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-table</span>
       <span class="hljs-attr">id</span>=<span class="hljs-string">"my-table"</span>
@@ -4532,7 +4532,7 @@ This is a table caption at the top.
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <p><strong>注意事项:</strong></p>
 <ul>
 <li>
@@ -4618,12 +4618,12 @@ This is a table caption at the top.
   <code translate="no" class="notranslate text-nowrap">refresh::table</code>来触发提供程序函数的刷新，其中单个参数是<code translate="no" class="notranslate text-nowrap">b-table</code>
   的<code translate="no" class="notranslate text-nowrap">id</code>。 您必须在表上具有唯一的<code translate="no" class="notranslate text-nowrap">id</code>才能起作用。
 </p>
-<pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-keyword">this</span>.$root.$emit(<span class="hljs-string">'bv::refresh::table'</span>, <span class="hljs-string">'my-table'</span>)</pre>
+<figure class="highlight"><pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-keyword">this</span>.$root.$emit(<span class="hljs-string">'bv::refresh::table'</span>, <span class="hljs-string">'my-table'</span>)</pre></figure>
 <p>Or by calling the <code translate="no" class="notranslate text-nowrap">refresh()</code> method on the table reference</p>
-<pre class="hljs html text-monospace p-2 notranslate" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-table</span> <span class="hljs-attr">ref</span>=<span class="hljs-string">"table"</span> <span class="hljs-attr">...</span> &gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-table</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
-<pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-keyword">this</span>.$refs.table.refresh()</pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre></figure>
+<figure class="highlight"><pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-keyword">this</span>.$refs.table.refresh()</pre></figure>
 <p><strong>注意:</strong> 
   如果表处于<code translate="no" class="notranslate text-nowrap">繁忙</code>状态（即当前正在运行提供程序更新），则刷新将一直等到当前更新完成。 如果当前有一个刷新待处理，并且请求一个新的刷新，则将仅发生一次刷新。
 </p>
@@ -4633,30 +4633,30 @@ This is a table caption at the top.
   <code translate="no" class="notranslate text-nowrap">排序已更改</code>
   的事件，您可以检测到排序键和方向何时已更改。
 </p>
-<pre class="hljs html text-monospace p-2 notranslate" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-table</span> @<span class="hljs-attr">sort-changed</span>=<span class="hljs-string">"sortingChanged"</span> <span class="hljs-attr">...</span> &gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-table</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre></figure>
 <p>
   <code translate="no" class="notranslate text-nowrap">排序更改</code>事件提供了表的当前状态上下文对象的单个参数。 此上下文对象的格式与项目提供程序功能使用的格式相同。
 </p>
 <!-- eslint-disable no-unused-vars -->
 
-<pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+<figure class="highlight"><pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
   <span class="hljs-attr">methods</span>: {
     sortingChanged(ctx) {
       <span class="hljs-comment">// ctx.sortBy   ==&gt; Field key for sorting by (or null for no sorting)</span>
       <span class="hljs-comment">// ctx.sortDesc ==&gt; true if sorting descending, false otherwise</span>
     }
   }
-}</pre>
+}</pre></figure>
 <p>
   您也可以分别使用：<code translate="no" class="notranslate text-nowrap">:sort-by.sync</code>和 
   <code translate="no" class="notranslate text-nowrap">:sort-desc.sync</code>双向属性来获取当前的sortBy和sortDesc值
   （有关详细信息，请参见上面的<a href="#sorting" class="font-weight-bold">排序</a>部分）。
 </p>
-<pre class="hljs html text-monospace p-2 notranslate" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-table</span> <span class="hljs-attr">:sort-by.sync</span>=<span class="hljs-string">"mySortBy"</span> <span class="hljs-attr">:sort-desc.sync</span>=<span class="hljs-string">"mySortDesc"</span> <span class="hljs-attr">...</span> &gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-table</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre></figure>
 <h3 id="server-side-rendering" class="bv-no-focus-ring"><span class="bd-content-title">服务器端渲染<a class="anchorjs-link" href="#server-side-rendering" aria-labelledby="server-side-rendering"></a></span></h3>
 <p>
   使用服务器端呈现（SSR）和<code translate="no" class="notranslate text-nowrap">项目</code>提供程序功能时，必须格外小心。 确保在获取数据时处理服务器端可能需要的任何特殊情况！
@@ -4814,7 +4814,7 @@ Items sold in August, grouped by Country and City:
 </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-table-simple</span> <span class="hljs-attr">hover</span> <span class="hljs-attr">small</span> <span class="hljs-attr">caption-top</span> <span class="hljs-attr">responsive</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">caption</span>&gt;</span>Items sold in August, grouped by Country and City:<span class="hljs-tag">&lt;/<span class="hljs-name">caption</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">colgroup</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">col</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">col</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">colgroup</span>&gt;</span>
@@ -4888,7 +4888,7 @@ Items sold in August, grouped by Country and City:
       <span class="hljs-tag">&lt;/<span class="hljs-name">b-tr</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">b-tfoot</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-table-simple</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre></figure>
 <p>
   在<code translate="no" class="notranslate text-nowrap">响应式</code>或<code translate="no" class="notranslate text-nowrap">粘滞标题</code>模式下，
   <code translate="no" class="notranslate text-nowrap">&lt;table&gt;</code>元素被包装在<code translate="no" class="notranslate text-nowrap">&lt;div&gt;</code>元素内。
@@ -4993,7 +4993,7 @@ Items sold in August, grouped by Country and City:
 </table>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-table-simple</span> <span class="hljs-attr">hover</span> <span class="hljs-attr">small</span> <span class="hljs-attr">caption-top</span> <span class="hljs-attr">stacked</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">caption</span>&gt;</span>Items sold in August, grouped by Country and City:<span class="hljs-tag">&lt;/<span class="hljs-name">caption</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">colgroup</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">col</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">col</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">colgroup</span>&gt;</span>
@@ -5067,7 +5067,7 @@ Items sold in August, grouped by Country and City:
       <span class="hljs-tag">&lt;/<span class="hljs-name">b-tr</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">b-tfoot</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-table-simple</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre></figure>
 <p>
   像 <code translate="no" class="notranslate text-nowrap">&lt;b-table&gt;</code>和
   <code translate="no" class="notranslate text-nowrap">&lt;b-table-lite&gt;</code>一样，
@@ -5095,7 +5095,7 @@ Items sold in August, grouped by Country and City:
   <code translate="no" class="notranslate text-nowrap">tbody</code>,和
   <code translate="no" class="notranslate text-nowrap">tfoot</code>行组中）上设置粘性列支持。 例如：
 </p>
-<pre class="hljs html text-monospace p-2 notranslate" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-table-simple</span> <span class="hljs-attr">responsive</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-table-simple</span> <span class="hljs-attr">responsive</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-thead</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-tr</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">b-th</span> <span class="hljs-attr">sticky-column</span>&gt;</span>Sticky Column Header<span class="hljs-tag">&lt;/<span class="hljs-name">b-th</span>&gt;</span>
@@ -5130,7 +5130,7 @@ Items sold in August, grouped by Country and City:
       <span class="hljs-tag">&lt;<span class="hljs-name">b-th</span>&gt;</span>Heading 4<span class="hljs-tag">&lt;/<span class="hljs-name">b-th</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">b-tr</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-tfoot</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">b-table-responsive</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b-table-responsive</span>&gt;</span></pre></figure>
 <p>
   与<code translate="no" class="notranslate text-nowrap">&lt;b-table&gt;</code>和
   <code translate="no" class="notranslate text-nowrap">&lt;b-table-lite&gt;</code>一样，
@@ -5449,7 +5449,7 @@ Items sold in August, grouped by Country and City:
 </table>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">fluid</span>&gt;</span>
     <span class="hljs-comment">&lt;!-- User Interface controls --&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span>&gt;</span>
@@ -5700,7 +5700,7 @@ Items sold in August, grouped by Country and City:
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <!-- Component reference added automatically from component package.json -->
 
 <h2 id="component-reference" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title">组件引用<a href="../../../bootstrap-vue/docs/components/table#component-reference" class="anchorjs-link" aria-labelledby="component-reference" target="_self"></a></span></h2>
@@ -7287,8 +7287,8 @@ Items sold in August, grouped by Country and City:
 </table>
 </div>
 <p><strong>示例：</strong></p>
-<pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { BTable } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
-Vue.component(<span class="hljs-string">'b-table'</span>, BTable)</pre>
+<figure class="highlight"><pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { BTable } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
+Vue.component(<span class="hljs-string">'b-table'</span>, BTable)</pre></figure>
 </article>
 <article class="bd-content">
 <h3 id="importing-as-a-plugin" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title"> 导入为Vue.js插件 <a href="../../../bootstrap-vue/docs/components/table#importing-as-a-plugin" class="anchorjs-link" aria-labelledby="importing-as-a-plugin" target="_self"></a></span></h3>
@@ -7315,8 +7315,8 @@ Vue.component(<span class="hljs-string">'b-table'</span>, BTable)</pre>
 <li><code translate="translate" class="notranslate">TableSimplePlugin</code></li>
 </ul>
 <p><strong>示例：</strong></p>
-<pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { TablePlugin } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
-Vue.use(TablePlugin)</pre>
+<figure class="highlight"><pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { TablePlugin } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
+Vue.use(TablePlugin)</pre></figure>
 
 
 
@@ -7329,8 +7329,7 @@ Vue.use(TablePlugin)</pre>
 </div>
 
 
-<script src="../../../js/jquery-3.2.1.slim.min.js"></script> 
-<script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery-slim.min.js"><\/script>')</script> 
+<script src="../../../v4/assets/js/vendor/jquery-slim.min.js"></script>
 <script src="../../../v4/dist/js/popper.min.js"></script> 
 <script src="../../../v4/dist/js/bootstrap.min.js"></script> 
 <script src="../../../v4/assets/js/docs.min.js"></script> 

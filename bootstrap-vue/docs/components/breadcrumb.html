@@ -47,7 +47,7 @@
     </ul>
   </div>
   <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="alse"> v2.6.1 </a>
+    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="alse"> v2.12.0 </a>
       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions"> 
         <a class="dropdown-item active" href="../../../bootstrap-vue/docs/4.0/">Latest (4.3.x)</a>
         <a class="dropdown-item" href="/Boot/">v3.3.7</a>
@@ -237,6 +237,7 @@
 <li class="breadcrumb-item active"><span aria-current="location">Library</span></li>
 </ol>
 </div>
+<figure class="highlight">
 <pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-breadcrumb</span> <span class="hljs-attr">:items</span>=<span class="hljs-串">"items"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-breadcrumb</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
@@ -262,11 +263,11 @@
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <h2 id="breadcrumb-items" class="bv-no-focus-ring"><span class="bd-content-title">面包屑物品<a class="anchorjs-link" href="#breadcrumb-items" aria-labelledby="breadcrumb-items"></a></span></h2>
 <p>使用 <code translate="no" class="notranslate text-nowrap">:items</code>方法渲染物品。它可以是一组对象，以提供链接和活动状态。链接可以是<code translate="no" class="notranslate text-nowrap">href</code>用于锚标记的或<code translate="no" class="notranslate text-nowrap">to</code>用于路由器链接的。如果最后一个元素的活动状态为，则会自动设置<code translate="no" class="notranslate text-nowrap">undefined</code>。</p>
 <!-- eslint-disable no-unused-vars -->
-
+<figure class="highlight">
 <pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-keyword">const</span> items = [
   {
     <span class="hljs-attr">text</span>: <span class="hljs-串">'Home'</span>,
@@ -280,7 +281,7 @@
     <span class="hljs-attr">text</span>: <span class="hljs-串">'Another Story'</span>,
     <span class="hljs-attr">active</span>: <span class="hljs-literal">true</span>
   }
-]</pre>
+]</pre></figure>
 <p>请参阅<a href="../../../bootstrap-vue/docs/reference/router-links" class="font-weight-bold">路由器支持</a>参考页以获取特定于路由器链接的道具。</p>
 <h2 id="manually-placed-items" class="bv-no-focus-ring"><span class="bd-content-title">手动放置项目<a class="anchorjs-link" href="#manually-placed-items" aria-labelledby="manually-placed-items"></a></span></h2>
 <p>可以手动将各个<code translate="no" class="notranslate text-nowrap">&lt;b-breadcrumb-item&gt;</code>子组件放置在组件的默认插槽中<code translate="no" class="notranslate text-nowrap">&lt;b-breadcrumb&gt;</code>，以代替使用 <code translate="no" class="notranslate text-nowrap">items</code> prop, 以更好地控制每个项目的内容：</p>
@@ -301,6 +302,7 @@ Home </a></li>
 <li class="breadcrumb-item active"><span aria-current="location">Baz</span></li>
 </ol>
 </div>
+<figure class="highlight">
 <pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-breadcrumb</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-breadcrumb-item</span> <span class="hljs-attr">href</span>=<span class="hljs-串">"#home"</span>&gt;</span>
@@ -311,7 +313,7 @@ Home </a></li>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-breadcrumb-item</span> <span class="hljs-attr">href</span>=<span class="hljs-串">"#bar"</span>&gt;</span>Bar<span class="hljs-tag">&lt;/<span class="hljs-name">b-breadcrumb-item</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-breadcrumb-item</span> <span class="hljs-attr">active</span>&gt;</span>Baz<span class="hljs-tag">&lt;/<span class="hljs-name">b-breadcrumb-item</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-breadcrumb</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span></pre></figure>
 <p>请记住将<code translate="no" class="notranslate text-nowrap">active</code>方法放在最后一个项目上。</p>
 <p><code translate="no" class="notranslate text-nowrap">&lt;b-breadcrumb-item&gt;</code>还支持各种<code translate="no" class="notranslate text-nowrap">&lt;router-link&gt;</code>方法，例如<code translate="no" class="notranslate text-nowrap">to</code>等等。</p>
 <!-- Component reference added automatically from component package.json --> 
@@ -583,8 +585,9 @@ Home </a></li>
 </table>
 </div>
 <p><strong>例：</strong></p>
+<figure class="highlight">
 <pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { BBreadcrumb } <span class="hljs-keyword">from</span> <span class="hljs-串">'bootstrap-vue'</span>
-Vue.component(<span class="hljs-串">'b-breadcrumb'</span>, BBreadcrumb)</pre>
+Vue.component(<span class="hljs-串">'b-breadcrumb'</span>, BBreadcrumb)</pre></figure>
 </article>
 
 <article class="bd-content">
@@ -613,8 +616,9 @@ Vue.component(<span class="hljs-串">'b-breadcrumb'</span>, BBreadcrumb)</pre>
 </div>
 
 <p><strong>例:</strong></p>
+<figure class="highlight">
 <pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { BreadcrumbPlugin } <span class="hljs-keyword">from</span> <span class="hljs-串">'bootstrap-vue'</span>
-Vue.use(BreadcrumbPlugin)</pre>
+Vue.use(BreadcrumbPlugin)</pre></figure>
 </article>
 
 
@@ -642,8 +646,7 @@ Vue.use(BreadcrumbPlugin)</pre>
 </div>
 
 
-<script src="../../../js/jquery-3.2.1.slim.min.js"></script> 
-<script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery-slim.min.js"><\/script>')</script> 
+<script src="../../../v4/assets/js/vendor/jquery-slim.min.js"></script>
 <script src="../../../v4/dist/js/popper.min.js"></script> 
 <script src="../../../v4/dist/js/bootstrap.min.js"></script> 
 <script src="../../../v4/assets/js/docs.min.js"></script> 

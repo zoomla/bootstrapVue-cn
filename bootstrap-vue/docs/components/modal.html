@@ -47,7 +47,7 @@
     </ul>
   </div>
   <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="alse"> v2.6.1 </a>
+    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="alse"> v2.12.0 </a>
       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions"> 
         <a class="dropdown-item active" href="../../../bootstrap-vue/docs/4.0/">Latest (4.3.x)</a>
         <a class="dropdown-item" href="/Boot/">v3.3.7</a>
@@ -332,13 +332,13 @@
 <button type="button" class="btn btn-secondary">Launch demo modal</button>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">v-b-modal.modal-1</span>&gt;</span>Launch demo modal<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
 
   <span class="hljs-tag">&lt;<span class="hljs-name">b-modal</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"modal-1"</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"BootstrapVue"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"my-4"</span>&gt;</span>Hello from modal!<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-modal</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre></figure>
 <h2 id="overview" class="bv-no-focus-ring"><span class="bd-content-title">概述<a class="anchorjs-link" href="#overview" aria-labelledby="overview"></a></span></h2>
 <p>
   <code translate="no" class="notranslate text-nowrap">&lt;b-modal&gt;</code>在默认情况下，在页脚中有一个<strong>确认</strong>和<strong>取消</strong>按钮。
@@ -385,7 +385,7 @@
 <button type="button" class="btn btn-secondary">Show Modal</button>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-comment">&lt;!-- Using modifiers --&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">v-b-modal.my-modal</span>&gt;</span>Show Modal<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
 
@@ -394,7 +394,7 @@
 
   <span class="hljs-comment">&lt;!-- The modal --&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-modal</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"my-modal"</span>&gt;</span>Hello From My Modal!<span class="hljs-tag">&lt;/<span class="hljs-name">b-modal</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre></figure>
 <p>一旦模式关闭，此方法将自动将焦点返回到触发器元素（类似于默认的引导功能）。用于切换模式可见性的其他方法可能需要额外的代码来实现此可访问性功能。</p>
 <p>
   有关详细信息，请参见下面的<a href="#accessibility" class="font-weight-bold">可访问性</a>功能部分。
@@ -431,7 +431,7 @@
 <button id="show-btn" type="button" class="btn btn-secondary">Open Modal</button>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"show-btn"</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"$bvModal.show('bv-modal-example')"</span>&gt;</span>Open Modal<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
 
   <span class="hljs-tag">&lt;<span class="hljs-name">b-modal</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"bv-modal-example"</span> <span class="hljs-attr">hide-footer</span>&gt;</span>
@@ -443,7 +443,7 @@
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mt-3"</span> <span class="hljs-attr">block</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"$bvModal.hide('bv-modal-example')"</span>&gt;</span>Close Me<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-modal</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre></figure>
 <p>
   <code translate="no" class="notranslate text-nowrap">this.$bvModal</code>对象还用<a href="#modal-message-boxes" class="font-weight-bold">显示模式消息框</a>。
 </p>
@@ -459,7 +459,7 @@
 <button id="toggle-btn" type="button" class="btn btn-secondary">Toggle Modal</button>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"show-btn"</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"showModal"</span>&gt;</span>Open Modal<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"toggle-btn"</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"toggleModal"</span>&gt;</span>Toggle Modal<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
@@ -490,7 +490,7 @@
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <p>
   <code translate="no" class="notranslate text-nowrap">hide()</code>方法接受一个可选的字符串<code translate="no" class="notranslate text-nowrap">trigger</code>器参数，
   用于定义触发模式关闭的内容。有关详细信息，请参阅下面的<a href="#prevent-closing" class="font-weight-bold">“防止关闭”</a>部分。
@@ -509,7 +509,7 @@
 <button type="button" class="btn btn-secondary">Open Modal</button>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"modalShow = !modalShow"</span>&gt;</span>Open Modal<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
 
@@ -525,7 +525,7 @@
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <p>
   使用<code translate="no" class="notranslate text-nowrap">v-model</code>属性时，<strong>不要</strong>同时使用<code translate="no" class="notranslate text-nowrap">visible</code>属性。
 </p>
@@ -539,7 +539,7 @@
   <code translate="no" class="notranslate text-nowrap">bv::hide::modal</code>,和
   <code translate="no" class="notranslate text-nowrap">bv::toggle::modal</code>事件，第一个参数设置为modal的id。可选的第二个参数可以指定在关闭modal后返回焦点的元素。第二个参数可以是CSS选择器、元素引用或组件引用（组件的根元素将被聚焦）。
 </p>
-<pre class="hljs html text-monospace p-2 notranslate" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"showModal"</span> <span class="hljs-attr">ref</span>=<span class="hljs-string">"btnShow"</span>&gt;</span>Open Modal<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"toggleModal"</span> <span class="hljs-attr">ref</span>=<span class="hljs-string">"btnToggle"</span>&gt;</span>Toggle Modal<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
 
@@ -548,8 +548,8 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"hideModal"</span>&gt;</span>Close Me<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"toggleModal"</span>&gt;</span>Toggle Me<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-modal</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
-<pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre></figure>
+<figure class="highlight"><pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
   <span class="hljs-attr">methods</span>: {
     showModal() {
       <span class="hljs-keyword">this</span>.$root.$emit(<span class="hljs-string">'bv::show::modal'</span>, <span class="hljs-string">'modal-1'</span>, <span class="hljs-string">'#btnShow'</span>)
@@ -561,7 +561,7 @@
       <span class="hljs-keyword">this</span>.$root.$emit(<span class="hljs-string">'bv::toggle::modal'</span>, <span class="hljs-string">'modal-1'</span>, <span class="hljs-string">'#btnToggle'</span>)
     }
   }
-}</pre>
+}</pre></figure>
 <p><strong>注意:</strong> 
   建议使用<code translate="no" class="notranslate text-nowrap">this.$bvModal.show()</code>和
   <code translate="no" class="notranslate text-nowrap">this.$bvModal.hide()</code>方法（在上一节中提到）而不是发出<code translate="no" class="notranslate text-nowrap">$root</code>事件。
@@ -584,7 +584,7 @@
 </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">v-b-modal.modal-prevent-closing</span>&gt;</span>Open Modal<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
 
@@ -662,7 +662,7 @@
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <p><strong>注意</strong>: 
   事件<code translate="no" class="notranslate text-nowrap">ok</code>, 
   <code translate="no" class="notranslate text-nowrap">cancel</code>,和 
@@ -751,7 +751,7 @@
 <button type="button" class="btn btn-secondary">Show Modal</button>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">v-b-modal.modalPopover</span>&gt;</span>Show Modal<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
 
   <span class="hljs-tag">&lt;<span class="hljs-name">b-modal</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"modalPopover"</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Modal with Popover"</span> <span class="hljs-attr">ok-only</span>&gt;</span>
@@ -765,7 +765,7 @@
       hover.
     <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-modal</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre></figure>
 <h2 id="lazy-loading-and-static-modals" class="bv-no-focus-ring"><span class="bd-content-title">延迟加载和静态模式<a class="anchorjs-link" href="#lazy-loading-and-static-modals" aria-labelledby="lazy-loading-and-static-modals"></a></span></h2>
 <p>
   默认情况下，modals在显示（延迟呈现）内容之前不会在文档中呈现内容。在可见时附加到<code translate="no" class="notranslate text-nowrap">&lt;body&gt;</code>元素的模式。
@@ -797,7 +797,7 @@
 <button type="button" class="btn btn-primary">sm modal</button>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">v-b-modal.modal-xl</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"primary"</span>&gt;</span>xl modal<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">v-b-modal.modal-lg</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"primary"</span>&gt;</span>lg modal<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">v-b-modal.modal-sm</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"primary"</span>&gt;</span>sm modal<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
@@ -805,7 +805,7 @@
   <span class="hljs-tag">&lt;<span class="hljs-name">b-modal</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"modal-xl"</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"xl"</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Extra Large Modal"</span>&gt;</span>Hello Extra Large Modal!<span class="hljs-tag">&lt;/<span class="hljs-name">b-modal</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-modal</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"modal-lg"</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"lg"</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Large Modal"</span>&gt;</span>Hello Large Modal!<span class="hljs-tag">&lt;/<span class="hljs-name">b-modal</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-modal</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"modal-sm"</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"sm"</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Small Modal"</span>&gt;</span>Hello Small Modal!<span class="hljs-tag">&lt;/<span class="hljs-name">b-modal</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre></figure>
 <p>
   <code translate="no" class="notranslate text-nowrap">size</code>属性将大小映射到<code translate="no" class="notranslate text-nowrap">.modal-&lt;size&gt;</code>类。
 </p>
@@ -816,7 +816,7 @@
 <button type="button" class="btn btn-secondary">Launch overflowing modal</button>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">v-b-modal.modal-tall</span>&gt;</span>Launch overflowing modal<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
 
   <span class="hljs-tag">&lt;<span class="hljs-name">b-modal</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"modal-tall"</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Overflowing Content"</span>&gt;</span>
@@ -825,7 +825,7 @@
       in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
     <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-modal</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre></figure>
 <p>
   您还可以通过将属性<code translate="no" class="notranslate text-nowrap">scrollable</code>设置为<code translate="no" class="notranslate text-nowrap">true</code>来创建一个可滚动的模式，该模式允许模式体滚动。
 </p>
@@ -834,7 +834,7 @@
 <button type="button" class="btn btn-secondary">Launch scrolling modal</button>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">v-b-modal.modal-scrollable</span>&gt;</span>Launch scrolling modal<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
 
   <span class="hljs-tag">&lt;<span class="hljs-name">b-modal</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"modal-scrollable"</span> <span class="hljs-attr">scrollable</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Scrollable Content"</span>&gt;</span>
@@ -843,7 +843,7 @@
       in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
     <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-modal</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre></figure>
 <h3 id="vertically-centered-modal" class="bv-no-focus-ring"><span class="bd-content-title">垂直居中模式<a class="anchorjs-link" href="#vertically-centered-modal" aria-labelledby="vertically-centered-modal"></a></span></h3>
 <p>
   通过设置<code translate="no" class="notranslate text-nowrap">centered</code>属性，在视口中垂直居中模式。
@@ -853,13 +853,13 @@
 <button type="button" class="btn btn-secondary">Launch centered modal</button>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">v-b-modal.modal-center</span>&gt;</span>Launch centered modal<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
 
   <span class="hljs-tag">&lt;<span class="hljs-name">b-modal</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"modal-center"</span> <span class="hljs-attr">centered</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"BootstrapVue"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"my-4"</span>&gt;</span>Vertically centered modal!<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-modal</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre></figure>
 <p>
   您可以随意将<code translate="no" class="notranslate text-nowrap">centered</code>与<code translate="no" class="notranslate text-nowrap">scrollable</code>的混合。
 </p>
@@ -887,7 +887,7 @@
 <button type="button" class="btn btn-primary">Show Modal</button>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"show=true"</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"primary"</span>&gt;</span>Show Modal<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
 
@@ -989,7 +989,7 @@
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <p>
   您还可以分别通过code translate="no" class="notranslate text-nowrap">modal-class</code>,
   <code translate="no" class="notranslate text-nowrap">content-class</code>, 
@@ -1006,7 +1006,7 @@
 <button type="button" class="btn btn-secondary">Open modal</button>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">v-b-modal.modal-no-backdrop</span>&gt;</span>Open modal<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
 
   <span class="hljs-tag">&lt;<span class="hljs-name">b-modal</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"modal-no-backdrop"</span> <span class="hljs-attr">hide-backdrop</span> <span class="hljs-attr">content-class</span>=<span class="hljs-string">"shadow"</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"BootstrapVue"</span>&gt;</span>
@@ -1015,7 +1015,7 @@
       to the modal content for added effect.
     <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-modal</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre></figure>
 <p>
   请注意，即使背景被隐藏，单击模式外部仍将关闭模式。您可以通过将<code translate="no" class="notranslate text-nowrap">no-close-on-backdrop</code>属性设置为<code translate="no" class="notranslate text-nowrap">&lt;b-modal&gt;</code>来禁用此行为。
 </p>
@@ -1034,7 +1034,7 @@
 <button type="button" class="btn btn-secondary">Large Footer Buttons</button>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">v-b-modal.modal-footer-sm</span>&gt;</span>Small Footer Buttons<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">v-b-modal.modal-footer-lg</span>&gt;</span>Large Footer Buttons<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
 
@@ -1045,7 +1045,7 @@
   <span class="hljs-tag">&lt;<span class="hljs-name">b-modal</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"modal-footer-lg"</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"BootstrapVue"</span> <span class="hljs-attr">button-size</span>=<span class="hljs-string">"lg"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"my-2"</span>&gt;</span>This modal has large footer buttons<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-modal</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre></figure>
 <p>
   如果您已经通过<a href="#custom-rendering-with-slots" class="font-weight-bold"><code translate="no" class="notranslate text-nowrap">modal-footer</code></a>槽提供了自己的页脚，那么属性<code translate="no" class="notranslate text-nowrap">button-size</code>将不起作用。
 </p>
@@ -1162,7 +1162,7 @@
 <div translate="translate" class="bd-example vue-example vue-example-b-modal-scoped-slots notranslate">
 <button type="button" class="btn btn-secondary">Open Modal</button>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"$bvModal.show('modal-scoped')"</span>&gt;</span>Open Modal<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
 
   <span class="hljs-tag">&lt;<span class="hljs-name">b-modal</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"modal-scoped"</span>&gt;</span>
@@ -1194,7 +1194,7 @@
       <span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-modal</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span></pre></figure>
 <h2 id="multiple-modal-support" class="bv-no-focus-ring"><span class="bd-content-title">多模式支持<a class="anchorjs-link" href="#multiple-modal-support" aria-labelledby="multiple-modal-support"></a></span></h2>
 <p>与本机引导v4不同，BootstrapVue支持同时打开多个modal。</p>
 <p>
@@ -1206,7 +1206,7 @@
 <button type="button" class="btn btn-secondary">Open First Modal</button>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">v-b-modal.modal-multi-1</span>&gt;</span>Open First Modal<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
 
   <span class="hljs-tag">&lt;<span class="hljs-name">b-modal</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"modal-multi-1"</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"lg"</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"First Modal"</span> <span class="hljs-attr">ok-only</span> <span class="hljs-attr">no-stacking</span>&gt;</span>
@@ -1222,7 +1222,7 @@
   <span class="hljs-tag">&lt;<span class="hljs-name">b-modal</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"modal-multi-3"</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"sm"</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Third Modal"</span> <span class="hljs-attr">ok-only</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"my-1"</span>&gt;</span>Third Modal<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-modal</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre></figure>
 <p><strong>注意事项:</strong></p>
 <ul>
 <li>
@@ -1291,7 +1291,7 @@ Return value: </div>
 Return value: </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-2"</span>&gt;</span>
      <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"showMsgBoxOne"</span>&gt;</span>Simple msgBoxOk<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
@@ -1343,7 +1343,7 @@ Return value: </div>
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <h3 id="confirm-message-box" class="bv-no-focus-ring"><span class="bd-content-title">确认消息框<a class="anchorjs-link" href="#confirm-message-box" aria-labelledby="confirm-message-box"></a></span></h3>
 <p>确认消息框示例</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-modal-msg-box-confirm notranslate">
@@ -1356,7 +1356,7 @@ Return value: </div>
 Return value: </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-2"</span>&gt;</span>
      <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"showMsgBoxOne"</span>&gt;</span>Simple msgBoxConfirm<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
@@ -1410,7 +1410,7 @@ Return value: </div>
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <h3 id="message-box-notes" class="bv-no-focus-ring"><span class="bd-content-title">消息框注释<a class="anchorjs-link" href="#message-box-notes" aria-labelledby="message-box-notes"></a></span></h3>
 <ul>
 <li>
@@ -1476,7 +1476,7 @@ Return value: </div>
 <button type="button" class="btn btn-secondary">Show OK message box with custom content</button>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"showMsgOk"</span>&gt;</span>Show OK message box with custom content<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -1515,16 +1515,16 @@ Return value: </div>
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <h2 id="listening-to-modal-changes-via-root-events" class="bv-no-focus-ring"><span class="bd-content-title">通过$root事件监听模式更改<a class="anchorjs-link" href="#listening-to-modal-changes-via-root-events" aria-labelledby="listening-to-modal-changes-via-root-events"></a></span></h2>
 <p>要监听任何模式打开，请使用：</p>
-<pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+<figure class="highlight"><pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
   mounted() {
     <span class="hljs-keyword">this</span>.$root.$on(<span class="hljs-string">'bv::modal::show'</span>, (bvEvent, modalId) =&gt; {
       <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Modal is about to be shown'</span>, bvEvent, modalId)
     })
   }
-}</pre>
+}</pre></figure>
 <p>
   有关发出的事件的完整列表，请参阅本文档的<a href="#comp-ref-b-modal" class="font-weight-bold">事件</a>部分。
 </p>
@@ -1563,7 +1563,7 @@ Return value: </div>
   中的元素，并调用该元素的<code translate="no" class="notranslate text-nowrap">focus()</code>方法。<code translate="no" class="notranslate text-nowrap">&lt;b-modal&gt;</code>
   不会尝试自动对焦，如果元素已在<code translate="no" class="notranslate text-nowrap">&lt;b-modal&gt;</code>中具有焦点。
 </p>
-<pre class="hljs html text-monospace p-2 notranslate" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-modal</span> @<span class="hljs-attr">shown</span>=<span class="hljs-string">"focusMyElement"</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-modal</span> @<span class="hljs-attr">shown</span>=<span class="hljs-string">"focusMyElement"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span>&gt;</span>I Don't Have Focus<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -1580,14 +1580,14 @@ Return value: </div>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-form-input</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-input</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">b-modal</span>&gt;</span></pre>
-<pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+<span class="hljs-tag">&lt;/<span class="hljs-name">b-modal</span>&gt;</span></pre></figure>
+<figure class="highlight"><pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
   <span class="hljs-attr">methods</span>: {
     focusMyElement() {
       <span class="hljs-keyword">this</span>.$refs.focusThis.focus()
     }
   }
-}</pre>
+}</pre></figure>
 <p>
   或者，如果使用<code translate="no" class="notranslate text-nowrap">b-form-*</code>表单控件，
   则可以在模式打开时使用<code translate="no" class="notranslate text-nowrap">autofocus</code>属性<code translate="no" class="notranslate text-nowrap">autofocus</code>表单控件。
@@ -1645,11 +1645,11 @@ Return value: </div>
   使用<code translate="no" class="notranslate text-nowrap">bv::show::modal</code>事件（在<code translate="no" class="notranslate text-nowrap">$root</code>上发出）时，
   可以指定第二个参数，该参数是要返回焦点的元素。此参数接受与<code translate="no" class="notranslate text-nowrap">返回焦点</code>属性相同的类型。
 </p>
-<pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-keyword">this</span>.$root.$emit(<span class="hljs-string">'bv::show::modal'</span>, <span class="hljs-string">'modal-1'</span>, <span class="hljs-string">'#focusThisOnClose'</span>)</pre>
+<figure class="highlight"><pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-keyword">this</span>.$root.$emit(<span class="hljs-string">'bv::show::modal'</span>, <span class="hljs-string">'modal-1'</span>, <span class="hljs-string">'#focusThisOnClose'</span>)</pre></figure>
 <p><em>Tip:</em> if using a click event (or similar) to trigger modal to open, pass the event's <code translate="no" class="notranslate text-nowrap">target</code> property:</p>
-<pre class="hljs html text-monospace p-2 notranslate" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"$root.$emit('bv::show::modal', 'modal-1', $event.target)"</span>&gt;</span>Open Modal<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre></figure>
 <p><strong>注意:</strong> 
   如果<code translate="no" class="notranslate text-nowrap">&lt;b-modal&gt;</code>设置了<code translate="no" class="notranslate text-nowrap">返回焦点</code>属性，则通过事件指定的元素将被忽略。
 </p>
@@ -1665,13 +1665,13 @@ Return value: </div>
   如果模式之外的某些元素需要可聚焦（即对于TinyMCE），可以将它们作为CSS选择器添加到<code translate="no" class="notranslate text-nowrap">ignore-enforce-focus-selector</code>属性
   <span class="badge badge-secondary">2.4.0+</span>，例如：
 </p>
-<pre class="hljs html text-monospace p-2 notranslate" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-modal</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-modal</span>
   <span class="hljs-attr">id</span>=<span class="hljs-string">"some-modal-id"</span>
   <span class="hljs-attr">title</span>=<span class="hljs-string">"Modal with TinyMCE Editor"</span>
   <span class="hljs-attr">ignore-enforce-focus-selector</span>=<span class="hljs-string">".tox-tinymce-aux, .moxman-window, .tam-assetmanager-root"</span>
 &gt;</span>
   <span class="hljs-comment">&lt;!-- Modal content with TinyMCE editor here --&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">b-modal</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b-modal</span>&gt;</span></pre></figure>
 <p>
   在某些情况下，可能需要完全禁用“强制聚焦”功能。您可以通过设置属性 <code translate="no" class="notranslate text-nowrap">no-enforce-focus</code>来实现这一点，
   尽管出于可访问性的原因，这是非常不可取的。
@@ -2289,8 +2289,8 @@ Return value: </div>
 </table>
 </div>
 <p><strong>示例：</strong></p>
-<pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { BModal } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
-Vue.component(<span class="hljs-string">'b-modal'</span>, BModal)</pre>
+<figure class="highlight"><pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { BModal } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
+Vue.component(<span class="hljs-string">'b-modal'</span>, BModal)</pre></figure>
 </article>
 <article class="bd-content">
 <h3 id="importing-individual-directives" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title"> 导入单个指令<a href="../../../bootstrap-vue/docs/components/modal#importing-individual-directives" class="anchorjs-link" aria-labelledby="importing-individual-directives" target="_self"></a></span></h3>
@@ -2314,9 +2314,9 @@ Vue.component(<span class="hljs-string">'b-modal'</span>, BModal)</pre>
 </table>
 </div>
 <p><strong>示例：</strong></p>
-<pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { VBModal } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
+<figure class="highlight"><pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { VBModal } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
 <span class="hljs-comment">// Note: Vue automatically prefixes the directive name with 'v-'</span>
-Vue.directive(<span class="hljs-string">'b-modal'</span>, VBModal)</pre>
+Vue.directive(<span class="hljs-string">'b-modal'</span>, VBModal)</pre></figure>
 </article>
 <article class="bd-content">
 <h3 id="importing-as-a-plugin" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title"> 导入为Vue.js插件 <a href="../../../bootstrap-vue/docs/components/modal#importing-as-a-plugin" class="anchorjs-link" aria-labelledby="importing-as-a-plugin" target="_self"></a></span></h3>
@@ -2342,8 +2342,8 @@ Vue.directive(<span class="hljs-string">'b-modal'</span>, VBModal)</pre>
 <li><code translate="translate" class="notranslate">BVModalPlugin</code></li>
 </ul>
 <p><strong>示例：</strong></p>
-<pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { ModalPlugin } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
-Vue.use(ModalPlugin)</pre>
+<figure class="highlight"><pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { ModalPlugin } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
+Vue.use(ModalPlugin)</pre></figure>
 
 
 
@@ -2356,8 +2356,7 @@ Vue.use(ModalPlugin)</pre>
 </div>
 
 
-<script src="../../../js/jquery-3.2.1.slim.min.js"></script> 
-<script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery-slim.min.js"><\/script>')</script> 
+<script src="../../../v4/assets/js/vendor/jquery-slim.min.js"></script>
 <script src="../../../v4/dist/js/popper.min.js"></script> 
 <script src="../../../v4/dist/js/bootstrap.min.js"></script> 
 <script src="../../../v4/assets/js/docs.min.js"></script> 

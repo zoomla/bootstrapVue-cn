@@ -47,7 +47,7 @@
     </ul>
   </div>
   <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="alse"> v2.6.1 </a>
+    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="alse"> v2.12.0 </a>
       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions"> 
         <a class="dropdown-item active" href="../../../bootstrap-vue/docs/4.0/">Latest (4.3.x)</a>
         <a class="dropdown-item" href="/Boot/">v3.3.7</a>
@@ -305,13 +305,13 @@
 </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-tabs</span> <span class="hljs-attr">content-class</span>=<span class="hljs-string">"mt-3"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-tab</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"First"</span> <span class="hljs-attr">active</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>I'm the first tab<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-tab</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-tab</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Second"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>I'm the second tab<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-tab</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-tab</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Disabled"</span> <span class="hljs-attr">disabled</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>I'm a disabled tab!<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-tab</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-tabs</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre></figure>
 <p><strong>提示：</strong> 
   如果动态添加或删除<code translate="no" class="notranslate text-nowrap">&lt;b-tab&gt;</code>组件（即<code translate="no" class="notranslate text-nowrap">v-if</code>或for循环），则应为每个子<code translate="no" class="notranslate text-nowrap">&lt;b-tab&gt;</code>组件提供唯一的键值。 <code translate="no" class="notranslate text-nowrap">key</code>
     属性是特殊的Vue属性，请参阅<a href="https://vuejs.org/v2/api/#key" target="_blank" rel="noopener">https://vuejs.org/v2/api/#key</a>。
@@ -344,7 +344,7 @@
 </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-card</span> <span class="hljs-attr">no-body</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-tabs</span> <span class="hljs-attr">card</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">b-tab</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Tab 1"</span> <span class="hljs-attr">active</span>&gt;</span>
@@ -355,7 +355,7 @@
       <span class="hljs-tag">&lt;/<span class="hljs-name">b-tab</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">b-tabs</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-card</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre></figure>
 <p>
   当<code translate="no" class="notranslate text-nowrap">&lt;b-tabs&gt;</code>处于 <code translate="no" class="notranslate text-nowrap">card</code> 模式时，每个<code translate="no" class="notranslate text-nowrap">&lt;b-tab&gt;</code>
   子组件将自动应用<code translate="no" class="notranslate text-nowrap">card-body</code>类（该类在选项卡内容周围提供填充）。要禁用<code translate="no" class="notranslate text-nowrap">card-body</code>类，请在<code translate="no" class="notranslate text-nowrap">&lt;b-tab&gt;</code>子组件上设置<code translate="no" class="notranslate text-nowrap">no-body</code>属性。
@@ -397,7 +397,7 @@
 </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-card</span> <span class="hljs-attr">no-body</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-tabs</span> <span class="hljs-attr">card</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">b-tab</span> <span class="hljs-attr">no-body</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Picture 1"</span>&gt;</span>
@@ -427,7 +427,7 @@
       <span class="hljs-tag">&lt;/<span class="hljs-name">b-tab</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">b-tabs</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-card</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre></figure>
 <p><strong>注意:</strong>
   当<code translate="no" class="notranslate text-nowrap">no-body</code>不在<code translate="no" class="notranslate text-nowrap">&lt;b-tab&gt;</code>下时，
   在<code translate="no" class="notranslate text-nowrap">&lt;b-tabs&gt;</code>上设置<code translate="no" class="notranslate text-nowrap">no-body</code>道具不会有任何影响（因为仅在
@@ -462,14 +462,14 @@
 </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-card</span> <span class="hljs-attr">no-body</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-tabs</span> <span class="hljs-attr">pills</span> <span class="hljs-attr">card</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">b-tab</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Tab 1"</span> <span class="hljs-attr">active</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">b-card-text</span>&gt;</span>Tab contents 1<span class="hljs-tag">&lt;/<span class="hljs-name">b-card-text</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-tab</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">b-tab</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Tab 2"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">b-card-text</span>&gt;</span>Tab contents 2<span class="hljs-tag">&lt;/<span class="hljs-name">b-card-text</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-tab</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">b-tabs</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-card</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre></figure>
 <h2 id="fill-and-justify" class="bv-no-focus-ring"><span class="bd-content-title">填充并对齐<a class="anchorjs-link" href="#fill-and-justify" aria-labelledby="fill-and-justify"></a></span></h2>
 <p>
   强制<code translate="no" class="notranslate text-nowrap">&lt;b-tabs&gt;</code>控件扩展整个可用宽度。
@@ -504,14 +504,14 @@
 </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-tabs</span> <span class="hljs-attr">content-class</span>=<span class="hljs-string">"mt-3"</span> <span class="hljs-attr">fill</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-tab</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"First"</span> <span class="hljs-attr">active</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>I'm the first tab<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-tab</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-tab</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Second"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>I'm the second tab<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-tab</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-tab</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Very, very long title"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>I'm the tab with the very, very long title<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-tab</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-tab</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Disabled"</span> <span class="hljs-attr">disabled</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>I'm a disabled tab!<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-tab</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-tabs</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre></figure>
 <h3 id="justified" class="bv-no-focus-ring"><span class="bd-content-title">Justified<a class="anchorjs-link" href="#justified" aria-labelledby="justified"></a></span></h3>
 <p>
   对于等宽控件，请改用<code translate="no" class="notranslate text-nowrap">justified</code>属性。所有水平空间都将被控件占用，但与使用上面的<code translate="no" class="notranslate text-nowrap">填充</code>不同，每个控件的宽度都是相同的。
@@ -544,14 +544,14 @@
 </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-tabs</span> <span class="hljs-attr">content-class</span>=<span class="hljs-string">"mt-3"</span> <span class="hljs-attr">justified</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-tab</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"First"</span> <span class="hljs-attr">active</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>I'm the first tab<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-tab</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-tab</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Second"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>I'm the second tab<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-tab</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-tab</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Very, very long title"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>I'm the tab with the very, very long title<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-tab</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-tab</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Disabled"</span> <span class="hljs-attr">disabled</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>I'm a disabled tab!<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-tab</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-tabs</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre></figure>
 <h2 id="alignment" class="bv-no-focus-ring"><span class="bd-content-title">对齐<a class="anchorjs-link" href="#alignment" aria-labelledby="alignment"></a></span></h2>
 <p>
   要对齐选项卡控件，请使用<code translate="no" class="notranslate text-nowrap">align</code> prop。可用值包括<code translate="no" class="notranslate text-nowrap">left</code>
@@ -581,13 +581,13 @@
 </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-tabs</span> <span class="hljs-attr">content-class</span>=<span class="hljs-string">"mt-3"</span> <span class="hljs-attr">align</span>=<span class="hljs-string">"center"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-tab</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"First"</span> <span class="hljs-attr">active</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>I'm the first tab<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-tab</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-tab</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Second"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>I'm the second tab<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-tab</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-tab</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Disabled"</span> <span class="hljs-attr">disabled</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>I'm a disabled tab!<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-tab</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-tabs</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre></figure>
 <h2 id="bottom-placement-of-tab-controls" class="bv-no-focus-ring"><span class="bd-content-title">选项卡控件的底部位置<a class="anchorjs-link" href="#bottom-placement-of-tab-controls" aria-labelledby="bottom-placement-of-tab-controls"></a></span></h2>
 <p>
   通过设置prop末端，将制表符控件可视地移动到<code translate="no" class="notranslate text-nowrap">end</code>。
@@ -614,14 +614,14 @@
 </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-card</span> <span class="hljs-attr">no-body</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-tabs</span> <span class="hljs-attr">pills</span> <span class="hljs-attr">card</span> <span class="hljs-attr">end</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">b-tab</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Tab 1"</span> <span class="hljs-attr">active</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">b-card-text</span>&gt;</span>Tab contents 1<span class="hljs-tag">&lt;/<span class="hljs-name">b-card-text</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-tab</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">b-tab</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Tab 2"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">b-card-text</span>&gt;</span>Tab contents 2<span class="hljs-tag">&lt;/<span class="hljs-name">b-card-text</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-tab</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">b-tabs</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-card</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre></figure>
 <p><strong>注意事项：</strong></p>
 <ul>
 <li>
@@ -661,7 +661,7 @@
 </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-card</span> <span class="hljs-attr">no-body</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-tabs</span> <span class="hljs-attr">pills</span> <span class="hljs-attr">card</span> <span class="hljs-attr">vertical</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">b-tab</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Tab 1"</span> <span class="hljs-attr">active</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">b-card-text</span>&gt;</span>Tab contents 1<span class="hljs-tag">&lt;/<span class="hljs-name">b-card-text</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-tab</span>&gt;</span>
@@ -669,7 +669,7 @@
       <span class="hljs-tag">&lt;<span class="hljs-name">b-tab</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Tab 3"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">b-card-text</span>&gt;</span>Tab contents 3<span class="hljs-tag">&lt;/<span class="hljs-name">b-card-text</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-tab</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">b-tabs</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-card</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre></figure>
 <p>
   通过设置<code translate="no" class="notranslate text-nowrap">end</code> prop，将制表符控件可视地移动到右侧：
 </p>
@@ -699,7 +699,7 @@
 </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-card</span> <span class="hljs-attr">no-body</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-tabs</span> <span class="hljs-attr">pills</span> <span class="hljs-attr">card</span> <span class="hljs-attr">vertical</span> <span class="hljs-attr">end</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">b-tab</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Tab 1"</span> <span class="hljs-attr">active</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">b-card-text</span>&gt;</span>Tab contents 1<span class="hljs-tag">&lt;/<span class="hljs-name">b-card-text</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-tab</span>&gt;</span>
@@ -707,7 +707,7 @@
       <span class="hljs-tag">&lt;<span class="hljs-name">b-tab</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Tab 3"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">b-card-text</span>&gt;</span>Tab contents 3<span class="hljs-tag">&lt;/<span class="hljs-name">b-card-text</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-tab</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">b-tabs</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-card</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre></figure>
 <p>
   垂直选项卡控件的宽度将展开以适合选项卡标题的宽度。要控制宽度，请通过prop <code translate="no" class="notranslate text-nowrap">nav-wrapper-class</code>设置<a href="../../../bootstrap-vue/docs/reference/size-props#sizing-utility-classes" class="font-weight-bold">width utility class</a>。
   可以使用<code translate="no" class="notranslate text-nowrap">w-25</code>（25%宽度）、<code translate="no" class="notranslate text-nowrap">w-50</code>（50%宽度）等值，
@@ -739,7 +739,7 @@
 </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-card</span> <span class="hljs-attr">no-body</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-tabs</span> <span class="hljs-attr">pills</span> <span class="hljs-attr">card</span> <span class="hljs-attr">vertical</span> <span class="hljs-attr">nav-wrapper-class</span>=<span class="hljs-string">"w-50"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">b-tab</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Tab 1"</span> <span class="hljs-attr">active</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">b-card-text</span>&gt;</span>Tab contents 1<span class="hljs-tag">&lt;/<span class="hljs-name">b-card-text</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-tab</span>&gt;</span>
@@ -747,7 +747,7 @@
       <span class="hljs-tag">&lt;<span class="hljs-name">b-tab</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Tab 3"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">b-card-text</span>&gt;</span>Tab contents 3<span class="hljs-tag">&lt;/<span class="hljs-name">b-card-text</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-tab</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">b-tabs</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-card</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre></figure>
 <p>
   垂直放置视觉效果最好的<code translate="no" class="notranslate text-nowrap">pills</code> variant。当使用默认的<code translate="no" class="notranslate text-nowrap">tabs</code>变量时，
   您可能需要提供自己的自定义样式类，因为Bootstrap v4 CSS假定tab控件始终位于tabs内容的顶部。
@@ -781,7 +781,7 @@
 </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-tabs</span>
     <span class="hljs-attr">active-nav-item-class</span>=<span class="hljs-string">"font-weight-bold text-uppercase text-danger"</span>
     <span class="hljs-attr">active-tab-class</span>=<span class="hljs-string">"font-weight-bold text-success"</span>
@@ -791,7 +791,7 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">b-tab</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Second"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>I'm the second tab<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-tab</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-tab</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Disabled"</span> <span class="hljs-attr">disabled</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>I'm a disabled tab!<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-tab</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-tabs</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre></figure>
 <h2 id="fade-animation" class="bv-no-focus-ring"><span class="bd-content-title">淡入淡出动画<a class="anchorjs-link" href="#fade-animation" aria-labelledby="fade-animation"></a></span></h2>
 <p>
   更改选项卡时默认启用淡入淡出。它可以在<code translate="no" class="notranslate text-nowrap">no-fade</code>属性的情况下禁用。
@@ -815,7 +815,7 @@
 </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-tabs</span>&gt;</span>
     <span class="hljs-comment">&lt;!-- Add your b-tab components here --&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">template</span> <span class="hljs-attr">v-slot:tabs-end</span>&gt;</span>
@@ -823,7 +823,7 @@
       <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nav-item align-self-center"</span>&gt;</span>Plain text<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-tabs</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre></figure>
 <p>
   使用<code translate="no" class="notranslate text-nowrap">tabs-start</code>槽在“内容”选项卡按钮之前放置额外的选项卡按钮，并使用<code translate="no" class="notranslate text-nowrap">tabs-end</code>槽在“内容”选项卡按钮之后放置额外的选项卡按钮。
 </p>
@@ -855,7 +855,7 @@
 </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-tabs</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-tab</span> <span class="hljs-attr">active</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">template</span> <span class="hljs-attr">v-slot:title</span>&gt;</span>
@@ -871,7 +871,7 @@
       <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"p-3"</span>&gt;</span>Tab contents 2<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">b-tab</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-tabs</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre></figure>
 <p><strong>不要</strong> 将交互元素/组件放置在标题栏中。tab按钮是一个链接，它不支持HTML5规范中的子交互元素。</p>
 <h2 id="apply-custom-classes-to-the-generated-nav-tabs-or-pills" class="bv-no-focus-ring"><span class="bd-content-title">将自定义类应用于生成的导航选项卡或pills<a class="anchorjs-link" href="#apply-custom-classes-to-the-generated-nav-tabs-or-pills" aria-labelledby="apply-custom-classes-to-the-generated-nav-tabs-or-pills"></a></span></h2>
 <p>
@@ -904,7 +904,7 @@
 </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-card</span> <span class="hljs-attr">no-body</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">b-tabs</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">"tabIndex"</span> <span class="hljs-attr">card</span>&gt;</span>
@@ -933,7 +933,7 @@
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <h2 id="lazy-loading-tab-content" class="bv-no-focus-ring"><span class="bd-content-title">延迟加载选项卡内容<a class="anchorjs-link" href="#lazy-loading-tab-content" aria-labelledby="lazy-loading-tab-content"></a></span></h2>
 <p>
   有时，最好只在激活选项卡时加载组件和数据，而不是在呈现<code translate="no" class="notranslate text-nowrap">&lt;b-tabs&gt;</code>集时加载所有选项卡（和相关数据）。
@@ -958,14 +958,14 @@
 </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-tabs</span> <span class="hljs-attr">content-class</span>=<span class="hljs-string">"mt-3"</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-tabs</span> <span class="hljs-attr">content-class</span>=<span class="hljs-string">"mt-3"</span>&gt;</span>
   <span class="hljs-comment">&lt;!-- This tabs content will always be mounted --&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-tab</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Regular tab"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">b-alert</span> <span class="hljs-attr">show</span>&gt;</span>I'm always mounted<span class="hljs-tag">&lt;/<span class="hljs-name">b-alert</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-tab</span>&gt;</span>
 
   <span class="hljs-comment">&lt;!-- This tabs content will not be mounted until the tab is shown --&gt;</span>
   <span class="hljs-comment">&lt;!-- and will be un-mounted when hidden --&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-tab</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Lazy tab"</span> <span class="hljs-attr">lazy</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">b-alert</span> <span class="hljs-attr">show</span>&gt;</span>I'm lazy mounted!<span class="hljs-tag">&lt;/<span class="hljs-name">b-alert</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-tab</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">b-tabs</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b-tabs</span>&gt;</span></pre></figure>
 <p>
   通过在父<code translate="no" class="notranslate text-nowrap">&lt;b-tabs&gt;</code>组件上设置<code translate="no" class="notranslate text-nowrap">lazy</code> prop，还可以使所有tab变延迟：
 </p>
@@ -985,10 +985,10 @@
 </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-tabs</span> <span class="hljs-attr">content-class</span>=<span class="hljs-string">"mt-3"</span> <span class="hljs-attr">lazy</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-tabs</span> <span class="hljs-attr">content-class</span>=<span class="hljs-string">"mt-3"</span> <span class="hljs-attr">lazy</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-tab</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Tab 1"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">b-alert</span> <span class="hljs-attr">show</span>&gt;</span>I'm lazy mounted!<span class="hljs-tag">&lt;/<span class="hljs-name">b-alert</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-tab</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-tab</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Tab 2"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">b-alert</span> <span class="hljs-attr">show</span>&gt;</span>I'm lazy mounted too!<span class="hljs-tag">&lt;/<span class="hljs-name">b-alert</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-tab</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">b-tabs</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b-tabs</span>&gt;</span></pre></figure>
 <h2 id="keyboard-navigation" class="bv-no-focus-ring"><span class="bd-content-title">键盘导航<a class="anchorjs-link" href="#keyboard-navigation" aria-labelledby="keyboard-navigation"></a></span></h2>
 <p>默认情况下，如果选项卡按钮具有焦点，则会启用键盘导航，以使ARIA符合tablists。</p>
 <div class="table-responsive-sm">
@@ -1133,7 +1133,7 @@
 </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-comment">&lt;!-- Tabs with card integration --&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-card</span> <span class="hljs-attr">no-body</span>&gt;</span>
@@ -1168,7 +1168,7 @@
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <h3 id="dynamic-tabs--tabs-end-slot" class="bv-no-focus-ring"><span class="bd-content-title">动态标签 + tabs-end slot<a class="anchorjs-link" href="#dynamic-tabs--tabs-end-slot" aria-labelledby="dynamic-tabs--tabs-end-slot"></a></span></h3>
 <div translate="translate" class="bd-example vue-example vue-example-b-tabs-dynamic notranslate">
 <div>
@@ -1189,7 +1189,7 @@ Open a new tab using the <b>+</b> button above. </div>
 </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-card</span> <span class="hljs-attr">no-body</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">b-tabs</span> <span class="hljs-attr">card</span>&gt;</span>
@@ -1239,7 +1239,7 @@ Open a new tab using the <b>+</b> button above. </div>
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <!-- Component reference added automatically from component package.json -->
 
 <h2 id="component-reference" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title">组件引用<a href="../../../bootstrap-vue/docs/components/tabs#component-reference" class="anchorjs-link" aria-labelledby="component-reference" target="_self"></a></span></h2>
@@ -1638,8 +1638,8 @@ Open a new tab using the <b>+</b> button above. </div>
 </table>
 </div>
 <p><strong>示例：</strong></p>
-<pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { BTabs } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
-Vue.component(<span class="hljs-string">'b-tabs'</span>, BTabs)</pre>
+<figure class="highlight"><pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { BTabs } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
+Vue.component(<span class="hljs-string">'b-tabs'</span>, BTabs)</pre></figure>
 </article>
 <article class="bd-content">
 <h3 id="importing-as-a-plugin" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title"> 导入为Vue.js插件 <a href="../../../bootstrap-vue/docs/components/tabs#importing-as-a-plugin" class="anchorjs-link" aria-labelledby="importing-as-a-plugin" target="_self"></a></span></h3>
@@ -1661,8 +1661,8 @@ Vue.component(<span class="hljs-string">'b-tabs'</span>, BTabs)</pre>
 </table>
 </div>
 <p><strong>示例：</strong></p>
-<pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { TabsPlugin } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
-Vue.use(TabsPlugin)</pre>
+<figure class="highlight"><pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { TabsPlugin } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
+Vue.use(TabsPlugin)</pre></figure>
 
 
 
@@ -1672,8 +1672,7 @@ Vue.use(TabsPlugin)</pre>
 </div>
 
 
-<script src="../../../js/jquery-3.2.1.slim.min.js"></script> 
-<script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery-slim.min.js"><\/script>')</script> 
+<script src="../../../v4/assets/js/vendor/jquery-slim.min.js"></script>
 <script src="../../../v4/dist/js/popper.min.js"></script> 
 <script src="../../../v4/dist/js/bootstrap.min.js"></script> 
 <script src="../../../v4/assets/js/docs.min.js"></script> 

@@ -47,7 +47,7 @@
     </ul>
   </div>
   <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="alse"> v2.6.1 </a>
+    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="alse"> v2.12.0 </a>
       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions"> 
         <a class="dropdown-item active" href="../../../bootstrap-vue/docs/4.0/">Latest (4.3.x)</a>
         <a class="dropdown-item" href="/Boot/">v3.3.7</a>
@@ -235,14 +235,14 @@
 </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-embed</span>
     <span class="hljs-attr">type</span>=<span class="hljs-string">"iframe"</span>
     <span class="hljs-attr">aspect</span>=<span class="hljs-string">"16by9"</span>
     <span class="hljs-attr">src</span>=<span class="hljs-string">"https://www.youtube.com/embed/zpOULjyy-n8?rel=0"</span>
     <span class="hljs-attr">allowfullscreen</span>
   &gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-embed</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre></figure>
 <h2 id="embed-types" class="bv-no-focus-ring"><span class="bd-content-title">嵌入类型<a class="anchorjs-link" href="#embed-types" aria-labelledby="embed-types"></a></span></h2>
 <p>支持的嵌入类型为 <code translate="no" class="notranslate text-nowrap">iframe</code>（默认），<code translate="no" class="notranslate text-nowrap">video</code>（视频），<code translate="no" class="notranslate text-nowrap">embed</code>（嵌入）和 <code translate="no" class="notranslate text-nowrap">object</code>（对象），它们可以转换为标准 HTML <code translate="no" class="notranslate text-nowrap">&lt;iframe&gt;</code> ，<code translate="no" class="notranslate text-nowrap">&lt;video&gt;</code> ，<code translate="no" class="notranslate text-nowrap">&lt;embed&gt;</code> 和 <code translate="no" class="notranslate text-nowrap">&lt;object&gt;</code> 元素。</p>
 <p>通过 <code translate="no" class="notranslate text-nowrap">type</code> 属性设置您想要的嵌入类型，</p>
@@ -254,12 +254,12 @@
 <p>提供给 <code translate="no" class="notranslate text-nowrap">&lt;b-embed&gt;</code>的任何其他属性（上述 <code translate="no" class="notranslate text-nowrap">type</code>，<code translate="no" class="notranslate text-nowrap">aspect</code> 和 <code translate="no" class="notranslate text-nowrap">tag</code> 属性除外）都将应用于内部嵌入元素（即 <code translate="no" class="notranslate text-nowrap">iframe</code>, <code translate="no" class="notranslate text-nowrap">video</code>，<code translate="no" class="notranslate text-nowrap">embed</code> 或 <code translate="no" class="notranslate text-nowrap">object</code> ）。</p>
 <p>在开始和结束 <code translate="no" class="notranslate text-nowrap">&lt;b-embed&gt;</code> 之间的所有子元素都将放置在内部嵌入的元素内。请注意，<code translate="no" class="notranslate text-nowrap">iframe</code> 类型不支持任何子级。</p>
 <p><strong>示例：HTML5 <code translate="no" class="notranslate text-nowrap">&lt;video&gt;</code> 的自适应嵌入</strong></p>
-<pre class="hljs html text-monospace p-2 notranslate" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-embed</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"video"</span> <span class="hljs-attr">aspect</span>=<span class="hljs-string">"4by3"</span> <span class="hljs-attr">controls</span> <span class="hljs-attr">poster</span>=<span class="hljs-string">"poster.png"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">source</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"dev-stories.webm"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"video/webm"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">source</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"dev-stories.mp4"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"video/mp4"</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-embed</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre></figure>
 <!-- Component reference added automatically from component package.json -->
 
 <h2 id="component-reference" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title">组件引用<a href="../../../bootstrap-vue/docs/components/embed#component-reference" class="anchorjs-link" aria-labelledby="component-reference" target="_self"></a></span></h2>
@@ -329,8 +329,8 @@
 </table>
 </div>
 <p><strong>示例：</strong></p>
-<pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { BEmbed } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
-Vue.component(<span class="hljs-string">'b-embed'</span>, BEmbed)</pre>
+<figure class="highlight"><pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { BEmbed } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
+Vue.component(<span class="hljs-string">'b-embed'</span>, BEmbed)</pre></figure>
 </article>
 <article class="bd-content">
 <h3 id="importing-as-a-plugin" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title"> 作为Vue.js插件导入 <a href="../../../bootstrap-vue/docs/components/embed#importing-as-a-plugin" class="anchorjs-link" aria-labelledby="importing-as-a-plugin" target="_self"></a></span></h3>
@@ -352,8 +352,8 @@ Vue.component(<span class="hljs-string">'b-embed'</span>, BEmbed)</pre>
 </table>
 </div>
 <p><strong>示例：</strong></p>
-<pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { EmbedPlugin } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
-Vue.use(EmbedPlugin)</pre>
+<figure class="highlight"><pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { EmbedPlugin } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
+Vue.use(EmbedPlugin)</pre></figure>
 </article>
 
 
@@ -383,8 +383,7 @@ Vue.use(EmbedPlugin)</pre>
 </div>
 
 
-<script src="../../../js/jquery-3.2.1.slim.min.js"></script> 
-<script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery-slim.min.js"><\/script>')</script> 
+<script src="../../../v4/assets/js/vendor/jquery-slim.min.js"></script>
 <script src="../../../v4/dist/js/popper.min.js"></script> 
 <script src="../../../v4/dist/js/bootstrap.min.js"></script> 
 <script src="../../../v4/assets/js/docs.min.js"></script> 

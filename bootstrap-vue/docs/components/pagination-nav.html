@@ -47,7 +47,7 @@
     </ul>
   </div>
   <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="alse"> v2.6.1 </a>
+    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="alse"> v2.12.0 </a>
       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions"> 
         <a class="dropdown-item active" href="../../../bootstrap-vue/docs/4.0/">Latest (4.3.x)</a>
         <a class="dropdown-item" href="/Boot/">v3.3.7</a>
@@ -304,7 +304,7 @@
 </nav>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"overflow-auto"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-pagination-nav</span> <span class="hljs-attr">:link-gen</span>=<span class="hljs-string">"linkGen"</span> <span class="hljs-attr">:number-of-pages</span>=<span class="hljs-string">"10"</span> <span class="hljs-attr">use-router</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-pagination-nav</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -318,7 +318,7 @@
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <p>
   <code translate="no" class="notranslate text-nowrap">&lt;b-pagination-nav&gt;</code>是提供导航分页的自定义输入组件。
   用页数属性设置的总<code translate="no" class="notranslate text-nowrap">页数</code>。页码是从1到<code translate="no" class="notranslate text-nowrap">页数</code>的索引。
@@ -365,7 +365,7 @@
 </p>
 <!-- eslint-disable no-dupe-keys -->
 
-<pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+<figure class="highlight"><pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
   <span class="hljs-attr">methods</span>: {
     <span class="hljs-comment">// For regular HREF (or string `to` prop if `use-router` is set)</span>
     linkGen(pageNum) {
@@ -393,7 +393,7 @@
       }
     }
   }
-}</pre>
+}</pre></figure>
 <p><strong>注意:</strong> 
   当从<code translate="no" class="notranslate text-nowrap">to</code> location对象返回到标准链接时（当没有可用的<code translate="no" class="notranslate text-nowrap">$router</code>时），只有以下位置属性用于生成URL：
 </p>
@@ -431,7 +431,7 @@
 </nav>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"overflow-auto"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-pagination-nav</span>
       <span class="hljs-attr">:link-gen</span>=<span class="hljs-string">"linkGen"</span>
@@ -457,7 +457,7 @@
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <h3 id="providing-an-array-of-pages" class="bv-no-focus-ring"><span class="bd-content-title">提供页面数组<a class="anchorjs-link" href="#providing-an-array-of-pages" aria-labelledby="providing-an-array-of-pages"></a></span></h3>
 <p>
   您可以通过<code translate="no" class="notranslate text-nowrap">pages</code>属性传递一个链接数组，而不是使用 Rather than using <code translate="no" class="notranslate text-nowrap">页数</code>来自动生成页面链接。
@@ -515,7 +515,7 @@
 </ul>
 </nav>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-pagination-nav</span> <span class="hljs-attr">:pages</span>=<span class="hljs-string">"pages1"</span> <span class="hljs-attr">use-router</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-pagination-nav</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-pagination-nav</span> <span class="hljs-attr">:pages</span>=<span class="hljs-string">"pages2"</span> <span class="hljs-attr">use-router</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-pagination-nav</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-pagination-nav</span> <span class="hljs-attr">:pages</span>=<span class="hljs-string">"pages3"</span> <span class="hljs-attr">use-router</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-pagination-nav</span>&gt;</span>
@@ -542,7 +542,7 @@
     }
   }
 }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <h2 id="customizing-appearance" class="bv-no-focus-ring"><span class="bd-content-title">自定义外观<a class="anchorjs-link" href="#customizing-appearance" aria-labelledby="customizing-appearance"></a></span></h2>
 <h3 id="limiting-the-number-of-displayed-buttons" class="bv-no-focus-ring"><span class="bd-content-title">限制显示按钮的数量<a class="anchorjs-link" href="#limiting-the-number-of-displayed-buttons" aria-labelledby="limiting-the-number-of-displayed-buttons"></a></span></h3>
 <p>
@@ -619,7 +619,7 @@
 </nav>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"overflow-auto"</span>&gt;</span>
     <span class="hljs-comment">&lt;!-- Use text in props --&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-pagination-nav</span>
@@ -663,7 +663,7 @@
       <span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">b-pagination-nav</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span></pre></figure>
 <p>
   slo<code translate="no" class="notranslate text-nowrap">页面</code>始终具有作用域，而slots <code translate="no" class="notranslate text-nowrap">first-text</code>, 
   <code translate="no" class="notranslate text-nowrap">prev-text</code>,
@@ -811,6 +811,7 @@
 </div>
 </div>
 </div>
+<figure class="highlight">
 <pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"overflow-auto"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
@@ -855,7 +856,7 @@
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <h3 id="button-size" class="bv-no-focus-ring"><span class="bd-content-title">按钮大小<a class="anchorjs-link" href="#button-size" aria-labelledby="button-size"></a></span></h3>
 <p>
   通过将“<code translate="no" class="notranslate text-nowrap">size</code>”属性设置为“<code translate="no" class="notranslate text-nowrap">'sm'</code>”表示较小的按钮，
@@ -913,7 +914,7 @@
 </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"overflow-auto"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">h6</span>&gt;</span>Small<span class="hljs-tag">&lt;/<span class="hljs-name">h6</span>&gt;</span>
@@ -930,7 +931,7 @@
       <span class="hljs-tag">&lt;<span class="hljs-name">b-pagination-nav</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"lg"</span> <span class="hljs-attr">number-of-pages</span>=<span class="hljs-string">"10"</span> <span class="hljs-attr">base-url</span>=<span class="hljs-string">"#"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-pagination-nav</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span></pre></figure>
 <h3 id="pill-style" class="bv-no-focus-ring"><span class="bd-content-title">Pill 样式<a class="anchorjs-link" href="#pill-style" aria-labelledby="pill-style"></a></span></h3>
 <p>
   通过设置<code translate="no" class="notranslate text-nowrap">pills</code>属性轻松切换到pill样式按钮
@@ -987,7 +988,7 @@
 </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"overflow-auto"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">h6</span>&gt;</span>Small Pills<span class="hljs-tag">&lt;/<span class="hljs-name">h6</span>&gt;</span>
@@ -1004,7 +1005,7 @@
       <span class="hljs-tag">&lt;<span class="hljs-name">b-pagination-nav</span> <span class="hljs-attr">pills</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"lg"</span> <span class="hljs-attr">number-of-pages</span>=<span class="hljs-string">"10"</span> <span class="hljs-attr">base-url</span>=<span class="hljs-string">"#"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-pagination-nav</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span></pre></figure>
 <p><strong>注意:</strong> pill样式需要BootstrapVue的自定义CSS/SCSS。</p>
 <h3 id="alignment" class="bv-no-focus-ring"><span class="bd-content-title">对齐<a class="anchorjs-link" href="#alignment" aria-labelledby="alignment"></a></span></h3>
 <p>
@@ -1080,7 +1081,7 @@
 </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"overflow-auto"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">h6</span>&gt;</span>Left alignment (default)<span class="hljs-tag">&lt;/<span class="hljs-name">h6</span>&gt;</span>
@@ -1102,7 +1103,7 @@
       <span class="hljs-tag">&lt;<span class="hljs-name">b-pagination-nav</span> <span class="hljs-attr">number-of-pages</span>=<span class="hljs-string">"10"</span> <span class="hljs-attr">base-url</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">align</span>=<span class="hljs-string">"fill"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-pagination-nav</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span></pre></figure>
 <h2 id="auto-current-page-detection-and-v-model-support" class="bv-no-focus-ring"><span class="bd-content-title">
   自动当前页检测和<code translate="no" class="notranslate text-nowrap">v-model</code>支持
   <a class="anchorjs-link" href="#auto-current-page-detection-and-v-model-support" aria-labelledby="auto-current-page-detection-and-v-model-support"></a></span>
@@ -1592,8 +1593,8 @@
 </table>
 </div>
 <p><strong>例子:</strong></p>
-<pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { BPaginationNav } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
-Vue.component(<span class="hljs-string">'b-pagination-nav'</span>, BPaginationNav)</pre>
+<figure class="highlight"><pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { BPaginationNav } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
+Vue.component(<span class="hljs-string">'b-pagination-nav'</span>, BPaginationNav)</pre></figure>
 </article>
 <article class="bd-content">
 <h3 id="importing-as-a-plugin" tabindex="-1" class="bv-no-focus-ring"><span class="bd-content-title">作为Vue.js插件导入<a href="../../../bootstrap-vue/docs/components/pagination-nav#importing-as-a-plugin" class="anchorjs-link" aria-labelledby="importing-as-a-plugin" target="_self"></a></span></h3>
@@ -1615,8 +1616,8 @@ Vue.component(<span class="hljs-string">'b-pagination-nav'</span>, BPaginationNa
 </table>
 </div>
 <p><strong>例子:</strong></p>
-<pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { PaginationNavPlugin } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
-Vue.use(PaginationNavPlugin)</pre>
+<figure class="highlight"><pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { PaginationNavPlugin } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
+Vue.use(PaginationNavPlugin)</pre></figure>
 
 
 
@@ -1627,8 +1628,7 @@ Vue.use(PaginationNavPlugin)</pre>
 </div>
 
 
-<script src="../../../js/jquery-3.2.1.slim.min.js"></script> 
-<script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery-slim.min.js"><\/script>')</script> 
+<script src="../../../v4/assets/js/vendor/jquery-slim.min.js"></script>
 <script src="../../../v4/dist/js/popper.min.js"></script> 
 <script src="../../../v4/dist/js/bootstrap.min.js"></script> 
 <script src="../../../v4/assets/js/docs.min.js"></script> 

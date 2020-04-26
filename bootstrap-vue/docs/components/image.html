@@ -47,7 +47,7 @@
     </ul>
   </div>
   <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="alse"> v2.6.1 </a>
+    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="alse"> v2.12.0 </a>
       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions"> 
         <a class="dropdown-item active" href="../../../bootstrap-vue/docs/4.0/">Latest (4.3.x)</a>
         <a class="dropdown-item" href="/Boot/">v3.3.7</a>
@@ -268,9 +268,9 @@
 <div translate="translate" class="bd-example vue-example vue-example-b-img-fluid notranslate">
 <div><img src="https://picsum.photos/1024/400/?image=41" alt="Responsive image" class="img-fluid"></div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://picsum.photos/1024/400/?image=41"</span> <span class="hljs-attr">fluid</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Responsive image"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-img</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre></figure>
 <p>要制作将增长到充满其容器宽度的流体图像，请使用 <code translate="no" class="notranslate text-nowrap">fluid-grow</code> 属性。请注意，这可能会导致小的位图图像模糊。</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-img-fluid-grow notranslate">
 <div>
@@ -279,13 +279,13 @@
 <h5 class="my-3">Small image with <code>fluid-grow</code>:</h5>
 <img src="https://picsum.photos/300/150/?image=41" alt="Fluid-grow image" class="img-fluid w-100"></div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">h5</span>&gt;</span>Small image with <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>fluid<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>:<span class="hljs-tag">&lt;/<span class="hljs-name">h5</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://picsum.photos/300/150/?image=41"</span> <span class="hljs-attr">fluid</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Fluid image"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-img</span>&gt;</span>
 
   <span class="hljs-tag">&lt;<span class="hljs-name">h5</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"my-3"</span>&gt;</span>Small image with <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>fluid-grow<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>:<span class="hljs-tag">&lt;/<span class="hljs-name">h5</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://picsum.photos/300/150/?image=41"</span> <span class="hljs-attr">fluid-grow</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Fluid-grow image"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-img</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre></figure>
 <p>使用 <code translate="no" class="notranslate text-nowrap">block</code> 属性强制将图像显示为块元素，而不是浏览器默认的 inline-block 元素。</p>
 <p><strong>注意：</strong> <em>在 Internet Explorer 10 中，带有 <code translate="no" class="notranslate text-nowrap">fluid</code> 的 SVG 图像的大小不成比例。要解决此问题，请添加样式 <code translate="no" class="notranslate text-nowrap">width: 100% \9;</code> 在必要时。此修复程序不适当地调整了其他图像格式的大小，因此 Bootstrap v4 不会自动应用它。</em></p>
 <h3 id="image-thumbnails" class="bv-no-focus-ring"><span class="bd-content-title">图片缩略图<a class="anchorjs-link" href="#image-thumbnails" aria-labelledby="image-thumbnails"></a></span></h3>
@@ -299,7 +299,7 @@
 </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">fluid</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"p-4 bg-dark"</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">fluid</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"p-4 bg-dark"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">b-img</span> <span class="hljs-attr">thumbnail</span> <span class="hljs-attr">fluid</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://picsum.photos/250/250/?image=54"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Image 1"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-img</span>&gt;</span>
@@ -311,7 +311,7 @@
       <span class="hljs-tag">&lt;<span class="hljs-name">b-img</span> <span class="hljs-attr">thumbnail</span> <span class="hljs-attr">fluid</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://picsum.photos/250/250/?image=59"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Image 3"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-img</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span></pre></figure>
 <h3 id="rounded-corners" class="bv-no-focus-ring"><span class="bd-content-title">圆角<a class="anchorjs-link" href="#rounded-corners" aria-labelledby="rounded-corners"></a></span></h3>
 <p>通过将圆角支柱设置为以下值之一，可以控制圆角：</p>
 <ul>
@@ -327,7 +327,7 @@
 <div translate="translate" class="bd-example vue-example vue-example-b-img-rounded notranslate">
 <div><img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2275%22%20height%3D%2275%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20%25%7Bw%7D%20%25%7Bh%7D%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20style%3D%22fill%3A%23777%3B%22%3E%3C%2Frect%3E%3C%2Fsvg%3E" alt="Rounded image" width="75" height="75" class="rounded m1"> <img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2275%22%20height%3D%2275%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20%25%7Bw%7D%20%25%7Bh%7D%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20style%3D%22fill%3A%23777%3B%22%3E%3C%2Frect%3E%3C%2Fsvg%3E" alt="Top-rounded image" width="75" height="75" class="rounded-top m1"> <img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2275%22%20height%3D%2275%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20%25%7Bw%7D%20%25%7Bh%7D%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20style%3D%22fill%3A%23777%3B%22%3E%3C%2Frect%3E%3C%2Fsvg%3E" alt="Right-rounded image" width="75" height="75" class="rounded-right m1"> <img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2275%22%20height%3D%2275%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20%25%7Bw%7D%20%25%7Bh%7D%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20style%3D%22fill%3A%23777%3B%22%3E%3C%2Frect%3E%3C%2Fsvg%3E" alt="Bottom-rounded image" width="75" height="75" class="rounded-bottom m1"> <img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2275%22%20height%3D%2275%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20%25%7Bw%7D%20%25%7Bh%7D%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20style%3D%22fill%3A%23777%3B%22%3E%3C%2Frect%3E%3C%2Fsvg%3E" alt="Left-rounded image" width="75" height="75" class="rounded-left m1"> <img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2275%22%20height%3D%2275%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20%25%7Bw%7D%20%25%7Bh%7D%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20style%3D%22fill%3A%23777%3B%22%3E%3C%2Frect%3E%3C%2Fsvg%3E" alt="Circle image" width="75" height="75" class="rounded-circle m1"> <img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2275%22%20height%3D%2275%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20%25%7Bw%7D%20%25%7Bh%7D%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20style%3D%22fill%3A%23777%3B%22%3E%3C%2Frect%3E%3C%2Fsvg%3E" alt="Not rounded image" width="75" height="75" class="rounded-0 m1"></div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-img</span> <span class="hljs-attr">v-bind</span>=<span class="hljs-string">"mainProps"</span> <span class="hljs-attr">rounded</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Rounded image"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-img</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-img</span> <span class="hljs-attr">v-bind</span>=<span class="hljs-string">"mainProps"</span> <span class="hljs-attr">rounded</span>=<span class="hljs-string">"top"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Top-rounded image"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-img</span>&gt;</span>
@@ -347,24 +347,24 @@
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <h3 id="aligning-images" class="bv-no-focus-ring"><span class="bd-content-title">对齐图像<a class="anchorjs-link" href="#aligning-images" aria-labelledby="aligning-images"></a></span></h3>
 <p>使图像的布尔属性 <code translate="no" class="notranslate text-nowrap">left</code>（左浮动），<code translate="no" class="notranslate text-nowrap">right</code>（右浮动），和 <code translate="no" class="notranslate text-nowrap">center</code>（自动左边缘与右边缘）。 您还可以通过将图像放在具有 <code translate="no" class="notranslate text-nowrap">text-center</code> 类的容器中来使图像居中.</p>
 <p><strong>左右对齐（浮动）：</strong></p>
 <div translate="translate" class="bd-example vue-example vue-example-b-img-left-right notranslate">
 <div class="clearfix"><img src="https://picsum.photos/125/125/?image=58" alt="Left image" class="float-left"> <img src="https://picsum.photos/125/125/?image=58" alt="Right image" class="float-right"></div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"clearfix"</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"clearfix"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-img</span> <span class="hljs-attr">left</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://picsum.photos/125/125/?image=58"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Left image"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-img</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-img</span> <span class="hljs-attr">right</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://picsum.photos/125/125/?image=58"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Right image"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-img</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre></figure>
 <p><strong>居中对齐（块级）：</strong></p>
 <div translate="translate" class="bd-example vue-example vue-example-b-img-center notranslate">
 <div><img src="https://picsum.photos/125/125/?image=58" alt="Center image" class="mx-auto d-block"></div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-img</span> <span class="hljs-attr">center</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://picsum.photos/125/125/?image=58"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Center image"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-img</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre></figure>
 <p>注意：<code translate="no" class="notranslate text-nowrap">left</code> 优先于 <code translate="no" class="notranslate text-nowrap">right</code> ，后者优先于 <code translate="no" class="notranslate text-nowrap">center</code> 。</p>
 <h2 id="blank-or-solid-color-images" class="bv-no-focus-ring"><span class="bd-content-title">空白（或纯色）图像<a class="anchorjs-link" href="#blank-or-solid-color-images" aria-labelledby="blank-or-solid-color-images"></a></span></h2>
 <p><code translate="no" class="notranslate text-nowrap">&lt;b-img&gt;</code> 通过设置 <code translate="no" class="notranslate text-nowrap">blank</code>【空白】属性并指定  <code translate="no" class="notranslate text-nowrap">width</code> 和 <code translate="no" class="notranslate text-nowrap">height</code> 值（以像素为单位）来提供内置支持，以生成任意宽度和高度的空白图像（默认情况下是透明的）。您可以应用任何其他 <code translate="no" class="notranslate text-nowrap">&lt;b-img&gt;</code> 属性来更改所生成图像的样式/行为。</p>
@@ -379,7 +379,7 @@
 <div translate="translate" class="bd-example vue-example vue-example-b-img-blank notranslate">
 <div><img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2275%22%20height%3D%2275%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20%25%7Bw%7D%20%25%7Bh%7D%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20style%3D%22fill%3Atransparent%3B%22%3E%3C%2Frect%3E%3C%2Fsvg%3E" alt="Transparent image" width="75" height="75" class="m1"> <img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2275%22%20height%3D%2275%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20%25%7Bw%7D%20%25%7Bh%7D%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20style%3D%22fill%3A%23777%3B%22%3E%3C%2Frect%3E%3C%2Fsvg%3E" alt="HEX shorthand color image (#777)" width="75" height="75" class="m1"> <img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2275%22%20height%3D%2275%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20%25%7Bw%7D%20%25%7Bh%7D%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20style%3D%22fill%3Ared%3B%22%3E%3C%2Frect%3E%3C%2Fsvg%3E" alt="Named color image (red)" width="75" height="75" class="m1"> <img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2275%22%20height%3D%2275%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20%25%7Bw%7D%20%25%7Bh%7D%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20style%3D%22fill%3Ablack%3B%22%3E%3C%2Frect%3E%3C%2Fsvg%3E" alt="Named color image (black)" width="75" height="75" class="m1"> <img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2275%22%20height%3D%2275%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20%25%7Bw%7D%20%25%7Bh%7D%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20style%3D%22fill%3A%23338833%3B%22%3E%3C%2Frect%3E%3C%2Fsvg%3E" alt="HEX color image" width="75" height="75" class="m1"> <img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2275%22%20height%3D%2275%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20%25%7Bw%7D%20%25%7Bh%7D%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20style%3D%22fill%3Argba(128%2C%20255%2C%20255%2C%200.5)%3B%22%3E%3C%2Frect%3E%3C%2Fsvg%3E" alt="RGBa color image" width="75" height="75" class="m1"> <img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2275%22%20height%3D%2275%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20%25%7Bw%7D%20%25%7Bh%7D%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20style%3D%22fill%3A%2388f%3B%22%3E%3C%2Frect%3E%3C%2Fsvg%3E" alt="HEX shorthand color (#88f)" width="75" height="75" class="m1"></div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-img</span> <span class="hljs-attr">v-bind</span>=<span class="hljs-string">"mainProps"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Transparent image"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-img</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-img</span> <span class="hljs-attr">v-bind</span>=<span class="hljs-string">"mainProps"</span> <span class="hljs-attr">blank-color</span>=<span class="hljs-string">"#777"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"HEX shorthand color image (#777)"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-img</span>&gt;</span>
@@ -399,7 +399,7 @@
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <p><strong>注意：</strong></p>
 <ul>
 <li>在空白图像模式下，如果仅设置宽度或高度之一，则图像的宽度和高度都将设置为相同的值。</li>
@@ -435,7 +435,7 @@
 <div translate="translate" class="bd-example vue-example vue-example-b-img-lazy notranslate">
 <div><img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22600%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20%25%7Bw%7D%20%25%7Bh%7D%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20style%3D%22fill%3A%23bbb%3B%22%3E%3C%2Frect%3E%3C%2Fsvg%3E" alt="Image 1" width="600" height="400" class="img-fluid w-100 mx-auto d-block my-5" blank="true"> <img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22600%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20%25%7Bw%7D%20%25%7Bh%7D%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20style%3D%22fill%3A%23bbb%3B%22%3E%3C%2Frect%3E%3C%2Fsvg%3E" alt="Image 2" width="600" height="400" class="img-fluid w-100 mx-auto d-block my-5" blank="true"> <img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22600%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20%25%7Bw%7D%20%25%7Bh%7D%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20style%3D%22fill%3A%23bbb%3B%22%3E%3C%2Frect%3E%3C%2Fsvg%3E" alt="Image 3" width="600" height="400" class="img-fluid w-100 mx-auto d-block my-5" blank="true"> <img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22600%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20%25%7Bw%7D%20%25%7Bh%7D%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20style%3D%22fill%3A%23bbb%3B%22%3E%3C%2Frect%3E%3C%2Fsvg%3E" alt="Image 4" width="600" height="400" class="img-fluid w-100 mx-auto d-block my-5" blank="true"> <img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22600%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20%25%7Bw%7D%20%25%7Bh%7D%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20style%3D%22fill%3A%23bbb%3B%22%3E%3C%2Frect%3E%3C%2Fsvg%3E" alt="Image 5" width="600" height="400" class="img-fluid w-100 mx-auto d-block my-5" blank="true"> <img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22600%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20%25%7Bw%7D%20%25%7Bh%7D%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20style%3D%22fill%3A%23bbb%3B%22%3E%3C%2Frect%3E%3C%2Fsvg%3E" alt="Image 6" width="600" height="400" class="img-fluid w-100 mx-auto d-block my-5" blank="true"> <img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22600%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20%25%7Bw%7D%20%25%7Bh%7D%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20style%3D%22fill%3A%23bbb%3B%22%3E%3C%2Frect%3E%3C%2Fsvg%3E" alt="Image 7" width="600" height="400" class="img-fluid w-100 mx-auto d-block my-5" blank="true"> <img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22600%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20%25%7Bw%7D%20%25%7Bh%7D%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20style%3D%22fill%3A%23bbb%3B%22%3E%3C%2Frect%3E%3C%2Fsvg%3E" alt="Image 8" width="600" height="400" class="img-fluid w-100 mx-auto d-block my-5" blank="true"></div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-img-lazy</span> <span class="hljs-attr">v-bind</span>=<span class="hljs-string">"mainProps"</span> <span class="hljs-attr">:src</span>=<span class="hljs-string">"getImageUrl(80)"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Image 1"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-img-lazy</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-img-lazy</span> <span class="hljs-attr">v-bind</span>=<span class="hljs-string">"mainProps"</span> <span class="hljs-attr">:src</span>=<span class="hljs-string">"getImageUrl(82)"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Image 2"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-img-lazy</span>&gt;</span>
@@ -470,7 +470,7 @@
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <h3 id="force-show-of-lazy-loaded-image" class="bv-no-focus-ring"><span class="bd-content-title">强制显示延迟加载的图像<a class="anchorjs-link" href="#force-show-of-lazy-loaded-image" aria-labelledby="force-show-of-lazy-loaded-image"></a></span></h3>
 <p>要强制显示最终图像，请将 <code translate="no" class="notranslate text-nowrap">show</code> 属性设置为 <code translate="no" class="notranslate text-nowrap">true</code> 。<code translate="no" class="notranslate text-nowrap">show</code> 属性支持Vue <code translate="no" class="notranslate text-nowrap">.sync</code> 修饰符，并且在显示最终图像时将更新为 <code translate="no" class="notranslate text-nowrap">true</code> 。</p>
 <h3 id="lazy-loaded-srcset-support" class="bv-no-focus-ring"><span class="bd-content-title">懒加载 <code translate="no" class="notranslate text-nowrap">srcset</code> 支持<a class="anchorjs-link" href="#lazy-loaded-srcset-support" aria-labelledby="lazy-loaded-srcset-support"></a></span></h3>
@@ -836,8 +836,8 @@
 </table>
 </div>
 <p><strong>示例：</strong></p>
-<pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { BImg } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
-Vue.component(<span class="hljs-string">'b-img'</span>, BImg)</pre>
+<figure class="highlight"><pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { BImg } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
+Vue.component(<span class="hljs-string">'b-img'</span>, BImg)</pre></figure>
 </article>
 <!---->
 <article class="bd-content">
@@ -866,8 +866,8 @@ Vue.component(<span class="hljs-string">'b-img'</span>, BImg)</pre>
 </div>
 <!---->
 <p><strong>示例：</strong></p>
-<pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { ImagePlugin } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
-Vue.use(ImagePlugin)</pre>
+<figure class="highlight"><pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { ImagePlugin } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
+Vue.use(ImagePlugin)</pre></figure>
 </article>
 
 
@@ -881,8 +881,7 @@ Vue.use(ImagePlugin)</pre>
 </div>
 
 
-<script src="../../../js/jquery-3.2.1.slim.min.js"></script> 
-<script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery-slim.min.js"><\/script>')</script> 
+<script src="../../../v4/assets/js/vendor/jquery-slim.min.js"></script>
 <script src="../../../v4/dist/js/popper.min.js"></script> 
 <script src="../../../v4/dist/js/bootstrap.min.js"></script> 
 <script src="../../../v4/assets/js/docs.min.js"></script> 

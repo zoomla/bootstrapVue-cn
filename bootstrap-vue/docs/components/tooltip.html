@@ -47,7 +47,7 @@
     </ul>
   </div>
   <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="alse"> v2.6.1 </a>
+    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="alse"> v2.12.0 </a>
       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions"> 
         <a class="dropdown-item active" href="../../../bootstrap-vue/docs/4.0/">Latest (4.3.x)</a>
         <a class="dropdown-item" href="/Boot/">v3.3.7</a>
@@ -279,7 +279,7 @@
 <button id="tooltip-target-1" type="button" class="btn btn-secondary"> Hover Me </button>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-center my-3"</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-center my-3"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">v-b-tooltip.hover</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Tooltip directive content"</span>&gt;</span>
     Hover Me
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
@@ -290,7 +290,7 @@
   <span class="hljs-tag">&lt;<span class="hljs-name">b-tooltip</span> <span class="hljs-attr">target</span>=<span class="hljs-string">"tooltip-target-1"</span> <span class="hljs-attr">triggers</span>=<span class="hljs-string">"hover"</span>&gt;</span>
     I am tooltip <span class="hljs-tag">&lt;<span class="hljs-name">b</span>&gt;</span>component<span class="hljs-tag">&lt;/<span class="hljs-name">b</span>&gt;</span> content!
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-tooltip</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre></figure>
 <h2 id="overview" class="bv-no-focus-ring"><span class="bd-content-title">总览<a class="anchorjs-link" href="#overview" aria-labelledby="overview"></a></span></h2>
 <p>使用工具提示组件时要了解的事项：</p>
 <ul>
@@ -361,7 +361,7 @@
 <h3 id="caveats-with-focus-trigger-on-button-elements" class="bv-no-focus-ring"><span class="bd-content-title">重点 <code translate="no" class="notranslate text-nowrap">触发</code> <code translate="no" class="notranslate text-nowrap">&lt;button&gt;</code> 元素的警告<a class="anchorjs-link" href="#caveats-with-focus-trigger-on-button-elements" aria-labelledby="caveats-with-focus-trigger-on-button-elements"></a></span></h3>
 <p>为了使用 <code translate="no" class="notranslate text-nowrap">焦点</code> 触发器时正确的跨浏览器和跨平台行为, 必须使用呈现<code translate="no" class="notranslate text-nowrap">&lt;a&gt;</code>标记, 而不是 <code translate="no" class="notranslate text-nowrap">&lt;button&gt;</code> 而不是标记的元素, 并且还必须包括 <code translate="no" class="notranslate text-nowrap">tabindex="0"</code> 属性.</p>
 <p>下面将生成一个看起来像按钮的 <code translate="no" class="notranslate text-nowrap">&lt;a&gt;</code> :</p>
-<pre class="hljs html text-monospace p-2 notranslate" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-button</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-button</span>
   <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>
   <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"0"</span>
   <span class="hljs-attr">v-b-tooltip.focus</span>
@@ -375,7 +375,7 @@
 <span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">b-tooltip</span> <span class="hljs-attr">target</span>=<span class="hljs-string">"link-button"</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Tooltip title"</span> <span class="hljs-attr">triggers</span>=<span class="hljs-string">"focus"</span>&gt;</span>
   Tooltip title
-<span class="hljs-tag">&lt;/<span class="hljs-name">b-tooltip</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b-tooltip</span>&gt;</span></pre></figure>
 <h3 id="making-tooltips-work-for-keyboard-and-assistive-technology-users" class="bv-no-focus-ring"><span class="bd-content-title">使工具提示对键盘和辅助技术用户有效<a class="anchorjs-link" href="#making-tooltips-work-for-keyboard-and-assistive-technology-users" aria-labelledby="making-tooltips-work-for-keyboard-and-assistive-technology-users"></a></span></h3>
 <p>您只应向传统上可键盘聚焦和交互的HTML元素（如链接，按钮或表单控件）添加工具提示. 能使任意HTML元素 (例如<code translate="no" class="notranslate text-nowrap">&lt;span&gt;</code>s) 成为可聚焦的, 虽然可以通过添加 <code translate="no" class="notranslate text-nowrap">tabindex="0"</code> 来操作, 但这将为键盘用户在非交互式元素上添加潜在的令人讨厌且令人困惑的制表位. 此外, 在这种情况下,目前大多数辅助技术都不会公布工具提示.</p>
 <p>此外, 不要仅将悬停作为工具提示的 <code translate="no" class="notranslate text-nowrap">触发器</code> , 因为这将使仅键盘用户 <em>无法触发工具提示</em>.</p>
@@ -388,12 +388,12 @@
 <button type="button" disabled="disabled" class="btn btn-primary disabled" style="pointer-events: none;">Disabled button</button>
 </span> </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"disabled-wrapper"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"d-inline-block"</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"0"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"primary"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"pointer-events: none;"</span> <span class="hljs-attr">disabled</span>&gt;</span>Disabled button<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-tooltip</span> <span class="hljs-attr">target</span>=<span class="hljs-string">"disabled-wrapper"</span>&gt;</span>Disabled tooltip<span class="hljs-tag">&lt;/<span class="hljs-name">b-tooltip</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre></figure>
 <h2 id="b-tooltip-component-usage" class="bv-no-focus-ring"><span class="bd-content-title"><code translate="no" class="notranslate text-nowrap">&lt;b-tooltip&gt;</code> 组件用法<a class="anchorjs-link" href="#b-tooltip-component-usage" aria-labelledby="b-tooltip-component-usage"></a></span></h2>
 <div translate="translate" class="bd-example vue-example vue-example-b-tooltip-component notranslate">
 <div class="container-fluid">
@@ -410,7 +410,7 @@
 </div>
   </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">fluid</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">fluid</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">md</span>=<span class="hljs-string">"4"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"py-4"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"button-1"</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"outline-success"</span>&gt;</span>Live chat<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
@@ -433,7 +433,7 @@
 
   <span class="hljs-comment">&lt;!-- Tooltip for an element identified by ref --&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-tooltip</span> <span class="hljs-attr">:target</span>=<span class="hljs-string">"() =&gt; $refs['button-3']"</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Alternative!"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-tooltip</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span></pre></figure>
 <h3 id="component-options" class="bv-no-focus-ring"><span class="bd-content-title">组件选项<a class="anchorjs-link" href="#component-options" aria-labelledby="component-options"></a></span></h3>
 <div class="table-responsive-sm">
 <table class="b-table table table-bordered table-striped bv-docs-table">
@@ -551,7 +551,7 @@
 </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-center"</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-center"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"tooltip-button-interactive"</span>&gt;</span>My tooltip is interactive<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-tooltip</span> <span class="hljs-attr">target</span>=<span class="hljs-string">"tooltip-button-interactive"</span>&gt;</span>I will stay open when hovered<span class="hljs-tag">&lt;/<span class="hljs-name">b-tooltip</span>&gt;</span>
@@ -561,7 +561,7 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"tooltip-button-not-interactive"</span>&gt;</span>Mine is not...<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-tooltip</span> <span class="hljs-attr">target</span>=<span class="hljs-string">"tooltip-button-not-interactive"</span> <span class="hljs-attr">noninteractive</span>&gt;</span>Catch me if you can!<span class="hljs-tag">&lt;/<span class="hljs-name">b-tooltip</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre></figure>
 <h3 id="variants-and-custom-class" class="bv-no-focus-ring"><span class="bd-content-title">变体和自定义类<a class="anchorjs-link" href="#variants-and-custom-class" aria-labelledby="variants-and-custom-class"></a></span></h3>
 <p>BootstrapVue's 的工具提示通过我们的自定义 CSS, 和 <code translate="no" class="notranslate text-nowrap">变体</code> prop支持上下文颜色变体:</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-tooltip-variant notranslate">
@@ -569,16 +569,16 @@
 <button id="tooltip-button-variant" type="button" class="btn btn-secondary">Button</button>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-center"</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-center"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"tooltip-button-variant"</span>&gt;</span>Button<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-tooltip</span> <span class="hljs-attr">target</span>=<span class="hljs-string">"tooltip-button-variant"</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"danger"</span>&gt;</span>Danger variant tooltip<span class="hljs-tag">&lt;/<span class="hljs-name">b-tooltip</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre></figure>
 <p>Bootstrap default theme variants are: <code translate="no" class="notranslate text-nowrap">danger</code>, <code translate="no" class="notranslate text-nowrap">warning</code>, <code translate="no" class="notranslate text-nowrap">success</code>, <code translate="no" class="notranslate text-nowrap">primary</code>, <code translate="no" class="notranslate text-nowrap">secondary</code>, <code translate="no" class="notranslate text-nowrap">info</code>, <code translate="no" class="notranslate text-nowrap">light</code>, and <code translate="no" class="notranslate text-nowrap">dark</code>. You can change or add additional variants via Bootstrap <a href="../../../bootstrap-vue/docs/reference/theming" class="font-weight-bold">SCSS variables</a></p>
 <p>A custom class can be applied to the tooltip outer wrapper <code translate="no" class="notranslate text-nowrap">&lt;div&gt;</code> by using the <code translate="no" class="notranslate text-nowrap">custom-class</code> prop:</p>
-<pre class="hljs html text-monospace p-2 notranslate" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-center"</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-center"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"my-button"</span>&gt;</span>Button<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-tooltip</span> <span class="hljs-attr">target</span>=<span class="hljs-string">"my-button"</span> <span class="hljs-attr">custom-class</span>=<span class="hljs-string">"my-tooltip-class"</span>&gt;</span>Tooltip Title<span class="hljs-tag">&lt;/<span class="hljs-name">b-tooltip</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre></figure>
 <p><code translate="no" class="notranslate text-nowrap">variant</code> and <code translate="no" class="notranslate text-nowrap">custom-class</code> are reactive and can be changed while the tooltip is open.</p>
 <p>Refer to the <a href="../../../bootstrap-vue/docs/directives/tooltip" class="font-weight-bold">tooltip directive</a> docs on applying variants and custom
 class to the directive version.</p>
@@ -594,7 +594,7 @@ class to the directive version.</p>
 </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-center"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"tooltip-button-1"</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"primary"</span>&gt;</span>I have a tooltip<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
@@ -615,17 +615,17 @@ class to the directive version.</p>
       <span class="hljs-attr">show</span>: <span class="hljs-literal">true</span>
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <p>要使工具提示显示在初始渲染中, 只需把 <code translate="no" class="notranslate text-nowrap">show</code>道具 添加在 <code translate="no" class="notranslate text-nowrap">&lt;b-tooltip&gt;</code>上:</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-tooltip-show-open notranslate">
 <div class="text-center">
 <button id="tooltip-button-2" type="button" class="btn btn-primary" aria-describedby="__bv_tooltip_2251__">Button</button>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-center"</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-center"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"tooltip-button-2"</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"primary"</span>&gt;</span>Button<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-tooltip</span> <span class="hljs-attr">show</span> <span class="hljs-attr">target</span>=<span class="hljs-string">"tooltip-button-2"</span>&gt;</span>I start open<span class="hljs-tag">&lt;/<span class="hljs-name">b-tooltip</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre></figure>
 <p>通过引用将 <code translate="no" class="notranslate text-nowrap">'打开'</code> 和 <code translate="no" class="notranslate text-nowrap">'关闭'</code> 事件提交给工具提示,
   也可以影响程序控制.</p>
 <div translate="translate" class="bd-example vue-example vue-example-b-tooltip-show-ref-event notranslate">
@@ -639,7 +639,7 @@ class to the directive version.</p>
 </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"d-flex flex-column text-md-center"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"p-2"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"tooltip-button-show-event"</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"primary"</span>&gt;</span>I have a tooltip<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
@@ -667,7 +667,7 @@ class to the directive version.</p>
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <p>您还可以使用 <code translate="no" class="notranslate text-nowrap">$root</code> 事件触发工具提示的显示和隐藏. 有关 <strong>详细信息,
 and showing tooltips via $root events</strong> section below for details.</p>
 <h3 id="programmatically-disabling-tooltip" class="bv-no-focus-ring"><span class="bd-content-title">以编程方式禁用工具提示<a class="anchorjs-link" href="#programmatically-disabling-tooltip" aria-labelledby="programmatically-disabling-tooltip"></a></span></h3>
@@ -684,7 +684,7 @@ and showing tooltips via $root events</strong> section below for details.</p>
 </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"d-flex flex-column text-md-center"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"p-2"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"tooltip-button-disable"</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"primary"</span>&gt;</span>I have a tooltip<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
@@ -722,7 +722,7 @@ and showing tooltips via $root events</strong> section below for details.</p>
       }
     }
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></figure>
 <p><strong>注意:</strong> <em>在上面的示例中, 由于我们使用的是焦点悬停的默认工具提示 <code translate="no" class="notranslate text-nowrap">触发器</code>,
   由于工具栏上的焦点丢失（并悬停了）,该工具提示在被禁用之前将关闭.</em></p>
 <p>您还可以发出 <code translate="no" class="notranslate text-nowrap">$root</code> 事件以触发禁用和启用工具提示. 有关 <strong>详细信息,请参见下面的通过 $root 事件</strong> 禁用和启用工具提示.</p>
@@ -742,7 +742,7 @@ and showing tooltips via $root events</strong> section below for details.</p>
 </div>
 </div>
 </div>
-<pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">fluid</span>&gt;</span>
+<figure class="highlight"><pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">b-container</span> <span class="hljs-attr">fluid</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-row</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-col</span> <span class="hljs-attr">md</span>=<span class="hljs-string">"6"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"py-4"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span> <span class="hljs-attr">v-b-tooltip</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Online!"</span> <span class="hljs-attr">variant</span>=<span class="hljs-string">"outline-success"</span>&gt;</span>Live chat<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
@@ -758,7 +758,7 @@ and showing tooltips via $root events</strong> section below for details.</p>
       <span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">b-col</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-row</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b-container</span>&gt;</span></pre></figure>
 <p>有关指令格式的更多信息和功能,请参考 <a href="../../../bootstrap-vue/docs/directives/tooltip" class="font-weight-bold"><code translate="no" class="notranslate text-nowrap">v-b-tooltip</code> 文档</a> 
 features of the directive format.</p>
 <h2 id="global-root-instance-events" class="bv-no-focus-ring"><span class="bd-content-title">'全局' $ root 事件<a class="anchorjs-link" href="#global-root-instance-events" aria-labelledby="global-root-instance-events"></a></span></h2>
@@ -766,40 +766,40 @@ features of the directive format.</p>
   有关 <code translate="no" class="notranslate text-nowrap">$root</code> 实例的详细信息可以在 <a href="https://vuejs.org/v2/guide/components-edge-cases.html#Accessing-the-Root-Instance" target="_blank" rel="noopener"> Vue 官方文档中找到</a>.</p>
 <h3 id="hiding-and-showing-tooltips-via-root-events" class="bv-no-focus-ring"><span class="bd-content-title">通过 $ root 事件隐藏和显示工具提示<a class="anchorjs-link" href="#hiding-and-showing-tooltips-via-root-events" aria-labelledby="hiding-and-showing-tooltips-via-root-events"></a></span></h3>
 <p>You can close (hide) <strong>all open tooltips</strong> by emitting the <code translate="no" class="notranslate text-nowrap">bv::hide::tooltip</code> event on $root:</p>
-<pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-keyword">this</span>.$root.$emit(<span class="hljs-string">'bv::hide::tooltip'</span>)</pre>
+<figure class="highlight"><pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-keyword">this</span>.$root.$emit(<span class="hljs-string">'bv::hide::tooltip'</span>)</pre></figure>
 <p>To close a <strong>specific tooltip</strong>, pass the trigger element's <code translate="no" class="notranslate text-nowrap">id</code>, or the <code translate="no" class="notranslate text-nowrap">id</code> of the tooltip (if one
 was provided via the <code translate="no" class="notranslate text-nowrap">id</code> prop), as the argument:</p>
-<pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-keyword">this</span>.$ root.$ emit(<span class="hljs-string">'bv::hide::tooltip'</span>, <span class="hljs-string">'my-trigger-button-id'</span>)</pre>
+<figure class="highlight"><pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-keyword">this</span>.$ root.$ emit(<span class="hljs-string">'bv::hide::tooltip'</span>, <span class="hljs-string">'my-trigger-button-id'</span>)</pre></figure>
 <p>To open a <strong>specific tooltip</strong>, pass the trigger element's <code translate="no" class="notranslate text-nowrap">id</code>, or the <code translate="no" class="notranslate text-nowrap">id</code> of the tooltip (if one
 was provided via the <code translate="no" class="notranslate text-nowrap">id</code> prop), as the argument when emitting the <code translate="no" class="notranslate text-nowrap">bv::show::tooltip</code> $root event:</p>
-<pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-keyword">this</span>.$root.$emit(<span class="hljs-string">'bv::show::tooltip'</span>, <span class="hljs-string">'my-trigger-button-id'</span>)</pre>
+<figure class="highlight"><pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-keyword">this</span>.$root.$emit(<span class="hljs-string">'bv::show::tooltip'</span>, <span class="hljs-string">'my-trigger-button-id'</span>)</pre></figure>
 <p>To open all tooltips simultaneously, omit the <code translate="no" class="notranslate text-nowrap">id</code> argument when emitting the <code translate="no" class="notranslate text-nowrap">bv::show::tooltip</code> event.</p>
 <p>These events work for both the component <strong>and</strong> directive versions of tooltip.</p>
 <p><strong>Note:</strong> <em>the <strong>trigger element</strong> must exist in the DOM and be in a visible state in order for the
 tooltip to show.</em></p>
 <h3 id="disabling-and-enabling-tooltips-via-root-events" class="bv-no-focus-ring"><span class="bd-content-title">通过$ root事件禁用和启用工具提示<a class="anchorjs-link" href="#disabling-and-enabling-tooltips-via-root-events" aria-labelledby="disabling-and-enabling-tooltips-via-root-events"></a></span></h3>
 <p>You can disable <strong>all open tooltips</strong> by emitting the <code translate="no" class="notranslate text-nowrap">bv::disable::tooltip</code> event on $root:</p>
-<pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-keyword">this</span>.$root.$emit(<span class="hljs-string">'bv::disable::tooltip'</span>)</pre>
+<figure class="highlight"><pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-keyword">this</span>.$root.$emit(<span class="hljs-string">'bv::disable::tooltip'</span>)</pre></figure>
 <p>To disable a <strong>specific tooltip</strong>, pass the trigger element's <code translate="no" class="notranslate text-nowrap">id</code>, or the <code translate="no" class="notranslate text-nowrap">id</code> of the tooltip (if
 one was provided via the <code translate="no" class="notranslate text-nowrap">id</code> prop), as the argument:</p>
-<pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-keyword">this</span>.$root.$emit(<span class="hljs-string">'bv::disable::tooltip'</span>, <span class="hljs-string">'my-trigger-button-id'</span>)</pre>
+<figure class="highlight"><pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-keyword">this</span>.$root.$emit(<span class="hljs-string">'bv::disable::tooltip'</span>, <span class="hljs-string">'my-trigger-button-id'</span>)</pre></figure>
 <p>To enable a <strong>specific tooltip</strong>, pass the trigger element's <code translate="no" class="notranslate text-nowrap">id</code>, or the <code translate="no" class="notranslate text-nowrap">id</code> of the tooltip (if
 one was provided via the <code translate="no" class="notranslate text-nowrap">id</code> prop), as the argument when emitting the <code translate="no" class="notranslate text-nowrap">bv::enable::tooltip</code> $root
 event:</p>
-<pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-keyword">this</span>.$root.$emit(<span class="hljs-string">'bv::enable::tooltip'</span>, <span class="hljs-string">'my-trigger-button-id'</span>)</pre>
+<figure class="highlight"><pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-keyword">this</span>.$root.$emit(<span class="hljs-string">'bv::enable::tooltip'</span>, <span class="hljs-string">'my-trigger-button-id'</span>)</pre></figure>
 <p>To enable all tooltips simultaneously, omit the <code translate="no" class="notranslate text-nowrap">id</code> argument when emitting the <code translate="no" class="notranslate text-nowrap">bv::enable::tooltip</code> event.</p>
 <p>These events work for both the component <strong>and</strong> directive versions of tooltip.</p>
 <p><strong>Note:</strong> <em>The <strong>trigger element</strong> must exist in the DOM in order for the tooltip to be enabled or
 disabled.</em></p>
 <h3 id="listening-to-tooltip-changes-via-root-events" class="bv-no-focus-ring"><span class="bd-content-title">通过 $root 事件监听工具提示更改<a class="anchorjs-link" href="#listening-to-tooltip-changes-via-root-events" aria-labelledby="listening-to-tooltip-changes-via-root-events"></a></span></h3>
 <p>To listen to any tooltip opening, use:</p>
-<pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+<figure class="highlight"><pre class="hljs js text-monospace p-2 notranslate" translate="no"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
   mounted() {
     <span class="hljs-keyword">this</span>.$root.$on(<span class="hljs-string">'bv::tooltip::show'</span>, bvEvent =&gt; {
       <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'bvEvent:'</span>, bvEvent)
     })
   }
-}</pre>
+}</pre></figure>
 <p>有关事件的完整<a href="../../../bootstrap-vue/docs/components/tooltip#component-reference" class="font-weight-bold">列表</a> 请参阅文档的“事件”部分.</p>
 <!-- Component reference added automatically from component package.json --> 
 
@@ -1161,8 +1161,8 @@ disabled.</em></p>
 </table>
 </div>
 <p><strong>示例：</strong></p>
-<pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { BTooltip } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
-Vue.component(<span class="hljs-string">'b-tooltip'</span>, BTooltip)</pre>
+<figure class="highlight"><pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { BTooltip } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
+Vue.component(<span class="hljs-string">'b-tooltip'</span>, BTooltip)</pre></figure>
 </article>
 
 <article class="bd-content">
@@ -1194,8 +1194,8 @@ Vue.component(<span class="hljs-string">'b-tooltip'</span>, BTooltip)</pre>
 <li><code translate="translate" class="notranslate">VBTooltipPlugin</code></li>
 </ul>
 <p><strong>例:</strong></p>
-<pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { TooltipPlugin } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
-Vue.use(TooltipPlugin)</pre>
+<figure class="highlight"><pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { TooltipPlugin } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
+Vue.use(TooltipPlugin)</pre></figure>
 
 
 
@@ -1213,8 +1213,7 @@ Vue.use(TooltipPlugin)</pre>
 </div>
 
 
-<script src="../../../js/jquery-3.2.1.slim.min.js"></script> 
-<script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery-slim.min.js"><\/script>')</script> 
+<script src="../../../v4/assets/js/vendor/jquery-slim.min.js"></script>
 <script src="../../../v4/dist/js/popper.min.js"></script> 
 <script src="../../../v4/dist/js/bootstrap.min.js"></script> 
 <script src="../../../v4/assets/js/docs.min.js"></script> 

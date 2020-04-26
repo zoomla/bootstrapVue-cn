@@ -47,7 +47,7 @@
     </ul>
   </div>
   <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="alse"> v2.6.1 </a>
+    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="alse"> v2.12.0 </a>
       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions"> 
         <a class="dropdown-item active" href="../../../bootstrap-vue/docs/4.0/">Latest (4.3.x)</a>
         <a class="dropdown-item" href="/Boot/">v3.3.7</a>
@@ -281,6 +281,7 @@
             </div>
           </div>
         </div>
+        <figure class="highlight">
         <pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-button-toolbar</span> <span class="hljs-attr">key-nav</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Toolbar with button groups"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-button-group</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mx-1"</span>&gt;</span>
@@ -297,7 +298,7 @@
       <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span>&gt;</span><span class="hljs-symbol">&amp;raquo;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">b-button-group</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-button-toolbar</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre></figure>
         <p><strong>示例2：</strong> 混合使用小按钮组和小输入组</p>
         <div translate="translate" class="bd-example vue-example vue-example-b-button-toolbar-input notranslate">
           <div>
@@ -318,6 +319,7 @@
             </div>
           </div>
         </div>
+        <figure class="highlight">
         <pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-button-toolbar</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Toolbar with button groups and input groups"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-button-group</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"sm"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mr-1"</span>&gt;</span>
@@ -328,7 +330,7 @@
       <span class="hljs-tag">&lt;<span class="hljs-name">b-form-input</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"100"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-right"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">b-form-input</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">b-input-group</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-button-toolbar</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre></figure>
         <p><strong>示例3：</strong> 按钮组和下拉菜单</p>
         <div translate="translate" class="bd-example vue-example vue-example-b-button-toolbar-dropdown notranslate">
           <div>
@@ -358,6 +360,7 @@
             </div>
           </div>
         </div>
+        <figure class="highlight">
         <pre class="hljs html text-monospace p-2 notranslate xml editable" translate="no"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b-button-toolbar</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Toolbar with button groups and dropdown menu"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">b-button-group</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mx-1"</span>&gt;</span>
@@ -375,7 +378,7 @@
       <span class="hljs-tag">&lt;<span class="hljs-name">b-button</span>&gt;</span>Cancel<span class="hljs-tag">&lt;/<span class="hljs-name">b-button</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">b-button-group</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">b-button-toolbar</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre></figure>
         <h2 id="usage" class="bv-no-focus-ring"><span class="bd-content-title">使用<a class="anchorjs-link"
               href="#usage" aria-labelledby="usage"></a></span></h2>
         <p>您可以自由地将输入组和下拉列表与工具栏中的按钮组混合在一起。与上面的示例类似，您可能需要一些实用程序类来正确地分隔内容。</p>
@@ -566,8 +569,9 @@
             </table>
           </div>
           <p><strong>示例：</strong></p>
+          <figure class="highlight">
           <pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { BButtonToolbar } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
-Vue.component(<span class="hljs-string">'b-button-toolbar'</span>, BButtonToolbar)</pre>
+Vue.component(<span class="hljs-string">'b-button-toolbar'</span>, BButtonToolbar)</pre></figure>
         </article>
 
         <article class="bd-content">
@@ -602,8 +606,9 @@ Vue.component(<span class="hljs-string">'b-button-toolbar'</span>, BButtonToolba
           </div>
 
           <p><strong>示例：</strong></p>
+          <figure class="highlight">
           <pre translate="translate" class="hljs language-js text-monospace p-2 notranslate javascript"><span class="hljs-keyword">import</span> { ButtonToolbarPlugin } <span class="hljs-keyword">from</span> <span class="hljs-string">'bootstrap-vue'</span>
-Vue.use(ButtonToolbarPlugin)</pre>
+Vue.use(ButtonToolbarPlugin)</pre></figure>
         </article>
 
 
@@ -635,8 +640,7 @@ Vue.use(ButtonToolbarPlugin)</pre>
   </div>
 
 
-  <script src="../../../js/jquery-3.2.1.slim.min.js"></script>
-  <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+<script src="../../../v4/assets/js/vendor/jquery-slim.min.js"></script>
   <script src="../../../v4/dist/js/popper.min.js"></script>
   <script src="../../../v4/dist/js/bootstrap.min.js"></script>
   <script src="../../../v4/assets/js/docs.min.js"></script>
